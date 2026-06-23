@@ -6,6 +6,7 @@ dek: "Tydzień zaczynamy w tym samym reżimie, w którym skończyliśmy poprzedn
 readingTime: 8
 tags: [EUR/USD, dolar, outlook tygodniowy, ATR, variance-ratio, reżim rynku, Forex]
 image: /assets/og.png
+cover: direction
 ---
 
 > **W skrócie**

@@ -6,6 +6,7 @@ dek: "Dolar jest najmocniejszy od roku, a rynek przyjmuje to spokojnie. Rozkład
 readingTime: 9
 tags: [EUR/USD, dolar, DXY, PCA, ATR, carry, reżim rynku, analiza makro, Forex]
 image: /assets/og.png
+cover: strength
 ---
 
 > **W skrócie**

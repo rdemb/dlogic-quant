@@ -6,6 +6,7 @@ dek: "30.06 to potrójne domknięcie: miesiąc, Q2 i półrocze. Pokazuję, ską
 readingTime: 8
 tags: [koniec miesiąca, rebalancing, EUR/USD, DXY, przepływy, kwartał, Forex, analiza makro]
 image: /assets/og.png
+cover: calendar
 ---
 
 > **W skrócie**

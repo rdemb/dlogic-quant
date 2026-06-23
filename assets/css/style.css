@@ -33,12 +33,19 @@ code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(
 .share a,.share button{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--acc);cursor:pointer;font-size:13px;text-decoration:none;font-family:inherit}
 .share a:hover,.share button:hover{background:var(--soft);text-decoration:none}
 .share .sx{border-color:var(--acc)}
-.cover{margin:0 0 24px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--soft)}
+.cover{margin:0 0 26px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--soft)}
 .cover svg{width:100%;height:auto;display:block}
-.cover .grid{stroke:var(--line);stroke-width:1}
-.cover .stream{fill:none;stroke-width:2.4;stroke-linecap:round}.cover .acc{stroke:var(--acc)}.cover .mut{stroke:var(--mut)}
-.cover .vol{fill:var(--acc);opacity:.06}
-.cover .dash{stroke-dasharray:5 16;animation:flow 4.5s linear infinite}
-.cover .kick{font-family:ui-monospace,Consolas,monospace;font-size:20px;fill:var(--mut);letter-spacing:1.5px}
+.cover .cgrid{stroke:var(--line);stroke-width:1}
+.cover .cthread{fill:none;stroke:var(--acc);stroke-width:2;opacity:.4;stroke-dasharray:7 12;animation:flow 5s linear infinite}
+.cover .cbrand{font-family:ui-monospace,Consolas,monospace;font-size:26px;fill:var(--acc);letter-spacing:4px}
+.cover .ckick{font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-weight:700;font-size:54px;fill:var(--ink);letter-spacing:-1px}
+.cover .cdate{font-family:ui-monospace,Consolas,monospace;font-size:22px;fill:var(--mut);letter-spacing:1px}
+.cover .crule{stroke:var(--acc);stroke-width:3}
+.cover .ms{fill:none;stroke:var(--acc);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.cover .ms2{stroke:#c4ccd6;stroke-width:1.6;fill:none}
+.cover .mdash{stroke-dasharray:4 6}
+.cover .mf{fill:var(--acc)}
+.cover .mn{fill:#c4ccd6}
+.cover .mcone{fill:var(--acc);opacity:.07}
 @keyframes flow{to{stroke-dashoffset:-64}}
-@media (prefers-reduced-motion:reduce){.cover .dash{animation:none}}
+@media (prefers-reduced-motion:reduce){.cover .cthread{animation:none}}

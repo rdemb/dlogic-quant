@@ -6,6 +6,7 @@ dek: "Baza to kontynuacja, ale rynek żyje ogonami rozkładu. Rozkładam pięć 
 readingTime: 8
 tags: [ryzyko, Fed, VIX, krzywa rentowności, EUR/USD, scenariusze, Forex, analiza makro]
 image: /assets/og.png
+cover: risk
 ---
 
 > **W skrócie**

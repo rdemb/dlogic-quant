@@ -3,23 +3,65 @@ layout: default
 ---
 <article class="post">
   {% assign doy = page.date | date: "%j" | plus: 0 %}
-  {% assign amp = doy | modulo: 26 | plus: 16 %}
-  {% assign sh = doy | modulo: 22 | minus: 10 %}
-  {% assign y0 = 72 | plus: sh %}{% assign y1 = 125 | plus: sh %}{% assign y2 = 178 | plus: sh %}{% assign y3 = 231 | plus: sh %}{% assign y4 = 284 | plus: sh %}
+  {% assign amp = doy | modulo: 24 | plus: 14 %}
   <figure class="cover" aria-hidden="true">
-    <svg viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg">
-      <line class="grid" x1="240" y1="0" x2="240" y2="340"/>
-      <line class="grid" x1="480" y1="0" x2="480" y2="340"/>
-      <line class="grid" x1="720" y1="0" x2="720" y2="340"/>
-      <line class="grid" x1="960" y1="0" x2="960" y2="340"/>
-      <path class="vol" d="M-40 {{ y4 }} C 240 {{ y4 | minus: amp }},480 {{ y4 | plus: amp }},720 {{ y4 }} S 1240 {{ y4 | minus: amp }},1240 {{ y4 }} L 1240 340 L -40 340 Z"/>
-      <path class="stream mut" opacity=".45" d="M-40 {{ y0 }} C 240 {{ y0 | minus: amp }},480 {{ y0 | plus: amp }},720 {{ y0 }} S 1240 {{ y0 | minus: amp }},1240 {{ y0 }}"/>
-      <path class="stream acc" opacity=".55" d="M-40 {{ y1 }} C 240 {{ y1 | minus: amp }},480 {{ y1 | plus: amp }},720 {{ y1 }} S 1240 {{ y1 | minus: amp }},1240 {{ y1 }}"/>
-      <path class="stream mut" opacity=".4" d="M-40 {{ y2 }} C 240 {{ y2 | minus: amp }},480 {{ y2 | plus: amp }},720 {{ y2 }} S 1240 {{ y2 | minus: amp }},1240 {{ y2 }}"/>
-      <path class="stream acc" opacity=".5" d="M-40 {{ y3 }} C 240 {{ y3 | minus: amp }},480 {{ y3 | plus: amp }},720 {{ y3 }} S 1240 {{ y3 | minus: amp }},1240 {{ y3 }}"/>
-      <path class="stream acc dash" opacity=".7" d="M-40 {{ y4 }} C 240 {{ y4 | minus: amp }},480 {{ y4 | plus: amp }},720 {{ y4 }} S 1240 {{ y4 | minus: amp }},1240 {{ y4 }}"/>
-      <text class="kick" x="28" y="316">D-LOGIC QUANT</text>
-      <text class="kick" x="1172" y="316" text-anchor="end">{{ page.date | date: "%Y-%m-%d" }}</text>
+    <svg viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg">
+      <line class="cgrid" x1="200" y1="0" x2="200" y2="360"/>
+      <line class="cgrid" x1="400" y1="0" x2="400" y2="360"/>
+      <line class="cgrid" x1="600" y1="0" x2="600" y2="360"/>
+      <line class="cgrid" x1="800" y1="0" x2="800" y2="360"/>
+      <line class="cgrid" x1="1000" y1="0" x2="1000" y2="360"/>
+      <path class="cthread" d="M-40 308 C 240 {{ 308 | minus: amp }},480 {{ 308 | plus: amp }},720 308 S 1240 {{ 308 | minus: amp }},1240 308"/>
+      <text class="cbrand" x="56" y="80">D-LOGIC QUANT</text>
+      <line class="crule" x1="58" y1="100" x2="232" y2="100"/>
+      {% case page.cover %}
+      {% when 'strength' %}
+      <text class="ckick" x="54" y="186">Anatomia reżimu</text>
+      <g class="cmotif">
+        <line class="ms2" x1="940" y1="96" x2="940" y2="288"/>
+        <rect class="mf" x="940" y="104" width="130" height="16" rx="3"/>
+        <rect class="mf" x="940" y="134" width="78" height="16" rx="3"/>
+        <rect class="mf" x="940" y="164" width="34" height="16" rx="3"/>
+        <rect class="mn" x="894" y="194" width="46" height="16" rx="3"/>
+        <rect class="mn" x="844" y="224" width="96" height="16" rx="3"/>
+        <rect class="mn" x="790" y="254" width="150" height="16" rx="3"/>
+      </g>
+      {% when 'direction' %}
+      <text class="ckick" x="54" y="186">Outlook tygodnia</text>
+      <g class="cmotif">
+        <polygon class="mcone" points="740,186 1150,96 1150,276"/>
+        <line class="ms2 mdash" x1="740" y1="186" x2="1116" y2="186"/>
+        <path class="ms" d="M740 186 L1150 96"/>
+        <path class="ms" d="M740 186 L1150 276"/>
+        <circle class="mf" cx="740" cy="186" r="7"/>
+        <circle class="mf" cx="880" cy="186" r="4"/>
+        <circle class="mf" cx="1000" cy="186" r="4"/>
+        <path class="mf" d="M1120 176 L1150 186 L1120 196 Z"/>
+      </g>
+      {% when 'risk' %}
+      <text class="ckick" x="54" y="186">Mapa ryzyka</text>
+      <g class="cmotif">
+        <rect class="ms2" x="800" y="92" width="290" height="208" rx="4" fill="none"/>
+        <line class="ms2 mdash" x1="945" y1="92" x2="945" y2="300"/>
+        <line class="ms2 mdash" x1="800" y1="196" x2="1090" y2="196"/>
+        <circle class="mf" cx="862" cy="140" r="12"/>
+        <circle class="mn" cx="1018" cy="250" r="9"/>
+        <circle class="mn" cx="906" cy="244" r="8"/>
+        <circle class="mn" cx="1030" cy="152" r="8"/>
+      </g>
+      {% when 'calendar' %}
+      <text class="ckick" x="54" y="186">Domknięcie miesiąca</text>
+      <g class="cmotif">
+        {% for j in (0..4) %}{% for i in (0..5) %}{% assign cx = i | times: 66 | plus: 760 %}{% assign cy = j | times: 44 | plus: 100 %}{% if i == 5 and j == 4 %}<rect class="mf" x="{{ cx }}" y="{{ cy }}" width="58" height="36" rx="4"/><text x="{{ cx | plus: 29 }}" y="{{ cy | plus: 24 }}" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="20" fill="#ffffff">30</text>{% else %}<rect class="ms2" x="{{ cx }}" y="{{ cy }}" width="58" height="36" rx="4" fill="none"/>{% endif %}{% endfor %}{% endfor %}
+      </g>
+      {% else %}
+      <text class="ckick" x="54" y="186">Raport quant</text>
+      <g class="cmotif">
+        <polyline class="ms" points="740,250 800,200 860,226 920,150 980,188 1040,110 1100,142"/>
+        <circle class="mf" cx="1100" cy="142" r="7"/>
+      </g>
+      {% endcase %}
+      <text class="cdate" x="56" y="224">{{ page.date | date: "%Y-%m-%d" }}</text>
     </svg>
   </figure>
   <p class="eyebrow">Raport dnia</p>
