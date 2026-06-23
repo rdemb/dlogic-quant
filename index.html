@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<section class="intro">
+  <p>Codzienny, liczbowy obraz rynku FX i makro. Bez opinii: siła walut, reżim, zmienność, scenariusze. Każdy raport liczony z danych.</p>
+</section>
+<ul class="posts">
+{% for post in site.posts %}
+  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+{% endfor %}
+</ul>

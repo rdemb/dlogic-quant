@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="post">
+  <p class="eyebrow">Raport dnia</p>
+  <h1>{{ page.title }}</h1>
+  <p class="meta">{{ page.date | date: "%-d.%m.%Y" }} · ~{{ page.readingTime | default: 5 }} min</p>
+  {% if page.dek %}<p class="dek">{{ page.dek }}</p>{% endif %}
+  {{ content }}
+  <div class="share">
+    <span>Udostępnij:</span>
+    <a class="sx" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}&via=takitamrafal" target="_blank" rel="noopener">X / Twitter</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">Facebook</a>
+    <button type="button" class="copy" onclick="navigator.clipboard.writeText('{{ page.url | absolute_url }}');this.textContent='Skopiowano ✓'">Kopiuj link</button>
+  </div>
+  <p class="back"><a href="{{ '/' | relative_url }}">← wszystkie raporty</a></p>
+</article>

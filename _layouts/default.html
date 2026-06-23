@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+{% feed_meta %}
+</head>
+<body>
+<header class="site">
+  <a href="{{ '/' | relative_url }}" class="brand">D-LOGIC Quant</a>
+  <span class="tag">Forex · makro · liczby &gt; opinie</span>
+</header>
+<main>{{ content }}</main>
+<footer class="site">
+  <p>D-LOGIC Quant — analiza, nie porada inwestycyjna. OBSERVE_ONLY.</p>
+  <p><a href="https://x.com/takitamrafal" rel="me">@takitamrafal</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+</footer>
+</body>
+</html>

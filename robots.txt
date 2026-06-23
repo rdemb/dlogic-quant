@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rdemb.github.io/dlogic-quant/sitemap.xml
