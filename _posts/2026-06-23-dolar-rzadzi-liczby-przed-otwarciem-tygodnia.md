@@ -1,5 +1,5 @@
 ---
-title: "Dolar znów rządzi. Pełny obraz rynku przed otwarciem tygodnia"
+title: "Dolar znów rządzi. Anatomia reżimu mocnego dolara"
 description: "EUR/USD 1.1470, DXY>100, CPI 4.2%. Rozkładam reżim mocnego dolara na czynniki pierwsze: z-score siły walut, czynnik dolara (PCA 69%, R² 0.83), percentyl ATR i variance-ratio, krzywa i realne stopy. Liczby, nie opinie."
 date: 2026-06-23 08:00:00 +0200
 dek: "Dolar jest najmocniejszy od roku, a rynek przyjmuje to spokojnie. Rozkładam to na mechanikę: siła walut, czynnik dolara, zmienność, krzywa i realne stopy — wszystko policzone."
