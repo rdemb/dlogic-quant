@@ -2,6 +2,26 @@
 layout: default
 ---
 <article class="post">
+  {% assign doy = page.date | date: "%j" | plus: 0 %}
+  {% assign amp = doy | modulo: 26 | plus: 16 %}
+  {% assign sh = doy | modulo: 22 | minus: 10 %}
+  {% assign y0 = 72 | plus: sh %}{% assign y1 = 125 | plus: sh %}{% assign y2 = 178 | plus: sh %}{% assign y3 = 231 | plus: sh %}{% assign y4 = 284 | plus: sh %}
+  <figure class="cover" aria-hidden="true">
+    <svg viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg">
+      <line class="grid" x1="240" y1="0" x2="240" y2="340"/>
+      <line class="grid" x1="480" y1="0" x2="480" y2="340"/>
+      <line class="grid" x1="720" y1="0" x2="720" y2="340"/>
+      <line class="grid" x1="960" y1="0" x2="960" y2="340"/>
+      <path class="vol" d="M-40 {{ y4 }} C 240 {{ y4 | minus: amp }},480 {{ y4 | plus: amp }},720 {{ y4 }} S 1240 {{ y4 | minus: amp }},1240 {{ y4 }} L 1240 340 L -40 340 Z"/>
+      <path class="stream mut" opacity=".45" d="M-40 {{ y0 }} C 240 {{ y0 | minus: amp }},480 {{ y0 | plus: amp }},720 {{ y0 }} S 1240 {{ y0 | minus: amp }},1240 {{ y0 }}"/>
+      <path class="stream acc" opacity=".55" d="M-40 {{ y1 }} C 240 {{ y1 | minus: amp }},480 {{ y1 | plus: amp }},720 {{ y1 }} S 1240 {{ y1 | minus: amp }},1240 {{ y1 }}"/>
+      <path class="stream mut" opacity=".4" d="M-40 {{ y2 }} C 240 {{ y2 | minus: amp }},480 {{ y2 | plus: amp }},720 {{ y2 }} S 1240 {{ y2 | minus: amp }},1240 {{ y2 }}"/>
+      <path class="stream acc" opacity=".5" d="M-40 {{ y3 }} C 240 {{ y3 | minus: amp }},480 {{ y3 | plus: amp }},720 {{ y3 }} S 1240 {{ y3 | minus: amp }},1240 {{ y3 }}"/>
+      <path class="stream acc dash" opacity=".7" d="M-40 {{ y4 }} C 240 {{ y4 | minus: amp }},480 {{ y4 | plus: amp }},720 {{ y4 }} S 1240 {{ y4 | minus: amp }},1240 {{ y4 }}"/>
+      <text class="kick" x="28" y="316">D-LOGIC QUANT</text>
+      <text class="kick" x="1172" y="316" text-anchor="end">{{ page.date | date: "%Y-%m-%d" }}</text>
+    </svg>
+  </figure>
   <p class="eyebrow">Raport dnia</p>
   <h1>{{ page.title }}</h1>
   <p class="meta">{{ page.date | date: "%-d.%m.%Y" }} · ~{{ page.readingTime | default: 5 }} min</p>

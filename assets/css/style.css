@@ -33,3 +33,17 @@ code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(
 .share a,.share button{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--acc);cursor:pointer;font-size:13px;text-decoration:none;font-family:inherit}
 .share a:hover,.share button:hover{background:var(--soft);text-decoration:none}
 .share .sx{border-color:var(--acc)}
+.flow{flex:1 1 200px;min-width:150px;height:28px;margin-left:auto;align-self:center}
+.flow svg{width:100%;height:28px;display:block}
+.flow .rail{stroke:var(--line);stroke-width:1}
+.flow .dash{fill:none;stroke:var(--acc);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:10 22;animation:flow 3s linear infinite}
+.flow .tick{stroke:var(--acc);stroke-width:1.5}.flow .tick.mut{stroke:var(--mut)}
+.cover{margin:0 0 24px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--soft)}
+.cover svg{width:100%;height:auto;display:block}
+.cover .grid{stroke:var(--line);stroke-width:1}
+.cover .stream{fill:none;stroke-width:2.4;stroke-linecap:round}.cover .acc{stroke:var(--acc)}.cover .mut{stroke:var(--mut)}
+.cover .vol{fill:var(--acc);opacity:.06}
+.cover .dash{stroke-dasharray:5 16;animation:flow 4.5s linear infinite}
+.cover .kick{font-family:ui-monospace,Consolas,monospace;font-size:20px;fill:var(--mut);letter-spacing:1.5px}
+@keyframes flow{to{stroke-dashoffset:-64}}
+@media (prefers-reduced-motion:reduce){.flow .dash,.cover .dash{animation:none}}
