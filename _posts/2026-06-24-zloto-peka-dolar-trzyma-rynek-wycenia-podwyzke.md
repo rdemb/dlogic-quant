@@ -1,6 +1,6 @@
 ---
 title: "Złoto pęka, dolar trzyma. Rynek wycenia wrześniową podwyżkę"
-description: "Złoto spada do ~4063 z 4174, a rynek wycenia ~68% szans na wrześniową podwyżkę Fedu. EUR/USD 1.1470, realne stopy +0.3%, carry +137.5 bp. Dolar trzyma reżim."
+description: "Złoto w korekcie: −3.8% w tydzień, −9.2% w miesiąc, dziś ~4095. Rynek daje ~68% szans na wrześniową podwyżkę Fedu. EUR/USD 1.1470, dolar trzyma reżim."
 date: "2026-06-24 08:00:00 +0200"
 dek: "Złoto traci, rentowności rosną, a rynek dokłada do wrześniowej podwyżki. To samo paliwo trzyma dolara mocnym. Pokazuję, gdzie liczby potwierdzają reżim, a gdzie milczą."
 readingTime: 8
@@ -10,7 +10,7 @@ image: /assets/og.png
 
 > **W skrócie**
 >
-> - Złoto spadło do **~4063** z 4174 sprzed doby, około **−2.7%**. Lokalny momentum to potwierdza: 5D **−1.24%**, kurs poniżej średniej 20-dniowej. Spadek złota to lustro rosnących realnych stóp.
+> - Złoto w korekcie, nie w panice: dziś ~**4095** (−0.33%), ale **−3.8%** w tydzień, **−9.2%** w miesiąc i około **−27%** od tegorocznego szczytu przy 5597. Mimo to wciąż **+23%** rok do roku. Zjazd jest spójny z rosnącymi realnymi stopami.
 > - Rynek wycenia **~68%** szans na wrześniową podwyżkę Fedu, a 10-latka przy **4.50%** jest najwyżej od dwóch tygodni. Carry Fed–EBC trzyma **+137.5 bp** po stronie dolara.
 > - Struktura bez zmian: czynnik dolara tłumaczy **69%** wariancji par USD, a EUR/USD jest w **83%** jego pochodną. **EUR/USD 1.1470.**
 > - Bezpieczniki spokojne: krzywa **2s10s +29 bp** bez inwersji, VIX **17.3**. Mocny dolar w trybie spoczynku, nie paniki.
@@ -19,13 +19,13 @@ image: /assets/og.png
 
 ## Dlaczego dolar rządzi
 
-Najświeższy sygnał przyszedł dziś z rynku złota. Kruszec spadł do około 4063 USD za uncję z 4174 sprzed doby, czyli mniej więcej 2.7% w dół. Złoto nie płaci kuponu, więc jego cena jest funkcją kosztu alternatywnego. Kiedy realna rentowność dziesięciolatki rośnie, trzymanie metalu kosztuje więcej i kapitał odpływa. Realna 10-latka jest na +0.3%, a lokalny momentum złota schłodził się do −1.24% w pięć dni, z kursem pod średnią 20-dniową. To jeden łańcuch przyczynowy, nie dwa zbiegi okoliczności.
+Zacznijmy od złota, bo tam widać presję najlepiej. Kruszec handluje przy ~4095 USD za uncję i dziś jest ledwie −0.33%, więc to nie jest jednodniowy krach. Zjazd widać dopiero w szerszym oknie: −3.8% w tydzień, −9.2% w miesiąc, a od tegorocznego szczytu przy 5597 kruszec jest niżej o około 27%. Mimo to rok do roku wciąż trzyma +23%, więc mówimy o korekcie w trendzie, nie o załamaniu. Złoto nie płaci kuponu, więc jego cena jest funkcją kosztu alternatywnego. Kiedy realna rentowność dziesięciolatki rośnie, trzymanie metalu kosztuje więcej i kapitał odpływa. Realna 10-latka jest na +0.3%. To jeden łańcuch przyczynowy, nie zbieg okoliczności.
 
 Drugie ogniwo to stopy. Rentowność dziesięciolatki podbiła do 4.50%, najwyżej od dwóch tygodni, po jastrzębim tonie Fedu. Dwulatka stoi na 4.21%. Rynek wycenia już około 68% prawdopodobieństwa podwyżki we wrześniu, więc nie zakłada cięć, tylko dokłada do scenariusza zacieśniania. Inflacja w USA siedzi na 4.2% i jest lepka, co odbiera Fedowi miejsce na gołębi zwrot. Stopa nominalna ponad inflacją plus dysparytet wobec EBC (Fed 3.625% przy EBC 2.25%, czyli +137.5 bp carry) działają jak magnes na kapitał. Stąd DXY ponad 100 i EUR/USD spychany w dół.
 
 <figure>
-<svg viewBox="0 0 640 240" font-family="-apple-system,Segoe UI,Roboto,sans-serif" xmlns="http://www.w3.org/2000/svg"><defs><marker id="gd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#d64545" stroke-width="1.5"/></marker></defs><text x="40" y="30" font-size="13" fill="#1a1a1a">Złoto traci grunt, gdy realne stopy rosną</text><text x="40" y="60" font-size="12" fill="#6b6b6b">XAU/USD</text><rect x="118" y="46" width="116" height="22" rx="3" fill="#f6f8fb" stroke="#e6e6e6"/><text x="176" y="61" font-size="12" fill="#1a1a1a" text-anchor="middle" font-family="monospace">4174</text><line x1="242" y1="57" x2="298" y2="57" stroke="#d64545" stroke-width="2" marker-end="url(#gd)"/><rect x="306" y="46" width="116" height="22" rx="3" fill="#fbeeee" stroke="#e7b9b9"/><text x="364" y="61" font-size="12" fill="#b03030" text-anchor="middle" font-family="monospace">4063</text><text x="438" y="61" font-size="11" fill="#6b6b6b" font-family="monospace">-2.7% / doba</text><text x="40" y="90" font-size="11" fill="#9b9b9b">Lokalny momentum (do 19.06): 5D -1.24%, poniżej średniej 20-dniowej</text><text x="40" y="128" font-size="13" fill="#1a1a1a">Rynek: szansa na wrześniową podwyżkę Fedu</text><rect x="40" y="140" width="560" height="16" rx="8" fill="#ececec"/><rect x="40" y="140" width="381" height="16" rx="8" fill="#0b66c3"/><text x="431" y="153" font-size="12" fill="#0b66c3" font-family="monospace">~68%</text><text x="40" y="192" font-size="12" fill="#1a1a1a">US 10Y 4.50% (2-tyg. max) · realne stopy +0.3% · carry +137.5 bp</text><text x="40" y="216" font-size="11" fill="#6b6b6b">Mocny dolar i słabe złoto to dwie strony tej samej monety.</text></svg>
-<figcaption>Świeży impuls makro: złoto schodzi do ~4063, a rynek dokłada do wrześniowej podwyżki. Oba sygnały biegną tym samym kanałem realnych stóp.</figcaption>
+<svg viewBox="0 0 640 240" font-family="-apple-system,Segoe UI,Roboto,sans-serif" xmlns="http://www.w3.org/2000/svg"><text x="40" y="30" font-size="13" fill="#1a1a1a">Złoto w korekcie, nie w panice</text><text x="40" y="60" font-size="12" fill="#6b6b6b">XAU/USD ~4095</text><rect x="150" y="46" width="92" height="22" rx="3" fill="#fbeeee" stroke="#e7b9b9"/><text x="196" y="61" font-size="11" fill="#b03030" text-anchor="middle" font-family="monospace">1D -0.33%</text><rect x="250" y="46" width="92" height="22" rx="3" fill="#fbeeee" stroke="#e7b9b9"/><text x="296" y="61" font-size="11" fill="#b03030" text-anchor="middle" font-family="monospace">1T -3.8%</text><rect x="350" y="46" width="96" height="22" rx="3" fill="#f6dcdc" stroke="#df9a9a"/><text x="398" y="61" font-size="11" fill="#9e2a2a" text-anchor="middle" font-family="monospace">1M -9.2%</text><rect x="454" y="46" width="100" height="22" rx="3" fill="#eef6f0" stroke="#bfe0cb"/><text x="504" y="61" font-size="11" fill="#1a7a4d" text-anchor="middle" font-family="monospace">r/r +23%</text><text x="40" y="92" font-size="11" fill="#9b9b9b">Spadek tygodni, nie doby. Od szczytu 2026 (5597) niżej o ~27%.</text><text x="40" y="128" font-size="13" fill="#1a1a1a">Rynek: szansa na wrześniową podwyżkę Fedu</text><rect x="40" y="140" width="560" height="16" rx="8" fill="#ececec"/><rect x="40" y="140" width="381" height="16" rx="8" fill="#0b66c3"/><text x="431" y="153" font-size="12" fill="#0b66c3" font-family="monospace">~68%</text><text x="40" y="192" font-size="12" fill="#1a1a1a">US 10Y 4.50% (2-tyg. max) · realne stopy +0.3% · carry +137.5 bp</text><text x="40" y="216" font-size="11" fill="#6b6b6b">Mocny dolar i słabsze złoto to dwie strony tej samej monety.</text></svg>
+<figcaption>Świeży impuls makro: złoto w wielotygodniowej korekcie (~4095, −3.8% w tydzień), a rynek dokłada do wrześniowej podwyżki. Oba sygnały biegną tym samym kanałem realnych stóp.</figcaption>
 </figure>
 
 ## Co mówi przekrój rynku
@@ -67,10 +67,10 @@ Nie prognozuję ceny. Opisuję reżim i to, co musiałoby pęknąć, żeby się 
 
 **Bazowy, kontynuacja.** Dopóki krzywa się nie odwraca, realne stopy są dodatnie, a rynek dokłada do wrześniowej podwyżki, próby trwałego osłabienia dolara wyglądają raczej na okazję do jego odkupienia niż na początek zwrotu. Słabe złoto wzmacnia ten obraz, bo płynie tym samym kanałem realnych stóp. Rynek oddycha między poziomami.
 
-**Warunkowy, złamanie schematu.** Układ zmieniłby jeden z czterech wyzwalaczy: gołębi zwrot Fedu, nagła inwersja krzywej, skok VIX powyżej 25 albo powrót złota nad 4174. Każdy uderza w inny filar reżimu. Ten scenariusz uzbraja się dopiero wtedy, gdy któryś trigger faktycznie się odpali.
+**Warunkowy, złamanie schematu.** Układ zmieniłby jeden z czterech wyzwalaczy: gołębi zwrot Fedu, nagła inwersja krzywej, skok VIX powyżej 25 albo powrót złota nad 4200. Każdy uderza w inny filar reżimu. Ten scenariusz uzbraja się dopiero wtedy, gdy któryś trigger faktycznie się odpali.
 
 <figure>
-<svg viewBox="0 0 640 210" font-family="-apple-system,Segoe UI,Roboto,sans-serif" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#6b6b6b" stroke-width="1.5"/></marker></defs><rect x="20" y="80" width="180" height="52" rx="8" fill="#f6f8fb" stroke="#e6e6e6"/><text x="34" y="100" font-size="12.5" fill="#1a1a1a">Reżim: mocny USD</text><text x="34" y="118" font-size="10.5" fill="#6b6b6b">handel w zakresie</text><rect x="300" y="22" width="320" height="64" rx="8" fill="#f6f8fb" stroke="#e6e6e6"/><text x="314" y="42" font-size="12.5" fill="#1a1a1a">Scenariusz bazowy</text><text x="314" y="60" font-size="10.5" fill="#6b6b6b">Krzywa nieodwrócona, realne stopy > 0.</text><text x="314" y="76" font-size="10.5" fill="#6b6b6b">Spadki USD = okazja do odkupu.</text><rect x="300" y="120" width="320" height="72" rx="8" fill="#fbf2ee" stroke="#e6e6e6"/><text x="314" y="140" font-size="12.5" fill="#1a1a1a">Scenariusz warunkowy</text><text x="314" y="158" font-size="10.5" fill="#6b6b6b">Trigger: gołębi Fed · inwersja · VIX > 25</text><text x="314" y="174" font-size="10.5" fill="#6b6b6b">albo złoto > 4174. Wtedy korekta dolara.</text><path d="M200 100 H250 V54 H300" fill="none" stroke="#6b6b6b" marker-end="url(#ar2)"/><path d="M200 112 H250 V156 H300" fill="none" stroke="#6b6b6b" marker-end="url(#ar2)"/></svg>
+<svg viewBox="0 0 640 210" font-family="-apple-system,Segoe UI,Roboto,sans-serif" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#6b6b6b" stroke-width="1.5"/></marker></defs><rect x="20" y="80" width="180" height="52" rx="8" fill="#f6f8fb" stroke="#e6e6e6"/><text x="34" y="100" font-size="12.5" fill="#1a1a1a">Reżim: mocny USD</text><text x="34" y="118" font-size="10.5" fill="#6b6b6b">handel w zakresie</text><rect x="300" y="22" width="320" height="64" rx="8" fill="#f6f8fb" stroke="#e6e6e6"/><text x="314" y="42" font-size="12.5" fill="#1a1a1a">Scenariusz bazowy</text><text x="314" y="60" font-size="10.5" fill="#6b6b6b">Krzywa nieodwrócona, realne stopy > 0.</text><text x="314" y="76" font-size="10.5" fill="#6b6b6b">Spadki USD = okazja do odkupu.</text><rect x="300" y="120" width="320" height="72" rx="8" fill="#fbf2ee" stroke="#e6e6e6"/><text x="314" y="140" font-size="12.5" fill="#1a1a1a">Scenariusz warunkowy</text><text x="314" y="158" font-size="10.5" fill="#6b6b6b">Trigger: gołębi Fed · inwersja · VIX > 25</text><text x="314" y="174" font-size="10.5" fill="#6b6b6b">albo złoto > 4200. Wtedy korekta dolara.</text><path d="M200 100 H250 V54 H300" fill="none" stroke="#6b6b6b" marker-end="url(#ar2)"/><path d="M200 112 H250 V156 H300" fill="none" stroke="#6b6b6b" marker-end="url(#ar2)"/></svg>
 <figcaption>Scenariusze i ich wyzwalacze. Bazowy to kontynuacja reżimu, warunkowy uzbraja się dopiero po triggerze.</figcaption>
 </figure>
 
@@ -83,9 +83,9 @@ Każdy wyzwalacz ma próg i adres. Dopóki żaden się nie odpali, scenariusz wa
 | Gołębi zwrot Fedu | szanse na wrzesień poniżej 40% | dysparytet stóp i carry | osłabienie |
 | Inwersja krzywej | 2s10s poniżej 0 | sygnał recesyjny | osłabienie |
 | Skok VIX | powyżej 25 | reżim ryzyka | dwukierunkowo, zwykle risk-off bid |
-| Powrót złota | XAU powyżej 4174 | teza realnych stóp | osłabienie |
+| Powrót złota | XAU powyżej 4200 | teza realnych stóp | osłabienie |
 
-Dziś żaden warunek nie jest spełniony. Krzywa ma +29 bp i się nie odwraca, VIX siedzi przy 17.3, rynek dokłada do podwyżki, a złoto jest pod 4174, nie nad. Reżim mocnego dolara zostaje stanem spoczynku.
+Dziś żaden warunek nie jest spełniony. Krzywa ma +29 bp i się nie odwraca, VIX siedzi przy 17.3, rynek dokłada do podwyżki, a złoto jest pod 4200, nie nad. Reżim mocnego dolara zostaje stanem spoczynku.
 
 **Kluczowe liczby**
 
@@ -101,7 +101,7 @@ Dziś żaden warunek nie jest spełniony. Krzywa ma +29 bp i się nie odwraca, V
 | Realna 10Y | +0.3% | magnes na kapitał |
 | Carry Fed–EBC | +137.5 bp | na korzyść USD |
 | VIX | 17.3 | reżim spokoju |
-| Złoto (XAU/USD) | ~4063 | −2.7%/doba, pod SMA20 |
+| Złoto (XAU/USD) | ~4095 | −0.3% dzień, −3.8% tydzień, −9.2% miesiąc |
 | Szansa podwyżki (IX) | ~68% | jastrzębi przechył |
 
 ## Jak liczę
@@ -131,7 +131,7 @@ variance_ratio = range_5d / (ATR14 * sqrt(5))              # = 1.54
 real_10y = us_10y - cpi_proxy        # +0.3
 slope    = us_10y - us_2y            # +29 bp
 carry    = fed_mid - ecb_rate        # +137.5 bp
-gold_5d  = mom(XAUUSD, 5d)           # -1.24%, < SMA20
+gold_5d  = mom(XAUUSD, 5d)           # web: 1T -3.8%, 1M -9.2%
 usd_bias = "strong" if (real_10y > 0 and slope > 0 and carry > 0) else "mixed"
 ```
 
