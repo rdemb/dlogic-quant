@@ -51,3 +51,18 @@ cot:
   - { ccy: "GBP", net: -35 }
   - { ccy: "CAD", net: -39 }
   - { ccy: "CHF", net: -71 }
+vol_term:
+  - { pair: "EURUSD", comp: 0.8, regime: "kompresja", pctile: 32 }
+  - { pair: "GBPUSD", comp: 0.67, regime: "kompresja", pctile: 62 }
+  - { pair: "USDJPY", comp: 1.09, regime: "neutralnie", pctile: 4 }
+  - { pair: "USDCHF", comp: 0.96, regime: "neutralnie", pctile: 15 }
+  - { pair: "GBPJPY", comp: 0.84, regime: "kompresja", pctile: 36 }
+seasonality:
+  strong_hours: "00:00, 14:00, 09:00"
+  weak_hours: "13:00, 08:00, 12:00"
+  weekday:
+    - { d: "Pon", mean: 0.09, hit: 49 }
+    - { d: "Wt", mean: 2.95, hit: 52 }
+    - { d: "Śr", mean: 0.96, hit: 49.1 }
+    - { d: "Czw", mean: -1.05, hit: 46.6 }
+    - { d: "Pt", mean: -0.73, hit: 51.3 }
