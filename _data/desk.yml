@@ -1,14 +1,12 @@
-# D-LOGIC Desk — snapshot warstwy quant (public-safe). Aktualizowany przez pipeline przy pushu.
-# Ceny jako stringi, by zachowac 4 miejsca po przecinku.
-asof: "2026-06-23"
-eurusd: "1.1470"
+asof: "2026-06-25"
+eurusd: "1.1469"
 regime:
   phase_pl: "Szczyt cyklu, lepka inflacja"
   usd_bias: "SILNY"
   eurusd_bias: "BEARISH"
 conditions:
-  real_10y: "+0.3%"
-  curve: "+30 bp"
+  real_10y: "+0.21%"
+  curve: "+20 bp"
   carry: "+137.5 bp"
   score: "3 / 3"
 strength:
@@ -31,9 +29,9 @@ vol:
 levels:
   - { label: "Opor tygodnia", price: "1.1602", note: "+1σ tydz." }
   - { label: "Gorny ATR", price: "1.1529", note: "+1σ dzien" }
-  - { label: "Spot", price: "1.1470", note: "punkt startu", spot: true }
-  - { label: "Dolny ATR", price: "1.1410", note: "−1σ dzien" }
-  - { label: "Wsparcie tygodnia", price: "1.1338", note: "−1σ tydz." }
+  - { label: "Spot", price: "1.1469", note: "punkt startu", spot: true }
+  - { label: "Dolny ATR", price: "1.1410", note: "-1σ dzien" }
+  - { label: "Wsparcie tygodnia", price: "1.1337", note: "-1σ tydz." }
 correlation:
   asof: "2026-05-20"
   lookback: 60
@@ -43,3 +41,13 @@ correlation:
     - [0.91, 1.00, -0.81, -0.68]
     - [-0.81, -0.81, 1.00, 0.67]
     - [-0.64, -0.68, 0.67, 1.00]
+cot:
+  source: "CFTC (pipeline)"
+  unit: "net spek, tys. kontraktow"
+  items:
+  - { ccy: "AUD", net: 30 }
+  - { ccy: "EUR", net: 7 }
+  - { ccy: "JPY", net: -34 }
+  - { ccy: "GBP", net: -35 }
+  - { ccy: "CAD", net: -39 }
+  - { ccy: "CHF", net: -71 }

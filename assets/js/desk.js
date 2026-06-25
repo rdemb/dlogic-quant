@@ -98,6 +98,41 @@
     set("dk-corr", html + meta);
   }
 
+  // ---------- COT ----------
+  function cot() {
+    if (!D.cot) return;
+    var a = D.cot.items, mx = 0, i;
+    for (i = 0; i < a.length; i++) mx = Math.max(mx, Math.abs(a[i].net));
+    if (!mx) mx = 1;
+    var cx = 300, pxv = (cx - 60) / mx, top = 14, rh = 26, h = top + a.length * rh + 4;
+    var s = '<svg viewBox="0 0 600 ' + h + '" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif">';
+    s += '<line class="dk-axis" x1="300" y1="8" x2="300" y2="' + (h - 6) + '"/>';
+    for (i = 0; i < a.length; i++) {
+      var d = a[i], y = top + i * rh, w = Math.abs(d.net) * pxv, x = d.net >= 0 ? cx : cx - w;
+      var cls = d.net >= 0 ? "dk-pos" : "dk-neg", vx = d.net >= 0 ? (cx + w + 6) : (cx - w - 6), anc = d.net >= 0 ? "start" : "end";
+      s += '<rect class="' + cls + '" x="' + x.toFixed(1) + '" y="' + y + '" width="' + w.toFixed(1) + '" height="14" rx="3"/>';
+      s += '<text class="dk-t" x="6" y="' + (y + 11) + '" font-size="12">' + d.ccy + '</text>';
+      s += '<text class="dk-tm" x="' + vx.toFixed(1) + '" y="' + (y + 11) + '" font-size="11" text-anchor="' + anc + '" font-family="ui-monospace,monospace">' + (d.net > 0 ? "+" : (d.net < 0 ? "−" : "")) + Math.abs(d.net) + '</text>';
+    }
+    s += '</svg>';
+    set("dk-cot", s + '<div class="dk-meta">' + D.cot.unit + ' · net long = kupują, net short = sprzedają · ' + D.cot.source + '</div>');
+  }
+
+  // ---------- KURSY (near-live) ----------
+  function quotes() {
+    var el = $("dk-quotes"); if (!el) return;
+    el.innerHTML = '<span class="dk-qmut">ładowanie kursów…</span>';
+    fetch("https://open.er-api.com/v6/latest/USD").then(function (r) { return r.json(); }).then(function (d) {
+      var R = d.rates; if (!R || !R.EUR) throw 0;
+      var rows = [["EUR/USD", 1 / R.EUR, 4], ["GBP/USD", 1 / R.GBP, 4], ["USD/JPY", R.JPY, 2], ["USD/CHF", R.CHF, 4], ["USD/CAD", R.CAD, 4]], h = "", i;
+      for (i = 0; i < rows.length; i++) h += '<span class="dk-q"><b>' + rows[i][0] + '</b> ' + rows[i][1].toFixed(rows[i][2]) + '</span>';
+      var t = new Date();
+      el.innerHTML = h + '<span class="dk-qmut">ref. · ' + pad(t.getUTCHours()) + ':' + pad(t.getUTCMinutes()) + ' UTC</span>';
+    }).catch(function () {
+      el.innerHTML = '<span class="dk-q"><b>EUR/USD</b> ' + (D.eurusd || "—") + '</span><span class="dk-qmut">snapshot (offline)</span>';
+    });
+  }
+
   // ---------- SESJE (live) ----------
   var SES = [{ i: 0, o: 21, c: 6 }, { i: 1, o: 23, c: 8 }, { i: 2, o: 7, c: 16 }, { i: 3, o: 12, c: 21 }];
   function isOpen(s, h) { return s.o < s.c ? (h >= s.o && h < s.c) : (h >= s.o || h < s.c); }
@@ -129,6 +164,6 @@
     if (liq) liq.textContent = cnt >= 2 ? ("wysoka płynność · " + cnt + " sesje") : (cnt === 1 ? "niższa płynność · 1 sesja" : "pauza · brak sesji");
   }
 
-  regime(); strength(); vol(); levels(); correlation();
+  regime(); strength(); vol(); levels(); correlation(); cot(); quotes();
   tick(); setInterval(tick, 1000);
 })();
