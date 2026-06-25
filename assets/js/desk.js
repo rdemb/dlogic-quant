@@ -156,7 +156,7 @@
       g += '<text class="dk-tm" x="' + (x + (bw - 12) / 2).toFixed(1) + '" y="' + ty.toFixed(1) + '" font-size="10" text-anchor="middle">' + (d.mean > 0 ? "+" : "") + d.mean.toFixed(1) + '</text>';
     }
     g += '</svg>';
-    set("dk-season", g + '<div class="dk-meta">średni zwrot dnia (pip) · mocne godziny UTC: <b>' + s.strong_hours + '</b> · słabe: <b>' + s.weak_hours + '</b></div>');
+    set("dk-season", g + '<div class="dk-meta">średnia zmiana kursu EUR/USD wg dnia (pip) · publiczna historia notowań, nie wyniki konta · mocne godziny UTC: <b>' + s.strong_hours + '</b> · słabe: <b>' + s.weak_hours + '</b></div>');
   }
 
   // ---------- SESJE (live) ----------
