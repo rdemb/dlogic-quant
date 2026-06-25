@@ -6,6 +6,7 @@ lang: pl
 url: "https://rdemb.github.io"
 baseurl: "/dlogic-quant"
 permalink: /:year/:month/:day/:title/
+future: true
 twitter:
   username: takitamrafal
   card: summary_large_image
