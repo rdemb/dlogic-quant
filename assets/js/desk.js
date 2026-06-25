@@ -42,7 +42,7 @@
       s += '<text class="dk-tm" x="594" y="' + (y + 11) + '" font-size="10" text-anchor="end" font-family="ui-monospace,monospace">5D ' + sgn(d.bps5d, 0) + '</text>';
     }
     s += '</svg>';
-    set("dk-strength", '<div class="dk-scroll">' + s + '</div>');
+    set("dk-strength", s);
   }
 
   // ---------- ZMIENNOSC ----------
@@ -95,7 +95,7 @@
     }
     html += '</div>';
     var meta = '<div class="dk-meta">korelacja zwrotów dziennych · ' + c.lookback + ' sesji · dane do ' + c.asof + '</div>';
-    set("dk-corr", '<div class="dk-scroll">' + html + '</div>' + meta);
+    set("dk-corr", html + meta);
   }
 
   // ---------- SESJE (live) ----------

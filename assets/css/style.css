@@ -1,5 +1,5 @@
-:root{--ink:#1a1a1a;--ink2:#333;--mut:#6b6b6b;--line:#e6e6e6;--acc:#0b66c3;--bg:#fff;--soft:#f6f8fb}
-:root[data-theme="dark"]{--ink:#e7eaed;--ink2:#c7ccd2;--mut:#9aa3ad;--line:#272d35;--acc:#5aa2ea;--bg:#0e1116;--soft:#171c22}
+:root{--ink:#1a1a1a;--ink2:#333;--mut:#6b6b6b;--line:#e6e6e6;--acc:#0b66c3;--bg:#fff;--soft:#f6f8fb;--up:#1a9e6a;--dn:#e5484d}
+:root[data-theme="dark"]{--ink:#e7eaed;--ink2:#c7ccd2;--mut:#9aa3ad;--line:#272d35;--acc:#5aa2ea;--bg:#0e1116;--soft:#171c22;--up:#37b88a;--dn:#f0676d}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.72 Georgia,"Times New Roman",serif;transition:background .2s ease,color .2s ease}
@@ -87,23 +87,22 @@ pre code{background:none;padding:0;font-size:inherit}
 .dk-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 16px;background:var(--soft);border-bottom:1px solid var(--line)}
 .dk-brand{font:700 13px ui-monospace,Consolas,monospace;letter-spacing:4px;color:var(--acc)}
 .dk-badge{display:flex;align-items:center;gap:6px;font:11px ui-monospace,Consolas,monospace;color:var(--mut)}
-.dk-pulse{width:8px;height:8px;border-radius:50%;background:#1a9e6a;animation:pl 1.5s ease-in-out infinite}
+.dk-pulse{width:8px;height:8px;border-radius:50%;background:var(--up);animation:pl 1.5s ease-in-out infinite}
 @keyframes pl{0%,100%{opacity:1}50%{opacity:.25}}
 .dk-clock{font:12px ui-monospace,Consolas,monospace;color:var(--ink);margin-left:auto}
 .dk-asof{font:11px ui-monospace,Consolas,monospace;color:var(--mut)}
 .dk-body{padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.dk-card{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--bg)}
+.dk-card{border:0;border-radius:10px;overflow:hidden;background:var(--soft)}
 .dk-card.span2{grid-column:1 / -1}
-.dk-wh{padding:8px 13px;border-bottom:1px solid var(--line);background:var(--soft);font:11px ui-monospace,Consolas,monospace;letter-spacing:1.5px;color:var(--acc);text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.dk-wh{padding:9px 14px;border-bottom:1px solid var(--line);background:transparent;font:11px ui-monospace,Consolas,monospace;letter-spacing:1.5px;color:var(--acc);text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:8px}
 .dk-liq{color:var(--mut);letter-spacing:.5px;text-transform:none}
 .dk-wb{padding:12px 13px}
 .dk-wb svg{width:100%;height:auto;display:block}
-.dk-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .dk-axis{stroke:var(--line)}.dk-t{fill:var(--ink)}.dk-tm{fill:var(--mut)}
 .dk-band{fill:var(--acc);opacity:.5}.dk-band-hi{fill:var(--acc);opacity:.12}
-.dk-now{stroke:#e5484d;stroke-width:2}.dk-nowdot{fill:#e5484d}
+.dk-now{stroke:var(--dn);stroke-width:2}.dk-nowdot{fill:var(--dn)}
 .dk-track{fill:var(--line)}.dk-fill{fill:var(--acc)}.dk-mark{stroke:var(--ink);stroke-width:2}
-.dk-pos{fill:#1a9e6a}.dk-neg{fill:#e5484d}
+.dk-pos{fill:var(--up)}.dk-neg{fill:var(--dn)}
 .dk-sess{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:10px}
 .dk-schip{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:8px;padding:8px 11px}
 .dk-schip .dot{width:9px;height:9px;border-radius:50%;background:#cdd3da;flex:none}
@@ -116,7 +115,7 @@ pre code{background:none;padding:0;font-size:inherit}
 .dk-chip.neg{background:rgba(214,69,69,.15);color:#c0392b}
 :root[data-theme="dark"] .dk-chip.neg{color:#f0a0a0}
 .dk-cond div{font:13px -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink2);margin:4px 0}
-.dk-ok{color:#1a9e6a;font-weight:700;margin-right:6px}
+.dk-ok{color:var(--up);font-weight:700;margin-right:6px}
 .dk-score{margin-top:10px;font:12px ui-monospace,Consolas,monospace;color:var(--mut);border-top:1px solid var(--line);padding-top:9px}
 .dk-meta{font:12px ui-monospace,Consolas,monospace;color:var(--mut);margin-top:8px;line-height:1.7}
 .dk-meta b{color:var(--ink)}
@@ -138,9 +137,8 @@ pre code{background:none;padding:0;font-size:inherit}
   .dk-body{grid-template-columns:1fr;padding:11px;gap:12px}
   .dk-head{gap:10px}.dk-clock{margin-left:0;font-size:13px}
   .dk-wb{padding:11px}
-  .dk-tl{min-width:560px}.dk-tl text{font-size:13px}
-  #dk-strength svg{min-width:450px}
-  .dk-corr{min-width:430px}
+  #dk-strength{overflow-x:auto}#dk-strength svg{min-width:450px}
+  #dk-corr{overflow-x:auto}.dk-corr{min-width:430px}
   .dk-phase{font-size:17px}
   .dk-chip{font-size:12px}
   .dk-cond div{font-size:14px}
