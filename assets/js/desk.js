@@ -118,21 +118,6 @@
     set("dk-cot", s + '<div class="dk-meta">' + D.cot.unit + ' · net long = kupują, net short = sprzedają · ' + D.cot.source + '</div>');
   }
 
-  // ---------- KURSY (near-live) ----------
-  function quotes() {
-    var el = $("dk-quotes"); if (!el) return;
-    el.innerHTML = '<span class="dk-qmut">ładowanie kursów…</span>';
-    fetch("https://open.er-api.com/v6/latest/USD").then(function (r) { return r.json(); }).then(function (d) {
-      var R = d.rates; if (!R || !R.EUR) throw 0;
-      var rows = [["EUR/USD", 1 / R.EUR, 4], ["GBP/USD", 1 / R.GBP, 4], ["USD/JPY", R.JPY, 2], ["USD/CHF", R.CHF, 4], ["USD/CAD", R.CAD, 4]], h = "", i;
-      for (i = 0; i < rows.length; i++) h += '<span class="dk-q"><b>' + rows[i][0] + '</b> ' + rows[i][1].toFixed(rows[i][2]) + '</span>';
-      var t = new Date();
-      el.innerHTML = h + '<span class="dk-qmut">ref. · ' + pad(t.getUTCHours()) + ':' + pad(t.getUTCMinutes()) + ' UTC</span>';
-    }).catch(function () {
-      el.innerHTML = '<span class="dk-q"><b>EUR/USD</b> ' + (D.eurusd || "—") + '</span><span class="dk-qmut">snapshot (offline)</span>';
-    });
-  }
-
   // ---------- SESJE (live) ----------
   var SES = [{ i: 0, o: 21, c: 6 }, { i: 1, o: 23, c: 8 }, { i: 2, o: 7, c: 16 }, { i: 3, o: 12, c: 21 }];
   function isOpen(s, h) { return s.o < s.c ? (h >= s.o && h < s.c) : (h >= s.o || h < s.c); }
@@ -164,6 +149,6 @@
     if (liq) liq.textContent = cnt >= 2 ? ("wysoka płynność · " + cnt + " sesje") : (cnt === 1 ? "niższa płynność · 1 sesja" : "pauza · brak sesji");
   }
 
-  regime(); strength(); vol(); levels(); correlation(); cot(); quotes();
+  regime(); strength(); vol(); levels(); correlation(); cot();
   tick(); setInterval(tick, 1000);
 })();
