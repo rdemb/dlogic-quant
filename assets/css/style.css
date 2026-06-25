@@ -78,3 +78,14 @@ pre code{background:none;padding:0;font-size:inherit}
   h1{font-size:24px}
   table{display:block;overflow-x:auto;white-space:nowrap}
 }
+.nav{display:flex;gap:16px;align-self:center;font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:14px}
+.nav a{color:var(--mut)}.nav a:hover{color:var(--acc);text-decoration:none}
+.market{display:flex;flex-direction:column;gap:22px;margin:18px 0 8px}
+.wcard{border:1px solid #e6e6e6;border-radius:12px;overflow:hidden;background:#fff}
+.wcard .wh{padding:9px 14px;border-bottom:1px solid #e6e6e6;background:#f6f8fb;font:12px ui-monospace,Consolas,monospace;letter-spacing:1.5px;color:#0b66c3;text-transform:uppercase}
+.wframe{display:block;width:100%;border:0;background:#fff}
+.wframe.hours{height:300px}
+.wframe.cal{height:520px}
+.wbody{padding:10px 14px;min-height:54px}
+.wnote{color:var(--mut);font-size:13px;font-family:-apple-system,Segoe UI,Roboto,sans-serif;border-top:1px solid var(--line);padding-top:14px;margin-top:18px}
+@media (max-width:640px){.nav{font-size:13px;gap:12px}.wframe.hours{height:340px}.wframe.cal{height:460px}}
