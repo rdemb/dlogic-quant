@@ -5,7 +5,7 @@ date: "2026-06-24 08:00:00 +0200"
 dek: "Złoto traci, rentowności rosną, a rynek dokłada do wrześniowej podwyżki. To samo paliwo trzyma dolara mocnym. Pokazuję, gdzie liczby potwierdzają reżim, a gdzie milczą."
 readingTime: 8
 tags: [EUR/USD, dolar, złoto, Fed, realne stopy, carry, reżim rynku, analiza makro, Forex]
-image: /assets/og.png
+image: /assets/og/2026-06-24-zloto-peka-dolar-trzyma-rynek-wycenia-podwyzke.png
 ---
 
 > **W skrócie**
