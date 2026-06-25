@@ -1,23 +1,58 @@
 ---
 layout: default
-title: Rynek
+title: Desk
 permalink: /rynek/
-description: "Narzędzia rynkowe D-LOGIC Quant: godziny sesji Forex, kalendarz ekonomiczny i kursy walut w jednym miejscu."
+description: "D-LOGIC Desk — instytucjonalny terminal rynkowy w naszym stylu: sesje na żywo, reżim, siła walut, zmienność i poziomy EUR/USD. Bez reklam, bez cudzych danych."
 ---
-<h1>Rynek</h1>
-<p class="intro">Narzędzia rynkowe w jednym miejscu: godziny sesji, kalendarz makro i kursy. Dane: myfxbook.</p>
-<div class="market">
-  <section class="wcard">
-    <div class="wh">Godziny rynku</div>
-    <iframe class="wframe hours" src="https://widget.myfxbook.com/widget/market-hours.html" title="Godziny rynku — sesje Forex" loading="lazy"></iframe>
-  </section>
-  <section class="wcard">
-    <div class="wh">Kalendarz ekonomiczny</div>
-    <iframe class="wframe cal" src="https://widget.myfxbook.com/widget/calendar.html" title="Kalendarz ekonomiczny" loading="lazy"></iframe>
-  </section>
-  <section class="wcard">
-    <div class="wh">Pasek kursów</div>
-    <div class="wbody"><script type="text/javascript" src="https://widgets.myfxbook.com/scripts/toolbar.js"></script></div>
-  </section>
+<h1>Desk</h1>
+<p class="intro">Instytucjonalny terminal w naszym stylu. Sesje i zegar liczone na żywo, warstwa quant z naszego silnika. Bez reklam, bez cudzych danych.</p>
+
+<div class="dk">
+  <div class="dk-head">
+    <span class="dk-brand">D-LOGIC DESK</span>
+    <span class="dk-badge"><span class="dk-pulse"></span>sesje na żywo</span>
+    <span class="dk-clock" id="dk-clock">--:--:-- UTC</span>
+    <span class="dk-asof">EUR/USD {{ site.data.desk.eurusd }} · stan {{ site.data.desk.asof }}</span>
+  </div>
+  <div class="dk-body">
+
+    <section class="dk-card span2">
+      <div class="dk-wh"><span>Sesje i płynność</span><span class="dk-liq" id="dk-liq"></span></div>
+      <div class="dk-wb">
+        <svg class="dk-tl" viewBox="0 0 960 124" xmlns="http://www.w3.org/2000/svg" font-family="ui-monospace,Consolas,monospace">
+          <g class="dk-tm" font-size="10" text-anchor="middle">
+            <text x="84" y="13">00</text><text x="228" y="13">04</text><text x="372" y="13">08</text><text x="516" y="13">12</text><text x="660" y="13">16</text><text x="804" y="13">20</text><text x="948" y="13">24</text>
+          </g>
+          <g class="dk-tm" font-size="10.5">
+            <text x="6" y="38">Sydney</text><text x="6" y="62">Tokio</text><text x="6" y="86">Londyn</text><text x="6" y="110">N.Jork</text>
+          </g>
+          <rect class="dk-band" x="840" y="26" width="108" height="16" rx="3"/><rect class="dk-band" x="84" y="26" width="216" height="16" rx="3"/>
+          <rect class="dk-band" x="912" y="50" width="36" height="16" rx="3"/><rect class="dk-band" x="84" y="50" width="288" height="16" rx="3"/>
+          <rect class="dk-band" x="336" y="74" width="324" height="16" rx="3"/>
+          <rect class="dk-band" x="516" y="98" width="324" height="16" rx="3"/>
+          <rect class="dk-band-hi" x="516" y="74" width="144" height="40"/>
+          <line class="dk-now" id="dk-now-line" x1="84" y1="20" x2="84" y2="118"/>
+          <circle class="dk-nowdot" id="dk-now-dot" cx="84" cy="20" r="3.5"/>
+        </svg>
+        <div class="dk-sess">
+          <div class="dk-schip" id="dk-ses0"><span class="dot"></span><div><b>Sydney</b><span class="st">—</span></div></div>
+          <div class="dk-schip" id="dk-ses1"><span class="dot"></span><div><b>Tokio</b><span class="st">—</span></div></div>
+          <div class="dk-schip" id="dk-ses2"><span class="dot"></span><div><b>Londyn</b><span class="st">—</span></div></div>
+          <div class="dk-schip" id="dk-ses3"><span class="dot"></span><div><b>Nowy Jork</b><span class="st">—</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dk-card"><div class="dk-wh">Reżim dnia</div><div class="dk-wb" id="dk-regime"></div></section>
+    <section class="dk-card"><div class="dk-wh">Zmienność EUR/USD</div><div class="dk-wb" id="dk-vol"></div></section>
+    <section class="dk-card span2"><div class="dk-wh">Siła walut · G8 (z-score)</div><div class="dk-wb" id="dk-strength"></div></section>
+    <section class="dk-card span2"><div class="dk-wh">Kluczowe poziomy · EUR/USD</div><div class="dk-wb" id="dk-levels"></div></section>
+
+  </div>
+  <div class="dk-foot">Sesje i zegar: liczone w przeglądarce (UTC), na żywo. Warstwa quant: snapshot z pipeline'u D-LOGIC, stan na {{ site.data.desk.asof }}. Wkrótce: kursy near-live, COT i korelacje. To analiza, nie porada inwestycyjna.</div>
 </div>
-<p class="wnote">Kolejne widgety (sentyment, mapa ciepła, wzorce, korelacje) dołożę po wklejeniu kodów z konfiguratora myfxbook — każdy ma przycisk „Copy".</p>
+
+<noscript><p class="intro">Desk wymaga JavaScript. Najświeższe liczby znajdziesz w <a href="{{ '/' | relative_url }}">raportach</a>.</p></noscript>
+
+<script>window.DESK = {{ site.data.desk | jsonify }};</script>
+<script src="{{ '/assets/js/desk.js' | relative_url }}" defer></script>

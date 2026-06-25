@@ -1,0 +1,36 @@
+# D-LOGIC Desk — snapshot warstwy quant (public-safe). Aktualizowany przez pipeline przy pushu.
+# Ceny jako stringi, by zachowac 4 miejsca po przecinku.
+asof: "2026-06-23"
+eurusd: "1.1470"
+regime:
+  phase_pl: "Szczyt cyklu, lepka inflacja"
+  usd_bias: "SILNY"
+  eurusd_bias: "BEARISH"
+conditions:
+  real_10y: "+0.3%"
+  curve: "+30 bp"
+  carry: "+137.5 bp"
+  score: "3 / 3"
+strength:
+  - { ccy: "GBP", z: 1.52, bps5d: -76 }
+  - { ccy: "JPY", z: 0.98, bps5d: 29 }
+  - { ccy: "USD", z: 0.59, bps5d: 106 }
+  - { ccy: "EUR", z: 0.52, bps5d: -25 }
+  - { ccy: "CAD", z: -0.45, bps5d: -87 }
+  - { ccy: "AUD", z: -0.47, bps5d: 18 }
+  - { ccy: "NZD", z: -1.17, bps5d: -125 }
+  - { ccy: "CHF", z: -1.52, bps5d: -96 }
+vol:
+  atr_pips: 59
+  atr_pctile: 52
+  regime: "NORMAL"
+  rv_atr: "0.51"
+  variance_ratio: "1.54"
+  range_low: "1.1410"
+  range_high: "1.1529"
+levels:
+  - { label: "Opor tygodnia", price: "1.1602", note: "+1σ tydz." }
+  - { label: "Gorny ATR", price: "1.1529", note: "+1σ dzien" }
+  - { label: "Spot", price: "1.1470", note: "punkt startu", spot: true }
+  - { label: "Dolny ATR", price: "1.1410", note: "−1σ dzien" }
+  - { label: "Wsparcie tygodnia", price: "1.1338", note: "−1σ tydz." }
