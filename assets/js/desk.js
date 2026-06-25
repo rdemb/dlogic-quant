@@ -42,7 +42,7 @@
       s += '<text class="dk-tm" x="594" y="' + (y + 11) + '" font-size="10" text-anchor="end" font-family="ui-monospace,monospace">5D ' + sgn(d.bps5d, 0) + '</text>';
     }
     s += '</svg>';
-    set("dk-strength", s);
+    set("dk-strength", '<div class="dk-scroll">' + s + '</div>');
   }
 
   // ---------- ZMIENNOSC ----------
@@ -72,6 +72,30 @@
     }
     html += '</div>';
     set("dk-levels", html);
+  }
+
+  // ---------- KORELACJA ----------
+  function ccol(v) {
+    if (v >= 0.999) return "rgba(26,158,106,.30)";
+    var a = (Math.min(Math.abs(v), 1) * 0.34 + 0.05).toFixed(2);
+    return (v >= 0 ? "rgba(26,158,106," : "rgba(229,72,77,") + a + ")";
+  }
+  function correlation() {
+    if (!D.correlation) return;
+    var c = D.correlation, S = c.symbols, M = c.matrix;
+    var html = '<div class="dk-corr" style="grid-template-columns:62px repeat(' + S.length + ',1fr)">';
+    html += '<div class="dk-cc dk-ch"></div>';
+    for (var k = 0; k < S.length; k++) html += '<div class="dk-cc dk-ch">' + S[k] + '</div>';
+    for (var i = 0; i < M.length; i++) {
+      html += '<div class="dk-cc dk-rh">' + S[i] + '</div>';
+      for (var j = 0; j < M[i].length; j++) {
+        var v = M[i][j], t = (v > 0 ? "+" : (v < 0 ? "−" : "")) + Math.abs(v).toFixed(2);
+        html += '<div class="dk-cc' + (i === j ? " dk-diag" : "") + '" style="background:' + ccol(v) + '">' + t + '</div>';
+      }
+    }
+    html += '</div>';
+    var meta = '<div class="dk-meta">korelacja zwrotów dziennych · ' + c.lookback + ' sesji · dane do ' + c.asof + '</div>';
+    set("dk-corr", '<div class="dk-scroll">' + html + '</div>' + meta);
   }
 
   // ---------- SESJE (live) ----------
@@ -105,6 +129,6 @@
     if (liq) liq.textContent = cnt >= 2 ? ("wysoka płynność · " + cnt + " sesje") : (cnt === 1 ? "niższa płynność · 1 sesja" : "pauza · brak sesji");
   }
 
-  regime(); strength(); vol(); levels();
+  regime(); strength(); vol(); levels(); correlation();
   tick(); setInterval(tick, 1000);
 })();

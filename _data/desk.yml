@@ -34,3 +34,12 @@ levels:
   - { label: "Spot", price: "1.1470", note: "punkt startu", spot: true }
   - { label: "Dolny ATR", price: "1.1410", note: "−1σ dzien" }
   - { label: "Wsparcie tygodnia", price: "1.1338", note: "−1σ tydz." }
+correlation:
+  asof: "2026-05-20"
+  lookback: 60
+  symbols: ["EUR/USD", "GBP/USD", "USD/CHF", "USD/JPY"]
+  matrix:
+    - [1.00, 0.91, -0.81, -0.64]
+    - [0.91, 1.00, -0.81, -0.68]
+    - [-0.81, -0.81, 1.00, 0.67]
+    - [-0.64, -0.68, 0.67, 1.00]
