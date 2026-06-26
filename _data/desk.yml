@@ -5,8 +5,8 @@ regime:
   usd_bias: "SILNY"
   eurusd_bias: "BEARISH"
 conditions:
-  real_10y: "+0.19%"
-  curve: "+18 bp"
+  real_10y: "+0.18%"
+  curve: "+17 bp"
   carry: "+137.5 bp"
   score: "3 / 3"
 strength:
@@ -45,12 +45,13 @@ cot:
   source: "CFTC (pipeline)"
   unit: "net spek, tys. kontraktow"
   items:
-  - { ccy: "AUD", net: 30 }
-  - { ccy: "EUR", net: 7 }
-  - { ccy: "JPY", net: -34 }
-  - { ccy: "GBP", net: -35 }
-  - { ccy: "CAD", net: -39 }
-  - { ccy: "CHF", net: -71 }
+  - { ccy: "EUR", net: 34.4 }
+  - { ccy: "AUD", net: -4.1 }
+  - { ccy: "NZD", net: -11.7 }
+  - { ccy: "CHF", net: -40.1 }
+  - { ccy: "GBP", net: -71.6 }
+  - { ccy: "CAD", net: -132.9 }
+  - { ccy: "JPY", net: -150.1 }
 vol_term:
   - { pair: "EURUSD", comp: 0.8, regime: "kompresja", pctile: 32 }
   - { pair: "GBPUSD", comp: 0.67, regime: "kompresja", pctile: 62 }
