@@ -1,5 +1,5 @@
 asof: "2026-06-26"
-eurusd: "1.1469"
+eurusd: "1.1417"
 regime:
   phase_pl: "Szczyt cyklu, lepka inflacja"
   usd_bias: "SILNY"
@@ -10,28 +10,28 @@ conditions:
   carry: "+137.5 bp"
   score: "3 / 3"
 strength:
-  - { ccy: "GBP", z: 1.52, bps5d: -76 }
-  - { ccy: "JPY", z: 0.98, bps5d: 29 }
-  - { ccy: "USD", z: 0.59, bps5d: 106 }
-  - { ccy: "EUR", z: 0.52, bps5d: -25 }
-  - { ccy: "CAD", z: -0.45, bps5d: -87 }
-  - { ccy: "AUD", z: -0.47, bps5d: 18 }
-  - { ccy: "NZD", z: -1.17, bps5d: -125 }
-  - { ccy: "CHF", z: -1.52, bps5d: -96 }
+  - { ccy: "GBP", z: 1.51, bps5d: -21 }
+  - { ccy: "EUR", z: 1.27, bps5d: -12 }
+  - { ccy: "JPY", z: 0.63, bps5d: 23 }
+  - { ccy: "CAD", z: -0.08, bps5d: -32 }
+  - { ccy: "NZD", z: -0.38, bps5d: -122 }
+  - { ccy: "CHF", z: -0.42, bps5d: -36 }
+  - { ccy: "AUD", z: -0.96, bps5d: -5 }
+  - { ccy: "USD", z: -1.57, bps5d: 53 }
 vol:
   atr_pips: 59
-  atr_pctile: 52
+  atr_pctile: 48
   regime: "NORMAL"
-  rv_atr: "0.51"
-  variance_ratio: "1.54"
-  range_low: "1.1410"
-  range_high: "1.1529"
+  rv_atr: "0.62"
+  variance_ratio: "1.13"
+  range_low: "1.1358"
+  range_high: "1.1476"
 levels:
-  - { label: "Opor tygodnia", price: "1.1602", note: "+1σ tydz." }
-  - { label: "Gorny ATR", price: "1.1529", note: "+1σ dzien" }
-  - { label: "Spot", price: "1.1469", note: "punkt startu", spot: true }
-  - { label: "Dolny ATR", price: "1.1410", note: "-1σ dzien" }
-  - { label: "Wsparcie tygodnia", price: "1.1337", note: "-1σ tydz." }
+  - { label: "Opor tygodnia", price: "1.1549", note: "+1σ tydz." }
+  - { label: "Gorny ATR", price: "1.1476", note: "+1σ dzien" }
+  - { label: "Spot", price: "1.1417", note: "punkt startu", spot: true }
+  - { label: "Dolny ATR", price: "1.1358", note: "-1σ dzien" }
+  - { label: "Wsparcie tygodnia", price: "1.1285", note: "-1σ tydz." }
 correlation:
   asof: "2026-05-20"
   lookback: 60
