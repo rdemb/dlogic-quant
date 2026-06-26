@@ -1,12 +1,12 @@
-asof: "2026-06-25"
+asof: "2026-06-26"
 eurusd: "1.1469"
 regime:
   phase_pl: "Szczyt cyklu, lepka inflacja"
   usd_bias: "SILNY"
   eurusd_bias: "BEARISH"
 conditions:
-  real_10y: "+0.21%"
-  curve: "+20 bp"
+  real_10y: "+0.19%"
+  curve: "+18 bp"
   carry: "+137.5 bp"
   score: "3 / 3"
 strength:
