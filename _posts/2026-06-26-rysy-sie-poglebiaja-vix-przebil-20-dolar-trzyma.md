@@ -2,7 +2,7 @@
 title: "Rysy się pogłębiają: VIX przebił 20, a dolar i tak trzyma"
 description: "VIX 20.45 (+18% w 5 sesji) przebija próg risk-off, S&P 500 -2%, ropa -6.7%, US 10Y mięknie do 4.39%. Złoto odbiło nad 4000, a DXY stoi w miejscu. Piątkowy risk-check na zimnych liczbach."
 date: 2026-06-26 16:00:00 +0200
-dek: "Wczoraj liczyłem trzy rysy w reżimie dolara. Dziś jedna z nich przebiła próg: VIX wszedł nad 20. A mimo to dolar nie skorzystał, bo długi koniec krzywej mięknie w tym samym czasie. Rozkładam piątkowy, końcoworoczny risk-check na liczby i pokazuję, które dwie siły się dziś przepychają."
+dek: "Wczoraj liczyłem trzy rysy w reżimie dolara. Dziś jedna z nich przebiła próg: VIX wszedł nad 20. A mimo to dolar nie skorzystał, bo długi koniec krzywej mięknie w tym samym czasie. Rozkładam piątkowy risk-check przed domknięciem półrocza na liczby i pokazuję, które dwie siły się dziś przepychają."
 readingTime: 6
 tags: [VIX, risk-off, dolar, DXY, EUR/USD, krzywa dochodowości, rentowności, złoto, S&P 500, reżim rynku, analiza makro, Forex]
 image: /assets/og.png
