@@ -85,6 +85,36 @@ Nie widzisz `s_t`. Widzisz strumień obserwacji `o_t` (zwroty i zmienność). Mo
 
 Do ekonomii i finansów przyniósł to Hamilton (1989) jako Markov regime switching: autoregresja, której parametry przełączają się wraz z ukrytym stanem Markowa, zastosowana najpierw do dynamiki wzrostu i recesji. Finansowe odczytanie jest proste: hossa i bessa, albo spokój i kryzys, jako ukryte stany z własną średnią i wariancją oraz z prawdopodobieństwem przełączenia między nimi. Rabiner z kolei dał kanoniczny, czytelny wykład samych algorytmów (pierwotnie dla rozpoznawania mowy), i jego trwała wartość polega na ujęciu HMM jako trzech pytań.
 
+<figure>
+<svg viewBox="0 0 640 340" font-family="-apple-system,Segoe UI,Roboto,sans-serif" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<marker id="rgSticky" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1.5 L9 5 L1 8.5 z" fill="currentColor" fill-opacity="0.7"/></marker>
+<marker id="rgRare" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1.5 L9 5 L1 8.5 z" fill="currentColor" fill-opacity="0.5"/></marker>
+</defs>
+<text x="320" y="24" text-anchor="middle" font-size="13.5" fill="currentColor" fill-opacity="0.85">Reżim jako stan: trend, zakres, kryzys</text>
+<rect x="64" y="84" width="150" height="60" rx="11" fill="#1a9e6a" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.2"/>
+<text x="139" y="110" text-anchor="middle" font-size="14.5" font-weight="600" fill="currentColor">Trend</text>
+<text x="139" y="127" text-anchor="middle" font-size="9.5" fill="currentColor" fill-opacity="0.6">spokój, dryf kierunkowy</text>
+<rect x="426" y="84" width="150" height="60" rx="11" fill="#0b66c3" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.2"/>
+<text x="501" y="110" text-anchor="middle" font-size="14.5" font-weight="600" fill="currentColor">Zakres</text>
+<text x="501" y="127" text-anchor="middle" font-size="9.5" fill="currentColor" fill-opacity="0.6">niska zmienność, rewersja</text>
+<rect x="245" y="232" width="150" height="60" rx="11" fill="#e5484d" fill-opacity="0.13" stroke="currentColor" stroke-opacity="0.45" stroke-width="1.2"/>
+<text x="320" y="258" text-anchor="middle" font-size="14.5" font-weight="600" fill="currentColor">Kryzys</text>
+<text x="320" y="275" text-anchor="middle" font-size="9.5" fill="currentColor" fill-opacity="0.6">eksplozja zmienności</text>
+<path d="M116 84 C 98 38, 180 38, 162 84" fill="none" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.7" marker-end="url(#rgSticky)"/>
+<path d="M478 84 C 460 38, 542 38, 524 84" fill="none" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.7" marker-end="url(#rgSticky)"/>
+<path d="M296 292 C 278 330, 362 330, 344 292" fill="none" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.7" marker-end="url(#rgSticky)"/>
+<path d="M222 114 H 418" fill="none" stroke="currentColor" stroke-opacity="0.4" stroke-width="1.3" stroke-dasharray="5 4" marker-start="url(#rgRare)" marker-end="url(#rgRare)"/>
+<path d="M158 148 L 292 228" fill="none" stroke="currentColor" stroke-opacity="0.4" stroke-width="1.3" stroke-dasharray="5 4" marker-start="url(#rgRare)" marker-end="url(#rgRare)"/>
+<path d="M482 148 L 348 228" fill="none" stroke="currentColor" stroke-opacity="0.4" stroke-width="1.3" stroke-dasharray="5 4" marker-start="url(#rgRare)" marker-end="url(#rgRare)"/>
+<text x="139" y="46" text-anchor="middle" font-size="9.5" fill="currentColor" fill-opacity="0.55">lepki</text>
+<text x="501" y="46" text-anchor="middle" font-size="9.5" fill="currentColor" fill-opacity="0.55">lepki</text>
+<text x="320" y="335" text-anchor="middle" font-size="9.5" fill="currentColor" fill-opacity="0.55">lepki</text>
+<text x="320" y="108" text-anchor="middle" font-size="9.5" fill="currentColor" fill-opacity="0.55">rzadkie przejście</text>
+</svg>
+<figcaption>Trzy reżimy rynku jako stany łańcucha Markowa. Każdy stan jest lepki, więc rynek najczęściej zostaje tam, gdzie jest (pętla zwrotna), a przejścia między stanami są rzadsze (cieńsze, przerywane strzałki). Model szacuje prawdopodobieństwo bycia w danym stanie oraz prawdopodobieństwa przejść między nimi.</figcaption>
+</figure>
+
 ## Trzy pytania modelu HMM
 
 Rabiner porządkuje całą maszynerię w trzy problemy, i warto je znać, bo każdy odpowiada na inne praktyczne pytanie.
