@@ -104,6 +104,19 @@ layout: default
   <p class="meta">{{ page.date | date: "%-d.%m.%Y" }} · ~{{ page.readingTime | default: 5 }} min</p>
   {% if page.dek %}<p class="dek">{{ page.dek }}</p>{% endif %}
   {{ content }}
+  {% assign rel = site.posts | where: "category", page.category %}
+  {% if rel.size > 1 %}
+  <nav class="related">
+    <h3>Zobacz też w dziale {{ page.category | capitalize }}</h3>
+    <ul>
+    {% assign shown = 0 %}
+    {% for p in rel %}{% if p.url != page.url and shown < 4 %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+      {% assign shown = shown | plus: 1 %}
+    {% endif %}{% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
   <div class="share">
     <span>Udostępnij:</span>
     <a class="sx" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}&via=takitamrafal" target="_blank" rel="noopener">X / Twitter</a>
@@ -111,5 +124,5 @@ layout: default
     <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">Facebook</a>
     <button type="button" class="copy" onclick="navigator.clipboard.writeText('{{ page.url | absolute_url }}');this.textContent='Skopiowano ✓'">Kopiuj link</button>
   </div>
-  <p class="back"><a href="{{ '/' | relative_url }}">← wszystkie raporty</a></p>
+  <p class="back"><a href="{{ '/' | relative_url }}">← wszystkie wpisy</a></p>
 </article>
