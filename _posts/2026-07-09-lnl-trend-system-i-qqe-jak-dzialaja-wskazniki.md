@@ -2,7 +2,8 @@
 title: "Pod maską: L&L Trend System i QQE. Co naprawdę liczą dwa wskaźniki"
 description: "Dokładny rozbiór dwóch popularnych wskaźników z TradingView. L&L Trend System (EMA 13, stop line na ATR, DMI/ADX) i QQE (wygładzony RSI, trailing na zmienności RSI, Fibonacci 4,236). Mechanika i matematyka po ludzku."
 date: 2026-07-09 12:00:00 +0200
-eyebrow: "Analiza · edukacja"
+eyebrow: "Edukacja · wskaźniki"
+category: edukacja
 dek: "Większość ludzi patrzy na kolor wskaźnika i klika. Ja lubię wiedzieć, co liczy każda linia. Rozkładam dwa narzędzia, które łączę na MT5: L&L Trend System i QQE. Trochę matematyki, ale wszystko po ludzku."
 readingTime: 9
 tags: ["L&L Trend System", QQE, RSI, ATR, EMA, DMI, ADX, analiza techniczna, wskaźniki, TradingView, momentum, trend, Forex]

@@ -27,6 +27,9 @@ h2{font-size:22px;margin:36px 0 10px;font-family:-apple-system,Segoe UI,Roboto,s
 .posts .d{color:var(--mut);font-family:ui-monospace,Consolas,monospace;font-size:13px;margin-right:12px}
 .posts a{font-size:19px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
 .posts .ds{display:block;color:var(--mut);font-size:15px;margin-top:3px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+.cat{margin:0 0 6px}
+.cat-h{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--acc);border-bottom:2px solid var(--line);padding-bottom:8px;margin:40px 0 6px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+.cat-desc{color:var(--mut);font-size:15px;margin:0 0 6px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
 figure:not(.cover){margin:26px 0;background:#fff;border:1px solid #e6e6e6;border-radius:12px;padding:12px 14px}
 figure svg{width:100%;height:auto;display:block}
 figcaption{color:#6b6b6b;font-size:13px;text-align:center;margin-top:10px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}

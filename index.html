@@ -2,11 +2,42 @@
 layout: default
 ---
 <section class="intro">
-  <p>Codzienny, liczbowy obraz rynku FX i makro. Bez opinii: siła walut, reżim, zmienność, scenariusze. Każdy raport liczony z danych.</p>
+  <p>Liczbowy obraz rynku, warsztat quanta i rozkminy. Analizy makro i FX, edukacja o metodzie, przemyślenia o rynku i przetrwaniu. Wszystko liczone z danych, bez obietnic.</p>
 </section>
-<ul class="posts">
-{% for post in site.posts %}
-  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-  {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
-{% endfor %}
-</ul>
+
+{% assign edu = site.posts | where: "category", "edukacja" %}
+{% assign ana = site.posts | where: "category", "analizy" %}
+{% assign roz = site.posts | where: "category", "rozkminy" %}
+
+<section id="edukacja" class="cat">
+  <h2 class="cat-h">Edukacja</h2>
+  <p class="cat-desc">Jak to naprawdę działa. Walidacja strategii, koszty egzekucji, sizing, mikrostruktura, wskaźniki. Metoda i matematyka po ludzku.</p>
+  <ul class="posts">
+  {% for post in edu %}
+    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section id="analizy" class="cat">
+  <h2 class="cat-h">Analizy</h2>
+  <p class="cat-desc">Bieżący rynek liczbowo. Siła walut, reżim makro, zmienność, scenariusze i ich wyzwalacze.</p>
+  <ul class="posts">
+  {% for post in ana %}
+    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section id="rozkminy" class="cat">
+  <h2 class="cat-h">Rozkminy</h2>
+  <p class="cat-desc">Przemyślenia i badania. Psychologia i przetrwanie, historia rynków, testy strategii, w tym te zakończone niczym.</p>
+  <ul class="posts">
+  {% for post in roz %}
+    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+  {% endfor %}
+  </ul>
+</section>
