@@ -2,7 +2,8 @@
 layout: default
 ---
 <section class="intro">
-  <p>Liczbowy obraz rynku, warsztat quanta i rozkminy. Analizy makro i FX, edukacja o metodzie, przemyślenia o rynku i przetrwaniu. Wszystko liczone z danych, bez obietnic.</p>
+  <p>Kompendium wiedzy o rynkach liczonych, nie zgadywanych. Jak naprawdę działają narzędzia quanta: walidacja strategii, zarządzanie ryzykiem, koszty egzekucji, mikrostruktura, reżimy i zmienność. Do tego bieżące analizy makro oraz rozkminy o tym, co na rynkach się powtarza. Prosto, na źródłach, bez obietnic.</p>
+  <p class="start">Od czego zacząć: <a href="{{ '/2026/07/09/dlaczego-twoj-sharpe-klamie-deflated-sharpe/' | relative_url }}">czemu Sharpe kłamie</a>, potem <a href="{{ '/2026/07/09/ile-powinienes-grac-kelly-i-sizing/' | relative_url }}">ile w ogóle grać</a>, a na koniec <a href="{{ '/2026/07/09/jak-rozpoznac-rezim-rynku/' | relative_url }}">jak rozpoznać reżim rynku</a>.</p>
 </section>
 
 {% assign edu = site.posts | where: "category", "edukacja" %}
@@ -11,7 +12,7 @@ layout: default
 
 <section id="edukacja" class="cat">
   <h2 class="cat-h">Edukacja</h2>
-  <p class="cat-desc">Jak to naprawdę działa. Walidacja strategii, koszty egzekucji, sizing, mikrostruktura, wskaźniki. Metoda i matematyka po ludzku.</p>
+  <p class="cat-desc">Jak to naprawdę działa. Walidacja i statystyka, ryzyko i sizing, koszty egzekucji, mikrostruktura, reżimy, zmienność, płynność, pozycjonowanie, strategie i uczenie maszynowe. Metoda i matematyka po ludzku.</p>
   <ul class="posts">
   {% for post in edu %}
     <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -33,7 +34,7 @@ layout: default
 
 <section id="rozkminy" class="cat">
   <h2 class="cat-h">Rozkminy</h2>
-  <p class="cat-desc">Przemyślenia i badania. Psychologia i przetrwanie, historia rynków, testy strategii, w tym te zakończone niczym.</p>
+  <p class="cat-desc">Przemyślenia i eseje. Psychologia i przetrwanie, historia rynków i cykle długu, wzorce, które wracają.</p>
   <ul class="posts">
   {% for post in roz %}
     <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
