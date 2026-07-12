@@ -1,6 +1,6 @@
 ---
 title: "Zaczynam dziennik algo. Pierwszy bot i zasady, które go pilnują"
-description: "Nowa sekcja: jawny dziennik budowy własnych systemów algorytmicznych. Pierwszy bot działa na rynku krypto z egzekucją przez MetaTrader 5, ale sedno wpisu to nie strategia, tylko bezpieczniki i jedna zasada, która ustawia całą resztę: backtest nie jest dowodem, dowodem jest wyłącznie forward w czasie rzeczywistym, po kosztach."
+description: "Nowa sekcja: jawny dziennik budowy własnych systemów algorytmicznych. Pierwszy bot działa na rynku walutowym z egzekucją przez MetaTrader 5, ale sedno wpisu to nie strategia, tylko bezpieczniki i jedna zasada, która ustawia całą resztę: backtest nie jest dowodem, dowodem jest wyłącznie forward w czasie rzeczywistym, po kosztach."
 date: 2026-07-12 16:00:00 +0200
 eyebrow: "Moje Algo · dziennik"
 dek: "Po co osobna sekcja o botach, dlaczego zaczyna się od bezpieczników, a nie od sygnału, i czemu pierwszy system długo chodzi na papierze zanim dotknie realnego konta. Zapis procesu, nie oferta i nie obietnica wyniku."
@@ -12,7 +12,7 @@ category: algo
 > **W skrócie**
 >
 > - Ta sekcja to dziennik budowy moich własnych systemów algorytmicznych, pisany na bieżąco. Nie sygnały, nie oferta, nie kurs. Zapis decyzji i błędów.
-> - Pierwszy bot działa na rynku krypto, z egzekucją przez MetaTrader 5. Opisuję tu jego szkielet i zasady bezpieczeństwa, a nie strategię wejścia.
+> - Pierwszy bot działa na rynku walutowym, z egzekucją przez MetaTrader 5. Opisuję tu jego szkielet i zasady bezpieczeństwa, a nie strategię wejścia.
 > - Najważniejsze w bocie nie jest to, kiedy wchodzi, tylko czego mu nie wolno. Dzienny limit straty, kill-switch od szczytu kapitału i jedna pozycja na instrument są wpisane na twardo.
 > - Backtest, choćby najładniejszy, nie jest dowodem przewagi. Jedyny dowód, który uznaję, to forward w czasie rzeczywistym, po realnych kosztach. Dlatego bot najpierw długo liczy na papierze.
 > - Bramka wejścia na realne pieniądze jest zapisana z góry i nie zmienia się po fakcie. Przełączenie wymaga dwóch świadomych, ręcznych kroków.
@@ -29,7 +29,7 @@ Mechaniczna egzekucja usuwa część błędów, które popełnia człowiek przy 
 
 ## Pierwszy bot: co mogę powiedzieć teraz
 
-Pierwszy system działa na rynku krypto i składa zlecenia przez MetaTrader 5. Świadomie nie opisuję tu logiki wejścia, bo jest w trakcie walidacji i wrócę do niej dopiero, gdy będę miał na jej temat coś uczciwego do powiedzenia. To, co mogę pokazać już teraz, to warstwa, która w moim przekonaniu decyduje o przetrwaniu konta, czyli zarządzanie ryzykiem i bezpieczniki.
+Pierwszy system działa na rynku walutowym i składa zlecenia przez MetaTrader 5. Świadomie nie opisuję tu logiki wejścia, bo jest w trakcie walidacji i wrócę do niej dopiero, gdy będę miał na jej temat coś uczciwego do powiedzenia. To, co mogę pokazać już teraz, to warstwa, która w moim przekonaniu decyduje o przetrwaniu konta, czyli zarządzanie ryzykiem i bezpieczniki.
 
 Bot jest rozłożony na osobne warstwy: dane, sygnał, ryzyko, egzekucja i log. Warstwa sygnału jest czystą funkcją, którą da się testować w oderwaniu od reszty. Warstwa ryzyka to osobna bramka, przez którą musi przejść każda decyzja, zanim dotrze do brokera.
 

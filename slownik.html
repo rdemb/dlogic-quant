@@ -1,0 +1,112 @@
+---
+layout: default
+title: "Słownik pojęć"
+permalink: /slownik/
+---
+<section class="intro">
+  <p>Słownik pojęć. Krótkie, uczciwe definicje terminów, które wracają w całym kompendium. Bez żargonu dla żargonu. Gdzie jest pełny dział, prowadzi odnośnik.</p>
+</section>
+
+{% assign P = site.posts %}
+<dl class="glos">
+
+<dt>Alfa i beta</dt>
+<dd>Beta to część zwrotu, która wynika z ekspozycji na rynek (ruszasz się razem z nim). Alfa to nadwyżka ponad to, czego nie tłumaczy rynek ani znane czynniki. Większość rzekomej alfy okazuje się nierozpoznaną betą. {% assign p = P | where: "slug", "capm-i-faktory-skad-zwrot" | first %}{% if p %}<a href="{{ p.url | relative_url }}">CAPM i czynniki</a>{% endif %}</dd>
+
+<dt>Arbitraż</dt>
+<dd>Zysk bez ryzyka z rozbieżności cen tego samego lub równoważnego aktywa. W praktyce niemal zawsze jest to arbitraż z ograniczeniami (koszty, kapitał, ryzyko domknięcia), a nie darmowy obiad.</dd>
+
+<dt>Autokorelacja</dt>
+<dd>Zależność szeregu od własnej przeszłości. Zwroty są prawie nieautoskorelowane, ale ich kwadraty już nie, co widać jako grupowanie zmienności. {% assign p = P | where: "slug", "szeregi-czasowe-arima-garch" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Szeregi czasowe</a>{% endif %}</dd>
+
+<dt>Backtest</dt>
+<dd>Symulacja strategii na danych historycznych. Warunek konieczny, nigdy wystarczający: przy dość próbach świetny backtest jest gwarantowany nawet dla czystego szumu. {% assign p = P | where: "slug", "backtest-w-pythonie-szkielet" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Backtest w Pythonie</a>{% endif %}</dd>
+
+<dt>Bootstrap</dt>
+<dd>Szacowanie rozkładu statystyki przez losowanie ze zwracaniem z własnej próby, bez założeń o rozkładzie. Dla danych zależnych w czasie stosuje się wersje blokowe. {% assign p = P | where: "slug", "bootstrap-i-testy-istotnosci" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Bootstrap i testy</a>{% endif %}</dd>
+
+<dt>Carry</dt>
+<dd>Zysk z samego utrzymywania pozycji, gdy nic się nie dzieje (np. dodatnia różnica stóp w FX). Znany z tego, że zbiera drobne premie latami i oddaje je w jednym krachu. {% assign p = P | where: "slug", "carry-crash-kiedy-carry-trade-sie-zawala" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Carry i crash</a>{% endif %}</dd>
+
+<dt>Contango i backwardation</dt>
+<dd>Kształt struktury terminowej. Contango: kontrakt droższy niż spot (rolowanie kosztuje). Backwardation: tańszy (rolowanie dopłaca). {% assign p = P | where: "slug", "kontrakty-terminowe-contango-backwardation" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Kontrakty terminowe</a>{% endif %}</dd>
+
+<dt>Deflated Sharpe Ratio</dt>
+<dd>Poprawiony wskaźnik Sharpe uwzględniający liczbę wypróbowanych strategii i nienormalność zwrotów. Odpowiada na pytanie, ile z wyniku to umiejętność, a ile szczęście z wielu prób. {% assign p = P | where: "slug", "dlaczego-twoj-sharpe-klamie-deflated-sharpe" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Czemu Sharpe kłamie</a>{% endif %}</dd>
+
+<dt>Drawdown (obsunięcie)</dt>
+<dd>Spadek kapitału od ostatniego szczytu. Boli asymetrycznie: strata 50% wymaga zysku 100%, żeby wrócić do zera. {% assign p = P | where: "slug", "drawdown-matematyka-obsuniecia" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Matematyka obsunięcia</a>{% endif %}</dd>
+
+<dt>Dźwignia</dt>
+<dd>Kontrolowanie pozycji większej niż kapitał. Powiększa zysk i stratę symetrycznie, a przy automacie grozi wezwaniem do uzupełnienia depozytu i szybkim zerem.</dd>
+
+<dt>Edge (przewaga)</dt>
+<dd>Statystyczna nadwyżka oczekiwana ponad koszty. Realna dopiero po odjęciu spreadu, prowizji i poślizgu, i tylko jeśli przetrwa poza próbą. Sam pomysł nie jest przewagą.</dd>
+
+<dt>EMH (hipoteza rynku efektywnego)</dt>
+<dd>Teza, że ceny odzwierciedlają dostępną informację, więc trwałe bicie rynku jest trudne. Nie znaczy, że rynek ma zawsze rację, tylko że łatwej przewagi nie ma. {% assign p = P | where: "slug", "hipoteza-rynku-efektywnego-najwiekszy-spor" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Spór o EMH</a>{% endif %}</dd>
+
+<dt>Expected Shortfall (ES)</dt>
+<dd>Średnia strata w najgorszych scenariuszach ponad próg VaR. Lepsza od VaR, bo mówi, jak źle jest w ogonie, a nie tylko gdzie ogon się zaczyna. {% assign p = P | where: "slug", "miary-ryzyka-var-expected-shortfall" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Miary ryzyka</a>{% endif %}</dd>
+
+<dt>Grube ogony</dt>
+<dd>Rzadkie zdarzenia ekstremalne są znacznie częstsze, niż przewiduje rozkład normalny. Dlatego modele oparte na normalności zaniżają ryzyko krachu. {% assign p = P | where: "slug", "stylizowane-fakty-rynkow-grube-ogony" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Stylizowane fakty</a>{% endif %}</dd>
+
+<dt>HMM (ukryty model Markowa)</dt>
+<dd>Model z nieobserwowanymi stanami (np. spokój, burza) generującymi obserwacje. Narzędzie kontekstu, nie sygnał wejścia. {% assign p = P | where: "slug", "lancuchy-markowa-i-hmm" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Łańcuchy Markowa i HMM</a>{% endif %}</dd>
+
+<dt>Kelly (kryterium)</dt>
+<dd>Wzór na wielkość pozycji maksymalizującą długoterminowe tempo wzrostu kapitału. Pełny Kelly jest zwykle za agresywny, stąd praktyka ułamka Kelly. {% assign p = P | where: "slug", "ile-powinienes-grac-kelly-i-sizing" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Kelly i sizing</a>{% endif %}</dd>
+
+<dt>Kointegracja</dt>
+<dd>Sytuacja, gdy dwa niestacjonarne szeregi mają stacjonarną kombinację liniową, czyli spread wracający do średniej. Fundament pairs tradingu, bywa niestabilny w czasie. {% assign p = P | where: "slug", "stacjonarnosc-i-kointegracja" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Stacjonarność i kointegracja</a>{% endif %}</dd>
+
+<dt>Kurtoza</dt>
+<dd>Miara grubości ogonów rozkładu. Wysoka kurtoza znaczy więcej ekstremów, niż sugeruje sama zmienność. {% assign p = P | where: "slug", "prawdopodobienstwo-i-rozklady" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Prawdopodobieństwo i rozkłady</a>{% endif %}</dd>
+
+<dt>Look-ahead bias</dt>
+<dd>Użycie w decyzji informacji, która w danym momencie nie była jeszcze dostępna. Najczęstszy sposób, w jaki backtest sam siebie oszukuje. {% assign p = P | where: "slug", "look-ahead-w-kodzie-realizm" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Look-ahead w kodzie</a>{% endif %}</dd>
+
+<dt>Maker i taker</dt>
+<dd>Maker dostarcza płynność (zlecenie z limitem czeka w księdze), taker ją zabiera (zlecenie rynkowe). Giełdy różnicują opłaty między nimi. {% assign p = P | where: "slug", "kolejka-zlecen-priorytet-cena-czas" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Kolejka zleceń</a>{% endif %}</dd>
+
+<dt>Martyngał</dt>
+<dd>Proces, w którym najlepszą prognozą jutra jest dziś. Jeśli cena jest martyngałem, prosta przewaga kierunkowa nie istnieje. {% assign p = P | where: "slug", "procesy-stochastyczne-random-walk" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Procesy stochastyczne</a>{% endif %}</dd>
+
+<dt>Mikrostruktura</dt>
+<dd>Badanie tego, jak faktycznie powstaje cena: księga zleceń, spread, przepływ, koszty wykonania. Poziom, na którym ginie większość przewag detalicznych. {% assign p = P | where: "slug", "jak-dziala-ksiega-zlecen" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Księga zleceń</a>{% endif %}</dd>
+
+<dt>Order flow (przepływ zleceń)</dt>
+<dd>Strumień kupna i sprzedaży, który realnie przesuwa cenę. Zagregowany bywa kontekstem, ale u detalisty rzadko daje przewagę po kosztach. {% assign p = P | where: "slug", "order-flow-jak-przeplyw-rusza-kurs" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Order flow</a>{% endif %}</dd>
+
+<dt>Overfitting (przeuczenie)</dt>
+<dd>Dopasowanie modelu lub parametrów do przypadkowego szumu w danych zamiast do trwałej struktury. Objawia się świetnym wynikiem w próbie i rozpadem poza nią. {% assign p = P | where: "slug", "data-snooping-jak-finanse-sie-oszukuja" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Data snooping</a>{% endif %}</dd>
+
+<dt>PCA (analiza głównych składowych)</dt>
+<dd>Obrót danych do osi nieskorelowanych, uporządkowanych od największej zmienności. Redukuje wymiar i wydobywa wspólne czynniki, ale bywa niestabilna. {% assign p = P | where: "slug", "algebra-liniowa-pca-w-quant" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Algebra liniowa i PCA</a>{% endif %}</dd>
+
+<dt>Poślizg (slippage)</dt>
+<dd>Różnica między ceną oczekiwaną a uzyskaną. Rośnie przy niskiej płynności i szybkim rynku, i potrafi zjeść cały teoretyczny zysk. {% assign p = P | where: "slug", "ile-naprawde-kosztuje-twoj-trade-tca" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Koszty transakcji</a>{% endif %}</dd>
+
+<dt>Reżim rynku</dt>
+<dd>Utrzymujący się stan o określonej charakterystyce (np. niska zmienność, trend, panika). Rozpoznawalny z opóźnieniem, przydatny jako kontekst, nie jako sygnał. {% assign p = P | where: "slug", "jak-rozpoznac-rezim-rynku" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Reżim rynku</a>{% endif %}</dd>
+
+<dt>Sharpe (wskaźnik)</dt>
+<dd>Zwrot ponad stopę wolną od ryzyka na jednostkę zmienności. Popularny i łatwy do zawyżenia przez wybór najlepszej z wielu prób. {% assign p = P | where: "slug", "dlaczego-twoj-sharpe-klamie-deflated-sharpe" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Deflated Sharpe</a>{% endif %}</dd>
+
+<dt>Spread</dt>
+<dd>Różnica między ceną kupna a sprzedaży. Pierwszy i najbardziej pewny koszt każdej transakcji, płacony przy wejściu i wyjściu. {% assign p = P | where: "slug", "ile-naprawde-kosztuje-twoj-trade-tca" | first %}{% if p %}<a href="{{ p.url | relative_url }}">TCA</a>{% endif %}</dd>
+
+<dt>TCA (analiza kosztów transakcji)</dt>
+<dd>Rozłożenie realnego kosztu handlu na spread, prowizję, wpływ na rynek i poślizg. Bez niej brutto myli się z netto. {% assign p = P | where: "slug", "ile-naprawde-kosztuje-twoj-trade-tca" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Ile kosztuje trade</a>{% endif %}</dd>
+
+<dt>VaR (wartość zagrożona)</dt>
+<dd>Próg straty, którego z zadanym prawdopodobieństwem nie przekroczysz w danym okresie. Mówi, gdzie zaczyna się ogon, nie jak głęboki jest. {% assign p = P | where: "slug", "miary-ryzyka-var-expected-shortfall" | first %}{% if p %}<a href="{{ p.url | relative_url }}">VaR i ES</a>{% endif %}</dd>
+
+<dt>Walk-forward</dt>
+<dd>Walidacja, w której stroisz parametry na jednym oknie, testujesz na kolejnym i przesuwasz się w czasie. Uczciwsza niż optymalizacja na całej historii. {% assign p = P | where: "slug", "optymalizacja-walk-forward-w-kodzie" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Walk-forward</a>{% endif %}</dd>
+
+<dt>Zmienność i VRP</dt>
+<dd>Zmienność to skala wahań. Premia za ryzyko zmienności (VRP) to nadwyżka zmienności implikowanej z opcji nad tą, która się realizuje. {% assign p = P | where: "slug", "zmiennosc-prognoza-premia-ryzyka" | first %}{% if p %}<a href="{{ p.url | relative_url }}">Zmienność</a>{% endif %}</dd>
+
+</dl>

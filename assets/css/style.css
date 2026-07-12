@@ -36,15 +36,19 @@ h2{font-size:22px;margin:36px 0 10px;font-family:-apple-system,Segoe UI,Roboto,s
 .path li{padding:6px 0;border-top:1px solid var(--line)}
 .path li:first-child{border-top:0}
 .path a{font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:16px}
+.glos{margin:8px 0 0}
+.glos dt{font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-weight:600;font-size:17px;margin:20px 0 4px;color:var(--acc)}
+.glos dd{margin:0;color:var(--mut);font-size:15px;line-height:1.55}
+.glos dd a{white-space:nowrap;margin-left:4px}
 .related{margin:34px 0 0;padding-top:18px;border-top:1px solid var(--line)}
 .related h3{font-size:12px;text-transform:uppercase;letter-spacing:1.2px;color:var(--mut);margin:0 0 10px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
 .related ul{list-style:none;padding:0;margin:0}
 .related li{padding:5px 0;border-top:1px solid var(--line)}
 .related li:first-child{border-top:0}
 .related a{font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:16px}
-figure:not(.cover){margin:26px 0;background:#fff;border:1px solid #e6e6e6;border-radius:12px;padding:12px 14px}
+figure:not(.cover){margin:26px 0;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--ink)}
 figure svg{width:100%;height:auto;display:block}
-figcaption{color:#6b6b6b;font-size:13px;text-align:center;margin-top:10px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+figcaption{color:var(--mut);font-size:13px;text-align:center;margin-top:10px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
 table{border-collapse:collapse;width:100%;font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:14px;margin:18px 0}
 th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left}th{color:var(--mut);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.4px}
 blockquote{border-left:3px solid var(--acc);margin:22px 0;padding:8px 18px;color:var(--ink2);background:var(--soft);border-radius:0 8px 8px 0}

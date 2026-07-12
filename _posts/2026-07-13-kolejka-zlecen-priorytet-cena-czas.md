@@ -1,0 +1,79 @@
+---
+title: "Kolejka zleceń: priorytet cena-czas i mechanika dopasowania"
+description: "Silnik dopasowania (matching engine) kojarzy zlecenia według sztywnych reguł pierwszeństwa. Tekst rozkłada priorytet cena-czas (FIFO) kontra pro-rata, różnicę między zleceniem limit a market, model opłat maker-taker z rabatem oraz to, dlaczego pozycja w kolejce na danym poziomie ceny ma wymierną wartość. Na kanonie mikrostruktury: Harris „Trading and Exchanges” (2003) i O'Hara „Market Microstructure Theory” (1995), z odniesieniem do dokumentacji giełd o priorytecie cena-czas. Pogłębienie tekstu o księdze zleceń."
+date: 2026-07-13 09:00:00 +0200
+eyebrow: "Edukacja · mikrostruktura"
+dek: "Za widoczną ceną stoi kolejka konkretnych zleceń. Tekst pokazuje, jak silnik dopasowania kojarzy strony rynku: priorytet cena-czas i jego wariant pro-rata, kto dodaje, a kto zabiera płynność, model maker-taker z rabatem dla dostawcy oraz to, dlaczego miejsce w kolejce bywa cenne. Na koniec, jak ta mechanika wygląda u brokera detalicznego, który stoi między traderem a giełdą. Po polsku, na mechanice, bez obietnic."
+readingTime: 7
+tags: ["matching engine", "priorytet cena-czas", FIFO, "pro-rata", "księga zleceń", "limit order book", "maker taker", rabat, "queue position", "kolejka zleceń", płynność, spread, mikrostruktura, Harris, edukacja, Forex]
+category: edukacja
+---
+
+> **W skrócie**
+>
+> - Silnik dopasowania (matching engine) to program, który zestawia napływające zlecenia z tymi już czekającymi w księdze. Nie negocjuje ani nie uznaje, tylko stosuje sztywne reguły pierwszeństwa, rozstrzygające, które zlecenie ma zostać skojarzone najpierw. Najczęstszą regułą jest priorytet cena-czas.
+> - Priorytet cena-czas (price-time priority, w skrócie FIFO) działa dwustopniowo: najpierw wygrywa lepsza cena, a przy równej cenie zlecenie złożone wcześniej. Harris (2003) opisuje to jako podstawowe reguły pierwszeństwa zleceń. Alternatywą jest pro-rata, gdzie przy tej samej cenie realizacja dzieli się proporcjonalnie do wielkości zlecenia, a nie według czasu.
+> - Zlecenie limit czeka w księdze i dodaje płynność (rola maker), zlecenie market bierze płynność od razu (rola taker) i płaci spread. W modelu opłat maker-taker giełda pobiera prowizję od biorcy i wypłaca rabat dostawcy, żeby wynagrodzić budowanie płynności.
+> - Przy priorytecie cena-czas miejsce w kolejce na danym poziomie ceny ma wartość: zlecenie z przodu wypełni się wcześniej i z mniejszym ryzykiem, że cena ucieknie. Na rynku detalicznym trader zwykle nie stoi w tej kolejce, bo broker kwotuje jako dostawca, a klient prawie zawsze jest biorcą.
+
+**Teza w jednym zdaniu:** Cena, którą widać, to tylko czubek kolejki konkretnych zleceń, a o tym, które z nich i kiedy się wykona, decyduje nie wielkość rachunku ani chęć, lecz reguła pierwszeństwa silnika dopasowania: zwykle najpierw lepsza cena, potem wcześniejszy czas.
+
+## Silnik dopasowania: reguły zamiast negocjacji
+
+Wcześniejszy [tekst o księdze zleceń]({% post_url 2026-07-09-jak-dziala-ksiega-zlecen %}) pokazał ją jako dwie listy ofert kupna i sprzedaży. Tu chodzi o krok głębiej: co dokładnie kojarzy konkretne kupno z konkretną sprzedażą. Na giełdzie robi to silnik dopasowania (matching engine), program, który dla każdego napływającego zlecenia sprawdza, czy da się je skojarzyć z przeciwną stroną księgi, a jeśli tak, to w jakiej kolejności. O'Hara (1995) definiuje mikrostrukturę jako badanie tego, jak konkretne mechanizmy i reguły handlu kształtują ceny; silnik dopasowania jest takim mechanizmem w najczystszej, zautomatyzowanej postaci. Nie ma tu miejsca na negocjację ani uznaniowość. Są tylko reguły pierwszeństwa, które rozstrzygają, które z czekających zleceń zostanie wypełnione jako pierwsze, a to właśnie te reguły decydują o realnym koszcie i momencie wykonania.
+
+## Priorytet cena-czas: najpierw cena, potem zegar
+
+Najczęstszą regułą jest priorytet cena-czas (price-time priority). Harris (2003) rozkłada ją na dwa poziomy pierwszeństwa. Pierwszy, najważniejszy, to pierwszeństwo ceny: zlecenie oferujące lepszą cenę wykona się przed gorszym. Po stronie kupna lepsza znaczy wyższa, bardziej agresywna, bliżej asku; po stronie sprzedaży niższa, bliżej bidu. Drugi poziom rozstrzyga remisy: gdy kilka zleceń stoi na tej samej cenie, pierwszeństwo ma to, które trafiło do księgi wcześniej. Stąd skrót FIFO, first in, first out: w obrębie jednego poziomu ceny kolejka działa jak przy okienku, obsłużony zostaje ten, kto ustawił się pierwszy.
+
+Ta prosta zasada niesie konsekwencję, którą łatwo przeoczyć. Złożenie zlecenia limit to nie tylko wybór ceny, ale też zajęcie miejsca w kolejce na tej cenie. Dwa identyczne zlecenia po tej samej cenie nie są równe: wcześniejsze wypełni się pierwsze, późniejsze może nie wypełnić się wcale, jeśli napływ po drugiej stronie wyczerpie się, zanim dojdzie do niego kolej. Poniższy przykład pokazuje to na liczbach.
+
+```
+PRZYKŁAD ILUSTRACYJNY (nie dane rzeczywiste)
+Najlepszy BID 1.08120, w kolejce trzy zlecenia limit kupna:
+  #1   1.0 mln   złożone 10:00:00.100   (najstarsze)
+  #2   2.0 mln   złożone 10:00:00.400
+  #3   1.5 mln   złożone 10:00:01.900   (najnowsze)
+
+Napływa market sell 2.5 mln na 1.08120:
+  wypełnia #1 w całości        1.0 mln
+  wypełnia #2 częściowo        1.5 mln z 2.0 mln
+  #3 nie dostaje nic           (stoi dalej w kolejce)
+
+Ta sama cena, a o realizacji zdecydował czas: FIFO.
+```
+
+Dokumentacja giełd, od rynków akcji po parkiety terminowe, opisuje priorytet cena-czas jako domyślny algorytm dopasowania właśnie dlatego, że jest przejrzysty i nagradza dwie rzeczy naraz: agresywniejszą cenę oraz wcześniejsze dostarczenie płynności. Diagram poniżej pokazuje obie kolejki, po stronie bidu i asku, jako bloki ustawione według czasu złożenia.
+
+<figure>
+<svg viewBox="0 0 660 340" font-family="-apple-system,Segoe UI,Roboto,sans-serif" xmlns="http://www.w3.org/2000/svg"><defs><marker id="qArr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="currentColor" stroke-width="1.5"/></marker></defs><text x="20" y="24" font-size="14" fill="currentColor">Priorytet cena-czas w jednej kolejce (przykład ilustracyjny)</text><line x1="330" y1="50" x2="330" y2="222" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.18"/><text x="330" y="44" font-size="10" fill="currentColor" opacity="0.55" text-anchor="middle">dotknięcie (touch)</text><text x="20" y="70" font-size="12" fill="#1a9e6a">BID · najlepszy 1.08120</text><text x="640" y="70" font-size="12" fill="#e5484d" text-anchor="end">ASK · najlepszy 1.08122</text><line x1="291" y1="60" x2="291" y2="79" stroke="currentColor" stroke-width="1.4" marker-end="url(#qArr)" opacity="0.75"/><text x="291" y="56" font-size="9.5" fill="currentColor" text-anchor="middle" opacity="0.75">market sell → w #1</text><rect x="260" y="82" width="62" height="30" rx="3" fill="#1a9e6a"/><rect x="192" y="82" width="62" height="30" rx="3" fill="#1a9e6a" opacity="0.8"/><rect x="140" y="82" width="46" height="30" rx="3" fill="#1a9e6a" opacity="0.62"/><rect x="96" y="82" width="38" height="30" rx="3" fill="#1a9e6a" opacity="0.48"/><text x="291" y="102" font-size="12" fill="#ffffff" text-anchor="middle">1</text><text x="223" y="102" font-size="12" fill="#ffffff" text-anchor="middle">2</text><text x="163" y="102" font-size="12" fill="#ffffff" text-anchor="middle">3</text><text x="115" y="102" font-size="12" fill="#ffffff" text-anchor="middle">4</text><line x1="318" y1="126" x2="100" y2="126" stroke="currentColor" stroke-width="1" marker-end="url(#qArr)" opacity="0.5"/><text x="209" y="139" font-size="9.5" fill="currentColor" text-anchor="middle" opacity="0.6">czas złożenia: 1 najstarsze, 4 najnowsze</text><line x1="369" y1="60" x2="369" y2="79" stroke="currentColor" stroke-width="1.4" marker-end="url(#qArr)" opacity="0.75"/><text x="369" y="56" font-size="9.5" fill="currentColor" text-anchor="middle" opacity="0.75">market buy → w #1</text><rect x="338" y="82" width="62" height="30" rx="3" fill="#e5484d"/><rect x="406" y="82" width="62" height="30" rx="3" fill="#e5484d" opacity="0.8"/><rect x="474" y="82" width="46" height="30" rx="3" fill="#e5484d" opacity="0.62"/><rect x="526" y="82" width="38" height="30" rx="3" fill="#e5484d" opacity="0.48"/><text x="369" y="102" font-size="12" fill="#ffffff" text-anchor="middle">1</text><text x="437" y="102" font-size="12" fill="#ffffff" text-anchor="middle">2</text><text x="497" y="102" font-size="12" fill="#ffffff" text-anchor="middle">3</text><text x="545" y="102" font-size="12" fill="#ffffff" text-anchor="middle">4</text><line x1="342" y1="126" x2="560" y2="126" stroke="currentColor" stroke-width="1" marker-end="url(#qArr)" opacity="0.5"/><text x="451" y="139" font-size="9.5" fill="currentColor" text-anchor="middle" opacity="0.6">czas złożenia: 1 najstarsze, 4 najnowsze</text><text x="206" y="186" font-size="10.5" fill="currentColor" opacity="0.6" text-anchor="end" font-family="monospace">1.08119</text><rect x="210" y="172" width="112" height="20" rx="3" fill="#1a9e6a" opacity="0.28"/><rect x="338" y="172" width="112" height="20" rx="3" fill="#e5484d" opacity="0.28"/><text x="454" y="186" font-size="10.5" fill="currentColor" opacity="0.6" font-family="monospace">1.08123</text><text x="330" y="212" font-size="10" fill="currentColor" opacity="0.6" text-anchor="middle">gorsza cena czeka, aż wyczerpie się poziom przy dotknięciu (pierwszeństwo ceny)</text><text x="20" y="242" font-size="10" fill="currentColor" opacity="0.6">Numer w bloku = kolejność w czasie na tym samym poziomie ceny. Zlecenie 1 wypełni się pierwsze.</text><text x="20" y="258" font-size="10" fill="currentColor" opacity="0.6">Długość bloku = wielkość zlecenia. Kolory: BID zielony, ASK czerwony.</text></svg>
+<figcaption>Priorytet cena-czas na jednym poziomie ceny (przykład ilustracyjny, nie dane rzeczywiste). Na najlepszym bidzie i asku stoi kolejka konkretnych zleceń, ponumerowanych według czasu złożenia: zlecenie 1 jest najstarsze i wypełni się pierwsze, gdy nadejdzie przeciwne zlecenie market. Bloki niżej to gorsze ceny, które czekają na swoją kolej dopiero po wyczerpaniu poziomu przy dotknięciu. Długość bloku odpowiada wielkości zlecenia.</figcaption>
+</figure>
+
+## Pro-rata: gdy o podziale decyduje wielkość, nie czas
+
+Priorytet cena-czas nie jest jedyną możliwą regułą drugiego poziomu. Część giełd terminowych stosuje dla wybranych kontraktów algorytm pro-rata: gdy na jednej cenie czeka wiele zleceń, a napływa przeciwne zlecenie, które nie wypełni ich wszystkich, realizacja dzieli się proporcjonalnie do wielkości zleceń, a nie według kolejności zgłoszenia. CME Group dokumentuje oba podejścia, FIFO oraz pro-rata, wraz z ich wariantami mieszanymi, i przypisuje je do różnych produktów. Pro-rata bywa stosowana tam, gdzie kwotowania kłębią się na jednej czy dwóch cenach, jak w kontraktach na krótkoterminowe stopy: nagradzanie samego czasu prowadziłoby wtedy do wyścigu o milisekundy, więc podział według wielkości rozkłada realizację inaczej.
+
+Różnica ma praktyczne skutki dla tego, jak opłaca się składać zlecenia. Przy FIFO liczy się bycie wcześnie w kolejce, więc premiowana jest szybkość. Przy pro-rata liczy się udział w wolumenie na danej cenie, co zachęca do wystawiania większych zleceń, bo przydział rośnie z rozmiarem. To samo zlecenie i ta sama cena, a inny algorytm dopasowania daje inną szansę oraz inny moment wykonania. Reguła dopasowania jest więc częścią kosztu transakcyjnego, nie jego tłem.
+
+## Limit, market, maker, taker: kto dodaje, a kto zabiera płynność
+
+Wróćmy do dwóch podstawowych typów zleceń, bo to one dzielą uczestników na dwie role. Zlecenie limit, które nie wykonuje się od razu, ląduje w księdze i czeka; przez sam fakt czekania dodaje płynność. Jego autor jest w tej transakcji dostawcą płynności, po angielsku maker: to on buduje poziomy, na których wykona się ktoś inny. Zlecenie market, albo agresywne zlecenie limit, które od razu trafia w przeciwną stronę, bierze płynność: jego autor jest biorcą, taker, i płaci za natychmiastowość spreadem, przechodząc na drugą stronę księgi.
+
+Wiele giełd wprost premiuje tę asymetrię przez model opłat maker-taker. Biorca płaci giełdzie prowizję za zabranie płynności, a dostawca dostaje część tej prowizji z powrotem jako rabat (rebate) za jej dostarczenie. Model narodził się na elektronicznych rynkach akcji i rozlał na wiele platform; jego jawne stawki publikują tabele opłat poszczególnych giełd, więc nie są tajemnicą, choć różnią się między rynkami. Cel jest jeden: zachęcić do wystawiania zleceń limit, bo to one tworzą płynność, z której korzysta reszta. Harris (2003) opisuje to napięcie między dostarczycielami a biorcami płynności jako oś, wokół której zorganizowany jest rynek zleceniowy (order-driven), w odróżnieniu od rynku kwotowanego przez dealerów (quote-driven).
+
+## Dlaczego pozycja w kolejce ma wartość
+
+Skoro przy FIFO wcześniejsze zlecenie wypełni się pierwsze, to samo miejsce w kolejce jest aktywem. Zlecenie na początku kolejki na najlepszym bidzie ma dużą szansę, że wypełni się, zanim cena drgnie; zlecenie na końcu tej samej kolejki może zostać z niczym, jeśli napływ sprzedaży wyschnie albo cena ucieknie w górę, zanim dojdzie do niego kolej. Harris (2003) podkreśla, że pierwszeństwo czasu czyni wczesne miejsce w kolejce realną korzyścią, a nowsza literatura mikrostruktury handlu o wysokiej częstotliwości modeluje tę wartość wprost, jako oczekiwaną korzyść z bycia bliżej czoła (Moallemi i Yuan, 2016).
+
+Wartość kolejki tłumaczy zachowania, które z zewnątrz wyglądają dziwnie. Wystawianie zlecenia limit wcześnie, nawet zanim cena do niego dojdzie, ma sens, bo buduje priorytet czasowy. Anulowanie i ponowne złożenie zlecenia kosztuje utratę miejsca w kolejce, więc nie jest darmowe. A gdy dwie strony chcą tej samej ceny, wygrywa nie ta z większym kapitałem, lecz ta, która stanęła w kolejce wcześniej. To jest sedno różnicy między rolą maker a taker: biorca płaci spread, żeby wykonać się teraz i na pewno; dostawca rezygnuje z pewności i czeka w kolejce, w zamian nie płacąc spreadu, a czasem inkasując rabat.
+
+## Co z tego przy ekranie: koszt, wykonanie i rynek detaliczny
+
+Cała ta mechanika opisuje giełdę z jedną, wspólną księgą i jawnym algorytmem dopasowania. Rynek spot FX, na którym handluje detaliczny trader EUR/USD przez MT5, wygląda inaczej, co pokazał wcześniejszy tekst o księdze zleceń. Nie ma tu jednej centralnej księgi ani jednego silnika dopasowania; jest sieć platform, dealerów i agregatorów, a między traderem a tą hydrauliką stoi broker. Broker najczęściej kwotuje jako dostawca: pokazuje jeden bid i jeden ask, sam stoi po stronie maker wobec klienta, a klient prawie zawsze jest biorcą, przyjmując kwotę zleceniem market.
+
+Praktyczny wniosek jest taki, że detaliczny trader rzadko ma do rozegrania kartę pozycji w kolejce, którą opisuje ta teoria; częściej mierzy się z gotowym spreadem i z pytaniem, czy broker jego zlecenie przyjmie, co jest osobnym mechanizmem opisanym gdzie indziej. Znajomość reguł dopasowania nie daje z tego powodu żadnej przewagi cenowej sama w sobie. Daje coś innego: język, w którym koszt transakcyjny przestaje być przypadkowym podatkiem. Wiadomo, że spread płaci się za rolę biorcy, że natychmiastowość ma cenę, a cierpliwość zleceń limit bywa nagradzana tam, gdzie w ogóle da się je wystawić. To samo rozróżnienie, maker kontra taker oraz cena kontra czas, rządzi kosztem wykonania niezależnie od tego, czy księga jest jedna i widoczna, czy rozproszona i zasłonięta przez brokera.
+
+To nie jest porada inwestycyjna ani opis żadnej konkretnej strategii. To wykład mechaniki: jak silnik dopasowania kojarzy zlecenia i skąd biorą się reguły rozstrzygające, kto i kiedy się wykona, po to, by koszt każdej transakcji dało się rozumieć, zanim postawi się na niej pieniądze.
+
+OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING
