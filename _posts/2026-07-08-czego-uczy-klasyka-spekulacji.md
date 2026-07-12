@@ -1,6 +1,6 @@
 ---
 title: "Czego uczy klasyka spekulacji. Livermore i Wyckoff sto lat później"
-description: "Dlaczego książki o rynku sprzed wieku wciąż trafiają w sedno. Ponadczasowe lekcje z „Reminiscences of a Stock Operator" o Jessem Livermorze oraz z tape readingu Richarda Wyckoffa, i most do współczesnej mikrostruktury rynku i finansów behawioralnych."
+description: "Dlaczego książki o rynku sprzed wieku wciąż trafiają w sedno. Ponadczasowe lekcje z „Reminiscences of a Stock Operator” o Jessem Livermorze oraz z tape readingu Richarda Wyckoffa, i most do współczesnej mikrostruktury rynku i finansów behawioralnych."
 date: 2026-07-08 14:00:00 +0200
 eyebrow: "Rozkmina · klasyka"
 category: rozkminy

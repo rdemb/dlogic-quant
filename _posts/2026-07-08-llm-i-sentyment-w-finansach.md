@@ -1,10 +1,10 @@
 ---
 title: "LLM i sentyment w finansach. Co potrafią, a gdzie zaczyna się hype"
-description: "Analiza sentymentu tekstu finansowego to realne, dobrze postawione zadanie klasyfikacji, w którym modele dostrojone do języka finansów (FinBERT) biją modele ogólne. Ale przewidywanie ceny przez ChatGPT to inna liga: głośne prace typu „Can ChatGPT Forecast Stock Price Movements" trzeba czytać przez ryzyko look-ahead, przeciek danych z treningu i publikacyjny bias. Uczciwy wniosek: LLM to narzędzie do tekstu i kontekstu, nie wyrocznia cenowa. Źródła: FinBERT, FinGPT, BloombergGPT, Lopez-Lira i Tang, przeglądy Financial LLMs."
+description: "Analiza sentymentu tekstu finansowego to realne, dobrze postawione zadanie klasyfikacji, w którym modele dostrojone do języka finansów (FinBERT) biją modele ogólne. Ale przewidywanie ceny przez ChatGPT to inna liga: głośne prace typu „Can ChatGPT Forecast Stock Price Movements” trzeba czytać przez ryzyko look-ahead, przeciek danych z treningu i publikacyjny bias. Uczciwy wniosek: LLM to narzędzie do tekstu i kontekstu, nie wyrocznia cenowa. Źródła: FinBERT, FinGPT, BloombergGPT, Lopez-Lira i Tang, przeglądy Financial LLMs."
 date: 2026-07-08 19:00:00 +0200
 eyebrow: "Edukacja · uczenie maszynowe"
 category: edukacja
-dek: "Duże modele językowe świetnie streszczają i klasyfikują ton tekstu finansowego, ale to nie to samo co przewidywanie ceny. Kompendium bez hype'u: gdzie sentyment realnie pomaga jako kontekst, dlaczego modele finansowe biją ogólne i czemu prace „ChatGPT przewiduje akcje" trzeba czytać przez ryzyko look-ahead."
+dek: "Duże modele językowe świetnie streszczają i klasyfikują ton tekstu finansowego, ale to nie to samo co przewidywanie ceny. Kompendium bez hype'u: gdzie sentyment realnie pomaga jako kontekst, dlaczego modele finansowe biją ogólne i czemu prace „ChatGPT przewiduje akcje” trzeba czytać przez ryzyko look-ahead."
 readingTime: 8
 tags: ["LLM", "duże modele językowe", "analiza sentymentu", "FinBERT", "FinGPT", "BloombergGPT", "ChatGPT", "NLP", "przetwarzanie języka naturalnego", "look-ahead", "data leakage", "sentyment", "quant", "Forex"]
 ---

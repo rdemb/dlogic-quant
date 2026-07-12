@@ -1,9 +1,9 @@
 ---
 title: "Data snooping. Jak finanse same się oszukują"
-description: "Przy poziomie istotności 5% co dwudziesty bezwartościowy test wychodzi „istotny", więc kto przeszukuje setki wariantów, musi produkować fałszywe odkrycia. Przegląd korekt na wielokrotne testowanie: FWER i FDR po ludzku, haircut Harveya, Liu i Zhu z progiem t powyżej 3, gwarantowany overfitting backtestów u Baileya i López de Prado oraz losy 7846 reguł technicznych na stu latach DJIA."
+description: "Przy poziomie istotności 5% co dwudziesty bezwartościowy test wychodzi „istotny”, więc kto przeszukuje setki wariantów, musi produkować fałszywe odkrycia. Przegląd korekt na wielokrotne testowanie: FWER i FDR po ludzku, haircut Harveya, Liu i Zhu z progiem t powyżej 3, gwarantowany overfitting backtestów u Baileya i López de Prado oraz losy 7846 reguł technicznych na stu latach DJIA."
 date: 2026-07-05 15:00:00 +0200
 eyebrow: "Edukacja · walidacja"
-dek: "Przetestuj tysiąc losowych strategii, a najlepsza i tak będzie wyglądać świetnie. Właściwe pytanie nie brzmi „czy wynik jest dobry", tylko „czy jest dobry, biorąc pod uwagę liczbę wykonanych prób". Wielokrotne testowanie wyjaśnione po ludzku: FWER kontra FDR, próg t powyżej 3 dla nowych faktorów i dwa studia przypadku z reguł technicznych."
+dek: "Przetestuj tysiąc losowych strategii, a najlepsza i tak będzie wyglądać świetnie. Właściwe pytanie nie brzmi „czy wynik jest dobry”, tylko „czy jest dobry, biorąc pod uwagę liczbę wykonanych prób”. Wielokrotne testowanie wyjaśnione po ludzku: FWER kontra FDR, próg t powyżej 3 dla nowych faktorów i dwa studia przypadku z reguł technicznych."
 readingTime: 8
 tags: ["data snooping", "wielokrotne testowanie", FWER, FDR, Bonferroni, "Benjamini i Hochberg", "Harvey Liu Zhu", "Reality Check", "publication bias", overfitting, backtest, walidacja, "istotność statystyczna", statystyka, quant, Forex]
 category: edukacja
