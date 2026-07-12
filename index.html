@@ -9,6 +9,7 @@ layout: default
 {% assign edu = site.posts | where: "category", "edukacja" %}
 {% assign ana = site.posts | where: "category", "analizy" %}
 {% assign roz = site.posts | where: "category", "rozkminy" %}
+{% assign alg = site.posts | where: "category", "algo" %}
 
 <section class="cat">
   <h2 class="cat-h"><a href="{{ '/edukacja/' | relative_url }}">Edukacja</a></h2>
@@ -26,4 +27,10 @@ layout: default
   <h2 class="cat-h"><a href="{{ '/rozkminy/' | relative_url }}">Rozkminy</a></h2>
   <p class="cat-desc">Przemyślenia i eseje. Psychologia i przetrwanie, historia rynków i cykle długu, wzorce, które wracają. {{ roz | size }} wpisów.</p>
   <p class="start"><a href="{{ '/rozkminy/' | relative_url }}">Wszystkie rozkminy</a></p>
+</section>
+
+<section class="cat">
+  <h2 class="cat-h"><a href="{{ '/moje-algo/' | relative_url }}">Moje Algo</a></h2>
+  <p class="cat-desc">Jawny dziennik moich systemów algorytmicznych. Filozofia, bezpieczniki i walidacja forward, bez obietnic wyniku. {{ alg | size }} wpisów.</p>
+  <p class="start"><a href="{{ '/moje-algo/' | relative_url }}">Zobacz dziennik</a></p>
 </section>

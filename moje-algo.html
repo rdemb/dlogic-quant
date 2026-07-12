@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Moje Algo"
+permalink: /moje-algo/
+---
+<section class="cat">
+  <h2 class="cat-h">Moje Algo</h2>
+  <p class="cat-desc">Jawny dziennik budowy własnych systemów algorytmicznych. Proces, decyzje i błędy, nie sygnały. Bez obietnic wyniku, bez parametrów do skopiowania.</p>
+  <ul class="posts">
+  {% assign alg = site.posts | where: "category", "algo" %}
+  {% for post in alg %}
+    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+  {% endfor %}
+  </ul>
+</section>
