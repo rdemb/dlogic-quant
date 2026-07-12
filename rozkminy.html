@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Rozkminy"
+permalink: /rozkminy/
+---
+<section class="cat">
+  <h2 class="cat-h">Rozkminy</h2>
+  <p class="cat-desc">Przemyślenia i eseje na danych. Psychologia i przetrwanie, historia rynków i cykle długu, wzorce, które wracają.</p>
+  <ul class="posts">
+  {% assign roz = site.posts | where: "category", "rozkminy" %}
+  {% for post in roz %}
+    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+  {% endfor %}
+  </ul>
+</section>

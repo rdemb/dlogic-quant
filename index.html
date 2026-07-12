@@ -2,7 +2,7 @@
 layout: default
 ---
 <section class="intro">
-  <p>Kompendium wiedzy o rynkach liczonych, nie zgadywanych. Jak naprawdę działają narzędzia quanta: walidacja strategii, zarządzanie ryzykiem, koszty egzekucji, mikrostruktura, reżimy i zmienność. Do tego bieżące analizy makro oraz rozkminy o tym, co na rynkach się powtarza. Prosto, na źródłach, bez obietnic.</p>
+  <p>Kompendium wiedzy o rynkach liczonych, nie zgadywanych. Jak naprawdę działają narzędzia quanta: walidacja strategii, zarządzanie ryzykiem, koszty egzekucji, mikrostruktura, reżimy i zmienność, a także programowanie wskaźników i botów. Do tego bieżące analizy makro oraz rozkminy o tym, co na rynkach się powtarza. Prosto, na źródłach, bez obietnic.</p>
   <p class="start">Od czego zacząć: <a href="{{ '/2026/07/09/dlaczego-twoj-sharpe-klamie-deflated-sharpe/' | relative_url }}">czemu Sharpe kłamie</a>, potem <a href="{{ '/2026/07/09/ile-powinienes-grac-kelly-i-sizing/' | relative_url }}">ile w ogóle grać</a>, a na koniec <a href="{{ '/2026/07/09/jak-rozpoznac-rezim-rynku/' | relative_url }}">jak rozpoznać reżim rynku</a>.</p>
 </section>
 
@@ -10,35 +10,20 @@ layout: default
 {% assign ana = site.posts | where: "category", "analizy" %}
 {% assign roz = site.posts | where: "category", "rozkminy" %}
 
-<section id="edukacja" class="cat">
-  <h2 class="cat-h">Edukacja</h2>
-  <p class="cat-desc">Jak to naprawdę działa. Walidacja i statystyka, ryzyko i sizing, koszty egzekucji, mikrostruktura, reżimy, zmienność, płynność, pozycjonowanie, strategie i uczenie maszynowe. Metoda i matematyka po ludzku.</p>
-  <ul class="posts">
-  {% for post in edu %}
-    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
-  {% endfor %}
-  </ul>
+<section class="cat">
+  <h2 class="cat-h"><a href="{{ '/edukacja/' | relative_url }}">Edukacja</a></h2>
+  <p class="cat-desc">Jak to naprawdę działa. Walidacja i statystyka, ryzyko i sizing, koszty egzekucji, mikrostruktura, reżimy, strategie, uczenie maszynowe oraz programowanie od podstaw. Ułożone w dziesięć ścieżek nauki. {{ edu | size }} działów.</p>
+  <p class="start"><a href="{{ '/edukacja/' | relative_url }}">Otwórz mapę wiedzy</a></p>
 </section>
 
-<section id="analizy" class="cat">
-  <h2 class="cat-h">Analizy</h2>
-  <p class="cat-desc">Bieżący rynek liczbowo. Siła walut, reżim makro, zmienność, scenariusze i ich wyzwalacze.</p>
-  <ul class="posts">
-  {% for post in ana %}
-    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
-  {% endfor %}
-  </ul>
+<section class="cat">
+  <h2 class="cat-h"><a href="{{ '/analizy/' | relative_url }}">Analizy</a></h2>
+  <p class="cat-desc">Bieżący rynek liczbowo. Siła walut, reżim makro, zmienność, scenariusze i ich wyzwalacze. {{ ana | size }} wpisów.</p>
+  <p class="start"><a href="{{ '/analizy/' | relative_url }}">Wszystkie analizy</a></p>
 </section>
 
-<section id="rozkminy" class="cat">
-  <h2 class="cat-h">Rozkminy</h2>
-  <p class="cat-desc">Przemyślenia i eseje. Psychologia i przetrwanie, historia rynków i cykle długu, wzorce, które wracają.</p>
-  <ul class="posts">
-  {% for post in roz %}
-    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
-  {% endfor %}
-  </ul>
+<section class="cat">
+  <h2 class="cat-h"><a href="{{ '/rozkminy/' | relative_url }}">Rozkminy</a></h2>
+  <p class="cat-desc">Przemyślenia i eseje. Psychologia i przetrwanie, historia rynków i cykle długu, wzorce, które wracają. {{ roz | size }} wpisów.</p>
+  <p class="start"><a href="{{ '/rozkminy/' | relative_url }}">Wszystkie rozkminy</a></p>
 </section>

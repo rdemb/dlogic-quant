@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Analizy"
+permalink: /analizy/
+---
+<section class="cat">
+  <h2 class="cat-h">Analizy</h2>
+  <p class="cat-desc">Bieżący rynek liczbowo. Siła walut, reżim makro, zmienność, scenariusze i ich wyzwalacze. Analiza, nie porada inwestycyjna.</p>
+  <ul class="posts">
+  {% assign ana = site.posts | where: "category", "analizy" %}
+  {% for post in ana %}
+    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+  {% endfor %}
+  </ul>
+</section>
