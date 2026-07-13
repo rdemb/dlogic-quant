@@ -15,7 +15,7 @@
 <header class="site">
   <a href="{{ '/' | relative_url }}" class="brand">D-LOGIC Quant</a>
   <span class="tag">Forex · makro · liczby &gt; opinie</span>
-  <nav class="nav">
+  <nav class="nav" id="site-nav">
     <a href="{{ '/edukacja/' | relative_url }}"{% if page.url == '/edukacja/' %} class="on"{% endif %}>Edukacja</a>
     <a href="{{ '/analizy/' | relative_url }}"{% if page.url == '/analizy/' %} class="on"{% endif %}>Analizy</a>
     <a href="{{ '/rozkminy/' | relative_url }}"{% if page.url == '/rozkminy/' %} class="on"{% endif %}>Rozkminy</a>
@@ -24,6 +24,7 @@
     <a href="{{ '/narzedzia/' | relative_url }}"{% if page.url == '/narzedzia/' %} class="on"{% endif %}>Narzędzia</a>
     <a href="{{ '/o-autorze/' | relative_url }}"{% if page.url == '/o-autorze/' %} class="on"{% endif %}>O mnie</a>
   </nav>
+  <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" onclick="var n=document.getElementById('site-nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   <a href="{{ '/szukaj/' | relative_url }}" class="search-ic" aria-label="Szukaj" title="Szukaj"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg></a>
   <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Przełącz tryb jasny lub ciemny" title="Tryb jasny / ciemny" onclick="var n=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}">
     <svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>

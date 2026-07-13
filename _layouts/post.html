@@ -99,6 +99,9 @@ layout: default
       <text class="cdate" x="56" y="224">{{ page.date | date: "%Y-%m-%d" }}</text>
     </svg>
   </figure>
+  {% assign catUrl = "/edukacja/" %}{% assign catLabel = "Edukacja" %}
+  {% case page.category %}{% when "analizy" %}{% assign catUrl = "/analizy/" %}{% assign catLabel = "Analizy" %}{% when "rozkminy" %}{% assign catUrl = "/rozkminy/" %}{% assign catLabel = "Rozkminy" %}{% when "algo" %}{% assign catUrl = "/moje-algo/" %}{% assign catLabel = "Moje Algo" %}{% endcase %}
+  <nav class="crumbs" aria-label="Okruszki"><a href="{{ '/' | relative_url }}">Start</a><span>›</span><a href="{{ catUrl | relative_url }}">{{ catLabel }}</a></nav>
   <p class="eyebrow">{{ page.eyebrow | default: "Raport dnia" }}</p>
   <h1>{{ page.title }}</h1>
   <p class="meta">{{ page.date | date: "%-d.%m.%Y" }} · ~{{ page.readingTime | default: 5 }} min</p>

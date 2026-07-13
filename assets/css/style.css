@@ -60,6 +60,12 @@ h2{font-size:22px;margin:36px 0 10px;font-family:-apple-system,Segoe UI,Roboto,s
 .q-count{color:var(--mut);font-size:13px;font-family:-apple-system,Segoe UI,Roboto,sans-serif;margin:0 0 14px}
 .search-ic{display:inline-flex;align-items:center;color:var(--ink);align-self:center}
 .search-ic:hover{color:var(--acc)}
+.nav-toggle{display:none;background:none;border:0;color:var(--ink);cursor:pointer;padding:4px;align-items:center}
+.nav-toggle:hover{color:var(--acc)}
+.crumbs{font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:13px;color:var(--mut);margin:14px 0 2px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.crumbs a{color:var(--mut)}
+.crumbs a:hover{color:var(--acc);text-decoration:none}
+.crumbs span{opacity:.5}
 .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:20px 0 10px}
 .path-card{display:flex;flex-direction:column;gap:5px;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--soft);text-decoration:none;transition:border-color .15s ease,transform .15s ease}
 .path-card:hover{border-color:var(--acc);transform:translateY(-2px)}
@@ -179,7 +185,17 @@ pre code{background:none;padding:0;font-size:inherit}
 .dk-lv-n{font:11px -apple-system,Segoe UI,Roboto,sans-serif;color:var(--mut);width:92px;text-align:right}
 .dk-lv.spot{background:var(--soft);border-radius:6px}.dk-lv.spot .dk-lv-p{color:var(--acc)}
 .dk-foot{padding:12px 16px;border-top:1px solid var(--line);background:var(--soft);color:var(--mut);font:11.5px -apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6}
-@media (max-width:640px){.nav{font-size:13px;gap:14px;margin-left:0;padding-left:0;border-left:0}}
+@media (max-width:640px){
+  header.site{align-items:center;gap:10px}
+  header .tag{display:none}
+  .brand{flex:1 1 auto}
+  .nav-toggle{display:inline-flex}
+  .nav{order:10;flex-basis:100%;display:none;flex-direction:column;gap:0;margin:0;padding:6px 0 2px;border-left:0;border-top:1px solid var(--line);font-size:15px}
+  .nav.open{display:flex}
+  .nav a{padding:11px 2px;border-bottom:1px solid var(--line)}
+  .nav a:last-child{border-bottom:0}
+  .nav a.on::after{display:none}
+}
 @media (max-width:620px){
   .dk-body{grid-template-columns:1fr;padding:11px;gap:12px}
   .dk-head{gap:10px}.dk-clock{margin-left:0;font-size:13px}
