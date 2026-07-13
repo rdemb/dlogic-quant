@@ -26,7 +26,7 @@ Pod spodem to samo widać w aktywach ryzyka. S&P 500 zszedł o 2% w pięć sesji
 
 <figure>
 <svg viewBox="0 0 640 132" font-family="-apple-system,Segoe UI,Roboto,sans-serif" xmlns="http://www.w3.org/2000/svg">
-<text x="12" y="22" font-size="13" fill="#1a1a1a">VIX napiera na próg napięcia</text>
+<text x="12" y="22" font-size="13" fill="currentColor">VIX napiera na próg napięcia</text>
 <text x="12" y="40" font-size="10" fill="#9b9b9b">skala 10–30, próg 20</text>
 <circle cx="450" cy="18" r="4" fill="#b9b9b9"/><text x="460" y="22" font-size="10" fill="#9b9b9b">5 sesji temu</text>
 <circle cx="556" cy="18" r="5" fill="#e0902b"/><text x="566" y="22" font-size="10" fill="#9b9b9b">dziś</text>
