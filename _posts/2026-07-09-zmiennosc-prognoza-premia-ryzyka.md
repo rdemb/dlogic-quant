@@ -65,6 +65,36 @@ przeciętnie:  IV > RV   →   VRP > 0
 
 Najprostsza intuicja to ubezpieczenie. Kto kupuje opcję, kupuje ochronę przed gwałtownym ruchem i jest skłonny zapłacić za nią trochę więcej, niż wynosi statystycznie uczciwa cena, tak samo jak za polisę płaci się więcej, niż wynosi oczekiwana szkoda. Kto opcję wystawia, przejmuje ryzyko rzadkiego, dużego ruchu i za to przejęcie inkasuje premię. Carr i Wu w pracy poświęconej premiom za ryzyko wariancji pokazali, jak tę premię wyodrębnić i zmierzyć za pomocą syntetycznych kontraktów na wariancję, i udokumentowali, że przeciętnie jest ona dodatnia. Dla inwestora płynie stąd prosty morał: dodatnia VRP nie jest darmowym obiadem, lecz zapłatą za bycie po stronie, która obrywa, gdy przychodzi szok. Jest to premia za przyjęcie ryzyka, nie nagroda za spryt.
 
+<figure>
+<svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system,Segoe UI,Roboto,sans-serif" aria-label="Zmienność implikowana leżąca konsekwentnie powyżej zrealizowanej; obszar między liniami to premia za ryzyko zmienności VRP.">
+  <g font-size="13" fill="currentColor" fill-opacity="0.8">
+    <line x1="64" y1="22" x2="92" y2="22" stroke="#0b66c3" stroke-width="3"/>
+    <text x="98" y="26">implikowana (z opcji)</text>
+    <line x1="250" y1="22" x2="278" y2="22" stroke="currentColor" stroke-opacity="0.75" stroke-width="3"/>
+    <text x="284" y="26">zrealizowana</text>
+    <rect x="392" y="16" width="20" height="12" fill="#0b66c3" fill-opacity="0.15"/>
+    <text x="418" y="26">premia za ryzyko (VRP)</text>
+  </g>
+  <g stroke="currentColor" stroke-opacity="0.18" stroke-width="1">
+    <line x1="64" y1="100" x2="688" y2="100"/>
+    <line x1="64" y1="150" x2="688" y2="150"/>
+    <line x1="64" y1="200" x2="688" y2="200"/>
+    <line x1="64" y1="250" x2="688" y2="250"/>
+  </g>
+  <g stroke="currentColor" stroke-opacity="0.4" stroke-width="1">
+    <line x1="64" y1="60" x2="64" y2="300"/>
+    <line x1="64" y1="300" x2="688" y2="300"/>
+  </g>
+  <path d="M64,190 L121,198 L178,172 L234,150 L291,158 L348,180 L404,196 L461,180 L518,158 L574,138 L631,158 L688,174 L688,228 L631,214 L574,190 L518,210 L461,234 L404,252 L348,236 L291,212 L234,202 L178,224 L121,248 L64,240 Z" fill="#0b66c3" fill-opacity="0.15"/>
+  <polyline points="64,240 121,248 178,224 234,202 291,212 348,236 404,252 461,234 518,210 574,190 631,214 688,228" fill="none" stroke="currentColor" stroke-opacity="0.75" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="64,190 121,198 178,172 234,150 291,158 348,180 404,196 461,180 518,158 574,138 631,158 688,174" fill="none" stroke="#0b66c3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="404" y="228" text-anchor="middle" font-size="13" font-weight="600" fill="#0b66c3">VRP</text>
+  <text x="376" y="332" text-anchor="middle" font-size="12" fill="currentColor" fill-opacity="0.7">Czas →</text>
+  <text transform="translate(24,180) rotate(-90)" text-anchor="middle" font-size="12" fill="currentColor" fill-opacity="0.7">Zmienność</text>
+</svg>
+<figcaption>Zmienność implikowana, wyceniona w opcjach, leży konsekwentnie powyżej zmienności zrealizowanej. Zacieniowany obszar między liniami to premia za ryzyko zmienności (VRP), składka, którą kupujący opcję płaci za ochronę przed gwałtownym ruchem.</figcaption>
+</figure>
+
 ## Klasterowanie zmienności i modele GARCH
 
 Zmienność ma jeszcze jedną wygodną cechę: przychodzi seriami. Dni spokojne skupiają się przy dniach spokojnych, a gwałtowne przy gwałtownych. To zjawisko nazywa się klasterowaniem zmienności i jest jedną z najtrwalszych regularności na rynkach finansowych. Formalnie ujmuje je rodzina modeli ARCH i GARCH, zapoczątkowana przez Engle'a i Bollersleva. Najprostszy użyteczny wariant, GARCH(1,1), modeluje dzisiejszą wariancję jako mieszankę trzech składników: stałej kotwicy, wczorajszego szoku i wczorajszej wariancji.

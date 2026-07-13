@@ -36,6 +36,39 @@ Najczęściej przywoływanym dowodem na to jest praca Torbena Andersena, Tima Bo
 
 Wyniki układają się w kilka jasnych obserwacji, wszystkie bez konieczności podawania liczb. Średni kurs skacze na zaskoczeniu niemal natychmiast, price discovery jest szybki i mieści się w minutach po odczycie. Kierunek ruchu wyznacza znak zaskoczenia, a nie poziom samej danej. Reakcja bywa asymetryczna: rynek mocniej reaguje na złe wiadomości niż na dobre. I wreszcie zmienność dostosowuje się wolniej niż średnia, sam skok poziomu jest błyskawiczny, ale podwyższona zmienność utrzymuje się dłużej, w miarę jak rynek trawi odczyt. To jest twardy fundament tezy, że rusza zaskoczenie, nie liczba.
 
+<figure>
+<svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif" role="img" aria-label="Reakcja kursu na zaskoczenie makro: płasko przed publikacją, gwałtowny skok w momencie odczytu, krótki dryf i stabilizacja na nowym poziomie">
+  <defs>
+    <marker id="ah-news" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="currentColor" opacity="0.7"/>
+    </marker>
+  </defs>
+  <g stroke="currentColor" stroke-width="1" opacity="0.2">
+    <line x1="70" y1="100" x2="610" y2="100"/>
+    <line x1="70" y1="156" x2="610" y2="156"/>
+    <line x1="70" y1="212" x2="610" y2="212"/>
+    <line x1="70" y1="268" x2="610" y2="268"/>
+  </g>
+  <g stroke="currentColor" stroke-width="1.4" opacity="0.55">
+    <line x1="70" y1="44" x2="70" y2="312"/>
+    <line x1="70" y1="312" x2="610" y2="312"/>
+  </g>
+  <text x="30" y="178" text-anchor="middle" font-size="13" fill="currentColor" opacity="0.75" transform="rotate(-90 30 178)">cena</text>
+  <text x="602" y="334" text-anchor="end" font-size="13" fill="currentColor" opacity="0.75">czas</text>
+  <line x1="296" y1="260" x2="606" y2="260" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.3"/>
+  <line x1="286" y1="54" x2="286" y2="312" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.7"/>
+  <text x="286" y="44" text-anchor="middle" font-size="12.5" fill="currentColor" opacity="0.8">publikacja</text>
+  <path d="M 72 260 L 286 260 L 296 152 L 432 122 L 606 122" fill="none" stroke="#0b66c3" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="286" cy="260" r="3.5" fill="#0b66c3"/>
+  <text x="92" y="250" font-size="12.5" fill="currentColor" opacity="0.7">przed publikacją</text>
+  <line x1="316" y1="208" x2="301" y2="198" stroke="currentColor" stroke-width="1.3" opacity="0.7" marker-end="url(#ah-news)"/>
+  <text x="320" y="214" font-size="12.5" fill="currentColor" opacity="0.75">skok</text>
+  <text x="368" y="102" text-anchor="middle" font-size="12.5" fill="currentColor" opacity="0.7">krótki dryf</text>
+  <text x="522" y="106" text-anchor="middle" font-size="12.5" fill="currentColor" opacity="0.75">nowy poziom</text>
+</svg>
+<figcaption>Kurs stoi płasko do odczytu, a w momencie publikacji skacze w stronę zaskoczenia, po czym jeszcze krótko dryfuje w tę samą stronę i stabilizuje się na nowym poziomie. Sam skok poziomu jest błyskawiczny, a podwyższona zmienność normalizuje się wolniej.</figcaption>
+</figure>
+
 ## Okno publikacji od środka: skok zmienności, szerszy spread, cieńsza płynność
 
 Reakcja jest nie tylko szybka, ale i skoncentrowana, a jej mikrostruktura ma stały kształt. Tuż przed zaplanowanym odczytem dostawcy płynności wiedzą, że za chwilę padnie zaskoczenie, którego nie znają. Żeby nie dać się przejechać komuś, kto zareaguje szybciej, wycofują część kwotowań i rozszerzają spread. Głębokość arkusza topnieje w ostatnich sekundach przed publikacją. To ochrona przed negatywną selekcją, czyli przed handlem z lepiej poinformowanym.

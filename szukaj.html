@@ -1,0 +1,29 @@
+---
+layout: default
+title: "Szukaj"
+permalink: /szukaj/
+---
+<section class="intro">
+  <p>Szukaj w całym kompendium. Wpisz słowo z tytułu, tagu albo opisu, na przykład Sharpe, Kelly, mikrostruktura, MQL5, opcje.</p>
+</section>
+
+<input id="q" class="q-input" type="search" placeholder="Szukaj działu..." autocomplete="off" spellcheck="false">
+<p id="q-count" class="q-count"></p>
+<ul id="q-res" class="posts"></ul>
+
+<script>
+(function(){
+  var idx=[], q=document.getElementById('q'), res=document.getElementById('q-res'), cnt=document.getElementById('q-count');
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function run(){
+    var s=q.value.trim().toLowerCase();
+    if(s.length<2){ res.innerHTML=''; cnt.textContent=''; return; }
+    var terms=s.split(/\s+/);
+    var out=idx.filter(function(it){ var hay=((it.title||'')+' '+(it.tags||'')+' '+(it.desc||'')+' '+(it.cat||'')).toLowerCase(); return terms.every(function(t){ return hay.indexOf(t)>=0; }); });
+    cnt.textContent = out.length+' '+(out.length===1?'wynik':(out.length%10>=2&&out.length%10<=4&&(out.length<10||out.length>20)?'wyniki':'wyników'));
+    res.innerHTML = out.slice(0,50).map(function(it){ return '<li><span class="d">'+esc(it.date)+'</span><a href="'+esc(it.url)+'">'+esc(it.title)+'</a>'+(it.desc?'<span class="ds">'+esc(it.desc)+'</span>':'')+'</li>'; }).join('');
+  }
+  fetch('{{ "/search.json" | relative_url }}').then(function(r){ return r.json(); }).then(function(d){ idx=d; var p=new URLSearchParams(location.search).get('q'); if(p){ q.value=p; run(); } q.focus(); });
+  q.addEventListener('input',run);
+})();
+</script>
