@@ -34,6 +34,29 @@ Formalnie to zadanie to proces decyzyjny Markowa: zbiór stanów, zbiór akcji, 
 
 Kontrast z klasycznym uczeniem nadzorowanym jest istotny. W nadzorowanym masz etykietę: to zdjęcie przedstawia kota. W RL nie ma etykiety poprawnej akcji, jest tylko odroczona, zaszumiona nagroda po całej sekwencji decyzji. To rodzi problem przypisania zasługi (credit assignment): jeśli nagroda przyszła na końcu, trudno wskazać, która z wcześniejszych akcji naprawdę na nią zapracowała. Deep RL wstawia w to miejsce sieć neuronową jako aproksymator: sieć uczy się albo wartości akcji (rodzina Q-learning, DQN, DDQN), albo bezpośrednio polityki (metody policy gradient). DDQN (Double Deep Q-Network) to wariant, który koryguje znaną skłonność zwykłego DQN do przeszacowywania wartości akcji, i to jego często spotyka się w pracach o egzekucji.
 
+<figure>
+<svg viewBox="0 0 660 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif" role="img" aria-label="Petla uczenia ze wzmocnieniem: agent i srodowisko wymieniaja akcje, stan i nagrode">
+<defs>
+<marker id="rl-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="currentColor" opacity="0.75"/>
+</marker>
+</defs>
+<rect x="125" y="112" width="180" height="96" rx="16" fill="#0b66c3" fill-opacity="0.12" stroke="#0b66c3" stroke-width="2"/>
+<text x="215" y="154" text-anchor="middle" font-size="21" font-weight="600" fill="currentColor" opacity="0.85">Agent</text>
+<text x="215" y="178" text-anchor="middle" font-size="12" fill="currentColor" opacity="0.6">uczy się polityki</text>
+<rect x="425" y="112" width="180" height="96" rx="16" fill="#1a9e6a" fill-opacity="0.12" stroke="#1a9e6a" stroke-width="2"/>
+<text x="515" y="154" text-anchor="middle" font-size="21" font-weight="600" fill="currentColor" opacity="0.85">Środowisko</text>
+<text x="515" y="178" text-anchor="middle" font-size="12" fill="currentColor" opacity="0.6">rynek, cena, koszt</text>
+<path d="M185,112 C185,66 245,66 245,112" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5" marker-end="url(#rl-arrow)"/>
+<text x="215" y="52" text-anchor="middle" font-size="12.5" fill="currentColor" opacity="0.7">aktualizacja polityki</text>
+<path d="M307,136 C352,82 378,82 423,136" fill="none" stroke="currentColor" stroke-width="2" opacity="0.55" marker-end="url(#rl-arrow)"/>
+<text x="365" y="74" text-anchor="middle" font-size="14" fill="currentColor" opacity="0.8">akcja</text>
+<path d="M423,184 C378,238 352,238 307,184" fill="none" stroke="currentColor" stroke-width="2" opacity="0.55" marker-end="url(#rl-arrow)"/>
+<text x="365" y="256" text-anchor="middle" font-size="14" fill="currentColor" opacity="0.8">stan, nagroda</text>
+</svg>
+<figcaption>Pętla uczenia ze wzmocnieniem. Agent wysyła do środowiska akcję, środowisko odsyła nowy stan i nagrodę, a agent na tej podstawie aktualizuje politykę i powtarza cykl.</figcaption>
+</figure>
+
 ## Dlaczego trading kusi jako problem RL
 
 Handel wygląda jak podręcznikowy przykład RL. Decyzje są sekwencyjne: dzisiejsza pozycja, otwarta czy zamknięta, zmienia sytuację, w której podejmujesz jutrzejszą. Jest naturalna nagroda: zysk, najlepiej skorygowany o ryzyko i pomniejszony o koszty. Jest stan: cena, zmienność, wielkość pozycji, czas do zamknięcia sesji. Kusząca obietnica brzmi tak: nie musisz osobno przewidywać ceny i osobno budować reguł wejścia, sizingu oraz wyjścia. Ucz agenta od obserwacji wprost do akcji, a on sam nauczy się kupować, sprzedawać, dokładać i wychodzić, wliczając koszty w nagrodę.

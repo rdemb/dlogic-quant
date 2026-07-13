@@ -56,6 +56,72 @@ Popatrz na to oczami dealera. Ma kwotować dwustronną cenę, nie wiedząc, czy 
 
 Do tego dochodzi zarządzanie zapasem. Dealer, który nazbierał niechcianych euro, podszywa kwotowania tak, by je zrzucić, i przekazuje nierównowagę kolejnym dealerom. To wielokrotne przerzucanie zapasu między biurami, opisane przez Lyonsa jako efekt gorącego ziemniaka, pompuje przepływ międzydealerski ponad pierwotne zlecenie klienta i czyni go tak informacyjnym. Wniosek jest jeden: cena to bieżące, najlepsze przypuszczenie dealera przy danym przepływie, i przesuwa się w rytm napływających zleceń, tik po tiku, często bez żadnego nagłówka nad głową.
 
+<figure>
+<svg viewBox="0 0 720 470" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif" role="img" aria-label="Nadwyżka przepływu zleceń a ruch ceny w kolejnych chwilach">
+  <rect x="206" y="15" width="14" height="14" rx="2.5" fill="#1a9e6a"/>
+  <text x="226" y="26" font-size="12" fill="currentColor" opacity="0.8">kupno netto</text>
+  <rect x="322" y="15" width="14" height="14" rx="2.5" fill="#e5484d"/>
+  <text x="342" y="26" font-size="12" fill="currentColor" opacity="0.8">sprzedaż netto</text>
+  <line x1="455" y1="22" x2="479" y2="22" stroke="#0b66c3" stroke-width="3" stroke-linecap="round"/>
+  <text x="485" y="26" font-size="12" fill="currentColor" opacity="0.8">cena</text>
+  <g stroke="currentColor" opacity="0.14" stroke-width="1">
+    <line x1="66" y1="72" x2="682" y2="72"/>
+    <line x1="66" y1="120" x2="682" y2="120"/>
+    <line x1="66" y1="168" x2="682" y2="168"/>
+    <line x1="66" y1="216" x2="682" y2="216"/>
+  </g>
+  <g stroke="currentColor" opacity="0.22" stroke-width="1" stroke-dasharray="4 5">
+    <line x1="286" y1="58" x2="286" y2="422"/>
+    <line x1="506" y1="58" x2="506" y2="422"/>
+  </g>
+  <text x="22" y="150" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle" transform="rotate(-90 22 150)">ruch ceny</text>
+  <text x="22" y="340" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle" transform="rotate(-90 22 340)">przepływ netto</text>
+  <text x="62" y="364" font-size="11" fill="currentColor" opacity="0.6" text-anchor="end">0</text>
+  <g>
+    <rect x="75" y="344" width="26" height="16" rx="2" fill="#1a9e6a"/>
+    <rect x="119" y="324" width="26" height="36" rx="2" fill="#1a9e6a"/>
+    <rect x="163" y="304" width="26" height="56" rx="2" fill="#1a9e6a"/>
+    <rect x="207" y="316" width="26" height="44" rx="2" fill="#1a9e6a"/>
+    <rect x="251" y="336" width="26" height="24" rx="2" fill="#1a9e6a"/>
+    <rect x="295" y="360" width="26" height="12" rx="2" fill="#e5484d"/>
+    <rect x="339" y="360" width="26" height="40" rx="2" fill="#e5484d"/>
+    <rect x="383" y="360" width="26" height="60" rx="2" fill="#e5484d"/>
+    <rect x="427" y="360" width="26" height="48" rx="2" fill="#e5484d"/>
+    <rect x="471" y="360" width="26" height="20" rx="2" fill="#e5484d"/>
+    <rect x="515" y="348" width="26" height="12" rx="2" fill="#1a9e6a"/>
+    <rect x="559" y="321.6" width="26" height="38.4" rx="2" fill="#1a9e6a"/>
+    <rect x="603" y="305.6" width="26" height="54.4" rx="2" fill="#1a9e6a"/>
+    <rect x="647" y="328" width="26" height="32" rx="2" fill="#1a9e6a"/>
+  </g>
+  <line x1="66" y1="360" x2="682" y2="360" stroke="currentColor" opacity="0.55" stroke-width="1.4"/>
+  <polyline points="88,206.2 132,177.1 176,131.9 220,96.3 264,76.9 308,86.6 352,118.9 396,167.4 440,206.2 484,222.3 528,212.6 572,181.6 616,137.7 660,111.8" fill="none" stroke="#0b66c3" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <g fill="#0b66c3">
+    <circle cx="88" cy="206.2" r="2.4"/>
+    <circle cx="132" cy="177.1" r="2.4"/>
+    <circle cx="176" cy="131.9" r="2.4"/>
+    <circle cx="220" cy="96.3" r="2.4"/>
+    <circle cx="264" cy="76.9" r="4"/>
+    <circle cx="308" cy="86.6" r="2.4"/>
+    <circle cx="352" cy="118.9" r="2.4"/>
+    <circle cx="396" cy="167.4" r="2.4"/>
+    <circle cx="440" cy="206.2" r="2.4"/>
+    <circle cx="484" cy="222.3" r="4"/>
+    <circle cx="528" cy="212.6" r="2.4"/>
+    <circle cx="572" cy="181.6" r="2.4"/>
+    <circle cx="616" cy="137.7" r="2.4"/>
+    <circle cx="660" cy="111.8" r="2.4"/>
+  </g>
+  <text x="176" y="261" font-size="12.5" font-weight="600" fill="#1a9e6a" text-anchor="middle">kupno netto</text>
+  <text x="176" y="279" font-size="11.5" fill="#0b66c3" text-anchor="middle">cena rośnie ↑</text>
+  <text x="396" y="261" font-size="12.5" font-weight="600" fill="#e5484d" text-anchor="middle">sprzedaż netto</text>
+  <text x="396" y="279" font-size="11.5" fill="#0b66c3" text-anchor="middle">cena spada ↓</text>
+  <text x="594" y="261" font-size="12.5" font-weight="600" fill="#1a9e6a" text-anchor="middle">kupno netto</text>
+  <text x="594" y="279" font-size="11.5" fill="#0b66c3" text-anchor="middle">cena rośnie ↑</text>
+  <text x="374" y="446" font-size="11" fill="currentColor" opacity="0.55" text-anchor="middle">czas (kolejne chwile handlu) →</text>
+</svg>
+<figcaption>Dolne słupki pokazują nadwyżkę przepływu w kolejnych chwilach: przewaga kupna nad osią zero, przewaga sprzedaży pod nią. Górna linia ceny rośnie tam, gdzie dominuje kupno, i spada tam, gdzie dominuje sprzedaż, więc kurs prowadzi niezrównoważony przepływ, a nie sam news.</figcaption>
+</figure>
+
 ## Dlaczego cena rusza się bez newsa
 
 Teraz zapłata za ten wywód. Jeśli to przepływ jest bezpośrednim motorem kursu, to ruch bez wiadomości przestaje być paradoksem. Jest śladem flow, którego nie widać. Pojedynczy duży rebalancing w cichej godzinie, program zabezpieczający, bank centralny, fundusz przekładający alokację, każde z tych zdarzeń tworzy przepływ netto, który dealerzy wchłaniają przesunięciem ceny. Żaden publiczny katalizator nie jest potrzebny, bo informacja i popyt siedziały w samym przepływie.

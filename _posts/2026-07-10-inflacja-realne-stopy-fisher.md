@@ -51,6 +51,34 @@ i = 20%, πe = 15%:
 
 Przybliżenie stopa nominalna ≈ stopa realna + oczekiwana inflacja wystarcza przy niskiej inflacji, bo pominięty iloczyn dwóch małych liczb jest wtedy zaniedbywalny. Przy wysokiej inflacji ten sam iloczyn rośnie i wersja przybliżona zaczyna zawyżać stopę realną, dlatego w warunkach wysokiej inflacji poprawna jest postać multiplikatywna. Samo równanie jest tożsamością: przy danych trzech wielkościach zawsze się domyka. Osobną, mocniejszą tezą jest tak zwany efekt Fishera, zgodnie z którym stopa nominalna dostosowuje się do zmian oczekiwanej inflacji, pozostawiając stopę realną kształtowaną przez czynniki realne. To już hipoteza o zachowaniu rynku, nie sama arytmetyka.
 
+<figure>
+<svg viewBox="0 0 720 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Równanie Fishera jako składany słupek: stopa nominalna równa się stopa realna plus oczekiwana inflacja" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+  <title>Równanie Fishera jako składany słupek</title>
+  <desc>Stopa nominalna podzielona na dwa segmenty: stopa realna i oczekiwana inflacja.</desc>
+  <defs>
+    <clipPath id="fisherBarClip"><rect x="60" y="100" width="600" height="58" rx="8"/></clipPath>
+  </defs>
+  <text x="360" y="30" text-anchor="middle" fill="currentColor" fill-opacity="0.85" font-size="18" font-weight="600">Równanie Fishera</text>
+  <text x="360" y="70" text-anchor="middle" fill="currentColor" fill-opacity="0.8" font-size="15">stopa nominalna (i) ≈ 5%</text>
+  <path d="M60 96 V88 H660 V96 M360 88 V78" fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <g clip-path="url(#fisherBarClip)">
+    <rect x="60" y="100" width="240" height="58" fill="#0b66c3"/>
+    <rect x="300" y="100" width="360" height="58" fill="#1a9e6a"/>
+  </g>
+  <line x1="300" y1="100" x2="300" y2="158" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5"/>
+  <rect x="60" y="100" width="600" height="58" rx="8" fill="none" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5"/>
+  <line x1="180" y1="158" x2="180" y2="186" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5"/>
+  <line x1="480" y1="158" x2="480" y2="186" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5"/>
+  <text x="180" y="204" text-anchor="middle" fill="currentColor" fill-opacity="0.8" font-size="13.5">stopa realna (r)</text>
+  <text x="180" y="226" text-anchor="middle" fill="currentColor" fill-opacity="0.75" font-size="18" font-weight="600">2%</text>
+  <text x="330" y="225" text-anchor="middle" fill="currentColor" fill-opacity="0.55" font-size="22">+</text>
+  <text x="480" y="204" text-anchor="middle" fill="currentColor" fill-opacity="0.8" font-size="13.5">oczekiwana inflacja (πe)</text>
+  <text x="480" y="226" text-anchor="middle" fill="currentColor" fill-opacity="0.75" font-size="18" font-weight="600">3%</text>
+  <text x="360" y="256" text-anchor="middle" fill="currentColor" fill-opacity="0.5" font-size="12">przykład ilustracyjny, wersja przybliżona</text>
+</svg>
+<figcaption>Równanie Fishera jako składany słupek: stopa nominalna to suma stopy realnej i oczekiwanej inflacji. Liczby (2%, 3%, 5%) są przykładem ilustracyjnym w wersji przybliżonej, nie prognozą.</figcaption>
+</figure>
+
 ## Nominalna kontra realna: dlaczego kapitał liczy się w sile nabywczej
 
 Skoro nominał zawiera rekompensatę za inflację, to o przyroście majątku decyduje dopiero to, co zostaje po jej odjęciu.

@@ -22,6 +22,55 @@ category: edukacja
 
 Trzy nazwy wracają w niemal każdym poważnym katalogu strategii ilościowych: momentum, carry i trend. To nie są chwyty marketingowe ani wskaźniki z pojedynczego backtestu, tylko efekty udokumentowane w recenzowanej literaturze, na wielu rynkach i przez wiele dekad. Zbudowano na nich znaczną część branży zarządzania systematycznego, od funduszy CTA po strategie faktorowe dużych domów badawczych takich jak AQR. Każdy z tych trzech efektów opiera się na innym mechanizmie i każdy ma inny kształt rozkładu zysków. Łączy je jedno: żaden nie jest darmowym obiadem, a cena zwykle bywa ukryta w ogonie rozkładu albo w kosztach transakcyjnych.
 
+<figure>
+<svg viewBox="0 0 720 310" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif" role="img" aria-label="Trzy klasyczne źródła przewagi: momentum, carry i trend jako trzy panele pojęciowe">
+  <defs>
+    <marker id="mct-ah-mom" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="8.5" refY="5.5" orient="auto"><path d="M1,1 L9.5,5.5 L1,10 Z" fill="#0b66c3"/></marker>
+    <marker id="mct-ah-tr" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="8.5" refY="5.5" orient="auto"><path d="M1,1 L9.5,5.5 L1,10 Z" fill="#e5484d"/></marker>
+  </defs>
+
+  <!-- Panel 1: Momentum -->
+  <rect x="15" y="24" width="210" height="272" rx="14" fill="none" stroke="currentColor" stroke-opacity="0.2"/>
+  <text x="120" y="52" text-anchor="middle" font-size="17" font-weight="600" fill="#0b66c3">Momentum</text>
+  <line x1="90" y1="64" x2="150" y2="64" stroke="#0b66c3" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+  <line x1="40" y1="210" x2="200" y2="210" stroke="currentColor" stroke-opacity="0.28"/>
+  <line x1="40" y1="150" x2="200" y2="150" stroke="currentColor" stroke-opacity="0.15"/>
+  <polyline points="48,198 70,186 92,192 114,160 136,150" fill="none" stroke="#0b66c3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="136" cy="150" r="3.6" fill="#0b66c3"/>
+  <line x1="136" y1="150" x2="192" y2="110" stroke="#0b66c3" stroke-width="2.6" stroke-dasharray="5 5" stroke-linecap="round" marker-end="url(#mct-ah-mom)"/>
+  <text x="120" y="250" text-anchor="middle" font-size="12.5" fill="currentColor" fill-opacity="0.72">Cena, która rosła,</text>
+  <text x="120" y="270" text-anchor="middle" font-size="12.5" fill="currentColor" fill-opacity="0.72">częściej rośnie dalej</text>
+
+  <!-- Panel 2: Carry -->
+  <rect x="255" y="24" width="210" height="272" rx="14" fill="none" stroke="currentColor" stroke-opacity="0.2"/>
+  <text x="360" y="52" text-anchor="middle" font-size="17" font-weight="600" fill="#1a9e6a">Carry</text>
+  <line x1="330" y1="64" x2="390" y2="64" stroke="#1a9e6a" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+  <line x1="300" y1="210" x2="422" y2="210" stroke="currentColor" stroke-opacity="0.28"/>
+  <rect x="318" y="168" width="36" height="42" fill="#1a9e6a" fill-opacity="0.2"/>
+  <rect x="318" y="112" width="36" height="56" fill="#1a9e6a" fill-opacity="0.85"/>
+  <rect x="318" y="112" width="36" height="98" fill="none" stroke="#1a9e6a" stroke-opacity="0.65"/>
+  <rect x="372" y="168" width="36" height="42" fill="#1a9e6a" fill-opacity="0.2" stroke="#1a9e6a" stroke-opacity="0.65"/>
+  <line x1="318" y1="168" x2="408" y2="168" stroke="currentColor" stroke-opacity="0.3" stroke-dasharray="4 4"/>
+  <text x="336" y="104" text-anchor="middle" font-size="11" fill="currentColor" fill-opacity="0.62">różnica</text>
+  <text x="336" y="226" text-anchor="middle" font-size="10" fill="currentColor" fill-opacity="0.55">wysoka</text>
+  <text x="390" y="226" text-anchor="middle" font-size="10" fill="currentColor" fill-opacity="0.55">niska</text>
+  <text x="360" y="250" text-anchor="middle" font-size="12.5" fill="currentColor" fill-opacity="0.72">Zbieranie różnicy</text>
+  <text x="360" y="270" text-anchor="middle" font-size="12.5" fill="currentColor" fill-opacity="0.72">stóp procentowych</text>
+
+  <!-- Panel 3: Trend -->
+  <rect x="495" y="24" width="210" height="272" rx="14" fill="none" stroke="currentColor" stroke-opacity="0.2"/>
+  <text x="600" y="52" text-anchor="middle" font-size="17" font-weight="600" fill="#e5484d">Trend</text>
+  <line x1="572" y1="64" x2="628" y2="64" stroke="#e5484d" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+  <line x1="520" y1="210" x2="690" y2="210" stroke="currentColor" stroke-opacity="0.28"/>
+  <line x1="520" y1="150" x2="690" y2="150" stroke="currentColor" stroke-opacity="0.15"/>
+  <polyline points="526,198 544,184 560,192 578,168 596,176 614,152 632,160 650,134 668,142 686,120" fill="none" stroke="currentColor" stroke-opacity="0.4" stroke-width="1.8" stroke-linejoin="round"/>
+  <line x1="526" y1="200" x2="686" y2="112" stroke="#e5484d" stroke-width="3" stroke-linecap="round" marker-end="url(#mct-ah-tr)"/>
+  <text x="600" y="250" text-anchor="middle" font-size="12.5" fill="currentColor" fill-opacity="0.72">Podążanie za</text>
+  <text x="600" y="270" text-anchor="middle" font-size="12.5" fill="currentColor" fill-opacity="0.72">dłuższym kierunkiem</text>
+</svg>
+<figcaption>Schemat pojęciowy trzech klasycznych źródeł przewagi: momentum stawia na kontynuację ruchu, carry inkasuje różnicę stóp procentowych, a trend podąża za dłuższym kierunkiem mimo szumu. To ilustracja mechanizmów, nie realne dane.</figcaption>
+</figure>
+
 ## Momentum: to, co rosło, zwykle rośnie dalej
 
 Momentum w wersji przekrojowej (cross-sectional) polega na rankingu aktywów według stopy zwrotu z ostatnich kilku miesięcy, zwykle od trzech do dwunastu, kupowaniu zwycięzców i sprzedawaniu maruderów. Klasyczna praca Jegadeesha i Titmana z 1993 roku pokazała, że akcje najlepsze w horyzoncie od trzech do dwunastu miesięcy przeciętnie dają wyższe zwroty także w kolejnych miesiącach. Efekt nie ogranicza się do amerykańskich akcji. Asness, Moskowitz i Pedersen w pracy "Value and Momentum Everywhere" (2013) udokumentowali go równolegle w akcjach różnych krajów, obligacjach, surowcach i walutach. Na rynku walutowym momentum opisali między innymi Menkhoff, Sarno, Schmeling i Schrimpf, a wątek podejmowały też prace robocze BIS.

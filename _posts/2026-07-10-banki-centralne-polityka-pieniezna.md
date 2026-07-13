@@ -64,6 +64,55 @@ oczekiwania     →  decyzje cenowe, płacowe i inwestycyjne
 
 Kanał kredytowy zasługuje na osobne zdanie. Bernanke i Gertler (1995) opisali go jako czarną skrzynkę, w której polityka pieniężna działa nie tylko przez cenę pieniądza, lecz przez zdolność kredytową: wyższe stopy psują bilanse i obniżają wartość zabezpieczeń, przez co banki pożyczają ostrożniej, a słabsze firmy tracą dostęp do finansowania. Ten mechanizm, nazwany finansowym akceleratorem, tłumaczy, dlaczego skutki decyzji bywają większe i bardziej nierówne, niż sugerowałby sam ruch stopy. Kanały działają z opóźnieniem liczonym w kwartałach, co jest jedną z trudności polityki: bank reaguje dziś na inflację, którą realnie schłodzi dopiero za kilka kwartałów.
 
+<figure>
+<svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schemat kanałów transmisji polityki pieniężnej: stopa referencyjna w centrum i pięć równoległych kanałów transmisji" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+  <defs>
+    <marker id="dl-tx-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="currentColor" opacity="0.6"/>
+    </marker>
+  </defs>
+
+  <circle cx="150" cy="220" r="92" fill="none" stroke="currentColor" stroke-width="1" opacity="0.10"/>
+  <circle cx="150" cy="220" r="78" fill="none" stroke="currentColor" stroke-width="1" opacity="0.16"/>
+
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-opacity="0.4" marker-end="url(#dl-tx-arrow)">
+    <path d="M214 220 Q 332 220 430 58"/>
+    <path d="M214 220 Q 332 220 430 139"/>
+    <path d="M214 220 Q 332 220 430 220"/>
+    <path d="M214 220 Q 332 220 430 301"/>
+    <path d="M214 220 Q 332 220 430 382"/>
+  </g>
+
+  <g>
+    <rect x="440" y="30" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
+    <text x="458" y="54" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Stopy rynkowe</text>
+    <text x="458" y="73" font-size="11.5" fill="currentColor" opacity="0.55">koszt kredytu i premia za oszczędzanie</text>
+
+    <rect x="440" y="111" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
+    <text x="458" y="135" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Kredyt</text>
+    <text x="458" y="154" font-size="11.5" fill="currentColor" opacity="0.55">podaż kredytu, bilanse firm i gospodarstw</text>
+
+    <rect x="440" y="192" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
+    <text x="458" y="216" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Kurs walutowy</text>
+    <text x="458" y="235" font-size="11.5" fill="currentColor" opacity="0.55">ceny eksportu i importu, konkurencyjność</text>
+
+    <rect x="440" y="273" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
+    <text x="458" y="297" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Ceny aktywów</text>
+    <text x="458" y="316" font-size="11.5" fill="currentColor" opacity="0.55">majątek, wartość zabezpieczeń, wydatki</text>
+
+    <rect x="440" y="354" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
+    <text x="458" y="378" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Oczekiwania</text>
+    <text x="458" y="397" font-size="11.5" fill="currentColor" opacity="0.55">decyzje cenowe, płacowe i inwestycyjne</text>
+  </g>
+
+  <circle cx="150" cy="220" r="64" fill="#0b66c3"/>
+  <text x="150" y="214" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Stopa</text>
+  <text x="150" y="234" text-anchor="middle" font-size="13.5" fill="#ffffff" opacity="0.92">referencyjna</text>
+  <text x="150" y="306" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.5">impuls polityki</text>
+</svg>
+<figcaption>Schemat rozchodzenia się impulsu polityki pieniężnej: od jednej stopy referencyjnej do pięciu równoległych kanałów transmisji. Strzałki pokazują, jak decyzja dociera do gospodarki naraz kilkoma drogami, w porządku ujętym przez Mishkina.</figcaption>
+</figure>
+
 ## Po 2008 roku: QE, forward guidance, stopy ujemne
 
 Gdy w kryzysie 2008 roku krótkie stopy spadły w okolice zera, klasyczne narzędzie się wyczerpało, ale przestrzeń działania nie. Banki sięgnęły po trzy instrumenty niekonwencjonalne, opisane w dokumentacji Fed i EBC. Skup aktywów na dużą skalę (QE) to kupowanie obligacji skarbowych i innych papierów, żeby obniżyć długoterminowe rentowności, na które krótka stopa już nie sięgała. Forward guidance to zobowiązanie co do przyszłej ścieżki stóp, czyli sterowanie oczekiwaniami wprost, słowem zamiast ruchem. Stopy ujemne to zejście stopy depozytowej poniżej zera; EBC zrobił to w 2014 roku, obciążając banki kosztem za trzymanie nadmiaru rezerw. Wspólny mianownik tych narzędzi jest pouczający: skoro krótka stopa utknęła przy zerze, polityka przeniosła się na dłuższy koniec krzywej i na zarządzanie oczekiwaniami, co jest tematem następnej sekcji.

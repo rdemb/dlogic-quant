@@ -78,6 +78,56 @@ Pojedyncze oszacowanie może być nieobciążone, ale aukcja nie wybiera losoweg
 
 W ścisłej teorii klątwa zwycięzcy nie jest błędem rynku, tylko błędem gracza: w pełni racjonalny licytujący wycenia przedmiot warunkowo, „ile to jest warte, jeżeli okaże się, że wygrałem", i odpowiednio ścina ofertę, więc w równowadze nikt nie przepłaca. Sęk w tym, że dane polowe i dekady eksperymentów pokazują to samo, co Zatoka Meksykańska: realni gracze ścinają za słabo. Klątwa jest pojęciem z pogranicza teorii i psychologii, i właśnie dlatego jest taka praktyczna.
 
+<figure>
+<svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rozkład prywatnych wycen uczestników aukcji wokół wartości prawdziwej. Zwycięzca to najwyższa wycena, leży na prawo od prawdy i przepłaca." style="width:100%;height:auto;max-width:720px;display:block;margin:0 auto;font-family:-apple-system,Segoe UI,Roboto,sans-serif">
+<g stroke="currentColor" stroke-width="1" opacity="0.18">
+<line x1="210" y1="115" x2="210" y2="320"/>
+<line x1="295" y1="115" x2="295" y2="320"/>
+<line x1="465" y1="115" x2="465" y2="320"/>
+<line x1="550" y1="115" x2="550" y2="320"/>
+</g>
+<line x1="90" y1="320" x2="660" y2="320" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+<polygon points="660,320 650,316 650,324" fill="currentColor" opacity="0.4"/>
+<text x="628" y="338" text-anchor="middle" font-size="12" fill="currentColor" opacity="0.55">wycena</text>
+<path d="M125,317.7 L146.2,315.2 L167.5,310.8 L188.8,303.3 L210,291.6 L231.2,274.6 L252.5,251.8 L273.8,223.9 L295,192.6 L316.2,161.5 L337.5,134.7 L358.8,116.5 L380,110 L401.2,116.5 L422.5,134.7 L443.8,161.5 L465,192.6 L486.2,223.9 L507.5,251.8 L528.8,274.6 L550,291.6 L571.2,303.3 L592.5,310.8 L613.8,315.2 L635,317.7 L635,320 L125,320 Z" fill="#0b66c3" opacity="0.12"/>
+<path d="M125,317.7 L146.2,315.2 L167.5,310.8 L188.8,303.3 L210,291.6 L231.2,274.6 L252.5,251.8 L273.8,223.9 L295,192.6 L316.2,161.5 L337.5,134.7 L358.8,116.5 L380,110 L401.2,116.5 L422.5,134.7 L443.8,161.5 L465,192.6 L486.2,223.9 L507.5,251.8 L528.8,274.6 L550,291.6 L571.2,303.3 L592.5,310.8 L613.8,315.2 L635,317.7" fill="none" stroke="#0b66c3" stroke-width="2" opacity="0.75" stroke-linejoin="round"/>
+<g fill="#0b66c3" opacity="0.8">
+<circle cx="285" cy="306" r="5"/>
+<circle cx="312" cy="300" r="5"/>
+<circle cx="330" cy="308" r="5"/>
+<circle cx="345" cy="298" r="5"/>
+<circle cx="356" cy="304" r="5"/>
+<circle cx="365" cy="300" r="5"/>
+<circle cx="373" cy="307" r="5"/>
+<circle cx="380" cy="301" r="5"/>
+<circle cx="388" cy="305" r="5"/>
+<circle cx="396" cy="299" r="5"/>
+<circle cx="405" cy="306" r="5"/>
+<circle cx="416" cy="300" r="5"/>
+<circle cx="430" cy="307" r="5"/>
+<circle cx="451" cy="302" r="5"/>
+<circle cx="485" cy="303" r="5"/>
+</g>
+<line x1="380" y1="92" x2="380" y2="358" stroke="currentColor" stroke-width="1.5" opacity="0.6" stroke-dasharray="5,4"/>
+<text x="380" y="64" text-anchor="middle" font-size="15" fill="currentColor" opacity="0.85">wartość prawdziwa</text>
+<text x="380" y="82" text-anchor="middle" font-size="12" fill="currentColor" opacity="0.6">= średnia wycen</text>
+<circle cx="545" cy="302" r="12" fill="#e5484d" opacity="0.15"/>
+<circle cx="545" cy="302" r="7" fill="#e5484d"/>
+<line x1="545" y1="278" x2="545" y2="295" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+<text x="545" y="255" text-anchor="middle" font-size="15" fill="currentColor" opacity="0.85">zwycięzca</text>
+<text x="545" y="272" text-anchor="middle" font-size="12" fill="currentColor" opacity="0.6">najwyższa wycena</text>
+<line x1="380" y1="352" x2="545" y2="352" stroke="currentColor" stroke-width="1.5" opacity="0.75"/>
+<polygon points="545,352 535,347 535,357" fill="currentColor" opacity="0.75"/>
+<line x1="545" y1="311" x2="545" y2="350" stroke="#e5484d" stroke-width="1.5" opacity="0.5" stroke-dasharray="4,3"/>
+<text x="462" y="372" text-anchor="middle" font-size="13" fill="currentColor" opacity="0.85">przepłata zwycięzcy</text>
+<circle cx="98" cy="54" r="5" fill="#0b66c3" opacity="0.8"/>
+<text x="112" y="58" font-size="13" fill="currentColor" opacity="0.75">wyceny uczestników</text>
+<circle cx="98" cy="76" r="5" fill="#e5484d"/>
+<text x="112" y="80" font-size="13" fill="currentColor" opacity="0.75">zwycięzca (maksimum)</text>
+</svg>
+<figcaption>Prywatne wyceny uczestników (niebieskie) rozkładają się wokół wartości prawdziwej i średnio jej nie zawyżają. Aukcja wybiera jednak maksimum, więc zwycięzca (czerwony) prawie zawsze leży na prawo od prawdy i przepłaca, a im więcej licytujących, tym głębsze to obciążenie.</figcaption>
+</figure>
+
 ## Nobel 2020: od twierdzeń do projektowania rynków
 
 Teorię licytacji przy wartości wspólnej ujął w równowagi Robert Wilson w latach 60. i 70.: pokazał, jak racjonalni gracze powinni ścinać oferty, żeby klątwa ich nie zjadła. Jego doktorant Paul Milgrom domknął obraz, łącząc wartości prywatne i wspólne w jednym modelu, z wnioskiem znanym jako zasada powiązania: formaty otwarte, które w trakcie licytacji ujawniają zachowanie rywali, zmniejszają niepewność i łagodzą klątwę, więc gracze licytują śmielej, a sprzedawca przeciętnie zarabia więcej niż przy zamkniętych kopertach. To jeden z powodów, dla których drogie i niepewne aktywa świat woli sprzedawać w formatach rosnących. Wykład tej teorii Milgrom zebrał w książce „Putting Auction Theory to Work" (Cambridge University Press, 2004).
