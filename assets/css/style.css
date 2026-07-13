@@ -40,6 +40,9 @@ h2{font-size:22px;margin:36px 0 10px;font-family:-apple-system,Segoe UI,Roboto,s
 .glos dt{font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-weight:600;font-size:17px;margin:20px 0 4px;color:var(--acc)}
 .glos dd{margin:0;color:var(--mut);font-size:15px;line-height:1.55}
 .glos dd a{white-space:nowrap;margin-left:4px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:10px 28px;margin:2px 0 30px;padding:15px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:14px;color:var(--mut)}
+.hero-stats span{display:inline-flex;align-items:baseline;gap:5px}
+.hero-stats b{color:var(--acc);font-size:20px;font-weight:700}
 .related{margin:34px 0 0;padding-top:18px;border-top:1px solid var(--line)}
 .related h3{font-size:12px;text-transform:uppercase;letter-spacing:1.2px;color:var(--mut);margin:0 0 10px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
 .related ul{list-style:none;padding:0;margin:0}

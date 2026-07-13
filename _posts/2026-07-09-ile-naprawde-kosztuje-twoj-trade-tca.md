@@ -58,6 +58,68 @@ Warstwa 3: timing
 
 Implementation shortfall to suma tych trzech warstw wyrażona jedną liczbą. Dlatego jest lepszą miarą niż sam spread: spread pokazuje tylko warstwę pierwszą, a płacisz wszystkie trzy.
 
+<figure>
+<svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wykres schodkowy: koszt egzekucji narasta od połowy spreadu, przez prowizję i wpływ na rynek, po poślizg, a ostatni słupek to koszt całkowity">
+  <title>Dekompozycja pełnego kosztu transakcji</title>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="60" y="26" font-size="16" font-weight="600" fill="currentColor" opacity="0.85">Dekompozycja pełnego kosztu transakcji</text>
+
+    <g stroke="currentColor" stroke-width="1" opacity="0.18">
+      <line x1="60" y1="330" x2="620" y2="330"/>
+      <line x1="60" y1="260" x2="620" y2="260"/>
+      <line x1="60" y1="190" x2="620" y2="190"/>
+      <line x1="60" y1="120" x2="620" y2="120"/>
+      <line x1="60" y1="50" x2="620" y2="50"/>
+    </g>
+
+    <g stroke="currentColor" stroke-width="1.5" opacity="0.5">
+      <line x1="60" y1="50" x2="60" y2="330"/>
+      <line x1="60" y1="330" x2="620" y2="330"/>
+    </g>
+
+    <g font-size="12" fill="currentColor" opacity="0.6" text-anchor="end">
+      <text x="52" y="334">0,0</text>
+      <text x="52" y="264">0,5</text>
+      <text x="52" y="194">1,0</text>
+      <text x="52" y="124">1,5</text>
+      <text x="52" y="54">2,0</text>
+    </g>
+
+    <text transform="translate(20 190) rotate(-90)" text-anchor="middle" font-size="12.5" fill="currentColor" opacity="0.6">koszt egzekucji (pip)</text>
+
+    <g stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.35">
+      <line x1="147" y1="274" x2="197" y2="274"/>
+      <line x1="259" y1="232" x2="309" y2="232"/>
+      <line x1="371" y1="190" x2="421" y2="190"/>
+      <line x1="483" y1="106" x2="533" y2="106"/>
+    </g>
+
+    <rect x="85"  y="274" width="62" height="56"  fill="currentColor" opacity="0.30"/>
+    <rect x="197" y="232" width="62" height="42"  fill="currentColor" opacity="0.45"/>
+    <rect x="309" y="190" width="62" height="42"  fill="currentColor" opacity="0.62"/>
+    <rect x="421" y="106" width="62" height="84"  fill="currentColor" opacity="0.80"/>
+    <rect x="533" y="106" width="62" height="224" fill="#0b66c3"/>
+
+    <g font-size="12.5" fill="currentColor" opacity="0.7" text-anchor="middle">
+      <text x="116" y="266">0,4</text>
+      <text x="228" y="224">0,3</text>
+      <text x="340" y="182">0,3</text>
+      <text x="452" y="98">0,6</text>
+    </g>
+    <text x="564" y="98" font-size="13" font-weight="600" text-anchor="middle" fill="currentColor" opacity="0.85">1,6 pip</text>
+
+    <g font-size="13" fill="currentColor" opacity="0.75" text-anchor="middle">
+      <text x="116" y="350">Połowa<tspan x="116" dy="16">spreadu</tspan></text>
+      <text x="228" y="350">Prowizja</text>
+      <text x="340" y="350">Wpływ na<tspan x="340" dy="16">rynek</tspan></text>
+      <text x="452" y="350">Poślizg</text>
+      <text x="564" y="350">Koszt<tspan x="564" dy="16">całkowity</tspan></text>
+    </g>
+  </g>
+</svg>
+<figcaption>Koszt egzekucji narasta warstwami, od połowy spreadu, przez prowizję i wpływ na rynek, aż po poślizg. Ostatni słupek to suma wszystkich warstw, czyli pełny implementation shortfall dla wejścia i wyjścia.</figcaption>
+</figure>
+
 ## Jak liczy się TCA
 
 TCA, czyli transaction cost analysis, to standardowa metoda pomiaru realnego kosztu. Sedno jest jedno: porównujesz cenę realizacji z ceną odniesienia z chwili decyzji i patrzysz, ile ci uciekło.

@@ -3,13 +3,20 @@ layout: default
 ---
 <section class="intro">
   <p>Kompendium wiedzy o rynkach liczonych, nie zgadywanych. Jak naprawdę działają narzędzia quanta: walidacja strategii, zarządzanie ryzykiem, koszty egzekucji, mikrostruktura, reżimy i zmienność, a także programowanie wskaźników i botów. Do tego bieżące analizy makro oraz rozkminy o tym, co na rynkach się powtarza. Prosto, na źródłach, bez obietnic.</p>
-  <p class="start">Od czego zacząć: <a href="{{ '/2026/07/09/dlaczego-twoj-sharpe-klamie-deflated-sharpe/' | relative_url }}">czemu Sharpe kłamie</a>, potem <a href="{{ '/2026/07/09/ile-powinienes-grac-kelly-i-sizing/' | relative_url }}">ile w ogóle grać</a>, a na koniec <a href="{{ '/2026/07/09/jak-rozpoznac-rezim-rynku/' | relative_url }}">jak rozpoznać reżim rynku</a>.</p>
+  <p class="start">Od czego zacząć: <a href="{{ '/2026/07/09/dlaczego-twoj-sharpe-klamie-deflated-sharpe/' | relative_url }}">czemu Sharpe kłamie</a>, potem <a href="{{ '/2026/07/09/ile-powinienes-grac-kelly-i-sizing/' | relative_url }}">ile w ogóle grać</a>, a na koniec <a href="{{ '/2026/07/09/jak-rozpoznac-rezim-rynku/' | relative_url }}">jak rozpoznać reżim rynku</a>. Do tego <a href="{{ '/narzedzia/' | relative_url }}">interaktywne narzędzia</a> i <a href="{{ '/slownik/' | relative_url }}">słownik pojęć</a>.</p>
 </section>
 
 {% assign edu = site.posts | where: "category", "edukacja" %}
 {% assign ana = site.posts | where: "category", "analizy" %}
 {% assign roz = site.posts | where: "category", "rozkminy" %}
 {% assign alg = site.posts | where: "category", "algo" %}
+
+<div class="hero-stats">
+  <span><b>{{ edu | size }}</b> działów edukacji</span>
+  <span><b>12</b> ścieżek nauki</span>
+  <span><b>32</b> pojęcia w słowniku</span>
+  <span><b>na źródłach</b> bez obietnic</span>
+</div>
 
 <section class="cat">
   <h2 class="cat-h"><a href="{{ '/edukacja/' | relative_url }}">Edukacja</a></h2>

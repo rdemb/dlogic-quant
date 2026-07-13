@@ -71,6 +71,60 @@ odwrócona (inwersja):  krótkie > długie    nachylenie ujemne
 
 Krzywa normalna, rosnąca, jest stanem typowym: dłuższe terminy dają wyższą rentowność, bo zawierają dodatnią premię terminową i często założenie, że gospodarka rośnie, a stopy z czasem będą wyższe. Krzywa płaska sygnalizuje niepewność co do dalszej ścieżki. Krzywa odwrócona, gdy krótkie stopy przewyższają długie, jest nietypowa i to ona przyciąga uwagę. Odwrócenie oznacza, że rynek wycenia przyszłe obniżki stóp krótkich, a takie obniżki bank centralny wykonuje zwykle wtedy, gdy gospodarka słabnie. Stąd inwersja bywa czytana jako zbiorowy zakład rynku na spowolnienie.
 
+<figure class="yield-curve-shapes">
+<svg viewBox="0 0 720 424" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Trzy kształty krzywej dochodowości na wspólnych osiach: normalna rosnąca, płaska oraz odwrócona malejąca." font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+  <text x="62" y="30" font-size="17" font-weight="600" fill="currentColor" opacity="0.85">Trzy kształty krzywej dochodowości</text>
+  <g stroke="currentColor" stroke-opacity="0.14" stroke-width="1">
+    <line x1="62" y1="110" x2="590" y2="110"/>
+    <line x1="62" y1="150" x2="590" y2="150"/>
+    <line x1="62" y1="190" x2="590" y2="190"/>
+    <line x1="62" y1="230" x2="590" y2="230"/>
+    <line x1="62" y1="270" x2="590" y2="270"/>
+    <line x1="62" y1="310" x2="590" y2="310"/>
+  </g>
+  <g stroke="currentColor" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="3 4">
+    <line x1="95" y1="72" x2="95" y2="330"/>
+    <line x1="210" y1="72" x2="210" y2="330"/>
+    <line x1="325" y1="72" x2="325" y2="330"/>
+    <line x1="440" y1="72" x2="440" y2="330"/>
+    <line x1="555" y1="72" x2="555" y2="330"/>
+  </g>
+  <g stroke="currentColor" stroke-opacity="0.55" stroke-width="1.5" fill="none">
+    <line x1="62" y1="66" x2="62" y2="330"/>
+    <line x1="62" y1="330" x2="596" y2="330"/>
+  </g>
+  <g fill="currentColor" fill-opacity="0.55">
+    <polygon points="62,60 58,70 66,70"/>
+    <polygon points="602,330 592,326 592,334"/>
+  </g>
+  <text x="326" y="372" text-anchor="middle" font-size="13" fill="currentColor" opacity="0.7">zapadalność</text>
+  <text transform="rotate(-90 22 198)" x="22" y="198" text-anchor="middle" font-size="13" fill="currentColor" opacity="0.7">rentowność</text>
+  <g fill="currentColor" opacity="0.7" font-size="12.5" text-anchor="middle">
+    <text x="95" y="349">3M</text>
+    <text x="210" y="349">2Y</text>
+    <text x="325" y="349">5Y</text>
+    <text x="440" y="349">10Y</text>
+    <text x="555" y="349">30Y</text>
+  </g>
+  <path d="M 95,198 C 152.5,198 152.5,197 210,197 C 267.5,197 267.5,196 325,196 C 382.5,196 382.5,195 440,195 C 497.5,195 497.5,194 555,194" fill="none" stroke="currentColor" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 95,250 C 152.5,250 152.5,225 210,225 C 267.5,225 267.5,200 325,200 C 382.5,200 382.5,180 440,180 C 497.5,180 497.5,165 555,165" fill="none" stroke="#1a9e6a" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M 95,140 C 152.5,140 152.5,165 210,165 C 267.5,165 267.5,190 325,190 C 382.5,190 382.5,205 440,205 C 497.5,205 497.5,215 555,215" fill="none" stroke="#e5484d" stroke-width="2.6" stroke-linecap="round"/>
+  <g>
+    <circle cx="95" cy="250" r="3.2" fill="#1a9e6a"/>
+    <circle cx="555" cy="165" r="3.2" fill="#1a9e6a"/>
+    <circle cx="95" cy="140" r="3.2" fill="#e5484d"/>
+    <circle cx="555" cy="215" r="3.2" fill="#e5484d"/>
+    <circle cx="95" cy="198" r="3.2" fill="currentColor" fill-opacity="0.6"/>
+    <circle cx="555" cy="194" r="3.2" fill="currentColor" fill-opacity="0.6"/>
+  </g>
+  <text x="566" y="169" font-size="13.5" font-weight="600" fill="#1a9e6a">normalna</text>
+  <text x="566" y="198" font-size="13.5" font-weight="600" fill="currentColor" opacity="0.6">płaska</text>
+  <text x="566" y="219" font-size="13.5" font-weight="600" fill="#e5484d">odwrócona</text>
+  <text x="62" y="402" font-size="12.5" fill="currentColor" opacity="0.6">Odwrócenie krzywej, krótkie stopy powyżej długich, historycznie wyprzedzało recesje w USA.</text>
+</svg>
+<figcaption>Trzy typowe kształty krzywej dochodowości na wspólnych osiach rentowności i zapadalności: normalna rosnąca, płaska oraz odwrócona malejąca. Odwrócenie, w którym krótkie stopy przewyższają długie, było w USA historycznym sygnałem wyprzedzającym recesje, choć z ruchomym wyprzedzeniem.</figcaption>
+</figure>
+
 ## Inwersja jako predyktor recesji
 
 To nie jest wyłącznie teoria. Estrella i Mishkin (1998) przebadali wiele zmiennych finansowych jako wyprzedzające wskaźniki recesji w USA i wykazali, że spread między rentownością obligacji 10-letniej a bonu 3-miesięcznego bije inne pojedyncze zmienne na horyzoncie od kilku kwartałów do około roku. Na tej pracy opiera się model Banku Rezerwy Federalnej w Nowym Jorku, który co miesiąc publikuje prawdopodobieństwo recesji w perspektywie dwunastu miesięcy, liczone właśnie ze spreadu 10y minus 3m.

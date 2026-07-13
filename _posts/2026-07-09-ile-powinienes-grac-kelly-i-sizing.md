@@ -69,6 +69,46 @@ Zwróć uwagę, jak ostro spada ryzyko przy schodzeniu z frakcji. Zejście z pe�
 
 Kontrargument narzuca się sam: skoro pełny Kelly ma najwyższe tempo wzrostu, to czy ułamek nie zostawia pieniędzy na stole? Zostawia, ale niewiele, a kupuje bardzo dużo spokoju. Krzywa tempa wzrostu wokół optimum jest płaska, więc zejście do połowy frakcji kosztuje niewielki ułamek wzrostu, a wyraźnie ścina ryzyko głębokiego obsunięcia. To jedna z najlepszych wymian w całym zarządzaniu ryzykiem, dlatego żelazna praktyka mówi: gra się połową Kelly'ego albo mniej.
 
+<figure>
+<svg viewBox="0 0 720 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wykres tempa wzrostu kapitału w funkcji frakcji stawki, z zaznaczonym pełnym Kelly, połową Kelly i strefą nadmiernej dźwigni po prawej">
+<title>Tempo wzrostu kapitału w funkcji frakcji Kelly'ego</title>
+<g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif">
+<rect x="558" y="40" width="122" height="360" fill="#e5484d" opacity="0.12"/>
+<g stroke="currentColor" opacity="0.16" stroke-width="1">
+<line x1="70" y1="86.7" x2="680" y2="86.7"/>
+<line x1="70" y1="153.3" x2="680" y2="153.3"/>
+<line x1="70" y1="286.7" x2="680" y2="286.7"/>
+<line x1="70" y1="353.3" x2="680" y2="353.3"/>
+</g>
+<line x1="436" y1="40" x2="436" y2="400" stroke="currentColor" opacity="0.15" stroke-width="1"/>
+<path d="M70,220 L118.8,172 L167.6,134.7 L216.4,108 L265.2,92 L314,86.7 L362.8,92 L411.6,108 L460.4,134.7 L509.2,172 L558,220 Z" fill="#0b66c3" opacity="0.09"/>
+<line x1="70" y1="220" x2="680" y2="220" stroke="currentColor" opacity="0.33" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="70" y1="40" x2="70" y2="400" stroke="currentColor" opacity="0.5" stroke-width="1.4"/>
+<line x1="70" y1="400" x2="680" y2="400" stroke="currentColor" opacity="0.5" stroke-width="1.4"/>
+<line x1="192" y1="40" x2="192" y2="400" stroke="#1a9e6a" opacity="0.85" stroke-width="1.75" stroke-dasharray="6 4"/>
+<line x1="314" y1="40" x2="314" y2="400" stroke="#1a9e6a" stroke-width="2"/>
+<path d="M70,220 L118.8,172 L167.6,134.7 L216.4,108 L265.2,92 L314,86.7 L362.8,92 L411.6,108 L460.4,134.7 L509.2,172 L558,220 L606.8,278.7 L655.6,348 L680,386.7" fill="none" stroke="#0b66c3" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="314" cy="86.7" r="4.2" fill="#1a9e6a" stroke="#0b66c3" stroke-width="1.4"/>
+<circle cx="192" cy="120" r="4" fill="#1a9e6a" stroke="#0b66c3" stroke-width="1.4"/>
+<text x="82" y="60" fill="currentColor" opacity="0.72" font-size="12">Krzywa tempa jest płaska</text>
+<text x="82" y="77" fill="currentColor" opacity="0.72" font-size="12">wokół optimum, więc</text>
+<text x="82" y="94" fill="currentColor" opacity="0.72" font-size="12">pół Kelly ≈ 75% tempa.</text>
+<text x="314" y="70" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="12.5" font-weight="600">maks. tempo wzrostu</text>
+<text x="619" y="120" text-anchor="middle" fill="#e5484d" opacity="0.9" font-size="12.5" font-weight="600">nadmierna</text>
+<text x="619" y="137" text-anchor="middle" fill="#e5484d" opacity="0.9" font-size="12.5" font-weight="600">dźwignia</text>
+<text x="619" y="155" text-anchor="middle" fill="#e5484d" opacity="0.72" font-size="11">→ ruina</text>
+<text x="62" y="224" text-anchor="end" fill="currentColor" opacity="0.6" font-size="11">0</text>
+<text x="70" y="416" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="11">0</text>
+<text x="192" y="416" text-anchor="middle" fill="#1a9e6a" opacity="0.9" font-size="12" font-weight="600">pół Kelly</text>
+<text x="314" y="416" text-anchor="middle" fill="#1a9e6a" opacity="0.9" font-size="12" font-weight="600">Kelly (f*)</text>
+<text x="558" y="416" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="11">2×f* (tempo 0)</text>
+<text x="375" y="437" text-anchor="middle" fill="currentColor" opacity="0.7" font-size="12.5">frakcja kapitału na pozycję →</text>
+<text x="22" y="220" text-anchor="middle" fill="currentColor" opacity="0.7" font-size="12.5" transform="rotate(-90 22 220)">tempo wzrostu kapitału →</text>
+</g>
+</svg>
+<figcaption>Tempo długoterminowego wzrostu kapitału w funkcji frakcji stawki. Krzywa rośnie do maksimum przy pełnym Kelly (f*), a połowa f* oddaje około trzech czwartych tempa przy znacznie niższym ryzyku obsunięcia; po prawej stronie, za progiem podwójnego Kelly, tempo schodzi poniżej zera i kapitał eroduje mimo dodatniej przewagi.</figcaption>
+</figure>
+
 ## Kelly z limitem obsunięcia: Busseti i Boyd
 
 Sam Kelly nie zna słowa „obsunięcie". Lukę tę domykają Busseti i Boyd w pracy o risk-constrained Kelly (2016). Pomysł jest prosty i praktyczny: nie maksymalizuj samego wzrostu, tylko znajdź największą frakcję, która nie przekracza zadanego ryzyka głębokiego zjazdu.

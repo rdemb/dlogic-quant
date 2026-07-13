@@ -78,6 +78,41 @@ Z tych profili trzeba zapamiętać dwie rzeczy. Po pierwsze, kupujący ma strat�
 
 Przykład ilustracyjny, liczby umowne. Call z ceną wykonania K = 100 kupiony za premię p = 3: przy cenie 105 w dniu wygaśnięcia wynik to 105 − 100 − 3 = +2. Przy cenie 99 opcja wygasa bezwartościowo i strata wynosi całe 3, mimo że do ceny wykonania zabrakło niewiele. Próg rentowności leży na K + p = 103: sam wzrost ceny nie wystarczy, ruch musi jeszcze pokryć premię.
 
+<figure>
+<svg viewBox="0 0 660 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Profil wypłaty długiej opcji CALL i długiej opcji PUT w terminie wygaśnięcia" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+<title>Profil wypłaty opcji w terminie wygaśnięcia</title>
+<g font-size="13" fill="currentColor">
+<rect x="70" y="13" width="22" height="3.5" rx="1.5" fill="#1a9e6a"/>
+<text x="99" y="21">długi CALL (prawo kupna)</text>
+<rect x="300" y="13" width="22" height="3.5" rx="1.5" fill="#e5484d"/>
+<text x="329" y="21">długi PUT (prawo sprzedaży)</text>
+</g>
+<line x1="66" y1="180" x2="636" y2="180" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+<path d="M636 180 l-9 -4.5 v9 z" fill="currentColor" opacity="0.5"/>
+<line x1="70" y1="272" x2="70" y2="44" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+<path d="M70 44 l-4.5 9 h9 z" fill="currentColor" opacity="0.5"/>
+<line x1="330" y1="58" x2="330" y2="254" stroke="currentColor" stroke-width="1.25" stroke-dasharray="5 4" opacity="0.7"/>
+<g fill="currentColor" opacity="0.75" font-size="12.5">
+<text x="60" y="184" text-anchor="end">0</text>
+<text x="60" y="245" text-anchor="end">&#8722;p</text>
+<text x="324" y="200" text-anchor="end">K</text>
+<text x="352" y="300" text-anchor="middle">cena instrumentu bazowego S  &#8594;</text>
+</g>
+<text transform="translate(26 205) rotate(-90)" text-anchor="middle" fill="currentColor" opacity="0.75" font-size="12.5">wynik pozycji</text>
+<g opacity="0.6">
+<circle cx="270" cy="180" r="3" fill="none" stroke="currentColor" stroke-width="1.25"/>
+<circle cx="390" cy="180" r="3" fill="none" stroke="currentColor" stroke-width="1.25"/>
+<text x="262" y="197" text-anchor="end" fill="currentColor" font-size="11">K&#8722;p</text>
+<text x="398" y="197" text-anchor="start" fill="currentColor" font-size="11">K+p</text>
+</g>
+<path d="M70 240 H330 L520 50" fill="none" stroke="#1a9e6a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M140 50 L330 240 H620" fill="none" stroke="#e5484d" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="120" y1="240" x2="120" y2="258" stroke="currentColor" stroke-dasharray="2 3" stroke-width="1" opacity="0.45"/>
+<text x="96" y="270" fill="currentColor" opacity="0.85" font-size="12">premia p = maksymalna strata kupującego</text>
+</svg>
+<figcaption>Profil wypłaty w terminie wygaśnięcia dla długiej pozycji CALL i długiej pozycji PUT. Zysk kupującego otwiera się po właściwej stronie ceny wykonania K, a strata jest ścięta do zapłaconej premii p niezależnie od skali niekorzystnego ruchu.</figcaption>
+</figure>
+
 ## Wartość wewnętrzna i czasowa: z czego składa się premia
 
 Cena opcji rozkłada się na dwa składniki, które warto umieć rozdzielić w pamięci za każdym razem, gdy patrzy się na kwotowanie.

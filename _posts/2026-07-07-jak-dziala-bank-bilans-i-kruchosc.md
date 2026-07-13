@@ -40,6 +40,45 @@ BILANS BANKU (schemat ilustracyjny, liczby przykladowe):
 
 Jedno sprostowanie na starcie, za Bank of England (2014, „Money creation in the modern economy"): depozyty po prawej stronie w większości nie są oszczędnościami przyniesionymi do okienka. Powstają, gdy banki udzielają kredytów, bo kredyt tworzy depozyt. Mechanika kreacji pieniądza to osobna historia; tutaj wystarczy zapamiętać, że obie strony bilansu żyją. Aktywa rodzą dochód i ryzyko, pasywa rodzą koszt i mogą odpłynąć.
 
+<figure>
+<svg viewBox="0 0 640 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="bilansTitle">
+<title id="bilansTitle">Uproszczony bilans banku: aktywa po lewej, pasywa i kapitał po prawej</title>
+<g font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<text x="320" y="28" text-anchor="middle" font-size="12" font-weight="600" letter-spacing="1.2" fill="currentColor" opacity="0.6">BILANS BANKU (SCHEMAT ILUSTRACYJNY)</text>
+<text x="160" y="74" text-anchor="middle" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">AKTYWA</text>
+<text x="480" y="74" text-anchor="middle" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">PASYWA I KAPITAŁ</text>
+<rect x="60" y="90" width="200" height="188.5" fill="currentColor" fill-opacity="0.30" stroke="currentColor" stroke-opacity="0.28"/>
+<rect x="60" y="278.5" width="200" height="58" fill="currentColor" fill-opacity="0.20" stroke="currentColor" stroke-opacity="0.28"/>
+<rect x="60" y="336.5" width="200" height="43.5" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.28"/>
+<text x="72" y="188" font-size="13" fill="currentColor" opacity="0.8">kredyty</text>
+<text x="248" y="188" text-anchor="end" font-size="13" font-weight="600" fill="currentColor" opacity="0.85">65</text>
+<text x="72" y="311" font-size="13" fill="currentColor" opacity="0.8">obligacje</text>
+<text x="248" y="311" text-anchor="end" font-size="13" font-weight="600" fill="currentColor" opacity="0.85">20</text>
+<text x="72" y="362" font-size="12.5" fill="currentColor" opacity="0.8">rezerwy i gotówka</text>
+<text x="248" y="362" text-anchor="end" font-size="13" font-weight="600" fill="currentColor" opacity="0.85">15</text>
+<rect x="380" y="90" width="200" height="203" fill="currentColor" fill-opacity="0.33" stroke="currentColor" stroke-opacity="0.28"/>
+<rect x="380" y="293" width="200" height="58" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-opacity="0.28"/>
+<rect x="380" y="351" width="200" height="29" fill="#1a9e6a" fill-opacity="0.85" stroke="#1a9e6a" stroke-opacity="0.95" stroke-width="1.3"/>
+<text x="392" y="195" font-size="13" fill="currentColor" opacity="0.82">depozyty klientów</text>
+<text x="568" y="195" text-anchor="end" font-size="13" font-weight="600" fill="currentColor" opacity="0.85">70</text>
+<text x="392" y="326" font-size="13" fill="currentColor" opacity="0.8">inne zobowiązania</text>
+<text x="568" y="326" text-anchor="end" font-size="13" font-weight="600" fill="currentColor" opacity="0.85">20</text>
+<text x="392" y="370" font-size="12" font-weight="600" fill="currentColor" opacity="0.85">kapitał własny</text>
+<text x="568" y="370" text-anchor="end" font-size="12" font-weight="700" fill="currentColor" opacity="0.85">10</text>
+<text x="320" y="240" text-anchor="middle" font-size="30" fill="currentColor" opacity="0.5">=</text>
+<text x="320" y="260" text-anchor="middle" font-size="10.5" fill="currentColor" opacity="0.5">obie strony</text>
+<text x="320" y="273" text-anchor="middle" font-size="10.5" fill="currentColor" opacity="0.5">równe</text>
+<text x="376" y="356" text-anchor="end" font-size="9.5" fill="#1a9e6a" opacity="0.95">bufor na straty</text>
+<path d="M308 366 L376 366" stroke="#1a9e6a" stroke-opacity="0.9" stroke-width="1.4" fill="none"/>
+<path d="M377 366 L370 362.5 L370 369.5 Z" fill="#1a9e6a" fill-opacity="0.95"/>
+<line x1="60" y1="404" x2="580" y2="404" stroke="currentColor" stroke-opacity="0.2"/>
+<text x="320" y="426" text-anchor="middle" font-size="11.5" fill="currentColor" opacity="0.72">Dźwignia: kapitał to około 10% bilansu, a strata 5% aktywów zjada połowę bufora.</text>
+<text x="320" y="447" text-anchor="middle" font-size="11.5" fill="currentColor" opacity="0.72">Krótkie pasywa finansują długie, niepłynne aktywa → stąd wbudowana kruchość.</text>
+</g>
+</svg>
+<figcaption>Uproszczony bilans banku: obie kolumny mają równą wysokość, depozyty dominują po stronie finansowania, a kapitał własny to tylko cienka zielona warstwa na dole, która jako pierwsza pochłania straty. Przy takiej dźwigni już kilkuprocentowa strata na aktywach zjada dużą część tego cienkiego bufora.</figcaption>
+</figure>
+
 ## Skąd bank ma zysk: marża odsetkowa i prowizje
 
 Model biznesowy banku mieści się w jednej różnicy. Aktywa są oprocentowane wyżej, bo są długie i ryzykowne: kredyt hipoteczny albo firmowy płaci więcej niż rachunek bieżący. Pasywa kosztują mniej, bo są krótkie i wygodne: depozyt na żądanie płaci mało albo nic właśnie dlatego, że możesz go wyjąć w każdej chwili. Różnica między tym, co bank dostaje z aktywów, a tym, co płaci za pasywa, to wynik odsetkowy netto, a w przeliczeniu na aktywa marża odsetkowa netto.
