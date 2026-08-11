@@ -1,0 +1,99 @@
+---
+layout: default
+---
+<article class="post">
+  <figure class="cover" aria-hidden="true">
+    <svg viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="lab-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--acc)"/></marker>
+      </defs>
+      <line class="cgrid" x1="200" y1="0" x2="200" y2="360"/>
+      <line class="cgrid" x1="400" y1="0" x2="400" y2="360"/>
+      <line class="cgrid" x1="600" y1="0" x2="600" y2="360"/>
+      <line class="cgrid" x1="800" y1="0" x2="800" y2="360"/>
+      <line class="cgrid" x1="1000" y1="0" x2="1000" y2="360"/>
+      <path class="cthread" d="M-40 314 C 220 276,470 348,720 310 S 1010 286,1240 322"/>
+      <text class="cbrand" x="56" y="72">{{ page.cover_brand | default: "D-LOGIC RESEARCH LAB" }}</text>
+      <line class="crule" x1="58" y1="92" x2="246" y2="92"/>
+      <text class="ckick" x="54" y="174">{{ page.cover_title | default: "Evidence before claims" }}</text>
+      {% if page.cover_subtitle %}<text class="cdate" x="56" y="216">{{ page.cover_subtitle }}</text>{% endif %}
+      <text class="cdate" x="56" y="266">{{ page.date | date: "%Y-%m-%d" }}</text>
+
+      {% case page.cover_kind %}
+      {% when 'lifecycle' %}
+      <g transform="translate(728 92)">
+        <rect class="ms2" x="0" y="54" width="104" height="54" rx="8"/>
+        <rect class="ms2" x="136" y="54" width="104" height="54" rx="8"/>
+        <rect class="ms2" x="272" y="54" width="116" height="54" rx="8"/>
+        <path class="ms" d="M104 81 H132" marker-end="url(#lab-arrow)"/>
+        <path class="ms2 mdash" d="M240 81 H268" marker-end="url(#lab-arrow)"/>
+        <text x="52" y="77" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="14" fill="var(--ink)">COMPILED</text>
+        <text x="188" y="77" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="14" fill="var(--ink)">LOADABLE</text>
+        <text x="330" y="77" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="13" fill="var(--ink)">CANARY</text>
+        <circle cx="122" cy="81" r="12" fill="var(--dn)"/>
+        <path d="M116 75 L128 87 M128 75 L116 87" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <text x="188" y="101" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="var(--mut)">UNKNOWN</text>
+      </g>
+      {% when 'evidence' %}
+      <g transform="translate(770 78)">
+        <rect x="22" y="22" width="310" height="58" rx="8" fill="none" stroke="var(--acc)" stroke-width="2"/>
+        <rect x="0" y="100" width="354" height="58" rx="8" fill="none" stroke="var(--mut)" stroke-width="2"/>
+        <rect x="22" y="178" width="310" height="58" rx="8" fill="none" stroke="var(--dn)" stroke-width="2"/>
+        <text x="177" y="57" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="14" fill="var(--acc)">SIGNED BYTES</text>
+        <text x="177" y="135" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="14" fill="var(--ink)">VALID SCHEMA</text>
+        <text x="177" y="213" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="14" fill="var(--dn)">IMPOSSIBLE STORY</text>
+        <path d="M350 188 l22 22 m0-22 l-22 22" stroke="var(--dn)" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      {% when 'research' %}
+      <g transform="translate(760 80)">
+        <circle class="mf" cx="30" cy="30" r="6"/><circle class="mn" cx="70" cy="54" r="6"/><circle class="mf" cx="108" cy="25" r="6"/><circle class="mn" cx="144" cy="65" r="6"/><circle class="mf" cx="184" cy="38" r="6"/>
+        <path class="ms2" d="M0 92 H214 L162 156 V218 H52 V156 Z"/>
+        <path class="ms" d="M107 156 V238" marker-end="url(#lab-arrow)"/>
+        <rect class="ms2" x="244" y="78" width="138" height="80" rx="10"/>
+        <text x="313" y="112" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="13" fill="var(--ink)">TARGET</text>
+        <text x="313" y="136" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="var(--mut)">AFTER COSTS</text>
+        <path class="ms2 mdash" d="M164 156 H238" marker-end="url(#lab-arrow)"/>
+      </g>
+      {% when 'loose' %}
+      <g transform="translate(800 70)">
+        <circle class="mf" cx="36" cy="56" r="8"/><circle class="mn" cx="148" cy="24" r="6"/><circle class="mf" cx="254" cy="78" r="7"/><circle class="mn" cx="314" cy="180" r="6"/><circle class="mf" cx="176" cy="226" r="8"/><circle class="mn" cx="62" cy="174" r="6"/>
+        <path class="ms2" d="M36 56 L148 24 L254 78 L314 180 L176 226 L62 174 Z M36 56 L176 226 M254 78 L62 174"/>
+        <circle cx="176" cy="126" r="34" fill="var(--acc)" opacity=".12"/>
+        <path class="ms" d="M160 126 h32 M176 110 v32"/>
+      </g>
+      {% else %}
+      <g transform="translate(770 92)"><polyline class="ms" points="0,174 70,126 132,148 202,72 270,106 350,34"/><circle class="mf" cx="350" cy="34" r="7"/></g>
+      {% endcase %}
+    </svg>
+  </figure>
+
+  <nav class="crumbs" aria-label="Okruszki"><a href="{{ '/' | relative_url }}">Start</a><span>›</span><a href="{{ page.section_url | default: '/chronicle/' | relative_url }}">{{ page.section_label | default: 'Chronicle' }}</a></nav>
+  <p class="eyebrow">{{ page.eyebrow | default: "D-LOGIC Research Lab" }}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="meta">{{ page.date | date: "%-d.%m.%Y" }} · ~{{ page.readingTime | default: 7 }} min</p>
+  {% if page.dek %}<p class="dek">{{ page.dek }}</p>{% endif %}
+  {{ content }}
+
+  {% assign rel = site.posts | where: "category", page.category %}
+  {% if rel.size > 1 %}
+  <nav class="related">
+    <h3>Powiązane materiały</h3>
+    <ul>
+    {% assign shown = 0 %}
+    {% for p in rel %}{% if p.url != page.url and shown < 4 %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+      {% assign shown = shown | plus: 1 %}
+    {% endif %}{% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
+
+  <div class="share">
+    <span>Udostępnij:</span>
+    <a class="sx" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url | uri_escape }}&via=takitamrafal" target="_blank" rel="noopener">X / Twitter</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener">Facebook</a>
+    <button type="button" class="copy" onclick="navigator.clipboard.writeText('{{ page.url | absolute_url }}');this.textContent='Skopiowano ✓'">Kopiuj link</button>
+  </div>
+  <p class="back"><a href="{{ page.section_url | default: '/chronicle/' | relative_url }}">← wróć do działu</a></p>
+</article>
