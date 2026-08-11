@@ -33,6 +33,9 @@ LITERAL_REPLACEMENTS = {
     "\u2192": "->",    # decorative right arrow
     "\u2190": "<-",    # decorative left arrow
     "\u2713": "",      # decorative check mark
+    "<- wróć do działu": "Wróć do działu",
+    "<- wszystkie wpisy": "Wszystkie wpisy",
+    "Skopiowano '": "Skopiowano'",
 }
 
 Replacement = str | Callable[[re.Match[str]], str]
@@ -44,6 +47,10 @@ def sentence_case_replacement(lowercase: str, uppercase: str) -> Callable[[re.Ma
     return replace
 
 
+def normalize_cover_subtitle(match: re.Match[str]) -> str:
+    return match.group(0).replace("->", "/")
+
+
 REGEX_REPLACEMENTS: tuple[tuple[re.Pattern[str], Replacement], ...] = (
     (re.compile(r"\bto nie jest\b", re.I), sentence_case_replacement("nie jest to", "Nie jest to")),
     (re.compile(r"\bto nie są\b", re.I), sentence_case_replacement("nie są to", "Nie są to")),
@@ -52,6 +59,8 @@ REGEX_REPLACEMENTS: tuple[tuple[re.Pattern[str], Replacement], ...] = (
     (re.compile(r"\bto nie było\b", re.I), sentence_case_replacement("nie było to", "Nie było to")),
     (re.compile(r"\bto prowadzi do\b", re.I), sentence_case_replacement("wynika z tego", "Wynika z tego")),
     (re.compile(r"\blecz\b", re.I), sentence_case_replacement("ale", "Ale")),
+    (re.compile(r"(?m)^cover_subtitle:\s*\".*\"$"), normalize_cover_subtitle),
+    (re.compile(r"\s*->(?=</(?:a|span)>)"), ""),
 )
 
 AUDIT_PATTERNS = {
