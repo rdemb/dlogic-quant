@@ -64,7 +64,7 @@ Po ludzku: FWER to kontroler, który woli zatrzymać stu uczciwych, byle nie prz
 
 ## Haircut dla finansów: t powyżej 3
 
-Harvey, Liu i Zhu w pracy „...and the Cross-Section of Expected Returns" (Review of Financial Studies, 2016) przyłożyli tę logikę do literatury o faktorach wyjaśniających zwroty akcji. Punkt wyjścia: przez dziesięciolecia setki badaczy przeszukiwały w dużej mierze te same dane, publikując kolejne zmienne, które rzekomo tłumaczą przekrój oczekiwanych zwrotów. Klasyczny próg t około 2, odpowiednik istotności 5%, jest ustawiony tak, jakby test był jeden. Tymczasem testów były tysiące, tylko rozproszone po latach, zespołach i czasopismach.
+Harvey, Liu i Zhu w artykule z 2016 roku opublikowanym w Review of Financial Studies przyłożyli tę logikę do literatury o faktorach wyjaśniających zwroty akcji. Punkt wyjścia: przez dziesięciolecia setki badaczy przeszukiwały w dużej mierze te same dane, publikując kolejne zmienne, które rzekomo tłumaczą przekrój oczekiwanych zwrotów. Klasyczny próg t około 2, odpowiednik istotności 5%, jest ustawiony tak, jakby test był jeden. Tymczasem testów były tysiące, tylko rozproszone po latach, zespołach i czasopismach.
 
 Wniosek pracy jest ilościowy: po uwzględnieniu skali historycznego przeszukiwania nowe „odkrycie" powinno przekraczać t równe 3, a połowa ogłoszonych w literaturze faktorów jest prawdopodobnie fałszywa. Nie jest to zarzut nieuczciwości wobec konkretnych autorów. To rachunek na poziomie systemu: przy takiej liczbie prób w obiegu taka część zwycięzców musi być szumem, nawet jeśli każdy z osobna testował starannie.
 

@@ -22,7 +22,7 @@ jobs:
 
       - name: Validate editorial style
         run: |
-          python3 -m py_compile tools/editorial_cleanup.py
+          python3 -m py_compile tools/editorial_cleanup.py tools/rendered_html_audit.py
           python3 tools/editorial_cleanup.py
 
       - name: Configure GitHub Pages
@@ -33,3 +33,6 @@ jobs:
         with:
           source: ./
           destination: ./_site
+
+      - name: Validate rendered HTML
+        run: python3 tools/rendered_html_audit.py _site

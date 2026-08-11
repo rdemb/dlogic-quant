@@ -151,7 +151,7 @@ bars["volume"] = ticks["mid"].resample("15min").count()
 bars = bars.dropna()
 ```
 
-Kilka szczegółów, które ratują przed cichym błędem. Etykieta 15min zastąpiła dawne 15T, wycofane w nowszych wersjach pandas, co odnotowuje dokumentacja pandas (metoda resample). Domyślnie okno jest zamknięte i etykietowane od lewej strony, czyli świeca nosi znacznik początku okna, a przedział obejmuje start i wyklucza koniec. Puste okna dają NaN i trzeba je usunąć, inaczej trafią do dalszych obliczeń jako fałszywe świece. Gotowym skrótem na to samo jest metoda resample(...).ohlc(), która od razu zwraca kolumny open, high, low, close, ale jawne agg pokazuje, co dzieje się pod spodem.
+Kilka szczegółów, które ratują przed cichym błędem. Etykieta 15min zastąpiła dawne 15T, wycofane w nowszych wersjach pandas, co odnotowuje dokumentacja pandas (metoda resample). Domyślnie okno jest zamknięte i etykietowane od lewej strony, czyli świeca nosi znacznik początku okna, a przedział obejmuje start i wyklucza koniec. Puste okna dają NaN i trzeba je usunąć, inaczej trafią do dalszych obliczeń jako fałszywe świece. Gotowym skrótem na to samo jest metoda `resample(...).ohlc()`, która od razu zwraca kolumny open, high, low, close, ale jawne agg pokazuje, co dzieje się pod spodem.
 
 To materiał czysto edukacyjny o strukturze danych rynkowych, nie porada inwestycyjna. Kod pokazuje, jak wygląda tick i świeca oraz jak jedno przechodzi w drugie, a nie jak zarabiać. Żaden sposób próbkowania, czasowy czy zdarzeniowy, nie tworzy przewagi sam z siebie: decyduje o statystycznych własnościach danych, na których dopiero potem liczy się wszystko inne.
 
