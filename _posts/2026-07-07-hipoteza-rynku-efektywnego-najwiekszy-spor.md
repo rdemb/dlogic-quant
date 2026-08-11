@@ -65,9 +65,9 @@ Robert Shiller zadał EMH najgłośniejszy cios empiryczny pytaniem w tytule: �
 ```
 Var(p) ≤ Var(p*)
 
-p  = cena obserwowana (prognoza rynku)
+p = cena obserwowana (prognoza rynku)
 p* = cena „ex post racjonalna": zdyskontowana suma dywidend,
-     które faktycznie wypłacono później
+ które faktycznie wypłacono później
 ```
 
 Shiller policzył p* wstecz, znając już faktycznie wypłacone dywidendy, i porównał z historycznymi cenami. Wynik: ceny akcji wahały się 5-13 razy mocniej, niż dało się uzasadnić późniejszymi zmianami dywidend. Nadmiar zmienności jest tak duży, że trudno go zepchnąć na „nową informację o przyszłych dywidendach", bo tej informacji po prostu nie było aż tyle.

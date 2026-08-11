@@ -34,14 +34,14 @@ Pierwszy filar dotyczy maksimów. Weź próbę niezależnych obserwacji o tym sa
 ```
 Uogólniony rozkład wartości ekstremalnych (GEV)
 
-G(x) = exp( −(1 + ξ·(x−μ)/σ)^(−1/ξ) )     dla ξ ≠ 0
-G(x) = exp( −exp(−(x−μ)/σ) )               dla ξ = 0
+G(x) = exp( −(1 + ξ·(x−μ)/σ)^(−1/ξ) ) dla ξ ≠ 0
+G(x) = exp( −exp(−(x−μ)/σ) ) dla ξ = 0
 
-μ = położenie,  σ = skala,  ξ = kształt (indeks ekstremalny)
+μ = położenie, σ = skala, ξ = kształt (indeks ekstremalny)
 
-ξ = 0   typ Gumbela    ogon lekki, wykładniczy (tu należy rozkład normalny)
-ξ > 0   typ Frécheta   ogon ciężki, potęgowy (przypadek rynkowy)
-ξ < 0   typ Weibulla   ogon ograniczony, skończony kraniec
+ξ = 0 typ Gumbela ogon lekki, wykładniczy (tu należy rozkład normalny)
+ξ > 0 typ Frécheta ogon ciężki, potęgowy (przypadek rynkowy)
+ξ < 0 typ Weibulla ogon ograniczony, skończony kraniec
 ```
 
 Kluczowa jest interpretacja ξ. Rozkłady o lekkim, wykładniczym ogonie, w tym rozkład normalny, wpadają do typu Gumbela z ξ równym zero. Rozkłady o ciężkim, potęgowym ogonie, a takie pasują do zwrotów rynkowych, należą do typu Frécheta z ξ dodatnim. Ujemne ξ oznacza ogon urwany na skończonej wartości. Cała różnica między rynkiem spokojnym a groźnym daje się więc zapisać znakiem oraz wielkością jednej liczby.
@@ -56,10 +56,10 @@ Twierdzenie Pickandsa, Balkemy i de Haana (POT)
 Dla progu u dostatecznie wysokiego rozkład nadwyżek Y = X − u,
 pod warunkiem X > u, dąży do uogólnionego rozkładu Pareto (GPD):
 
-H(y) = 1 − (1 + ξ·y/β)^(−1/ξ)     dla ξ ≠ 0
-H(y) = 1 − exp(−y/β)              dla ξ = 0
+H(y) = 1 − (1 + ξ·y/β)^(−1/ξ) dla ξ ≠ 0
+H(y) = 1 − exp(−y/β) dla ξ = 0
 
-β > 0 = skala,   ξ = kształt (ten sam indeks ogona co w GEV)
+β > 0 = skala, ξ = kształt (ten sam indeks ogona co w GEV)
 ```
 
 <figure>
@@ -74,13 +74,13 @@ Parametr ξ jest sercem całej konstrukcji, bo streszcza grubość ogona jedną 
 ```
 Indeks ogona: parametr kształtu ξ oraz α = 1/ξ (dla ξ > 0)
 
-ogon potęgowy:  P(X > x) ~ x^(−α) = x^(−1/ξ)   dla dużych x
+ogon potęgowy: P(X > x) ~ x^(−α) = x^(−1/ξ) dla dużych x
 
-większe ξ (mniejsze α)  ⇒  grubszy ogon
-moment rzędu p istnieje tylko gdy  p < α
+większe ξ (mniejsze α) ⇒ grubszy ogon
+moment rzędu p istnieje tylko gdy p < α
 
-α ≤ 2  (ξ ≥ 1/2)  ⇒  wariancja nieskończona
-α ≤ 4  (ξ ≥ 1/4)  ⇒  kurtoza nieskończona
+α ≤ 2 (ξ ≥ 1/2) ⇒ wariancja nieskończona
+α ≤ 4 (ξ ≥ 1/4) ⇒ kurtoza nieskończona
 ```
 
 ## VaR i Expected Shortfall z EVT, nie z Gaussa
@@ -90,15 +90,15 @@ Po co to wszystko przy stole z ryzykiem? Bo z dopasowanego ogona GPD wyprowadza 
 ```
 Szacowanie ogona metodą POT (McNeil, Frey i Embrechts, 2005)
 
-Nu = liczba przekroczeń progu u,   n = liczebność próby
+Nu = liczba przekroczeń progu u, n = liczebność próby
 
-P(X > x) ≈ (Nu/n)·(1 + ξ·(x−u)/β)^(−1/ξ)          x > u
+P(X > x) ≈ (Nu/n)·(1 + ξ·(x−u)/β)^(−1/ξ) x > u
 
 VaR_α = u + (β/ξ)·[ ((n/Nu)·(1−α))^(−ξ) − 1 ]
 
-ES_α  = VaR_α/(1−ξ) + (β − ξ·u)/(1−ξ)             dla ξ < 1
+ES_α = VaR_α/(1−ξ) + (β − ξ·u)/(1−ξ) dla ξ < 1
 
-Stąd iloraz ogona:   ES_α / VaR_α → 1/(1−ξ)   gdy α → 1
+Stąd iloraz ogona: ES_α / VaR_α → 1/(1−ξ) gdy α → 1
 o grubości ogona decyduje ξ, nie założenie normalności
 ```
 

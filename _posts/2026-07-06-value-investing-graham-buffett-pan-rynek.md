@@ -24,9 +24,9 @@ Benjamin Graham i David Dodd pisali Security Analysis (1934) na Uniwersytecie Co
 
 ```
 definicja Grahama, trzy warunki naraz:
-1. dokładna analiza          fakty i liczby, nie narracja i nadzieja
-2. bezpieczeństwo kapitału   ochrona przed trwałą stratą, nie przed wahaniami
-3. zadowalający zwrot        wystarczający, nie maksymalny możliwy
+1. dokładna analiza fakty i liczby, nie narracja i nadzieja
+2. bezpieczeństwo kapitału ochrona przed trwałą stratą, nie przed wahaniami
+3. zadowalający zwrot wystarczający, nie maksymalny możliwy
 brakuje któregokolwiek = spekulacja
 ```
 

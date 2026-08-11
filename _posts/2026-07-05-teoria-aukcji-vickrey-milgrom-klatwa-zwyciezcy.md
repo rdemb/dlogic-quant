@@ -31,9 +31,9 @@ Klasyczna czwórka wygląda tak. Aukcja angielska: cena rośnie, licytujący kol
 Na pierwszy rzut oka to cztery różne gry. Naprawdę są dwie pary bliźniaków:
 
 ```
-format otwarty                     bliźniak w zamkniętej kopercie
-holenderska (cena spada)      →    pierwsza cena
-angielska (cena rośnie)       →    druga cena (Vickreya)
+format otwarty bliźniak w zamkniętej kopercie
+holenderska (cena spada) → pierwsza cena
+angielska (cena rośnie) → druga cena (Vickreya)
 ```
 
 Holenderska i pierwsza cena to strategicznie ta sama gra: w obu wybierasz jedną liczbę, niczego nie dowiadując się po drodze o rywalach, i jeśli twoja liczba okaże się najodważniejsza, płacisz właśnie ją. Angielska i Vickreya schodzą się przy wycenach prywatnych: w aukcji angielskiej opłaca się stać przy stole dokładnie dopóty, dopóki cena nie przebije twojej wyceny, więc zwycięzca płaci poziom wyjścia drugiego w kolejności, czyli drugą najwyższą wycenę. Podział na cztery formaty ma jednak sens, bo pary rozjeżdżają się z powrotem, gdy w grę wchodzi wspólna wartość i informacja płynąca z cudzych zachowań. O tym za chwilę.

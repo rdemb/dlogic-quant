@@ -32,7 +32,7 @@ Narzędziem, które podsumowuje odległość obserwacji od tła, jest wartość 
 ```
 wartość p = P(statystyka co najmniej tak skrajna jak zaobserwowana | H0 prawdziwa)
 
-H0     = hipoteza zerowa, np. „strategia nie ma przewagi, prawdziwa średnia = 0"
+H0 = hipoteza zerowa, np. „strategia nie ma przewagi, prawdziwa średnia = 0"
 małe p → dane słabo pasują do świata bez efektu
 duże p → dane spokojnie mieszczą się w świecie bez efektu
 ```
@@ -62,8 +62,8 @@ Tę lukę wypełnia bootstrap, zaproponowany przez Efrona (1979). Pomysł jest p
 ```
 bootstrap (Efron 1979), próba x1..xn, statystyka S (np. średnia, Sharpe):
 powtórz B razy (np. B = 10 000):
-    wylosuj n obserwacji ZE ZWRACANIEM z {x1..xn}   → pseudopróba
-    policz S na pseudopróbie                          → S*_b
+ wylosuj n obserwacji ZE ZWRACANIEM z {x1..xn} → pseudopróba
+ policz S na pseudopróbie → S*_b
 rozkład {S*_1..S*_B} przybliża rozkład S
 błąd standardowy ≈ odchylenie std z {S*_b}
 przedział ufności ≈ kwantyle z {S*_b}
@@ -76,9 +76,9 @@ Siła metody to brak założeń parametrycznych: grube ogony czy skośność pr�
 Rozwiązanie: zamiast losować pojedyncze obserwacje, losować całe bloki kolejnych obserwacji. Blok zachowuje wewnętrzną strukturę zależności (autokorelację, lokalne skupisko zmienności), a losowanie bloków ze zwracaniem odtwarza serię o podobnej pamięci. To block bootstrap. Jego słabość to sztywna długość bloku oraz to, że sklejona seria nie jest ściśle stacjonarna. Politis i Romano (1994) zaproponowali stationary bootstrap: długość każdego bloku jest losowa, ciągnięta z rozkładu geometrycznego, dzięki czemu pseudoseria jest stacjonarna, a wynik mniej wrażliwy na arbitralny wybór jednej długości bloku.
 
 ```
-block bootstrap:            sklejaj losowane bloki o stałej długości L
-stationary bootstrap        długość każdego bloku losowa (rozkład geometryczny),
-(Politis i Romano 1994):    średnia długość = 1/p; pseudoseria stacjonarna
+block bootstrap: sklejaj losowane bloki o stałej długości L
+stationary bootstrap długość każdego bloku losowa (rozkład geometryczny),
+(Politis i Romano 1994): średnia długość = 1/p; pseudoseria stacjonarna
 
 dobór L (lub 1/p) rośnie z siłą autokorelacji:
 za krótki blok → gubi pamięć, za długi → mało niezależnych bloków
@@ -96,8 +96,8 @@ Szczególnie prostą i wymowną wersją jest randomizacja znaku zwrotu. Przy hip
 randomizacja znaku (H0: brak kierunkowej przewagi):
 r1..rn = zwroty strategii, obserwowany wynik = suma(r)
 powtórz B razy:
-    dla każdego t: znak = ±1 z prawd. 1/2
-    wynik*_b = suma(znak_t · r_t)
+ dla każdego t: znak = ±1 z prawd. 1/2
+ wynik*_b = suma(znak_t · r_t)
 p ≈ udział {wynik*_b ≥ obserwowany wynik}
 ```
 

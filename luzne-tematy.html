@@ -13,54 +13,54 @@ permalink: /luzne-tematy/
 <div class="lab-note"><strong>Zasada działu:</strong> swobodniejszy wybór tematów nie oznacza luźniejszego standardu dowodowego. Fakty pozostają oddzielone od interpretacji, hipotez i spekulacji.</div>
 
 <div class="lab-grid">
-  <div class="lab-card">
-    <span class="num">HISTORIA I CYWILIZACJE</span>
-    <h2>Co przetrwało w tekstach, obrazach i ruinach?</h2>
-    <p>Eseje o dawnych systemach, przełomach, upadkach, pamięci kulturowej i technologiach, których poziom łatwo dziś zaniżyć albo wyolbrzymić.</p>
-  </div>
-  <a class="lab-card" href="{{ '/odkrywanie-niewidzialnego/' | relative_url }}">
-    <span class="num">NAUKA I TECHNOLOGIA</span>
-    <h2>Odkrywanie niewidzialnego</h2>
-    <p>Grawitacja, atom, pomiar, nieoznaczoność i fizyka statystyczna. Seria sprawdzająca, gdzie dobra metafora pomaga, a gdzie zaczyna kłamać.</p>
-    <span class="go">Otwórz serię →</span>
-  </a>
-  <div class="lab-card">
-    <span class="num">GEOPOLITYKA I SYSTEMY</span>
-    <h2>Jak niewidzialne zależności sterują światem?</h2>
-    <p>Surowce, energia, pieniądz, łańcuchy dostaw, państwa i mechanizmy, które stają się widoczne dopiero podczas kryzysu.</p>
-  </div>
-  <div class="lab-card">
-    <span class="num">ZAJAWKI</span>
-    <h2>To, co mnie po prostu jara</h2>
-    <p>Książki, filmy, idee i osobiste tropy, które uruchamiają większe pytanie. Bez udawania, że każda fascynacja jest od razu odkryciem.</p>
-  </div>
+ <div class="lab-card">
+ <span class="num">HISTORIA I CYWILIZACJE</span>
+ <h2>Co przetrwało w tekstach, obrazach i ruinach?</h2>
+ <p>Eseje o dawnych systemach, przełomach, upadkach, pamięci kulturowej i technologiach, których poziom łatwo dziś zaniżyć albo wyolbrzymić.</p>
+ </div>
+ <a class="lab-card" href="{{ '/odkrywanie-niewidzialnego/' | relative_url }}">
+ <span class="num">NAUKA I TECHNOLOGIA</span>
+ <h2>Odkrywanie niewidzialnego</h2>
+ <p>Grawitacja, atom, pomiar, nieoznaczoność i fizyka statystyczna. Seria sprawdzająca, gdzie dobra metafora pomaga, a gdzie zaczyna kłamać.</p>
+ <span class="go">Otwórz serię →</span>
+ </a>
+ <div class="lab-card">
+ <span class="num">GEOPOLITYKA I SYSTEMY</span>
+ <h2>Jak niewidzialne zależności sterują światem?</h2>
+ <p>Surowce, energia, pieniądz, łańcuchy dostaw, państwa i mechanizmy, które stają się widoczne dopiero podczas kryzysu.</p>
+ </div>
+ <div class="lab-card">
+ <span class="num">ZAJAWKI</span>
+ <h2>To, co mnie po prostu jara</h2>
+ <p>Książki, filmy, idee i osobiste tropy, które uruchamiają większe pytanie. Bez udawania, że każda fascynacja jest od razu odkryciem.</p>
+ </div>
 </div>
 
 <div class="section-head">
-  <h2>Aktualna seria</h2>
-  <a href="{{ '/odkrywanie-niewidzialnego/' | relative_url }}">Zobacz całość →</a>
+ <h2>Aktualna seria</h2>
+ <a href="{{ '/odkrywanie-niewidzialnego/' | relative_url }}">Zobacz całość →</a>
 </div>
 <a class="lab-card" href="{{ '/odkrywanie-niewidzialnego/' | relative_url }}">
-  <span class="num">ODKRYWANIE NIEWIDZIALNEGO · 5 ESEJÓW</span>
-  <h2>Świat jest dziwniejszy niż jego najpopularniejsze metafory</h2>
-  <p>Czy grawitacja jest siłą? Czy atom jest pusty? Co naprawdę przedstawia obraz atomowy? Czy Heisenberg opisuje błąd pomiaru? Czy wdychasz cząsteczkę z oddechu Cezara? Pięć tekstów prowadzi od intuicji do eksperymentu, równania i granicy twierdzenia.</p>
-  <span class="go">Wejdź do serii →</span>
+ <span class="num">ODKRYWANIE NIEWIDZIALNEGO · 5 ESEJÓW</span>
+ <h2>Świat jest dziwniejszy niż jego najpopularniejsze metafory</h2>
+ <p>Czy grawitacja jest siłą? Czy atom jest pusty? Co naprawdę przedstawia obraz atomowy? Czy Heisenberg opisuje błąd pomiaru? Czy wdychasz cząsteczkę z oddechu Cezara? Pięć tekstów prowadzi od intuicji do eksperymentu, równania i granicy twierdzenia.</p>
+ <span class="go">Wejdź do serii →</span>
 </a>
 
 <div class="section-head">
-  <h2>Publikacje</h2>
-  <span></span>
+ <h2>Publikacje</h2>
+ <span></span>
 </div>
 <ul class="posts">
 {% for post in loose %}
-  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+ <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
 {% endfor %}
 {% if loose.size == 0 %}
-  <li><span class="ds">Dział jest gotowy. Pierwszy tekst pojawi się wtedy, gdy temat będzie wart pełnego researchu, a nie tylko po to, aby wypełnić nową zakładkę.</span></li>
+ <li><span class="ds">Dział jest gotowy. Pierwszy tekst pojawi się wtedy, gdy temat będzie wart pełnego researchu, a nie tylko po to, aby wypełnić nową zakładkę.</span></li>
 {% endif %}
 </ul>
 
 <section class="ip-boundary">
-  <h2>Inny temat, ten sam rygor</h2>
-  <p>W tym dziale mogą pojawić się również odważniejsze interpretacje i pytania otwarte, lecz każda publikacja powinna jasno wskazywać, gdzie kończy się źródło, gdzie zaczyna wniosek, a gdzie pozostaje jedynie spekulacja.</p>
+ <h2>Inny temat, ten sam rygor</h2>
+ <p>W tym dziale mogą pojawić się również odważniejsze interpretacje i pytania otwarte, lecz każda publikacja powinna jasno wskazywać, gdzie kończy się źródło, gdzie zaczyna wniosek, a gdzie pozostaje jedynie spekulacja.</p>
 </section>

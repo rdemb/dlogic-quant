@@ -24,9 +24,9 @@ Reinforcement learning (uczenie ze wzmocnieniem) opisuje uczenie się przez dzia
 
 ```
 Pętla RL:
-  stan  ->  agent wybiera akcję  ->  środowisko zwraca nagrodę + nowy stan
-                    ^                                              |
-                    |_______________ aktualizacja polityki _______|
+ stan -> agent wybiera akcję -> środowisko zwraca nagrodę + nowy stan
+ ^ |
+ |_______________ aktualizacja polityki _______|
 Cel: polityka maksymalizująca skumulowaną (zdyskontowaną) nagrodę.
 ```
 
@@ -99,9 +99,9 @@ Mapa jest spójna z resztą uczenia maszynowego w tradingu. RL to narzędzie ste
 
 ```
 Kiedy RL jest właściwym narzędziem:
-1. jest wierny symulator środowiska        (egzekucja: tak / kierunek: nie)
-2. koszt do minimalizacji jest mierzalny   (implementation shortfall: tak)
-3. zadanie to sterowanie, nie wróżenie     (harmonogram zlecenia: tak)
+1. jest wierny symulator środowiska (egzekucja: tak / kierunek: nie)
+2. koszt do minimalizacji jest mierzalny (implementation shortfall: tak)
+3. zadanie to sterowanie, nie wróżenie (harmonogram zlecenia: tak)
 Jeśli 1-3 nie są spełnione, RL najczęściej maskuje przeuczenie.
 ```
 

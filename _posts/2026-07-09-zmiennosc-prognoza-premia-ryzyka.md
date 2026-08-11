@@ -29,14 +29,14 @@ Zrealizowana zmienność to po prostu odchylenie standardowe zwrotów, przeliczo
 ```
 σ_zreal = odchylenie_std(r_t) · √(K)
 
-r_t = ln(P_t / P_{t−1})       # log-zwrot z okresu t
-K   = liczba okresów w roku    # np. 252 dni, 52 tygodnie, 12 miesięcy
+r_t = ln(P_t / P_{t−1}) # log-zwrot z okresu t
+K = liczba okresów w roku # np. 252 dni, 52 tygodnie, 12 miesięcy
 ```
 
 Istnieje też dokładniejszy wariant liczony z danych o wysokiej częstotliwości: realizowana wariancja to suma kwadratów zwrotów śróddziennych w obrębie jednego dnia. Im gęstsza siatka pomiaru, tym wierniej odtwarza faktyczną drogę, jaką cena przebyła danego dnia.
 
 ```
-RV = Σ r²_i    # suma kwadratów zwrotów śróddziennych w danym dniu
+RV = Σ r²_i # suma kwadratów zwrotów śróddziennych w danym dniu
 ```
 
 Cechą wspólną wszystkich tych miar jest kierunek patrzenia: wstecz. Zrealizowana zmienność nic nie zakłada o przyszłości, mówi wyłącznie, jak burzliwa była przeszłość.
@@ -46,7 +46,7 @@ Cechą wspólną wszystkich tych miar jest kierunek patrzenia: wstecz. Zrealizow
 Zmienność implikowana idzie w drugą stronę. Cena opcji zależy od kilku obserwowalnych wielkości (kurs bieżący, kurs wykonania, czas do wygaśnięcia, stopy procentowe) oraz jednej nieobserwowalnej: przyszłej zmienności. Jeżeli wszystkie pozostałe wielkości są znane, a cena opcji jest widoczna na rynku, to można odwrócić model wyceny i zapytać: jaka wartość zmienności musiałaby być prawdziwa, żeby model odtworzył tę cenę. Ta wartość to zmienność implikowana. Na rynku walutowym standardem jest model Garmana-Kohlhagena, będący wersją Blacka-Scholesa z dwiema stopami procentowymi, krajową i zagraniczną.
 
 ```
-cena_rynkowa_opcji = GK(S, K, T, r_d, r_f, σ)   # model Garmana-Kohlhagena (FX)
+cena_rynkowa_opcji = GK(S, K, T, r_d, r_f, σ) # model Garmana-Kohlhagena (FX)
 σ_impl = ta wartość σ, przy której model odtwarza rynkową cenę opcji
 ```
 
@@ -57,40 +57,40 @@ Kluczowe jest to, że zmienność implikowana jest wielkością patrzącą w prz
 Gdyby rynek wyceniał zmienność bezstronnie, implikowana byłaby średnio równa późniejszej zrealizowanej. W praktyce tak nie jest: implikowana jest przeciętnie wyższa od tego, co rynek następnie faktycznie zrealizuje. Ta systematyczna nadwyżka to premia za ryzyko zmienności (VRP).
 
 ```
-VRP = IV − RV        # w jednostkach zmienności
-VRP = IV² − RV²      # częściej liczona w jednostkach wariancji
+VRP = IV − RV # w jednostkach zmienności
+VRP = IV² − RV² # częściej liczona w jednostkach wariancji
 
-przeciętnie:  IV > RV   →   VRP > 0
+przeciętnie: IV > RV → VRP > 0
 ```
 
 Najprostsza intuicja to ubezpieczenie. Kto kupuje opcję, kupuje ochronę przed gwałtownym ruchem i jest skłonny zapłacić za nią trochę więcej, niż wynosi statystycznie uczciwa cena, tak samo jak za polisę płaci się więcej, niż wynosi oczekiwana szkoda. Kto opcję wystawia, przejmuje ryzyko rzadkiego, dużego ruchu i za to przejęcie inkasuje premię. Carr i Wu w pracy poświęconej premiom za ryzyko wariancji pokazali, jak tę premię wyodrębnić i zmierzyć za pomocą syntetycznych kontraktów na wariancję, i udokumentowali, że przeciętnie jest ona dodatnia. Dla inwestora płynie stąd prosty morał: dodatnia VRP nie jest darmowym obiadem, lecz zapłatą za bycie po stronie, która obrywa, gdy przychodzi szok. Jest to premia za przyjęcie ryzyka, nie nagroda za spryt.
 
 <figure>
 <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system,Segoe UI,Roboto,sans-serif" aria-label="Zmienność implikowana leżąca konsekwentnie powyżej zrealizowanej; obszar między liniami to premia za ryzyko zmienności VRP.">
-  <g font-size="13" fill="currentColor" fill-opacity="0.8">
-    <line x1="64" y1="22" x2="92" y2="22" stroke="#0b66c3" stroke-width="3"/>
-    <text x="98" y="26">implikowana (z opcji)</text>
-    <line x1="250" y1="22" x2="278" y2="22" stroke="currentColor" stroke-opacity="0.75" stroke-width="3"/>
-    <text x="284" y="26">zrealizowana</text>
-    <rect x="392" y="16" width="20" height="12" fill="#0b66c3" fill-opacity="0.15"/>
-    <text x="418" y="26">premia za ryzyko (VRP)</text>
-  </g>
-  <g stroke="currentColor" stroke-opacity="0.18" stroke-width="1">
-    <line x1="64" y1="100" x2="688" y2="100"/>
-    <line x1="64" y1="150" x2="688" y2="150"/>
-    <line x1="64" y1="200" x2="688" y2="200"/>
-    <line x1="64" y1="250" x2="688" y2="250"/>
-  </g>
-  <g stroke="currentColor" stroke-opacity="0.4" stroke-width="1">
-    <line x1="64" y1="60" x2="64" y2="300"/>
-    <line x1="64" y1="300" x2="688" y2="300"/>
-  </g>
-  <path d="M64,190 L121,198 L178,172 L234,150 L291,158 L348,180 L404,196 L461,180 L518,158 L574,138 L631,158 L688,174 L688,228 L631,214 L574,190 L518,210 L461,234 L404,252 L348,236 L291,212 L234,202 L178,224 L121,248 L64,240 Z" fill="#0b66c3" fill-opacity="0.15"/>
-  <polyline points="64,240 121,248 178,224 234,202 291,212 348,236 404,252 461,234 518,210 574,190 631,214 688,228" fill="none" stroke="currentColor" stroke-opacity="0.75" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-  <polyline points="64,190 121,198 178,172 234,150 291,158 348,180 404,196 461,180 518,158 574,138 631,158 688,174" fill="none" stroke="#0b66c3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-  <text x="404" y="228" text-anchor="middle" font-size="13" font-weight="600" fill="#0b66c3">VRP</text>
-  <text x="376" y="332" text-anchor="middle" font-size="12" fill="currentColor" fill-opacity="0.7">Czas →</text>
-  <text transform="translate(24,180) rotate(-90)" text-anchor="middle" font-size="12" fill="currentColor" fill-opacity="0.7">Zmienność</text>
+ <g font-size="13" fill="currentColor" fill-opacity="0.8">
+ <line x1="64" y1="22" x2="92" y2="22" stroke="#0b66c3" stroke-width="3"/>
+ <text x="98" y="26">implikowana (z opcji)</text>
+ <line x1="250" y1="22" x2="278" y2="22" stroke="currentColor" stroke-opacity="0.75" stroke-width="3"/>
+ <text x="284" y="26">zrealizowana</text>
+ <rect x="392" y="16" width="20" height="12" fill="#0b66c3" fill-opacity="0.15"/>
+ <text x="418" y="26">premia za ryzyko (VRP)</text>
+ </g>
+ <g stroke="currentColor" stroke-opacity="0.18" stroke-width="1">
+ <line x1="64" y1="100" x2="688" y2="100"/>
+ <line x1="64" y1="150" x2="688" y2="150"/>
+ <line x1="64" y1="200" x2="688" y2="200"/>
+ <line x1="64" y1="250" x2="688" y2="250"/>
+ </g>
+ <g stroke="currentColor" stroke-opacity="0.4" stroke-width="1">
+ <line x1="64" y1="60" x2="64" y2="300"/>
+ <line x1="64" y1="300" x2="688" y2="300"/>
+ </g>
+ <path d="M64,190 L121,198 L178,172 L234,150 L291,158 L348,180 L404,196 L461,180 L518,158 L574,138 L631,158 L688,174 L688,228 L631,214 L574,190 L518,210 L461,234 L404,252 L348,236 L291,212 L234,202 L178,224 L121,248 L64,240 Z" fill="#0b66c3" fill-opacity="0.15"/>
+ <polyline points="64,240 121,248 178,224 234,202 291,212 348,236 404,252 461,234 518,210 574,190 631,214 688,228" fill="none" stroke="currentColor" stroke-opacity="0.75" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+ <polyline points="64,190 121,198 178,172 234,150 291,158 348,180 404,196 461,180 518,158 574,138 631,158 688,174" fill="none" stroke="#0b66c3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+ <text x="404" y="228" text-anchor="middle" font-size="13" font-weight="600" fill="#0b66c3">VRP</text>
+ <text x="376" y="332" text-anchor="middle" font-size="12" fill="currentColor" fill-opacity="0.7">Czas →</text>
+ <text transform="translate(24,180) rotate(-90)" text-anchor="middle" font-size="12" fill="currentColor" fill-opacity="0.7">Zmienność</text>
 </svg>
 <figcaption>Zmienność implikowana, wyceniona w opcjach, leży konsekwentnie powyżej zmienności zrealizowanej. Zacieniowany obszar między liniami to premia za ryzyko zmienności (VRP), składka, którą kupujący opcję płaci za ochronę przed gwałtownym ruchem.</figcaption>
 </figure>
@@ -100,11 +100,11 @@ Najprostsza intuicja to ubezpieczenie. Kto kupuje opcję, kupuje ochronę przed 
 Zmienność ma jeszcze jedną wygodną cechę: przychodzi seriami. Dni spokojne skupiają się przy dniach spokojnych, a gwałtowne przy gwałtownych. To zjawisko nazywa się klasterowaniem zmienności i jest jedną z najtrwalszych regularności na rynkach finansowych. Formalnie ujmuje je rodzina modeli ARCH i GARCH, zapoczątkowana przez Engle'a i Bollersleva. Najprostszy użyteczny wariant, GARCH(1,1), modeluje dzisiejszą wariancję jako mieszankę trzech składników: stałej kotwicy, wczorajszego szoku i wczorajszej wariancji.
 
 ```
-σ²_t = ω + α·r²_{t−1} + β·σ²_{t−1}     # GARCH(1,1)
+σ²_t = ω + α·r²_{t−1} + β·σ²_{t−1} # GARCH(1,1)
 
-ω = kotwica (stała, poziom długookresowy),  α = siła reakcji na ostatni szok
-β = trwałość (pamięć) zmienności,   warunek stabilności:  α + β < 1
-poziom długookresowy:  σ²_∞ = ω / (1 − α − β)
+ω = kotwica (stała, poziom długookresowy), α = siła reakcji na ostatni szok
+β = trwałość (pamięć) zmienności, warunek stabilności: α + β < 1
+poziom długookresowy: σ²_∞ = ω / (1 − α − β)
 ```
 
 Czyta się to jak opis bezwładności. Duży wczorajszy ruch (wysokie r²) podbija dzisiejszą prognozę zmienności przez składnik α. Wysoka wczorajsza zmienność ciągnie się dalej przez składnik β. A ponieważ suma α i β jest mniejsza od jedności, prognoza z czasem powraca do poziomu długookresowego σ²_∞: po burzy rynek stopniowo się uspokaja, po nienaturalnym spokoju zmienność wraca do normy. Praktyczne wersje tych modeli są dostępne od ręki, na przykład w bibliotece arch autorstwa Shepparda, a Daníelsson w podręczniku o prognozowaniu ryzyka finansowego pokazuje, jak z takich prognoz budować miary ryzyka. Warto podkreślić jedno: GARCH prognozuje poziom zmienności, czyli jak bardzo rynek będzie się ruszał, a nie w którą stronę. To model amplitudy, nie kierunku.
@@ -116,8 +116,8 @@ Na dalszym horyzoncie badawczym klasyczny obraz zmienności stochastycznej dodat
 Jedna liczba zmienności implikowanej nie wystarcza, bo opcje o różnych kursach wykonania mają różne implikowane zmienności. Wykres zmienności implikowanej w funkcji kursu wykonania (albo delty) układa się zwykle w kształt uśmiechu: opcje głęboko poza pieniądzem po obu stronach mają wyższą implikowaną zmienność niż opcje przy pieniądzu. Ten uśmiech to zapis tego, że rynek wycenia grubsze ogony, niż przewiduje rozkład normalny. Na rynku walutowym uśmiech opisuje się nie punkt po punkcie, lecz trzema liczbami na daną deltę: zmiennością ATM (przy pieniądzu), risk reversal i butterfly.
 
 ```
-RR25 = σ_impl(25Δ call) − σ_impl(25Δ put)                    # skos: asymetria
-BF25 = [σ_impl(25Δ call) + σ_impl(25Δ put)] / 2 − σ_impl(ATM)  # wypukłość: ogony
+RR25 = σ_impl(25Δ call) − σ_impl(25Δ put) # skos: asymetria
+BF25 = [σ_impl(25Δ call) + σ_impl(25Δ put)] / 2 − σ_impl(ATM) # wypukłość: ogony
 ```
 
 Risk reversal mierzy przechył uśmiechu, czyli asymetrię. Jest to różnica implikowanych zmienności między symetryczną opcją call a put (na przykład o delcie 25). Znak tej różnicy mówi, po której stronie rynek płaci drożej za ochronę. Dodatni risk reversal na EURUSD oznacza, że opcje zarabiające na wzroście euro są względnie droższe, czyli rynek bardziej płaci za scenariusz umocnienia euro. Ujemny risk reversal oznacza sytuację odwrotną: droższe są opcje chroniące przed spadkiem euro, więc rynek bardziej boi się osłabienia euro (co często zbiega się z ucieczką do dolara jako waluty bezpiecznej przystani). Butterfly z kolei mierzy wypukłość uśmiechu, czyli jak mocno oba skrzydła są uniesione ponad poziom ATM. Wyższy butterfly to grubsze ogony wyceniane po obu stronach, czyli większa premia za scenariusze skrajne niezależnie od kierunku. Reiswich i Wystup w pracy o konstrukcji uśmiechu zmienności na FX pokazują dokładnie, jak z tych trzech kwotowań (ATM, risk reversal, butterfly) odtworzyć całą krzywą implikowanej zmienności dla danego terminu.

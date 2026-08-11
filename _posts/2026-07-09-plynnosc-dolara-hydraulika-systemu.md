@@ -43,8 +43,8 @@ przybliżenie płynności netto:
 płynność netto ≈ WALCL − TGA − RRP
 
 WALCL = suma aktywów Fedu (raport H.4.1, poziom środowy)
-TGA   = konto rządu USA w Fed (Treasury General Account)
-RRP   = overnight reverse repo, gotówka zaparkowana w Fed
+TGA = konto rządu USA w Fed (Treasury General Account)
+RRP = overnight reverse repo, gotówka zaparkowana w Fed
 ```
 
 Uczciwie: to przybliżenie, nie tożsamość. Formuła pomija gotówkę w obiegu i kapitał, więc nie daje dokładnego poziomu rezerw. Ale jej zmiany dobrze śledzą zmiany rezerw, bo pominięte pozycje poruszają się ślamazarnie. Kierunek czyta się prosto. WALCL w górę to płynność w górę (QE), WALCL w dół to płynność w dół (QT). TGA w górę drenuje rezerwy, TGA w dół je dolewa. RRP w górę drenuje, RRP w dół dolewa. Wypadkowa tych trzech to przypływ, na którym unosi się cała reszta.

@@ -25,20 +25,20 @@ Przez większość sesji nowoczesna giełda działa w trybie notowań ciągłych
 Aukcja jednej ceny (po angielsku call auction) działa inaczej, a klasyczny opis obu trybów i ich własności daje Harris (2003). Najpierw przez ustalony czas system zbiera zlecenia kupna i sprzedaży, ale żadnej transakcji nie zawiera. Potem wyznacza jeden kurs rozliczenia: taki, przy którym skojarzyć można największy wolumen. Wszystkie transakcje aukcji wykonują się po tym jednym kursie, więc kupujący z limitem powyżej niego i sprzedający z limitem poniżej niego dostają cenę lepszą, niż żądali. Na warszawskiej GPW ten mechanizm nosi zresztą swojską nazwę: fazy fixingu otwarcia i zamknięcia.
 
 ```
-AUKCJA JEDNEJ CENY   (przykład ilustracyjny, nie dane rzeczywiste)
+AUKCJA JEDNEJ CENY (przykład ilustracyjny, nie dane rzeczywiste)
 
-zlecenia kupna               zlecenia sprzedaży
-limit     wolumen            limit     wolumen
-10.04     2 000              9.96      1 000
-10.02     3 000              9.98      2 000
-10.00     4 000              10.00     5 000
-9.98      3 000              10.02     4 000
+zlecenia kupna zlecenia sprzedaży
+limit wolumen limit wolumen
+10.04 2 000 9.96 1 000
+10.02 3 000 9.98 2 000
+10.00 4 000 10.00 5 000
+9.98 3 000 10.02 4 000
 
 szukanie ceny rozliczenia:
-cena     popyt (limity >= ceny)   podaż (limity <= ceny)   obrót = minimum
-9.98     12 000                    3 000                    3 000
-10.00     9 000                    8 000                    8 000   <-- maksimum
-10.02     5 000                   12 000                    5 000
+cena popyt (limity >= ceny) podaż (limity <= ceny) obrót = minimum
+9.98 12 000 3 000 3 000
+10.00 9 000 8 000 8 000 <-- maksimum
+10.02 5 000 12 000 5 000
 
 cena aukcji = 10.00
 wszystkie transakcje wykonują się po 10.00, skojarzony wolumen 8 000

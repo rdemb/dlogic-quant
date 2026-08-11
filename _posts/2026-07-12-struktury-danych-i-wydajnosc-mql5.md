@@ -25,18 +25,18 @@ W ekspercie zdarzenie `OnTick` wywoływane jest przy każdym przychodzącym tick
 Stąd pierwszy podział, który organizuje cały temat: co musi dziać się przy każdym ticku, a co wystarczy policzyć raz na domknięty bar. Wartość wskaźnika dla bieżącej, jeszcze niedomkniętej świecy faktycznie zmienia się z każdym tickiem. Ale historia barów już zamkniętych się nie zmienia, więc przeliczanie jej w kółko to czysta strata. Wykrycie nowego bara jest tanie: wystarczy zapamiętać czas otwarcia bara zerowego i porównać go przy kolejnym wywołaniu.
 
 ```
-datetime g_last_bar_time = 0;   // czas otwarcia ostatnio obsluzonego bara
+datetime g_last_bar_time = 0; // czas otwarcia ostatnio obsluzonego bara
 
 bool NowyBar()
-  {
-   datetime t = iTime(_Symbol, _Period, 0);  // czas otwarcia biezacego bara
-   if(t != g_last_bar_time)                   // pojawil sie nowy bar
-     {
-      g_last_bar_time = t;
-      return(true);
-     }
-   return(false);                             // wciaz ten sam bar
-  }
+ {
+ datetime t = iTime(_Symbol, _Period, 0); // czas otwarcia biezacego bara
+ if(t != g_last_bar_time) // pojawil sie nowy bar
+ {
+ g_last_bar_time = t;
+ return(true);
+ }
+ return(false); // wciaz ten sam bar
+ }
 ```
 
 ## Tablice jako serie i pułapka indeksowania
@@ -45,12 +45,12 @@ Dynamiczna tablica w MQL5 domyślnie indeksowana jest jak zwykła tablica progra
 
 ```
 // Domyslnie (tablica dynamiczna, nie-seria):
-//   arr[0]     →  element najstarszy
-//   arr[N-1]   →  element najnowszy
+// arr[0] → element najstarszy
+// arr[N-1] → element najnowszy
 
 // Po ArraySetAsSeries(arr, true):
-//   arr[0]     →  najnowszy bar
-//   arr[N-1]   →  najstarszy bar
+// arr[0] → najnowszy bar
+// arr[N-1] → najstarszy bar
 ```
 
 Pułapka jest zawsze ta sama i bierze się z pomieszania obu konwencji w jednym kodzie. Pętla napisana od najstarszego bara ku najnowszemu zakłada indeksację zwykłą. Jeśli tablica jest w trybie serii, odwołanie do poprzedniego bara to indeks o jeden wyższy, nie niższy. Wartość policzona przy złym założeniu wychodzi odbita w czasie, a w najgorszym wariancie sięga po bar jeszcze nieistniejący, co jest look-ahead. Zasada praktyczna: ustawić kierunek świadomie, jawnym `ArraySetAsSeries` dla każdej tablicy roboczej, i dopasować do niego pętlę.
@@ -81,81 +81,81 @@ Zostaje pytanie, jaka struktura danych realizuje sumę kroczącą w praktyce, sk
 
 ```
 //+------------------------------------------------------------------+
-//|   Bufor cykliczny z suma kroczaca (okno N barow).                |
-//|   Aktualizacja O(1): jeden zapis, jeden dodaj, jeden odejmij.    |
-//|   Szkielet dydaktyczny, nie sygnal transakcyjny.                 |
+//| Bufor cykliczny z suma kroczaca (okno N barow). |
+//| Aktualizacja O(1): jeden zapis, jeden dodaj, jeden odejmij. |
+//| Szkielet dydaktyczny, nie sygnal transakcyjny. |
 //+------------------------------------------------------------------+
 class CRingSum
-  {
+ {
 private:
-   double  m_buf[];      // tablica robocza o stalym rozmiarze N
-   int     m_size;       // dlugosc okna N
-   int     m_head;       // indeks zapisu (biegnie po module N)
-   int     m_count;      // ile realnych probek juz weszlo (do N)
-   double  m_sum;        // biezaca suma elementow w oknie
+ double m_buf[]; // tablica robocza o stalym rozmiarze N
+ int m_size; // dlugosc okna N
+ int m_head; // indeks zapisu (biegnie po module N)
+ int m_count; // ile realnych probek juz weszlo (do N)
+ double m_sum; // biezaca suma elementow w oknie
 
 public:
-   //--- Inicjalizacja: alokacja RAZ, poza jakakolwiek petla po barach
-   void Init(const int n)
-     {
-      m_size  = (n < 1 ? 1 : n);
-      ArrayResize(m_buf, m_size);      // jedna alokacja na caly czas zycia
-      ArrayInitialize(m_buf, 0.0);
-      m_head  = 0;
-      m_count = 0;
-      m_sum   = 0.0;
-     }
+ //--- Inicjalizacja: alokacja RAZ, poza jakakolwiek petla po barach
+ void Init(const int n)
+ {
+ m_size = (n < 1 ? 1 : n);
+ ArrayResize(m_buf, m_size); // jedna alokacja na caly czas zycia
+ ArrayInitialize(m_buf, 0.0);
+ m_head = 0;
+ m_count = 0;
+ m_sum = 0.0;
+ }
 
-   //--- Dodanie nowej probki (np. ceny domknietego bara). Koszt O(1).
-   void Push(const double value)
-     {
-      m_sum -= m_buf[m_head];          // odejmij element, ktory wypada z okna
-      m_buf[m_head] = value;           // nadpisz najstarsza pozycje nowa wartoscia
-      m_sum += value;                  // dodaj wchodzacy element do sumy
-      m_head = (m_head + 1) % m_size;  // przesun indeks po module N
-      if(m_count < m_size)
-         m_count++;                    // okno napelnia sie tylko na starcie
-     }
+ //--- Dodanie nowej probki (np. ceny domknietego bara). Koszt O(1).
+ void Push(const double value)
+ {
+ m_sum -= m_buf[m_head]; // odejmij element, ktory wypada z okna
+ m_buf[m_head] = value; // nadpisz najstarsza pozycje nowa wartoscia
+ m_sum += value; // dodaj wchodzacy element do sumy
+ m_head = (m_head + 1) % m_size; // przesun indeks po module N
+ if(m_count < m_size)
+ m_count++; // okno napelnia sie tylko na starcie
+ }
 
-   //--- Czy okno jest juz pelne (N probek)
-   bool IsFull() const { return(m_count >= m_size); }
+ //--- Czy okno jest juz pelne (N probek)
+ bool IsFull() const { return(m_count >= m_size); }
 
-   //--- Srednia z okna. Wazna dopiero, gdy IsFull() zwraca true.
-   double Mean() const
-     {
-      if(m_count == 0)
-         return(0.0);
-      return(m_sum / m_count);
-     }
-  };
+ //--- Srednia z okna. Wazna dopiero, gdy IsFull() zwraca true.
+ double Mean() const
+ {
+ if(m_count == 0)
+ return(0.0);
+ return(m_sum / m_count);
+ }
+ };
 ```
 
 Użycie łączy wszystkie wątki tekstu w jeden wzorzec. Obiekt tworzony jest raz, alokacja pamięci następuje w `Init`, poza pętlą po barach. Metoda `Push` wykonuje się tylko wtedy, gdy domknie się nowy bar, więc ciężka praca nie powtarza się przy każdym ticku. Sama aktualizacja ma koszt stały, bo nie zależy od długości okna.
 
 ```
-CRingSum g_sma;   // obiekt globalny, tworzony raz
+CRingSum g_sma; // obiekt globalny, tworzony raz
 
 int OnInit()
-  {
-   g_sma.Init(20);          // jedna alokacja okna na 20 barow
-   g_last_bar_time = 0;
-   return(INIT_SUCCEEDED);
-  }
+ {
+ g_sma.Init(20); // jedna alokacja okna na 20 barow
+ g_last_bar_time = 0;
+ return(INIT_SUCCEEDED);
+ }
 
 void OnTick()
-  {
-   if(!NowyBar())           // pracuj tylko na nowo domknietym barze
-      return;               // ten sam bar: nic nie licz
+ {
+ if(!NowyBar()) // pracuj tylko na nowo domknietym barze
+ return; // ten sam bar: nic nie licz
 
-   double c = iClose(_Symbol, _Period, 1);  // zamkniecie ostatniego DOMKNIETEGO bara
-   g_sma.Push(c);           // aktualizacja O(1), bez realokacji
+ double c = iClose(_Symbol, _Period, 1); // zamkniecie ostatniego DOMKNIETEGO bara
+ g_sma.Push(c); // aktualizacja O(1), bez realokacji
 
-   if(g_sma.IsFull())
-     {
-      double srednia = g_sma.Mean();
-      // srednia gotowa do dalszej analizy (bez decyzji handlowej)
-     }
-  }
+ if(g_sma.IsFull())
+ {
+ double srednia = g_sma.Mean();
+ // srednia gotowa do dalszej analizy (bez decyzji handlowej)
+ }
+ }
 ```
 
 Bar o numerze 1 jest ostatnim barem zamkniętym, bo bar 0 dopiero się tworzy. Praca na barze 1 gwarantuje, że do sumy trafia wartość ostateczna, a nie chwilowa cena niedomkniętej świecy.
@@ -167,13 +167,13 @@ Dane spoza własnych obliczeń pobiera się w MQL5 funkcjami rodziny Copy. `Copy
 Rozsądek sprowadza się do trzech nawyków. Po pierwsze, kopiować tylko tyle, ile trzeba: parametry `start_pos` i `count` pozwalają pobrać kilka ostatnich barów zamiast całej historii. Po drugie, sprawdzać wartość zwracaną, bo dane mogą być jeszcze niegotowe, a wynik minus jeden oznacza nieudane kopiowanie. Po trzecie, ustawić kierunek tablicy odbiorczej świadomie: wywołanie `ArraySetAsSeries` na tablicy wynikowej sprawia, że indeks `0` odpowiada najnowszemu barowi, co ułatwia spójne indeksowanie w reszcie kodu.
 
 ```
-double buf[];                        // tablica odbiorcza
-ArraySetAsSeries(buf, true);         // indeks 0 = najnowszy bar
+double buf[]; // tablica odbiorcza
+ArraySetAsSeries(buf, true); // indeks 0 = najnowszy bar
 
 // handle: uchwyt wskaznika pobrany raz w OnInit (np. przez iMA)
-int skopiowane = CopyBuffer(handle, 0, 0, 3, buf);  // tylko 3 ostatnie bary
-if(skopiowane <= 0)                  // -1 blad, 0 brak danych
-   return;                           // dane niegotowe: nic nie licz
+int skopiowane = CopyBuffer(handle, 0, 0, 3, buf); // tylko 3 ostatnie bary
+if(skopiowane <= 0) // -1 blad, 0 brak danych
+ return; // dane niegotowe: nic nie licz
 // buf[0] to najnowsza wartosc bufora wskaznika o uchwycie handle
 ```
 

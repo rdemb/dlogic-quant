@@ -25,28 +25,28 @@ Autorem jest L&L Capital. To system trendowy oparty na zmienności, a nie na sam
 **Linia trendu** to wykładnicza średnia z 13 świec. EMA różni się od zwykłej średniej tym, że świeższym świecom nadaje większą wagę.
 
 ```
-EMA(t) = α · cena(t) + (1 − α) · EMA(t−1),   α = 2 / (n + 1)
-dla n = 13:  α ≈ 0,143
+EMA(t) = α · cena(t) + (1 − α) · EMA(t−1), α = 2 / (n + 1)
+dla n = 13: α ≈ 0,143
 ```
 
 **Stop line to serce systemu.** To nie zwykła średnia, tylko linia odsunięta od trendu o porcję zmienności. Najpierw liczymy zasięg świecy, czyli True Range, potem wygładzamy go krótką EMA i skalujemy trybem.
 
 ```
-TR = max( high − low,  |high − close(t−1)|,  |low − close(t−1)| )
+TR = max( high − low, |high − close(t−1)|, |low − close(t−1)| )
 ATR_L&L = (Tryb / 100) · EMA(TR, 8)
-Tryb:  Tight 60 · Normal 80 · Loose 100 · FOMC 120 · Net 140
+Tryb: Tight 60 · Normal 80 · Loose 100 · FOMC 120 · Net 140
 ```
 
 Teraz definicja reżimu. Oznaczmy stan jako T.
 
 ```
-close > Trend + ATR_L&L   →   T = +1   (reżim długi)
-close < Trend − ATR_L&L   →   T = −1   (reżim krótki)
-w innym wypadku           →   T = T(t−1)   (bez zmiany)
+close > Trend + ATR_L&L → T = +1 (reżim długi)
+close < Trend − ATR_L&L → T = −1 (reżim krótki)
+w innym wypadku → T = T(t−1) (bez zmiany)
 
 linia rysowana po przeciwnej stronie ceny:
-stop = Trend − ATR_L&L   gdy T = +1
-stop = Trend + ATR_L&L   gdy T = −1
+stop = Trend − ATR_L&L gdy T = +1
+stop = Trend + ATR_L&L gdy T = −1
 ```
 
 Zwróć uwagę na trzeci warunek. Reżim nie zmienia się przy każdym drgnięciu, cena musi przebić pasmo z zapasem. To celowe. W spokoju linia siedzi blisko ceny, w rozchwianiu odsuwa się, żeby nie wyrzucało Cię przy szumie. To jest ta oddychająca dyscyplina wyjścia.
@@ -54,9 +54,9 @@ Zwróć uwagę na trzeci warunek. Reżim nie zmienia się przy każdym drgnięci
 **Kolor trendu** L&L bierze z ułożenia czterech średnich ważonych wolumenem, czyli VWMA.
 
 ```
-VWMA(n) = Σ(cena · wolumen) / Σ(wolumen),  po ostatnich n świecach
-ułożenie bycze:     VWMA8 > VWMA13 > VWMA21 > VWMA34
-ułożenie niedźwiedzie:  odwrotna kolejność
+VWMA(n) = Σ(cena · wolumen) / Σ(wolumen), po ostatnich n świecach
+ułożenie bycze: VWMA8 > VWMA13 > VWMA21 > VWMA34
+ułożenie niedźwiedzie: odwrotna kolejność
 ```
 
 **Siła trendu** to klasyka Wildera, DMI i ADX. Odpowiada na pytanie, czy w ogóle jest trend, niezależnie od kierunku.
@@ -64,8 +64,8 @@ ułożenie niedźwiedzie:  odwrotna kolejność
 ```
 +DI = 100 · RMA(+DM, 14) / RMA(TR, 14)
 −DI = 100 · RMA(−DM, 14) / RMA(TR, 14)
-DX  = 100 · |+DI − −DI| / (+DI + −DI)
-ADX = RMA(DX, 14)              RMA = wygładzanie Wildera, α = 1/n
+DX = 100 · |+DI − −DI| / (+DI + −DI)
+ADX = RMA(DX, 14) RMA = wygładzanie Wildera, α = 1/n
 ```
 
 Reguła jest prosta. Gdy ADX przekracza 20, jest trend, a jego kierunek wyznacza to, czy +DI jest nad −DI. Poniżej 20 rynek dryfuje. L&L koloruje tym świece: zielone w byczym trendzie z siłą, czerwone w niedźwiedzim, neutralne w dryfie.
@@ -79,7 +79,7 @@ Autorem jest Kivanc Ozbilgic. Nazwa to Quantitative Qualitative Estimation. To o
 **Baza to RSI** liczony na 14 świecach.
 
 ```
-RSI = 100 − 100 / (1 + RS),   RS = RMA(przyrosty) / RMA(spadki)
+RSI = 100 − 100 / (1 + RS), RS = RMA(przyrosty) / RMA(spadki)
 ```
 
 **Pierwsze wygładzenie.** Goły RSI drga, więc QQE nakłada na niego krótką EMA i tworzy linię szybką.
@@ -92,8 +92,8 @@ QQEF = EMA(RSI, 5)
 
 ```
 TR_rsi = |QQEF(t) − QQEF(t−1)|
-WWMA   = α · TR_rsi + (1 − α) · WWMA(t−1)
-ATRRSI = α · WWMA   + (1 − α) · ATRRSI(t−1)      α = 1/14
+WWMA = α · TR_rsi + (1 − α) · WWMA(t−1)
+ATRRSI = α · WWMA + (1 − α) · ATRRSI(t−1) α = 1/14
 ```
 
 **Pasma i linia wolna.** Wokół linii szybkiej budujemy kanał, mnożąc zmienność RSI przez stałą Fibonacciego 4,236. Linia wolna QQES to trailing, który działa dokładnie jak SuperTrend, tylko przeniesiony na RSI.
@@ -102,11 +102,11 @@ ATRRSI = α · WWMA   + (1 − α) · ATRRSI(t−1)      α = 1/14
 QUP = QQEF + 4,236 · ATRRSI
 QDN = QQEF − 4,236 · ATRRSI
 
-QQES = QUP,  gdy QUP < QQES(t−1)
-QQES = QDN,  gdy QQEF przebija QQES od dołu
-QQES = QDN,  gdy QDN > QQES(t−1)
-QQES = QUP,  gdy QQEF przebija QQES od góry
-QQES = QQES(t−1)  w innym wypadku
+QQES = QUP, gdy QUP < QQES(t−1)
+QQES = QDN, gdy QQEF przebija QQES od dołu
+QQES = QDN, gdy QDN > QQES(t−1)
+QQES = QUP, gdy QQEF przebija QQES od góry
+QQES = QQES(t−1) w innym wypadku
 ```
 
 **Sygnał** pada, gdy linia szybka przecina wolną. W górę to impuls kupujących, w dół sprzedających. Poziom 50 pełni rolę osi, bo to środek skali RSI. Mnożnik 4,236 nie jest przypadkowy, to rozszerzenie Fibonacciego, które ustawia szerokość kanału tak, żeby reagował na realne zmiany momentum, a nie na drobne falowanie.
@@ -120,8 +120,8 @@ Oba wskaźniki mówią o czym innym i to jest powód. QQE odpowiada na pytanie K
 Reguła składania jest jednozdaniowa. Impuls QQE bierzemy pod uwagę tylko wtedy, gdy zgadza się z reżimem L&L.
 
 ```
-wejście długie:   QQEF przecina QQES w górę   ORAZ   T = +1
-wejście krótkie:  QQEF przecina QQES w dół     ORAZ   T = −1
+wejście długie: QQEF przecina QQES w górę ORAZ T = +1
+wejście krótkie: QQEF przecina QQES w dół ORAZ T = −1
 reżimy sprzeczne: brak akcji
 ```
 

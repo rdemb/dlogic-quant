@@ -27,13 +27,13 @@ Z tej perspektywy pytanie "czy algotrading działa" jest źle postawione, bo alg
 ## Sześć klas, sześć źródeł zarobku
 
 ```
-klasa                   źródło zarobku                             główne ryzyko
-market making           spread za dostarczanie natychmiastowości   zapas + adverse selection
-arbitraż czysty         ta sama rzecz w dwóch cenach               wyścig latencji, ryzyko jednej nogi
-arbitraż statystyczny   powrót spreadu koszyka do średniej         relacja się psuje, spread ucieka dalej
-trend / momentum        kontynuacja rozpoczętego ruchu             piła w rynku bocznym
-mean reversion          powrót ceny po przereagowaniu              rzadkie, ale głębokie straty
-egzekucja (TWAP/VWAP)   brak; obniża koszt realizacji              mierzona do benchmarku, nie zyskiem
+klasa źródło zarobku główne ryzyko
+market making spread za dostarczanie natychmiastowości zapas + adverse selection
+arbitraż czysty ta sama rzecz w dwóch cenach wyścig latencji, ryzyko jednej nogi
+arbitraż statystyczny powrót spreadu koszyka do średniej relacja się psuje, spread ucieka dalej
+trend / momentum kontynuacja rozpoczętego ruchu piła w rynku bocznym
+mean reversion powrót ceny po przereagowaniu rzadkie, ale głębokie straty
+egzekucja (TWAP/VWAP) brak; obniża koszt realizacji mierzona do benchmarku, nie zyskiem
 ```
 
 Market making to sprzedawanie natychmiastowości. Animator wystawia jednocześnie ofertę kupna i sprzedaży i liczy, że przepływ zleceń będzie się przewalał przez jego kwotowania w obie strony, a on z każdej pary transakcji zbierze spread. To wynagrodzenie za usługę: kto chce zawrzeć transakcję natychmiast, płaci temu, kto czekał z gotową ofertą. Menkveld w przeglądzie ekonomii HFT w Annual Review of Financial Economics opisuje współczesnych animatorów jako firmy obracające ogromnym wolumenem przy marżach na pojedynczej transakcji tak cienkich, że o wyniku decydują dwa ryzyka. Pierwsze to ryzyko zapasu: gdy rynek jedzie w jedną stronę, animator kupuje od wszystkich, którzy sprzedają, i zostaje z rosnącą pozycją przeciwko ruchowi, dlatego zawodowcy trzymają zapas blisko zera i kończą dzień praktycznie na płasko. Drugie, groźniejsze, to adverse selection: ten, kto trafia w twoje kwotowanie, może wiedzieć więcej od ciebie. Spread zbiera się od niedoinformowanych, a oddaje poinformowanym, i cała ekonomia animowania sprowadza się do tego, żeby pierwszych było więcej niż drugich.
@@ -61,11 +61,11 @@ Najciekawszy jest mechanizm, który zmusza do udziału nawet niechętnych. Kwoto
 W wyobraźni początkującego system transakcyjny to sygnał, czyli sekretna formuła mówiąca, kiedy kupić. W praktyce sygnał jest jednym z pięciu klocków i rzadko tym, który pochłania najwięcej pracy.
 
 ```
-DANE         zdobycie, czyszczenie, strefy czasowe, korekty o splity i dywidendy, łatanie luk
-SYGNAŁ       reguła zamieniająca dane w decyzję: kupić, sprzedać, nic nie robić
-SIZING       ile na tę decyzję postawić: ryzyko na transakcję, limity ekspozycji, korelacje pozycji
-EGZEKUCJA    jak zamienić decyzję na wypełnione zlecenia, nie oddając przewagi w koszty
-MONITORING   czy system na żywo robi to samo, co w teście, i kiedy go zatrzymać
+DANE zdobycie, czyszczenie, strefy czasowe, korekty o splity i dywidendy, łatanie luk
+SYGNAŁ reguła zamieniająca dane w decyzję: kupić, sprzedać, nic nie robić
+SIZING ile na tę decyzję postawić: ryzyko na transakcję, limity ekspozycji, korelacje pozycji
+EGZEKUCJA jak zamienić decyzję na wypełnione zlecenia, nie oddając przewagi w koszty
+MONITORING czy system na żywo robi to samo, co w teście, i kiedy go zatrzymać
 ```
 
 Narang rozkłada część decyzyjną jeszcze drobniej: obok modelu alfa, który prognozuje, skąd ma przyjść zysk, stoi model ryzyka, który mówi, czego nie wolno, oraz model kosztów transakcyjnych, który wycenia każdą zmianę pozycji. Dopiero złożenie tych trzech w konstrukcję portfela decyduje, co i ile kupić, a osobny moduł egzekucji zamienia to na zlecenia. Ta rozbiórka ma praktyczny morał: model ryzyka i model kosztów nie dodają ani grosza zysku, a bez nich system nie przeżywa, bo alfa bywa cienka i niepewna, natomiast koszty i wpadki są pewne.

@@ -23,9 +23,9 @@ category: edukacja
 Value at Risk odpowiada na proste pytanie: jaka jest strata, której z zadanym prawdopodobieństwem nie przekroczysz w ustalonym oknie czasu. Formalnie to kwantyl rozkładu straty na wybranym poziomie ufności.
 
 ```
-VaR_α = najmniejsza strata L, dla której  P(strata ≤ L) ≥ α
+VaR_α = najmniejsza strata L, dla której P(strata ≤ L) ≥ α
 
-α        = poziom ufności (np. 0.99 albo 0.975)
+α = poziom ufności (np. 0.99 albo 0.975)
 horyzont = ustalone okno (1 dzień, 10 dni)
 
 Czyta się tak: z prawdopodobieństwem α strata w tym oknie nie przekroczy VaR_α,
@@ -49,11 +49,11 @@ Druga wada jest głębsza i mniej oczywista. Dobra miara ryzyka powinna nagradza
 Klasyczny kontrprzykład to dwie niezależne obligacje, każda z małym prawdopodobieństwem bankructwa. Weź poziom ufności tak dobrany, że pojedyncze bankructwo jest rzadsze niż próg ogona. Wtedy VaR każdej obligacji z osobna potrafi wynosić zero, bo scenariusz bankructwa nie mieści się w mierzonym ogonie. Ale portfel dwóch obligacji ma już zauważalną szansę, że zbankrutuje przynajmniej jedna, i ten scenariusz wchodzi do ogona. W efekcie VaR portfela jest dodatni, czyli większy niż suma dwóch zer.
 
 ```
-Subaddytywność wymaga:   VaR(A + B) ≤ VaR(A) + VaR(B)
+Subaddytywność wymaga: VaR(A + B) ≤ VaR(A) + VaR(B)
 
 Kontrprzykład (dwie rzadkie porażki):
-   VaR(A) = 0,  VaR(B) = 0,  ale  VaR(A + B) > 0
-   czyli  VaR(A + B) > VaR(A) + VaR(B)   ← złamana subaddytywność
+ VaR(A) = 0, VaR(B) = 0, ale VaR(A + B) > 0
+ czyli VaR(A + B) > VaR(A) + VaR(B) ← złamana subaddytywność
 ```
 
 Wniosek jest paradoksalny: według VaR rozłożenie ryzyka na dwie niezależne pozycje wygląda groźniej niż trzymanie każdej osobno. Miara, która ma pilnować ryzyka, karze tu dokładnie to, co ryzyko realnie zmniejsza. Dla portfela złożonego z wielu pozycji oznacza to, że sumowanie VaR-ów po biurkach czy instrumentach może dawać wynik oderwany od prawdy, w którą stronę, zależy od kształtu rozkładów.
@@ -64,8 +64,8 @@ Lekarstwem jest miara, która zamiast wskazywać próg, uśrednia to, co za nim 
 
 ```
 ES_α = średnia strata w najgorszych (1 − α) przypadkach
-     = E[ strata | strata ≥ VaR_α ]                (dla rozkładów ciągłych)
-     = (1 / (1 − α)) · ∫ VaR_u du,   u przebiega od α do 1
+ = E[ strata | strata ≥ VaR_α ] (dla rozkładów ciągłych)
+ = (1 / (1 − α)) · ∫ VaR_u du, u przebiega od α do 1
 
 Czyta się tak: nie „gdzie zaczyna się ogon", tylko „jak ciężki jest średnio ogon".
 ```
@@ -87,20 +87,20 @@ Skąd wiadomo, że ES jest „lepszy", a nie tylko inny? Artzner, Delbaen, Eber 
 Miara ryzyka ρ jest SPÓJNA (Artzner i wsp., 1999), gdy dla dowolnych pozycji X, Y:
 
 1. Monotoniczność
-   jeśli X zawsze daje gorszy wynik niż Y  ⇒  ρ(X) ≥ ρ(Y)
-   (gorsza pozycja nie może mieć niższego ryzyka)
+ jeśli X zawsze daje gorszy wynik niż Y ⇒ ρ(X) ≥ ρ(Y)
+ (gorsza pozycja nie może mieć niższego ryzyka)
 
 2. Subaddytywność
-   ρ(X + Y) ≤ ρ(X) + ρ(Y)
-   (łączenie pozycji nie zwiększa ryzyka, dywersyfikacja nie szkodzi)
+ ρ(X + Y) ≤ ρ(X) + ρ(Y)
+ (łączenie pozycji nie zwiększa ryzyka, dywersyfikacja nie szkodzi)
 
 3. Jednorodność dodatnia
-   ρ(λ · X) = λ · ρ(X)   dla λ ≥ 0
-   (podwojenie pozycji podwaja ryzyko)
+ ρ(λ · X) = λ · ρ(X) dla λ ≥ 0
+ (podwojenie pozycji podwaja ryzyko)
 
 4. Niezmienniczość na translację
-   ρ(X + gotówka a) = ρ(X) − a
-   (dołożenie pewnej gotówki a obniża ryzyko dokładnie o a)
+ ρ(X + gotówka a) = ρ(X) − a
+ (dołożenie pewnej gotówki a obniża ryzyko dokładnie o a)
 ```
 
 Te aksjomaty to nie estetyka, tylko warunki zdrowego rozsądku. Monotoniczność mówi, że gorsze pozycje nie mogą wyglądać na bezpieczniejsze. Jednorodność, że skala pozycji przekłada się liniowo na ryzyko. Niezmienniczość na translację, że dołożenie bufora gotówki obniża ryzyko o wartość tego bufora. A subaddytywność to matematyczny zapis tego, że dywersyfikacja pomaga.
@@ -114,8 +114,8 @@ Kiedy różnica między VaR a ES jest mała, a kiedy przepastna? Odpowiedź brzm
 ```
 Rozkład normalny (strata ~ Normal(μ, σ)):
 
-VaR_α = μ + σ · z_α                    z_α = kwantyl normalny (z_0.99 ≈ 2.33)
-ES_α  = μ + σ · φ(z_α) / (1 − α)       φ = gęstość rozkładu normalnego
+VaR_α = μ + σ · z_α z_α = kwantyl normalny (z_0.99 ≈ 2.33)
+ES_α = μ + σ · φ(z_α) / (1 − α) φ = gęstość rozkładu normalnego
 
 Przy normalności ES to VaR przemnożony przez znany, stały czynnik.
 Cały ogon jest „lekki" i przewidywalny, więc próg i średnia z ogona idą w parze.

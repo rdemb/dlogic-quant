@@ -2,7 +2,7 @@
 layout: post
 title: "Nie buduję bota. Buduję system, który ma prawo powiedzieć: „nie wiem”"
 description: "Dlaczego system tradingowy powinien najpierw nauczyć się odrzucać własne złudzenia, zanim otrzyma prawo do ryzykowania kapitału."
-dek: "Architektura może być imponująca, testy zielone, a backtest atrakcyjny — i nadal może nie istnieć żadna przewaga."
+dek: "Architektura może być imponująca, testy zielone, a backtest atrakcyjny - i nadal może nie istnieć żadna przewaga."
 category: algo
 eyebrow: "D-LOGIC Chronicle #01"
 readingTime: 12

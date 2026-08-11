@@ -2,7 +2,7 @@
 layout: labpost
 title: "Poprawny JSON może opowiadać niemożliwą historię"
 description: "Dlaczego podpis, poprawny schemat i zielony walidator nadal nie wystarczają, jeżeli dowód nie zgadza się z przebiegiem zdarzeń."
-dek: "Walidator zaakceptował wynik LOADABLE, chociaż wszystkie fazy runtime były oznaczone jako niewykonane albo zablokowane. Format był poprawny. Znaczenie — niemożliwe."
+dek: "Walidator zaakceptował wynik LOADABLE, chociaż wszystkie fazy runtime były oznaczone jako niewykonane albo zablokowane. Format był poprawny. Znaczenie - niemożliwe."
 date: 2026-08-11 11:00:00 +0200
 category: research
 eyebrow: "D-LOGIC Research Note #01"
@@ -38,21 +38,21 @@ Oba są konieczne, ale nie wystarczają.
 
 <figure>
 <svg viewBox="0 0 900 470" role="img" aria-labelledby="layers-title layers-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="layers-title">Cztery poziomy zaufania do dowodu</title>
-  <desc id="layers-desc">Od podpisanych bajtów przez schemat i spójność semantyczną do kompletności przyczynowej.</desc>
-  <rect x="115" y="42" width="670" height="72" rx="14" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
-  <rect x="145" y="140" width="610" height="72" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="3"/>
-  <rect x="175" y="238" width="550" height="72" rx="14" fill="var(--soft)" stroke="#c18400" stroke-width="3"/>
-  <rect x="205" y="336" width="490" height="72" rx="14" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
-  <text x="450" y="75" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="19" font-weight="700" fill="var(--ink)">1. Integralność kryptograficzna</text>
-  <text x="450" y="98" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">Czy to dokładnie te bajty i czy podpisał je właściwy podmiot?</text>
-  <text x="450" y="173" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="19" font-weight="700" fill="var(--ink)">2. Poprawność składniowa</text>
-  <text x="450" y="196" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">Czy dokument ma wymagane pola, typy i dozwolone wartości?</text>
-  <text x="450" y="271" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="19" font-weight="700" fill="var(--ink)">3. Spójność semantyczna</text>
-  <text x="450" y="294" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">Czy wszystkie twierdzenia mogą być jednocześnie prawdziwe?</text>
-  <text x="450" y="369" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="19" font-weight="700" fill="var(--ink)">4. Kompletność przyczynowa</text>
-  <text x="450" y="392" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">Czy dowód obejmuje całą drogę od intencji do skutku?</text>
-  <path d="M450 114 V136 M450 212 V234 M450 310 V332" stroke="var(--mut)" stroke-width="2" stroke-dasharray="5 5"/>
+ <title id="layers-title">Cztery poziomy zaufania do dowodu</title>
+ <desc id="layers-desc">Od podpisanych bajtów przez schemat i spójność semantyczną do kompletności przyczynowej.</desc>
+ <rect x="115" y="42" width="670" height="72" rx="14" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
+ <rect x="145" y="140" width="610" height="72" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="3"/>
+ <rect x="175" y="238" width="550" height="72" rx="14" fill="var(--soft)" stroke="#c18400" stroke-width="3"/>
+ <rect x="205" y="336" width="490" height="72" rx="14" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
+ <text x="450" y="75" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="19" font-weight="700" fill="var(--ink)">1. Integralność kryptograficzna</text>
+ <text x="450" y="98" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">Czy to dokładnie te bajty i czy podpisał je właściwy podmiot?</text>
+ <text x="450" y="173" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="19" font-weight="700" fill="var(--ink)">2. Poprawność składniowa</text>
+ <text x="450" y="196" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">Czy dokument ma wymagane pola, typy i dozwolone wartości?</text>
+ <text x="450" y="271" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="19" font-weight="700" fill="var(--ink)">3. Spójność semantyczna</text>
+ <text x="450" y="294" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">Czy wszystkie twierdzenia mogą być jednocześnie prawdziwe?</text>
+ <text x="450" y="369" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="19" font-weight="700" fill="var(--ink)">4. Kompletność przyczynowa</text>
+ <text x="450" y="392" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">Czy dowód obejmuje całą drogę od intencji do skutku?</text>
+ <path d="M450 114 V136 M450 212 V234 M450 310 V332" stroke="var(--mut)" stroke-width="2" stroke-dasharray="5 5"/>
 </svg>
 <figcaption>Podpis i schemat chronią formę. Dopiero dwie kolejne warstwy chronią znaczenie oraz zgodność z realnym przebiegiem działania.</figcaption>
 </figure>
@@ -107,25 +107,25 @@ Najbardziej niebezpieczne listy kontrolne nie są oczywiście błędne. Są prec
 
 Można to przedstawić jako dwa różne rodzaje zamknięcia:
 
-**zamknięcie słownikowe** — wszystkie pola, które istnieją w aktualnym modelu, mają określony status;
+**zamknięcie słownikowe** - wszystkie pola, które istnieją w aktualnym modelu, mają określony status;
 
-**zamknięcie przyczynowe** — każda konieczna część realnej ścieżki od intencji do działania i dowodu jest reprezentowana, połączona oraz sprawdzona.
+**zamknięcie przyczynowe** - każda konieczna część realnej ścieżki od intencji do działania i dowodu jest reprezentowana, połączona oraz sprawdzona.
 
 <figure>
 <svg viewBox="0 0 940 360" role="img" aria-labelledby="closure-title closure-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="closure-title">Zamknięta checklista i pominięta ścieżka przyczynowa</title>
-  <desc id="closure-desc">Wewnątrz modelu pozostał jeden blocker, ale poza modelem znajdują się pominięte obowiązki dowodowe.</desc>
-  <rect x="76" y="48" width="420" height="252" rx="20" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
-  <text x="286" y="82" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="19" font-weight="700" fill="var(--ink)">ZAMKNIĘTY MODEL</text>
-  <circle cx="150" cy="140" r="17" fill="var(--up)"/><circle cx="235" cy="140" r="17" fill="var(--up)"/><circle cx="320" cy="140" r="17" fill="var(--up)"/><circle cx="405" cy="140" r="17" fill="var(--dn)"/>
-  <path d="M142 140 l6 6 12-15 M227 140 l6 6 12-15 M312 140 l6 6 12-15" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M397 132 l16 16 M413 132 l-16 16" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-  <text x="286" y="206" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="var(--ink)">„JEDEN BLOCKER”</text>
-  <text x="286" y="240" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">prawda wewnątrz obecnego słownika</text>
-  <circle cx="650" cy="78" r="14" fill="#c18400"/><circle cx="782" cy="122" r="14" fill="#c18400"/><circle cx="624" cy="206" r="14" fill="#c18400"/><circle cx="805" cy="254" r="14" fill="#c18400"/><circle cx="706" cy="310" r="14" fill="#c18400"/>
-  <path d="M496 126 C560 102 586 86 636 80 M496 170 C600 160 696 136 768 124 M496 210 C548 208 576 207 610 206 M496 244 C620 246 712 252 791 254 M496 274 C580 302 628 310 692 310" stroke="var(--mut)" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
-  <text x="704" y="28" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="18" font-weight="700" fill="var(--ink)">POMINIĘTE OBOWIĄZKI</text>
-  <text x="704" y="344" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">brakujące węzły nie mogą stać się blockerami, dopóki model ich nie reprezentuje</text>
+ <title id="closure-title">Zamknięta checklista i pominięta ścieżka przyczynowa</title>
+ <desc id="closure-desc">Wewnątrz modelu pozostał jeden blocker, ale poza modelem znajdują się pominięte obowiązki dowodowe.</desc>
+ <rect x="76" y="48" width="420" height="252" rx="20" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
+ <text x="286" y="82" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="19" font-weight="700" fill="var(--ink)">ZAMKNIĘTY MODEL</text>
+ <circle cx="150" cy="140" r="17" fill="var(--up)"/><circle cx="235" cy="140" r="17" fill="var(--up)"/><circle cx="320" cy="140" r="17" fill="var(--up)"/><circle cx="405" cy="140" r="17" fill="var(--dn)"/>
+ <path d="M142 140 l6 6 12-15 M227 140 l6 6 12-15 M312 140 l6 6 12-15" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M397 132 l16 16 M413 132 l-16 16" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+ <text x="286" y="206" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="17" fill="var(--ink)">„JEDEN BLOCKER”</text>
+ <text x="286" y="240" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">prawda wewnątrz obecnego słownika</text>
+ <circle cx="650" cy="78" r="14" fill="#c18400"/><circle cx="782" cy="122" r="14" fill="#c18400"/><circle cx="624" cy="206" r="14" fill="#c18400"/><circle cx="805" cy="254" r="14" fill="#c18400"/><circle cx="706" cy="310" r="14" fill="#c18400"/>
+ <path d="M496 126 C560 102 586 86 636 80 M496 170 C600 160 696 136 768 124 M496 210 C548 208 576 207 610 206 M496 244 C620 246 712 252 791 254 M496 274 C580 302 628 310 692 310" stroke="var(--mut)" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
+ <text x="704" y="28" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="18" font-weight="700" fill="var(--ink)">POMINIĘTE OBOWIĄZKI</text>
+ <text x="704" y="344" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">brakujące węzły nie mogą stać się blockerami, dopóki model ich nie reprezentuje</text>
 </svg>
 <figcaption>Kompletność modelu należy oceniać względem realnej ścieżki działania, a nie tylko względem pól, które wcześniej zdecydowaliśmy się zapisać.</figcaption>
 </figure>

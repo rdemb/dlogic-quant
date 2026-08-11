@@ -12,7 +12,7 @@ cover: macro
 > **W skrócie**
 >
 > - Inflacja w USA wróciła do **4.2%**, a majowy raport z rynku pracy dorzucił **+172 tys.** etatów, ponad dwa razy więcej niż prognozy. To dwa gwoździe do trumny scenariusza cięć.
-> - Rynek przestawił się gwałtownie: szanse na **wrześniową podwyżkę** skoczyły z **29% do 68%** w tydzień. Fed trzyma 3.50–3.75% jastrzębim tonem.
+> - Rynek przestawił się gwałtownie: szanse na **wrześniową podwyżkę** skoczyły z **29% do 68%** w tydzień. Fed trzyma 3.50-3.75% jastrzębim tonem.
 > - Krzywa to przyznaje. 2s10s spłaszczyła się z **~30 do 20 bp**: krótki koniec zakotwiczony przez Fed, długi zszedł z 4.50% do 4.41%, bo odprężenie wokół Iranu wypuściło premię za ryzyko.
 > - To jeden przełącznik, a rusza wszystkim: dolar na rocznym maksimum, złoto pod 4000, odpływy z ETF-ów na bitcoinie. Mechanika jest wspólna.
 
@@ -56,7 +56,7 @@ Dolar jest na rocznym maksimum, DXY powyżej 100, bo wyższe realne stopy to mag
 | CPI USA | 4.2% | lepka, ogranicza Fed |
 | Payrolls (maj) | +172 tys. | ponad 2x prognoza |
 | Szansa podwyżki IX | 29% → 68% | repricing w tydzień |
-| Fed | 3.50–3.75% | hold jastrzębi |
+| Fed | 3.50-3.75% | hold jastrzębi |
 | 2Y / 10Y | 4.21% / 4.41% | krótki kotwiczony |
 | 2s10s | +20 bp | spłaszczenie z ~30 |
 | Realna 10Y | +0.21% | magnes na kapitał |

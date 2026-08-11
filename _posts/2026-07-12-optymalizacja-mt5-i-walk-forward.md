@@ -30,10 +30,10 @@ W kodzie parametr wystawia się do optymalizacji zwykłym input, a zakres ustawi
 ```mql5
 // Parametr do optymalizacji. Zakres Start/Krok/Stop ustawia sie
 // w zakladce "Wejscia" testera, nie w kodzie zrodlowym.
-input int   InpMaPeriod = 20;   // np. Start=10, Krok=5, Stop=60
+input int InpMaPeriod = 20; // np. Start=10, Krok=5, Stop=60
 
 // sinput = static input: celowo NIE bierze udzialu w optymalizacji.
-sinput long InpMagic    = 20260712;
+sinput long InpMagic = 20260712;
 ```
 
 ## Pułapka jednej metryki
@@ -70,20 +70,20 @@ W środku funkcji dane o przebiegu czyta się przez TesterStatistics, podając s
 // OnTester: wywolywane po zakonczeniu przebiegu testu.
 // Zwrocona wartosc = kryterium "Custom max" w optymalizacji.
 double OnTester()
-  {
-   double profit = TesterStatistics(STAT_PROFIT);               // zysk netto
-   double dd     = TesterStatistics(STAT_EQUITY_DDREL_PERCENT); // maks. obsun. kapitalu [%]
-   int    trades = (int)TesterStatistics(STAT_TRADES);          // liczba transakcji
+ {
+ double profit = TesterStatistics(STAT_PROFIT); // zysk netto
+ double dd = TesterStatistics(STAT_EQUITY_DDREL_PERCENT); // maks. obsun. kapitalu [%]
+ int trades = (int)TesterStatistics(STAT_TRADES); // liczba transakcji
 
-   // Za malo transakcji = brak mocy statystycznej: odrzuc przebieg.
-   if(trades < 30)
-      return(0.0);
+ // Za malo transakcji = brak mocy statystycznej: odrzuc przebieg.
+ if(trades < 30)
+ return(0.0);
 
-   // Ten sam zysk przy mniejszym obsunieciu jest lepszy.
-   if(dd < 0.01)
-      dd = 0.01;                  // zabezpieczenie przed dzieleniem przez zero
-   return(profit / dd);           // wlasna miara jakosci przebiegu
-  }
+ // Ten sam zysk przy mniejszym obsunieciu jest lepszy.
+ if(dd < 0.01)
+ dd = 0.01; // zabezpieczenie przed dzieleniem przez zero
+ return(profit / dd); // wlasna miara jakosci przebiegu
+ }
 ```
 
 Taka funkcja pozwala nagradzać stabilność zamiast surowego zysku i odsiewać przebiegi oparte na kilku transakcjach. Nie zmienia to jednak natury rzeczy: mądrzejsze kryterium lepiej prowadzi przeszukiwanie, ale samo w sobie nie tworzy przewagi.

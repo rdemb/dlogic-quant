@@ -25,11 +25,11 @@ Faktor to systematyczna, mierzalna cecha wspólna dla wielu aktywów, za którą
 Mechanika jest zawsze ta sama: bierze się jedną cechę, sortuje po niej aktywa i buduje portfel długi w dobrym końcu rozkładu, krótki w złym. Najważniejsze cechy, które przetrwały dekady badań:
 
 ```
-wartość          tanie fundamentalnie biją drogie spółki wzrostowe
-momentum         zwycięzcy z ostatniego roku biją najsłabszych
-wielkość         małe spółki biją duże (najbardziej sporny z klasyków)
-jakość           rentowne i mało zadłużone biją słabe i lewarowane
-niska zmienność  spokojne aktywa dają lepszy zwrot do ryzyka, niż liczy CAPM
+wartość tanie fundamentalnie biją drogie spółki wzrostowe
+momentum zwycięzcy z ostatniego roku biją najsłabszych
+wielkość małe spółki biją duże (najbardziej sporny z klasyków)
+jakość rentowne i mało zadłużone biją słabe i lewarowane
+niska zmienność spokojne aktywa dają lepszy zwrot do ryzyka, niż liczy CAPM
 ```
 
 Że to nie jest wyłącznie kaprys amerykańskiej giełdy, pokazała praca AQR "Value and Momentum Everywhere" (Asness, Moskowitz, Pedersen, Journal of Finance 2013): wartość i momentum pojawiają się spójnie w akcjach różnych krajów, a także w obligacjach, walutach i towarach, a do tego są ujemnie skorelowane, więc złożone razem wygładzają sobie nawzajem gorsze okresy. AQR udostępnia zresztą swoje szeregi faktorowe za darmo w bibliotece badań, co samo w sobie mówi wiele o tym, jak bardzo te premie przeszły z kategorii tajemnicy do kategorii towaru.
@@ -71,10 +71,10 @@ Przyczyna jest czysto statystyczna i dotyczy każdego, kto przeszukuje dużo hip
 Nawet faktor prawdziwy w danych potrafi nie dotrzeć na twoje konto. Stoją temu na drodze cztery różne pułapki.
 
 ```
-publikacja   rynek uczy się i wyciera premię (McLean i Pontiff: o 58% mniej)
-pojemność    za dużo kapitału goni zbyt mało okazji
-koszty       spread, prowizje, podatki, szybka rotacja (momentum najgorsze)
-posucha      wieloletnie okresy, gdy faktor nie płaci (wartość po 2007)
+publikacja rynek uczy się i wyciera premię (McLean i Pontiff: o 58% mniej)
+pojemność za dużo kapitału goni zbyt mało okazji
+koszty spread, prowizje, podatki, szybka rotacja (momentum najgorsze)
+posucha wieloletnie okresy, gdy faktor nie płaci (wartość po 2007)
 ```
 
 Pierwsza to zanik po publikacji, i to akurat zmierzono precyzyjnie. McLean i Pontiff w "Does Academic Research Destroy Stock Return Predictability?" (Journal of Finance 71(1), 2016) prześledzili predyktory przekroju zwrotów w trzech oknach. Poza oryginalną próbą, zanim ktokolwiek przeczytał pracę, zwroty są średnio o 26% niższe: to czysty pomiar przeszacowania statystycznego, bo świat się nie zmienił, zmieniła się tylko próba. Po publikacji spadek pogłębia się do 58%: to ślad uczącego się rynku, który czyta literaturę, wchodzi w nagłośnioną strategię i wyciera premię. Ważne, że do zera nie spada, co znów pasuje do obrazu, w którym część premii jest prawdziwą zapłatą za ryzyko.

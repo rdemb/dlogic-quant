@@ -31,14 +31,14 @@ Ta prosta zasada niesie konsekwencję, którą łatwo przeoczyć. Złożenie zle
 ```
 PRZYKŁAD ILUSTRACYJNY (nie dane rzeczywiste)
 Najlepszy BID 1.08120, w kolejce trzy zlecenia limit kupna:
-  #1   1.0 mln   złożone 10:00:00.100   (najstarsze)
-  #2   2.0 mln   złożone 10:00:00.400
-  #3   1.5 mln   złożone 10:00:01.900   (najnowsze)
+ #1 1.0 mln złożone 10:00:00.100 (najstarsze)
+ #2 2.0 mln złożone 10:00:00.400
+ #3 1.5 mln złożone 10:00:01.900 (najnowsze)
 
 Napływa market sell 2.5 mln na 1.08120:
-  wypełnia #1 w całości        1.0 mln
-  wypełnia #2 częściowo        1.5 mln z 2.0 mln
-  #3 nie dostaje nic           (stoi dalej w kolejce)
+ wypełnia #1 w całości 1.0 mln
+ wypełnia #2 częściowo 1.5 mln z 2.0 mln
+ #3 nie dostaje nic (stoi dalej w kolejce)
 
 Ta sama cena, a o realizacji zdecydował czas: FIFO.
 ```

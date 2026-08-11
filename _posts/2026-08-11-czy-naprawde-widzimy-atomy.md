@@ -29,7 +29,7 @@ Najważniejsze pytanie nie brzmi więc wyłącznie: czy widzimy atom?
 
 Brzmi:
 
-> **Którą właściwość atomu lub układu atomowego przekształciliśmy w piksele — i jakie założenia znajdują się pomiędzy obiektem a obrazem?**
+> **Którą właściwość atomu lub układu atomowego przekształciliśmy w piksele - i jakie założenia znajdują się pomiędzy obiektem a obrazem?**
 
 ## Wykryć nie znaczy rozdzielić
 
@@ -43,21 +43,21 @@ Mikroskopy gazów kwantowych potrafią wykrywać pojedyncze atomy w miejscach si
 
 <figure>
 <svg viewBox="0 0 1040 410" role="img" aria-labelledby="detect-title detect-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="detect-title">Detekcja atomu a rozdzielenie jego rozmiaru</title>
-  <desc id="detect-desc">Maleńki atom emituje fotony, a układ optyczny rejestruje znacznie większą plamkę dyfrakcyjną, której środek pozwala zlokalizować atom.</desc>
-  <defs><radialGradient id="spot"><stop offset="0" stop-color="var(--acc)" stop-opacity=".95"/><stop offset="1" stop-color="var(--acc)" stop-opacity="0"/></radialGradient><marker id="img-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--mut)"/></marker></defs>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <circle cx="176" cy="205" r="7" fill="var(--dn)"/><circle cx="176" cy="205" r="46" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="7 7"/>
-    <text x="176" y="286" text-anchor="middle" font-size="17" fill="var(--ink)">POJEDYNCZY ATOM</text><text x="176" y="312" text-anchor="middle" font-size="13" fill="var(--mut)">rozmiar ~0,1 nm</text>
-    <path d="M254 205 H390" stroke="var(--mut)" stroke-width="3" marker-end="url(#img-arrow)"/>
-    <rect x="416" y="110" width="168" height="190" rx="16" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <path d="M458 150 L542 260 M542 150 L458 260" stroke="var(--acc)" stroke-width="4" opacity=".65"/>
-    <text x="500" y="334" text-anchor="middle" font-size="17" fill="var(--ink)">UKŁAD OPTYCZNY</text>
-    <path d="M610 205 H706" stroke="var(--mut)" stroke-width="3" marker-end="url(#img-arrow)"/>
-    <circle cx="832" cy="205" r="116" fill="url(#spot)"/>
-    <circle cx="832" cy="205" r="5" fill="var(--ink)"/>
-    <text x="832" y="346" text-anchor="middle" font-size="17" fill="var(--ink)">PLAMKA NA DETEKTORZE</text><text x="832" y="372" text-anchor="middle" font-size="13" fill="var(--mut)">pozycja tak · kształt atomu nie</text>
-  </g>
+ <title id="detect-title">Detekcja atomu a rozdzielenie jego rozmiaru</title>
+ <desc id="detect-desc">Maleńki atom emituje fotony, a układ optyczny rejestruje znacznie większą plamkę dyfrakcyjną, której środek pozwala zlokalizować atom.</desc>
+ <defs><radialGradient id="spot"><stop offset="0" stop-color="var(--acc)" stop-opacity=".95"/><stop offset="1" stop-color="var(--acc)" stop-opacity="0"/></radialGradient><marker id="img-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--mut)"/></marker></defs>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <circle cx="176" cy="205" r="7" fill="var(--dn)"/><circle cx="176" cy="205" r="46" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="7 7"/>
+ <text x="176" y="286" text-anchor="middle" font-size="17" fill="var(--ink)">POJEDYNCZY ATOM</text><text x="176" y="312" text-anchor="middle" font-size="13" fill="var(--mut)">rozmiar ~0,1 nm</text>
+ <path d="M254 205 H390" stroke="var(--mut)" stroke-width="3" marker-end="url(#img-arrow)"/>
+ <rect x="416" y="110" width="168" height="190" rx="16" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <path d="M458 150 L542 260 M542 150 L458 260" stroke="var(--acc)" stroke-width="4" opacity=".65"/>
+ <text x="500" y="334" text-anchor="middle" font-size="17" fill="var(--ink)">UKŁAD OPTYCZNY</text>
+ <path d="M610 205 H706" stroke="var(--mut)" stroke-width="3" marker-end="url(#img-arrow)"/>
+ <circle cx="832" cy="205" r="116" fill="url(#spot)"/>
+ <circle cx="832" cy="205" r="5" fill="var(--ink)"/>
+ <text x="832" y="346" text-anchor="middle" font-size="17" fill="var(--ink)">PLAMKA NA DETEKTORZE</text><text x="832" y="372" text-anchor="middle" font-size="13" fill="var(--mut)">pozycja tak · kształt atomu nie</text>
+ </g>
 </svg>
 <figcaption>Pojedynczy atom może być widoczny jako źródło światła, choć jego rzeczywisty rozmiar pozostaje znacznie poniżej rozdzielczości obrazu.</figcaption>
 </figure>
@@ -96,28 +96,28 @@ Wartość naukowego obrazu nie polega na braku przetwarzania. Polega na tym, że
 
 <figure>
 <svg viewBox="0 0 1080 360" role="img" aria-labelledby="pipeline-title pipeline-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="pipeline-title">Łańcuch tworzenia obrazu naukowego</title>
-  <desc id="pipeline-desc">Badany układ oddziałuje z sondą, powstaje sygnał, detektor zapisuje dane, algorytm rekonstruuje obraz, a człowiek interpretuje wynik.</desc>
-  <defs><marker id="pipe-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--acc)"/></marker></defs>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <rect x="32" y="112" width="160" height="92" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <rect x="244" y="112" width="160" height="92" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <rect x="456" y="112" width="160" height="92" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <rect x="668" y="112" width="160" height="92" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <rect x="880" y="112" width="168" height="92" rx="14" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
-    <path d="M192 158 H238 M404 158 H450 M616 158 H662 M828 158 H874" stroke="var(--acc)" stroke-width="3" marker-end="url(#pipe-arrow)"/>
-    <text x="112" y="150" text-anchor="middle" font-size="17" fill="var(--ink)">OBIEKT</text><text x="112" y="177" text-anchor="middle" font-size="13" fill="var(--mut)">atom / kryształ</text>
-    <text x="324" y="150" text-anchor="middle" font-size="17" fill="var(--ink)">INTERAKCJA</text><text x="324" y="177" text-anchor="middle" font-size="13" fill="var(--mut)">foton · prąd · siła</text>
-    <text x="536" y="150" text-anchor="middle" font-size="17" fill="var(--ink)">SYGNAŁ</text><text x="536" y="177" text-anchor="middle" font-size="13" fill="var(--mut)">liczby z detektora</text>
-    <text x="748" y="150" text-anchor="middle" font-size="17" fill="var(--ink)">REKONSTRUKCJA</text><text x="748" y="177" text-anchor="middle" font-size="13" fill="var(--mut)">filtr · model · algorytm</text>
-    <text x="964" y="150" text-anchor="middle" font-size="17" fill="var(--acc)">OBRAZ</text><text x="964" y="177" text-anchor="middle" font-size="13" fill="var(--mut)">twierdzenie wizualne</text>
-    <text x="540" y="274" text-anchor="middle" font-size="18" fill="var(--ink)">Wiarygodność zależy od całego łańcucha, nie od atrakcyjności ostatniego kadru.</text>
-  </g>
+ <title id="pipeline-title">Łańcuch tworzenia obrazu naukowego</title>
+ <desc id="pipeline-desc">Badany układ oddziałuje z sondą, powstaje sygnał, detektor zapisuje dane, algorytm rekonstruuje obraz, a człowiek interpretuje wynik.</desc>
+ <defs><marker id="pipe-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--acc)"/></marker></defs>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <rect x="32" y="112" width="160" height="92" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <rect x="244" y="112" width="160" height="92" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <rect x="456" y="112" width="160" height="92" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <rect x="668" y="112" width="160" height="92" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <rect x="880" y="112" width="168" height="92" rx="14" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
+ <path d="M192 158 H238 M404 158 H450 M616 158 H662 M828 158 H874" stroke="var(--acc)" stroke-width="3" marker-end="url(#pipe-arrow)"/>
+ <text x="112" y="150" text-anchor="middle" font-size="17" fill="var(--ink)">OBIEKT</text><text x="112" y="177" text-anchor="middle" font-size="13" fill="var(--mut)">atom / kryształ</text>
+ <text x="324" y="150" text-anchor="middle" font-size="17" fill="var(--ink)">INTERAKCJA</text><text x="324" y="177" text-anchor="middle" font-size="13" fill="var(--mut)">foton · prąd · siła</text>
+ <text x="536" y="150" text-anchor="middle" font-size="17" fill="var(--ink)">SYGNAŁ</text><text x="536" y="177" text-anchor="middle" font-size="13" fill="var(--mut)">liczby z detektora</text>
+ <text x="748" y="150" text-anchor="middle" font-size="17" fill="var(--ink)">REKONSTRUKCJA</text><text x="748" y="177" text-anchor="middle" font-size="13" fill="var(--mut)">filtr · model · algorytm</text>
+ <text x="964" y="150" text-anchor="middle" font-size="17" fill="var(--acc)">OBRAZ</text><text x="964" y="177" text-anchor="middle" font-size="13" fill="var(--mut)">twierdzenie wizualne</text>
+ <text x="540" y="274" text-anchor="middle" font-size="18" fill="var(--ink)">Wiarygodność zależy od całego łańcucha, nie od atrakcyjności ostatniego kadru.</text>
+ </g>
 </svg>
 <figcaption>Każdy etap posiada własne założenia, szumy, kalibrację i zakres ważności. Kontrolowany łańcuch przekształceń czyni obraz dowodem.</figcaption>
 </figure>
 
-Dla dyfrakcji rentgenowskiej interakcją jest rozpraszanie fali, sygnałem — intensywności refleksów, a rekonstrukcją — rozwiązanie problemu fazowego i budowa mapy gęstości elektronowej. Dla STM interakcją jest tunelowanie, dla AFM — siła, a dla fluorescencyjnego obrazu pojedynczych atomów — emisja i rejestracja wielu fotonów.
+Dla dyfrakcji rentgenowskiej interakcją jest rozpraszanie fali, sygnałem - intensywności refleksów, a rekonstrukcją - rozwiązanie problemu fazowego i budowa mapy gęstości elektronowej. Dla STM interakcją jest tunelowanie, dla AFM - siła, a dla fluorescencyjnego obrazu pojedynczych atomów - emisja i rejestracja wielu fotonów.
 
 Wszystkie te techniki mogą być poprawne, choć pokazują odmienne aspekty tego samego układu. Konflikt pojawia się dopiero wtedy, gdy zapominamy o ich kontraktach i uznajemy każdy piksel za bezpośredni kawałek rzeczywistości.
 

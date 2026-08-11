@@ -25,11 +25,11 @@ Bank żyje z niedopasowania terminów. Po jednej stronie bilansu ma zobowiązani
 ```
 TRANSFORMACJA TERMINOW (zrodlo kruchosci):
 
-  PASYWA (krotkie)          AKTYWA (dlugie)
-  depozyty na zadanie   →   kredyty na lata, obligacje, aktywa
-  platne OD REKI            zamrozone, trudne do szybkiej sprzedazy
+ PASYWA (krotkie) AKTYWA (dlugie)
+ depozyty na zadanie → kredyty na lata, obligacje, aktywa
+ platne OD REKI zamrozone, trudne do szybkiej sprzedazy
 
-  problem: wszyscy moga zazadac naraz tego, co jest zamrozone na lata
+ problem: wszyscy moga zazadac naraz tego, co jest zamrozone na lata
 ```
 
 W normalnych czasach to działa, bo każdego dnia po gotówkę zgłasza się tylko ułamek klientów, a na ten ułamek wystarcza kasa i rezerwy. Kłopot zaczyna się, gdy po pieniądze rusza naraz duża część deponentów. Wtedy bank ma dwa złe wyjścia: sprzedawać zamrożone aktywa po cenach pożarowych albo przestać wypłacać. I tu pojawia się rzecz kluczowa. Bank może być wypłacalny, to znaczy jego majątek wyceniony uczciwie i w czasie jest wart więcej niż długi, a mimo to upaść, bo wypłacalność (majątek większy od zobowiązań) to nie to samo co płynność (zdolność zapłaty teraz).
@@ -43,13 +43,13 @@ Na to lekarstwo opisał Walter Bagehot, redaktor „The Economist”, w książc
 ```
 REGULA BAGEHOTA (1873), trzy warunki naraz:
 
-  1. POZYCZAJ SWOBODNIE   bez limitu, smialo, zeby panika zobaczyla,
-                          ze plynnosci nie zabraknie
-  2. POD DOBRY ZASTAW     papiery dobre w normalnych czasach
-                          (chroni bank centralny, przesiewa aktywa)
-  3. PO KARNEJ STOPIE     wysoko, zeby brac tylko z prawdziwej potrzeby
+ 1. POZYCZAJ SWOBODNIE bez limitu, smialo, zeby panika zobaczyla,
+ ze plynnosci nie zabraknie
+ 2. POD DOBRY ZASTAW papiery dobre w normalnych czasach
+ (chroni bank centralny, przesiewa aktywa)
+ 3. PO KARNEJ STOPIE wysoko, zeby brac tylko z prawdziwej potrzeby
 
-  cel: ugasic panike plynnosciowa, nie finansowac zlych aktywow
+ cel: ugasic panike plynnosciowa, nie finansowac zlych aktywow
 ```
 
 Po pierwsze, pożyczać swobodnie i śmiało, tak żeby rynek zobaczył, że płynności nie zabraknie. Bagehot pisał, że zaliczek trzeba udzielać tak hojnie, jak publiczność o nie prosi. Półśrodki tu nie działają, bo panikę gasi dopiero widoczna, wiarygodna gotowość do pożyczania bez końca. Na tym polega ukryty paradoks reguły: to właśnie obietnica nieograniczonej płynności sprawia, że realne zapotrzebowanie na nią robi się skończone. Kto wie, że okienko jest zawsze otwarte, przestaje się przy nim tłoczyć.
@@ -71,14 +71,14 @@ Wymóg dobrego zastawu koduje najważniejsze rozróżnienie całej doktryny, czy
 ```
 DWA ROZNE PROBLEMY (zastaw je rozdziela):
 
-  NIEPLYNNY bank      aktywa dobre, ale zamrozone      → RATOWAC
-                      ma dobry zastaw do zastawienia      (Bagehot)
-  ─────────────────────────────────────────────────
-  NIEWYPLACALNY bank  aktywa naprawde warte mniej       → UPADEK / resolucja
-                      niz dlugi, brak dobrego zastawu      (nie ratowac)
+ NIEPLYNNY bank aktywa dobre, ale zamrozone → RATOWAC
+ ma dobry zastaw do zastawienia (Bagehot)
+ ─────────────────────────────────────────────────
+ NIEWYPLACALNY bank aktywa naprawde warte mniej → UPADEK / resolucja
+ niz dlugi, brak dobrego zastawu (nie ratowac)
 
-  klopot: w srodku paniki, przy cenach pozarowych,
-          trudno w czasie rzeczywistym odroznic jedno od drugiego
+ klopot: w srodku paniki, przy cenach pozarowych,
+ trudno w czasie rzeczywistym odroznic jedno od drugiego
 ```
 
 Bank niepłynny jest zdrowy: jego aktywa są dobre, tylko chwilowo zamrożone i nie da się ich szybko zamienić na gotówkę. Taki bank warto ratować, bo za jego zobowiązaniami stoi realny majątek. I taki bank ma czym zastawić, czyli ma dobry collateral. Bank niewypłacalny jest inny: jego aktywa naprawdę są warte mniej niż długi, więc powinien upaść albo przejść uporządkowaną likwidację, a nie być podtrzymywany przy życiu. I taki bank dobrego zastawu nie ma, bo jego papiery są słabe.

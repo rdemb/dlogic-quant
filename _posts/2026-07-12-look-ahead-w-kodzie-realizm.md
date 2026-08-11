@@ -48,7 +48,7 @@ Różnicę robi jedno `shift(1)`, bo w błędnej wersji sygnał i zwrot pochodz�
 
 ```
 # schemat jakosciowy, nie pomiar
-signal * ret          -> krzywa rosnie gladko, Sharpe nierealnie wysoki
+signal * ret -> krzywa rosnie gladko, Sharpe nierealnie wysoki
 signal.shift(1) * ret -> po realistycznych kosztach zwykle plasko lub pod kreska
 ```
 
@@ -62,8 +62,8 @@ Użycie high i low bara do decyzji podejmowanej w jego trakcie. Ekstrema świecy
 
 ```
 # high[t], low[t] znane dopiero po zamknieciu bara t
-wejscie = np.where(low <= poziom, 1, 0)  # zaklada wejscie na dolku bara
-zysk = high - entry                       # i wyjscie na szczycie tego samego bara
+wejscie = np.where(low <= poziom, 1, 0) # zaklada wejscie na dolku bara
+zysk = high - entry # i wyjscie na szczycie tego samego bara
 ```
 
 Resampling, który widzi całą świecę. Agregacja do wyższego interwału zamyka się na końcu okresu, ale po złączeniu z danymi o niższej rozdzielczości łatwo przypisać ją do początku okresu i użyć wewnątrz niego.
@@ -84,7 +84,7 @@ X_train, X_test = split(X)
 # POPRAWNIE: mu, sd wylacznie z treningu, te same nakladane na test
 mu, sd = X_train.mean(), X_train.std()
 X_train = (X_train - mu) / sd
-X_test  = (X_test  - mu) / sd
+X_test = (X_test - mu) / sd
 ```
 
 López de Prado w "Advances in Financial Machine Learning" (2018) pokazuje, że ten typ przecieku bywa subtelniejszy, niż się wydaje. Nawet klasyczna walidacja krzyżowa przecieka w finansach, bo próbki są skorelowane w czasie, a etykiety się nakładają. Lekarstwem są purging i embargo, czyli wycinanie z treningu obserwacji stykających się czasowo ze zbiorem testowym.

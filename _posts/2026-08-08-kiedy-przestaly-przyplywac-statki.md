@@ -21,7 +21,7 @@ Jeszcze kilka pokoleń wcześniej skrybowie Ugarit zapisywali na glinianych tabl
 
 W królewskiej korespondencji pojawiają się wrogie okręty, spalone miejscowości, wojska przebywające poza krajem i flota skierowana do odległego regionu. Król Ammurapi informuje, że jego państwo zostało odsłonięte właśnie wtedy, gdy zagrożenie dotarło do wybrzeża. Jedna z wiadomości wspomina o siedmiu wrogich statkach, które wyrządziły poważne szkody.
 
-Nie wiemy, czy którykolwiek z tych dokumentów był dosłownie ostatnim listem Ugarit. Popularna historia o tabliczce znalezionej w piecu, zatrzymanej przez nadejście napastników, jest bardziej filmowa niż pozwala na to archeologiczny kontekst. Mimo to archiwa zachowały moment niezwykły: państwo nadal formalnie działało, król pisał, urzędnicy naliczali świadczenia, żołnierze wykonywali rozkazy, a statki pływały — lecz niemal każdy element systemu znajdował się nie tam, gdzie był najbardziej potrzebny.
+Nie wiemy, czy którykolwiek z tych dokumentów był dosłownie ostatnim listem Ugarit. Popularna historia o tabliczce znalezionej w piecu, zatrzymanej przez nadejście napastników, jest bardziej filmowa niż pozwala na to archeologiczny kontekst. Mimo to archiwa zachowały moment niezwykły: państwo nadal formalnie działało, król pisał, urzędnicy naliczali świadczenia, żołnierze wykonywali rozkazy, a statki pływały - lecz niemal każdy element systemu znajdował się nie tam, gdzie był najbardziej potrzebny.
 
 To prowadzi do pytania znacznie ważniejszego niż zagadka tożsamości Ludów Morza:
 
@@ -51,11 +51,11 @@ Najważniejsza korekta brzmi więc:
 
 > **Nie było jednego dnia końca świata. Istniało przesuwające się pole kryzysu, w którym poszczególne regiony przekraczały własne punkty krytyczne w różnym czasie.**
 
-Każda teoria wymagająca jednego zsynchronizowanego sprawcy — jednego najazdu, jednego trzęsienia ziemi, jednej suszy albo jednej rewolucji technologicznej — zaczyna z poważnym problemem chronologicznym.
+Każda teoria wymagająca jednego zsynchronizowanego sprawcy - jednego najazdu, jednego trzęsienia ziemi, jednej suszy albo jednej rewolucji technologicznej - zaczyna z poważnym problemem chronologicznym.
 
 ## Trzy lata, które mogły złamać Hatti
 
-Najbardziej precyzyjny dowód klimatyczny pochodzi z centralnej Anatolii. Badanie słojów jałowców oraz izotopów węgla wskazało na wyjątkowo silny, ciągły okres suszy około lat 1198–1196 p.n.e., z niewielkim marginesem chronologicznym. Wydarzenie pokrywa się z końcową fazą istnienia państwa hetyckiego, choć autorzy nie przedstawili klimatu jako jedynej przyczyny jego rozpadu.
+Najbardziej precyzyjny dowód klimatyczny pochodzi z centralnej Anatolii. Badanie słojów jałowców oraz izotopów węgla wskazało na wyjątkowo silny, ciągły okres suszy około lat 1198-1196 p.n.e., z niewielkim marginesem chronologicznym. Wydarzenie pokrywa się z końcową fazą istnienia państwa hetyckiego, choć autorzy nie przedstawili klimatu jako jedynej przyczyny jego rozpadu.
 
 Jednoroczny nieurodzaj nie musiał niszczyć rozwiniętego państwa. Magazyny, daniny i redystrybucja istniały między innymi po to, aby przenosić żywność z obszarów posiadających nadwyżkę do regionów dotkniętych niedoborem.
 
@@ -77,24 +77,24 @@ W stabilnym okresie centrum pobiera zasoby od peryferii, a w zamian utrzymuje be
 
 <figure>
 <svg viewBox="0 0 1040 560" role="img" aria-labelledby="cascade-title cascade-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="cascade-title">Pętla awarii późnej epoki brązu</title>
-  <desc id="cascade-desc">Susza obniża produkcję, centrum zwiększa ekstrakcję, maleją lokalne bufory i obrona, handel jest zakłócany, rosną migracje i konflikty, a administracja dalej słabnie.</desc>
-  <defs><marker id="cascade-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--dn)"/></marker></defs>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <rect x="410" y="32" width="220" height="72" rx="14" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/><text x="520" y="62" text-anchor="middle" font-size="18" fill="var(--ink)">SUSZA / NIEURODZAJ</text><text x="520" y="86" text-anchor="middle" font-size="13" fill="var(--mut)">produkcja żywności ↓</text>
-    <rect x="728" y="142" width="238" height="78" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/><text x="847" y="173" text-anchor="middle" font-size="17" fill="var(--ink)">WIĘKSZA EKSTRAKCJA</text><text x="847" y="198" text-anchor="middle" font-size="13" fill="var(--mut)">daniny · wojsko · transport</text>
-    <rect x="716" y="330" width="250" height="78" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/><text x="841" y="360" text-anchor="middle" font-size="17" fill="var(--ink)">LOKALNE BUFORY ↓</text><text x="841" y="385" text-anchor="middle" font-size="13" fill="var(--mut)">zapasy · obrona · lojalność</text>
-    <rect x="394" y="448" width="252" height="78" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/><text x="520" y="478" text-anchor="middle" font-size="17" fill="var(--ink)">HANDEL I PODATKI ↓</text><text x="520" y="503" text-anchor="middle" font-size="13" fill="var(--mut)">porty · trasy · przychody</text>
-    <rect x="70" y="330" width="252" height="78" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/><text x="196" y="360" text-anchor="middle" font-size="17" fill="var(--ink)">MOBILNOŚĆ I PRZEMOC ↑</text><text x="196" y="385" text-anchor="middle" font-size="13" fill="var(--mut)">migracje · rajdy · najemnicy</text>
-    <rect x="76" y="142" width="240" height="78" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/><text x="196" y="173" text-anchor="middle" font-size="17" fill="var(--ink)">KOORDYNACJA ↓</text><text x="196" y="198" text-anchor="middle" font-size="13" fill="var(--mut)">administracja · informacja</text>
-    <path d="M630 72 C720 74 786 104 820 137" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
-    <path d="M892 220 C926 256 919 293 884 324" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
-    <path d="M764 408 C708 452 672 469 652 478" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
-    <path d="M394 488 C329 482 272 451 230 413" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
-    <path d="M148 330 C113 286 120 246 160 224" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
-    <path d="M250 142 C304 87 349 71 404 69" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
-    <circle cx="520" cy="279" r="76" fill="var(--acc)" opacity=".1"/><text x="520" y="267" text-anchor="middle" font-size="20" fill="var(--ink)">AWARIA</text><text x="520" y="294" text-anchor="middle" font-size="20" fill="var(--ink)">KASKADOWA</text>
-  </g>
+ <title id="cascade-title">Pętla awarii późnej epoki brązu</title>
+ <desc id="cascade-desc">Susza obniża produkcję, centrum zwiększa ekstrakcję, maleją lokalne bufory i obrona, handel jest zakłócany, rosną migracje i konflikty, a administracja dalej słabnie.</desc>
+ <defs><marker id="cascade-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--dn)"/></marker></defs>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <rect x="410" y="32" width="220" height="72" rx="14" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/><text x="520" y="62" text-anchor="middle" font-size="18" fill="var(--ink)">SUSZA / NIEURODZAJ</text><text x="520" y="86" text-anchor="middle" font-size="13" fill="var(--mut)">produkcja żywności ↓</text>
+ <rect x="728" y="142" width="238" height="78" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/><text x="847" y="173" text-anchor="middle" font-size="17" fill="var(--ink)">WIĘKSZA EKSTRAKCJA</text><text x="847" y="198" text-anchor="middle" font-size="13" fill="var(--mut)">daniny · wojsko · transport</text>
+ <rect x="716" y="330" width="250" height="78" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/><text x="841" y="360" text-anchor="middle" font-size="17" fill="var(--ink)">LOKALNE BUFORY ↓</text><text x="841" y="385" text-anchor="middle" font-size="13" fill="var(--mut)">zapasy · obrona · lojalność</text>
+ <rect x="394" y="448" width="252" height="78" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/><text x="520" y="478" text-anchor="middle" font-size="17" fill="var(--ink)">HANDEL I PODATKI ↓</text><text x="520" y="503" text-anchor="middle" font-size="13" fill="var(--mut)">porty · trasy · przychody</text>
+ <rect x="70" y="330" width="252" height="78" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/><text x="196" y="360" text-anchor="middle" font-size="17" fill="var(--ink)">MOBILNOŚĆ I PRZEMOC ↑</text><text x="196" y="385" text-anchor="middle" font-size="13" fill="var(--mut)">migracje · rajdy · najemnicy</text>
+ <rect x="76" y="142" width="240" height="78" rx="14" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/><text x="196" y="173" text-anchor="middle" font-size="17" fill="var(--ink)">KOORDYNACJA ↓</text><text x="196" y="198" text-anchor="middle" font-size="13" fill="var(--mut)">administracja · informacja</text>
+ <path d="M630 72 C720 74 786 104 820 137" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
+ <path d="M892 220 C926 256 919 293 884 324" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
+ <path d="M764 408 C708 452 672 469 652 478" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
+ <path d="M394 488 C329 482 272 451 230 413" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
+ <path d="M148 330 C113 286 120 246 160 224" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
+ <path d="M250 142 C304 87 349 71 404 69" stroke="var(--dn)" stroke-width="3" fill="none" marker-end="url(#cascade-arrow)"/>
+ <circle cx="520" cy="279" r="76" fill="var(--acc)" opacity=".1"/><text x="520" y="267" text-anchor="middle" font-size="20" fill="var(--ink)">AWARIA</text><text x="520" y="294" text-anchor="middle" font-size="20" fill="var(--ink)">KASKADOWA</text>
+ </g>
 </svg>
 <figcaption>Autorska synteza jakościowa. Strzałki nie przypisują jednej przyczyny każdej destrukcji, lecz pokazują możliwe dodatnie sprzężenia zwrotne pomiędzy udokumentowanymi rodzajami presji.</figcaption>
 </figure>
@@ -150,18 +150,18 @@ W Grecji zniknęły pałace i administracyjne pismo linearne B, ściśle związa
 
 <figure>
 <svg viewBox="0 0 980 430" role="img" aria-labelledby="collapse-title collapse-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="collapse-title">Upadek instytucji i ciągłość społeczeństwa</title>
-  <desc id="collapse-desc">Górna warstwa przedstawia pałace, archiwa i sieci elit, które zanikają; dolna pokazuje rolnictwo, rzemiosło, żeglugę i lokalne wspólnoty, które trwają lub przekształcają się.</desc>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <rect x="70" y="48" width="840" height="130" rx="18" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
-    <text x="490" y="82" text-anchor="middle" font-size="22" fill="var(--dn)">WARSTWA, KTÓRA TRACI KOORDYNACJĘ</text>
-    <text x="170" y="132" text-anchor="middle" font-size="16" fill="var(--ink)">PAŁACE</text><text x="360" y="132" text-anchor="middle" font-size="16" fill="var(--ink)">ARCHIWA</text><text x="550" y="132" text-anchor="middle" font-size="16" fill="var(--ink)">DANINY</text><text x="760" y="132" text-anchor="middle" font-size="16" fill="var(--ink)">SIECI ELIT</text>
-    <path d="M116 154 H224 M306 154 H414 M496 154 H604 M696 154 H824" stroke="var(--dn)" stroke-width="4" stroke-dasharray="8 7"/>
-    <path d="M490 190 V238" stroke="var(--mut)" stroke-width="3" stroke-dasharray="6 6"/>
-    <rect x="70" y="250" width="840" height="130" rx="18" fill="var(--soft)" stroke="var(--up)" stroke-width="3"/>
-    <text x="490" y="286" text-anchor="middle" font-size="22" fill="var(--up)">WARSTWA, KTÓRA TRWA I SIĘ PRZEKSZTAŁCA</text>
-    <text x="170" y="338" text-anchor="middle" font-size="16" fill="var(--ink)">ROLNICTWO</text><text x="360" y="338" text-anchor="middle" font-size="16" fill="var(--ink)">RZEMIOSŁO</text><text x="550" y="338" text-anchor="middle" font-size="16" fill="var(--ink)">ŻEGLUGA</text><text x="760" y="338" text-anchor="middle" font-size="16" fill="var(--ink)">WSPÓLNOTY</text>
-  </g>
+ <title id="collapse-title">Upadek instytucji i ciągłość społeczeństwa</title>
+ <desc id="collapse-desc">Górna warstwa przedstawia pałace, archiwa i sieci elit, które zanikają; dolna pokazuje rolnictwo, rzemiosło, żeglugę i lokalne wspólnoty, które trwają lub przekształcają się.</desc>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <rect x="70" y="48" width="840" height="130" rx="18" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
+ <text x="490" y="82" text-anchor="middle" font-size="22" fill="var(--dn)">WARSTWA, KTÓRA TRACI KOORDYNACJĘ</text>
+ <text x="170" y="132" text-anchor="middle" font-size="16" fill="var(--ink)">PAŁACE</text><text x="360" y="132" text-anchor="middle" font-size="16" fill="var(--ink)">ARCHIWA</text><text x="550" y="132" text-anchor="middle" font-size="16" fill="var(--ink)">DANINY</text><text x="760" y="132" text-anchor="middle" font-size="16" fill="var(--ink)">SIECI ELIT</text>
+ <path d="M116 154 H224 M306 154 H414 M496 154 H604 M696 154 H824" stroke="var(--dn)" stroke-width="4" stroke-dasharray="8 7"/>
+ <path d="M490 190 V238" stroke="var(--mut)" stroke-width="3" stroke-dasharray="6 6"/>
+ <rect x="70" y="250" width="840" height="130" rx="18" fill="var(--soft)" stroke="var(--up)" stroke-width="3"/>
+ <text x="490" y="286" text-anchor="middle" font-size="22" fill="var(--up)">WARSTWA, KTÓRA TRWA I SIĘ PRZEKSZTAŁCA</text>
+ <text x="170" y="338" text-anchor="middle" font-size="16" fill="var(--ink)">ROLNICTWO</text><text x="360" y="338" text-anchor="middle" font-size="16" fill="var(--ink)">RZEMIOSŁO</text><text x="550" y="338" text-anchor="middle" font-size="16" fill="var(--ink)">ŻEGLUGA</text><text x="760" y="338" text-anchor="middle" font-size="16" fill="var(--ink)">WSPÓLNOTY</text>
+ </g>
 </svg>
 <figcaption>„Collapse” często opisuje utratę skali, hierarchii i administracji, a nie biologiczne zniknięcie populacji ani całkowite wymazanie wiedzy.</figcaption>
 </figure>
@@ -213,9 +213,9 @@ Zaczęli pływać po nim inni ludzie.
 
 ## Materiały wizualne i źródła
 
-- [Manning i in., *Severe multi-year drought coincident with Hittite collapse around 1198–1196 bc*, Nature](https://www.nature.com/articles/s41586-022-05693-y)
+- [Manning i in., *Severe multi-year drought coincident with Hittite collapse around 1198-1196 bc*, Nature](https://www.nature.com/articles/s41586-022-05693-y)
 - [A. Bernard Knapp i Sturt W. Manning, *Crisis in Context: The End of the Late Bronze Age in the Eastern Mediterranean*, American Journal of Archaeology](https://ajaonline.org/book-review/2547/)
-- [Institute of Nautical Archaeology — Uluburun Late Bronze Age Shipwreck](https://nauticalarch.org/projects/uluburun-late-bronze-age-shipwreck-excavation/)
+- [Institute of Nautical Archaeology - Uluburun Late Bronze Age Shipwreck](https://nauticalarch.org/projects/uluburun-late-bronze-age-shipwreck-excavation/)
 - [Feldman i in., *Ancient DNA sheds light on the genetic origins of early Iron Age Philistines*, Science Advances](https://www.science.org/doi/10.1126/sciadv.aax0061)
 - Eric H. Cline, *1177 B.C.: The Year Civilization Collapsed*, wydanie zrewidowane, Princeton University Press, 2021.
 - A. Bernard Knapp, *Migration Myths and the End of the Bronze Age in the Eastern Mediterranean*, Cambridge University Press, 2021.

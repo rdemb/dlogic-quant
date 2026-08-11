@@ -26,11 +26,11 @@ William Sharpe opublikował w 1991 roku w Financial Analysts Journal (rocznik 47
 rynek = wszystkie dolary pasywne + wszystkie dolary aktywne
 
 1. pasywny dolar trzyma portfel rynkowy,
-   więc przed kosztami zarabia dokładnie zwrot rynku
+ więc przed kosztami zarabia dokładnie zwrot rynku
 2. zwrot rynku to średnia ważona zwrotów wszystkich dolarów,
-   a skoro pasywne = rynek, to średni aktywny dolar = rynek (przed kosztami)
+ a skoro pasywne = rynek, to średni aktywny dolar = rynek (przed kosztami)
 3. aktywne zarządzanie kosztuje więcej (opłaty, obrót, spready),
-   więc po kosztach średni aktywny dolar MUSI zarobić mniej niż pasywny
+ więc po kosztach średni aktywny dolar MUSI zarobić mniej niż pasywny
 ```
 
 Nie ma tu hipotezy do przetestowania. Jeśli jakiś aktywny dolar wygrywa z rynkiem przed kosztami, inny aktywny dolar musi o dokładnie tyle przegrać, bo średnia wszystkich jest z góry ustalona i równa zwrotowi rynku. Aktywni grają między sobą w grę o sumie zerowej przed kosztami i o sumie ujemnej po kosztach. Sharpe zaznacza, że wynik trzyma się w każdym okresie i na każdym rynku, bo wymaga wyłącznie praw dodawania, odejmowania, mnożenia i dzielenia, a badania empiryczne, które zdają się mu przeczyć, po prostu mierzą coś niepoprawnie.
@@ -60,8 +60,8 @@ Przyszłego zwrotu rynku nie zna nikt. Opłatę zna każdy, co do punktu bazoweg
 
 ```
 30 lat kapitalizacji, czysta arytmetyka:
-7% brutto rocznie:               1.07^30 ≈ 7.6x kapitału
-po opłatach 2 p.p. (5% netto):   1.05^30 ≈ 4.3x kapitału
+7% brutto rocznie: 1.07^30 ≈ 7.6x kapitału
+po opłatach 2 p.p. (5% netto): 1.05^30 ≈ 4.3x kapitału
 opłaty zjadły około 43% wyniku końcowego
 ```
 

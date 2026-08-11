@@ -11,8 +11,8 @@ cover: risk
 
 > **W skrócie**
 >
-> - **VIX ~19.6** (+20% w pięć sesji, z 16.4) testuje próg 20. Dziś intraday otarł się o ~20.4, ale wrócił pod kreskę — na zamknięciu wciąż poniżej. Reżim zmienności pierwszy raz od tygodni napiera na granicę spokoju (20), choć jej nie przebił.
-> - **Risk-off się rozlewa:** S&P 500 **−2.0%** w pięć sesji (~7321), ropa WTI **−6.7%** (~69.8), a długi koniec krzywej mięknie — **US 10Y 4.39%**, w dół o 1.7% w pięć sesji (śróddzienny szczyt tygodnia sięgał ~4.50%).
+> - **VIX ~19.6** (+20% w pięć sesji, z 16.4) testuje próg 20. Dziś intraday otarł się o ~20.4, ale wrócił pod kreskę - na zamknięciu wciąż poniżej. Reżim zmienności pierwszy raz od tygodni napiera na granicę spokoju (20), choć jej nie przebił.
+> - **Risk-off się rozlewa:** S&P 500 **−2.0%** w pięć sesji (~7321), ropa WTI **−6.7%** (~69.8), a długi koniec krzywej mięknie - **US 10Y 4.39%**, w dół o 1.7% w pięć sesji (śróddzienny szczyt tygodnia sięgał ~4.50%).
 > - **Złoto odbiło nad 4000** (~4075, znad dołka ~3993 sprzed sesji), ale tydzień wciąż na minusie **−2.6%**. To dalej korekta w hossie, nie załamanie.
 > - **A dolar? Stoi.** DXY ~**101.1**, płasko w tygodniu. Risk-off ciągnie go w górę, miękkie rentowności w dół, i te dwie siły się dziś znoszą.
 
@@ -20,14 +20,14 @@ cover: risk
 
 ## Próg, który rynek testuje
 
-VIX urósł do około **19.6**, o blisko 20% w pięć sesji (z 16.4), i napiera na próg 20. To granica, którą traktuję jako linię między reżimem spokoju a napięciem. Dziś indeks otarł się intraday o ~20.4, ale wrócił pod kreskę — na zamknięciu wciąż jest poniżej, a najwyższe ostatnie zamknięcie to 19.49 sprzed kilku sesji. To jeszcze nie jest panika, do tego potrzeba odczytów rzędu 30, ale pierwszy raz od dawna zmienność testuje granicę spokoju zamiast siedzieć wyraźnie pod nią.
+VIX urósł do około **19.6**, o blisko 20% w pięć sesji (z 16.4), i napiera na próg 20. To granica, którą traktuję jako linię między reżimem spokoju a napięciem. Dziś indeks otarł się intraday o ~20.4, ale wrócił pod kreskę - na zamknięciu wciąż jest poniżej, a najwyższe ostatnie zamknięcie to 19.49 sprzed kilku sesji. To jeszcze nie jest panika, do tego potrzeba odczytów rzędu 30, ale pierwszy raz od dawna zmienność testuje granicę spokoju zamiast siedzieć wyraźnie pod nią.
 
 Pod spodem to samo widać w aktywach ryzyka. S&P 500 zszedł o 2% w pięć sesji, ropa WTI straciła blisko 7%. Kiedy akcje, ropa i zmienność ruszają razem w stronę awersji do ryzyka, to nie jest pojedynczy ruch jednej klasy aktywów, tylko zmiana nastawienia.
 
 <figure>
 <svg viewBox="0 0 640 132" font-family="-apple-system,Segoe UI,Roboto,sans-serif" xmlns="http://www.w3.org/2000/svg">
 <text x="12" y="22" font-size="13" fill="currentColor">VIX napiera na próg napięcia</text>
-<text x="12" y="40" font-size="10" fill="#9b9b9b">skala 10–30, próg 20</text>
+<text x="12" y="40" font-size="10" fill="#9b9b9b">skala 10-30, próg 20</text>
 <circle cx="450" cy="18" r="4" fill="#b9b9b9"/><text x="460" y="22" font-size="10" fill="#9b9b9b">5 sesji temu</text>
 <circle cx="556" cy="18" r="5" fill="#e0902b"/><text x="566" y="22" font-size="10" fill="#9b9b9b">dziś</text>
 <rect x="180" y="70" width="420" height="6" rx="3" fill="#ececec"/>
@@ -52,20 +52,20 @@ To ważne rozróżnienie. Reżim nie pękł, on stoi w klinczu. Fundament wcią�
 
 ## Co trzyma reżim, a co mogłoby go złamać
 
-Filary dolara nadal stoją. Realna rentowność dziesięciolatki jest dodatnia, około +0.19% po odjęciu inflacji, więc kapitał wciąż ma powód, żeby siedzieć w dolarowych obligacjach. Carry wobec EBC to +137.5 punktu bazowego, bo Fed siedzi w przedziale 3.50–3.75% przy EBC na 2.25%. DXY trzyma się ponad 100. Dopóki te trzy rzeczy działają, mocny dolar zostaje stanem spoczynku rynku.
+Filary dolara nadal stoją. Realna rentowność dziesięciolatki jest dodatnia, około +0.19% po odjęciu inflacji, więc kapitał wciąż ma powód, żeby siedzieć w dolarowych obligacjach. Carry wobec EBC to +137.5 punktu bazowego, bo Fed siedzi w przedziale 3.50-3.75% przy EBC na 2.25%. DXY trzyma się ponad 100. Dopóki te trzy rzeczy działają, mocny dolar zostaje stanem spoczynku rynku.
 
 Co musiałoby się stać, żeby teza przestała działać? Realna dziesięciolatka schodząca pod zero, bo wtedy znika magnes na kapitał. Krzywa, która zamiast się spłaszczać faktycznie się odwraca. Albo VIX, który zamiast testować 20, faktycznie wchodzi w strach powyżej 30. Żaden z tych warunków nie jest dziś spełniony, ale wszystkie trzy są bliżej niż tydzień temu, i właśnie dlatego warto mieć je policzone, zanim urosną.
 
 ```text
-# reżim dolara — warunek zachowany (4 filary)
-real_10y = us_10y - cpi_proxy     # 4.39 - 4.20 = +0.19  (dodatnia)
-slope    = us_10y - us_2y          # 4.39 - 4.21 = +18 bp (spłaszcza)
-carry    = fed_mid - ecb_rate      # 3.625 - 2.25 = +137.5 bp
-dxy_ok   = dxy > 100               # ~101.1
+# reżim dolara - warunek zachowany (4 filary)
+real_10y = us_10y - cpi_proxy # 4.39 - 4.20 = +0.19 (dodatnia)
+slope = us_10y - us_2y # 4.39 - 4.21 = +18 bp (spłaszcza)
+carry = fed_mid - ecb_rate # 3.625 - 2.25 = +137.5 bp
+dxy_ok = dxy > 100 # ~101.1
 
-# rysy (bezpieczniki) — który drgnął
-vix_test  = vix >= 19.5 and vix < 20  # ~19.6 -> TESTUJE (intraday 20.4, zamkniecie pod kreska)
-risk_off  = sp500_5d < 0 and wti_5d < 0   # -2.0% i -6.7% -> TAK
+# rysy (bezpieczniki) - który drgnął
+vix_test = vix >= 19.5 and vix < 20 # ~19.6 -> TESTUJE (intraday 20.4, zamkniecie pod kreska)
+risk_off = sp500_5d < 0 and wti_5d < 0 # -2.0% i -6.7% -> TAK
 ```
 
 ## Kluczowe liczby
@@ -79,13 +79,13 @@ risk_off  = sp500_5d < 0 and wti_5d < 0   # -2.0% i -6.7% -> TAK
 | US 2Y | ~4.21% | zakotwiczony jastrzębim Fedem |
 | Krzywa 2s10s | ~+18 bp | spłaszczenie trwa, brak inwersji |
 | Realna 10Y | ~+0.19% | wciąż dodatnia, magnes na kapitał |
-| Carry Fed–EBC | +137.5 bp | na korzyść dolara |
+| Carry Fed-EBC | +137.5 bp | na korzyść dolara |
 | Złoto | ~4075 USD | odbiło nad 4000, tydzień −2.6% |
-| DXY | ~101.1 | płasko, ponad 100 — reżim trzyma |
+| DXY | ~101.1 | płasko, ponad 100 - reżim trzyma |
 | EUR/USD | ~1.1418 | nadal silnie pochodna dolara |
 
 To kontekst i prawdopodobieństwa, nie sygnał wejścia. Pokazuję, co prowadzi rynek i co musiałoby się stać, żeby teza przestała działać. Decyzję podejmujesz sam. To nie jest porada inwestycyjna.
 
-**Dane:** zmienność, rentowności, indeksy i surowce z publicznych źródeł rynkowych na żywo (stan 2026-06-26); polityka stóp (Fed, EBC) i realna rentowność z publicznych danych makro (stan koniec tygodnia 25–26.06). Liczby przeliczam przy każdym raporcie; ruch tego tygodnia jest po stronie makro, nie pojedynczej pary.
+**Dane:** zmienność, rentowności, indeksy i surowce z publicznych źródeł rynkowych na żywo (stan 2026-06-26); polityka stóp (Fed, EBC) i realna rentowność z publicznych danych makro (stan koniec tygodnia 25-26.06). Liczby przeliczam przy każdym raporcie; ruch tego tygodnia jest po stronie makro, nie pojedynczej pary.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

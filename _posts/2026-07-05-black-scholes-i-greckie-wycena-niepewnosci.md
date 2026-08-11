@@ -31,14 +31,14 @@ Z tej konstrukcji płynie najgłębszy i najbardziej antyintuicyjny wniosek. Dea
 ## Wzór, czyli mniej strasznie, niż wygląda
 
 ```
-C = S·N(d1) − K·e^(−r·T)·N(d2)        # europejski call (bez dywidend)
-P = K·e^(−r·T)·N(−d2) − S·N(−d1)      # europejski put
+C = S·N(d1) − K·e^(−r·T)·N(d2) # europejski call (bez dywidend)
+P = K·e^(−r·T)·N(−d2) − S·N(−d1) # europejski put
 
 d1 = [ln(S/K) + (r + σ²/2)·T] / (σ·√T)
 d2 = d1 − σ·√T
 
-S = bieżąca cena instrumentu          K = kurs wykonania (strike)
-T = czas do wygaśnięcia (w latach)    r = stopa wolna od ryzyka
+S = bieżąca cena instrumentu K = kurs wykonania (strike)
+T = czas do wygaśnięcia (w latach) r = stopa wolna od ryzyka
 σ = zmienność, jedyna wielkość niewidoczna na ekranie
 N(·) = dystrybuanta rozkładu normalnego, liczba od 0 do 1
 ```
@@ -73,11 +73,11 @@ Theta mówi, ile wartości opcji wyparowuje z każdym dniem przy pozostałych pa
 ```
 # cztery podstawowe greckie: kto co ma i kto komu płaci
 
-grecka   co mierzy                      posiadacz opcji              wystawca opcji
-delta    reakcję na ruch ceny           ekspozycja na kierunek       ekspozycja odwrotna
-gamma    tempo zmiany delty             dodatnia: duży ruch pomaga   ujemna: duży ruch boli
-vega     reakcję na zmienność (IV)      zyskuje, gdy IV rośnie       traci, gdy IV rośnie
-theta    upływ czasu                    płaci dzień po dniu          inkasuje dzień po dniu
+grecka co mierzy posiadacz opcji wystawca opcji
+delta reakcję na ruch ceny ekspozycja na kierunek ekspozycja odwrotna
+gamma tempo zmiany delty dodatnia: duży ruch pomaga ujemna: duży ruch boli
+vega reakcję na zmienność (IV) zyskuje, gdy IV rośnie traci, gdy IV rośnie
+theta upływ czasu płaci dzień po dniu inkasuje dzień po dniu
 ```
 
 ## Delta hedging w praktyce: dlaczego rynek opcji gra o zmienność

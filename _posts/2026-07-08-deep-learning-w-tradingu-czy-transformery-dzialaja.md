@@ -54,8 +54,8 @@ Sieci głębokie zwracają włożony w nie koszt, gdy problem ma trzy cechy nara
 
 ```
 Deep learning zarabia na siebie, gdy:
-1. danych jest dużo         (wysoka częstotliwość albo szeroki przekrój wielu instrumentów)
-2. cech jest dużo           (arkusz zleceń, wolumen, wiele aktywów, news i dane alternatywne)
+1. danych jest dużo (wysoka częstotliwość albo szeroki przekrój wielu instrumentów)
+2. cech jest dużo (arkusz zleceń, wolumen, wiele aktywów, news i dane alternatywne)
 3. interakcje są nieliniowe (progi i zależność od reżimu, których model liniowy nie wyrazi)
 ```
 
@@ -69,8 +69,8 @@ Największa dźwignia nie siedzi w architekturze, tylko w protokole sprawdzania.
 
 ```
 Zanim uwierzysz w sieć głęboką, pobij po kolei:
-1. naiwną persystencję   (prognoza: jutro = dziś)
-2. model liniowy         (regresja albo DLinear na sensownych cechach)
+1. naiwną persystencję (prognoza: jutro = dziś)
+2. model liniowy (regresja albo DLinear na sensownych cechach)
 3. dopiero potem transformer ma prawo się liczyć
 ```
 

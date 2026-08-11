@@ -38,10 +38,10 @@ López de Prado formalizuje tę poprzeczkę wzorem na oczekiwaną wartość maks
 E[max SR] = √(V[SRₙ]) · [ (1−γ) · Z⁻¹(1 − 1/N) + γ · Z⁻¹(1 − 1/(N·e)) ]
 
 V[SRₙ] = wariancja Sharpe'ów między próbami (dyspersja gridu)
-N      = liczba wypróbowanych konfiguracji
-γ      = stała Eulera-Mascheroniego ≈ 0.5772
-Z⁻¹    = kwantyl rozkładu normalnego (odwrotna dystrybuanta)
-e      = liczba Eulera ≈ 2.718
+N = liczba wypróbowanych konfiguracji
+γ = stała Eulera-Mascheroniego ≈ 0.5772
+Z⁻¹ = kwantyl rozkładu normalnego (odwrotna dystrybuanta)
+e = liczba Eulera ≈ 2.718
 ```
 
 Czyta się to tak: im więcej prób N, tym wyżej wędruje poprzeczka, a im bardziej rozstrzelone są Sharpe'y w gridzie (większe V[SRₙ]), tym mocniej rośnie oczekiwane maksimum. Ta poprzeczka, oznaczana dalej jako SR0, to poziom, który musisz przebić, żeby w ogóle mówić o czymkolwiek ponad szum. Ćwiczenie z monetą, tylko z liczbami.
@@ -58,10 +58,10 @@ Druga poprawka dotyczy kształtu rozkładu. Probabilistyczny Sharpe, czyli PSR, 
 ```
 PSR(SR*) = Z[ (SR − SR*) · √(T−1) / √(1 − γ₃·SR + (γ₄−1)/4 · SR²) ]
 
-Z    = dystrybuanta rozkładu normalnego
-SR   = obserwowany Sharpe,  SR* = próg odniesienia
-T    = liczba obserwacji (liczba tradów lub okresów)
-γ₃   = skos,  γ₄ = kurtoza surowa (dla rozkładu normalnego = 3)
+Z = dystrybuanta rozkładu normalnego
+SR = obserwowany Sharpe, SR* = próg odniesienia
+T = liczba obserwacji (liczba tradów lub okresów)
+γ₃ = skos, γ₄ = kurtoza surowa (dla rozkładu normalnego = 3)
 ```
 
 Kluczowy jest mianownik. Przy zwrotach normalnych (γ₃ = 0, γ₄ = 3) redukuje się on prawie do jedynki i PSR zależy głównie od tego, jak SR odstaje od progu oraz ile masz obserwacji. Ale gdy skos jest ujemny, składnik −γ₃·SR robi się dodatni i powiększa mianownik, czyli powiększa wariancję estymatora Sharpe'a. Po ludzku: strategia, która regularnie zgarnia drobne, a od czasu do czasu dostaje dużą stratą, ma Sharpe'a obarczonego większą niepewnością niż taka sama liczba przy zwrotach symetrycznych. PSR to widzi, zwykły Sharpe nie.
@@ -71,8 +71,8 @@ Kluczowy jest mianownik. Przy zwrotach normalnych (γ₃ = 0, γ₄ = 3) redukuj
 Deflated Sharpe składa oba mechanizmy w jedną liczbę. To po prostu PSR policzony nie względem zera, tylko względem poprzeczki SR0 wyznaczonej z liczby prób.
 
 ```
-SR0 = E[max SR]     poprzeczka z samego przeszukiwania N prób
-DSR = PSR(SR0)      PSR liczony względem tej poprzeczki, nie względem zera
+SR0 = E[max SR] poprzeczka z samego przeszukiwania N prób
+DSR = PSR(SR0) PSR liczony względem tej poprzeczki, nie względem zera
 ```
 
 Zobaczmy to na przykładzie wprost z pracy Baileya i López de Prado. Roczny Sharpe 1.59, policzony z dwóch lat miesięcznych zwrotów, przy założeniu normalności rozkładu, wygląda na solidny wynik. Ale kiedy uwzględnisz, że powstał w wyniku przeszukania 88 konfiguracji, poprzeczka E[max SR] podnosi się do 0.0973 w jednostkach per okres, a deflowany Sharpe spada do 0.9505. To ledwo powyżej umownego progu 0.95, przy którym dopiero mówimy o istotności. Sam fakt, że szukano wśród 88 wariantów, zjadł prawie całą przewagę pozornie mocnego Sharpe'a. To jest cała lekcja tego przykładu: dwa lata ładnych miesięcznych zwrotów po zderzeniu z liczbą prób zostają na granicy szumu.
@@ -87,8 +87,8 @@ Często wychodzi, że Sharpe jest dodatni, a PSR i tak nie dobija do 0.95. Luka 
 MinTRL = 1 + [ 1 − γ₃·SR + (γ₄−1)/4 · SR² ] · ( Z_α / (SR − SR*) )²
 
 Z_α = kwantyl normalny dla żądanej pewności (dla 0.95 to około 1.645)
-SR  = obserwowany Sharpe na obserwację,  SR* = próg (zwykle 0)
-γ₃  = skos,  γ₄ = kurtoza surowa (dla rozkładu normalnego = 3)
+SR = obserwowany Sharpe na obserwację, SR* = próg (zwykle 0)
+γ₃ = skos, γ₄ = kurtoza surowa (dla rozkładu normalnego = 3)
 ```
 
 Wzór czyta się jak rachunek sumienia. Im mniejsza przewaga SR nad progiem, tym gwałtowniej rośnie wymóg, bo (SR − SR*) siedzi w mianowniku podniesionym do kwadratu. Im bardziej ujemny skos, tym większy nawias w liczniku, bo składnik −γ₃·SR robi się dodatni. Im grubszy ogon (wyższa kurtoza), tym znowu więcej obserwacji. Strategia, która zbiera po trochu i raz na jakiś czas obrywa dużym ciosem, potrafi wymagać kilkuset tradów, żeby jej Sharpe stał się statystycznie wiarygodny, nawet jeśli goła krzywa kapitału wygląda ładnie.

@@ -23,10 +23,10 @@ tags: ["LLM", "duże modele językowe", "analiza sentymentu", "FinBERT", "FinGPT
 Hype wokół LLM w finansach żywi się jednym pomieszaniem pojęć. Model, który potrafi napisać poprawne streszczenie raportu kwartalnego, zostaje w narracji awansowany na model, który potrafi powiedzieć, dokąd pójdzie kurs. To są dwa różne zadania o dwóch różnych poziomach trudności, a różnicy nie widać, dopóki nie nazwie się jej wprost.
 
 ```
-Przetwarzanie tekstu (dobrze postawione)  ->  etykiety istnieją, ton da się sprawdzić
-   streszczenie, ekstrakcja faktów, klasyfikacja sentymentu
-Przewidywanie ceny (źle postawione)       ->  niski sygnał, cel ucieka, przeciwnik gra
-   „w którą stronę pójdzie kurs jutro"
+Przetwarzanie tekstu (dobrze postawione) -> etykiety istnieją, ton da się sprawdzić
+ streszczenie, ekstrakcja faktów, klasyfikacja sentymentu
+Przewidywanie ceny (źle postawione) -> niski sygnał, cel ucieka, przeciwnik gra
+ „w którą stronę pójdzie kurs jutro"
 ```
 
 Zadanie z górnego wiersza jest dla modelu językowego naturalne. Istnieje poprawna odpowiedź (streszczenie da się porównać ze źródłem, ton zdania da się oznaczyć przez człowieka), a danych tekstowych jest ogrom. Zadanie z dolnego wiersza ma wszystkie patologie rynku naraz: przewidywalna część zwrotu to ułamek szumu, cel jest niestacjonarny, a jeśli wzorzec naprawdę zarabia i zostanie odkryty, kapitał go zamyka. Uczciwe pytanie nie brzmi więc „czy LLM działa w finansach", tylko „na którym z tych dwóch zadań". Na pierwszym pomaga realnie. Na drugim głównie dostarcza dobrze brzmiących uzasadnień.
@@ -43,8 +43,8 @@ Język finansów to dialekt, nie ten sam język, którego model nauczył się z 
 
 ```
 „Spółka obniżyła koszty i zredukowała zobowiązania."
-Model ogólny:    „obniżyła", „zredukowała", „zobowiązania"  ->  wydźwięk raczej negatywny
-Model finansowy: niższe koszty i mniejszy dług              ->  wydźwięk pozytywny
+Model ogólny: „obniżyła", „zredukowała", „zobowiązania" -> wydźwięk raczej negatywny
+Model finansowy: niższe koszty i mniejszy dług -> wydźwięk pozytywny
 ```
 
 Stąd bierze się FinBERT (Araci, 2019; pokrewna linia: Yang i wsp., 2020): model BERT dostrojony na korpusie tekstów finansowych. Na benchmarkach klasyfikacji sentymentu finansowego konsekwentnie bije modele ogólne, bo dostrojenie do dziedziny uczy go tego branżowego znaczenia słów. To jest solidny, wielokrotnie potwierdzony wynik i zarazem najlepiej udokumentowana rzecz, jaką LLM wnoszą do finansów: nie prognoza, tylko lepsze czytanie tonu specjalistycznego tekstu. Warto przy tym pamiętać o skromnej naturze tej przewagi. Chodzi o dokładniejszą klasyfikację tekstu, a nie o to, że model rozumie rynek.
@@ -62,10 +62,10 @@ Najczęściej cytowanym dowodem na „przewidywanie" jest praca Lopez-Lira i Tan
 Pierwsze i najważniejsze ryzyko to look-ahead przez datę odcięcia treningu. LLM wytrenowany na tekście do pewnego momentu mógł wchłonąć wiedzę o tym, co stało się po danym nagłówku: późniejsze ruchy kursu, kolejne newsy, rewizje. Podanie mu historycznego nagłówka może więc zwrócić „sentyment" podszyty wiedzą z przyszłości, co zawyża przewidywalność w backteście, a na żywo znika.
 
 ```
-Nagłówek z przeszłości  ->  LLM trenowany na tekście do późniejszej daty
-                            (zna już, co stało się PO tym nagłówku)
-                        ->  „sentyment" podszyty wiedzą z przyszłości
-                        ->  backtest zawyżony, edge słabnie lub znika na żywo
+Nagłówek z przeszłości -> LLM trenowany na tekście do późniejszej daty
+ (zna już, co stało się PO tym nagłówku)
+ -> „sentyment" podszyty wiedzą z przyszłości
+ -> backtest zawyżony, edge słabnie lub znika na żywo
 ```
 
 Autorzy próbowali to ograniczyć, testując na okresie po dacie odcięcia modelu, i to uczciwe posunięcie. Problem w ogólności pozostaje jednak subtelny: przeciek nie dotyczy tylko cen, a każde użycie wytrenowanego wcześniej LLM do historycznego backtestu wymaga tej samej ostrożności. Do tego dochodzą trzy zwykłe podejrzenia. Koncentracja efektu w małych, mało płynnych i trudnych do krótkiej sprzedaży spółkach, gdzie papierowy edge topnieje po realnych kosztach i ograniczeniach egzekucji. Publikacyjny bias, bo wynik pozytywny się publikuje, a szuflada z „nie przewidział" zostaje zamknięta. I krucha replikowalność między okresami. Najuczciwsza interpretacja tej pracy jest taka: pokazuje ona, że analiza sentymentu ma wartość i że LLM robią ją dobrze, a nie że ChatGPT jest maszyną do prognozy ceny. Sygnałem jest tu sentyment, słaby i kosztowny w zebraniu, nie magiczna prognoza.

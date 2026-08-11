@@ -23,11 +23,11 @@ category: edukacja
 W ujęciu z podręcznika referencyjnego rynków pochodnych, czyli „Options, Futures, and Other Derivatives" Johna Hulla, opcja daje posiadaczowi prawo, ale nie obowiązek, kupna lub sprzedaży instrumentu bazowego po ustalonej z góry cenie wykonania, najpóźniej do ustalonego terminu wygaśnięcia. Za to prawo płaci się z góry cenę zwaną premią. Instrumentem bazowym może być akcja, indeks, waluta, surowiec albo kontrakt terminowy; mechanika jest ta sama.
 
 ```
-call   = prawo KUPNA instrumentu po cenie wykonania K, do terminu T
-put    = prawo SPRZEDAŻY instrumentu po cenie wykonania K, do terminu T
+call = prawo KUPNA instrumentu po cenie wykonania K, do terminu T
+put = prawo SPRZEDAŻY instrumentu po cenie wykonania K, do terminu T
 premia = cena tego prawa, płacona z góry wystawcy opcji
 
-opcja europejska  = wykonanie możliwe tylko w dniu wygaśnięcia
+opcja europejska = wykonanie możliwe tylko w dniu wygaśnięcia
 opcja amerykańska = wykonanie możliwe w każdej chwili do wygaśnięcia
 ```
 
@@ -38,40 +38,40 @@ Sednem konstrukcji jest asymetria. Kupujący może z prawa skorzystać, jeżeli 
 Z dwóch typów opcji i dwóch stron transakcji powstają cztery pozycje elementarne. Poniżej ich wyniki w dniu wygaśnięcia: pionowo wynik pozycji, poziomo cena instrumentu S, K to cena wykonania, p to zapłacona lub otrzymana premia. Wykresy są poglądowe.
 
 ```
-LONG CALL (kupiony call)             wynik = max(S − K, 0) − p
-   |                  /
-   |                 /
- 0 +-------------K--/----------->  S
-   |               /
+LONG CALL (kupiony call) wynik = max(S − K, 0) − p
+ | /
+ | /
+ 0 +-------------K--/-----------> S
+ | /
 −p |______________/
-    strata: najwyżej p, zysk: bez górnego ograniczenia
-    próg rentowności: K + p
+ strata: najwyżej p, zysk: bez górnego ograniczenia
+ próg rentowności: K + p
 
-LONG PUT (kupiony put)               wynik = max(K − S, 0) − p
-   |        \
-   |         \
- 0 +----------\--K------------->  S
-   |           \
-−p |            \_______________
-    strata: najwyżej p, zysk: duży, maksimum K − p przy S = 0
-    próg rentowności: K − p
+LONG PUT (kupiony put) wynik = max(K − S, 0) − p
+ | \
+ | \
+ 0 +----------\--K-------------> S
+ | \
+−p | \_______________
+ strata: najwyżej p, zysk: duży, maksimum K − p przy S = 0
+ próg rentowności: K − p
 
-SHORT CALL (wystawiony call)         wynik = p − max(S − K, 0)
+SHORT CALL (wystawiony call) wynik = p − max(S − K, 0)
 +p |______________\
-   |               \
- 0 +-------------K--\----------->  S
-   |                 \
-   |                  \
-    zysk: najwyżej p, strata: BEZ OGRANICZEŃ przy niepokrytym call
-    (cena instrumentu nie ma sufitu)
+ | \
+ 0 +-------------K--\-----------> S
+ | \
+ | \
+ zysk: najwyżej p, strata: BEZ OGRANICZEŃ przy niepokrytym call
+ (cena instrumentu nie ma sufitu)
 
-SHORT PUT (wystawiony put)           wynik = p − max(K − S, 0)
-+p |            /_______________
-   |           /
- 0 +----------/--K------------->  S
-   |         /
-   |        /
-    zysk: najwyżej p, strata: duża, maksimum K − p przy S = 0
+SHORT PUT (wystawiony put) wynik = p − max(K − S, 0)
++p | /_______________
+ | /
+ 0 +----------/--K-------------> S
+ | /
+ | /
+ zysk: najwyżej p, strata: duża, maksimum K − p przy S = 0
 ```
 
 Z tych profili trzeba zapamiętać dwie rzeczy. Po pierwsze, kupujący ma stratę ściętą do premii, a zysk otwarty (call) albo bardzo duży (put); wystawca odwrotnie: zysk ścięty do premii, strata otwarta lub bardzo duża. Po drugie, niepokryty short call jest jedyną z czterech pozycji o teoretycznie nieograniczonej stracie, bo instrument może rosnąć bez końca, a wystawca ma obowiązek sprzedać po K niezależnie od tego, jak wysoko cena zaszła. Short put ma stratę wielką, ale ograniczoną, bo cena nie spada poniżej zera. Dlatego materiały edukacyjne OIC i podręcznik Hulla traktują wystawianie gołych calli jako pozycję o najbardziej niewygodnym profilu ryzyka, u brokerów zwykle obwarowaną najwyższymi wymogami depozytowymi.
@@ -96,7 +96,7 @@ Przykład ilustracyjny, liczby umowne. Call z ceną wykonania K = 100 kupiony za
 <text x="60" y="184" text-anchor="end">0</text>
 <text x="60" y="245" text-anchor="end">&#8722;p</text>
 <text x="324" y="200" text-anchor="end">K</text>
-<text x="352" y="300" text-anchor="middle">cena instrumentu bazowego S  &#8594;</text>
+<text x="352" y="300" text-anchor="middle">cena instrumentu bazowego S &#8594;</text>
 </g>
 <text transform="translate(26 205) rotate(-90)" text-anchor="middle" fill="currentColor" opacity="0.75" font-size="12.5">wynik pozycji</text>
 <g opacity="0.6">
@@ -119,7 +119,7 @@ Cena opcji rozkłada się na dwa składniki, które warto umieć rozdzielić w p
 
 ```
 wartość wewnętrzna call = max(S − K, 0)
-wartość wewnętrzna put  = max(K − S, 0)
+wartość wewnętrzna put = max(K − S, 0)
 
 premia = wartość wewnętrzna + wartość czasowa
 ```
@@ -133,13 +133,13 @@ Paliwem wartości czasowej są dwie rzeczy: czas i zmienność. To centralny wą
 Moneyness opisuje, gdzie cena wykonania leży względem bieżącej ceny instrumentu. Terminologia jest angielska i warto ją znać, bo występuje w każdym łańcuchu opcyjnym.
 
 ```
-                          call (prawo kupna)    put (prawo sprzedaży)
-ITM  (in the money,       S > K                 S < K
-     w pieniądzu)
-ATM  (at the money,       S ≈ K                 S ≈ K
-     przy pieniądzu)
-OTM  (out of the money,   S < K                 S > K
-     poza pieniądzem)
+ call (prawo kupna) put (prawo sprzedaży)
+ITM (in the money, S > K S < K
+ w pieniądzu)
+ATM (at the money, S ≈ K S ≈ K
+ przy pieniądzu)
+OTM (out of the money, S < K S > K
+ poza pieniądzem)
 ```
 
 Po ludzku: opcja ITM to taka, której wykonanie już dziś miałoby sens, więc ma dodatnią wartość wewnętrzną i jest relatywnie droga. Opcja ATM ma cenę wykonania mniej więcej równą bieżącej cenie rynkowej i jest polem największej niepewności. Opcja OTM to prawo, z którego dziś nikt by nie skorzystał: jej cała cena to wartość czasowa, nadzieja na ruch. Im głębiej poza pieniądzem, tym opcja tańsza i tym mniejsze prawdopodobieństwo, że kiedykolwiek nabierze wartości wewnętrznej.

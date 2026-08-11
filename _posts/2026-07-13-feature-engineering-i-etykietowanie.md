@@ -40,10 +40,10 @@ Stąd pomysł różnicowania ułamkowego (fractional differentiation). Zamiast r
 ```
 Kompromis pamięć kontra stacjonarność (López de Prado, 2018):
 
-rząd d = 0        surowa cena  → pełna pamięć, NIEstacjonarna
-rząd d = 1        zwrot        → stacjonarna, pamięć skasowana
-rząd 0 < d < 1    ułamkowy     → część pamięci zachowana,
-                                 stacjonarność osiągnięta
+rząd d = 0 surowa cena → pełna pamięć, NIEstacjonarna
+rząd d = 1 zwrot → stacjonarna, pamięć skasowana
+rząd 0 < d < 1 ułamkowy → część pamięci zachowana,
+ stacjonarność osiągnięta
 
 zasada: wybierz najmniejsze d, przy którym szereg
 przechodzi test stacjonarności (np. ADF)

@@ -25,14 +25,14 @@ Zanim pieniądz stał się czymkolwiek konkretnym, ekonomia opisuje go przez to,
 ```
 TRZY FUNKCJE PIENIADZA:
 
-  srodek wymiany       placisz nim, zamiast szukac kogos, kto chce
-                       dokladnie tego, co ty masz do oddania
+ srodek wymiany placisz nim, zamiast szukac kogos, kto chce
+ dokladnie tego, co ty masz do oddania
 
-  miernik wartosci     wspolna jednostka, w ktorej wyrazasz cene
-                       chleba, godziny pracy i mieszkania
+ miernik wartosci wspolna jednostka, w ktorej wyrazasz cene
+ chleba, godziny pracy i mieszkania
 
-  przechowywanie       odkladasz sile nabywcza na pozniej
-  wartosci             i przenosisz ja w czasie
+ przechowywanie odkladasz sile nabywcza na pozniej
+ wartosci i przenosisz ja w czasie
 ```
 
 Ta trójca jest wygodna, bo porządkuje myślenie. Kłopot zaczyna się wtedy, gdy z opisu funkcji podręcznik przechodzi do opowieści o pochodzeniu i twierdzi, że skoro pieniądz jest przede wszystkim smarem wymiany, to musiał powstać po to, aby zastąpić uciążliwy barter. To właśnie w tym miejscu popularna historia rozjeżdża się z antropologią.
@@ -48,12 +48,12 @@ Z tej perspektywy pieniądz nie rodzi się jako towar ułatwiający handel, tylk
 ```
 DWIE OPOWIESCI O POCZATKACH PIENIADZA:
 
-  MIT (podrecznik)   barter jest niewygodny (podwojna zbieznosc potrzeb)
-                     → ludzie wymyslaja pieniadz jako smar wymiany
+ MIT (podrecznik) barter jest niewygodny (podwojna zbieznosc potrzeb)
+ → ludzie wymyslaja pieniadz jako smar wymiany
 
-  ZAPIS (Graeber)    najpierw dlug i zobowiazanie ("jestes mi winien")
-                     → pieniadz jako jednostka liczenia dlugu
-                     brak dowodow na gospodarke czysto barterowa
+ ZAPIS (Graeber) najpierw dlug i zobowiazanie ("jestes mi winien")
+ → pieniadz jako jednostka liczenia dlugu
+ brak dowodow na gospodarke czysto barterowa
 ```
 
 Ta zmiana perspektywy jest praktyczna, nie tylko akademicka. Jeśli pieniądz jest z natury zapisem długu, to przestaje dziwić, że współczesny pieniądz nie ma pokrycia w kruszcu i że większość go istnieje wyłącznie jako zapis w bankach. To nie jest zdrada prawdziwego pieniądza, tylko powrót do tego, czym pieniądz w gruncie rzeczy był od początku.
@@ -76,10 +76,10 @@ Skoro to władca gwarantuje monetę, to władca może po cichu zmniejszyć zawar
 ```
 PSUCIE MONETY (najstarsza inflacja):
 
-  uczciwa moneta     1 moneta = X gramow srebra
-  wladca psuje       dolewa taniego metalu, nazwa i nominal te same
-  skutek             wiecej monet, kazda kryje mniej kruszcu
-                     → na te same dobra trzeba ich wiecej, ceny rosna
+ uczciwa moneta 1 moneta = X gramow srebra
+ wladca psuje dolewa taniego metalu, nazwa i nominal te same
+ skutek wiecej monet, kazda kryje mniej kruszcu
+ → na te same dobra trzeba ich wiecej, ceny rosna
 ```
 
 ## Od kwitu na złoto do banknotu
@@ -101,14 +101,14 @@ System działał, dopóki wiara w wymienialność dolara na złoto była wiarygo
 ```
 BRETTON WOODS (1944) I JEGO KONIEC (1971):
 
-  ZLOTO
-     ↑  dolar wymienialny na zloto po stalym kursie
-  DOLAR USA
-     ↑  pozostale waluty wiazane kursami z dolarem
-  INNE WALUTY
+ ZLOTO
+ ↑ dolar wymienialny na zloto po stalym kursie
+ DOLAR USA
+ ↑ pozostale waluty wiazane kursami z dolarem
+ INNE WALUTY
 
-  1971: Nixon zawiesza wymiane dolara na zloto
-        → swiat w pelni w pieniadzu fiat (z mocy prawa)
+ 1971: Nixon zawiesza wymiane dolara na zloto
+ → swiat w pelni w pieniadzu fiat (z mocy prawa)
 ```
 
 ## Pieniądz fiat i zaufanie

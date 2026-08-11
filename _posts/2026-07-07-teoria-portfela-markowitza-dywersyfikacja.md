@@ -39,9 +39,9 @@ Wariancja portfela średnią ważoną nie jest i w tym miejscu zaczyna się cał
 ```
 σp² = w₁²·σ₁² + w₂²·σ₂² + 2·w₁·w₂·ρ₁₂·σ₁·σ₂
 
-wᵢ   = waga aktywa i (udział w kapitale)
-σᵢ   = odchylenie standardowe zwrotów aktywa i
-ρ₁₂  = korelacja zwrotów obu aktywów (od −1 do +1)
+wᵢ = waga aktywa i (udział w kapitale)
+σᵢ = odchylenie standardowe zwrotów aktywa i
+ρ₁₂ = korelacja zwrotów obu aktywów (od −1 do +1)
 ```
 
 Dwa pierwsze składniki to indywidualne ryzyka, stłumione kwadratami wag. Trzeci składnik jest sercem wzoru, bo to w nim siedzi korelacja. Zauważ, że w formule na zwrot korelacji nie ma wcale: oczekiwany zwrot portfela jest taki sam niezależnie od tego, czy składniki chodzą razem, osobno czy przeciwnie. Ryzyko natomiast zależy od korelacji wprost. Cała korzyść z dywersyfikacji mieszka w jednym parametrze trzeciego składnika.
@@ -49,7 +49,7 @@ Dwa pierwsze składniki to indywidualne ryzyka, stłumione kwadratami wag. Trzec
 Dla większej liczby aktywów wzór uogólnia się na sumę po wszystkich parach:
 
 ```
-σp² = Σᵢ Σⱼ wᵢ·wⱼ·σᵢ·σⱼ·ρᵢⱼ        (ρᵢᵢ = 1)
+σp² = Σᵢ Σⱼ wᵢ·wⱼ·σᵢ·σⱼ·ρᵢⱼ (ρᵢᵢ = 1)
 ```
 
 ## Korelacja: serce dywersyfikacji
@@ -57,11 +57,11 @@ Dla większej liczby aktywów wzór uogólnia się na sumę po wszystkich parach
 Podstaw liczby, a intuicja robi się namacalna. Dwa aktywa o zmienności 10% każde, kapitał podzielony po połowie:
 
 ```
-ρ = +1.0  →  σp = 10.0%    zero korzyści: ryzyko to średnia ważona
-ρ = +0.5  →  σp ≈ 8.7%
-ρ =  0.0  →  σp ≈ 7.1%
-ρ = −0.5  →  σp = 5.0%
-ρ = −1.0  →  σp = 0.0%     ryzyko można zredukować do zera
+ρ = +1.0 → σp = 10.0% zero korzyści: ryzyko to średnia ważona
+ρ = +0.5 → σp ≈ 8.7%
+ρ = 0.0 → σp ≈ 7.1%
+ρ = −0.5 → σp = 5.0%
+ρ = −1.0 → σp = 0.0% ryzyko można zredukować do zera
 ```
 
 W każdym wierszu oczekiwany zwrot portfela jest identyczny, bo wagi i składniki się nie zmieniły. Zmienia się wyłącznie ryzyko. Im niższa korelacja, tym większa redukcja ryzyka bez oddania choćby punktu bazowego oczekiwanego zwrotu. To jest dokładnie ta własność, przez którą dywersyfikację nazywa się darmowym obiadem (powiedzenie przypisuje się samemu Markowitzowi): na rynku prawie za wszystko płaci się zwrotem, tu wyjątkowo nie.
@@ -71,18 +71,18 @@ Skala korzyści rośnie z liczbą składników. Dla aktywów nieskorelowanych i 
 ```
 σp = σ / √N
 
-N = 4   →  ryzyko spada o połowę
-N = 16  →  ryzyko spada czterokrotnie
+N = 4 → ryzyko spada o połowę
+N = 16 → ryzyko spada czterokrotnie
 ```
 
 W praktyce aktywa nieskorelowane prawie nie istnieją, więc działa wersja słabsza: dywersyfikacja wygasza ryzyko specyficzne składników, ale nie zejdzie poniżej podłogi, którą wyznacza średnia kowariancja, czyli wspólny czynnik, na którym wszystko jedzie. Warto też zobaczyć, jak szybko rośnie liczba parametrów, bo ta obserwacja wróci w sekcji o ograniczeniach:
 
 ```
-liczba wariancji      = N
-liczba par korelacji  = N·(N−1)/2
+liczba wariancji = N
+liczba par korelacji = N·(N−1)/2
 
-N = 10  →  45 par
-N = 50  →  1225 par
+N = 10 → 45 par
+N = 50 → 1225 par
 ```
 
 Przy pięćdziesięciu aktywach o ryzyku portfela decyduje głównie 1225 par, a nie 50 indywidualnych zmienności. Ryzyko dużego portfela to prawie w całości współporuszanie.
@@ -119,9 +119,9 @@ Technicznie to trzy kroki. Krok pierwszy: klasteryzacja hierarchiczna. Korelacje
 ```
 dᵢⱼ = √( (1 − ρᵢⱼ) / 2 )
 
-ρ = +1  →  d = 0        zachowują się identycznie
-ρ =  0  →  d ≈ 0.707
-ρ = −1  →  d = 1        maksymalnie różne
+ρ = +1 → d = 0 zachowują się identycznie
+ρ = 0 → d ≈ 0.707
+ρ = −1 → d = 1 maksymalnie różne
 ```
 
 Krok drugi: quasi-diagonalizacja, czyli takie poprzestawianie wierszy i kolumn macierzy, żeby podobne aktywa sąsiadowały ze sobą. Krok trzeci: rekurencyjna bisekcja. Kapitał dzieli się z góry na dół wzdłuż drzewa, na każdym rozgałęzieniu odwrotnie proporcjonalnie do wariancji gałęzi, aż do pojedynczych aktywów.

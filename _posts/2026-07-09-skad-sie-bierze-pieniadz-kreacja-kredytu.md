@@ -25,12 +25,12 @@ Standardowy podręcznik do ekonomii opowiada to tak. Wpłacasz do banku 1000. Ba
 ```
 MIT (podręcznikowy mnożnik depozytowy):
 
-  wpłata 1000 → rezerwa 100 → kredyt 900
-                             → rezerwa 90  → kredyt 810
-                                            → rezerwa 81 → kredyt 729 → ...
+ wpłata 1000 → rezerwa 100 → kredyt 900
+ → rezerwa 90 → kredyt 810
+ → rezerwa 81 → kredyt 729 → ...
 
-  suma depozytow = 1000 / stopa_rezerwy = 1000 / 0.10 = 10000
-  mnoznik = 1 / stopa_rezerwy = 10
+ suma depozytow = 1000 / stopa_rezerwy = 1000 / 0.10 = 10000
+ mnoznik = 1 / stopa_rezerwy = 10
 ```
 
 Historia jest schludna, mechaniczna i łatwa do narysowania na tablicy. Wynika z niej wygodny obraz świata: bank centralny ustala bazę, a mnożnik automatycznie rozdmuchuje ją w kredyty i depozyty. Kłopot w tym, że jako opis tego, co dzieje się naprawdę, ta historia ma odwróconą przyczynowość. Bank of England poświęcił w 2014 roku osobny artykuł w kwartalniku (McLeay, Radia, Thomas, "Money creation in the modern economy") właśnie temu, żeby to sprostować.
@@ -42,10 +42,10 @@ Kiedy bank udziela kredytu, nie sięga do skarbca po cudze oszczędności i nie 
 ```
 Bank udziela kredytu 100:
 
-  AKTYWA                    PASYWA
-  +100 nalezosc kredytowa   +100 depozyt kredytobiorcy  ← nowy pieniadz
+ AKTYWA PASYWA
+ +100 nalezosc kredytowa +100 depozyt kredytobiorcy ← nowy pieniadz
 
-  bilans rosnie po obu stronach o 100
+ bilans rosnie po obu stronach o 100
 ```
 
 To jest sedno, które Modern Money Mechanics (klasyczna broszura Fed z Chicago) pokazuje na prostych zapisach księgowych typu T: banki budują depozyty, zwiększając kredyty, a nie odwrotnie. Bank of England ujmuje to jednym zdaniem: za każdym razem, gdy bank udziela kredytu, jednocześnie tworzy odpowiadający mu depozyt na rachunku kredytobiorcy, a tym samym tworzy nowy pieniądz. Kredytobiorca wydaje ten depozyt, sprzedawca dostaje go na swoje konto i od tej chwili nowy pieniądz krąży w gospodarce nieodróżnialny od jakiegokolwiek innego.
@@ -66,10 +66,10 @@ Kluczowa różnica dotyczy kolejności zdarzeń. W bajce o mnożniku najpierw je
 ```
 RZECZYWISTOSC (odwrocona przyczynowosc):
 
-  decyzja kredytowa → nowy depozyt → dopiero potem bank szuka rezerw
-                                     (rynek miedzybankowy lub bank centralny)
+ decyzja kredytowa → nowy depozyt → dopiero potem bank szuka rezerw
+ (rynek miedzybankowy lub bank centralny)
 
-  rezerwy NIE sa mnozone w kredyty; to kredyty pociagaja za soba rezerwy
+ rezerwy NIE sa mnozone w kredyty; to kredyty pociagaja za soba rezerwy
 ```
 
 Bank of England mówi to wprost: w normalnych czasach bank centralny nie ustala ilości pieniądza w obiegu i pieniądz banku centralnego nie jest mnożony w kredyty i depozyty. Cała strzałka przyczynowa z podręcznika jest odwrócona.
@@ -101,11 +101,11 @@ Z tego wyrasta hierarchia, warstwowa piramida. Na dole leży pieniądz banku cen
 ```
 WARSTWY PIENIADZA (hierarchia zobowiazan):
 
-  PIENIADZ BANKOWY   depozyty gospodarstw i firm     ← wiekszosc pieniadza
-     (pasywo banku komercyjnego)
-  ─────────────────────────────────────────────
-  BAZA MONETARNA     gotowka + rezerwy bankow        ← mniejsza warstwa
-     (pasywo banku centralnego)
+ PIENIADZ BANKOWY depozyty gospodarstw i firm ← wiekszosc pieniadza
+ (pasywo banku komercyjnego)
+ ─────────────────────────────────────────────
+ BAZA MONETARNA gotowka + rezerwy bankow ← mniejsza warstwa
+ (pasywo banku centralnego)
 ```
 
 Skoro pieniądz powstaje jako dług, to znika, gdy dług jest spłacany. Kiedy kredytobiorca oddaje kredyt, bank kasuje należność po stronie aktywów i jednocześnie kasuje depozyt po stronie pasywów. Pieniądz nie wraca do żadnego skarbca, on po prostu przestaje istnieć.
@@ -113,10 +113,10 @@ Skoro pieniądz powstaje jako dług, to znika, gdy dług jest spłacany. Kiedy k
 ```
 Splata kredytu 100:
 
-  AKTYWA                    PASYWA
-  −100 nalezosc kredytowa   −100 depozyt              ← pieniadz znika
+ AKTYWA PASYWA
+ −100 nalezosc kredytowa −100 depozyt ← pieniadz znika
 
-  bilans kurczy sie po obu stronach; pieniadz zostaje zniszczony
+ bilans kurczy sie po obu stronach; pieniadz zostaje zniszczony
 ```
 
 Dlatego zdanie pieniądz to dług nie jest hasłem ideologicznym, tylko opisem księgowania. Pieniądz jest elastyczny: rośnie, gdy sektor bankowy udziela kredytu, i kurczy się, gdy kredyt jest spłacany albo gdy popyt na niego zamiera.

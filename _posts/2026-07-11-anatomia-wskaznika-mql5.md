@@ -37,25 +37,25 @@ Kluczowe jest `SetIndexBuffer`. Pierwszy argument to numer bufora liczony od zer
 Cała praca dzieje się w `OnCalculate`. Terminal wywołuje tę funkcję przy każdym nowym ticku oraz przy każdej nowej świecy. Dokumentacja MQL5 opisuje dwie wersje sygnatury. Pierwsza operuje na jednej wybranej cenie:
 
 ```
-int OnCalculate(const int rates_total,        // liczba wszystkich barow
-                const int prev_calculated,    // ile barow policzono w poprzednim wywolaniu
-                const int begin,              // od ktorego baru dane wejsciowe maja sens
-                const double &price[]);        // tablica ceny (typ ceny wybiera uzytkownik)
+int OnCalculate(const int rates_total, // liczba wszystkich barow
+ const int prev_calculated, // ile barow policzono w poprzednim wywolaniu
+ const int begin, // od ktorego baru dane wejsciowe maja sens
+ const double &price[]); // tablica ceny (typ ceny wybiera uzytkownik)
 ```
 
 Druga daje dostęp do kompletu szeregów bieżącego instrumentu:
 
 ```
-int OnCalculate(const int        rates_total,
-                const int        prev_calculated,
-                const datetime  &time[],
-                const double    &open[],
-                const double    &high[],
-                const double    &low[],
-                const double    &close[],
-                const long      &tick_volume[],
-                const long      &volume[],
-                const int       &spread[]);
+int OnCalculate(const int rates_total,
+ const int prev_calculated,
+ const datetime &time[],
+ const double &open[],
+ const double &high[],
+ const double &low[],
+ const double &close[],
+ const long &tick_volume[],
+ const long &volume[],
+ const int &spread[]);
 ```
 
 Znaczenie dwóch pierwszych parametrów jest tu najważniejsze. Parametr `rates_total` to liczba wszystkich barów dostępnych wskaźnikowi. Parametr `prev_calculated` to wartość, którą `OnCalculate` zwróciło w poprzednim wywołaniu, czyli, zgodnie z dokumentacją MQL5, liczba barów obsłużonych do tej pory. Przy pierwszym wywołaniu `prev_calculated` wynosi zero.
@@ -65,12 +65,12 @@ Stąd wynika cała optymalizacja. Bez tego mechanizmu wskaźnik przeliczałby ca
 ```
 int start;
 if(prev_calculated == 0)
-   start = okres - 1;           // pierwszy bar z pelnym oknem
+ start = okres - 1; // pierwszy bar z pelnym oknem
 else
-   start = prev_calculated - 1; // ostatni znany bar liczymy jeszcze raz
+ start = prev_calculated - 1; // ostatni znany bar liczymy jeszcze raz
 
 for(int i = start; i < rates_total; i++)
-   { /* liczenie wartosci dla bara i */ }
+ { /* liczenie wartosci dla bara i */ }
 ```
 
 Ostatni policzony bar liczony jest ponownie celowo. Bieżąca świeca nie jest domknięta, jej cena zamknięcia zmienia się z każdym tickiem, więc wartość wskaźnika dla niej trzeba aktualizować aż do zamknięcia bara. Na końcu funkcja zwraca `rates_total`, co dokumentacja MQL5 opisuje jako zapamiętanie liczby policzonych barów, przekazywanej potem jako `prev_calculated` przy kolejnym wywołaniu. Zwrot zera wymusza pełne przeliczenie od nowa, co bywa przydatne po wykryciu błędu danych.
@@ -81,12 +81,12 @@ Zostaje pytanie, który koniec tablicy jest który. Domyślnie tablice w `OnCalc
 
 ```
 // Domyslnie (indeksacja jak w zwyklej tablicy):
-//   price[0]              →  najstarszy bar w historii
-//   price[rates_total-1]  →  najnowszy, biezacy bar
+// price[0] → najstarszy bar w historii
+// price[rates_total-1] → najnowszy, biezacy bar
 
 // Po wywolaniu ArraySetAsSeries(price, true):
-//   price[0]              →  najnowszy, biezacy bar
-//   price[rates_total-1]  →  najstarszy bar
+// price[0] → najnowszy, biezacy bar
+// price[rates_total-1] → najstarszy bar
 ```
 
 Funkcja `ArraySetAsSeries` odwraca ten kierunek na taki, jaki znają użytkownicy funkcji dostępu do szeregów czasowych, gdzie indeks `0` to bieżąca świeca. I tu leży klasyczna pułapka. Pętla `for(i = prev_calculated; i < rates_total; i++)` zakłada indeksację zwykłą, od najstarszego bara. Jeśli w tym samym kodzie któraś tablica zostanie przełączona przez `ArraySetAsSeries` na tryb serii, ta sama pętla zacznie czytać dane od złego końca, a wartości wyjdą odbite w czasie. Zasada praktyczna jest prosta: ustawić kierunek indeksacji świadomie i dopasować do niego pętlę, zamiast zakładać którykolwiek w ciemno.
@@ -97,86 +97,86 @@ Poniższy kod zbiera wszystkie elementy w jeden minimalny wskaźnik prostej śre
 
 ```
 //+------------------------------------------------------------------+
-//|   DLOGIC_SMA_Demo.mq5                                            |
-//|   Szkielet dydaktyczny prostej sredniej kroczacej.               |
-//|   Pokazuje strukture wskaznika, nie jest sygnalem do handlu.     |
+//| DLOGIC_SMA_Demo.mq5 |
+//| Szkielet dydaktyczny prostej sredniej kroczacej. |
+//| Pokazuje strukture wskaznika, nie jest sygnalem do handlu. |
 //+------------------------------------------------------------------+
 #property copyright "D-LOGIC Quant. Material edukacyjny."
-#property version   "1.00"
+#property version "1.00"
 
 //--- Rysowanie w oknie ceny (nie w osobnym podoknie)
 #property indicator_chart_window
 //--- Jeden bufor danych i jedna linia na ekranie
 #property indicator_buffers 1
-#property indicator_plots   1
+#property indicator_plots 1
 //--- Opis i wyglad linii nr 0
-#property indicator_label1  "SMA"
-#property indicator_color1  clrDodgerBlue
-#property indicator_width1  1
+#property indicator_label1 "SMA"
+#property indicator_color1 clrDodgerBlue
+#property indicator_width1 1
 
 //--- Parametr wejsciowy: dlugosc okna sredniej
-input int InpPeriod = 20;   // Okres SMA
+input int InpPeriod = 20; // Okres SMA
 
 //--- Bufor wskaznika: globalna tablica dynamiczna
 double SmaBuffer[];
 
 //+------------------------------------------------------------------+
-//| Inicjalizacja (raz przy starcie i zmianie parametrow)            |
+//| Inicjalizacja (raz przy starcie i zmianie parametrow) |
 //+------------------------------------------------------------------+
 int OnInit()
-  {
-   //--- Zabezpieczenie: okres musi byc dodatni
-   if(InpPeriod < 1)
-      return(INIT_PARAMETERS_INCORRECT);
+ {
+ //--- Zabezpieczenie: okres musi byc dodatni
+ if(InpPeriod < 1)
+ return(INIT_PARAMETERS_INCORRECT);
 
-   //--- Powiazanie tablicy z buforem nr 0 (dane do rysowania)
-   SetIndexBuffer(0, SmaBuffer, INDICATOR_DATA);
+ //--- Powiazanie tablicy z buforem nr 0 (dane do rysowania)
+ SetIndexBuffer(0, SmaBuffer, INDICATOR_DATA);
 
-   //--- Typ rysowania: linia ciagla
-   PlotIndexSetInteger(0, PLOT_DRAW_TYPE, DRAW_LINE);
+ //--- Typ rysowania: linia ciagla
+ PlotIndexSetInteger(0, PLOT_DRAW_TYPE, DRAW_LINE);
 
-   //--- Nie rysuj pierwszych InpPeriod-1 barow (brak pelnego okna)
-   PlotIndexSetInteger(0, PLOT_DRAW_BEGIN, InpPeriod - 1);
+ //--- Nie rysuj pierwszych InpPeriod-1 barow (brak pelnego okna)
+ PlotIndexSetInteger(0, PLOT_DRAW_BEGIN, InpPeriod - 1);
 
-   //--- Krotka nazwa w oknie danych
-   IndicatorSetString(INDICATOR_SHORTNAME, "DLOGIC SMA(" + (string)InpPeriod + ")");
+ //--- Krotka nazwa w oknie danych
+ IndicatorSetString(INDICATOR_SHORTNAME, "DLOGIC SMA(" + (string)InpPeriod + ")");
 
-   return(INIT_SUCCEEDED);
-  }
+ return(INIT_SUCCEEDED);
+ }
 
 //+------------------------------------------------------------------+
-//| Liczenie wartosci wskaznika                                      |
+//| Liczenie wartosci wskaznika |
 //+------------------------------------------------------------------+
-int OnCalculate(const int rates_total,        // ile barow jest dostepnych
-                const int prev_calculated,    // ile policzono w poprzednim wywolaniu
-                const int begin,              // od ktorego baru dane maja sens
-                const double &price[])         // tablica ceny wejsciowej
-  {
-   //--- Za malo danych na pelne okno: nic nie liczymy
-   if(rates_total < InpPeriod)
-      return(0);
+int OnCalculate(const int rates_total, // ile barow jest dostepnych
+ const int prev_calculated, // ile policzono w poprzednim wywolaniu
+ const int begin, // od ktorego baru dane maja sens
+ const double &price[]) // tablica ceny wejsciowej
+ {
+ //--- Za malo danych na pelne okno: nic nie liczymy
+ if(rates_total < InpPeriod)
+ return(0);
 
-   //--- Start petli: od poczatku albo od ostatniego policzonego baru
-   int start;
-   if(prev_calculated == 0)
-      start = InpPeriod - 1;        // pierwszy bar z pelnym oknem
-   else
-      start = prev_calculated - 1;  // ostatni bar liczymy jeszcze raz (moze byc niedomkniety)
+ //--- Start petli: od poczatku albo od ostatniego policzonego baru
+ int start;
+ if(prev_calculated == 0)
+ start = InpPeriod - 1; // pierwszy bar z pelnym oknem
+ else
+ start = prev_calculated - 1; // ostatni bar liczymy jeszcze raz (moze byc niedomkniety)
 
-   //--- Petla tylko po nowych barach, nie po calej historii
-   for(int i = start; i < rates_total; i++)
-     {
-      double sum = 0.0;
-      //--- Suma ceny z InpPeriod ostatnich barow (indeks i-j biegnie w przeszlosc)
-      for(int j = 0; j < InpPeriod; j++)
-         sum += price[i - j];
+ //--- Petla tylko po nowych barach, nie po calej historii
+ for(int i = start; i < rates_total; i++)
+ {
+ double sum = 0.0;
+ //--- Suma ceny z InpPeriod ostatnich barow (indeks i-j biegnie w przeszlosc)
+ for(int j = 0; j < InpPeriod; j++)
+ sum += price[i - j];
 
-      SmaBuffer[i] = sum / InpPeriod;
-     }
+ SmaBuffer[i] = sum / InpPeriod;
+ }
 
-   //--- Zwrot: tyle barow uznajemy za policzone (trafi do prev_calculated)
-   return(rates_total);
-  }
+ //--- Zwrot: tyle barow uznajemy za policzone (trafi do prev_calculated)
+ return(rates_total);
+ }
 //+------------------------------------------------------------------+
 ```
 

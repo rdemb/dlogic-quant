@@ -52,8 +52,8 @@ Część chwilowa to natychmiastowy koszt tego, że w tej konkretnej chwili bier
 Część trwała to przesunięcie ceny, które zostaje po tym, jak już przestałeś handlować. Rynek interpretuje twój przepływ jako informację (ktoś kupuje, może coś wie) i przesuwa poziom równowagi. Ta część zależy nie od tempa, tylko od całkowitej ilości, którą przeprowadziłeś przez rynek. Zostaje z tobą i z każdym, kto handluje po tobie.
 
 ```
-impact chwilowy   =  zależy od TEMPA realizacji;      znika, gdy przestajesz naciskać (arkusz się odbudowuje)
-impact trwały     =  zależy od CAŁKOWITEJ ilości;     zostaje po zakończeniu handlu (rynek przesuwa poziom równowagi)
+impact chwilowy = zależy od TEMPA realizacji; znika, gdy przestajesz naciskać (arkusz się odbudowuje)
+impact trwały = zależy od CAŁKOWITEJ ilości; zostaje po zakończeniu handlu (rynek przesuwa poziom równowagi)
 ```
 
 To rozróżnienie jest praktyczne, nie akademickie. Częścią chwilową sterujesz tempem: realizuj wolniej, a arkusz nadąży się odbudować między kawałkami. Część trwała zależy od tego, ile w sumie chcesz przełożyć, więc jedyny sposób na jej zmniejszenie to zmniejszyć zlecenie. Harmonogram realizacji walczy głównie z częścią chwilową i z ryzykiem czasu, bo tylko na to ma realny wpływ.
@@ -63,11 +63,11 @@ To rozróżnienie jest praktyczne, nie akademickie. Częścią chwilową steruje
 W 2000 roku Robert Almgren i Neil Chriss w pracy "Optimal Execution of Portfolio Transactions" zamienili ten kompromis w problem, który da się rozwiązać liczbami. Ich pomysł: potraktuj harmonogram realizacji jako ciąg decyzji, ile zrealizować w każdym kolejnym oknie czasu, i wybierz ten ciąg, który minimalizuje oczekiwany koszt plus karę za ryzyko.
 
 ```
-minimalizuj:   E[koszt] + λ · Var[koszt]
+minimalizuj: E[koszt] + λ · Var[koszt]
 
-E[koszt]     rośnie, gdy realizujesz SZYBCIEJ   (impact: własny nacisk na cenę)
-Var[koszt]   rośnie, gdy realizujesz WOLNIEJ    (ryzyko czasu: zmienność σ na niezrealizowanej pozycji)
-λ            awersja do ryzyka: ile oczekiwanego kosztu godzisz się zapłacić za jednostkę mniej ryzyka
+E[koszt] rośnie, gdy realizujesz SZYBCIEJ (impact: własny nacisk na cenę)
+Var[koszt] rośnie, gdy realizujesz WOLNIEJ (ryzyko czasu: zmienność σ na niezrealizowanej pozycji)
+λ awersja do ryzyka: ile oczekiwanego kosztu godzisz się zapłacić za jednostkę mniej ryzyka
 ```
 
 Serce tego wzoru to jedna litera: λ. To współczynnik awersji do ryzyka, twój świadomy wybór, jak bardzo boisz się zmienności w trakcie realizacji.
@@ -77,10 +77,10 @@ W modelu z liniowym impactem oczekiwany koszt składa się z części trwałej (
 Rozwiązanie ma elegancki kształt: optymalny harmonogram to malejąca krzywa niezrealizowanej pozycji, opadająca wykładniczo, o tempie opadania rosnącym z λ.
 
 ```
-xⱼ  ∝  sinh( κ · (T − tⱼ) )      niezrealizowana pozycja: krzywa opadająca do zera w czasie T
-κ   ∝  √( λ · σ² / η )           tempo opadania krzywej
+xⱼ ∝ sinh( κ · (T − tⱼ) ) niezrealizowana pozycja: krzywa opadająca do zera w czasie T
+κ ∝ √( λ · σ² / η ) tempo opadania krzywej
 
-λ = awersja do ryzyka,   σ = zmienność rynku,   η = koszt impactu chwilowego (cieńszy rynek to większe η)
+λ = awersja do ryzyka, σ = zmienność rynku, η = koszt impactu chwilowego (cieńszy rynek to większe η)
 ```
 
 Większe κ oznacza realizację bardziej załadowaną z przodu, czyli szybszą. Mniejsze κ oznacza realizację równiejszą, czyli wolniejszą. Innymi słowy, im bardziej boisz się ryzyka czasu (duże λ) albo im bardziej zmienny jest rynek (duże σ), tym szybciej domykasz zlecenie. Im droższy jest impact chwilowy (duże η), tym bardziej rozciągasz realizację w czasie, żeby na nim oszczędzić.

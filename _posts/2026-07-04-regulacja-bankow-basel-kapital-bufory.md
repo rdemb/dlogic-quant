@@ -33,19 +33,19 @@ To rozróżnienie ma twarde konsekwencje. Kapitał własny jest tą warstwą bil
 ```
 KAPITAL TO STRUKTURA FINANSOWANIA, NIE ZAPAS GOTOWKI:
 
-  ten sam majatek 100, dwa sposoby sfinansowania
+ ten sam majatek 100, dwa sposoby sfinansowania
 
-  BANK A (cienki kapital)          BANK B (gruby kapital)
-  aktywa            100            aktywa            100
-  dlug (depozyty,                  dlug (depozyty,
-  finansowanie)      95            finansowanie)      85
-  kapital wlasny      5            kapital wlasny     15
-  ──────────────────────────       ──────────────────────────
-  strata 5 na aktywach:
-  kapital 5 → 0                    kapital 15 → 10
-  bank na krawedzi                 bank spokojnie stoi
+ BANK A (cienki kapital) BANK B (gruby kapital)
+ aktywa 100 aktywa 100
+ dlug (depozyty, dlug (depozyty,
+ finansowanie) 95 finansowanie) 85
+ kapital wlasny 5 kapital wlasny 15
+ ────────────────────────── ──────────────────────────
+ strata 5 na aktywach:
+ kapital 5 → 0 kapital 15 → 10
+ bank na krawedzi bank spokojnie stoi
 
-  wiecej kapitalu = wieksza strata wchlonieta przed upadkiem
+ wiecej kapitalu = wieksza strata wchlonieta przed upadkiem
 ```
 
 Widać tu też, dlaczego zdanie „bank musi trzymać więcej kapitału, więc będzie mniej pożyczał" jest mylące. Wymóg kapitałowy dotyczy prawej strony bilansu (sposobu finansowania), a nie lewej (aktywów). Bank B ma dokładnie ten sam majątek co bank A, te same kredyty w portfelu. Różni się tylko tym, że mniejszą jego część sfinansował długiem, a większą pieniędzmi właścicieli. Grubszy kapitał nie zabiera pieniędzy z akcji kredytowej, tylko zmienia to, kto poniesie stratę, gdy coś pójdzie nie tak. Do tej pomyłki wrócą jeszcze Admati i Hellwig.
@@ -67,16 +67,16 @@ Sercem całej konstrukcji, od Basel I po dziś, jest jeden pomysł: nie wszystki
 ```
 AKTYWA WAZONE RYZYKIEM (RWA), schemat ilustracyjny:
 
-  ekspozycja  ×  waga ryzyka  =  aktywo wazone ryzykiem
-  ───────────────────────────────────────────────────────
-  obligacja skarbowa  100  ×    0%  =    0
-  kredyt hipoteczny   100  ×   35%  =   35
-  kredyt firmowy      100  ×  100%  =  100
-  ───────────────────────────────────────────────────────
-  wymog kapitalowy liczy sie od sumy RWA, nie od sumy aktywow
+ ekspozycja × waga ryzyka = aktywo wazone ryzykiem
+ ───────────────────────────────────────────────────────
+ obligacja skarbowa 100 × 0% = 0
+ kredyt hipoteczny 100 × 35% = 35
+ kredyt firmowy 100 × 100% = 100
+ ───────────────────────────────────────────────────────
+ wymog kapitalowy liczy sie od sumy RWA, nie od sumy aktywow
 
-  pulapka: waga 0% zachecala do gromadzenia obligacji panstwa,
-           modele wewnetrzne pozwalaly zanizac wlasne wagi
+ pulapka: waga 0% zachecala do gromadzenia obligacji panstwa,
+ modele wewnetrzne pozwalaly zanizac wlasne wagi
 ```
 
 Sam pomysł jest rozsądny. Pułapka tkwi w szczegółach i to ona jest jedną z ważniejszych lekcji ostatnich kryzysów. Pierwsza rysa: obligacje skarbowe własnego państwa dostawały wagę zero, więc ich trzymanie nie wymagało w ogóle kapitału. To wyglądało bezpiecznie i przez lata bezpieczne bywało, ale sam mechanizm zachęcał banki do ładowania bilansów długiem rządowym, aż do dnia, w którym „bezpieczny" dług przestawał być bezpieczny, jak w europejskim kryzysie zadłużeniowym. Regulacja, która miała mierzyć ryzyko, po cichu premiowała koncentrację w jednej klasie aktywów.
@@ -90,14 +90,14 @@ Odpowiedzią jest wskaźnik dźwigni: kapitał odniesiony do sumy aktywów, bez 
 ```
 DWA OBIEKTYWY NA TEN SAM BANK:
 
-  wskaznik oparty na RWA:  kapital / aktywa wazone ryzykiem
-     czuly na ryzyko, ale podatny na gry wagami i modelami
+ wskaznik oparty na RWA: kapital / aktywa wazone ryzykiem
+ czuly na ryzyko, ale podatny na gry wagami i modelami
 
-  wskaznik dzwigni:        kapital / suma aktywow (bez wag)
-     tepy, ale odporny na manipulacje wagami
+ wskaznik dzwigni: kapital / suma aktywow (bez wag)
+ tepy, ale odporny na manipulacje wagami
 
-  Basel III trzyma oba naraz:
-  jeden lapie to, co drugi przepuszcza
+ Basel III trzyma oba naraz:
+ jeden lapie to, co drugi przepuszcza
 ```
 
 Dlatego Basel III nie zastąpił wskaźnika opartego na RWA wskaźnikiem dźwigni, tylko dołożył ten drugi jako zabezpieczenie awaryjne. Filozofia jest taka jak przy dwóch niezależnych obiektywach patrzących na ten sam obiekt: wskaźnik oparty na ryzyku jest inteligentny, ale manipulowalny, wskaźnik dźwigni jest prosty, ale trudny do oszukania. Bank musi spełnić oba naraz, więc jeden łapie to, co drugi przepuszcza. To zresztą wraca do arytmetyki dźwigni: skoro kapitał jest cienkim ułamkiem bilansu, niewielka procentowo strata na aktywach zjada nieproporcjonalnie dużą część kapitału, a wskaźnik dźwigni pilnuje, żeby ten ułamek nie zrobił się niebezpiecznie cienki niezależnie od tego, co twierdzą modele.

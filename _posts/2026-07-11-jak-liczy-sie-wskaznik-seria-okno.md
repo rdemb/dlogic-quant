@@ -25,8 +25,8 @@ Punkt wyjścia jest prosty: wskaźnik nie działa na jednej liczbie, tylko na ca
 Ta perspektywa porządkuje myślenie. Zamiast pytać, ile wynosi wskaźnik, warto pytać, jak wartość w chwili t zależy od wejścia do chwili t. Odpowiedź dzieli wskaźniki na dwie rodziny. Pierwsza patrzy na okno ostatnich N barów i liczy je za każdym razem od nowa. Druga trzyma stan i aktualizuje go jednym krokiem. SMA to przykład pierwszej, EMA drugiej (Kaufman, 2013).
 
 ```
-wejście:  close[0], close[1], ..., close[t]   (szereg cen)
-wyjście:  out[0],   out[1],   ..., out[t]     (nowy szereg)
+wejście: close[0], close[1], ..., close[t] (szereg cen)
+wyjście: out[0], out[1], ..., out[t] (nowy szereg)
 
 out[t] = f( wycinek wejścia do chwili t )
 ```
@@ -47,8 +47,8 @@ Tu pojawia się pytanie o koszt. Naiwna implementacja sumuje N liczb przy każdy
 
 ```
 # suma kroczaca zamiast sumowania calego okna
-suma = suma + close[t] - close[t-N]   # jeden dodaj, jeden odejmij
-SMA[t] = suma / N                      # koszt O(1) na bar, nie O(N)
+suma = suma + close[t] - close[t-N] # jeden dodaj, jeden odejmij
+SMA[t] = suma / N # koszt O(1) na bar, nie O(N)
 ```
 
 Wynik jest identyczny co do liczby, różni się tylko koszt: O(T) zamiast O(N*T). Przy krótkich oknach różnica jest bez znaczenia, przy długich oknach i wielu instrumentach liczy się realnie. Implementacja rolling w pandas korzysta z takich zoptymalizowanych przejść, dlatego rolling.mean nie płaci naiwnego kosztu (dokumentacja pandas, rolling).
@@ -59,7 +59,7 @@ Wykładnicza średnia krocząca (EMA) liczy się inaczej. Nie sumuje okna, tylko
 
 ```
 ema[t] = alfa * cena[t] + (1 - alfa) * ema[t-1]
-alfa   = 2 / (N + 1)          # dla N = 20:  alfa ≈ 0,095
+alfa = 2 / (N + 1) # dla N = 20: alfa ≈ 0,095
 ```
 
 To jest filtr rekurencyjny: wynik w chwili t zależy od wejścia w chwili t oraz od własnego wyniku z chwili t-1. Dwie własności wynikają wprost z tego wzoru.
@@ -83,12 +83,12 @@ Nie każda platforma tak indeksuje. Gdy tablica jest indeksowana jako seria (na 
 
 ```
 indeksacja chronologiczna (pandas, numpy):
-  pozycja 0 = najstarszy bar, ostatnia pozycja = najnowszy
-  poprzedni bar wzgledem t:  indeks t-1  (nizszy)
+ pozycja 0 = najstarszy bar, ostatnia pozycja = najnowszy
+ poprzedni bar wzgledem t: indeks t-1 (nizszy)
 
 indeksacja jako seria (MQL5 z ArraySetAsSeries):
-  indeks 0 = najnowszy bar, wyzsze indeksy = starsze bary
-  poprzedni bar wzgledem i:  indeks i+1  (wyzszy)
+ indeks 0 = najnowszy bar, wyzsze indeksy = starsze bary
+ poprzedni bar wzgledem i: indeks i+1 (wyzszy)
 ```
 
 To nie jest kosmetyka. Rekurencja EMA napisana jako ema[i] = alfa*cena[i] + (1-alfa)*ema[i-1] jest poprawna w indeksacji chronologicznej, ale w indeksacji jako seria sięga po ema[i-1], czyli po bar nowszy, a więc po przyszłość. To jest look-ahead wprowadzony przez sam kierunek indeksu. Przy takiej tablicy poprawny odnośnik do przeszłości to i+1. Przenoszenie wzoru między platformami bez sprawdzenia kierunku czasu to jeden z częstszych cichych błędów.
@@ -106,7 +106,7 @@ import pandas as pd
 N = 20
 
 # SMA: srednia z okna N barow
-sma = close.rolling(window=N).mean()          # pierwsze N-1 wartosci to NaN
+sma = close.rolling(window=N).mean() # pierwsze N-1 wartosci to NaN
 
 # EMA: filtr rekurencyjny, alfa = 2/(N+1)
 # adjust=False daje dokladnie wzor rekurencyjny z seedem na pierwszej probce
@@ -119,13 +119,13 @@ Iteracyjnie ta sama EMA, żeby zobaczyć rekurencję wprost:
 
 ```python
 def ema_petla(ceny, N):
-    alfa = 2.0 / (N + 1)          # waga nowej ceny
-    out = [None] * len(ceny)
-    out[0] = ceny[0]              # seed: pierwsza wartosc = pierwsza cena
-    for t in range(1, len(ceny)):
-        # nowy stan z poprzedniego stanu i biezacej ceny
-        out[t] = alfa * ceny[t] + (1 - alfa) * out[t-1]
-    return out
+ alfa = 2.0 / (N + 1) # waga nowej ceny
+ out = [None] * len(ceny)
+ out[0] = ceny[0] # seed: pierwsza wartosc = pierwsza cena
+ for t in range(1, len(ceny)):
+ # nowy stan z poprzedniego stanu i biezacej ceny
+ out[t] = alfa * ceny[t] + (1 - alfa) * out[t-1]
+ return out
 ```
 
 Pętla jest wolniejsza od wersji wektorowej, ale pokazuje istotę: EMA niesie jeden stan (out[t-1]) i aktualizuje go w każdym kroku. SMA w pętli wyglądałaby podobnie, tyle że zamiast jednego stanu utrzymywałaby sumę kroczącą okna. To jest cała różnica między dwiema rodzinami: okno kroczące pamięta N ostatnich barów i po nich zapomina, rekurencja pamięta jeden stan, który streszcza całą przeszłość z malejącą wagą.

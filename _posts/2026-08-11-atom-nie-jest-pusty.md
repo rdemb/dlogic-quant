@@ -39,23 +39,23 @@ Porównanie skali pozostaje oszałamiające. Typowy promień atomowy jest rzędu
 
 <figure>
 <svg viewBox="0 0 1040 430" role="img" aria-labelledby="scale-title scale-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="scale-title">Skala atomu i jądra</title>
-  <desc id="scale-desc">Porównanie promienia atomu rzędu dziesięć do minus dziesiątej metra z promieniem jądra rzędu dziesięć do minus piętnastej metra.</desc>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <circle cx="270" cy="214" r="166" fill="none" stroke="var(--acc)" stroke-width="4" stroke-dasharray="10 8"/>
-    <circle cx="270" cy="214" r="7" fill="var(--dn)"/>
-    <text x="270" y="60" text-anchor="middle" font-size="20" fill="var(--acc)">CHARAKTERYSTYCZNY OBSZAR ATOMU</text>
-    <text x="270" y="386" text-anchor="middle" font-size="17" fill="var(--mut)">promień ~10⁻¹⁰ m</text>
-    <path d="M278 214 H620" stroke="var(--line)" stroke-width="3"/>
-    <circle cx="650" cy="214" r="62" fill="var(--dn)" opacity=".15" stroke="var(--dn)" stroke-width="4"/>
-    <text x="650" y="206" text-anchor="middle" font-size="20" fill="var(--ink)">JĄDRO</text>
-    <text x="650" y="232" text-anchor="middle" font-size="14" fill="var(--mut)">~10⁻¹⁵ m</text>
-    <rect x="768" y="112" width="224" height="204" rx="16" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <text x="880" y="153" text-anchor="middle" font-size="16" fill="var(--ink)">SKALA DŁUGOŚCI</text>
-    <text x="880" y="205" text-anchor="middle" font-size="34" fill="var(--acc)">~100 000×</text>
-    <text x="880" y="244" text-anchor="middle" font-size="14" fill="var(--mut)">atom / jądro</text>
-    <text x="880" y="285" text-anchor="middle" font-size="13" fill="var(--mut)">objętość: nawet ~10¹⁵×</text>
-  </g>
+ <title id="scale-title">Skala atomu i jądra</title>
+ <desc id="scale-desc">Porównanie promienia atomu rzędu dziesięć do minus dziesiątej metra z promieniem jądra rzędu dziesięć do minus piętnastej metra.</desc>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <circle cx="270" cy="214" r="166" fill="none" stroke="var(--acc)" stroke-width="4" stroke-dasharray="10 8"/>
+ <circle cx="270" cy="214" r="7" fill="var(--dn)"/>
+ <text x="270" y="60" text-anchor="middle" font-size="20" fill="var(--acc)">CHARAKTERYSTYCZNY OBSZAR ATOMU</text>
+ <text x="270" y="386" text-anchor="middle" font-size="17" fill="var(--mut)">promień ~10⁻¹⁰ m</text>
+ <path d="M278 214 H620" stroke="var(--line)" stroke-width="3"/>
+ <circle cx="650" cy="214" r="62" fill="var(--dn)" opacity=".15" stroke="var(--dn)" stroke-width="4"/>
+ <text x="650" y="206" text-anchor="middle" font-size="20" fill="var(--ink)">JĄDRO</text>
+ <text x="650" y="232" text-anchor="middle" font-size="14" fill="var(--mut)">~10⁻¹⁵ m</text>
+ <rect x="768" y="112" width="224" height="204" rx="16" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <text x="880" y="153" text-anchor="middle" font-size="16" fill="var(--ink)">SKALA DŁUGOŚCI</text>
+ <text x="880" y="205" text-anchor="middle" font-size="34" fill="var(--acc)">~100 000×</text>
+ <text x="880" y="244" text-anchor="middle" font-size="14" fill="var(--mut)">atom / jądro</text>
+ <text x="880" y="285" text-anchor="middle" font-size="13" fill="var(--mut)">objętość: nawet ~10¹⁵×</text>
+ </g>
 </svg>
 <figcaption>Diagram jest skalą pojęciową, nie rysunkiem proporcjonalnym. Atom nie ma jednej ostrej granicy; jego „rozmiar” zależy od zastosowanej definicji promienia.</figcaption>
 </figure>
@@ -85,7 +85,7 @@ Atom nie jest stabilny mimo mechaniki kwantowej. Jest stabilny **dzięki niej**.
 
 ## Dlaczego stół nie przepuszcza dłoni?
 
-Nawet jeśli jądra są bardzo małe, atomy dwóch przedmiotów nie mogą po prostu minąć się jak odległe planety. Gdy chmury elektronowe zaczynają się nakładać, rośnie energia układu. Ładunki oddziałują elektromagnetycznie, a elektrony — jako identyczne fermiony — podlegają zasadzie Pauliego, która nie pozwala im wszystkim zająć tego samego stanu kwantowego.
+Nawet jeśli jądra są bardzo małe, atomy dwóch przedmiotów nie mogą po prostu minąć się jak odległe planety. Gdy chmury elektronowe zaczynają się nakładać, rośnie energia układu. Ładunki oddziałują elektromagnetycznie, a elektrony - jako identyczne fermiony - podlegają zasadzie Pauliego, która nie pozwala im wszystkim zająć tego samego stanu kwantowego.
 
 Określenie „odpychanie Pauliego” jest użytecznym skrótem, ale nie oznacza istnienia piątej fundamentalnej siły. To efektywny opór wynikający z antysymetrii wieloelektronowej funkcji falowej i rosnącego kosztu energii, kiedy próbujemy wcisnąć elektrony w coraz ciaśniejszy zestaw dozwolonych stanów.
 
@@ -93,19 +93,19 @@ Dla pojedynczego atomu kwantowa energia kinetyczna zapobiega prostemu zapadnięc
 
 <figure>
 <svg viewBox="0 0 1020 430" role="img" aria-labelledby="stable-title stable-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="stable-title">Warstwy stabilności materii</title>
-  <desc id="stable-desc">Przyciąganie Coulomba wiąże atom, kwantowy koszt lokalizacji zatrzymuje zapadanie, zasada Pauliego stabilizuje materię wieloelektronową.</desc>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <rect x="80" y="62" width="860" height="84" rx="16" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
-    <rect x="122" y="174" width="776" height="84" rx="16" fill="var(--soft)" stroke="var(--up)" stroke-width="3"/>
-    <rect x="164" y="286" width="692" height="84" rx="16" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
-    <text x="510" y="97" text-anchor="middle" font-size="20" fill="var(--acc)">ODDZIAŁYWANIE COULOMBA</text>
-    <text x="510" y="126" text-anchor="middle" font-size="14" fill="var(--mut)">wiąże elektrony z jądrami i tworzy chemię</text>
-    <text x="510" y="209" text-anchor="middle" font-size="20" fill="var(--up)">KWANTOWY KOSZT LOKALIZACJI</text>
-    <text x="510" y="238" text-anchor="middle" font-size="14" fill="var(--mut)">nadmierne ściśnięcie zwiększa energię kinetyczną</text>
-    <text x="510" y="321" text-anchor="middle" font-size="20" fill="var(--dn)">ZASADA WYKLUCZANIA PAULIEGO</text>
-    <text x="510" y="350" text-anchor="middle" font-size="14" fill="var(--mut)">utrzymuje stabilność i objętość dużych układów fermionów</text>
-  </g>
+ <title id="stable-title">Warstwy stabilności materii</title>
+ <desc id="stable-desc">Przyciąganie Coulomba wiąże atom, kwantowy koszt lokalizacji zatrzymuje zapadanie, zasada Pauliego stabilizuje materię wieloelektronową.</desc>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <rect x="80" y="62" width="860" height="84" rx="16" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
+ <rect x="122" y="174" width="776" height="84" rx="16" fill="var(--soft)" stroke="var(--up)" stroke-width="3"/>
+ <rect x="164" y="286" width="692" height="84" rx="16" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
+ <text x="510" y="97" text-anchor="middle" font-size="20" fill="var(--acc)">ODDZIAŁYWANIE COULOMBA</text>
+ <text x="510" y="126" text-anchor="middle" font-size="14" fill="var(--mut)">wiąże elektrony z jądrami i tworzy chemię</text>
+ <text x="510" y="209" text-anchor="middle" font-size="20" fill="var(--up)">KWANTOWY KOSZT LOKALIZACJI</text>
+ <text x="510" y="238" text-anchor="middle" font-size="14" fill="var(--mut)">nadmierne ściśnięcie zwiększa energię kinetyczną</text>
+ <text x="510" y="321" text-anchor="middle" font-size="20" fill="var(--dn)">ZASADA WYKLUCZANIA PAULIEGO</text>
+ <text x="510" y="350" text-anchor="middle" font-size="14" fill="var(--mut)">utrzymuje stabilność i objętość dużych układów fermionów</text>
+ </g>
 </svg>
 <figcaption>Solidność zwykłej materii nie wynika z kontaktu twardych jąder, lecz z kwantowej odpowiedzi elektronów i oddziaływań elektromagnetycznych.</figcaption>
 </figure>
@@ -116,7 +116,7 @@ Pustka, o której mówi popularna metafora, jest więc zdolna stawiać opór wys
 
 ## Czy całą ludzkość można zmieścić w łyżeczce?
 
-To porównanie wynika z ogromnej różnicy między gęstością zwykłej materii i gęstością materii jądrowej. Gdyby przyjąć łączną masę ludzi rzędu setek miliardów kilogramów i podzielić ją przez charakterystyczną gęstość wnętrza jądra atomowego, otrzymalibyśmy objętość rzędu kilku mililitrów — podobną do łyżeczki.
+To porównanie wynika z ogromnej różnicy między gęstością zwykłej materii i gęstością materii jądrowej. Gdyby przyjąć łączną masę ludzi rzędu setek miliardów kilogramów i podzielić ją przez charakterystyczną gęstość wnętrza jądra atomowego, otrzymalibyśmy objętość rzędu kilku mililitrów - podobną do łyżeczki.
 
 Rachunek skali jest sensowny. Interpretacja „wystarczy usunąć pustą przestrzeń” nie jest.
 
@@ -140,7 +140,7 @@ Najgłębszą lekcją atomowej skali nie jest to, że materia jest iluzją. Jest
 
 Atom nie jest pustą kulą z ziarnkiem materii w środku.
 
-Jest stabilnym wzorem oddziaływań — i właśnie ten wzór nazywamy materią.
+Jest stabilnym wzorem oddziaływań - i właśnie ten wzór nazywamy materią.
 
 ## Źródła i materiały
 

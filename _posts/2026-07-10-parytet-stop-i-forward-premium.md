@@ -27,18 +27,18 @@ Punktem wyjścia jest jedno pytanie zadane na dwa sposoby. Kapitał można trzym
 Pokryty parytet stóp (CIP)
 S = cena 1 jednostki waluty zagranicznej w walucie krajowej
 
-    F / S = (1 + i_kraj) / (1 + i_zagr)
+ F / S = (1 + i_kraj) / (1 + i_zagr)
 
 Przykład ilustracyjny (stopy roczne, umowne):
-    S = 1.1000    i_kraj = 5%    i_zagr = 3%
-    F = 1.1000 · 1.05 / 1.03 = 1.1214
+ S = 1.1000 i_kraj = 5% i_zagr = 3%
+ F = 1.1000 · 1.05 / 1.03 = 1.1214
 
 Dwie drogi na rok, ten sam wynik dla 1 jedn. krajowej:
-    A) lokata krajowa:                      1 → 1.0500
-    B) wymiana na zagr. + lokata + forward:
-       1 / 1.1000        = 0.9091 zagr.
-       0.9091 · 1.03     = 0.9364 zagr.
-       0.9364 · 1.1214   = 1.0500 krajowej
+ A) lokata krajowa: 1 → 1.0500
+ B) wymiana na zagr. + lokata + forward:
+ 1 / 1.1000 = 0.9091 zagr.
+ 0.9091 · 1.03 = 0.9364 zagr.
+ 0.9364 · 1.1214 = 1.0500 krajowej
 
 Wyższa stopa krajowa (5 > 3) → waluta krajowa na
 terminowym DYSKONCIE, które kasuje przewagę odsetkową.
@@ -54,14 +54,14 @@ Pokryty parytet domyka arbitraż właśnie dlatego, że forward jest zakontrakto
 Parytet niepokryty (UIP)
 w miejsce forwardu wchodzi oczekiwany przyszły spot:
 
-    E[S_{t+1}] / S = (1 + i_kraj) / (1 + i_zagr)
+ E[S_{t+1}] / S = (1 + i_kraj) / (1 + i_zagr)
 
 Forma logarytmiczna (przybliżenie dla małych stóp):
 
-    E[Δs] ≈ i_kraj − i_zagr
-    oczekiwana zmiana kursu ≈ różnica stóp
+ E[Δs] ≈ i_kraj − i_zagr
+ oczekiwana zmiana kursu ≈ różnica stóp
 
-CIP + UIP razem  →  F = E[S_{t+1}]
+CIP + UIP razem → F = E[S_{t+1}]
 forward jako nieobciążony prognostyk przyszłego spotu
 ```
 
@@ -73,15 +73,15 @@ Test ma prostą formę. Rzeczywistą zmianę kursu regresuje się na różnicę 
 
 ```
 Test UIP, regresja Famy (1984)
-Δs = zmiana log-kursu   (Δs > 0 = osłabienie waluty krajowej)
+Δs = zmiana log-kursu (Δs > 0 = osłabienie waluty krajowej)
 
-    Δs_{t+1} = α + β · (i_kraj − i_zagr) + ε
+ Δs_{t+1} = α + β · (i_kraj − i_zagr) + ε
 
-    UIP przewiduje:                  β = 1
-    Fama (1984) i późniejsze prace:  β < 1,  często β < 0
+ UIP przewiduje: β = 1
+ Fama (1984) i późniejsze prace: β < 1, często β < 0
 
-β < 0  →  waluta o wyższej stopie przeciętnie się UMACNIAŁA,
-          zamiast osłabiać zgodnie z hipotezą.
+β < 0 → waluta o wyższej stopie przeciętnie się UMACNIAŁA,
+ zamiast osłabiać zgodnie z hipotezą.
 ```
 
 Znak ujemny ma dosłowne znaczenie. UIP mówi, że waluta o wyższej stopie powinna się osłabiać. Dane z badanych okresów mówią, że osłabiała się za słabo, a przeciętnie wręcz się umacniała. Rozbieżność między przewidywaniem hipotezy a rzeczywistością nie tylko nie znikała, ona zmieniała znak. Zjawisko nazwano zagadką forward premium, ponieważ forward systematycznie wskazywał zły kierunek. Engel w przeglądzie literatury z 1996 roku zebrał dziesiątki takich badań i pokazał, że anomalia jest odporna: nie znika przy zmianie waluty, okresu ani metody, a próby wyjaśnienia jej samą premią za ryzyko w ówczesnych modelach nie domykały rachunku.
@@ -103,10 +103,10 @@ Na koniec zwrot akcji, który przez dekady wydawał się niemożliwy. Pokryty pa
 ```
 Baza cross-currency (uproszczenie)
 
-    baza = koszt dolara z FX swap  −  bezpośredni koszt dolara
+ baza = koszt dolara z FX swap − bezpośredni koszt dolara
 
-    przed 2008:  baza ≈ 0     (arbitraż domyka CIP)
-    po 2008:     baza ≠ 0     trwale, szersza na koniec kwartałów
+ przed 2008: baza ≈ 0 (arbitraż domyka CIP)
+ po 2008: baza ≠ 0 trwale, szersza na koniec kwartałów
 ```
 
 Przyczyną nie jest brak chętnych do arbitrażu, tylko jego koszt. Po kryzysie wymogi kapitałowe i limity dźwigni sprawiły, że domykanie tej różnicy obciąża bilanse banków, a miejsce w bilansie przestało być darmowe. Baza rozszerza się regularnie na przełomach kwartałów, gdy banki kurczą sumy bilansowe na potrzeby sprawozdań, co widać wprost w danych. Skala bazy dla walut głównych bywała rzędu od pojedynczych do kilkudziesięciu punktów bazowych, zależnie od waluty i momentu. Praktyczny wniosek jest jeden: zabezpieczenie ryzyka walutowego przestało być bezkosztowe. Baza to realny koszt albo dopłata przy przenoszeniu ekspozycji z jednej waluty w drugą, ponad samą różnicę stóp, i dla podmiotu zabezpieczającego dolarową ekspozycję jest twardą pozycją, nie akademicką subtelnością.

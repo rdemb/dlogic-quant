@@ -26,10 +26,10 @@ Poprzedni tekst o opcjach opierał się na jednym słowie: prawo. Kontrakt termi
 Różnicę wobec opcji widać w jednym zdaniu: posiadacz opcji może pozwolić jej wygasnąć, posiadacz futures nie może. Za asymetrię prawa opcji kupujący płaci premię z góry; w kontrakcie terminowym symetria zobowiązań sprawia, że na starcie żadna strona nie płaci drugiej, bo cena jest ustawiona tak, że wartość kontraktu wynosi zero.
 
 ```
-opcja  = prawo (kupujący) kontra obowiązek (wystawca), premia z góry
+opcja = prawo (kupujący) kontra obowiązek (wystawca), premia z góry
 future = obowiązek po obu stronach, brak premii, wartość na starcie ok. 0
 
-pozycja długa  (long)  = obowiązek KUPNA po cenie F w terminie T
+pozycja długa (long) = obowiązek KUPNA po cenie F w terminie T
 pozycja krótka (short) = obowiązek SPRZEDAŻY po cenie F w terminie T
 ```
 
@@ -47,12 +47,12 @@ Ponieważ depozyt to ułamek wartości nominalnej, kontrakt niesie wbudowaną d�
 
 ```
 PRZYKŁAD ILUSTRACYJNY (liczby umowne)
-wartość nominalna kontraktu:  100 000
-depozyt wstępny (5%):           5 000
+wartość nominalna kontraktu: 100 000
+depozyt wstępny (5%): 5 000
 
-ruch instrumentu  +2%  →  +2 000  →  +40% depozytu
-ruch instrumentu  −2%  →  −2 000  →  −40% depozytu
-ruch instrumentu −10%  →  −10 000 →  strata dwukrotności depozytu
+ruch instrumentu +2% → +2 000 → +40% depozytu
+ruch instrumentu −2% → −2 000 → −40% depozytu
+ruch instrumentu −10% → −10 000 → strata dwukrotności depozytu
 ```
 
 Ostatni wiersz pokazuje, dlaczego dźwignia futures bywa niebezpieczna: ruch większy niż depozyt oznacza stratę przekraczającą wpłaconą kaucję, a codzienne rozliczenie wymusi jej pokrycie, zanim kontrakt dojdzie do terminu.
@@ -71,8 +71,8 @@ u = koszt magazynowania (proporcjonalny, dla surowców)
 y = premia za posiadanie fizyczne (convenience yield)
 T = czas do wygaśnięcia w latach
 
-aktywo finansowe z dochodem q:  F = S · e^{(r − q)·T}
-waluta (parytet stóp):          F = S · e^{(r_kraj − r_zagr)·T}
+aktywo finansowe z dochodem q: F = S · e^{(r − q)·T}
+waluta (parytet stóp): F = S · e^{(r_kraj − r_zagr)·T}
 ```
 
 Każdy składnik ma sens ekonomiczny. Stopa r to koszt finansowania zakupu; podnosi cenę terminową. Koszt magazynowania u, istotny przy surowcach, też ją podnosi, bo trzymanie fizycznego towaru kosztuje. Convenience yield y to korzyść z posiadania zapasu pod ręką, na przykład możliwość zaspokojenia nagłego popytu; obniża cenę terminową, bo trzymający spot dostaje coś, czego posiadacz kontraktu nie ma. Dla walut rolę u i y przejmują stopy procentowe obu krajów, a wzór staje się parytetem stóp procentowych.
@@ -84,8 +84,8 @@ Jedna własność jest pewna niezależnie od parametrów: w miarę zbliżania si
 Znak wyrażenia w wykładniku decyduje o kształcie krzywej terminowej i o dwóch nazwach, które ten kształt opisują.
 
 ```
-r + u − y > 0  →  F > S  →  CONTANGO       (futures drożej niż spot)
-r + u − y < 0  →  F < S  →  BACKWARDATION   (futures taniej niż spot)
+r + u − y > 0 → F > S → CONTANGO (futures drożej niż spot)
+r + u − y < 0 → F < S → BACKWARDATION (futures taniej niż spot)
 ```
 
 Contango to sytuacja, w której kontrakty terminowe są droższe od ceny spot, a im dalszy termin, tym drożej; krzywa rośnie. Dominuje tam, gdzie koszt finansowania i magazynowania przeważa, a więc dla wielu surowców w spokojnych warunkach podaży. Backwardation to odwrotność: futures tańsze od spot, krzywa opada. Pojawia się, gdy premia za posiadanie fizyczne jest wysoka, typowo przy napięciu podażowym, gdy rynek płaci za natychmiastowy dostęp do towaru.
@@ -98,14 +98,14 @@ Kontrakt terminowy wygasa. Kto chce utrzymać ekspozycję dłużej niż jeden te
 
 ```
 CONTANGO: krzywa rosnąca (przykład ilustracyjny, spot = 100 niezmienny)
-kontrakt bliski (wygasa):   100
+kontrakt bliski (wygasa): 100
 kontrakt daleki (następny): 104
 rolowanie: sprzedaj bliski po 100, kup daleki po 104
 przy stałym spot daleki dąży 104 → 100, roll yield UJEMNY (ok. −4)
 
 BACKWARDATION: krzywa opadająca (spot = 100 niezmienny)
-kontrakt bliski (wygasa):   100
-kontrakt daleki (następny):  96
+kontrakt bliski (wygasa): 100
+kontrakt daleki (następny): 96
 rolowanie: sprzedaj bliski po 100, kup daleki po 96
 przy stałym spot daleki dąży 96 → 100, roll yield DODATNI (ok. +4)
 ```
@@ -120,9 +120,9 @@ Rozumowanie opiera się na tym, kto naturalnie potrzebuje zabezpieczenia. Produc
 
 ```
 UWAGA na dwa znaczenia tego samego słowa:
-backwardation (rynkowa)  = F < S       (dziś, kształt krzywej)
-normalna backwardation   = F < E[S_T]  (Keynes: futures < oczekiwany spot)
-                                         premia za ryzyko dla spekulanta
+backwardation (rynkowa) = F < S (dziś, kształt krzywej)
+normalna backwardation = F < E[S_T] (Keynes: futures < oczekiwany spot)
+ premia za ryzyko dla spekulanta
 ```
 
 W skrócie: zabezpieczający płacą spekulantom za przejęcie ryzyka, a ta zapłata ma postać ceny terminowej z wbudowaną premią. Hipoteza jest wpływowa i sporna; opisuje mechanizm, a nie gwarancję, bo w praktyce strona zabezpieczająca bywa też długa, na przykład linie lotnicze zabezpieczające koszt paliwa, co może odwracać znak premii.

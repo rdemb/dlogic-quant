@@ -20,7 +20,7 @@ Najbardziej kuszący moment w badaniu strategii pojawia się wtedy, gdy dane są
 
 Właśnie wtedy research może zostać statystycznie zużyty, zanim formalnie się rozpocznie.
 
-Każdy obejrzany rezultat wpływa na następną decyzję. Jeżeli po słabym wyniku zmienimy feature, po niestabilnym miesiącu przesuniemy sesję, a po wysokich kosztach wybierzemy inny instrument, test przestaje być niezależną oceną wcześniej postawionej hipotezy. Staje się częścią procesu poszukiwania — nawet jeśli w kodzie nadal nazywa się `validation` albo `test`.
+Każdy obejrzany rezultat wpływa na następną decyzję. Jeżeli po słabym wyniku zmienimy feature, po niestabilnym miesiącu przesuniemy sesję, a po wysokich kosztach wybierzemy inny instrument, test przestaje być niezależną oceną wcześniej postawionej hipotezy. Staje się częścią procesu poszukiwania - nawet jeśli w kodzie nadal nazywa się `validation` albo `test`.
 
 Dlatego pierwszy poważny pakiet researchu alfy w obecnym D-LOGIC został zaprojektowany tak, aby **nie zaczynał się od treningu modelu**. Jego zadaniem jest zamrożenie podłoża, na którym późniejszy eksperyment będzie mógł zostać przeprowadzony bez cichego dopisywania reguł po zobaczeniu wyniku.
 
@@ -42,30 +42,30 @@ Nie publikuję dokładnego rejestru informacji, reguł dostępności ani prywatn
 
 <figure>
 <svg viewBox="0 0 980 430" role="img" aria-labelledby="freeze-title freeze-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="freeze-title">Siedem bram przed pierwszym modelem</title>
-  <desc id="freeze-desc">Dane, czas, target, koszty, baseline, podział i budżet prób muszą zostać zamrożone przed treningiem.</desc>
-  <defs><marker id="a2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--acc)"/></marker></defs>
-  <path d="M72 213 H900" stroke="var(--mut)" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#a2)"/>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif" text-anchor="middle">
-    <rect x="34" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
-    <rect x="166" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
-    <rect x="298" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
-    <rect x="430" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
-    <rect x="562" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
-    <rect x="694" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
-    <rect x="826" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
-    <text x="92" y="145" font-size="15" font-weight="700" fill="var(--ink)">DANE</text><text x="92" y="173" font-size="12" fill="var(--mut)">provenance</text><text x="92" y="192" font-size="12" fill="var(--mut)">jakość</text>
-    <text x="224" y="145" font-size="15" font-weight="700" fill="var(--ink)">CZAS</text><text x="224" y="173" font-size="12" fill="var(--mut)">available-at</text><text x="224" y="192" font-size="12" fill="var(--mut)">point-in-time</text>
-    <text x="356" y="145" font-size="15" font-weight="700" fill="var(--ink)">TARGET</text><text x="356" y="173" font-size="12" fill="var(--mut)">wykonalny</text><text x="356" y="192" font-size="12" fill="var(--mut)">po decyzji</text>
-    <text x="488" y="145" font-size="15" font-weight="700" fill="var(--ink)">KOSZTY</text><text x="488" y="173" font-size="12" fill="var(--mut)">spread</text><text x="488" y="192" font-size="12" fill="var(--mut)">slippage</text>
-    <text x="620" y="145" font-size="15" font-weight="700" fill="var(--ink)">BASELINE</text><text x="620" y="173" font-size="12" fill="var(--mut)">prosty</text><text x="620" y="192" font-size="12" fill="var(--mut)">do pobicia</text>
-    <text x="752" y="145" font-size="15" font-weight="700" fill="var(--ink)">PODZIAŁ</text><text x="752" y="173" font-size="12" fill="var(--mut)">purge</text><text x="752" y="192" font-size="12" fill="var(--mut)">holdout</text>
-    <text x="884" y="145" font-size="15" font-weight="700" fill="var(--ink)">BUDŻET</text><text x="884" y="173" font-size="12" fill="var(--mut)">power</text><text x="884" y="192" font-size="12" fill="var(--mut)">liczba prób</text>
-  </g>
-  <rect x="330" y="300" width="320" height="76" rx="15" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
-  <text x="490" y="333" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="20" font-weight="700" fill="var(--ink)">DOPIERO TERAZ: MODEL</text>
-  <text x="490" y="359" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">złożoność jest ostatnią decyzją, nie pierwszą</text>
-  <path d="M490 220 V292" stroke="var(--dn)" stroke-width="3" marker-end="url(#a2)"/>
+ <title id="freeze-title">Siedem bram przed pierwszym modelem</title>
+ <desc id="freeze-desc">Dane, czas, target, koszty, baseline, podział i budżet prób muszą zostać zamrożone przed treningiem.</desc>
+ <defs><marker id="a2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--acc)"/></marker></defs>
+ <path d="M72 213 H900" stroke="var(--mut)" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#a2)"/>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif" text-anchor="middle">
+ <rect x="34" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
+ <rect x="166" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
+ <rect x="298" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
+ <rect x="430" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
+ <rect x="562" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
+ <rect x="694" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
+ <rect x="826" y="108" width="116" height="112" rx="13" fill="var(--soft)" stroke="var(--acc)" stroke-width="2"/>
+ <text x="92" y="145" font-size="15" font-weight="700" fill="var(--ink)">DANE</text><text x="92" y="173" font-size="12" fill="var(--mut)">provenance</text><text x="92" y="192" font-size="12" fill="var(--mut)">jakość</text>
+ <text x="224" y="145" font-size="15" font-weight="700" fill="var(--ink)">CZAS</text><text x="224" y="173" font-size="12" fill="var(--mut)">available-at</text><text x="224" y="192" font-size="12" fill="var(--mut)">point-in-time</text>
+ <text x="356" y="145" font-size="15" font-weight="700" fill="var(--ink)">TARGET</text><text x="356" y="173" font-size="12" fill="var(--mut)">wykonalny</text><text x="356" y="192" font-size="12" fill="var(--mut)">po decyzji</text>
+ <text x="488" y="145" font-size="15" font-weight="700" fill="var(--ink)">KOSZTY</text><text x="488" y="173" font-size="12" fill="var(--mut)">spread</text><text x="488" y="192" font-size="12" fill="var(--mut)">slippage</text>
+ <text x="620" y="145" font-size="15" font-weight="700" fill="var(--ink)">BASELINE</text><text x="620" y="173" font-size="12" fill="var(--mut)">prosty</text><text x="620" y="192" font-size="12" fill="var(--mut)">do pobicia</text>
+ <text x="752" y="145" font-size="15" font-weight="700" fill="var(--ink)">PODZIAŁ</text><text x="752" y="173" font-size="12" fill="var(--mut)">purge</text><text x="752" y="192" font-size="12" fill="var(--mut)">holdout</text>
+ <text x="884" y="145" font-size="15" font-weight="700" fill="var(--ink)">BUDŻET</text><text x="884" y="173" font-size="12" fill="var(--mut)">power</text><text x="884" y="192" font-size="12" fill="var(--mut)">liczba prób</text>
+ </g>
+ <rect x="330" y="300" width="320" height="76" rx="15" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
+ <text x="490" y="333" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="20" font-weight="700" fill="var(--ink)">DOPIERO TERAZ: MODEL</text>
+ <text x="490" y="359" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,sans-serif" font-size="13" fill="var(--mut)">złożoność jest ostatnią decyzją, nie pierwszą</text>
+ <path d="M490 220 V292" stroke="var(--dn)" stroke-width="3" marker-end="url(#a2)"/>
 </svg>
 <figcaption>Każda brama ogranicza inną drogę, przez którą przyszła informacja, niewykonalny target albo data snooping mogłyby stworzyć pozorną przewagę.</figcaption>
 </figure>
@@ -148,4 +148,4 @@ Właśnie dlatego pierwszy model zaczyna się przed modelem.
 
 Zaczyna się w chwili, gdy badacz zamyka sobie drogi ucieczki przed własnym wynikiem.
 
-<div class="lab-archive"><strong>Status źródłowy:</strong> tekst opisuje aktualny projekt pakietu A01 — metodologię przygotowania pierwszego prerejestrowanego researchu alfy. Pakiet nie jest wynikiem modelowym, nie otwiera holdoutu, nie dowodzi przewagi i nie autoryzuje egzekucji. Prywatne definicje targetów, cech, kosztów i kryteriów promocji nie zostały ujawnione.</div>
+<div class="lab-archive"><strong>Status źródłowy:</strong> tekst opisuje aktualny projekt pakietu A01 - metodologię przygotowania pierwszego prerejestrowanego researchu alfy. Pakiet nie jest wynikiem modelowym, nie otwiera holdoutu, nie dowodzi przewagi i nie autoryzuje egzekucji. Prywatne definicje targetów, cech, kosztów i kryteriów promocji nie zostały ujawnione.</div>

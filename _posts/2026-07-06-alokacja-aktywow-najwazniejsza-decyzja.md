@@ -43,10 +43,10 @@ Na marginesie pracy warto odnotować rzecz często pomijaną: w badanej próbce 
 Nieporozumienie urosło do tego stopnia, że w 2000 roku Roger Ibbotson i Paul Kaplan opublikowali w Financial Analysts Journal pracę pod tytułem będącym pytaniem: "Does Asset Allocation Policy Explain 40, 90, or 100 Percent of Performance?". Odpowiedź brzmi: zależy, o co dokładnie pytasz, bo pod hasłem "ile znaczy alokacja" kryją się trzy różne pytania i trzy różne liczby.
 
 ```
-Pytanie                                             Odpowiedź    Miara
-Ile wahań funduszu W CZASIE wyjaśnia polityka?      ok. 90%      R² regresji szeregów czasowych
-Ile RÓŻNIC MIĘDZY funduszami wyjaśnia polityka?     ok. 40%      R² regresji przekrojowej
-Jaką część POZIOMU zwrotu dostarcza polityka?       ok. 100%     zwrot polityki / zwrot faktyczny
+Pytanie Odpowiedź Miara
+Ile wahań funduszu W CZASIE wyjaśnia polityka? ok. 90% R² regresji szeregów czasowych
+Ile RÓŻNIC MIĘDZY funduszami wyjaśnia polityka? ok. 40% R² regresji przekrojowej
+Jaką część POZIOMU zwrotu dostarcza polityka? ok. 100% zwrot polityki / zwrot faktyczny
 ```
 
 Pierwsza liczba to potwierdzenie wyniku z 1986 roku na świeższych danych funduszy mieszanych i emerytalnych: około 90% zmienności zwrotów typowego funduszu w czasie wyjaśnia jego polityka. Ibbotson i Kaplan dodali niuans, który dodatkowo studzi marketing: ten wysoki R kwadrat bierze się głównie z samego faktu bycia na rynku, a nie z konkretnej proporcji. Fundusze o całkiem różnych politykach i tak chodzą podobnie, bo wszystkie jadą na tych samych szerokich rynkach akcji i obligacji.
@@ -70,8 +70,8 @@ Skoro alokacja ustawia profil portfela, potrzebna jest wiedza, co poszczególne 
 ```
 Zwroty realne (po inflacji), średniorocznie, lata 1900-2025:
 
-akcje globalnie              ok. 6,6% rocznie
-obligacje                    ok. 1,6% rocznie
+akcje globalnie ok. 6,6% rocznie
+obligacje ok. 1,6% rocznie
 ```
 
 Dwie rzeczy z tego zestawienia są ważniejsze niż same liczby. Po pierwsze, różnica rzędu kilku punktów procentowych rocznie, składana procentem przez dekady, tworzy przepaść w wyniku końcowym: to jest premia za ryzyko akcji i to ona jest głównym silnikiem długoterminowych portfeli. Po drugie, premia nie jest rentą wypłacaną co miesiąc. W 126 latach danych zdarzały się wieloletnie okresy, w których akcje realnie nie zarabiały nic albo traciły, i to na wielu rynkach naraz. Premia jest zapłatą właśnie za gotowość przetrwania takich posuch. Kto ich nie przetrwa, ten premii nie odbierze.

@@ -36,10 +36,10 @@ Reguła Taylora (Taylor 1993), zapis poglądowy:
 
 i = r* + π + 0.5·(π − π*) + 0.5·luka_produktowa
 
-i    stopa nominalna banku centralnego
-r*   neutralna stopa realna (Taylor przyjął 2%)
-π    bieżąca inflacja
-π*   cel inflacyjny (Taylor przyjął 2%)
+i stopa nominalna banku centralnego
+r* neutralna stopa realna (Taylor przyjął 2%)
+π bieżąca inflacja
+π* cel inflacyjny (Taylor przyjął 2%)
 
 łączny współczynnik przy inflacji > 1 (tu 1,5):
 gdy inflacja rośnie o 1 pkt, stopa nominalna rośnie o 1,5 pkt,
@@ -55,60 +55,60 @@ Zmiana stopy nie działa jednym przewodem. Podręcznikowa taksonomia, którą up
 ```
 Kanały transmisji (porządek w ujęciu Mishkina):
 
-stopa rynkowa   →  koszt kredytu i premia za oszczędzanie
-kredyt          →  podaż kredytu bankowego, bilanse firm i gospodarstw
-kurs walutowy   →  ceny eksportu i importu, konkurencyjność
-ceny aktywów    →  majątek, wartość zabezpieczeń, skłonność do wydatków
-oczekiwania     →  decyzje cenowe, płacowe i inwestycyjne
+stopa rynkowa → koszt kredytu i premia za oszczędzanie
+kredyt → podaż kredytu bankowego, bilanse firm i gospodarstw
+kurs walutowy → ceny eksportu i importu, konkurencyjność
+ceny aktywów → majątek, wartość zabezpieczeń, skłonność do wydatków
+oczekiwania → decyzje cenowe, płacowe i inwestycyjne
 ```
 
 Kanał kredytowy zasługuje na osobne zdanie. Bernanke i Gertler (1995) opisali go jako czarną skrzynkę, w której polityka pieniężna działa nie tylko przez cenę pieniądza, lecz przez zdolność kredytową: wyższe stopy psują bilanse i obniżają wartość zabezpieczeń, przez co banki pożyczają ostrożniej, a słabsze firmy tracą dostęp do finansowania. Ten mechanizm, nazwany finansowym akceleratorem, tłumaczy, dlaczego skutki decyzji bywają większe i bardziej nierówne, niż sugerowałby sam ruch stopy. Kanały działają z opóźnieniem liczonym w kwartałach, co jest jedną z trudności polityki: bank reaguje dziś na inflację, którą realnie schłodzi dopiero za kilka kwartałów.
 
 <figure>
 <svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schemat kanałów transmisji polityki pieniężnej: stopa referencyjna w centrum i pięć równoległych kanałów transmisji" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-  <defs>
-    <marker id="dl-tx-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="currentColor" opacity="0.6"/>
-    </marker>
-  </defs>
+ <defs>
+ <marker id="dl-tx-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+ <path d="M0,0 L10,5 L0,10 z" fill="currentColor" opacity="0.6"/>
+ </marker>
+ </defs>
 
-  <circle cx="150" cy="220" r="92" fill="none" stroke="currentColor" stroke-width="1" opacity="0.10"/>
-  <circle cx="150" cy="220" r="78" fill="none" stroke="currentColor" stroke-width="1" opacity="0.16"/>
+ <circle cx="150" cy="220" r="92" fill="none" stroke="currentColor" stroke-width="1" opacity="0.10"/>
+ <circle cx="150" cy="220" r="78" fill="none" stroke="currentColor" stroke-width="1" opacity="0.16"/>
 
-  <g fill="none" stroke="currentColor" stroke-width="2" stroke-opacity="0.4" marker-end="url(#dl-tx-arrow)">
-    <path d="M214 220 Q 332 220 430 58"/>
-    <path d="M214 220 Q 332 220 430 139"/>
-    <path d="M214 220 Q 332 220 430 220"/>
-    <path d="M214 220 Q 332 220 430 301"/>
-    <path d="M214 220 Q 332 220 430 382"/>
-  </g>
+ <g fill="none" stroke="currentColor" stroke-width="2" stroke-opacity="0.4" marker-end="url(#dl-tx-arrow)">
+ <path d="M214 220 Q 332 220 430 58"/>
+ <path d="M214 220 Q 332 220 430 139"/>
+ <path d="M214 220 Q 332 220 430 220"/>
+ <path d="M214 220 Q 332 220 430 301"/>
+ <path d="M214 220 Q 332 220 430 382"/>
+ </g>
 
-  <g>
-    <rect x="440" y="30" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
-    <text x="458" y="54" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Stopy rynkowe</text>
-    <text x="458" y="73" font-size="11.5" fill="currentColor" opacity="0.55">koszt kredytu i premia za oszczędzanie</text>
+ <g>
+ <rect x="440" y="30" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
+ <text x="458" y="54" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Stopy rynkowe</text>
+ <text x="458" y="73" font-size="11.5" fill="currentColor" opacity="0.55">koszt kredytu i premia za oszczędzanie</text>
 
-    <rect x="440" y="111" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
-    <text x="458" y="135" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Kredyt</text>
-    <text x="458" y="154" font-size="11.5" fill="currentColor" opacity="0.55">podaż kredytu, bilanse firm i gospodarstw</text>
+ <rect x="440" y="111" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
+ <text x="458" y="135" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Kredyt</text>
+ <text x="458" y="154" font-size="11.5" fill="currentColor" opacity="0.55">podaż kredytu, bilanse firm i gospodarstw</text>
 
-    <rect x="440" y="192" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
-    <text x="458" y="216" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Kurs walutowy</text>
-    <text x="458" y="235" font-size="11.5" fill="currentColor" opacity="0.55">ceny eksportu i importu, konkurencyjność</text>
+ <rect x="440" y="192" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
+ <text x="458" y="216" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Kurs walutowy</text>
+ <text x="458" y="235" font-size="11.5" fill="currentColor" opacity="0.55">ceny eksportu i importu, konkurencyjność</text>
 
-    <rect x="440" y="273" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
-    <text x="458" y="297" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Ceny aktywów</text>
-    <text x="458" y="316" font-size="11.5" fill="currentColor" opacity="0.55">majątek, wartość zabezpieczeń, wydatki</text>
+ <rect x="440" y="273" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
+ <text x="458" y="297" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Ceny aktywów</text>
+ <text x="458" y="316" font-size="11.5" fill="currentColor" opacity="0.55">majątek, wartość zabezpieczeń, wydatki</text>
 
-    <rect x="440" y="354" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
-    <text x="458" y="378" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Oczekiwania</text>
-    <text x="458" y="397" font-size="11.5" fill="currentColor" opacity="0.55">decyzje cenowe, płacowe i inwestycyjne</text>
-  </g>
+ <rect x="440" y="354" width="296" height="56" rx="9" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.18"/>
+ <text x="458" y="378" font-size="15" font-weight="600" fill="currentColor" opacity="0.85">Oczekiwania</text>
+ <text x="458" y="397" font-size="11.5" fill="currentColor" opacity="0.55">decyzje cenowe, płacowe i inwestycyjne</text>
+ </g>
 
-  <circle cx="150" cy="220" r="64" fill="#0b66c3"/>
-  <text x="150" y="214" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Stopa</text>
-  <text x="150" y="234" text-anchor="middle" font-size="13.5" fill="#ffffff" opacity="0.92">referencyjna</text>
-  <text x="150" y="306" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.5">impuls polityki</text>
+ <circle cx="150" cy="220" r="64" fill="#0b66c3"/>
+ <text x="150" y="214" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Stopa</text>
+ <text x="150" y="234" text-anchor="middle" font-size="13.5" fill="#ffffff" opacity="0.92">referencyjna</text>
+ <text x="150" y="306" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.5">impuls polityki</text>
 </svg>
 <figcaption>Schemat rozchodzenia się impulsu polityki pieniężnej: od jednej stopy referencyjnej do pięciu równoległych kanałów transmisji. Strzałki pokazują, jak decyzja dociera do gospodarki naraz kilkoma drogami, w porządku ujętym przez Mishkina.</figcaption>
 </figure>
@@ -127,8 +127,8 @@ Dekompozycja ruchu stopy (za Kuttnerem 2001):
 zmiana stopy = część oczekiwana + niespodzianka
 
 reakcja stóp rynkowych:
-   na część oczekiwaną  →  słaba (już wyceniona)
-   na niespodziankę      →  silna
+ na część oczekiwaną → słaba (już wyceniona)
+ na niespodziankę → silna
 ```
 
 Gürkaynak, Sack i Swanson (2005) rozszerzyli ten obraz, pokazując, że komunikat banku niesie dwie osobne niespodzianki: o bieżącej stopie oraz o przyszłej ścieżce, i że ta druga, czyli forward guidance, potrafi ruszać rynkiem mocniej niż sama decyzja o poziomie. Stąd waga słów. Blinder i współautorzy (2008) w przeglądzie badań nad komunikacją banków centralnych argumentują, że komunikacja stała się pełnoprawnym narzędziem polityki, bo kształtuje oczekiwania, a przez oczekiwania biegnie duża część transmisji. Wniosek jest czysto opisowy: skoro kalendarz posiedzeń jest znany, a konsensus co do samej decyzji zwykle też, to elementem, który przesuwa wycenę, bywa zaskoczenie i ton komunikatu, nie sam fakt zmiany.

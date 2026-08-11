@@ -31,10 +31,10 @@ Stąd bierze się mechanika, przez którą jedna strategia raz zarabia, raz trac
 Do intuicji wystarczą trzy stany. Każdy ma inny podpis statystyczny, i to podpis, a nie nazwa, decyduje o tym, co w nim działa.
 
 ```
-Reżim    Zmienność     Autokorelacja        Dryf         Co zwykle działa
-trend    umiarkowana   dodatnia (momentum)  kierunkowy   podążanie za trendem
-zakres   niska         ujemna (rewersja)    brak         powrót do średniej / fade
-kryzys   wysoka        niestabilna          chaotyczny   redukcja ryzyka / bez pozycji
+Reżim Zmienność Autokorelacja Dryf Co zwykle działa
+trend umiarkowana dodatnia (momentum) kierunkowy podążanie za trendem
+zakres niska ujemna (rewersja) brak powrót do średniej / fade
+kryzys wysoka niestabilna chaotyczny redukcja ryzyka / bez pozycji
 ```
 
 W trendzie zmienność jest umiarkowana i stabilna, wybicia się utrzymują, a zwroty wykazują dodatnią autokorelację na horyzoncie strategii. Zarabia tu momentum i podążanie za trendem, a fade oraz gra na powrót do średniej systematycznie krwawi, bo obstawia odwrócenie, które nie nadchodzi.
@@ -60,10 +60,10 @@ GARCH(1,1) mówi, że dzisiejsza wariancja warunkowa jest ważoną sumą stałej
 ```
 σ²_t = ω + α·ε²_{t-1} + β·σ²_{t-1}
 
-σ²_t     = wariancja warunkowa na dziś
+σ²_t = wariancja warunkowa na dziś
 ε²_{t-1} = kwadrat wczorajszej niespodzianki w zwrocie
 σ²_{t-1} = wczorajsza wariancja warunkowa
-ω, α, β  = parametry (α + β blisko 1 = zmienność bardzo uporczywa)
+ω, α, β = parametry (α + β blisko 1 = zmienność bardzo uporczywa)
 ```
 
 Czyta się to tak: α mówi, jak mocno świeży szok wchodzi w zmienność, a β mówi, jak długo zmienność pamięta samą siebie. Gdy suma α + β jest bliska jedności, wybuch zmienności opada powoli, co jest dokładnie tym zjawiskiem, w którym kryzys „się rozlewa" i utrzymuje przez wiele dni.
@@ -75,10 +75,10 @@ Tu leży kluczowy kontrast z dalszą częścią. GARCH podaje ciągły poziom zm
 Ukryty model Markowa (HMM) zakłada, że istnieje stan `s_t`, czyli reżim, którego nie widać wprost. Każdy stan „emituje" obserwacje (zwroty, zmienność zrealizowaną) losowane z rozkładu przypisanego do tego stanu. Sam stan zmienia się jak łańcuch Markowa: następny stan zależy wyłącznie od bieżącego, przez macierz przejść.
 
 ```
-stan ukryty:  s_t ∈ {1, ..., K}          np. {spokój, trend, kryzys}
-przejścia:    P(s_t = j | s_{t-1} = i) = A[i,j]     macierz przejść
-emisje:       P(o_t | s_t = i)                       rozkład obserwacji w stanie i
-Markow:       P(s_t | cała przeszłość) = P(s_t | s_{t-1})
+stan ukryty: s_t ∈ {1, ..., K} np. {spokój, trend, kryzys}
+przejścia: P(s_t = j | s_{t-1} = i) = A[i,j] macierz przejść
+emisje: P(o_t | s_t = i) rozkład obserwacji w stanie i
+Markow: P(s_t | cała przeszłość) = P(s_t | s_{t-1})
 ```
 
 Nie widzisz `s_t`. Widzisz strumień obserwacji `o_t` (zwroty i zmienność). Model wnioskuje z tego strumienia rozkład prawdopodobieństwa po stanach, czyli szacuje, z jaką szansą rynek jest teraz w każdym z reżimów. Rozkłady emisji mogą być wielowymiarowe: nie tylko zwrot, ale i zmienność czy skos. To właśnie pozwala rozdzielić trend od zakresu (oba bywają spokojne, różni je dryf i znak autokorelacji) oraz oba od kryzysu (który zdradza się przede wszystkim wariancją).
@@ -120,9 +120,9 @@ Do ekonomii i finansów przyniósł to Hamilton (1989) jako Markov regime switch
 Rabiner porządkuje całą maszynerię w trzy problemy, i warto je znać, bo każdy odpowiada na inne praktyczne pytanie.
 
 ```
-1. Ocena:      P(obserwacje | model)              algorytm forward
-2. Dekodowanie: najbardziej prawdopodobny stan     Viterbi / forward-backward
-3. Uczenie:    estymacja A oraz rozkładów emisji   Baum-Welch (EM)
+1. Ocena: P(obserwacje | model) algorytm forward
+2. Dekodowanie: najbardziej prawdopodobny stan Viterbi / forward-backward
+3. Uczenie: estymacja A oraz rozkładów emisji Baum-Welch (EM)
 ```
 
 Ocena pyta, jak bardzo prawdopodobny jest zaobserwowany ciąg przy danym modelu. Służy do porównywania modeli i do sprawdzenia, czy dane w ogóle pasują do założonej struktury reżimów.
@@ -142,9 +142,9 @@ Two Sigma opisało podejście do reżimów oparte na mieszance rozkładów Gauss
 Różnica jest jednym słowem: pamięć. GMM przypisuje każdą obserwację niezależnie, więc etykieta może migotać z świecy na świecę. HMM dokłada dokładnie to, czego GMM nie ma, czyli lepkość w czasie przez macierz przejść. Struktura Markowa mówi „skoro wczoraj byłeś w stanie spokojnym, dziś prawdopodobnie nadal w nim jesteś", co wygładza etykietowanie i odpowiada empirycznej lepkości reżimów.
 
 ```
-GARCH   ciągła intensywność, bez etykiet     jak dziko jest teraz
-GMM     dyskretne skupienia, bez pamięci     jakie są reżimy i jak wyglądają
-HMM     dyskretne stany z macierzą przejść   w którym stanie jesteś teraz
+GARCH ciągła intensywność, bez etykiet jak dziko jest teraz
+GMM dyskretne skupienia, bez pamięci jakie są reżimy i jak wyglądają
+HMM dyskretne stany z macierzą przejść w którym stanie jesteś teraz
 ```
 
 Praktyczny podział jest taki: GMM jest prosty i szybki, dobry do eksploracji („ile jest reżimów i jak wyglądają"), ale jako przełącznik na żywo bywa nerwowy. HMM dokłada przejścia, więc etykiety są bardziej lepkie, a wykrywanie zwrotów bardziej zasadne, kosztem większej liczby parametrów i staranniejszego dopasowania. GARCH nie robi ani jednego, ani drugiego, ale najczyściej opisuje oś intensywności. W realnych układach te warstwy często współpracują: cechy w stylu GARCH karmią GMM albo HMM, którego stany dopiero bramkują strategię.
@@ -156,12 +156,12 @@ Wykrywanie punktów zmiany (changepoint detection) zadaje inne pytanie niż HMM.
 Adams i MacKay (2007) podali metodę bayesowską działającą online (Bayesian Online Changepoint Detection). Centralnym obiektem jest długość biegu (run length) `r_t`, czyli liczba kroków od ostatniej zmiany. Algorytm utrzymuje rozkład prawdopodobieństwa po tej długości, aktualizowany po każdej nowej obserwacji, a funkcja hazardu koduje wcześniejsze przekonanie o tym, jak często zmiany się zdarzają.
 
 ```
-run length:  r_t = liczba kroków od ostatniej zmiany reżimu
-             r_t = r_{t-1} + 1     reżim trwa
-             r_t = 0               właśnie nastąpiła zmiana
+run length: r_t = liczba kroków od ostatniej zmiany reżimu
+ r_t = r_{t-1} + 1 reżim trwa
+ r_t = 0 właśnie nastąpiła zmiana
 
-utrzymuj:    P(r_t | dane do t)    rozkład długości bieżącego reżimu
-sygnał:      skok masy na r_t = 0  = prawdopodobny punkt zmiany
+utrzymuj: P(r_t | dane do t) rozkład długości bieżącego reżimu
+sygnał: skok masy na r_t = 0 = prawdopodobny punkt zmiany
 ```
 
 Mechanizm jest intuicyjny. Przy każdej nowej obserwacji model pyta, jak dobrze pasuje ona do parametrów oszacowanych z bieżącego biegu. Jeśli pasuje, długość biegu rośnie, a pewność co do trwającego reżimu się umacnia. Jeśli obserwacja jest skrajnie mało prawdopodobna w świetle bieżącego biegu, masa prawdopodobieństwa przeskakuje na długość zero, sygnalizując, że stary reżim właśnie się skończył.

@@ -27,14 +27,14 @@ Bilans jest migawką: pokazuje stan na jeden konkretny dzień, co spółka ma i 
 ```
 TRZY SPRAWOZDANIA I ICH POWIAZANIA:
 
-  BILANS (stan na dzien)        co spolka MA i komu jest WINNA
-  RACHUNEK WYNIKOW (okres)      ile ZAROBILA wedlug regul ksiegowych
-  PRZEPLYWY PIENIEZNE (okres)   ile GOTOWKI weszlo i wyszlo
+ BILANS (stan na dzien) co spolka MA i komu jest WINNA
+ RACHUNEK WYNIKOW (okres) ile ZAROBILA wedlug regul ksiegowych
+ PRZEPLYWY PIENIEZNE (okres) ile GOTOWKI weszlo i wyszlo
 
-  jak sie spinaja:
-    zysk netto z rachunku wynikow → powieksza kapital wlasny w bilansie
-    saldo przeplywow pienieznych  → zmienia pozycje "gotowka" w bilansie
-    bilans otwarcia + caly okres  → bilans zamkniecia
+ jak sie spinaja:
+ zysk netto z rachunku wynikow → powieksza kapital wlasny w bilansie
+ saldo przeplywow pienieznych → zmienia pozycje "gotowka" w bilansie
+ bilans otwarcia + caly okres → bilans zamkniecia
 ```
 
 Te trzy dokumenty są ze sobą zszyte. Zysk netto z rachunku wyników zasila kapitał własny w bilansie. Saldo przepływów zmienia stan gotówki w bilansie. Bilans na koniec okresu jest bilansem otwarcia następnego. Kto czyta tylko jedno sprawozdanie, ogląda jedną ścianę budynku i wyciąga wnioski o całej konstrukcji. Graham i Dodd w „Security Analysis" (1934, siódme wydanie 2023) ustawili ten nawyk jako fundament zawodu: analiza zaczyna się od sprawozdań, ale nie polega na ich przepisaniu, tylko na odtworzeniu z liczb rzeczywistego biznesu.
@@ -46,16 +46,16 @@ Bilans ma dwie strony, które zawsze się równają. Po lewej aktywa: wszystko, 
 ```
 BILANS (schemat ilustracyjny, liczby przykladowe):
 
-  AKTYWA (co spolka ma)          PASYWA (skad to sfinansowala)
-  gotowka             10         zobowiazania krotkie      25
-  naleznosci          15         dlug dlugoterminowy       30
-  zapasy              15         ────────────────────────────
-  fabryki, maszyny    40         zobowiazania razem        55
-  wartosci niemat.    20         kapital wlasny            45
-  ─────────────────────          ────────────────────────────
-  razem              100         razem                    100
+ AKTYWA (co spolka ma) PASYWA (skad to sfinansowala)
+ gotowka 10 zobowiazania krotkie 25
+ naleznosci 15 dlug dlugoterminowy 30
+ zapasy 15 ────────────────────────────
+ fabryki, maszyny 40 zobowiazania razem 55
+ wartosci niemat. 20 kapital wlasny 45
+ ───────────────────── ────────────────────────────
+ razem 100 razem 100
 
-  kapital wlasny = aktywa minus zobowiazania (bufor na straty)
+ kapital wlasny = aktywa minus zobowiazania (bufor na straty)
 ```
 
 Dwie rzeczy warto widzieć od razu. Pierwsza to płynność pozycji: gotówka jest gotówką, ale fabryka wyceniona na 40 nie zamieni się w 40 gotówki na zawołanie, a zapasy niemodnego towaru potrafią być warte ułamek tego, co mówi księga. Druga to charakter wyceny: bilans w dużej mierze zapisuje koszty historyczne i księgowe konwencje, nie cennik z dzisiejszego rynku. Nieruchomość kupiona dwadzieścia lat temu może być warta wielokrotność zapisu, a wartość firmy z przejęcia (goodwill) może wisieć w aktywach do dnia bolesnego odpisu. Kapitał własny pełni tu tę samą rolę, co w każdym bilansie: jest buforem, który jako pierwszy pochłania straty, i mianownikiem, do którego za chwilę wrócimy przy ROE.
@@ -67,13 +67,13 @@ Rachunek wyników schodzi kaskadą: przychody ze sprzedaży, minus koszty wytwor
 ```
 MEMORIAL KONTRA KASA (przyklad ilustracyjny):
 
-  Spolka sprzedaje towar za 1000, faktura platna za 90 dni.
+ Spolka sprzedaje towar za 1000, faktura platna za 90 dni.
 
-  RACHUNEK WYNIKOW (memorial):   przychod +1000, zysk rosnie DZIS
-  PRZEPLYWY PIENIEZNE (kasa):    gotowka +0, wplynie za 90 dni
-                                 (albo nigdy, jesli klient padnie)
+ RACHUNEK WYNIKOW (memorial): przychod +1000, zysk rosnie DZIS
+ PRZEPLYWY PIENIEZNE (kasa): gotowka +0, wplynie za 90 dni
+ (albo nigdy, jesli klient padnie)
 
-  zysk mozna zaksiegowac; gotowke trzeba dostac
+ zysk mozna zaksiegowac; gotowke trzeba dostac
 ```
 
 Memoriał nie jest oszustwem, jest sensowną konwencją: pozwala przypisać wynik do okresu, w którym powstał. Ale otwiera przestrzeń uznaniowości. Amortyzacja zależy od tego, ile lat życia przypiszesz maszynie. Rezerwy i odpisy to szacunki zarządu. Moment ujęcia przychodu przy kontraktach wieloletnich to decyzja, nie fakt. Do tego dochodzą zdarzenia jednorazowe: sprzedaż nieruchomości albo odwrócenie odpisu potrafi podbić zysk netto kwartału, mówiąc dokładnie nic o sile biznesu. Wszystko legalne, wszystko opisane w notach, ale suma tych decyzji sprawia, że zysk netto jest wypadkową ocen, a nie odczytem z licznika. Stąd powiedzenie, które organizuje całą resztę tego tekstu: zysk to opinia.
@@ -99,18 +99,18 @@ ROE, zwrot z kapitału własnego, to zysk netto podzielony przez kapitał własn
 ```
 DEKOMPOZYCJA DUPONTA (ROE rozlozone na trzy silniki):
 
-  ROE = zysk netto / kapital wlasny
+ ROE = zysk netto / kapital wlasny
 
-      = (zysk netto / przychody)     marza netto
-      x (przychody / aktywa)         rotacja aktywow
-      x (aktywa / kapital wlasny)    dzwignia finansowa
+ = (zysk netto / przychody) marza netto
+ x (przychody / aktywa) rotacja aktywow
+ x (aktywa / kapital wlasny) dzwignia finansowa
 
-  Przyklad ilustracyjny: dwie spolki, obie ROE 15%
-    A: marza 10% x rotacja 0.75 x dzwignia 2.0  = 15%
-    B: marza  3% x rotacja 1.00 x dzwignia 5.0  = 15%
+ Przyklad ilustracyjny: dwie spolki, obie ROE 15%
+ A: marza 10% x rotacja 0.75 x dzwignia 2.0 = 15%
+ B: marza 3% x rotacja 1.00 x dzwignia 5.0 = 15%
 
-  to samo ROE, inna jakosc: A zarabia biznesem,
-  B stoi na dlugu i jest krucha przy kazdym zakrecie
+ to samo ROE, inna jakosc: A zarabia biznesem,
+ B stoi na dlugu i jest krucha przy kazdym zakrecie
 ```
 
 Ta sama liczba na górze, zupełnie inne ryzyko pod spodem. Spółka A ma zwrot z marży i efektywności, spółka B z dźwigni, a dźwignia działa w obie strony: odsetki są stałe, przychody nie, więc niewielki spadek sprzedaży u mocno zadłużonej firmy zjada zysk i kapitał w tempie, którego niezadłużony konkurent w ogóle nie zna. Dlatego obok ROE patrzy się na dług do kapitału własnego: nie po to, żeby dług potępiać, tylko żeby wiedzieć, ile kruchości kupujesz razem ze zwrotem. Ostatni element tej układanki to marże czytane osobno: marża brutto mówi o sile cenowej produktu, operacyjna o dyscyplinie kosztów, netto o tym, co zostaje właścicielom. Trwale wysoka marża to zwykle ślad jakiejś przewagi konkurencyjnej i jednocześnie magnes na konkurencję, więc właściwe pytanie brzmi: co tę marżę chroni i jak długo jeszcze.
@@ -122,21 +122,21 @@ Wszystko powyżej opisuje spółkę. Wycena zadaje następne pytanie: ile to jes
 ```
 DCF W PIGULCE (idea; liczby ilustracyjne):
 
-  wartosc = suma [ CF_t / (1+r)^t ]   dla t = 1, 2, 3, ...
+ wartosc = suma [ CF_t / (1+r)^t ] dla t = 1, 2, 3, ...
 
-  CF_t = wolna gotowka w roku t
-  r    = stopa dyskontowa (wymagany zwrot)
+ CF_t = wolna gotowka w roku t
+ r = stopa dyskontowa (wymagany zwrot)
 
-  Najprostsza wersja (staly wzrost g, wzor Gordona):
-    wartosc = CF / (r - g)
+ Najprostsza wersja (staly wzrost g, wzor Gordona):
+ wartosc = CF / (r - g)
 
-  Wrazliwosc przy CF = 100 rocznie:
-    r = 8%, g = 2%   →  100 / 0.06 = 1667
-    r = 9%, g = 2%   →  100 / 0.07 = 1429    (-14%)
-    r = 8%, g = 3%   →  100 / 0.05 = 2000    (+20%)
+ Wrazliwosc przy CF = 100 rocznie:
+ r = 8%, g = 2% → 100 / 0.06 = 1667
+ r = 9%, g = 2% → 100 / 0.07 = 1429 (-14%)
+ r = 8%, g = 3% → 100 / 0.05 = 2000 (+20%)
 
-  jeden punkt procentowy w zalozeniach przesuwa wycene
-  o kilkanascie do kilkudziesieciu procent
+ jeden punkt procentowy w zalozeniach przesuwa wycene
+ o kilkanascie do kilkudziesieciu procent
 ```
 
 Na tym schemacie widać jednocześnie siłę i słabość metody. Siła: DCF zmusza do jawnych założeń. Zamiast „ta spółka mi się podoba" trzeba powiedzieć, ile gotówki, w jakim tempie wzrostu i przy jakim wymaganym zwrocie, a potem można się o każde z tych założeń uczciwie spierać. McKinsey dokłada do tego rdzeń całego podręcznika: wartość tworzą tylko dwie rzeczy, wzrost i zwrot z zainwestowanego kapitału powyżej kosztu tego kapitału, a wzrost bez odpowiedniego zwrotu wartości nie dodaje, potrafi ją niszczyć. Słabość: wynik trzęsie się od założeń. Jak pokazuje blok wyżej, przesunięcie stopy dyskontowej albo tempa wzrostu o jeden punkt procentowy zmienia wycenę o kilkanaście do kilkudziesięciu procent, a przecież nikt nie zna przyszłych przepływów ani właściwej stopy z taką precyzją. Damodaran powtarza to w swoich materiałach na wiele sposobów: wycena nie jest wyrocznią, jest uporządkowaną opowieścią o biznesie przetłumaczoną na liczby, i lepiej być z grubsza w porządku niż precyzyjnie w błędzie.

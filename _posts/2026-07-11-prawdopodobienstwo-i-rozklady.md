@@ -24,10 +24,10 @@ category: edukacja
 Cała matematyka rynku zaczyna się od jednego pojęcia: zmiennej losowej. To reguła, która wynikowi losowego zdarzenia przypisuje liczbę, na przykład jutrzejszej sesji wartość procentowej zmiany kursu. Rozkład tej zmiennej to pełen opis tego, jak prawdopodobne są poszczególne wartości. Dla wielkości skokowej wystarczy lista prawdopodobieństw, dla wielkości ciągłej, a taką jest zwrot, potrzebna jest gęstość. Gęstość nie podaje prawdopodobieństwa pojedynczej wartości (ono jest zerowe), lecz gęstość szansy wokół niej. Praktyczny sens ma dopiero pole pod krzywą: prawdopodobieństwo, że zwrot wpadnie w dany przedział, to pole pod gęstością nad tym przedziałem, a pole pod całą krzywą z definicji wynosi 1. Ten słownik, zmienna losowa, dystrybuanta, gęstość, jest punktem wyjścia każdego podręcznika rachunku prawdopodobieństwa, w tym klasycznego Rossa "A First Course in Probability".
 
 ```
-Zmienna losowa X              reguła: wynik losowy → liczba
-Dystrybuanta  F(x) = P(X ≤ x)  rośnie od 0 do 1
-Gęstość       f(x) = F'(x)     P(a ≤ X ≤ b) = pole pod f na [a, b]
-Normalizacja  ∫ f(x) dx = 1    pole pod całą krzywą równe 1
+Zmienna losowa X reguła: wynik losowy → liczba
+Dystrybuanta F(x) = P(X ≤ x) rośnie od 0 do 1
+Gęstość f(x) = F'(x) P(a ≤ X ≤ b) = pole pod f na [a, b]
+Normalizacja ∫ f(x) dx = 1 pole pod całą krzywą równe 1
 ```
 
 ## Cztery momenty: środek, rozrzut, asymetria, ogony
@@ -35,10 +35,10 @@ Normalizacja  ∫ f(x) dx = 1    pole pod całą krzywą równe 1
 Skoro rozkład to cała krzywa, potrzebne są liczby, które streszczają jej kształt. Służą do tego momenty. Wartość oczekiwana to środek ciężkości rozkładu, przeciętny wynik w długiej serii losowań. Wariancja mierzy rozrzut wokół tego środka, a jej pierwiastek, odchylenie standardowe, wraca do jednostek oryginalnej wielkości. Dwie kolejne liczby opisują kształt subtelniej. Skośność mówi o asymetrii: rozkład symetryczny ma skośność zero, dodatnia oznacza dłuższy ogon w prawo, ujemna w lewo. Kurtoza mierzy, ile masy siedzi w ogonach w porównaniu ze środkiem. Dla rozkładu normalnego kurtoza wynosi dokładnie 3 i to jest punkt odniesienia, a wartość powyżej 3 (leptokurtoza) oznacza grubsze ogony oraz wyższy, węższy szczyt. Warto zapamiętać jeden warunek: każdy z tych momentów istnieje tylko wtedy, gdy odpowiednia całka jest skończona. To pozornie techniczne zastrzeżenie okaże się kluczowe za dwie sekcje.
 
 ```
-Wartość oczekiwana  μ  = E[X]                środek ciężkości rozkładu
-Wariancja           σ² = E[(X − μ)²]         przeciętny kwadrat odchylenia
-Skośność               = E[(X − μ)³] / σ³    asymetria (0 dla rozkładu symetrycznego)
-Kurtoza                = E[(X − μ)⁴] / σ⁴    masa w ogonach (3 dla rozkładu normalnego)
+Wartość oczekiwana μ = E[X] środek ciężkości rozkładu
+Wariancja σ² = E[(X − μ)²] przeciętny kwadrat odchylenia
+Skośność = E[(X − μ)³] / σ³ asymetria (0 dla rozkładu symetrycznego)
+Kurtoza = E[(X − μ)⁴] / σ⁴ masa w ogonach (3 dla rozkładu normalnego)
 ```
 
 ## Rozkład normalny i dlaczego kusi
@@ -47,12 +47,12 @@ Wśród wszystkich rozkładów normalny zajmuje miejsce uprzywilejowane i nie be
 
 ```
 Gęstość normalna
-  f(x) = 1 / (σ√(2π)) · exp( −(x − μ)² / (2σ²) )
-  opisana dwiema liczbami: μ (środek) oraz σ (szerokość)
+ f(x) = 1 / (σ√(2π)) · exp( −(x − μ)² / (2σ²) )
+ opisana dwiema liczbami: μ (środek) oraz σ (szerokość)
 
 Centralne twierdzenie graniczne (CTG)
-  suma wielu niezależnych składników o skończonej wariancji
-  → rozkład normalny, niezależnie od kształtu składników
+ suma wielu niezależnych składników o skończonej wariancji
+ → rozkład normalny, niezależnie od kształtu składników
 ```
 
 ## Gdzie Gauss zawodzi: grube ogony i prawa potęgowe
@@ -60,11 +60,11 @@ Centralne twierdzenie graniczne (CTG)
 Gdy porówna się krzywą Gaussa z prawdziwym rozkładem zwrotów, rozjazd jest systematyczny i dotyczy ogonów. Ogon rozkładu normalnego opada wykładniczo, czyli zamiera błyskawicznie: ruch o kilka odchyleń standardowych jest pod nim zdarzeniem raz na wiele ludzkich żywotów. W danych takie ruchy wracają co kilka lat. Pierwszy pokazał to Mandelbrot (1963), analizując ceny bawełny: rozkład zmian cen był na tyle "dziki", że dopasował do niego rodzinę rozkładów stabilnych o ogonie potęgowym i indeksie poniżej 2, a taki indeks oznacza nieskończoną wariancję. Późniejsze prace złagodziły ten wniosek. Przeglądy empiryczne, w tym Cont (2001), znajdują indeks ogona zwykle skończony i większy od 2, więc wariancja przeważnie istnieje, choć ogon i tak jest znacznie grubszy niż u Gaussa. Zwroty siedzą gdzieś pomiędzy wygodnym rozkładem normalnym a dzikim rozkładem o nieskończonej wariancji. Empiryczny katalog tych odstępstw opisuje osobny tekst, [stylizowane fakty rynków](/dlogic-quant/2026/07/09/stylizowane-fakty-rynkow-grube-ogony/), a tutaj chodzi o ich matematyczny fundament. Konsekwencje grubych ogonów dla praktyki wielokrotnie podkreślał Taleb (2007): pod takim rozkładem o wyniku decyduje garść skrajnych zdarzeń, a nie spokojna większość obserwacji.
 
 ```
-Ogon normalny opada wykładniczo:  P(X > x) ~ exp(−x² / 2σ²)   bardzo szybko
-Ogon potęgowy opada wolniej:      P(|X| > x) ~ x^(−α)
+Ogon normalny opada wykładniczo: P(X > x) ~ exp(−x² / 2σ²) bardzo szybko
+Ogon potęgowy opada wolniej: P(|X| > x) ~ x^(−α)
 
-α ≤ 2  ⇒  wariancja nieskończona   (Mandelbrot, 1963: ceny bawełny)
-α > 2  ⇒  wariancja istnieje, lecz ogon i tak grubszy niż normalny   (Cont, 2001)
+α ≤ 2 ⇒ wariancja nieskończona (Mandelbrot, 1963: ceny bawełny)
+α > 2 ⇒ wariancja istnieje, lecz ogon i tak grubszy niż normalny (Cont, 2001)
 ```
 
 ## Rozkład t Studenta: grubość ogona na jednej gałce
@@ -74,11 +74,11 @@ Do opisania grubego ogona bez natychmiastowego wpadania w nieskończoną warianc
 ```
 Rozkład t Studenta, parametr ν (liczba stopni swobody)
 
-ν → ∞    zbiega do rozkładu normalnego (ogon cienki)
-ν małe   ogon gruby, potęgowy: P(|X| > x) ~ x^(−ν)
+ν → ∞ zbiega do rozkładu normalnego (ogon cienki)
+ν małe ogon gruby, potęgowy: P(|X| > x) ~ x^(−ν)
 
 wariancja skończona tylko dla ν > 2
-kurtoza  skończona tylko dla ν > 4
+kurtoza skończona tylko dla ν > 4
 przykład: t o ν = 3 ma skończoną wariancję, lecz nieskończoną kurtozę
 ```
 
@@ -92,11 +92,11 @@ przykład: t o ν = 3 ma skończoną wariancję, lecz nieskończoną kurtozę
 Do tej pory mowa była o rozkładzie bezwarunkowym. Rynek dostarcza jednak informacji, a te zmieniają szanse. Prawdopodobieństwo warunkowe to szansa zdarzenia A przy założeniu, że zaszło zdarzenie B, i liczy się je jako iloraz prawdopodobieństwa obu zdarzeń naraz przez prawdopodobieństwo warunku. Twierdzenie Bayesa odwraca ten rachunek i pokazuje, jak zaktualizować przekonanie po nowej obserwacji: przekonanie sprzed informacji (a priori) mnoży się przez to, jak dobrze informacja pasuje do hipotezy, i normuje przez prawdopodobieństwo samej obserwacji. Jedna pułapka wraca tu regularnie, także przy interpretacji sygnałów rynkowych: wynik zależy nie tylko od trafności samego sygnału, lecz również od tego, jak częste było zdarzenie, zanim sygnał się pojawił (częstość bazowa). Pominięcie częstości bazowej to jeden z najczęściej opisywanych błędów rozumowania probabilistycznego, obecny zarówno w podręcznikach (Ross), jak i w literaturze o osądzie pod niepewnością.
 
 ```
-Prawdopodobieństwo warunkowe   P(A | B) = P(A ∩ B) / P(B)
-Twierdzenie Bayesa             P(A | B) = P(B | A) · P(A) / P(B)
+Prawdopodobieństwo warunkowe P(A | B) = P(A ∩ B) / P(B)
+Twierdzenie Bayesa P(A | B) = P(B | A) · P(A) / P(B)
 
-P(A)      przekonanie przed nową informacją (a priori)
-P(A | B)  przekonanie po informacji B (a posteriori)
+P(A) przekonanie przed nową informacją (a priori)
+P(A | B) przekonanie po informacji B (a posteriori)
 ```
 
 ## Prawdopodobieństwo a szanse
@@ -104,13 +104,13 @@ P(A | B)  przekonanie po informacji B (a posteriori)
 Na koniec rozróżnienie, które w mowie potocznej zlewa się w jedno, a w rachunku znaczy co innego: prawdopodobieństwo kontra szanse. Prawdopodobieństwo to liczba z przedziału od 0 do 1 (albo procent). Szanse (angielskie odds) to stosunek prawdopodobieństwa zdarzenia do prawdopodobieństwa jego braku, więc opisują to samo, lecz w innej skali. Prawdopodobieństwo 0,5 to szanse 1 do 1, prawdopodobieństwo 0,8 to szanse 4 do 1, a 0,9 to 9 do 1. Przejście w obie strony jest jednoznaczne, co pokazuje ostatni blok. Rozróżnienie nie jest pedanterią: kursy bukmacherskie i wiele intuicji o ryzyku podaje się w szansach, a mylenie ich z prawdopodobieństwem zniekształca ocenę. Szanse rosną nieliniowo: różnica między prawdopodobieństwem 0,90 a 0,99 to skok z 9 do 1 na 99 do 1, choć samo prawdopodobieństwo urosło tylko o dziewięć setnych.
 
 ```
-Prawdopodobieństwo   p ∈ [0, 1]
-Szanse (odds)        o = p / (1 − p)
-Powrót do p          p = o / (1 + o)
+Prawdopodobieństwo p ∈ [0, 1]
+Szanse (odds) o = p / (1 − p)
+Powrót do p p = o / (1 + o)
 
-p = 0,50  →  szanse 1 do 1
-p = 0,80  →  szanse 4 do 1
-p = 0,90  →  szanse 9 do 1
+p = 0,50 → szanse 1 do 1
+p = 0,80 → szanse 4 do 1
+p = 0,90 → szanse 9 do 1
 ```
 
 Materiał czysto edukacyjny, nie porada inwestycyjna. Powyższe pojęcia opisują język, w którym da się mówić o niepewności precyzyjnie, i nie zawierają żadnej obietnicy przewagi. Pewne jest tu wyłącznie to, co wynika z definicji i twierdzeń rachunku prawdopodobieństwa: rozkład opisuje kształt niepewności, momenty go streszczają, a rozkład normalny jest jednym z wielu rozkładów, wygodnym, lecz na rynku systematycznie zaniżającym wagę zdarzeń skrajnych.

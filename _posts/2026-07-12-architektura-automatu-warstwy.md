@@ -28,12 +28,12 @@ Lekarstwem jest stara zasada inżynierii, separacja odpowiedzialności: każdy f
 ## Pięć warstw, pięć odpowiedzialności
 
 ```
-warstwa      odpowiedzialność                          efekt uboczny
-dane         pobierz i uporządkuj wejście              odczyt (wejście)
-sygnał       dane → decyzja: kup / sprzedaj / nic      żaden (czysta funkcja)
-ryzyko       decyzja + stan → zezwól albo odrzuć       żaden (czysta bramka)
-egzekucja    zlecenie → fill u brokera                 zapis: zlecenia, sieć
-log          zapisz każdą decyzję i zlecenie           zapis: dysk / baza
+warstwa odpowiedzialność efekt uboczny
+dane pobierz i uporządkuj wejście odczyt (wejście)
+sygnał dane → decyzja: kup / sprzedaj / nic żaden (czysta funkcja)
+ryzyko decyzja + stan → zezwól albo odrzuć żaden (czysta bramka)
+egzekucja zlecenie → fill u brokera zapis: zlecenia, sieć
+log zapisz każdą decyzję i zlecenie zapis: dysk / baza
 ```
 
 Klucz jest w prawej kolumnie. Efekty uboczne, czyli sięganie do sieci, zegara, dysku i konta brokera, mają być spchnięte na brzegi: do warstwy danych na wejściu oraz do egzekucji i logu na wyjściu. Środek łańcucha, sygnał i ryzyko, ma być czystym rachunkiem, który nic nie dotyka i niczego nie zmienia. To jedna decyzja projektowa, a odblokowuje testowalność całego systemu.
@@ -45,15 +45,15 @@ Sygnał to serce, o którym wszyscy myślą, i zarazem warstwa, która ma być n
 ```
 # CZYSTA: te same 'dane' zawsze dają tę samą 'decyzję', zero I/O w środku
 def signal(dane) -> Decyzja:
-    # tylko rachunek na 'dane': bez zegara, bez sieci, bez pliku, bez losowania
-    if warunek_wejscia(dane):
-        return Decyzja(kierunek="kup", sila=1.0)
-    return Decyzja(kierunek="nic")
+ # tylko rachunek na 'dane': bez zegara, bez sieci, bez pliku, bez losowania
+ if warunek_wejscia(dane):
+ return Decyzja(kierunek="kup", sila=1.0)
+ return Decyzja(kierunek="nic")
 
 # ANTYWZORZEC: decyzja zależy od ukrytego stanu i wejścia z sieci
 def signal_zle():
-    cena = broker.pobierz_cene()        # I/O w środku: wynik nie do powtórzenia
-    if zegar.teraz().sekunda % 2: ...   # niedeterministyczne: testu brak
+ cena = broker.pobierz_cene() # I/O w środku: wynik nie do powtórzenia
+ if zegar.teraz().sekunda % 2: ... # niedeterministyczne: testu brak
 ```
 
 Po co ten rygor? Bo tylko czystą funkcję da się przetestować w izolacji: podajesz przygotowany kawałek historii, sprawdzasz, czy decyzja jest ta, której oczekujesz, i powtarzasz to tysiąc razy w sekundę bez rynku, bez brokera, bez czekania. Backtest takiej funkcji jest po prostu jej wywołaniem na danych z przeszłości. Chan (2013) pokazuje, że najgroźniejsze błędy backtestu, look-ahead bias i survivorship bias, biorą się właśnie z przecieku: gdy logika sygnału podejrzy dane z przyszłości albo stan, którego w danej chwili nie mogła znać. Czysta funkcja, która dostaje tylko jawnie podany wycinek danych, domyka tę furtkę z definicji.
@@ -64,18 +64,18 @@ Tu jest najczęstszy błąd konstrukcyjny: wpleść zarządzanie ryzykiem w sygn
 
 ```
 def risk_filter(decyzja, stan) -> Zlecenie:
-    # najpierw twarde bramki, wielkość pozycji dopiero na końcu
-    if stan.strata_dnia <= -DZIENNY_LIMIT:      # dzienny limit straty
-        return STOP                             # kill-switch: koniec na dziś
-    if stan.liczba_pozycji >= MAX_POZYCJI:      # limit liczby otwartych pozycji
-        return STOP
-    if stan.ekspozycja >= MAX_EKSPOZYCJI:       # limit łącznej ekspozycji
-        return STOP
-    if decyzja.kierunek == "nic":
-        return STOP
+ # najpierw twarde bramki, wielkość pozycji dopiero na końcu
+ if stan.strata_dnia <= -DZIENNY_LIMIT: # dzienny limit straty
+ return STOP # kill-switch: koniec na dziś
+ if stan.liczba_pozycji >= MAX_POZYCJI: # limit liczby otwartych pozycji
+ return STOP
+ if stan.ekspozycja >= MAX_EKSPOZYCJI: # limit łącznej ekspozycji
+ return STOP
+ if decyzja.kierunek == "nic":
+ return STOP
 
-    wielkosc = min(rozmiar_z_ryzyka(stan), MAX_LOT)   # sizing: ile postawić
-    return Zlecenie(decyzja.kierunek, wielkosc)
+ wielkosc = min(rozmiar_z_ryzyka(stan), MAX_LOT) # sizing: ile postawić
+ return Zlecenie(decyzja.kierunek, wielkosc)
 ```
 
 Ta warstwa jest zwykle ważniejsza niż sam sygnał, bo decyduje o przetrwaniu, a nie o pojedynczym wejściu. López de Prado (2018) rozdziela wprost dwa problemy: w którą stronę grać oraz ile postawić, i pokazuje, że wielkość zakładu jest osobnym modelem, nie doklejką do prognozy. Powód jest arytmetyczny i bezlitosny: strata 50 procent kapitału wymaga potem zysku 100 procent, żeby wrócić do punktu wyjścia. Dlatego dzienny limit straty i kill-switch, który po jego przekroczeniu wygasza handel do końca dnia, chronią przed scenariuszem, w którym seria wpadek albo jeden zepsuty dzień zabiera konto, zanim sygnał w ogóle dostanie szansę się sprawdzić. Sygnał, który się myli, kosztuje jeden trade. Brak bramki ryzyka kosztuje całość.
@@ -86,12 +86,12 @@ Bot działa tygodniami, więc prędzej czy później padnie: restart procesu, ze
 
 ```
 # Źródłem prawdy jest konto u brokera, nie zmienna w pamięci procesu
-stan = broker.pobierz_stan()             # pozycje, zlecenia, saldo od brokera
+stan = broker.pobierz_stan() # pozycje, zlecenia, saldo od brokera
 
 # Każde zlecenie ma powtarzalny identyfikator (idempotency key)
-klucz = klucz_zlecenia(sygnal, czas_bara)   # ten sam sygnał → ten sam klucz
-if not broker.zlecenie_istnieje(klucz):     # sprawdź u brokera, zanim wyślesz
-    broker.zloz(zlecenie, klucz)            # po restarcie nie zdubluje pozycji
+klucz = klucz_zlecenia(sygnal, czas_bara) # ten sam sygnał → ten sam klucz
+if not broker.zlecenie_istnieje(klucz): # sprawdź u brokera, zanim wyślesz
+ broker.zloz(zlecenie, klucz) # po restarcie nie zdubluje pozycji
 ```
 
 Dwie zasady załatwiają większość problemu. Pierwsza: źródłem prawdy jest konto u brokera, nie pamięć procesu. Stan czytamy od brokera na starcie każdej pętli, bo to on wie, co naprawdę jest otwarte. Druga: idempotencja. Każde zlecenie dostaje powtarzalny identyfikator wyliczony z sygnału i czasu bara, a przed wysłaniem bot sprawdza, czy zlecenie o tym kluczu już istnieje. Dzięki temu ta sama decyzja wykonana dwa razy, po restarcie albo po ponowieniu, tworzy jedną pozycję, nie dwie. To ten sam wzorzec, którego systemy płatnicze używają, żeby jedno kliknięcie nie obciążyło karty dwukrotnie.
@@ -109,13 +109,13 @@ Log to nie dodatek na koniec, to warunek, żeby system dało się w ogóle debug
 ```
 # Pętla: jedna odpowiedzialność na krok, stan zawsze świeży od brokera
 while rynek_otwarty():
-    dane     = pobierz_dane()               # 1. DANE
-    stan     = broker.pobierz_stan()        # źródło prawdy, nie pamięć
-    decyzja  = signal(dane)                 # 2. SYGNAŁ  (czysty, testowalny)
-    zlecenie = risk_filter(decyzja, stan)   # 3. RYZYKO  (bramka + sizing)
-    wynik    = execute(zlecenie, stan)      # 4. EGZEKUCJA (poślizg, retry)
-    log(dane, decyzja, zlecenie, wynik)     # 5. LOG (pełny ślad decyzji)
-    czekaj_na_kolejny_bar()
+ dane = pobierz_dane() # 1. DANE
+ stan = broker.pobierz_stan() # źródło prawdy, nie pamięć
+ decyzja = signal(dane) # 2. SYGNAŁ (czysty, testowalny)
+ zlecenie = risk_filter(decyzja, stan) # 3. RYZYKO (bramka + sizing)
+ wynik = execute(zlecenie, stan) # 4. EGZEKUCJA (poślizg, retry)
+ log(dane, decyzja, zlecenie, wynik) # 5. LOG (pełny ślad decyzji)
+ czekaj_na_kolejny_bar()
 ```
 
 Cała architektura mieści się w tej pętli. Każdy krok to osobna funkcja z jedną odpowiedzialnością, a dane płyną w jedną stronę: od danych, przez sygnał i ryzyko, do egzekucji i logu. Taki układ testuje się warstwami: sygnał na historii bez brokera, bramkę ryzyka na wymyślonych stanach konta, egzekucję na atrapie brokera. Nie trzeba uruchamiać całości, żeby sprawdzić kawałek, i to jest praktyczny zysk z separacji.

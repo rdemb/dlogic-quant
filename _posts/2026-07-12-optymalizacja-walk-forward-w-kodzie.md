@@ -67,37 +67,37 @@ W kodzie cała procedura sprowadza się do kilkunastu linii. Kluczowe są cztery
 # WYŁĄCZNIE wyniki out-of-sample.
 
 def walk_forward(dane, siatka, len_train, len_test, embargo=0):
-    oceny_oos = []                       # zbieramy tylko oceny OOS
-    start = 0
-    while start + len_train + embargo + len_test <= len(dane):
+ oceny_oos = [] # zbieramy tylko oceny OOS
+ start = 0
+ while start + len_train + embargo + len_test <= len(dane):
 
-        # 1. podział na okna, bez tasowania: kolejność czasu jest święta
-        train = dane[start : start + len_train]
-        t0    = start + len_train + embargo   # embargo = luka po trainie
-        test  = dane[t0 : t0 + len_test]
+ # 1. podział na okna, bez tasowania: kolejność czasu jest święta
+ train = dane[start : start + len_train]
+ t0 = start + len_train + embargo # embargo = luka po trainie
+ test = dane[t0 : t0 + len_test]
 
-        # 2. strojenie tylko na trainie (grid search po siatce)
-        best_p, best_is = None, float("-inf")
-        for p in siatka:
-            score = ocena(strategia(train, p))    # np. Sharpe in-sample
-            if score > best_is:
-                best_is, best_p = score, p
+ # 2. strojenie tylko na trainie (grid search po siatce)
+ best_p, best_is = None, float("-inf")
+ for p in siatka:
+ score = ocena(strategia(train, p)) # np. Sharpe in-sample
+ if score > best_is:
+ best_is, best_p = score, p
 
-        # 3. ocena wybranych parametrów na NIEWIDZIANYM tescie
-        oceny_oos.append(ocena(strategia(test, best_p)))
+ # 3. ocena wybranych parametrów na NIEWIDZIANYM tescie
+ oceny_oos.append(ocena(strategia(test, best_p)))
 
-        # 4. przesunięcie okna o długość testu i powtórka
-        start += len_test
+ # 4. przesunięcie okna o długość testu i powtórka
+ start += len_test
 
-    # 5. sklejona krzywa OOS to jedyny uczciwy backtest
-    return sklej(oceny_oos)
+ # 5. sklejona krzywa OOS to jedyny uczciwy backtest
+ return sklej(oceny_oos)
 ```
 
 Zmiana na wariant anchored to jedna linia: początek okna zostaje w miejscu, a rośnie tylko jego prawy koniec.
 
 ```
 # Wariant anchored (kotwiczony): trening zawsze od początku historii.
-train = dane[0 : start + len_train]      # zamiast dane[start : ...]
+train = dane[0 : start + len_train] # zamiast dane[start : ...]
 ```
 
 Pętla nie zawiera kosztów transakcyjnych ani poślizgu, a te potrafią zamienić dodatni wynik brutto w ujemny netto. W realnej walidacji funkcja ocena musi liczyć wynik po spreadzie, prowizji i realistycznym wypełnieniu, bo backtest bez kosztów mierzy fantazję, nie strategię.

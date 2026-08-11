@@ -40,8 +40,8 @@ Powód jest statystyczny, nie ideologiczny. Przy niskim stosunku sygnału do szu
 
 ```
 Zanim uwierzysz w model, pobij po kolei:
-1. naiwną persystencję   (prognoza: jutro = dziś)
-2. model liniowy         (regresja na kilku sensownych cechach)
+1. naiwną persystencję (prognoza: jutro = dziś)
+2. model liniowy (regresja na kilku sensownych cechach)
 3. dopiero potem sieć czy transformer ma prawo się liczyć
 ```
 
@@ -58,8 +58,8 @@ Druga warstwa dyscypliny to problem wielokrotnego testowania. Każda dodatkowa p
 Najzdrowsze zastosowanie ML w tradingu odwraca zwykłą intuicję. Zamiast kazać modelowi zgadywać kierunek, dajesz mu do oceny gotowy sygnał. To jest meta-labeling z „Advances in Financial Machine Learning" López de Prado (2018). Architektura ma dwa piętra:
 
 ```
-Model podstawowy (reguła, dyskrecja)  ->  decyduje STRONĘ  (long / short)
-Model wtórny (klasyfikator ML)        ->  decyduje CZY grać i ILE ryzykować (0..1)
+Model podstawowy (reguła, dyskrecja) -> decyduje STRONĘ (long / short)
+Model wtórny (klasyfikator ML) -> decyduje CZY grać i ILE ryzykować (0..1)
 ```
 
 Model podstawowy, na przykład prosta reguła albo decyzja tradera, wyznacza stronę. Model wtórny uczy się tylko jednej rzeczy: które z tych sygnałów są warte zagrania, a które to fałszywe alarmy, i jak duży postawić na nie zakład. ML odpowiada więc na pytanie „z jaką pewnością i za ile", a nie „w którą stronę". To przesunięcie ma trzy zalety. Po pierwsze, jest to problem klasyfikacji z sensowniejszym stosunkiem sygnału do szumu niż surowa prognoza ceny. Po drugie, poprawia precyzję, bo tnie fałszywe pozytywy tam, gdzie reguła podstawowa jest zawodna. Po trzecie, naturalnie łączy się z zarządzaniem ryzykiem, bo wyjście modelu można potraktować jako frakcję wielkości pozycji. To wciąż nie magia, ale to jest dobrze postawione zadanie, a nie próba wywróżenia rynku.

@@ -26,12 +26,12 @@ Optymalizacja to matematyczny zapis pytania, które w praktyce pada bez przerwy:
 Jedna obserwacja upraszcza cały krajobraz. Maksymalizacja dowolnej wielkości to minimalizacja jej przeciwności, więc nie trzeba dwóch osobnych aparatów. Umiejętność minimalizowania wystarcza do wszystkiego, a cała teoria mówi zwykle językiem minimum.
 
 ```
-min  f(x)              funkcja celu (koszt, ryzyko, błąd)
+min f(x) funkcja celu (koszt, ryzyko, błąd)
  x
-przy: g_i(x) ≤ 0       ograniczenia nierównościowe
-      h_j(x) = 0       ograniczenia równościowe
+przy: g_i(x) ≤ 0 ograniczenia nierównościowe
+ h_j(x) = 0 ograniczenia równościowe
 
-maksymalizacja f(x)  =  minimalizacja −f(x)
+maksymalizacja f(x) = minimalizacja −f(x)
 zbiór punktów spełniających ograniczenia = zbiór dopuszczalny
 ```
 
@@ -44,9 +44,9 @@ Dwie konsekwencje są bezpośrednie. Kierunek przeciwny do gradientu to kierunek
 ```
 ∇f(x) = [ ∂f/∂x₁ , ∂f/∂x₂ , ... , ∂f/∂xₙ ]
 
-kierunek  ∇f    → najszybszy wzrost f
-kierunek −∇f    → najszybszy spadek f
-w minimum:  ∇f(x*) = 0        (warunek pierwszego rzędu)
+kierunek ∇f → najszybszy wzrost f
+kierunek −∇f → najszybszy spadek f
+w minimum: ∇f(x*) = 0 (warunek pierwszego rzędu)
 ```
 
 ## Spadek gradientowy: schodzenie krok po kroku
@@ -58,12 +58,12 @@ Dobór długości kroku bywa jednak delikatny. Zbyt duży krok przeskakuje minim
 ```
 xₖ₊₁ = xₖ − α · ∇f(xₖ)
 
-α  = długość kroku (współczynnik uczenia)
-α za duże  → przeskakiwanie minimum, rozbieżność
-α za małe  → zbieżność, ale wolna
+α = długość kroku (współczynnik uczenia)
+α za duże → przeskakiwanie minimum, rozbieżność
+α za małe → zbieżność, ale wolna
 
-przykład f(x) = x²,  ∇f = 2x,  α = 0.25:
-x₀ = 4 → 2 → 1 → 0.5 → 0.25 → ...    (kroki maleją same)
+przykład f(x) = x², ∇f = 2x, α = 0.25:
+x₀ = 4 → 2 → 1 → 0.5 → 0.25 → ... (kroki maleją same)
 ```
 
 <figure>
@@ -80,13 +80,13 @@ Funkcja jest wypukła, jeśli odcinek łączący dowolne dwa punkty jej wykresu 
 Znaczenie tej własności trudno przecenić i formułuje je klasyczny podręcznik Boyda i Vandenberghe (2004): w funkcji wypukłej każde minimum lokalne jest automatycznie minimum globalnym. Konsekwencja praktyczna jest mocna. Gdy problem jest wypukły, procedura schodząca po gradiencie nie może utknąć w gorszym z wielu dołków, bo dołek jest tylko jeden. Znaleziony punkt to rozwiązanie, kropka. Ta gwarancja jest powodem, dla którego w teorii optymalizacji przebiega najważniejsza granica: nie między liniowym a nieliniowym, lecz między wypukłym a niewypukłym.
 
 ```
-f wypukła  ⇔  odcinek łączący dwa punkty wykresu
-              leży nad wykresem:
+f wypukła ⇔ odcinek łączący dwa punkty wykresu
+ leży nad wykresem:
 
-f(λx + (1−λ)y) ≤ λ·f(x) + (1−λ)·f(y),   λ ∈ [0,1]
+f(λx + (1−λ)y) ≤ λ·f(x) + (1−λ)·f(y), λ ∈ [0,1]
 
-dla f dwukrotnie różniczkowalnej:  f''(x) ≥ 0     (jeden wymiar)
-                                   hesjan ⪰ 0     (wiele zmiennych)
+dla f dwukrotnie różniczkowalnej: f''(x) ≥ 0 (jeden wymiar)
+ hesjan ⪰ 0 (wiele zmiennych)
 
 własność kluczowa: w funkcji wypukłej
 każde minimum lokalne JEST minimum globalnym
@@ -99,15 +99,15 @@ Najbardziej znany finansowy przykład problemu wypukłego to optymalizacja portf
 Taki problem ma rozwiązanie w postaci zamkniętej, a narzędziem są mnożniki Lagrange'a: każdemu ograniczeniu przypisuje się mnożnik, dokłada je do funkcji celu i szuka punktu, w którym gradient całości znika. Wychodzi układ równań liniowych, którego rozwiązanie zakreśla granicę efektywną. Kluczowe jest to, co daje tu wypukłość: znaleziony punkt nie jest jednym z wielu kandydatów, lecz globalnym minimum wariancji przy danym zwrocie. Granica efektywna staje się więc obiektem policzalnym i jednoznacznym, opisanym szerzej w materiale o [teorii portfela Markowitza](/dlogic-quant/2026/07/07/teoria-portfela-markowitza-dywersyfikacja/).
 
 ```
-min  ½ · wᵀ Σ w             wariancja portfela (wypukła, bo Σ ⪰ 0)
+min ½ · wᵀ Σ w wariancja portfela (wypukła, bo Σ ⪰ 0)
  w
-przy: wᵀ μ = R              zadany oczekiwany zwrot
-      wᵀ 1 = 1              wagi sumują się do jedności
+przy: wᵀ μ = R zadany oczekiwany zwrot
+ wᵀ 1 = 1 wagi sumują się do jedności
 
 Lagranżjan:
 L(w, λ₁, λ₂) = ½·wᵀΣw − λ₁·(wᵀμ − R) − λ₂·(wᵀ1 − 1)
 
-∂L/∂w = 0  →  Σw = λ₁·μ + λ₂·1     (układ liniowy, rozwiązanie zamknięte)
+∂L/∂w = 0 → Σw = λ₁·μ + λ₂·1 (układ liniowy, rozwiązanie zamknięte)
 ```
 
 To pewność matematyczna, nie inwestycyjna. Wypukłość gwarantuje, że wagi są dokładnie optymalne dla podanej macierzy kowariancji i podanych zwrotów. Nie gwarantuje, że te wejścia są prawdziwe, i właśnie z tej luki bierze się kruchość optymalizacji portfelowej, omówiona w tamtym tekście osobno.
@@ -119,15 +119,15 @@ Wypukłość mówi, że minimum funkcji celu zostanie znalezione dokładnie. Mil
 Standardową odpowiedzią jest regularyzacja: do funkcji celu dokłada się karę rosnącą wraz ze złożonością rozwiązania. Zamiast minimalizować sam błąd, minimalizuje się błąd powiększony o człon karzący duże współczynniki. Kara grzbietowa (ridge, znana też jako regularyzacja Tichonowa) tłumi wszystkie współczynniki, kara lasso dodatkowo zeruje część z nich, upraszczając model. Siłę kary ustawia jeden parametr: im większy, tym prostsze rozwiązanie, kosztem gorszego dopasowania na próbce, ale zwykle lepszego poza nią.
 
 ```
-bez kary:   min  błąd_na_próbce(x)
-             x        → przy nadmiarze parametrów dopasowuje szum
+bez kary: min błąd_na_próbce(x)
+ x → przy nadmiarze parametrów dopasowuje szum
 
-z karą:     min  błąd_na_próbce(x) + λ · kara(x)
-             x
+z karą: min błąd_na_próbce(x) + λ · kara(x)
+ x
 
-kara(x) = ‖x‖²   → grzbietowa (ridge): tłumi wszystkie współczynniki
-kara(x) = ‖x‖₁   → lasso: dodatkowo zeruje część współczynników
-λ  = siła regularyzacji (cena złożoności); λ = 0 znosi karę
+kara(x) = ‖x‖² → grzbietowa (ridge): tłumi wszystkie współczynniki
+kara(x) = ‖x‖₁ → lasso: dodatkowo zeruje część współczynników
+λ = siła regularyzacji (cena złożoności); λ = 0 znosi karę
 ```
 
 Mechanizm ma bliski odpowiednik w finansach. Optymalizator Markowitza, karmiony estymatami z próbki, wzmacnia ich błędy i produkuje skrajne wagi, co bywa nazywane maksymalizacją błędu. To ten sam problem: procedura minimalizuje dokładnie to, co dostała, łącznie z szumem wejść. Dlatego uczciwe strojenie parametrów strategii wymaga oceny poza oknem dopasowania, o czym mówi osobny tekst o [walk-forward i dopasowaniu do szumu](/dlogic-quant/2026/07/12/optymalizacja-walk-forward-w-kodzie/).
@@ -139,9 +139,9 @@ Cała pewność wypukłego świata znika, gdy funkcja celu ma wiele dolin. W pro
 Najgłośniejszym przykładem jest trening sieci neuronowych: funkcja straty jest tam głęboko niewypukła, o ogromnej liczbie parametrów i mnóstwie minimów lokalnych. Praktyka radzi sobie sztuczkami, wielokrotnymi startami i wariantami spadku gradientowego, ale twarda gwarancja globalnego minimum, oczywista w świecie wypukłym, po prostu nie obowiązuje. Dlatego Boyd i Vandenberghe (2004) stawiają wypukłość w centrum: to ona oddziela problemy, które umie się rozwiązać pewnie, od tych, w których trzeba się zadowolić rozwiązaniem dobrym, bez dowodu, że najlepszym.
 
 ```
-wypukła:      jedna dolina   → −∇f zawsze prowadzi do globalnego minimum
-niewypukła:   wiele dolin    → wynik zależy od punktu startowego i ścieżki
-                               (minima lokalne i siodła; np. strata sieci)
+wypukła: jedna dolina → −∇f zawsze prowadzi do globalnego minimum
+niewypukła: wiele dolin → wynik zależy od punktu startowego i ścieżki
+ (minima lokalne i siodła; np. strata sieci)
 ```
 
 ## Co z tego zostaje

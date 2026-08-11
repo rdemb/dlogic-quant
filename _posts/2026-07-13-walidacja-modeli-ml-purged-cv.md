@@ -57,13 +57,13 @@ CPCV, combinatorial purged cross-validation, opisana przez López de Prado (2018
 # Zamiast jednej sciezki OOS powstaje ich wiele.
 sciezki = []
 for combo in kombinacje(bloki_1..N, wybierz=k):
-    test  = polacz(combo)                    # k blokow jako zbior testowy
-    train = pozostale_bloki
-    train = purge(train, wzgledem=test)      # usun nakladajace sie okna
-    train = embargo(train, po=test)          # martwa strefa za testem
-    sciezki.append(ocena(model(train), test))
+ test = polacz(combo) # k blokow jako zbior testowy
+ train = pozostale_bloki
+ train = purge(train, wzgledem=test) # usun nakladajace sie okna
+ train = embargo(train, po=test) # martwa strefa za testem
+ sciezki.append(ocena(model(train), test))
 
-rozklad = zbierz(sciezki)   # patrzysz na mediane i rozrzut, nie na jedna liczbe
+rozklad = zbierz(sciezki) # patrzysz na mediane i rozrzut, nie na jedna liczbe
 ```
 
 Rozkład mówi to, czego pojedynczy przebieg nie powie. Wąski rozrzut wokół przyzwoitej wartości to inna sytuacja niż szeroki rozrzut, w którym ta sama strategia raz wygląda świetnie, raz fatalnie. Trudniej też oszukać samego siebie, bo nie widać jednego wyniku do wypolerowania, tylko całą chmurę, w której skrajny przypadek nie ma już siły dowodu.

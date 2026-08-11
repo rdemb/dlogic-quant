@@ -25,22 +25,22 @@ Za każdą pojedynczą ceną, którą widać na wykresie, stoi struktura znaczni
 Dwie liczby są ważniejsze od reszty. Najlepszy bid to najwyższa cena, po której ktoś w tej chwili chce kupić. Najlepszy ask to najniższa cena, po której ktoś w tej chwili chce sprzedać. Para tych dwóch nazywa się szczytem księgi (top of book) albo dotknięciem (the touch). Ich różnica to spread, a punkt w połowie między nimi to cena środkowa (mid). Poniższy schemat pokazuje to na jednym obrazku.
 
 ```
-KSIĘGA ZLECEŃ EUR/USD   (przykład ilustracyjny, nie dane rzeczywiste)
+KSIĘGA ZLECEŃ EUR/USD (przykład ilustracyjny, nie dane rzeczywiste)
 
-  ASK  oferty sprzedaży, od najniższej ceny w górę
-  cena       wolumen
-  1.08125    4.0 mln
-  1.08124    3.0 mln
-  1.08123    2.5 mln
-  1.08122    1.0 mln    <-- najlepszy ASK
-  ....................    spread = 1.08122 - 1.08120 = 0.00002 = 0.2 pip
-  1.08120    1.5 mln    <-- najlepszy BID
-  1.08119    3.0 mln
-  1.08118    2.0 mln
-  1.08117    5.0 mln
-  BID  oferty kupna, od najwyższej ceny w dół
+ ASK oferty sprzedaży, od najniższej ceny w górę
+ cena wolumen
+ 1.08125 4.0 mln
+ 1.08124 3.0 mln
+ 1.08123 2.5 mln
+ 1.08122 1.0 mln <-- najlepszy ASK
+ .................... spread = 1.08122 - 1.08120 = 0.00002 = 0.2 pip
+ 1.08120 1.5 mln <-- najlepszy BID
+ 1.08119 3.0 mln
+ 1.08118 2.0 mln
+ 1.08117 5.0 mln
+ BID oferty kupna, od najwyższej ceny w dół
 
-  mid = (1.08122 + 1.08120) / 2 = 1.08121
+ mid = (1.08122 + 1.08120) / 2 = 1.08121
 ```
 
 Kilka rzeczy widać od razu. Między najlepszym bidem a najlepszym askiem jest pusta przestrzeń: nikt nie oferuje sprzedaży taniej niż 1.08122 ani kupna drożej niż 1.08120, bo gdyby oferty się nakładały, natychmiast doszłoby do transakcji i przestałyby wisieć w księdze. Wolumeny na kolejnych poziomach bywają nierówne, co odzwierciedla rozkład zainteresowania po obu stronach. A cała ta struktura zmienia się wiele razy na sekundę, bo zlecenia napływają, są anulowane i realizowane. Porządny przegląd definicji i własności ksiąg zleceń dają Gould i współautorzy (2013).

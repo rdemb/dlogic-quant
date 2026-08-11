@@ -1,7 +1,7 @@
 ---
 layout: labpost
 title: "Nieoznaczoność nie jest błędem mikroskopu"
-description: "Zasada Heisenberga nie mówi jedynie, że pomiar potrąca elektron. Opisuje strukturę stanów kwantowych — i nie jest tym samym co twierdzenie Bella ani zakaz wszystkich zmiennych ukrytych."
+description: "Zasada Heisenberga nie mówi jedynie, że pomiar potrąca elektron. Opisuje strukturę stanów kwantowych - i nie jest tym samym co twierdzenie Bella ani zakaz wszystkich zmiennych ukrytych."
 dek: "Możemy zbudować lepszy instrument, lecz nie przygotujemy stanu, w którym położenie i pęd mają jednocześnie dowolnie wąskie rozkłady. To ograniczenie teorii, nie jakość soczewki."
 date: 2026-08-11 17:00:00 +0200
 category: luzne
@@ -21,13 +21,13 @@ Najbardziej znane wyjaśnienie zasady nieoznaczoności przedstawia mikroskop pr�
 
 Ten obraz pochodzi z tradycji samego Heisenberga i nadal ma wartość pedagogiczną. Nie jest jednak pełnym znaczeniem zasady nieoznaczoności.
 
-Gdyby problem polegał wyłącznie na potrącaniu elektronu przez niedoskonałą sondę, moglibyśmy marzyć o instrumencie delikatniejszym, szybszym albo inteligentniej zaprojektowanym. Mechanika kwantowa stawia ograniczenie wcześniej — już na etapie **przygotowania stanu**.
+Gdyby problem polegał wyłącznie na potrącaniu elektronu przez niedoskonałą sondę, moglibyśmy marzyć o instrumencie delikatniejszym, szybszym albo inteligentniej zaprojektowanym. Mechanika kwantowa stawia ograniczenie wcześniej - już na etapie **przygotowania stanu**.
 
 Możemy stworzyć stan, w którym wyniki pomiaru położenia są skupione bardzo wąsko. W tym samym stanie rozkład możliwych wyników pomiaru pędu musi być szeroki. Możemy przygotować niemal określony pęd, ale wtedy stan rozciąga się przestrzennie. Nie jest to opowieść o tym, że elektron zna obie wartości, a niezdarny obserwator nie potrafi ich odczytać bez szkody.
 
 > **Nieoznaczoność opisuje wzajemną geometrię możliwych rozkładów wyników dla jednego stanu kwantowego.**
 
-Pomiar dodaje kolejny problem — wpływ aparatury na układ — lecz nie jest źródłem całego ograniczenia.
+Pomiar dodaje kolejny problem - wpływ aparatury na układ - lecz nie jest źródłem całego ograniczenia.
 
 ## Rozkład, nie pojedyncza pomyłka
 
@@ -51,23 +51,23 @@ Pojedyncza fala sinusoidalna posiada dokładnie określoną długość fali, a w
 
 <figure>
 <svg viewBox="0 0 1040 470" role="img" aria-labelledby="fourier-title fourier-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="fourier-title">Położenie i pęd jako pary Fouriera</title>
-  <desc id="fourier-desc">Wąski pakiet w położeniu odpowiada szerokiemu rozkładowi pędu, a szeroki pakiet położenia odpowiada wąskiemu rozkładowi pędu.</desc>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <rect x="36" y="44" width="968" height="170" rx="18" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <rect x="36" y="256" width="968" height="170" rx="18" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <text x="92" y="80" font-size="18" fill="var(--ink)">STAN A</text><text x="92" y="292" font-size="18" fill="var(--ink)">STAN B</text>
-    <line x1="170" y1="174" x2="500" y2="174" stroke="var(--mut)" stroke-width="2"/><line x1="612" y1="174" x2="942" y2="174" stroke="var(--mut)" stroke-width="2"/>
-    <line x1="170" y1="386" x2="500" y2="386" stroke="var(--mut)" stroke-width="2"/><line x1="612" y1="386" x2="942" y2="386" stroke="var(--mut)" stroke-width="2"/>
-    <path d="M170 174 C310 174 322 74 335 74 C348 74 360 174 500 174" fill="none" stroke="var(--acc)" stroke-width="5"/>
-    <path d="M612 174 C676 174 710 116 777 104 C844 116 878 174 942 174" fill="none" stroke="var(--dn)" stroke-width="5"/>
-    <path d="M170 386 C234 386 268 328 335 316 C402 328 436 386 500 386" fill="none" stroke="var(--acc)" stroke-width="5"/>
-    <path d="M612 386 C752 386 764 286 777 286 C790 286 802 386 942 386" fill="none" stroke="var(--dn)" stroke-width="5"/>
-    <text x="335" y="202" text-anchor="middle" font-size="14" fill="var(--mut)">wąskie Δx</text><text x="777" y="202" text-anchor="middle" font-size="14" fill="var(--mut)">szerokie Δp</text>
-    <text x="335" y="414" text-anchor="middle" font-size="14" fill="var(--mut)">szerokie Δx</text><text x="777" y="414" text-anchor="middle" font-size="14" fill="var(--mut)">wąskie Δp</text>
-    <text x="335" y="110" text-anchor="middle" font-size="13" fill="var(--acc)">POŁOŻENIE</text><text x="777" y="110" text-anchor="middle" font-size="13" fill="var(--dn)">PĘD</text>
-    <text x="335" y="322" text-anchor="middle" font-size="13" fill="var(--acc)">POŁOŻENIE</text><text x="777" y="322" text-anchor="middle" font-size="13" fill="var(--dn)">PĘD</text>
-  </g>
+ <title id="fourier-title">Położenie i pęd jako pary Fouriera</title>
+ <desc id="fourier-desc">Wąski pakiet w położeniu odpowiada szerokiemu rozkładowi pędu, a szeroki pakiet położenia odpowiada wąskiemu rozkładowi pędu.</desc>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <rect x="36" y="44" width="968" height="170" rx="18" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <rect x="36" y="256" width="968" height="170" rx="18" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <text x="92" y="80" font-size="18" fill="var(--ink)">STAN A</text><text x="92" y="292" font-size="18" fill="var(--ink)">STAN B</text>
+ <line x1="170" y1="174" x2="500" y2="174" stroke="var(--mut)" stroke-width="2"/><line x1="612" y1="174" x2="942" y2="174" stroke="var(--mut)" stroke-width="2"/>
+ <line x1="170" y1="386" x2="500" y2="386" stroke="var(--mut)" stroke-width="2"/><line x1="612" y1="386" x2="942" y2="386" stroke="var(--mut)" stroke-width="2"/>
+ <path d="M170 174 C310 174 322 74 335 74 C348 74 360 174 500 174" fill="none" stroke="var(--acc)" stroke-width="5"/>
+ <path d="M612 174 C676 174 710 116 777 104 C844 116 878 174 942 174" fill="none" stroke="var(--dn)" stroke-width="5"/>
+ <path d="M170 386 C234 386 268 328 335 316 C402 328 436 386 500 386" fill="none" stroke="var(--acc)" stroke-width="5"/>
+ <path d="M612 386 C752 386 764 286 777 286 C790 286 802 386 942 386" fill="none" stroke="var(--dn)" stroke-width="5"/>
+ <text x="335" y="202" text-anchor="middle" font-size="14" fill="var(--mut)">wąskie Δx</text><text x="777" y="202" text-anchor="middle" font-size="14" fill="var(--mut)">szerokie Δp</text>
+ <text x="335" y="414" text-anchor="middle" font-size="14" fill="var(--mut)">szerokie Δx</text><text x="777" y="414" text-anchor="middle" font-size="14" fill="var(--mut)">wąskie Δp</text>
+ <text x="335" y="110" text-anchor="middle" font-size="13" fill="var(--acc)">POŁOŻENIE</text><text x="777" y="110" text-anchor="middle" font-size="13" fill="var(--dn)">PĘD</text>
+ <text x="335" y="322" text-anchor="middle" font-size="13" fill="var(--acc)">POŁOŻENIE</text><text x="777" y="322" text-anchor="middle" font-size="13" fill="var(--dn)">PĘD</text>
+ </g>
 </svg>
 <figcaption>Diagram przedstawia jakościową relację Fouriera. Nie jest wykresem konkretnego eksperymentu ani dowodem samym w sobie.</figcaption>
 </figure>
@@ -82,7 +82,7 @@ Heurystyczny mikroskop próbuje opisać relację między błędem pomiaru poło�
 \varepsilon(x)\,\eta(p) \gtrsim \frac{\hbar}{2},
 \]
 
-gdzie ε oznacza błąd pomiaru, a η — zaburzenie drugiej wielkości.
+gdzie ε oznacza błąd pomiaru, a η - zaburzenie drugiej wielkości.
 
 Problem polega na tym, że prosta iloczynowa postać nie jest uniwersalnie prawdziwa dla wszystkich możliwych pomiarów kwantowych. Masanao Ozawa wyprowadził ogólniejszą relację, w której oprócz błędu i zaburzenia pojawiają się także początkowe nieoznaczoności stanu:
 
@@ -93,23 +93,23 @@ Problem polega na tym, że prosta iloczynowa postać nie jest uniwersalnie prawd
 
 Nie oznacza to obalenia zasady Heisenberga. Oznacza doprecyzowanie, że trzeba rozdzielić dwie klasy twierdzeń:
 
-1. **relacje przygotowania** — ograniczające rozrzuty obserwabli w stanie,
-2. **relacje błędu i zaburzenia** — opisujące konkretną procedurę pomiarową.
+1. **relacje przygotowania** - ograniczające rozrzuty obserwabli w stanie,
+2. **relacje błędu i zaburzenia** - opisujące konkretną procedurę pomiarową.
 
 Eksperyment może zostać zaprojektowany tak, aby zaburzenie mierzone według określonej definicji było mniejsze, niż sugerował prosty obraz mikroskopu. Nadal nie pozwala to przygotować stanu z dowolnie małymi Δx i Δp.
 
 <figure>
 <svg viewBox="0 0 1040 390" role="img" aria-labelledby="layers-title layers-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="layers-title">Trzy warstwy problemu nieoznaczoności</title>
-  <desc id="layers-desc">Przygotowanie stanu, oddziaływanie pomiarowe i filozoficzna interpretacja są odrębnymi poziomami, których nie należy mieszać.</desc>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <rect x="80" y="48" width="880" height="82" rx="16" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
-    <rect x="118" y="154" width="804" height="82" rx="16" fill="var(--soft)" stroke="var(--up)" stroke-width="3"/>
-    <rect x="156" y="260" width="728" height="82" rx="16" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
-    <text x="520" y="80" text-anchor="middle" font-size="20" fill="var(--acc)">PRZYGOTOWANIE STANU</text><text x="520" y="108" text-anchor="middle" font-size="14" fill="var(--mut)">ΔA i ΔB · Robertson · struktura operatorów</text>
-    <text x="520" y="186" text-anchor="middle" font-size="20" fill="var(--up)">PROCEDURA POMIAROWA</text><text x="520" y="214" text-anchor="middle" font-size="14" fill="var(--mut)">błąd ε · zaburzenie η · relacje Ozawy</text>
-    <text x="520" y="292" text-anchor="middle" font-size="20" fill="var(--dn)">INTERPRETACJA ONTOLOGICZNA</text><text x="520" y="320" text-anchor="middle" font-size="14" fill="var(--mut)">co istnieje przed pomiarem? różne interpretacje</text>
-  </g>
+ <title id="layers-title">Trzy warstwy problemu nieoznaczoności</title>
+ <desc id="layers-desc">Przygotowanie stanu, oddziaływanie pomiarowe i filozoficzna interpretacja są odrębnymi poziomami, których nie należy mieszać.</desc>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <rect x="80" y="48" width="880" height="82" rx="16" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
+ <rect x="118" y="154" width="804" height="82" rx="16" fill="var(--soft)" stroke="var(--up)" stroke-width="3"/>
+ <rect x="156" y="260" width="728" height="82" rx="16" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
+ <text x="520" y="80" text-anchor="middle" font-size="20" fill="var(--acc)">PRZYGOTOWANIE STANU</text><text x="520" y="108" text-anchor="middle" font-size="14" fill="var(--mut)">ΔA i ΔB · Robertson · struktura operatorów</text>
+ <text x="520" y="186" text-anchor="middle" font-size="20" fill="var(--up)">PROCEDURA POMIAROWA</text><text x="520" y="214" text-anchor="middle" font-size="14" fill="var(--mut)">błąd ε · zaburzenie η · relacje Ozawy</text>
+ <text x="520" y="292" text-anchor="middle" font-size="20" fill="var(--dn)">INTERPRETACJA ONTOLOGICZNA</text><text x="520" y="320" text-anchor="middle" font-size="14" fill="var(--mut)">co istnieje przed pomiarem? różne interpretacje</text>
+ </g>
 </svg>
 <figcaption>Wynik matematyczny, zachowanie aparatury i filozofia teorii są powiązane, lecz nie są tym samym twierdzeniem.</figcaption>
 </figure>
@@ -132,25 +132,25 @@ Innego rodzaju ograniczenie wprowadza twierdzenie Bella. Pokazuje ono, że żadn
 
 <figure>
 <svg viewBox="0 0 1040 380" role="img" aria-labelledby="bell-title bell-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="bell-title">Heisenberg i Bell odpowiadają na różne pytania</title>
-  <desc id="bell-desc">Heisenberg ogranicza wspólne rozrzuty obserwabli w stanie. Bell ogranicza lokalne modele zmiennych ukrytych na podstawie korelacji między odległymi pomiarami.</desc>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <rect x="52" y="54" width="430" height="268" rx="20" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
-    <rect x="558" y="54" width="430" height="268" rx="20" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
-    <text x="267" y="94" text-anchor="middle" font-size="22" fill="var(--acc)">HEISENBERG / ROBERTSON</text>
-    <text x="773" y="94" text-anchor="middle" font-size="22" fill="var(--dn)">BELL</text>
-    <text x="267" y="142" text-anchor="middle" font-size="16" fill="var(--ink)">jeden stan</text><text x="267" y="172" text-anchor="middle" font-size="16" fill="var(--ink)">dwie niekomutujące obserwable</text><text x="267" y="202" text-anchor="middle" font-size="16" fill="var(--ink)">ograniczenie rozrzutów</text>
-    <text x="773" y="142" text-anchor="middle" font-size="16" fill="var(--ink)">dwa odległe układy</text><text x="773" y="172" text-anchor="middle" font-size="16" fill="var(--ink)">alternatywne ustawienia</text><text x="773" y="202" text-anchor="middle" font-size="16" fill="var(--ink)">ograniczenie lokalnych modeli</text>
-    <text x="267" y="272" text-anchor="middle" font-size="14" fill="var(--mut)">nie jest twierdzeniem o wszystkich ontologiach</text>
-    <text x="773" y="272" text-anchor="middle" font-size="14" fill="var(--mut)">naruszenie nierówności w eksperymencie</text>
-  </g>
+ <title id="bell-title">Heisenberg i Bell odpowiadają na różne pytania</title>
+ <desc id="bell-desc">Heisenberg ogranicza wspólne rozrzuty obserwabli w stanie. Bell ogranicza lokalne modele zmiennych ukrytych na podstawie korelacji między odległymi pomiarami.</desc>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <rect x="52" y="54" width="430" height="268" rx="20" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
+ <rect x="558" y="54" width="430" height="268" rx="20" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
+ <text x="267" y="94" text-anchor="middle" font-size="22" fill="var(--acc)">HEISENBERG / ROBERTSON</text>
+ <text x="773" y="94" text-anchor="middle" font-size="22" fill="var(--dn)">BELL</text>
+ <text x="267" y="142" text-anchor="middle" font-size="16" fill="var(--ink)">jeden stan</text><text x="267" y="172" text-anchor="middle" font-size="16" fill="var(--ink)">dwie niekomutujące obserwable</text><text x="267" y="202" text-anchor="middle" font-size="16" fill="var(--ink)">ograniczenie rozrzutów</text>
+ <text x="773" y="142" text-anchor="middle" font-size="16" fill="var(--ink)">dwa odległe układy</text><text x="773" y="172" text-anchor="middle" font-size="16" fill="var(--ink)">alternatywne ustawienia</text><text x="773" y="202" text-anchor="middle" font-size="16" fill="var(--ink)">ograniczenie lokalnych modeli</text>
+ <text x="267" y="272" text-anchor="middle" font-size="14" fill="var(--mut)">nie jest twierdzeniem o wszystkich ontologiach</text>
+ <text x="773" y="272" text-anchor="middle" font-size="14" fill="var(--mut)">naruszenie nierówności w eksperymencie</text>
+ </g>
 </svg>
 <figcaption>Połączenie obu zagadnień bez rozróżnienia prowadzi do twierdzeń mocniejszych, niż uzasadnia którykolwiek wynik osobno.</figcaption>
 </figure>
 
 Nieoznaczoność i nielokalność kwantowa należą do tej samej teorii, ale odpowiadają na różne pytania.
 
-## Granica wiedzy — lecz nie kapitulacja poznawcza
+## Granica wiedzy - lecz nie kapitulacja poznawcza
 
 Zasada Heisenberga bywa przedstawiana jako ostateczny dowód, że świata nie można poznać. W rzeczywistości jest jednym z najbardziej precyzyjnych przykładów tego, jak nauka zamienia ogólne słowo „niemożliwe” w matematyczną, testowalną granicę.
 

@@ -24,7 +24,7 @@ category: edukacja
 Wektorowy znaczy tu tyle, że nie ma pętli po kolejnych świecach. Zamiast iterować bar po barze, operuje się na całych kolumnach naraz, a biblioteka liczy je hurtem. Przepływ danych ma pięć etapów i każdy z nich to jedna operacja na serii:
 
 ```
-ceny  →  sygnał (−1/0/1)  →  pozycja = sygnał.shift(1)  →  zwrot pozycji  →  krzywa kapitału
+ceny → sygnał (−1/0/1) → pozycja = sygnał.shift(1) → zwrot pozycji → krzywa kapitału
 ```
 
 Ceny to zwykle kolumna zamknięć. Sygnał to reguła, która każdej świecy przypisuje kierunek: wartość dodatnią dla pozycji długiej, zero dla braku pozycji, wartość ujemną dla krótkiej. Pozycja to sygnał przesunięty o jeden bar do przodu, o czym za chwilę. Zwrot pozycji to iloczyn pozycji i zwrotu rynku na danym barze. Krzywa kapitału to skumulowany iloczyn tych zwrotów. Cała mechanika opiera się na trzech funkcjach pandas, opisanych w jej dokumentacji: `rolling` liczy średnie kroczące, `shift` przesuwa serię o zadaną liczbę barów, a `cumprod` daje skumulowany iloczyn potrzebny do krzywej kapitału.
@@ -50,8 +50,8 @@ Wersja błędna potrafi zamienić strategię bez żadnej przewagi w krzywą kapi
 Zwrot brutto to iloczyn pozycji i zwrotu rynku. Zwrot netto to brutto minus koszt, a koszt nalicza się nie na każdym barze, tylko wtedy, gdy pozycja się zmienia: przy wejściu, wyjściu i odwróceniu. Zmianę wykrywa `pozycja.diff().abs()`, a jej wielkość mnoży się przez koszt jednostkowy wyrażony w punktach (spread plus prowizja), przeliczony na ułamek ceny.
 
 ```
-zmiana = pozycja.diff().abs()          # 1 przy wejsciu/wyjsciu, 2 przy odwroceniu
-koszt  = zmiana * koszt_pip * pip / cena
+zmiana = pozycja.diff().abs() # 1 przy wejsciu/wyjsciu, 2 przy odwroceniu
+koszt = zmiana * koszt_pip * pip / cena
 zwrot_netto = zwrot_brutto − koszt
 ```
 
@@ -63,9 +63,9 @@ Krzywą kapitału streszcza się kilkoma liczbami. Cztery wystarczą, żeby nie 
 
 ```
 zwrot skumulowany = equity[-1] / equity[0] − 1
-zmiennosc (rok)   = std(zwroty) · sqrt(barow_w_roku)
-Sharpe (rok)      = mean(zwroty) / std(zwroty) · sqrt(barow_w_roku)
-max drawdown      = min( equity / cummax(equity) − 1 )
+zmiennosc (rok) = std(zwroty) · sqrt(barow_w_roku)
+Sharpe (rok) = mean(zwroty) / std(zwroty) · sqrt(barow_w_roku)
+max drawdown = min( equity / cummax(equity) − 1 )
 ```
 
 Zwrot skumulowany to końcowa wartość kapitału względem startu. Zmienność to odchylenie standardowe zwrotów przeskalowane na rok. Sharpe to średni zwrot podzielony przez odchylenie, również w skali roku, przy założeniu zerowej stopy wolnej od ryzyka. Maksymalne obsunięcie to najgłębszy spadek kapitału od dotychczasowego szczytu, czyli miara najgorszego przeżytego spadku.
@@ -85,54 +85,54 @@ import pandas as pd
 # ani dowod zyskownosci. Sluzy tylko pokazaniu przeplywu danych.
 
 def wektorowy_backtest(df, szybka=20, wolna=50, koszt_pip=0.6, pip=0.0001):
-    cena = df["close"].astype(float)
+ cena = df["close"].astype(float)
 
-    # 1) SYGNAL: +1 gdy szybka srednia nad wolna, -1 gdy pod nia. Wartosci -1/0/1.
-    sma_szybka = cena.rolling(szybka).mean()
-    sma_wolna  = cena.rolling(wolna).mean()
-    sygnal = np.sign(sma_szybka - sma_wolna)
+ # 1) SYGNAL: +1 gdy szybka srednia nad wolna, -1 gdy pod nia. Wartosci -1/0/1.
+ sma_szybka = cena.rolling(szybka).mean()
+ sma_wolna = cena.rolling(wolna).mean()
+ sygnal = np.sign(sma_szybka - sma_wolna)
 
-    # 2) POZYCJA: sygnal z zamkniecia bara t wchodzi najwczesniej na barze t+1.
-    #    Bez shift(1) pozycja reaguje na ruch tego samego bara = look-ahead.
-    pozycja = sygnal.shift(1).fillna(0.0)
+ # 2) POZYCJA: sygnal z zamkniecia bara t wchodzi najwczesniej na barze t+1.
+ # Bez shift(1) pozycja reaguje na ruch tego samego bara = look-ahead.
+ pozycja = sygnal.shift(1).fillna(0.0)
 
-    # 3) ZWROT RYNKU: prosty zwrot ceny na kazdym barze.
-    zwrot_ceny = cena.pct_change().fillna(0.0)
+ # 3) ZWROT RYNKU: prosty zwrot ceny na kazdym barze.
+ zwrot_ceny = cena.pct_change().fillna(0.0)
 
-    # 4) ZWROT BRUTTO: pozycja razy zwrot rynku.
-    zwrot_brutto = pozycja * zwrot_ceny
+ # 4) ZWROT BRUTTO: pozycja razy zwrot rynku.
+ zwrot_brutto = pozycja * zwrot_ceny
 
-    # 5) KOSZT: naliczany tylko przy ZMIANIE pozycji (wejscie/wyjscie/odwrocenie).
-    zmiana = pozycja.diff().abs().fillna(0.0)
-    koszt = zmiana * koszt_pip * pip / cena
+ # 5) KOSZT: naliczany tylko przy ZMIANIE pozycji (wejscie/wyjscie/odwrocenie).
+ zmiana = pozycja.diff().abs().fillna(0.0)
+ koszt = zmiana * koszt_pip * pip / cena
 
-    # 6) ZWROT NETTO i KRZYWA KAPITALU (skumulowany iloczyn).
-    zwrot_netto = zwrot_brutto - koszt
-    equity = (1.0 + zwrot_netto).cumprod()
+ # 6) ZWROT NETTO i KRZYWA KAPITALU (skumulowany iloczyn).
+ zwrot_netto = zwrot_brutto - koszt
+ equity = (1.0 + zwrot_netto).cumprod()
 
-    return pd.DataFrame({
-        "pozycja": pozycja,
-        "zwrot_brutto": zwrot_brutto,
-        "zwrot_netto": zwrot_netto,
-        "equity": equity,
-    })
+ return pd.DataFrame({
+ "pozycja": pozycja,
+ "zwrot_brutto": zwrot_brutto,
+ "zwrot_netto": zwrot_netto,
+ "equity": equity,
+ })
 
 
 def metryki(zwrot_netto, equity, barow_w_roku=252):
-    sigma = zwrot_netto.std(ddof=1)
-    zwrot_skum = equity.iloc[-1] / equity.iloc[0] - 1.0
-    zmiennosc_ann = sigma * np.sqrt(barow_w_roku)
-    if sigma > 0:
-        sharpe_ann = (zwrot_netto.mean() / sigma) * np.sqrt(barow_w_roku)
-    else:
-        sharpe_ann = np.nan
-    obsuniecie = equity / equity.cummax() - 1.0
-    return {
-        "zwrot_skumulowany": zwrot_skum,
-        "zmiennosc_roczna": zmiennosc_ann,
-        "sharpe_roczny": sharpe_ann,
-        "max_obsuniecie": obsuniecie.min(),
-    }
+ sigma = zwrot_netto.std(ddof=1)
+ zwrot_skum = equity.iloc[-1] / equity.iloc[0] - 1.0
+ zmiennosc_ann = sigma * np.sqrt(barow_w_roku)
+ if sigma > 0:
+ sharpe_ann = (zwrot_netto.mean() / sigma) * np.sqrt(barow_w_roku)
+ else:
+ sharpe_ann = np.nan
+ obsuniecie = equity / equity.cummax() - 1.0
+ return {
+ "zwrot_skumulowany": zwrot_skum,
+ "zmiennosc_roczna": zmiennosc_ann,
+ "sharpe_roczny": sharpe_ann,
+ "max_obsuniecie": obsuniecie.min(),
+ }
 
 # Przyklad uzycia (df z kolumna "close"):
 # wynik = wektorowy_backtest(df, szybka=20, wolna=50, koszt_pip=0.6)

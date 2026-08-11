@@ -38,8 +38,8 @@ Najważniejsza zmiana perspektywy jest ilościowa. Efektywność przestaje być 
 
 ```
 efektywność(t) = f( liczba konkurentów(t),
-                    wielkość dostępnych okazji(t),
-                    adaptacyjność uczestników(t) )
+ wielkość dostępnych okazji(t),
+ adaptacyjność uczestników(t) )
 ```
 
 Dużo konkurentów, małe okazje i szybka adaptacja dają rynek blisko podręcznikowej efektywności. Mało konkurentów, duże okazje i powolna adaptacja dają rynek, na którym przewagi żyją latami. Ten sam rynek bywa więc efektywny i nieefektywny w różnych momentach swojej historii. Lo (2004) ilustruje to prostym pomiarem: autokorelacją miesięcznych zwrotów amerykańskiego indeksu akcji, liczoną w ruchomych oknach na danych sięgających XIX wieku. Gdyby efektywność była stała, ta miara przewidywalności powinna przez cały czas siedzieć przy zerze. Zamiast tego faluje w wieloletnich cyklach: bywały dekady wyraźnej przewidywalności i okresy, w których opadała w stronę zera. Efektywność zachowuje się jak pogoda, nie jak stała fizyczna. Z tej samej mechaniki wynika, że nawet premia za ryzyko nie jest stała: zależy od tego, kto aktualnie zamieszkuje ekosystem, ile ma kapitału i co niedawno przeżył.

@@ -34,11 +34,11 @@ Stąd jedyne uczciwe pytanie wobec każdego wyniku: nie „czy jest dobry", tylk
 Klasyczny próg istotności 5% to umowa: godzimy się, że test czegoś, co nie działa, raz na dwadzieścia przypadków pokaże „efekt". Przy pojedynczym, z góry zaplanowanym teście to rozsądny kompromis między czułością a ostrożnością. Przy przeszukiwaniu przestaje nim być, bo oczekiwana liczba fałszywych odkryć rośnie liniowo z liczbą prób.
 
 ```
-oczekiwane fałszywe odkrycia ≈ N · α   (gdy żaden testowany efekt nie istnieje)
+oczekiwane fałszywe odkrycia ≈ N · α (gdy żaden testowany efekt nie istnieje)
 
-   20 testów · 5%  ≈  1 fałszywe „odkrycie"
-  100 testów · 5%  ≈  5
- 1000 testów · 5%  ≈ 50
+ 20 testów · 5% ≈ 1 fałszywe „odkrycie"
+ 100 testów · 5% ≈ 5
+ 1000 testów · 5% ≈ 50
 ```
 
 Kto przepuszcza przez dane grid stu kombinacji parametrów, przy zerowym edge'u znajdzie średnio pięć „istotnych" wariantów. Kto testuje tysiąc reguł, znajdzie około pięćdziesięciu. To nie jest pech, spisek ani błąd w kodzie, tylko arytmetyka. Problem zaczyna się wtedy, gdy raport pokazuje wyłącznie zwycięzcę, a licznik prób zostaje za kadrem. Odbiorca widzi „istotny wynik" i nie widzi dziewiętnastu prób, które nie wyszły.
@@ -52,12 +52,12 @@ FWER (family-wise error rate) to prawdopodobieństwo, że w całej rodzinie test
 FDR (false discovery rate) odpuszcza perfekcję i kontroluje co innego: oczekiwany odsetek fałszywych wśród odkryć, które ogłaszasz. To pomysł Benjaminiego i Hochberga (1995). Zamiast „zero pomyłek" obiecujesz „wśród tego, co ogłaszam jako odkrycia, najwyżej ustalona część, na przykład 10%, to śmieci".
 
 ```
-FWER:  P(choćby jedno fałszywe odkrycie) ≤ α
-       Bonferroni: każdy test na poziomie α / N
+FWER: P(choćby jedno fałszywe odkrycie) ≤ α
+ Bonferroni: każdy test na poziomie α / N
 
-FDR:   oczekiwany odsetek fałszywych wśród ogłoszonych odkryć ≤ q
-       Benjamini i Hochberg: posortuj p-value rosnąco, p(1) ≤ p(2) ≤ ... ≤ p(N),
-       przyjmij wszystkie do największego k, dla którego p(k) ≤ (k / N) · q
+FDR: oczekiwany odsetek fałszywych wśród ogłoszonych odkryć ≤ q
+ Benjamini i Hochberg: posortuj p-value rosnąco, p(1) ≤ p(2) ≤ ... ≤ p(N),
+ przyjmij wszystkie do największego k, dla którego p(k) ≤ (k / N) · q
 ```
 
 Po ludzku: FWER to kontroler, który woli zatrzymać stu uczciwych, byle nie przepuścić jednego oszusta. FDR to kontroler, który przepuszcza ruch, ale pilnuje, żeby wśród przepuszczonych odsetek oszustów nie przekroczył ustalonego poziomu. Przy pojedynczych, kosztownych decyzjach sensowniejszy bywa pierwszy. Przy skanowaniu tysięcy kandydatów naraz (faktory, reguły techniczne, kombinacje parametrów) praktyczniejszy jest drugi, bo zachowuje moc i nadal cokolwiek znajduje, tyle że z jawną etykietą jakości zamiast iluzji pewności.

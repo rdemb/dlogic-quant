@@ -100,23 +100,23 @@ Trzy moduły, wszystkie z publicznych danych.
 ```
 # 1. Sila walut (z-score, suma zerowa)
 for ccy in G8:
-    r[ccy] = mean(ret(ccy / other) for other in G8 if other != ccy)
-z = (r - mean(r)) / std(r)                        # Suma z = 0
+ r[ccy] = mean(ret(ccy / other) for other in G8 if other != ccy)
+z = (r - mean(r)) / std(r) # Suma z = 0
 
 # 2. Czynnik dolara (PCA na parach USD)
-pc1_var   = eig(cov(returns_usd_pairs))[0] / total_var    # = 0.69
-r2_eurusd = corr(eurusd, pc1) ** 2                         # = 0.83
+pc1_var = eig(cov(returns_usd_pairs))[0] / total_var # = 0.69
+r2_eurusd = corr(eurusd, pc1) ** 2 # = 0.83
 
 # 3. Rezim makro (reguly, nie predykcja)
-real_10y = us_10y - cpi_proxy        # 4.41 - 4.20 = +0.21
-slope    = us_10y - us_2y            # 4.41 - 4.21 = +20 bp
-carry    = fed_mid - ecb_rate        # 3.625 - 2.25 = +137.5 bp
+real_10y = us_10y - cpi_proxy # 4.41 - 4.20 = +0.21
+slope = us_10y - us_2y # 4.41 - 4.21 = +20 bp
+carry = fed_mid - ecb_rate # 3.625 - 2.25 = +137.5 bp
 usd_bias = "strong" if (real_10y > 0 and slope > 0 and carry > 0) else "mixed"
 
 # 4. Rysy w rezimie (bezpieczniki)
-flattening = slope < prev_slope      # 20 < 29  -> krzywa plasciej
-vix_wake   = vix > prev_vix          # 19.49 > 17.29
-gold_break = gold_usd < 4000         # 3993  -> pierwszy raz od XI 2025
+flattening = slope < prev_slope # 20 < 29 -> krzywa plasciej
+vix_wake = vix > prev_vix # 19.49 > 17.29
+gold_break = gold_usd < 4000 # 3993 -> pierwszy raz od XI 2025
 ```
 
 Dane: pary M5 do D1 z własnego eksportu (stan rynku 2026-06-19), makro z publicznych źródeł (TradingEconomics, CNBC, FRED, Investing, stan 2026-06-25). Warstwa cenowa par nie zmieniła się od 19.06, a ruch tego tygodnia jest po stronie makro. Liczby przeliczam przy każdym raporcie.
@@ -130,7 +130,7 @@ Dane: pary M5 do D1 z własnego eksportu (stan rynku 2026-06-19), makro z public
 | US 2Y | 4.21% | zakotwiczony jastrzębim Fedem |
 | Krzywa 2s10s | +20 bp | spłaszczenie z 29, brak inwersji |
 | Realna 10Y | +0.21% | wciąż dodatnia, magnes na kapitał |
-| Carry Fed–EBC | +137.5 bp | na korzyść dolara |
+| Carry Fed-EBC | +137.5 bp | na korzyść dolara |
 | VIX | 19.49 | +12.8% w sesji, tuż pod 20 |
 | Złoto | ~3993 USD | poniżej 4000, 1D −2.8%, 1M −12% |
 | DXY | rok-max, ponad 100 | potwierdzenie trendu |

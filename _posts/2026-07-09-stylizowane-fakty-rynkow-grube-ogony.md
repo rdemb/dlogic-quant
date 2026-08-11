@@ -25,8 +25,8 @@ Termin „stylizowane fakty" pochodzi z ekonomii, gdzie oznacza obserwacje na ty
 Punktem wyjścia jest zwrot, najczęściej logarytmiczny, bo dobrze sumuje się w czasie i jest zbliżony do zwrotu prostego przy małych zmianach.
 
 ```
-r_t = ln(P_t) - ln(P_{t-1})     zwrot logarytmiczny w okresie t
-P_t                              cena zamknięcia okresu t
+r_t = ln(P_t) - ln(P_{t-1}) zwrot logarytmiczny w okresie t
+P_t cena zamknięcia okresu t
 ```
 
 Naturalnym punktem odniesienia dla rozkładu takich zwrotów przez dekady był rozkład normalny, bo jest wygodny: opisują go dwie liczby (średnia i wariancja), a suma niezależnych zwrotów zmierza do niego na mocy centralnego twierdzenia granicznego. Kłopot w tym, że dane konsekwentnie odmawiają współpracy. Już Benoit Mandelbrot, analizując w latach sześćdziesiątych ceny bawełny, pokazał, że rozkład zmian cen jest zbyt „dziki" na krzywą Gaussa: ma za dużo ekstremów i za dużo spokoju naraz. Stylizowane fakty Conta są uporządkowaniem tej obserwacji w listę własności, które można sprawdzić na dowolnym szeregu.
@@ -38,17 +38,17 @@ Pierwsza i najważniejsza własność dotyczy kształtu bezwarunkowego rozkładu
 ```
 Kurtoza(r) = E[(r - μ)^4] / σ^4
 
-rozkład normalny:   Kurtoza = 3   (odniesienie)
-zwroty rynkowe:     Kurtoza > 3   (leptokurtoza, grube ogony)
+rozkład normalny: Kurtoza = 3 (odniesienie)
+zwroty rynkowe: Kurtoza > 3 (leptokurtoza, grube ogony)
 ```
 
 Kurtoza mierzy właśnie masę w ogonach. Dla rozkładu normalnego wynosi 3 i to jest punkt odniesienia; dla zwrotów rynkowych wychodzi wyraźnie wyżej, i to tym wyżej, im krótszy horyzont (dane minutowe i dzienne są grubsze w ogonach niż miesięczne). Kształt samego ogona bada się osobno, dopasowując zależność potęgową.
 
 ```
-P(|r| > x) ≈ x^(-α)     ogon opada jak potęga, nie wykładniczo
+P(|r| > x) ≈ x^(-α) ogon opada jak potęga, nie wykładniczo
 
 α = indeks ogona
-α > 2  ⇒  wariancja istnieje, ale ogon i tak grubszy niż normalny
+α > 2 ⇒ wariancja istnieje, ale ogon i tak grubszy niż normalny
 ```
 
 Ogon potęgowy opada wolniej niż wykładniczy ogon rozkładu normalnego, dlatego skrajne zdarzenia mają pod nim istotnie większe prawdopodobieństwo. Co ważne, przeglądy empiryczne (w tym praca Conta) znajdują indeks ogona skończony i zwykle większy od 2. To subtelna, ale ważna korekta pierwotnej hipotezy Mandelbrota: tak, ogony są grube, ale wariancja zwykle jednak istnieje, więc nie są to czyste stabilne prawa o nieskończonej wariancji. Zwroty siedzą gdzieś pomiędzy wygodnym Gaussem a dzikim rozkładem stabilnym, i właśnie ta pośrednia pozycja jest źródłem większości praktycznych kłopotów z ryzykiem.
@@ -64,9 +64,9 @@ Kluczowe jest tu słowo „dowolnego znaku". Klasteruje się wielkość ruchu, a
 Trzecia własność to pozorny paradoks, który po rozłożeniu okazuje się spójny. Same zwroty są liniowo prawie nieskorelowane w czasie, ale ich kwadraty i wartości bezwzględne są skorelowane silnie i trwale.
 
 ```
-Corr(r_t, r_{t+k}) ≈ 0        dla k ≥ 1 (poza skalą sekund i minut)
-Corr(r_t^2, r_{t+k}^2) > 0    dodatnia i opadająca powoli z opóźnieniem k
-Corr(|r_t|, |r_{t+k}|) > 0    często jeszcze wyraźniejsza niż dla kwadratów
+Corr(r_t, r_{t+k}) ≈ 0 dla k ≥ 1 (poza skalą sekund i minut)
+Corr(r_t^2, r_{t+k}^2) > 0 dodatnia i opadająca powoli z opóźnieniem k
+Corr(|r_t|, |r_{t+k}|) > 0 często jeszcze wyraźniejsza niż dla kwadratów
 ```
 
 Górny wiersz to statystyczna wersja słabej efektywności rynku: z samego znaku i wielkości wczorajszego zwrotu nie da się liniowo przewidzieć jutrzejszego, bo gdyby się dało, kapitał szybko zjadłby tę zależność. Jedyny wyjątek pojawia się na bardzo krótkich skalach (sekundy, pojedyncze minuty), gdzie efekty mikrostruktury, jak odbijanie się ceny między bid i ask, potrafią dać słabą, zwykle ujemną autokorelację. Poza tym kierunek jest praktycznie nieprzewidywalny liniowo.
@@ -80,7 +80,7 @@ Warto dodać jeden niuans z listy Conta: nawet po odfiltrowaniu klasterowania mo
 Czwarta własność to asymetria między kierunkiem a zmiennością. Statystycznie zwroty są ujemnie skorelowane z przyszłą zmiennością: po spadku zmienność rośnie mocniej niż po wzroście tej samej wielkości.
 
 ```
-Corr(r_t, σ_{t+k}) < 0     spadek dziś ⇒ wyższa zmienność jutro (przeciętnie)
+Corr(r_t, σ_{t+k}) < 0 spadek dziś ⇒ wyższa zmienność jutro (przeciętnie)
 ```
 
 Nazwa „efekt dźwigni" pochodzi od klasycznego wyjaśnienia dla akcji (Black, 1976): gdy kurs spółki spada, jej dług w relacji do kapitału własnego rośnie, spółka staje się bardziej „lewarowana", a jej akcje bardziej zmienne. Z tym zjawiskiem spokrewniona jest asymetria zysków i strat, którą Cont wymienia osobno: na akcjach i indeksach obserwuje się głębokie, gwałtowne spadki, którym nie odpowiadają równie gwałtowne wzrosty. Ogon strat bywa cięższy niż ogon zysków.
@@ -98,10 +98,10 @@ Wniosek jest asymetryczny w zależności od horyzontu. Grube ogony najmocniej ud
 Wszystkie te własności zbiegają się w jednym praktycznym punkcie: modele ryzyka, które zakładają normalność, systematycznie zaniżają prawdopodobieństwo dużych strat. Najczystszy przykład to naiwna wartość zagrożona (VaR) liczona wprost z rozkładu normalnego.
 
 ```
-q_normal(1%) = μ - z · σ      z ≈ 2.33 dla poziomu 99%
+q_normal(1%) = μ - z · σ z ≈ 2.33 dla poziomu 99%
 
 q(1%) = próg 1% najgorszych zwrotów (kwantyl dolnego ogona)
-z     = kwantyl rozkładu normalnego dla żądanej ufności
+z = kwantyl rozkładu normalnego dla żądanej ufności
 ```
 
 Mechanizm jest prosty. Kwantyl normalny (dla 99 procent około 2,33 odchylenia od średniej) zakłada, że dalej ogon opada wykładniczo. W prawdziwych danych ogon opada potęgowo, czyli wolniej, więc rzeczywisty próg jednego procenta najgorszych zwrotów leży dalej, a strata jest większa, niż mówi wzór normalny. Efekt: model obiecuje, że stratę większą od tego progu zobaczy się raz na sto sesji, a w danych takie przekroczenia zdarzają się częściej i bywają głębsze, niż zakładano. Do tego dochodzi klasterowanie, przez które przekroczenia nie są rozsiane równomiernie, tylko przychodzą seriami w tych samych burzliwych okienkach, dokładnie wtedy, gdy najtrudniej je udźwignąć.

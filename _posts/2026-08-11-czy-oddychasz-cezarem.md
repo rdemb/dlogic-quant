@@ -17,7 +17,7 @@ cover_kind: loose
 ---
 <div class="article-status"><span class="primary">ESEJ ŹRÓDŁOWY</span><span>FIZYKA STATYSTYCZNA</span><span>RACHUNEK RZĘDU WIELKOŚCI</span><span>MODEL IDEALIZOWANY</span></div>
 
-Właśnie bierzesz oddech. W pół litrze powietrza znajduje się około dziesięciu tryliardów cząsteczek — liczba tak ogromna, że pojedynczy wydech może po rozproszeniu w atmosferze pozostawić ślad w oddechach ludzi żyjących tysiące lat później.
+Właśnie bierzesz oddech. W pół litrze powietrza znajduje się około dziesięciu tryliardów cząsteczek - liczba tak ogromna, że pojedynczy wydech może po rozproszeniu w atmosferze pozostawić ślad w oddechach ludzi żyjących tysiące lat później.
 
 Stąd bierze się jedna z najbardziej sugestywnych opowieści fizyki statystycznej: w każdym wdechu znajduje się przynajmniej jedna cząsteczka z ostatniego oddechu Juliusza Cezara.
 
@@ -25,7 +25,7 @@ Historia brzmi jak materialna forma nieśmiertelności. Cezar umiera w idy marco
 
 Dla rozsądnego zestawu założeń wynik wynosi około **1,4**. Nie oznacza to, że w każdym oddechu musi znaleźć się jedna cząsteczka i dodatkowe cztery dziesiąte. Jest to wartość oczekiwana rozkładu liczby trafień. Jeżeli cząsteczki są rozmieszczone losowo i niezależnie, część oddechów nie zawiera żadnej, część jedną, część dwie albo więcej.
 
-> **Średnia równa 1,4 daje w idealizowanym modelu około 76% szans na przynajmniej jedno trafienie — dużo, lecz nie pewność.**
+> **Średnia równa 1,4 daje w idealizowanym modelu około 76% szans na przynajmniej jedno trafienie - dużo, lecz nie pewność.**
 
 Jeszcze ważniejsze jest to, że nie posiadamy próbki ostatniego wydechu Cezara, nie znamy jego objętości ani dalszych losów poszczególnych cząsteczek. Rachunek jest eksperymentem myślowym pokazującym skalę liczby Avogadra i potęgę mieszania, nie testem genealogicznym powietrza w twoich płucach.
 
@@ -77,21 +77,21 @@ W nowym półlitrowym wdechu znajduje się ponownie około \(1{,}23\times10^{22}
 
 <figure>
 <svg viewBox="0 0 1080 430" role="img" aria-labelledby="caesar-calc-title caesar-calc-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="caesar-calc-title">Rachunek oczekiwanej liczby cząsteczek</title>
-  <desc id="caesar-calc-desc">Półlitrowy wydech zawiera około 1,23 razy dziesięć do dwudziestej drugiej cząsteczek, atmosfera około 1,07 razy dziesięć do czterdziestej czwartej, a oczekiwana liczba w nowym półlitrowym wdechu wynosi 1,42.</desc>
-  <defs><marker id="caesar-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--acc)"/></marker></defs>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <rect x="28" y="118" width="230" height="126" rx="16" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <rect x="308" y="118" width="230" height="126" rx="16" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <rect x="588" y="118" width="210" height="126" rx="16" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <rect x="848" y="98" width="204" height="166" rx="18" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
-    <path d="M258 181 H302 M538 181 H582 M798 181 H842" stroke="var(--acc)" stroke-width="3" marker-end="url(#caesar-arrow)"/>
-    <text x="143" y="151" text-anchor="middle" font-size="16" fill="var(--ink)">WYDECH 0,5 L</text><text x="143" y="191" text-anchor="middle" font-size="24" fill="var(--acc)">1,23×10²²</text><text x="143" y="220" text-anchor="middle" font-size="13" fill="var(--mut)">cząsteczek</text>
-    <text x="423" y="151" text-anchor="middle" font-size="16" fill="var(--ink)">ATMOSFERA</text><text x="423" y="191" text-anchor="middle" font-size="24" fill="var(--acc)">1,07×10⁴⁴</text><text x="423" y="220" text-anchor="middle" font-size="13" fill="var(--mut)">cząsteczek</text>
-    <text x="693" y="151" text-anchor="middle" font-size="16" fill="var(--ink)">UDZIAŁ f</text><text x="693" y="191" text-anchor="middle" font-size="22" fill="var(--acc)">1,15×10⁻²²</text><text x="693" y="220" text-anchor="middle" font-size="13" fill="var(--mut)">przy idealnym mieszaniu</text>
-    <text x="950" y="140" text-anchor="middle" font-size="16" fill="var(--ink)">NOWY WDECH 0,5 L</text><text x="950" y="191" text-anchor="middle" font-size="38" fill="var(--acc)">λ ≈ 1,42</text><text x="950" y="226" text-anchor="middle" font-size="13" fill="var(--mut)">wartość oczekiwana</text>
-    <text x="540" y="324" text-anchor="middle" font-size="19" fill="var(--ink)">Duże liczby upraszczają rachunek — ale nie zamieniają średniej w gwarancję.</text>
-  </g>
+ <title id="caesar-calc-title">Rachunek oczekiwanej liczby cząsteczek</title>
+ <desc id="caesar-calc-desc">Półlitrowy wydech zawiera około 1,23 razy dziesięć do dwudziestej drugiej cząsteczek, atmosfera około 1,07 razy dziesięć do czterdziestej czwartej, a oczekiwana liczba w nowym półlitrowym wdechu wynosi 1,42.</desc>
+ <defs><marker id="caesar-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--acc)"/></marker></defs>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <rect x="28" y="118" width="230" height="126" rx="16" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <rect x="308" y="118" width="230" height="126" rx="16" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <rect x="588" y="118" width="210" height="126" rx="16" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <rect x="848" y="98" width="204" height="166" rx="18" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/>
+ <path d="M258 181 H302 M538 181 H582 M798 181 H842" stroke="var(--acc)" stroke-width="3" marker-end="url(#caesar-arrow)"/>
+ <text x="143" y="151" text-anchor="middle" font-size="16" fill="var(--ink)">WYDECH 0,5 L</text><text x="143" y="191" text-anchor="middle" font-size="24" fill="var(--acc)">1,23×10²²</text><text x="143" y="220" text-anchor="middle" font-size="13" fill="var(--mut)">cząsteczek</text>
+ <text x="423" y="151" text-anchor="middle" font-size="16" fill="var(--ink)">ATMOSFERA</text><text x="423" y="191" text-anchor="middle" font-size="24" fill="var(--acc)">1,07×10⁴⁴</text><text x="423" y="220" text-anchor="middle" font-size="13" fill="var(--mut)">cząsteczek</text>
+ <text x="693" y="151" text-anchor="middle" font-size="16" fill="var(--ink)">UDZIAŁ f</text><text x="693" y="191" text-anchor="middle" font-size="22" fill="var(--acc)">1,15×10⁻²²</text><text x="693" y="220" text-anchor="middle" font-size="13" fill="var(--mut)">przy idealnym mieszaniu</text>
+ <text x="950" y="140" text-anchor="middle" font-size="16" fill="var(--ink)">NOWY WDECH 0,5 L</text><text x="950" y="191" text-anchor="middle" font-size="38" fill="var(--acc)">λ ≈ 1,42</text><text x="950" y="226" text-anchor="middle" font-size="13" fill="var(--mut)">wartość oczekiwana</text>
+ <text x="540" y="324" text-anchor="middle" font-size="19" fill="var(--ink)">Duże liczby upraszczają rachunek - ale nie zamieniają średniej w gwarancję.</text>
+ </g>
 </svg>
 <figcaption>Wynik zależy liniowo od objętości wydechu źródłowego i objętości badanego wdechu, a odwrotnie od liczby cząsteczek w atmosferze.</figcaption>
 </figure>
@@ -122,20 +122,20 @@ Najbardziej prawdopodobny pojedynczy wynik to jedna cząsteczka, ale brak trafie
 
 <figure>
 <svg viewBox="0 0 1040 430" role="img" aria-labelledby="poisson-title poisson-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="poisson-title">Rozkład Poissona dla lambda 1,42</title>
-  <desc id="poisson-desc">Prawdopodobieństwa zera, jednego, dwóch, trzech, czterech i pięciu trafień wynoszą odpowiednio około 24,3, 34,4, 24,3, 11,5, 4,1 i 1,1 procent.</desc>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <line x1="100" y1="344" x2="948" y2="344" stroke="var(--line)" stroke-width="3"/>
-    <rect x="132" y="150" width="96" height="194" rx="8" fill="var(--dn)" opacity=".78"/>
-    <rect x="276" y="70" width="96" height="274" rx="8" fill="var(--acc)" opacity=".82"/>
-    <rect x="420" y="150" width="96" height="194" rx="8" fill="var(--acc)" opacity=".66"/>
-    <rect x="564" y="252" width="96" height="92" rx="8" fill="var(--acc)" opacity=".58"/>
-    <rect x="708" y="312" width="96" height="32" rx="8" fill="var(--acc)" opacity=".5"/>
-    <rect x="852" y="335" width="96" height="9" rx="5" fill="var(--acc)" opacity=".45"/>
-    <text x="180" y="136" text-anchor="middle" font-size="16" fill="var(--dn)">24,3%</text><text x="324" y="56" text-anchor="middle" font-size="16" fill="var(--acc)">34,4%</text><text x="468" y="136" text-anchor="middle" font-size="16" fill="var(--acc)">24,3%</text><text x="612" y="238" text-anchor="middle" font-size="16" fill="var(--acc)">11,5%</text><text x="756" y="298" text-anchor="middle" font-size="16" fill="var(--acc)">4,1%</text><text x="900" y="321" text-anchor="middle" font-size="16" fill="var(--acc)">1,1%</text>
-    <text x="180" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">0</text><text x="324" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">1</text><text x="468" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">2</text><text x="612" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">3</text><text x="756" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">4</text><text x="900" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">5</text>
-    <text x="520" y="414" text-anchor="middle" font-size="14" fill="var(--mut)">liczba cząsteczek w idealizowanym wdechu</text>
-  </g>
+ <title id="poisson-title">Rozkład Poissona dla lambda 1,42</title>
+ <desc id="poisson-desc">Prawdopodobieństwa zera, jednego, dwóch, trzech, czterech i pięciu trafień wynoszą odpowiednio około 24,3, 34,4, 24,3, 11,5, 4,1 i 1,1 procent.</desc>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <line x1="100" y1="344" x2="948" y2="344" stroke="var(--line)" stroke-width="3"/>
+ <rect x="132" y="150" width="96" height="194" rx="8" fill="var(--dn)" opacity=".78"/>
+ <rect x="276" y="70" width="96" height="274" rx="8" fill="var(--acc)" opacity=".82"/>
+ <rect x="420" y="150" width="96" height="194" rx="8" fill="var(--acc)" opacity=".66"/>
+ <rect x="564" y="252" width="96" height="92" rx="8" fill="var(--acc)" opacity=".58"/>
+ <rect x="708" y="312" width="96" height="32" rx="8" fill="var(--acc)" opacity=".5"/>
+ <rect x="852" y="335" width="96" height="9" rx="5" fill="var(--acc)" opacity=".45"/>
+ <text x="180" y="136" text-anchor="middle" font-size="16" fill="var(--dn)">24,3%</text><text x="324" y="56" text-anchor="middle" font-size="16" fill="var(--acc)">34,4%</text><text x="468" y="136" text-anchor="middle" font-size="16" fill="var(--acc)">24,3%</text><text x="612" y="238" text-anchor="middle" font-size="16" fill="var(--acc)">11,5%</text><text x="756" y="298" text-anchor="middle" font-size="16" fill="var(--acc)">4,1%</text><text x="900" y="321" text-anchor="middle" font-size="16" fill="var(--acc)">1,1%</text>
+ <text x="180" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">0</text><text x="324" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">1</text><text x="468" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">2</text><text x="612" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">3</text><text x="756" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">4</text><text x="900" y="378" text-anchor="middle" font-size="17" fill="var(--ink)">5</text>
+ <text x="520" y="414" text-anchor="middle" font-size="14" fill="var(--mut)">liczba cząsteczek w idealizowanym wdechu</text>
+ </g>
 </svg>
 <figcaption>Rozkład dla λ≈1,42. Prawdopodobieństwo sześciu lub więcej trafień wynosi łącznie mniej niż pół procenta.</figcaption>
 </figure>

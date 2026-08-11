@@ -28,15 +28,15 @@ Kluczowa nie jest lista rachunków, tylko wiążąca je tożsamość. Ponieważ 
 Bilans płatniczy, zasada podwójnego zapisu:
 każda transakcja ma dwa zapisy, więc całość sumuje się do zera.
 
-  saldo bieżące + saldo kapitałowe + saldo finansowe = 0
-  (z dokładnością do pozycji błędów i opuszczeń;
-   znaki zależą od przyjętej konwencji)
+ saldo bieżące + saldo kapitałowe + saldo finansowe = 0
+ (z dokładnością do pozycji błędów i opuszczeń;
+ znaki zależą od przyjętej konwencji)
 
-  deficyt bieżący  →  napływ kapitału netto
-  (import > eksport)     (pożyczka od zagranicy lub sprzedaż aktywów)
+ deficyt bieżący → napływ kapitału netto
+ (import > eksport) (pożyczka od zagranicy lub sprzedaż aktywów)
 
-  nadwyżka bieżąca →  odpływ kapitału netto
-  (eksport > import)     (gromadzenie należności wobec zagranicy)
+ nadwyżka bieżąca → odpływ kapitału netto
+ (eksport > import) (gromadzenie należności wobec zagranicy)
 ```
 
 Praktyczny wniosek bywa mylony. Deficyt handlowy nie wisi w próżni: ktoś go finansuje, kupując krajowe obligacje, akcje czy nieruchomości. Kraj z trwałym deficytem bieżącym jest równocześnie importerem kapitału, a kraj z nadwyżką, jak Niemcy czy Japonia, eksporterem kapitału gromadzącym zagraniczne aktywa. Podręcznik Obstfelda i Rogoffa (Foundations of International Macroeconomics, 1996) ujmuje to jako podejście międzyokresowe: saldo bieżące jest różnicą między krajowymi oszczędnościami a inwestycjami, więc mówi o wyborze między konsumpcją dziś a jutro, a nie tylko o konkurencyjności eksportu.
@@ -47,10 +47,10 @@ Skoro deficyt bieżący jest finansowany przepływem kapitału, to o kursie z dn
 
 ```
 Dzienny obrót na rynku walutowym (BIS, kwiecień 2022):
-  ≈ 7,5 biliona USD dziennie
+ ≈ 7,5 biliona USD dziennie
 
 Roczny światowy eksport towarów: rzędu 25 bilionów USD
-  → wartość odpowiadająca obrotowi z około 3 do 4 dni handlu walutami
+ → wartość odpowiadająca obrotowi z około 3 do 4 dni handlu walutami
 
 Wniosek: przepływy handlowe to ułamek obrotu.
 Resztę stanowią decyzje o alokacji kapitału.
@@ -62,11 +62,11 @@ Empiryczny fundament tego obrazu jest surowy. Meese i Rogoff (1983) sprawdzili m
 
 ```
 Meese i Rogoff (1983), prognoza poza próbą na 1 do 12 miesięcy:
-  modele z podażą pieniądza, produkcją i stopami
-  NIE pobiły reguły „kurs jutro ≈ kurs dzisiaj"
+ modele z podażą pieniądza, produkcją i stopami
+ NIE pobiły reguły „kurs jutro ≈ kurs dzisiaj"
 
-  krótkoterminowy kurs jest oderwany od obserwowalnych fundamentów
-  (zagadka rozłączenia, exchange rate disconnect)
+ krótkoterminowy kurs jest oderwany od obserwowalnych fundamentów
+ (zagadka rozłączenia, exchange rate disconnect)
 ```
 
 Ten wynik przetrwał dekady prób obalenia. Nie znaczy, że fundamenty nie działają. Znaczy, że na krótkim horyzoncie ich sygnał tonie w szumie przepływów, a wraca dopiero w skali wielu lat.
@@ -77,15 +77,15 @@ Jeśli nie handel z dnia na dzień, to co wyznacza poziom, wokół którego kurs
 
 ```
 Parytet absolutny (prawo jednej ceny w skali koszyka):
-  E = P / P*
-  E   kurs nominalny (waluty krajowej za jednostkę zagranicznej)
-  P   krajowy poziom cen,   P*  zagraniczny poziom cen
+ E = P / P*
+ E kurs nominalny (waluty krajowej za jednostkę zagranicznej)
+ P krajowy poziom cen, P* zagraniczny poziom cen
 
-Kurs realny:  Q = E · P* / P
-  parytet absolutny:  Q = 1 (stały)
+Kurs realny: Q = E · P* / P
+ parytet absolutny: Q = 1 (stały)
 
 Parytet względny:
-  zmiana kursu ≈ inflacja krajowa − inflacja zagraniczna
+ zmiana kursu ≈ inflacja krajowa − inflacja zagraniczna
 ```
 
 Intuicja jest zdrowa: waluta kraju o trwale wyższej inflacji powinna się osłabiać w tempie różnicy inflacji, bo inaczej jego dobra stałyby się bezkonkurencyjnie drogie. W bardzo długim okresie i dla dóbr handlowych ta siła faktycznie działa i to ona stoi za długoterminowym kursem. Problem w tym, jak wolno.
@@ -97,12 +97,12 @@ Tu pojawia się jedno z najważniejszych ustaleń tej literatury. Rogoff (1996) 
 ```
 Zagadka PPP (Rogoff, 1996):
 
-  fakt 1: kurs realny jest krótkoterminowo bardzo zmienny
-  fakt 2: odchylenia od PPP znikają wyjątkowo wolno
+ fakt 1: kurs realny jest krótkoterminowo bardzo zmienny
+ fakt 2: odchylenia od PPP znikają wyjątkowo wolno
 
-  konsensus: połowiczny czas życia odchyleń ≈ 3 do 5 lat
-  → połowa odchylenia zanika dopiero po 3 do 5 latach
-  → rocznie zamyka się tylko kilkanaście procent luki
+ konsensus: połowiczny czas życia odchyleń ≈ 3 do 5 lat
+ → połowa odchylenia zanika dopiero po 3 do 5 latach
+ → rocznie zamyka się tylko kilkanaście procent luki
 ```
 
 Połowiczny czas życia 3 do 5 lat oznacza, że gdy kurs realny odchyli się od parytetu, po trzech, pięciu latach wciąż połowa tego odchylenia pozostaje. Na powrót w pobliże parytetu potrzeba dekady lub dłużej. Zagadka polega na napięciu: tak wysoka zmienność sugeruje szoki monetarne i finansowe, które powinny zanikać szybko, a tak wolny powrót sugeruje szoki realne, trudne do pogodzenia z tą zmiennością w jednym prostym modelu. Dla praktyki płynie stąd twardy wniosek: PPP jest kotwicą, ale kotwicą na bardzo długiej linie. Na horyzoncie miesięcy potrafi być myląca.
@@ -115,15 +115,15 @@ Skąd bierze się ta nadmierna zmienność wokół powolnej kotwicy? Klasyczną 
 Model przestrzelenia Dornbuscha (1976),
 reakcja na ekspansję monetarną:
 
-  krok 1: podaż pieniądza rośnie, ceny jeszcze stoją
-          realna podaż pieniądza rośnie → stopa krajowa spada
-  krok 2: niższa stopa wymaga oczekiwanego umocnienia waluty
-          (parytet stóp niepokryty, UIP)
-  krok 3: w długim okresie waluta jest słabsza (neutralność
-          pieniądza + PPP); żeby rynek oczekiwał jej umocnienia
-          w stronę tego słabszego poziomu, kurs musi najpierw
-          osłabić się PONAD niego → przestrzelenie
-  krok 4: w miarę dostosowywania cen kurs wraca do równowagi
+ krok 1: podaż pieniądza rośnie, ceny jeszcze stoją
+ realna podaż pieniądza rośnie → stopa krajowa spada
+ krok 2: niższa stopa wymaga oczekiwanego umocnienia waluty
+ (parytet stóp niepokryty, UIP)
+ krok 3: w długim okresie waluta jest słabsza (neutralność
+ pieniądza + PPP); żeby rynek oczekiwał jej umocnienia
+ w stronę tego słabszego poziomu, kurs musi najpierw
+ osłabić się PONAD niego → przestrzelenie
+ krok 4: w miarę dostosowywania cen kurs wraca do równowagi
 ```
 
 Wniosek Dornbuscha jest głęboki: kurs jest bardziej ruchliwy niż fundamenty, które go napędzają, nie dlatego, że rynek jest irracjonalny, lecz dlatego, że lepkość cen zmusza całe dostosowanie do przejścia przez jeden ruchliwy rynek walutowy. Przestrzelenie tłumaczy, dlaczego kursy reagują na decyzje banków centralnych mocniej, niż wynikałoby to z samej zmiany poziomu cen. To także dopełnia zagadkę PPP: krótkoterminowe wychylenia bywają duże właśnie dlatego, że kurs bierze na siebie dostosowanie, które ceny odkładają na lata.
@@ -135,8 +135,8 @@ Kotwica długookresowa sama się przesuwa, gdy zmienia się realna wartość teg
 ```
 Terms of trade = ceny eksportu / ceny importu
 
-  eksport drożeje względem importu  →  presja na umocnienie
-  eksport tanieje względem importu  →  presja na osłabienie
+ eksport drożeje względem importu → presja na umocnienie
+ eksport tanieje względem importu → presja na osłabienie
 ```
 
 Najczystszym przypadkiem są waluty surowcowe, jak dolar australijski, dolar kanadyjski, korona norweska czy dolar nowozelandzki. Chen i Rogoff (2003) udokumentowali, że ceny surowców realnie przesuwają kursy takich gospodarek. To ważne dopełnienie obrazu: długookresowa kotwica kursu nie jest stała, lecz przesuwa się wraz z realnymi warunkami wymiany, a dla eksporterów surowców głównym motorem tego przesunięcia są ceny towarów.

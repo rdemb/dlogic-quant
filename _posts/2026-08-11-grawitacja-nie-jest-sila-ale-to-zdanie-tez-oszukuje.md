@@ -2,7 +2,7 @@
 layout: labpost
 title: "Grawitacja nie jest siłą. Ale to zdanie też może oszukiwać"
 description: "Einstein nie usunął grawitacji z fizyki. Zmienił odpowiedź na pytanie, który ruch jest swobodny, skąd bierze się ciężar i czego nie można wytransformować."
-dek: "Człowiek spadający z dachu nie czuje grawitacji. Człowiek stojący na chodniku ją czuje — choć to właśnie chodnik nie pozwala mu poruszać się swobodnie."
+dek: "Człowiek spadający z dachu nie czuje grawitacji. Człowiek stojący na chodniku ją czuje - choć to właśnie chodnik nie pozwala mu poruszać się swobodnie."
 date: 2026-08-11 17:30:00 +0200
 category: luzne
 tags: [odkrywanie-niewidzialnego, fizyka, grawitacja, Einstein, czasoprzestrzen]
@@ -29,28 +29,28 @@ Nie dlatego, że teoria Newtona nagle stała się bezwartościowa, lecz dlatego,
 
 W mechanice Newtona Ziemia przyciąga człowieka w dół, a chodnik odpowiada równą siłą reakcji skierowaną ku górze. Siły równoważą się, więc człowiek pozostaje w spoczynku. Model działa znakomicie w codziennych warunkach i nadal jest używany wszędzie tam, gdzie poprawki relatywistyczne są nieistotne.
 
-Einstein proponuje inny opis tego samego doświadczenia. Ciało pozostawione samo sobie wybiera geodezyjną — odpowiednik najprostszej możliwej linii w zakrzywionej czasoprzestrzeni. Dla człowieka znajdującego się nad Ziemią taką naturalną trajektorią jest swobodny spadek. Chodnik nie „równoważy” więc jedynie grawitacji. Fizycznie zmusza człowieka do odejścia od geodezyjnej, wywierając elektromagnetyczny nacisk na atomy jego ciała.
+Einstein proponuje inny opis tego samego doświadczenia. Ciało pozostawione samo sobie wybiera geodezyjną - odpowiednik najprostszej możliwej linii w zakrzywionej czasoprzestrzeni. Dla człowieka znajdującego się nad Ziemią taką naturalną trajektorią jest swobodny spadek. Chodnik nie „równoważy” więc jedynie grawitacji. Fizycznie zmusza człowieka do odejścia od geodezyjnej, wywierając elektromagnetyczny nacisk na atomy jego ciała.
 
 To dlatego astronauta na orbicie doświadcza nieważkości, mimo że grawitacja wcale tam nie zniknęła. Stacja kosmiczna i jej załoga nieustannie spadają wokół Ziemi. Powierzchnia planety nie znajduje się pod nimi wystarczająco szybko, aby doszło do zderzenia, więc spadek staje się orbitą.
 
 <figure>
 <svg viewBox="0 0 1040 430" role="img" aria-labelledby="fall-title fall-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="fall-title">Swobodny spadek i podparcie</title>
-  <desc id="fall-desc">Po lewej człowiek w spadku ma zerowe przyspieszenie własne. Po prawej stojący na ziemi jest wypychany z geodezyjnej przez podłoże.</desc>
-  <defs><marker id="fall-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--acc)"/></marker></defs>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <rect x="44" y="42" width="440" height="330" rx="20" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <rect x="556" y="42" width="440" height="330" rx="20" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
-    <text x="264" y="82" text-anchor="middle" font-size="21" fill="var(--ink)">SWOBODNY SPADEK</text>
-    <text x="776" y="82" text-anchor="middle" font-size="21" fill="var(--ink)">STANIE NA ZIEMI</text>
-    <circle cx="264" cy="168" r="32" fill="none" stroke="var(--acc)" stroke-width="4"/><path d="M264 200 V286 M224 230 H304 M264 286 L226 336 M264 286 L302 336" stroke="var(--acc)" stroke-width="5" stroke-linecap="round"/>
-    <path d="M356 126 V302" stroke="var(--mut)" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#fall-arrow)"/>
-    <text x="264" y="356" text-anchor="middle" font-size="15" fill="var(--mut)">akcelerometr: ~0</text>
-    <circle cx="776" cy="168" r="32" fill="none" stroke="var(--ink)" stroke-width="4"/><path d="M776 200 V286 M736 230 H816 M776 286 L738 336 M776 286 L814 336" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
-    <rect x="660" y="340" width="232" height="18" rx="6" fill="var(--mut)" opacity=".45"/>
-    <path d="M776 338 V244" stroke="var(--acc)" stroke-width="5" marker-end="url(#fall-arrow)"/>
-    <text x="776" y="388" text-anchor="middle" font-size="15" fill="var(--mut)">podłoże wymusza przyspieszenie własne</text>
-  </g>
+ <title id="fall-title">Swobodny spadek i podparcie</title>
+ <desc id="fall-desc">Po lewej człowiek w spadku ma zerowe przyspieszenie własne. Po prawej stojący na ziemi jest wypychany z geodezyjnej przez podłoże.</desc>
+ <defs><marker id="fall-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="var(--acc)"/></marker></defs>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <rect x="44" y="42" width="440" height="330" rx="20" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <rect x="556" y="42" width="440" height="330" rx="20" fill="var(--soft)" stroke="var(--line)" stroke-width="2"/>
+ <text x="264" y="82" text-anchor="middle" font-size="21" fill="var(--ink)">SWOBODNY SPADEK</text>
+ <text x="776" y="82" text-anchor="middle" font-size="21" fill="var(--ink)">STANIE NA ZIEMI</text>
+ <circle cx="264" cy="168" r="32" fill="none" stroke="var(--acc)" stroke-width="4"/><path d="M264 200 V286 M224 230 H304 M264 286 L226 336 M264 286 L302 336" stroke="var(--acc)" stroke-width="5" stroke-linecap="round"/>
+ <path d="M356 126 V302" stroke="var(--mut)" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#fall-arrow)"/>
+ <text x="264" y="356" text-anchor="middle" font-size="15" fill="var(--mut)">akcelerometr: ~0</text>
+ <circle cx="776" cy="168" r="32" fill="none" stroke="var(--ink)" stroke-width="4"/><path d="M776 200 V286 M736 230 H816 M776 286 L738 336 M776 286 L814 336" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
+ <rect x="660" y="340" width="232" height="18" rx="6" fill="var(--mut)" opacity=".45"/>
+ <path d="M776 338 V244" stroke="var(--acc)" stroke-width="5" marker-end="url(#fall-arrow)"/>
+ <text x="776" y="388" text-anchor="middle" font-size="15" fill="var(--mut)">podłoże wymusza przyspieszenie własne</text>
+ </g>
 </svg>
 <figcaption>W ogólnej teorii względności swobodny spadek jest ruchem bez siły własnej. Ciężar odczuwamy wtedy, gdy podłoże, fotel albo lina uniemożliwiają geodezyjny ruch.</figcaption>
 </figure>
@@ -65,25 +65,25 @@ Krzywizny nie da się usunąć jednym wyborem układu współrzędnych na całym
 
 <figure>
 <svg viewBox="0 0 980 330" role="img" aria-labelledby="tidal-title tidal-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="tidal-title">Lokalna nieważkość i krzywizna</title>
-  <desc id="tidal-desc">W małym obszarze geodezyjne wyglądają równolegle. W większym obszarze ich zbieżność ujawnia efekty pływowe.</desc>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <rect x="50" y="46" width="380" height="236" rx="18" fill="var(--soft)" stroke="var(--up)" stroke-width="3"/>
-    <rect x="550" y="46" width="380" height="236" rx="18" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
-    <text x="240" y="82" text-anchor="middle" font-size="19" fill="var(--up)">MAŁE LABORATORIUM</text>
-    <text x="740" y="82" text-anchor="middle" font-size="19" fill="var(--dn)">WIĘKSZY OBSZAR</text>
-    <path d="M160 116 V246 M240 116 V246 M320 116 V246" stroke="var(--acc)" stroke-width="4"/>
-    <text x="240" y="270" text-anchor="middle" font-size="14" fill="var(--mut)">lokalnie: linie prawie równoległe</text>
-    <path d="M628 112 C650 166 684 210 738 250 M740 112 V250 M852 112 C830 166 796 210 742 250" stroke="var(--acc)" stroke-width="4" fill="none"/>
-    <text x="740" y="270" text-anchor="middle" font-size="14" fill="var(--mut)">zbieżność geodezyjnych = pływy</text>
-  </g>
+ <title id="tidal-title">Lokalna nieważkość i krzywizna</title>
+ <desc id="tidal-desc">W małym obszarze geodezyjne wyglądają równolegle. W większym obszarze ich zbieżność ujawnia efekty pływowe.</desc>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <rect x="50" y="46" width="380" height="236" rx="18" fill="var(--soft)" stroke="var(--up)" stroke-width="3"/>
+ <rect x="550" y="46" width="380" height="236" rx="18" fill="var(--soft)" stroke="var(--dn)" stroke-width="3"/>
+ <text x="240" y="82" text-anchor="middle" font-size="19" fill="var(--up)">MAŁE LABORATORIUM</text>
+ <text x="740" y="82" text-anchor="middle" font-size="19" fill="var(--dn)">WIĘKSZY OBSZAR</text>
+ <path d="M160 116 V246 M240 116 V246 M320 116 V246" stroke="var(--acc)" stroke-width="4"/>
+ <text x="240" y="270" text-anchor="middle" font-size="14" fill="var(--mut)">lokalnie: linie prawie równoległe</text>
+ <path d="M628 112 C650 166 684 210 738 250 M740 112 V250 M852 112 C830 166 796 210 742 250" stroke="var(--acc)" stroke-width="4" fill="none"/>
+ <text x="740" y="270" text-anchor="middle" font-size="14" fill="var(--mut)">zbieżność geodezyjnych = pływy</text>
+ </g>
 </svg>
 <figcaption>„Grawitacja znika” tylko lokalnie dla obserwatora w swobodnym spadku. Krzywizna ujawnia się poprzez relatywny ruch sąsiednich trajektorii.</figcaption>
 </figure>
 
-## Materac pomaga — i jednocześnie oszukuje
+## Materac pomaga - i jednocześnie oszukuje
 
-Popularny obraz ciężkiej kuli odkształcającej elastyczny materac ma jedną ważną zaletę: pozwala zobaczyć, że tor ruchu może wynikać z geometrii, a nie z niewidzialnej liny łączącej dwa ciała. Jest jednak modelem, który wyjaśnia grawitację za pomocą… ziemskiej grawitacji. Mała kulka krąży w zagłębieniu dlatego, że planeta ciągnie ją w dół po nachylonej powierzchni.
+Popularny obraz ciężkiej kuli odkształcającej elastyczny materac ma jedną ważną zaletę: pozwala zobaczyć, że tor ruchu może wynikać z geometrii, a nie z niewidzialnej liny łączącej dwa ciała. Jest jednak modelem, który wyjaśnia grawitację za pomocą... ziemskiej grawitacji. Mała kulka krąży w zagłębieniu dlatego, że planeta ciągnie ją w dół po nachylonej powierzchni.
 
 Analogia pokazuje ponadto zakrzywienie dwóch wymiarów przestrzennych w trzecim wymiarze, podczas gdy ogólna teoria względności dotyczy wewnętrznej geometrii czterowymiarowej czasoprzestrzeni. W słabym polu ogromna część efektu orbitalnego wiąże się z geometrią czasu, czego materac praktycznie nie pokazuje. Tarcie sprawia też, że moneta w lejku spiraluje ku środkowi, choć idealna planeta może krążyć bardzo długo bez utraty energii.
 
@@ -103,24 +103,24 @@ W 2017 roku zdarzenie GW170817 dostarczyło niezwykle mocnego testu. Fale grawit
 
 Ogólna teoria względności nie jest ozdobą kosmologii. Działa w systemie, który prowadzi samochód przez skrzyżowanie.
 
-Zegary atomowe na satelitach GPS znajdują się w słabszym polu grawitacyjnym niż zegary na powierzchni Ziemi, dlatego z punktu widzenia ogólnej teorii względności spieszą się o około 45 mikrosekund na dobę. Ruch satelitów powoduje przeciwny efekt szczególnej teorii względności — opóźnienie około 7 mikrosekund. Bilans wynosi około 38 mikrosekund dziennie.
+Zegary atomowe na satelitach GPS znajdują się w słabszym polu grawitacyjnym niż zegary na powierzchni Ziemi, dlatego z punktu widzenia ogólnej teorii względności spieszą się o około 45 mikrosekund na dobę. Ruch satelitów powoduje przeciwny efekt szczególnej teorii względności - opóźnienie około 7 mikrosekund. Bilans wynosi około 38 mikrosekund dziennie.
 
 <figure>
 <svg viewBox="0 0 980 350" role="img" aria-labelledby="gps-title gps-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="gps-title">Poprawki relatywistyczne GPS</title>
-  <desc id="gps-desc">Grawitacja przyspiesza zegar satelity o 45 mikrosekund na dobę, ruch opóźnia go o 7, a bilans wynosi 38 mikrosekund.</desc>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <line x1="150" y1="286" x2="850" y2="286" stroke="var(--line)" stroke-width="3"/>
-    <rect x="224" y="68" width="150" height="218" rx="12" fill="var(--up)" opacity=".78"/>
-    <rect x="416" y="252" width="150" height="34" rx="12" fill="var(--dn)" opacity=".78"/>
-    <rect x="608" y="102" width="150" height="184" rx="12" fill="var(--acc)" opacity=".78"/>
-    <text x="299" y="52" text-anchor="middle" font-size="19" fill="var(--up)">+45 μs/dobę</text>
-    <text x="491" y="236" text-anchor="middle" font-size="19" fill="var(--dn)">−7 μs/dobę</text>
-    <text x="683" y="86" text-anchor="middle" font-size="19" fill="var(--acc)">+38 μs/dobę</text>
-    <text x="299" y="320" text-anchor="middle" font-size="14" fill="var(--mut)">słabsza grawitacja</text>
-    <text x="491" y="320" text-anchor="middle" font-size="14" fill="var(--mut)">ruch satelity</text>
-    <text x="683" y="320" text-anchor="middle" font-size="14" fill="var(--mut)">bilans GPS</text>
-  </g>
+ <title id="gps-title">Poprawki relatywistyczne GPS</title>
+ <desc id="gps-desc">Grawitacja przyspiesza zegar satelity o 45 mikrosekund na dobę, ruch opóźnia go o 7, a bilans wynosi 38 mikrosekund.</desc>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <line x1="150" y1="286" x2="850" y2="286" stroke="var(--line)" stroke-width="3"/>
+ <rect x="224" y="68" width="150" height="218" rx="12" fill="var(--up)" opacity=".78"/>
+ <rect x="416" y="252" width="150" height="34" rx="12" fill="var(--dn)" opacity=".78"/>
+ <rect x="608" y="102" width="150" height="184" rx="12" fill="var(--acc)" opacity=".78"/>
+ <text x="299" y="52" text-anchor="middle" font-size="19" fill="var(--up)">+45 μs/dobę</text>
+ <text x="491" y="236" text-anchor="middle" font-size="19" fill="var(--dn)">−7 μs/dobę</text>
+ <text x="683" y="86" text-anchor="middle" font-size="19" fill="var(--acc)">+38 μs/dobę</text>
+ <text x="299" y="320" text-anchor="middle" font-size="14" fill="var(--mut)">słabsza grawitacja</text>
+ <text x="491" y="320" text-anchor="middle" font-size="14" fill="var(--mut)">ruch satelity</text>
+ <text x="683" y="320" text-anchor="middle" font-size="14" fill="var(--mut)">bilans GPS</text>
+ </g>
 </svg>
 <figcaption>Bez uwzględnienia obu efektów zegary satelitarne szybko utraciłyby synchronizację potrzebną do precyzyjnego pozycjonowania.</figcaption>
 </figure>

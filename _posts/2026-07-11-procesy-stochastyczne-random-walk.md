@@ -31,11 +31,11 @@ Najprostszym procesem tego rodzaju jest błądzenie losowe. Kolejna wartość to
 
 ```
 Błądzenie losowe (czas dyskretny):
-    X_t = X_{t-1} + e_t
+ X_t = X_{t-1} + e_t
 
-    e_t = niezależne szoki o zerowej średniej (biały szum)
-    brak stałej średniej, wariancja rośnie z czasem
-    szok e_t wchodzi w poziom na trwałe (brak powrotu do średniej)
+ e_t = niezależne szoki o zerowej średniej (biały szum)
+ brak stałej średniej, wariancja rośnie z czasem
+ szok e_t wchodzi w poziom na trwałe (brak powrotu do średniej)
 ```
 
 Trzy własności są tu kluczowe. Błądzenie nie ma stałej średniej, do której wraca. Jego wariancja rośnie z czasem, więc im dłuższy horyzont, tym szerszy wachlarz możliwych położeń. I każdy szok wchodzi w poziom na trwałe, ponieważ nowe położenie staje się punktem wyjścia dla następnego kroku.
@@ -50,10 +50,10 @@ Jest to bliskość, nie tożsamość. Tłem jest hipoteza rynku efektywnego w uj
 
 ```
 Martyngał (proces {X_t} wobec informacji F_t):
-    E[ X_{t+1} | F_t ] = X_t
+ E[ X_{t+1} | F_t ] = X_t
 
-    najlepsza prognoza przyszłej wartości = wartość dzisiejsza
-    warunkowa średnia przyrostu X_{t+1} − X_t = 0 (gra sprawiedliwa)
+ najlepsza prognoza przyszłej wartości = wartość dzisiejsza
+ warunkowa średnia przyrostu X_{t+1} − X_t = 0 (gra sprawiedliwa)
 ```
 
 Warunek wygląda skromnie, a niesie mocną treść. Najlepsza prognoza jutrzejszej wartości to wartość dzisiejsza, a oczekiwany przyrost, warunkowo, wynosi zero. W języku hazardu to definicja gry sprawiedliwej: znajomość całej przeszłości nie pozwala przewidzieć kierunku następnego ruchu lepiej niż rzut monetą. Właśnie dlatego martyngał jest matematycznym zapisem braku łatwej, systematycznej przewagi opartej wyłącznie na historii ceny.
@@ -73,12 +73,12 @@ Gdy w błądzeniu losowym kroki stają się coraz częstsze i coraz mniejsze, a 
 
 ```
 Ruch Browna / proces Wienera W_t:
-    W_0 = 0
-    ścieżki ciągłe (bez skoków)
-    przyrosty niezależne na rozłącznych odcinkach czasu
-    W_t − W_s ~ N(0, t − s)          (przyrost normalny, średnia 0)
-    Var(W_t) = t                     (wariancja rośnie liniowo)
-    odch. std. = pierwiastek(t)      (skala pierwiastka czasu)
+ W_0 = 0
+ ścieżki ciągłe (bez skoków)
+ przyrosty niezależne na rozłącznych odcinkach czasu
+ W_t − W_s ~ N(0, t − s) (przyrost normalny, średnia 0)
+ Var(W_t) = t (wariancja rośnie liniowo)
+ odch. std. = pierwiastek(t) (skala pierwiastka czasu)
 ```
 
 Własności są następujące. Ścieżki są ciągłe, czyli rysują się bez przeskoków, choć nigdzie nie są gładkie. Przyrosty na rozłącznych odcinkach czasu są niezależne, a rozkład przyrostu zależy tylko od długości odcinka, nie od chwili, w której się zaczyna. Ten rozkład jest normalny o średniej zero. I najważniejsze dla intuicji: wariancja narasta liniowo z czasem, więc odchylenie standardowe, czyli typowy rozrzut, rośnie jak pierwiastek z czasu. Na diagramie widać to jako obwiednię rozszerzającą się coraz wolniej, w tempie pierwiastka, a nie po linii prostej.
@@ -91,11 +91,11 @@ Liniowy wzrost wariancji jest cichym bohaterem całej konstrukcji, ponieważ prz
 
 ```
 Skala pierwiastka czasu (przyrosty niezależne, stała wariancja na jednostkę):
-    Var(zmiana w czasie T) = sigma^2 · T
-    odch. std.(zmiana w czasie T) = sigma · pierwiastek(T)
+ Var(zmiana w czasie T) = sigma^2 · T
+ odch. std.(zmiana w czasie T) = sigma · pierwiastek(T)
 
-    zmienność dzienna → roczna:  sigma_rok = sigma_dzień · pierwiastek(252)
-    dwa razy dłuższy horyzont → rozrzut większy pierwiastek(2) raza, nie 2 razy
+ zmienność dzienna → roczna: sigma_rok = sigma_dzień · pierwiastek(252)
+ dwa razy dłuższy horyzont → rozrzut większy pierwiastek(2) raza, nie 2 razy
 ```
 
 Praktyczna konsekwencja pojawia się wszędzie tam, gdzie porównuje się zmienność na różnych horyzontach. Zmienność dzienną przelicza się na roczną, mnożąc przez pierwiastek z liczby dni handlowych, a nie przez samą liczbę dni. Rozrzut na dwa dni jest większy od dziennego o pierwiastek z dwóch, czyli około czterdziestu procent, a nie dwukrotnie. Ta sama reguła stoi za tym, że pasma oparte na zmienności rozchodzą się parabolicznie, a nie liniowo, oraz za tym, że dłuższy horyzont zwiększa niepewność wolniej, niżby podpowiadała intuicja liniowa. Reguła pierwiastka czasu jest przy tym własnością modelu z niezależnymi przyrostami. Gdy przyrosty są skorelowane, na przykład przy skupianiu się zmienności w klastry, skalowanie odbiega od czystego pierwiastka.
@@ -106,13 +106,13 @@ Zwykły ruch Browna ma wadę jako model ceny: może zejść poniżej zera, ponie
 
 ```
 Geometryczny ruch Browna (model ceny S_t):
-    dS_t = mu · S_t · dt + sigma · S_t · dW_t
+ dS_t = mu · S_t · dt + sigma · S_t · dW_t
 
-    mu    = dryf (średni trend)
-    sigma = zmienność (skala losowych wstrząsów)
-    log(S_t) podlega ruchowi Browna z dryfem → cena zawsze dodatnia
+ mu = dryf (średni trend)
+ sigma = zmienność (skala losowych wstrząsów)
+ log(S_t) podlega ruchowi Browna z dryfem → cena zawsze dodatnia
 
-    na tym stoi wzór Blacka i Scholesa (1973) na wycenę opcji
+ na tym stoi wzór Blacka i Scholesa (1973) na wycenę opcji
 ```
 
 Model ma dwa parametry o czytelnym sensie. Dryf to średni trend, składnik odpowiadający oczekiwanemu tempu wzrostu. Zmienność to skala losowych wstrząsów wokół tego trendu. Ponieważ losowaniu podlega logarytm ceny, sama cena pozostaje dodatnia, a jej rozkład jest logarytmicznie normalny. Taką postać modelu cen spopularyzował Samuelson (1965), poprawiając arytmetyczny model Bacheliera właśnie w punkcie ujemnych cen.

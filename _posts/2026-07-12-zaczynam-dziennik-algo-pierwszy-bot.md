@@ -40,7 +40,7 @@ To jest sedno, a nie dodatek. Zasady są wpisane na twardo i nieodłączalne:
 ```
 Dzienny limit straty: po -10% kapitalu dnia bot pauzuje wejscia do polnocy UTC.
 Kill-switch: po -30% od szczytu kapitalu bot zamyka wszystko i staje.
-                Reset tylko reczny, nigdy automatyczny.
+ Reset tylko reczny, nigdy automatyczny.
 Jedna pozycja na instrument. Bez usredniania w strate, bez martingale.
 Guard wielkosci: jesli minimalny lot przekracza budzet ryzyka, bot pomija sygnal.
 Tryb domyslny: papierowy. Realne pieniadze wymagaja dwoch recznych krokow.

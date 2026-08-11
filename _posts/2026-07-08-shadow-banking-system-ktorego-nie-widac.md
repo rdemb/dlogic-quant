@@ -37,15 +37,15 @@ Shadow banking wykonuje wszystkie trzy, tylko rozłożone na ogniwa łańcucha. 
 ```
 TA SAMA ROBOTA, INNA OBUDOWA:
 
-  BANK                          SHADOW BANKING
-  depozyt (pasywo)              repo / udzial MMF / ABCP
-  kredyt (aktywo)               kredyt zapakowany w ABS
-  transformacja terminow        transformacja terminow
-  transformacja plynnosci       transformacja plynnosci
-  transformacja ryzyka          transformacja ryzyka
-  ──────────────────────────────────────────────────
-  gwarancja depozytow           BRAK (prywatne gwarancje)
-  bank centralny za plecami     BRAK (do 2008)
+ BANK SHADOW BANKING
+ depozyt (pasywo) repo / udzial MMF / ABCP
+ kredyt (aktywo) kredyt zapakowany w ABS
+ transformacja terminow transformacja terminow
+ transformacja plynnosci transformacja plynnosci
+ transformacja ryzyka transformacja ryzyka
+ ──────────────────────────────────────────────────
+ gwarancja depozytow BRAK (prywatne gwarancje)
+ bank centralny za plecami BRAK (do 2008)
 ```
 
 ## Repo jako depozyt: pieniądz oparty na zabezpieczeniu
@@ -57,13 +57,13 @@ Odpowiedzią shadow bankingu jest repo. To pożyczka, w której posiadacz gotów
 ```
 REPO = depozyt shadow banku (pozyczka pod zastaw):
 
-  posiadacz gotowki   →  daje 98 gotowki
-  pozyczkobiorca      →  daje w zastaw papier warty 100
+ posiadacz gotowki → daje 98 gotowki
+ pozyczkobiorca → daje w zastaw papier warty 100
 
-  haircut = 100 − 98 = 2   (nadwyzka zastawu, bufor bezpieczenstwa)
+ haircut = 100 − 98 = 2 (nadwyzka zastawu, bufor bezpieczenstwa)
 
-  nazajutrz transakcja jest rolowana (odnawiana) albo nie
-  brak rolowania = wyplata depozytu = run
+ nazajutrz transakcja jest rolowana (odnawiana) albo nie
+ brak rolowania = wyplata depozytu = run
 ```
 
 To przesunięcie jest kluczowe. Udział w funduszu rynku pieniężnego, papier ABCP czy pozycja repo są dla wielkiego inwestora substytutem depozytu, są traktowane jak pieniądz. Tyle że ich bezpieczeństwo stoi na dwóch nogach, które w kryzysie zaczynają się chwiać jednocześnie: na wypłacalności drugiej strony i na wartości zabezpieczenia.
@@ -77,18 +77,18 @@ Zaczyna się od podmiotu, który udziela kredytów (origination). Ten oddaje je 
 ```
 LANCUCH POSREDNICTWA (uproszczony, od pieniadza do kredytu):
 
-  pule gotowki (firmy, fundusze)  →  fundusz rynku pieniezniego (MMF)
-       kupuja instrumenty jak-gotowka: repo, ABCP, papier komercyjny
+ pule gotowki (firmy, fundusze) → fundusz rynku pieniezniego (MMF)
+ kupuja instrumenty jak-gotowka: repo, ABCP, papier komercyjny
 
-  MMF finansuje  →  posrednikow shadow bankingu:
-       origination     →  udziela kredytow (np. hipotek)
-       warehousing     →  magazynuje je na ABCP do czasu pakowania
-       sekurytyzacja   →  pakuje w papiery ABS, tnie na transze
-       repo / SIV      →  trzyma pakiety, finansuje je krotkim repo
+ MMF finansuje → posrednikow shadow bankingu:
+ origination → udziela kredytow (np. hipotek)
+ warehousing → magazynuje je na ABCP do czasu pakowania
+ sekurytyzacja → pakuje w papiery ABS, tnie na transze
+ repo / SIV → trzyma pakiety, finansuje je krotkim repo
 
-  na koncu lancucha  →  dlugi, ryzykowny kredyt hipoteczny
+ na koncu lancucha → dlugi, ryzykowny kredyt hipoteczny
 
-  KIERUNEK PRZEMIANY:  krotki i bezpieczny  →  dlugi i ryzykowny
+ KIERUNEK PRZEMIANY: krotki i bezpieczny → dlugi i ryzykowny
 ```
 
 Każde ogniwo z osobna wygląda niewinnie. Dopiero zsumowane odtwarzają pełną transformację terminów, płynności i ryzyka, tyle że rozproszoną między wiele bilansów. A skoro transformacja jest rozproszona, to i słabość jest rozproszona, ukryta w połączeniach, których z zewnątrz trudno dostrzec.
@@ -108,14 +108,14 @@ Kiedy pojawiła się wątpliwość co do wartości papierów opartych na kredyta
 ```
 RUN NA REPO (spirala haircutow):
 
-  watpliwosc co do wartosci zabezpieczenia
-        →  wierzyciele zadaja wyzszego haircutu
-        →  mniej gotowki na jednostke zastawu
-        →  przymusowa wyprzedaz aktywow, by domknac finansowanie
-        →  spadek cen aktywow
-        →  jeszcze wieksza watpliwosc  →  jeszcze wyzszy haircut
+ watpliwosc co do wartosci zabezpieczenia
+ → wierzyciele zadaja wyzszego haircutu
+ → mniej gotowki na jednostke zastawu
+ → przymusowa wyprzedaz aktywow, by domknac finansowanie
+ → spadek cen aktywow
+ → jeszcze wieksza watpliwosc → jeszcze wyzszy haircut
 
-  petla sprzezenia zwrotnego = cichy run, bez kolejki przy okienku
+ petla sprzezenia zwrotnego = cichy run, bez kolejki przy okienku
 ```
 
 Ten sam scenariusz rozegrał się na sąsiednich rynkach. Latem 2007 zamarł rynek ABCP, gdy inwestorzy odmówili rolowania papierów, przez co spółki je emitujące zostały bez finansowania z dnia na dzień. Po upadku banku Lehman jeden z dużych funduszy rynku pieniężnego, trzymający jego papier komercyjny, zanotował spadek wartości udziału poniżej jednego dolara, co po angielsku nazwano broke the buck. To złamało założenie, że taki fundusz jest równie pewny jak gotówka, i wywołało run na całą klasę tych funduszy. Wszędzie ten sam schemat: instrument uważany za pieniądz nagle przestaje nim być, a posiadacze rzucają się do wyjścia.

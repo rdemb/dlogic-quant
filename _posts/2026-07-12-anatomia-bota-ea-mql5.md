@@ -24,10 +24,10 @@ tags: [programowanie, MQL5, "Expert Advisor", MetaTrader, OnTick, CTrade, OnInit
 Expert Advisor nie ma własnej pętli, która kręci się w kółko. Zamiast tego terminal MetaTrader 5 wywołuje z góry ustalone funkcje, gdy zajdzie odpowiednie zdarzenie. To odwrócenie sterowania: nie odpytujesz rynku w kółko, tylko czekasz, aż terminal zawoła twój kod. Szkielet tworzą cztery funkcje o zarezerwowanych nazwach.
 
 ```
-int  OnInit(void)               // Init:    raz, tuż po załadowaniu EA
-void OnTick(void)               // NewTick:  przy każdym nowym kwotowaniu
-void OnDeinit(const int reason) // Deinit:   przy zdejmowaniu EA, reason mówi dlaczego
-void OnTimer(void)              // Timer:    cyklicznie, po EventSetTimer(sekundy)
+int OnInit(void) // Init: raz, tuż po załadowaniu EA
+void OnTick(void) // NewTick: przy każdym nowym kwotowaniu
+void OnDeinit(const int reason) // Deinit: przy zdejmowaniu EA, reason mówi dlaczego
+void OnTimer(void) // Timer: cyklicznie, po EventSetTimer(sekundy)
 ```
 
 OnInit inicjalizuje program. Dokumentacja MQL5 zaleca wariant zwracający int, bo pozwala oddać kod błędu: zwrot INIT_SUCCEEDED oznacza start udany, INIT_FAILED wymusza wyładowanie EA. Tu tworzy się uchwyty wskaźników i ustawia parametry. OnDeinit sprząta przy końcu, a parametr reason niesie powód (zmiana parametrów, zamknięcie wykresu, rekompilacja). OnTimer jest opcjonalny i odpala się cyklicznie, ale tylko gdy w OnInit zawołasz EventSetTimer(sekundy); w OnDeinit trzeba go zdjąć przez EventKillTimer().
@@ -42,12 +42,12 @@ Skoro OnTick leci co tick, a logika oparta na świecach ma sens raz na świecę,
 datetime lastBarTime = 0;
 
 bool IsNewBar()
-  {
-   datetime t = iTime(_Symbol, _Period, 0); // czas otwarcia świecy [0]
-   if(t == lastBarTime) return(false);      // ta sama świeca, wychodzimy
-   lastBarTime = t;                          // nowa świeca, zapamiętaj czas
-   return(true);
-  }
+ {
+ datetime t = iTime(_Symbol, _Period, 0); // czas otwarcia świecy [0]
+ if(t == lastBarTime) return(false); // ta sama świeca, wychodzimy
+ lastBarTime = t; // nowa świeca, zapamiętaj czas
+ return(true);
+ }
 ```
 
 Po co to robić? Z trzech powodów. Pierwszy to spójność: wskaźnik liczony na świecy [0], która wciąż się formuje, zmienia wartość aż do zamknięcia, więc sygnał policzony w środku świecy potrafi zniknąć albo pojawić się ponownie. Liczenie na barach już zamkniętych, czyli [1] i starszych, usuwa ten repaint. Drugi to koszt i bezpieczeństwo: setki przeliczeń i prób zleceń na jednej świecy obciążają terminal i grożą duplikatami pozycji. Trzeci to zgodność z testerem: strategia typu bar po barze zachowuje się tak samo w backteście i na żywo, bo obie ścieżki podejmują decyzję w tym samym momencie, na zamknięciu.
@@ -58,17 +58,17 @@ Zanim EA wyśle zlecenie, musi wiedzieć, co już ma otwarte. Bez tego przy każ
 
 ```
 bool HasOwnPosition(long magic)
-  {
-   for(int i = PositionsTotal() - 1; i >= 0; i--)
-     {
-      ulong ticket = PositionGetTicket(i); // wybiera pozycję do odczytu
-      if(ticket == 0) continue;
-      if(PositionGetString(POSITION_SYMBOL) == _Symbol &&
-         PositionGetInteger(POSITION_MAGIC) == magic)
-         return(true);                     // mamy już swoją pozycję
-     }
-   return(false);
-  }
+ {
+ for(int i = PositionsTotal() - 1; i >= 0; i--)
+ {
+ ulong ticket = PositionGetTicket(i); // wybiera pozycję do odczytu
+ if(ticket == 0) continue;
+ if(PositionGetString(POSITION_SYMBOL) == _Symbol &&
+ PositionGetInteger(POSITION_MAGIC) == magic)
+ return(true); // mamy już swoją pozycję
+ }
+ return(false);
+ }
 ```
 
 Funkcja PositionGetTicket(index) zwraca ticket pozycji o danym indeksie i, jak podaje dokumentacja MQL5, automatycznie wybiera tę pozycję do pracy funkcjami PositionGetDouble, PositionGetInteger i PositionGetString. Dzięki temu zaraz po niej czytamy symbol i magic bez osobnego kroku selekcji. Magic number to liczba, którą EA znakuje swoje zlecenia: pozwala odróżnić własne pozycje od otwartych z ręki albo przez innego EA na tym samym rachunku. Dla najprostszego przypadku wystarczy PositionSelect(symbol), które kopiuje dane wybranej pozycji i zwraca true przy powodzeniu, ale pętla po PositionsTotal() jest odporna także na tryb hedging i na obce zlecenia.
@@ -88,7 +88,7 @@ Otwarcie pozycji to jedno wywołanie. Sygnatura Buy z dokumentacji MQL5:
 
 ```
 bool Buy(double volume, const string symbol=NULL, double price=0.0,
-         double sl=0.0, double tp=0.0, const string comment="")
+ double sl=0.0, double tp=0.0, const string comment="")
 ```
 
 Jeśli price wynosi 0, użyta zostanie bieżąca cena Ask, więc zwykle podajemy tylko wolumen, symbol i poziomy SL oraz TP. Symetrycznie działa Sell, który dla ceny 0 bierze Bid. SL i TP to ceny, nie odległości, dlatego liczymy je od bieżącej ceny i normalizujemy do liczby cyfr symbolu funkcją NormalizeDouble.
@@ -109,111 +109,111 @@ Poniższy kod składa wszystkie elementy w jeden, poprawny składniowo minimalny
 
 ```mql5
 //+------------------------------------------------------------------+
-//| Szkielet dydaktyczny EA (MQL5). NIE jest strategia zarobkowa.     |
-//| Sygnal: przeciecie EMA = wylacznie DEMONSTRACJA struktury.        |
+//| Szkielet dydaktyczny EA (MQL5). NIE jest strategia zarobkowa. |
+//| Sygnal: przeciecie EMA = wylacznie DEMONSTRACJA struktury. |
 //+------------------------------------------------------------------+
 #include <Trade\Trade.mqh>
 
-input long   InpMagic      = 20260712; // magic: izolacja wlasnych pozycji
-input double InpLots       = 0.01;     // wielkosc pozycji (staly lot)
-input int    InpFastPeriod = 20;       // szybka EMA
-input int    InpSlowPeriod = 50;       // wolna EMA
-input int    InpSLPoints   = 300;      // stop loss w punktach
-input int    InpTPPoints   = 300;      // take profit w punktach
+input long InpMagic = 20260712; // magic: izolacja wlasnych pozycji
+input double InpLots = 0.01; // wielkosc pozycji (staly lot)
+input int InpFastPeriod = 20; // szybka EMA
+input int InpSlowPeriod = 50; // wolna EMA
+input int InpSLPoints = 300; // stop loss w punktach
+input int InpTPPoints = 300; // take profit w punktach
 
-CTrade   trade;                  // klasa egzekucji ze Standard Library
-int      hFast = INVALID_HANDLE; // uchwyt szybkiej EMA
-int      hSlow = INVALID_HANDLE; // uchwyt wolnej EMA
-datetime lastBarTime = 0;        // pamiec ostatniej swiecy
+CTrade trade; // klasa egzekucji ze Standard Library
+int hFast = INVALID_HANDLE; // uchwyt szybkiej EMA
+int hSlow = INVALID_HANDLE; // uchwyt wolnej EMA
+datetime lastBarTime = 0; // pamiec ostatniej swiecy
 
 //+------------------------------------------------------------------+
 int OnInit()
-  {
-   hFast = iMA(_Symbol, _Period, InpFastPeriod, 0, MODE_EMA, PRICE_CLOSE);
-   hSlow = iMA(_Symbol, _Period, InpSlowPeriod, 0, MODE_EMA, PRICE_CLOSE);
-   if(hFast == INVALID_HANDLE || hSlow == INVALID_HANDLE)
-     {
-      Print("Blad tworzenia uchwytu iMA");
-      return(INIT_FAILED);
-     }
-   trade.SetExpertMagicNumber(InpMagic); // kazde zlecenie dostanie ten magic
-   return(INIT_SUCCEEDED);
-  }
+ {
+ hFast = iMA(_Symbol, _Period, InpFastPeriod, 0, MODE_EMA, PRICE_CLOSE);
+ hSlow = iMA(_Symbol, _Period, InpSlowPeriod, 0, MODE_EMA, PRICE_CLOSE);
+ if(hFast == INVALID_HANDLE || hSlow == INVALID_HANDLE)
+ {
+ Print("Blad tworzenia uchwytu iMA");
+ return(INIT_FAILED);
+ }
+ trade.SetExpertMagicNumber(InpMagic); // kazde zlecenie dostanie ten magic
+ return(INIT_SUCCEEDED);
+ }
 //+------------------------------------------------------------------+
 void OnDeinit(const int reason)
-  {
-   if(hFast != INVALID_HANDLE) IndicatorRelease(hFast);
-   if(hSlow != INVALID_HANDLE) IndicatorRelease(hSlow);
-  }
+ {
+ if(hFast != INVALID_HANDLE) IndicatorRelease(hFast);
+ if(hSlow != INVALID_HANDLE) IndicatorRelease(hSlow);
+ }
 //+------------------------------------------------------------------+
-//| Bramka nowego bara: wpuszcza logike raz na swiece, nie co tick.   |
+//| Bramka nowego bara: wpuszcza logike raz na swiece, nie co tick. |
 //+------------------------------------------------------------------+
 bool IsNewBar()
-  {
-   datetime t = iTime(_Symbol, _Period, 0);
-   if(t == lastBarTime) return(false);
-   lastBarTime = t;
-   return(true);
-  }
+ {
+ datetime t = iTime(_Symbol, _Period, 0);
+ if(t == lastBarTime) return(false);
+ lastBarTime = t;
+ return(true);
+ }
 //+------------------------------------------------------------------+
-//| Czy istnieje juz WLASNA pozycja (ten symbol + ten magic).         |
+//| Czy istnieje juz WLASNA pozycja (ten symbol + ten magic). |
 //+------------------------------------------------------------------+
 bool HasOwnPosition()
-  {
-   for(int i = PositionsTotal() - 1; i >= 0; i--)
-     {
-      ulong ticket = PositionGetTicket(i); // wybiera pozycje do odczytu
-      if(ticket == 0) continue;
-      if(PositionGetString(POSITION_SYMBOL) == _Symbol &&
-         PositionGetInteger(POSITION_MAGIC) == InpMagic)
-         return(true);
-     }
-   return(false);
-  }
+ {
+ for(int i = PositionsTotal() - 1; i >= 0; i--)
+ {
+ ulong ticket = PositionGetTicket(i); // wybiera pozycje do odczytu
+ if(ticket == 0) continue;
+ if(PositionGetString(POSITION_SYMBOL) == _Symbol &&
+ PositionGetInteger(POSITION_MAGIC) == InpMagic)
+ return(true);
+ }
+ return(false);
+ }
 //+------------------------------------------------------------------+
 void OnTick()
-  {
-   // 1) Egzekucja tylko na zamknieciu bara. OnTick leci co tick, wiec bez
-   //    tej bramki logika liczylaby sie setki razy na jednej swiecy.
-   if(!IsNewBar())
-      return;
+ {
+ // 1) Egzekucja tylko na zamknieciu bara. OnTick leci co tick, wiec bez
+ // tej bramki logika liczylaby sie setki razy na jednej swiecy.
+ if(!IsNewBar())
+ return;
 
-   // 2) Odczyt dwoch ostatnich ZAMKNIETYCH barow (pozycje 1 i 2).
-   double fast[], slow[];
-   ArraySetAsSeries(fast, true);
-   ArraySetAsSeries(slow, true);
-   if(CopyBuffer(hFast, 0, 1, 2, fast) < 2) return;
-   if(CopyBuffer(hSlow, 0, 1, 2, slow) < 2) return;
+ // 2) Odczyt dwoch ostatnich ZAMKNIETYCH barow (pozycje 1 i 2).
+ double fast[], slow[];
+ ArraySetAsSeries(fast, true);
+ ArraySetAsSeries(slow, true);
+ if(CopyBuffer(hFast, 0, 1, 2, fast) < 2) return;
+ if(CopyBuffer(hSlow, 0, 1, 2, slow) < 2) return;
 
-   // [1] = starszy bar, [0] = ostatni zamkniety bar
-   bool crossUp   = (fast[1] <= slow[1]) && (fast[0] > slow[0]);
-   bool crossDown = (fast[1] >= slow[1]) && (fast[0] < slow[0]);
+ // [1] = starszy bar, [0] = ostatni zamkniety bar
+ bool crossUp = (fast[1] <= slow[1]) && (fast[0] > slow[0]);
+ bool crossDown = (fast[1] >= slow[1]) && (fast[0] < slow[0]);
 
-   // 3) Higiena stanu: nie dokladamy do istniejacej pozycji (zero martingale).
-   if(HasOwnPosition())
-      return;
+ // 3) Higiena stanu: nie dokladamy do istniejacej pozycji (zero martingale).
+ if(HasOwnPosition())
+ return;
 
-   // 4) Egzekucja przez CTrade. SL/TP liczone od biezacej ceny.
-   double ask = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
-   double bid = SymbolInfoDouble(_Symbol, SYMBOL_BID);
+ // 4) Egzekucja przez CTrade. SL/TP liczone od biezacej ceny.
+ double ask = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
+ double bid = SymbolInfoDouble(_Symbol, SYMBOL_BID);
 
-   if(crossUp)
-     {
-      double sl = NormalizeDouble(ask - InpSLPoints * _Point, _Digits);
-      double tp = NormalizeDouble(ask + InpTPPoints * _Point, _Digits);
-      if(!trade.Buy(InpLots, _Symbol, 0.0, sl, tp)) // price 0 => Ask
-         Print("Buy odrzucony, retcode=", trade.ResultRetcode(),
-               " ", trade.ResultRetcodeDescription());
-     }
-   else if(crossDown)
-     {
-      double sl = NormalizeDouble(bid + InpSLPoints * _Point, _Digits);
-      double tp = NormalizeDouble(bid - InpTPPoints * _Point, _Digits);
-      if(!trade.Sell(InpLots, _Symbol, 0.0, sl, tp)) // price 0 => Bid
-         Print("Sell odrzucony, retcode=", trade.ResultRetcode(),
-               " ", trade.ResultRetcodeDescription());
-     }
-  }
+ if(crossUp)
+ {
+ double sl = NormalizeDouble(ask - InpSLPoints * _Point, _Digits);
+ double tp = NormalizeDouble(ask + InpTPPoints * _Point, _Digits);
+ if(!trade.Buy(InpLots, _Symbol, 0.0, sl, tp)) // price 0 => Ask
+ Print("Buy odrzucony, retcode=", trade.ResultRetcode(),
+ " ", trade.ResultRetcodeDescription());
+ }
+ else if(crossDown)
+ {
+ double sl = NormalizeDouble(bid + InpSLPoints * _Point, _Digits);
+ double tp = NormalizeDouble(bid - InpTPPoints * _Point, _Digits);
+ if(!trade.Sell(InpLots, _Symbol, 0.0, sl, tp)) // price 0 => Bid
+ Print("Sell odrzucony, retcode=", trade.ResultRetcode(),
+ " ", trade.ResultRetcodeDescription());
+ }
+ }
 //+------------------------------------------------------------------+
 ```
 

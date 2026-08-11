@@ -27,9 +27,9 @@ E[Rᵢ] = Rf + βᵢ · (E[Rm] − Rf)
 
 βᵢ = Cov(Rᵢ, Rm) / Var(Rm)
 
-Rf           = stopa wolna od ryzyka
-E[Rm] − Rf   = premia rynkowa (zapłata za ryzyko systematyczne)
-βᵢ           = beta: wrażliwość zwrotów aktywa i na zwroty rynku
+Rf = stopa wolna od ryzyka
+E[Rm] − Rf = premia rynkowa (zapłata za ryzyko systematyczne)
+βᵢ = beta: wrażliwość zwrotów aktywa i na zwroty rynku
 ```
 
 Wnioski są mocne i przyjemnie testowalne. Istnieje dokładnie jedno wynagradzane ryzyko: ekspozycja na rynek. Zmienność sama w sobie nie jest wynagradzana, więc aktywo o dużych wahaniach, ale zerowej korelacji z rynkiem, powinno zarabiać tyle co instrument wolny od ryzyka (beta zero zeruje cały drugi składnik wzoru). Średnie zwroty rosną liniowo z betą: portfel o becie dwa powinien mieć dwa razy większą nadwyżkę nad stopę wolną od ryzyka niż rynek. I wreszcie alfa, czyli zwrot ponad to, co wynika z bety, powinna w równowadze wynosić zero dla każdego aktywa. Jedna linia na wykresie, wszystkie aktywa na niej. Trudno o piękniejszą hipotezę do obalenia.
@@ -52,8 +52,8 @@ Rok później Fama i French zamienili charakterystyki w czynniki. W "Common Risk
 ```
 E[Rᵢ] − Rf = bᵢ·(E[Rm] − Rf) + sᵢ·E[SMB] + hᵢ·E[HML]
 
-SMB = Small Minus Big    czynnik wielkości (małe minus duże)
-HML = High Minus Low     czynnik wartości (wysokie B/M minus niskie)
+SMB = Small Minus Big czynnik wielkości (małe minus duże)
+HML = High Minus Low czynnik wartości (wysokie B/M minus niskie)
 ```
 
 Filozofia pozostała CAPM-owa, zmieniła się tylko liczba wynagradzanych ryzyk: oczekiwany zwrot to suma ekspozycji na czynniki systematyczne pomnożonych przez ich premie, a alfa to reszta, której czynniki nie tłumaczą. W 1997 roku Carhart w "On Persistence in Mutual Fund Performance" (Journal of Finance 52(1)) dołożył czwarty czynnik, momentum: portfel długi w akcjach o najwyższych zwrotach z ostatniego roku i krótki w najsłabszych. Powód był praktyczny. Carhart badał, czy fundusze z dobrą historią dalej wygrywają, i pokazał, że utrzymywanie się wyników w dużej mierze tłumaczą mechaniczna ekspozycja na momentum oraz koszty, a nie powtarzalny talent zarządzających. Model czteroczynnikowy na lata stał się standardowym benchmarkiem oceny funduszy: zanim komuś przypisze się alfę, trzeba najpierw odjąć wszystko, co da się kupić tanio i mechanicznie.
@@ -61,11 +61,11 @@ Filozofia pozostała CAPM-owa, zmieniła się tylko liczba wynagradzanych ryzyk:
 W 2015 roku Fama i French rozszerzyli model do pięciu czynników ("A Five-Factor Asset Pricing Model", Journal of Financial Economics), dodając rentowność (RMW, spółki o solidnej rentowności operacyjnej minus słabe) i inwestycje (CMA, spółki inwestujące konserwatywnie minus agresywnie powiększające aktywa). Motywacja przyszła z algebry wyceny: przy ustalonej cenie względem wartości księgowej wyższa oczekiwana rentowność i niższe inwestycje implikują wyższy oczekiwany zwrot. Ciekawostka z samej pracy: po dodaniu tych dwóch czynników klasyczny HML robi się w dużej mierze zbędny, bo jego premię przejmują pozostałe. A momentum, jedna z najsilniejszych regularności w danych, do modelu Famy i Frencha nie weszło nigdy.
 
 ```
-1964  CAPM       rynek (beta)
-1992  diagnoza   beta nie tłumaczy przekroju zwrotów
-1993  FF3        rynek + SMB (wielkość) + HML (wartość)
-1997  Carhart    FF3 + momentum (zwycięzcy minus przegrani)
-2015  FF5        rynek + SMB + HML + RMW (rentowność) + CMA (inwestycje)
+1964 CAPM rynek (beta)
+1992 diagnoza beta nie tłumaczy przekroju zwrotów
+1993 FF3 rynek + SMB (wielkość) + HML (wartość)
+1997 Carhart FF3 + momentum (zwycięzcy minus przegrani)
+2015 FF5 rynek + SMB + HML + RMW (rentowność) + CMA (inwestycje)
 ```
 
 ## Premia za ryzyko czy błąd wyceny

@@ -33,12 +33,12 @@ Patrzenie na surowe ticki jest niepraktyczne, bo jest ich za dużo. Dlatego paku
 Zależność jest jednokierunkowa: ze strumienia ticków da się złożyć świecę, z gotowej świecy nie odzyska się ticków, które ją utworzyły. Świeca to kompresja stratna. Widać to na jednym oknie:
 
 ```
-Okno 15:00:00 do 15:14:59  (cena mid)
-  15:00:03   1.08210   pierwszy tick   →  open
-  15:04:11   1.08255   najwyzszy       →  high
-  15:09:40   1.08190   najnizszy       →  low
-  15:14:52   1.08230   ostatni tick    →  close
-  liczba tickow: 1240                  →  volume (tickowy)
+Okno 15:00:00 do 15:14:59 (cena mid)
+ 15:00:03 1.08210 pierwszy tick → open
+ 15:04:11 1.08255 najwyzszy → high
+ 15:09:40 1.08190 najnizszy → low
+ 15:14:52 1.08230 ostatni tick → close
+ liczba tickow: 1240 → volume (tickowy)
 ```
 
 Ta sama operacja działa na każdym interwale. Świeca pięciominutowa i godzinna różnią się tylko szerokością okna, mechanika jest identyczna.
@@ -63,40 +63,40 @@ Terminal MetaTrader 5 udostępnia oba obiekty jako struktury języka MQL5. Tick 
 // --- MqlTick: pojedynczy tick (jedno zdarzenie kwotowania) ---
 struct MqlTick
 {
-  datetime time;        // czas ostatniej aktualizacji ceny
-  double   bid;         // biezacy bid
-  double   ask;         // biezacy ask
-  double   last;        // cena ostatniej transakcji (Last)
-  ulong    volume;      // wolumen dla ceny Last
-  long     time_msc;    // czas w milisekundach
-  uint     flags;       // flagi ticku (co sie zmienilo)
-  double   volume_real; // wolumen z wieksza dokladnoscia
+ datetime time; // czas ostatniej aktualizacji ceny
+ double bid; // biezacy bid
+ double ask; // biezacy ask
+ double last; // cena ostatniej transakcji (Last)
+ ulong volume; // wolumen dla ceny Last
+ long time_msc; // czas w milisekundach
+ uint flags; // flagi ticku (co sie zmienilo)
+ double volume_real; // wolumen z wieksza dokladnoscia
 };
 
 // --- MqlRates: pojedyncza swieca OHLC ---
 struct MqlRates
 {
-  datetime time;        // czas otwarcia swiecy
-  double   open;        // otwarcie
-  double   high;        // maksimum
-  double   low;         // minimum
-  double   close;       // zamkniecie
-  long     tick_volume; // wolumen tickowy (liczba tickow)
-  int      spread;      // spread w punktach
-  long     real_volume; // wolumen rzeczywisty (jesli dostepny)
+ datetime time; // czas otwarcia swiecy
+ double open; // otwarcie
+ double high; // maksimum
+ double low; // minimum
+ double close; // zamkniecie
+ long tick_volume; // wolumen tickowy (liczba tickow)
+ int spread; // spread w punktach
+ long real_volume; // wolumen rzeczywisty (jesli dostepny)
 };
 
 // --- pobranie biezacego ticku ---
 MqlTick t;
 if(SymbolInfoTick(_Symbol, t))
 {
-  double spread = t.ask - t.bid;         // spread w cenie
-  double mid    = (t.ask + t.bid) / 2.0; // srodek rynku
+ double spread = t.ask - t.bid; // spread w cenie
+ double mid = (t.ask + t.bid) / 2.0; // srodek rynku
 }
 
 // --- skopiowanie 100 ostatnich swiec M15 do tablicy ---
 MqlRates rates[];
-ArraySetAsSeries(rates, true);           // indeks 0 = najswiezsza swieca
+ArraySetAsSeries(rates, true); // indeks 0 = najswiezsza swieca
 int copied = CopyRates(_Symbol, PERIOD_M15, 0, 100, rates);
 // rates[0].close = zamkniecie ostatniej swiecy M15
 ```
@@ -133,15 +133,15 @@ ticks = pd.read_csv("ticks.csv", parse_dates=["time"]).set_index("time")
 ticks["mid"] = (ticks["bid"] + ticks["ask"]) / 2
 
 # agregacja: 15-minutowa swieca OHLC z kolumny mid
-#   open  = pierwszy tick w oknie   (first)
-#   high  = najwyzszy               (max)
-#   low   = najnizszy               (min)
-#   close = ostatni tick w oknie    (last)
+# open = pierwszy tick w oknie (first)
+# high = najwyzszy (max)
+# low = najnizszy (min)
+# close = ostatni tick w oknie (last)
 bars = ticks["mid"].resample("15min").agg(
-    open="first",
-    high="max",
-    low="min",
-    close="last",
+ open="first",
+ high="max",
+ low="min",
+ close="last",
 )
 
 # wolumen tickowy = liczba tickow w oknie

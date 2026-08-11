@@ -12,62 +12,62 @@ permalink: /research/
 <div class="lab-note"><strong>Aktualne pytanie:</strong> które dostępne zbiory są wystarczająco wiarygodne, aby zbudować prerejestrowany, cost-aware pilot bez otwierania końcowego holdoutu i bez dopasowywania historii po wyniku?</div>
 
 <div class="section-head">
-  <h2>Najnowsze Research Notes</h2>
-  <span></span>
+ <h2>Najnowsze Research Notes</h2>
+ <span></span>
 </div>
 <ul class="posts">
 {% for post in res %}
-  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+ <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
 {% endfor %}
 {% if res.size == 0 %}
-  <li><span class="ds">Pierwsze research notes są przygotowywane do publikacji.</span></li>
+ <li><span class="ds">Pierwsze research notes są przygotowywane do publikacji.</span></li>
 {% endif %}
 </ul>
 
 <div class="lab-grid">
-  <div class="lab-card">
-    <span class="num">DATA TRUST</span>
-    <h2>Czy plik jest dowodem?</h2>
-    <p>Provenance, timestampy, dostępność informacji, luki, duplikaty, rewizje i deterministyczny replay poprzedzają modelowanie.</p>
-  </div>
-  <div class="lab-card">
-    <span class="num">FALSIFICATION</span>
-    <h2>Jak hipoteza może przegrać?</h2>
-    <p>Kryteria odrzucenia powstają przed wynikiem. FAIL i INCONCLUSIVE są pełnoprawnymi rezultatami.</p>
-  </div>
-  <div class="lab-card">
-    <span class="num">COST AWARENESS</span>
-    <h2>Czy prognozę da się wykonać?</h2>
-    <p>Spread, poślizg, finansowanie, ograniczenia kontraktowe i wykonalność są częścią targetu, nie przypisem po backteście.</p>
-  </div>
-  <div class="lab-card">
-    <span class="num">RESEARCH GOVERNANCE</span>
-    <h2>Ile prób wolno wykonać?</h2>
-    <p>Holdout, power, MDE i budżet multiple testing mają ograniczać możliwość przypadkowego „odkrywania” alfy.</p>
-  </div>
+ <div class="lab-card">
+ <span class="num">DATA TRUST</span>
+ <h2>Czy plik jest dowodem?</h2>
+ <p>Provenance, timestampy, dostępność informacji, luki, duplikaty, rewizje i deterministyczny replay poprzedzają modelowanie.</p>
+ </div>
+ <div class="lab-card">
+ <span class="num">FALSIFICATION</span>
+ <h2>Jak hipoteza może przegrać?</h2>
+ <p>Kryteria odrzucenia powstają przed wynikiem. FAIL i INCONCLUSIVE są pełnoprawnymi rezultatami.</p>
+ </div>
+ <div class="lab-card">
+ <span class="num">COST AWARENESS</span>
+ <h2>Czy prognozę da się wykonać?</h2>
+ <p>Spread, poślizg, finansowanie, ograniczenia kontraktowe i wykonalność są częścią targetu, nie przypisem po backteście.</p>
+ </div>
+ <div class="lab-card">
+ <span class="num">RESEARCH GOVERNANCE</span>
+ <h2>Ile prób wolno wykonać?</h2>
+ <p>Holdout, power, MDE i budżet multiple testing mają ograniczać możliwość przypadkowego „odkrywania” alfy.</p>
+ </div>
 </div>
 
 <h2>Drabina dowodowa</h2>
 <ol class="stage-list">
-  <li><b>Specified</b><span>Problem, dane, target, koszty i kryterium falsyfikacji są zapisane.</span></li>
-  <li><b>Offline tested</b><span>Kontrakty i failure modes zostały sprawdzone poza środowiskiem wykonawczym.</span></li>
-  <li><b>Data validated</b><span>Dokładny podzbiór danych przeszedł testy jakości, czasu i point-in-time.</span></li>
-  <li><b>Independent OOS</b><span>Model pokonał właściwy baseline poza procesem dopasowania.</span></li>
-  <li><b>Forward / shadow</b><span>Wynik przetrwał kolejne, niezależne decyzje w czasie rzeczywistym.</span></li>
-  <li><b>Execution survival</b><span>Prognoza zachowała wartość po realnych kosztach i ograniczeniach wykonania.</span></li>
+ <li><b>Specified</b><span>Problem, dane, target, koszty i kryterium falsyfikacji są zapisane.</span></li>
+ <li><b>Offline tested</b><span>Kontrakty i failure modes zostały sprawdzone poza środowiskiem wykonawczym.</span></li>
+ <li><b>Data validated</b><span>Dokładny podzbiór danych przeszedł testy jakości, czasu i point-in-time.</span></li>
+ <li><b>Independent OOS</b><span>Model pokonał właściwy baseline poza procesem dopasowania.</span></li>
+ <li><b>Forward / shadow</b><span>Wynik przetrwał kolejne, niezależne decyzje w czasie rzeczywistym.</span></li>
+ <li><b>Execution survival</b><span>Prognoza zachowała wartość po realnych kosztach i ograniczeniach wykonania.</span></li>
 </ol>
 
 <h2>Publiczne kierunki badań</h2>
 <ul>
-  <li>wiarygodność informacji dostępnej w chwili decyzji,</li>
-  <li>dynamiczna lokalizacja przewidywalności i zmiana liderów informacji,</li>
-  <li>oddzielny model oceniający wiarygodność modelu podstawowego,</li>
-  <li>instrumenty jako cele, sensory, referencje i redundancja,</li>
-  <li>rozróżnienie prediction edge od execution edge,</li>
-  <li>statystyczny koszt wielokrotnego testowania hipotez.</li>
+ <li>wiarygodność informacji dostępnej w chwili decyzji,</li>
+ <li>dynamiczna lokalizacja przewidywalności i zmiana liderów informacji,</li>
+ <li>oddzielny model oceniający wiarygodność modelu podstawowego,</li>
+ <li>instrumenty jako cele, sensory, referencje i redundancja,</li>
+ <li>rozróżnienie prediction edge od execution edge,</li>
+ <li>statystyczny koszt wielokrotnego testowania hipotez.</li>
 </ul>
 
 <section class="ip-boundary">
-  <h2>Co pozostaje prywatne</h2>
-  <p>Dokładne definicje cech i targetów, autorskie wzory, parametry, wagi, reguły routingu, pełna topologia systemu oraz szczegóły egzekucji. Publiczny research opisuje problem, mechanizm, dowód i ograniczenia — nie kompletną recepturę.</p>
+ <h2>Co pozostaje prywatne</h2>
+ <p>Dokładne definicje cech i targetów, autorskie wzory, parametry, wagi, reguły routingu, pełna topologia systemu oraz szczegóły egzekucji. Publiczny research opisuje problem, mechanizm, dowód i ograniczenia - nie kompletną recepturę.</p>
 </section>

@@ -25,10 +25,10 @@ Szereg czasowy to ciąg obserwacji uporządkowanych w czasie: kursy zamknięcia,
 Autokorelacja rzędu k odpowiada na pytanie, na ile wartość sprzed k okresów pomaga przewidzieć wartość dzisiejszą. Zestaw tych współczynników dla kolejnych opóźnień tworzy funkcję autokorelacji (ACF), podstawowy obraz diagnostyczny każdego szeregu.
 
 ```
-ρ_k = Cov(x_t, x_{t−k}) / Var(x_t)      # autokorelacja rzędu k
+ρ_k = Cov(x_t, x_{t−k}) / Var(x_t) # autokorelacja rzędu k
 
-ρ_k ≈ 0 dla każdego k  →  brak liniowej pamięci
-ρ_k ≠ 0                →  przeszłość niesie informację o teraźniejszości
+ρ_k ≈ 0 dla każdego k → brak liniowej pamięci
+ρ_k ≠ 0 → przeszłość niesie informację o teraźniejszości
 ```
 
 Jeśli wszystkie współczynniki są bliskie zeru, szereg nie ma liniowej pamięci i jego przeszłe wartości nie pomagają liniowo przewidzieć przyszłych. Jeśli któreś odstają od zera, istnieje struktura, którą model może próbować opisać.
@@ -40,8 +40,8 @@ Zanim jakikolwiek model autoregresyjny ma sens, szereg musi być stacjonarny. W 
 Poziom kursu zwykle nie jest stacjonarny: ma trend, błądzi, nie wraca do stałej średniej. Dlatego modeluje się nie poziom, lecz jego zmiany. Operacja różnicowania, czyli przejście od ceny do zmiany ceny (a po logarytmie do zwrotu), zwykle usuwa trend i sprowadza szereg do postaci stacjonarnej.
 
 ```
-Δx_t = x_t − x_{t−1}          # różnicowanie pierwszego rzędu
-r_t  = ln(P_t) − ln(P_{t−1})  # log-zwrot: różnica logarytmu ceny
+Δx_t = x_t − x_{t−1} # różnicowanie pierwszego rzędu
+r_t = ln(P_t) − ln(P_{t−1}) # log-zwrot: różnica logarytmu ceny
 ```
 
 Z tym wiąże się kointegracja. Dwa szeregi mogą być z osobna niestacjonarne, a mimo to istnieje ich stacjonarna kombinacja liniowa; wtedy poruszają się razem, a odchylenie między nimi wraca do średniej. To fundament analizy par i koszyków, ale kierunek osobnego kursu pozostaje poza zasięgiem tej analizy. Kointegracja mówi o wspólnym ruchu, nie o tym, dokąd zmierza pojedynczy instrument.
@@ -51,11 +51,11 @@ Z tym wiąże się kointegracja. Dwa szeregi mogą być z osobna niestacjonarne,
 Na stacjonarnym szeregu klasyczna analiza oferuje dwa elementarne mechanizmy pamięci. Model autoregresyjny AR zakłada, że dzisiejsza wartość jest ważoną sumą wartości poprzednich plus nowy losowy składnik. Krótko: dzisiaj zależy od wczoraj. Model średniej ruchomej MA zakłada co innego: dzisiejsza wartość zależy nie od poprzednich wartości, lecz od poprzednich losowych szoków, czyli od niespodzianek, które już się pojawiły. Krótko: dzisiaj zależy od wczorajszego zaskoczenia.
 
 ```
-AR(1):  x_t = φ·x_{t−1} + ε_t        # dzisiaj zależy od wczorajszej wartości
-MA(1):  x_t = ε_t + θ·ε_{t−1}        # dzisiaj zależy od wczorajszego szoku
+AR(1): x_t = φ·x_{t−1} + ε_t # dzisiaj zależy od wczorajszej wartości
+MA(1): x_t = ε_t + θ·ε_{t−1} # dzisiaj zależy od wczorajszego szoku
 
 ε_t = biały szum (niezależne losowe zakłócenia o średniej 0)
-|φ| < 1  →  warunek stacjonarności AR(1)
+|φ| < 1 → warunek stacjonarności AR(1)
 ```
 
 Oba mechanizmy można połączyć w model ARMA, który jednocześnie pamięta poprzednie wartości i poprzednie szoki. Dobór rzędów, czyli ile opóźnień wziąć po każdej stronie, opiera się na kształcie funkcji autokorelacji i jej częściowego odpowiednika, co szczegółowo opisuje Tsay w Analysis of Financial Time Series.
@@ -68,12 +68,12 @@ Zapis ARIMA(p, d, q) streszcza trzy decyzje: p to liczba członów autoregresyjn
 
 ```
 ARIMA(p, d, q):
-  p = człony AR (pamięć wartości)
-  d = liczba różnicowań (droga do stacjonarności)
-  q = człony MA (pamięć szoków)
+ p = człony AR (pamięć wartości)
+ d = liczba różnicowań (droga do stacjonarności)
+ q = człony MA (pamięć szoków)
 
-d = 0  →  szereg już stacjonarny (czyste ARMA)
-d = 1  →  różnicowanie raz: zmiany zamiast poziomu (typowe dla cen)
+d = 0 → szereg już stacjonarny (czyste ARMA)
+d = 1 → różnicowanie raz: zmiany zamiast poziomu (typowe dla cen)
 ```
 
 ## Zwroty prawie nieautoskorelowane, kwadraty już nie
@@ -83,64 +83,64 @@ Zastosowanie tej maszynerii do zwrotów rynkowych prowadzi do wyniku powtarzaneg
 Sytuacja zmienia się radykalnie, gdy zamiast zwrotów wziąć ich kwadraty albo wartości bezwzględne. Te szeregi są wyraźnie autoskorelowane: duży ruch dziś zapowiada podwyższone prawdopodobieństwo dużego ruchu jutro, niezależnie od jego znaku. Innymi słowy, nieprzewidywalny jest kierunek, ale nie skala. To zjawisko nazywa się grupowaniem zmienności (volatility clustering): okresy wzburzenia skupiają się razem, okresy spokoju również.
 
 <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grupowanie zmienności: naprzemienne pasma spokoju i burzy w szeregu zwrotów" style="width:100%;height:auto;display:block;margin:1.5rem auto">
-  <rect x="180" y="30" width="150" height="240" fill="#e5484d" opacity="0.12"/>
-  <rect x="518" y="30" width="124" height="240" fill="#e5484d" opacity="0.12"/>
-  <line x1="40" y1="150" x2="730" y2="150" stroke="currentColor" stroke-opacity="0.45" stroke-width="1"/>
-  <text x="32" y="154" font-size="12" fill="currentColor" fill-opacity="0.55" text-anchor="end">0</text>
-  <g fill="#0b66c3">
-    <rect x="48" y="142" width="8" height="8"/>
-    <rect x="62" y="150" width="8" height="6"/>
-    <rect x="76" y="138" width="8" height="12"/>
-    <rect x="90" y="150" width="8" height="9"/>
-    <rect x="104" y="143" width="8" height="7"/>
-    <rect x="118" y="150" width="8" height="13"/>
-    <rect x="132" y="140" width="8" height="10"/>
-    <rect x="146" y="150" width="8" height="8"/>
-    <rect x="160" y="136" width="8" height="14"/>
-    <rect x="174" y="150" width="8" height="7"/>
-    <rect x="188" y="120" width="8" height="30"/>
-    <rect x="202" y="150" width="8" height="42"/>
-    <rect x="216" y="98" width="8" height="52"/>
-    <rect x="230" y="150" width="8" height="35"/>
-    <rect x="244" y="102" width="8" height="48"/>
-    <rect x="258" y="150" width="8" height="58"/>
-    <rect x="272" y="110" width="8" height="40"/>
-    <rect x="286" y="150" width="8" height="50"/>
-    <rect x="300" y="117" width="8" height="33"/>
-    <rect x="314" y="150" width="8" height="44"/>
-    <rect x="328" y="141" width="8" height="9"/>
-    <rect x="342" y="150" width="8" height="7"/>
-    <rect x="356" y="138" width="8" height="12"/>
-    <rect x="370" y="150" width="8" height="6"/>
-    <rect x="384" y="139" width="8" height="11"/>
-    <rect x="398" y="150" width="8" height="14"/>
-    <rect x="412" y="142" width="8" height="8"/>
-    <rect x="426" y="150" width="8" height="10"/>
-    <rect x="440" y="137" width="8" height="13"/>
-    <rect x="454" y="150" width="8" height="6"/>
-    <rect x="468" y="141" width="8" height="9"/>
-    <rect x="482" y="150" width="8" height="12"/>
-    <rect x="496" y="143" width="8" height="7"/>
-    <rect x="510" y="150" width="8" height="11"/>
-    <rect x="524" y="114" width="8" height="36"/>
-    <rect x="538" y="150" width="8" height="48"/>
-    <rect x="552" y="96" width="8" height="54"/>
-    <rect x="566" y="150" width="8" height="38"/>
-    <rect x="580" y="104" width="8" height="46"/>
-    <rect x="594" y="150" width="8" height="56"/>
-    <rect x="608" y="108" width="8" height="42"/>
-    <rect x="622" y="150" width="8" height="34"/>
-    <rect x="636" y="142" width="8" height="8"/>
-    <rect x="650" y="150" width="8" height="11"/>
-    <rect x="664" y="143" width="8" height="7"/>
-    <rect x="678" y="150" width="8" height="13"/>
-    <rect x="692" y="141" width="8" height="9"/>
-    <rect x="706" y="150" width="8" height="6"/>
-  </g>
-  <text x="115" y="288" font-size="12" fill="currentColor" fill-opacity="0.6" text-anchor="middle">spokój</text>
-  <text x="255" y="288" font-size="12" fill="currentColor" fill-opacity="0.6" text-anchor="middle">burza</text>
-  <text x="423" y="288" font-size="12" fill="currentColor" fill-opacity="0.6" text-anchor="middle">spokój</text>
-  <text x="580" y="288" font-size="12" fill="currentColor" fill-opacity="0.6" text-anchor="middle">burza</text>
+ <rect x="180" y="30" width="150" height="240" fill="#e5484d" opacity="0.12"/>
+ <rect x="518" y="30" width="124" height="240" fill="#e5484d" opacity="0.12"/>
+ <line x1="40" y1="150" x2="730" y2="150" stroke="currentColor" stroke-opacity="0.45" stroke-width="1"/>
+ <text x="32" y="154" font-size="12" fill="currentColor" fill-opacity="0.55" text-anchor="end">0</text>
+ <g fill="#0b66c3">
+ <rect x="48" y="142" width="8" height="8"/>
+ <rect x="62" y="150" width="8" height="6"/>
+ <rect x="76" y="138" width="8" height="12"/>
+ <rect x="90" y="150" width="8" height="9"/>
+ <rect x="104" y="143" width="8" height="7"/>
+ <rect x="118" y="150" width="8" height="13"/>
+ <rect x="132" y="140" width="8" height="10"/>
+ <rect x="146" y="150" width="8" height="8"/>
+ <rect x="160" y="136" width="8" height="14"/>
+ <rect x="174" y="150" width="8" height="7"/>
+ <rect x="188" y="120" width="8" height="30"/>
+ <rect x="202" y="150" width="8" height="42"/>
+ <rect x="216" y="98" width="8" height="52"/>
+ <rect x="230" y="150" width="8" height="35"/>
+ <rect x="244" y="102" width="8" height="48"/>
+ <rect x="258" y="150" width="8" height="58"/>
+ <rect x="272" y="110" width="8" height="40"/>
+ <rect x="286" y="150" width="8" height="50"/>
+ <rect x="300" y="117" width="8" height="33"/>
+ <rect x="314" y="150" width="8" height="44"/>
+ <rect x="328" y="141" width="8" height="9"/>
+ <rect x="342" y="150" width="8" height="7"/>
+ <rect x="356" y="138" width="8" height="12"/>
+ <rect x="370" y="150" width="8" height="6"/>
+ <rect x="384" y="139" width="8" height="11"/>
+ <rect x="398" y="150" width="8" height="14"/>
+ <rect x="412" y="142" width="8" height="8"/>
+ <rect x="426" y="150" width="8" height="10"/>
+ <rect x="440" y="137" width="8" height="13"/>
+ <rect x="454" y="150" width="8" height="6"/>
+ <rect x="468" y="141" width="8" height="9"/>
+ <rect x="482" y="150" width="8" height="12"/>
+ <rect x="496" y="143" width="8" height="7"/>
+ <rect x="510" y="150" width="8" height="11"/>
+ <rect x="524" y="114" width="8" height="36"/>
+ <rect x="538" y="150" width="8" height="48"/>
+ <rect x="552" y="96" width="8" height="54"/>
+ <rect x="566" y="150" width="8" height="38"/>
+ <rect x="580" y="104" width="8" height="46"/>
+ <rect x="594" y="150" width="8" height="56"/>
+ <rect x="608" y="108" width="8" height="42"/>
+ <rect x="622" y="150" width="8" height="34"/>
+ <rect x="636" y="142" width="8" height="8"/>
+ <rect x="650" y="150" width="8" height="11"/>
+ <rect x="664" y="143" width="8" height="7"/>
+ <rect x="678" y="150" width="8" height="13"/>
+ <rect x="692" y="141" width="8" height="9"/>
+ <rect x="706" y="150" width="8" height="6"/>
+ </g>
+ <text x="115" y="288" font-size="12" fill="currentColor" fill-opacity="0.6" text-anchor="middle">spokój</text>
+ <text x="255" y="288" font-size="12" fill="currentColor" fill-opacity="0.6" text-anchor="middle">burza</text>
+ <text x="423" y="288" font-size="12" fill="currentColor" fill-opacity="0.6" text-anchor="middle">spokój</text>
+ <text x="580" y="288" font-size="12" fill="currentColor" fill-opacity="0.6" text-anchor="middle">burza</text>
 </svg>
 
 Wykres pokazuje ten wzorzec: pasma dużych słupków (burza) przeplatają się z pasmami małych (spokój), zamiast być równomiernie rozrzucone. Gdyby kolejne zwroty były niezależne w czasie, duże i małe wahania mieszałyby się bez takich skupisk. Podświetlone tło zaznacza okresy podwyższonej zmienności, które w danych rynkowych trzymają się razem.
@@ -152,13 +152,13 @@ Klasyczne modele ARIMA zakładają, że wariancja składnika losowego jest stał
 Robert Engle (1982) zaproponował model ARCH (autoregressive conditional heteroskedasticity), w którym dzisiejsza wariancja zależy od kwadratów poprzednich szoków: po dużym zaskoczeniu rośnie, po serii małych opada. Tim Bollerslev (1986) uogólnił go do GARCH, dokładając zależność od poprzedniej wariancji, co pozwoliło opisać tę samą, uporczywą trwałość zmienności znacznie oszczędniejszą liczbą parametrów. Wkład Engle'a w modelowanie zmiennej w czasie wariancji został wyróżniony Nagrodą Nobla z ekonomii w 2003 roku.
 
 ```
-GARCH(1,1):  σ²_t = ω + α·ε²_{t−1} + β·σ²_{t−1}
+GARCH(1,1): σ²_t = ω + α·ε²_{t−1} + β·σ²_{t−1}
 
 ω = kotwica (poziom długookresowy)
 α = siła reakcji na ostatni szok
 β = trwałość (pamięć) zmienności
-warunek stabilności:   α + β < 1
-poziom długookresowy:  σ²_∞ = ω / (1 − α − β)
+warunek stabilności: α + β < 1
+poziom długookresowy: σ²_∞ = ω / (1 − α − β)
 ```
 
 Czyta się to jak opis bezwładności zmienności. Duży wczorajszy szok podbija dzisiejszą wariancję przez człon alfa, wysoka wczorajsza wariancja ciągnie się dalej przez człon beta, a ponieważ ich suma jest mniejsza od jedności, prognoza z czasem wraca do poziomu długookresowego. Po burzy rynek stopniowo się uspokaja, po nienaturalnym spokoju zmienność wraca do normy. Ta sama logika, którą widać na wykresie grupowania, jest tu zapisana jednym równaniem.

@@ -33,11 +33,11 @@ Istnieją dwie wersje raportu i warto wiedzieć, którą się czyta. Wersja klas
 Dla kontraktów finansowych, w tym walutowych, CFTC prowadzi dokładniejszy raport TFF (Traders in Financial Futures), wprowadzony w 2009 roku. Dzieli on uczestników na cztery grupy plus drobnych:
 
 ```
-Dealer / Intermediary        strona sprzedażowa: banki i dealerzy, zabezpieczają przepływ
+Dealer / Intermediary strona sprzedażowa: banki i dealerzy, zabezpieczają przepływ
 Asset Manager / Institutional fundusze emerytalne, inwestycyjne, ubezpieczyciele
-Leveraged Funds              hedge fundy i CTA, spekulacja nastawiona na zysk
-Other Reportables            duzi gracze spoza powyższych kategorii
-Non-reportable               drobni poniżej progu raportowania
+Leveraged Funds hedge fundy i CTA, spekulacja nastawiona na zysk
+Other Reportables duzi gracze spoza powyższych kategorii
+Non-reportable drobni poniżej progu raportowania
 ```
 
 Mapowanie na intuicję jest proste. Dealerzy i hedgerzy komercyjni to strona, która handluje z powodów innych niż sam zakład kierunkowy: zabezpiecza ekspozycję, obsługuje klientów, dostarcza płynność. Leveraged funds to spekulacja czysta, nastawiona na ruch ceny. Asset managerzy lokują długoterminowy kapitał instytucjonalny. Drobni to mała, rozproszona reszta. W praktyce największą uwagę przyciąga para hedgerzy kontra leveraged funds, bo to na niej najlepiej widać napięcie między zabezpieczającymi a spekulującymi.
@@ -52,41 +52,41 @@ Ta obserwacja ma nawet nazwę w literaturze. Teoria hedging pressure (Bessembind
 
 <figure>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-label="Wykres slupkowy pozycji netto spekulantow i hedgerow komercyjnych jako lustrzane odbicie wokol osi zero" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-  <title>Rynek terminowy jako gra o sumie zerowej</title>
-  <desc>Pozycje netto spekulantow i hedgerow komercyjnych sa lustrzanym odbiciem wokol osi zero: gdy jedna strona jest long, druga jest short o tyle samo.</desc>
-  <text x="70" y="26" font-size="16" font-weight="600" fill="currentColor" opacity="0.85">Rynek terminowy jako gra o sumie zerowej</text>
-  <text x="690" y="26" font-size="12" fill="currentColor" opacity="0.6" text-anchor="end">Σ pozycji netto = 0</text>
-  <text x="70" y="46" font-size="12.5" fill="currentColor" opacity="0.6">Pozycja netto spekulantów i hedgerów to lustrzane odbicie wokół osi 0</text>
-  <line x1="70" y1="66" x2="70" y2="332" stroke="currentColor" opacity="0.2"/>
-  <line x1="70" y1="130" x2="690" y2="130" stroke="currentColor" opacity="0.15" stroke-dasharray="3 4"/>
-  <line x1="70" y1="270" x2="690" y2="270" stroke="currentColor" opacity="0.15" stroke-dasharray="3 4"/>
-  <line x1="70" y1="200" x2="690" y2="200" stroke="currentColor" opacity="0.55" stroke-width="1.5"/>
-  <text x="64" y="204" font-size="11" fill="currentColor" opacity="0.6" text-anchor="end">0</text>
-  <text x="64" y="112" font-size="11" fill="currentColor" opacity="0.5" text-anchor="end">long ↑</text>
-  <text x="64" y="296" font-size="11" fill="currentColor" opacity="0.5" text-anchor="end">short ↓</text>
-  <rect x="103" y="158" width="24" height="42" rx="2" fill="#0b66c3"/>
-  <rect x="133" y="200" width="24" height="42" rx="2" fill="#1a9e6a"/>
-  <rect x="203" y="123" width="24" height="77" rx="2" fill="#0b66c3"/>
-  <rect x="233" y="200" width="24" height="77" rx="2" fill="#1a9e6a"/>
-  <rect x="303" y="88" width="24" height="112" rx="2" fill="#0b66c3"/>
-  <rect x="333" y="200" width="24" height="112" rx="2" fill="#1a9e6a"/>
-  <rect x="403" y="137" width="24" height="63" rx="2" fill="#0b66c3"/>
-  <rect x="433" y="200" width="24" height="63" rx="2" fill="#1a9e6a"/>
-  <rect x="503" y="200" width="24" height="28" rx="2" fill="#0b66c3"/>
-  <rect x="533" y="172" width="24" height="28" rx="2" fill="#1a9e6a"/>
-  <rect x="603" y="200" width="24" height="70" rx="2" fill="#0b66c3"/>
-  <rect x="633" y="130" width="24" height="70" rx="2" fill="#1a9e6a"/>
-  <text x="130" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">1</text>
-  <text x="230" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">2</text>
-  <text x="330" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">3</text>
-  <text x="430" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">4</text>
-  <text x="530" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">5</text>
-  <text x="630" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">6</text>
-  <text x="380" y="372" font-size="11" fill="currentColor" opacity="0.5" text-anchor="middle">kolejne raporty tygodniowe</text>
-  <rect x="160" y="383" width="13" height="13" rx="2" fill="#0b66c3"/>
-  <text x="180" y="393" font-size="12" fill="currentColor" opacity="0.7">spekulanci (pozycja netto)</text>
-  <rect x="392" y="383" width="13" height="13" rx="2" fill="#1a9e6a"/>
-  <text x="412" y="393" font-size="12" fill="currentColor" opacity="0.7">hedgerzy komercyjni (pozycja netto)</text>
+ <title>Rynek terminowy jako gra o sumie zerowej</title>
+ <desc>Pozycje netto spekulantow i hedgerow komercyjnych sa lustrzanym odbiciem wokol osi zero: gdy jedna strona jest long, druga jest short o tyle samo.</desc>
+ <text x="70" y="26" font-size="16" font-weight="600" fill="currentColor" opacity="0.85">Rynek terminowy jako gra o sumie zerowej</text>
+ <text x="690" y="26" font-size="12" fill="currentColor" opacity="0.6" text-anchor="end">Σ pozycji netto = 0</text>
+ <text x="70" y="46" font-size="12.5" fill="currentColor" opacity="0.6">Pozycja netto spekulantów i hedgerów to lustrzane odbicie wokół osi 0</text>
+ <line x1="70" y1="66" x2="70" y2="332" stroke="currentColor" opacity="0.2"/>
+ <line x1="70" y1="130" x2="690" y2="130" stroke="currentColor" opacity="0.15" stroke-dasharray="3 4"/>
+ <line x1="70" y1="270" x2="690" y2="270" stroke="currentColor" opacity="0.15" stroke-dasharray="3 4"/>
+ <line x1="70" y1="200" x2="690" y2="200" stroke="currentColor" opacity="0.55" stroke-width="1.5"/>
+ <text x="64" y="204" font-size="11" fill="currentColor" opacity="0.6" text-anchor="end">0</text>
+ <text x="64" y="112" font-size="11" fill="currentColor" opacity="0.5" text-anchor="end">long ↑</text>
+ <text x="64" y="296" font-size="11" fill="currentColor" opacity="0.5" text-anchor="end">short ↓</text>
+ <rect x="103" y="158" width="24" height="42" rx="2" fill="#0b66c3"/>
+ <rect x="133" y="200" width="24" height="42" rx="2" fill="#1a9e6a"/>
+ <rect x="203" y="123" width="24" height="77" rx="2" fill="#0b66c3"/>
+ <rect x="233" y="200" width="24" height="77" rx="2" fill="#1a9e6a"/>
+ <rect x="303" y="88" width="24" height="112" rx="2" fill="#0b66c3"/>
+ <rect x="333" y="200" width="24" height="112" rx="2" fill="#1a9e6a"/>
+ <rect x="403" y="137" width="24" height="63" rx="2" fill="#0b66c3"/>
+ <rect x="433" y="200" width="24" height="63" rx="2" fill="#1a9e6a"/>
+ <rect x="503" y="200" width="24" height="28" rx="2" fill="#0b66c3"/>
+ <rect x="533" y="172" width="24" height="28" rx="2" fill="#1a9e6a"/>
+ <rect x="603" y="200" width="24" height="70" rx="2" fill="#0b66c3"/>
+ <rect x="633" y="130" width="24" height="70" rx="2" fill="#1a9e6a"/>
+ <text x="130" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">1</text>
+ <text x="230" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">2</text>
+ <text x="330" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">3</text>
+ <text x="430" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">4</text>
+ <text x="530" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">5</text>
+ <text x="630" y="350" font-size="11" fill="currentColor" opacity="0.6" text-anchor="middle">6</text>
+ <text x="380" y="372" font-size="11" fill="currentColor" opacity="0.5" text-anchor="middle">kolejne raporty tygodniowe</text>
+ <rect x="160" y="383" width="13" height="13" rx="2" fill="#0b66c3"/>
+ <text x="180" y="393" font-size="12" fill="currentColor" opacity="0.7">spekulanci (pozycja netto)</text>
+ <rect x="392" y="383" width="13" height="13" rx="2" fill="#1a9e6a"/>
+ <text x="412" y="393" font-size="12" fill="currentColor" opacity="0.7">hedgerzy komercyjni (pozycja netto)</text>
 </svg>
 <figcaption>Rynek terminowy sumuje się do zera: każdej długiej pozycji spekulantów odpowiada równie duża krótka pozycja hedgerów komercyjnych, a w tygodniach 5 i 6 role się odwracają. Wysokość słupków obu grup jest lustrzana wokół osi 0, więc zawsze ktoś stoi po przeciwnej stronie.</figcaption>
 </figure>
@@ -98,10 +98,10 @@ Surowa liczba kontraktów netto sama w sobie niewiele znaczy. Rośnie łączna l
 ```
 COT Index = 100 · (Netₜ − min(Net, okno)) / (max(Net, okno) − min(Net, okno))
 
-Netₜ  = pozycja netto danej grupy (long minus short) w bieżącym tygodniu
-okno  = lookback historyczny, zwykle 26, 52 lub 156 tygodni
-0     = najniższe netto w oknie (skrajne wyprzedanie tej grupy)
-100   = najwyższe netto w oknie (skrajne przeważenie tej grupy)
+Netₜ = pozycja netto danej grupy (long minus short) w bieżącym tygodniu
+okno = lookback historyczny, zwykle 26, 52 lub 156 tygodni
+0 = najniższe netto w oknie (skrajne wyprzedanie tej grupy)
+100 = najwyższe netto w oknie (skrajne przeważenie tej grupy)
 ```
 
 Prostsza alternatywa to z-score, czyli o ile odchyleń standardowych bieżące netto odstaje od swojej średniej:

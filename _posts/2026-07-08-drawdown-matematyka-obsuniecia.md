@@ -23,9 +23,9 @@ tags: ["drawdown", "obsunięcie kapitału", "ryzyko", "maximum drawdown", "CDaR"
 Drawdown to nie to samo co strata na pojedynczej transakcji. To spadek wartości konta liczony od jego dotychczasowego szczytu, czyli od tak zwanego high-water mark. Dopóki kapitał rośnie i bije rekordy, obsunięcie wynosi zero. W chwili, gdy konto cofa się poniżej ostatniego szczytu, zaczyna się obsunięcie i trwa aż do momentu, w którym wartość wróci na ten sam poziom.
 
 ```
-M(t)  = max_{s ≤ t} V(s)              wartość szczytowa (high-water mark) do chwili t
-DD(t) = ( M(t) − V(t) ) / M(t)        obsunięcie względne w chwili t  (0, gdy jesteś na szczycie)
-MDD   = max_t DD(t)                    maksymalne obsunięcie na całej ścieżce
+M(t) = max_{s ≤ t} V(s) wartość szczytowa (high-water mark) do chwili t
+DD(t) = ( M(t) − V(t) ) / M(t) obsunięcie względne w chwili t (0, gdy jesteś na szczycie)
+MDD = max_t DD(t) maksymalne obsunięcie na całej ścieżce
 
 V(t) = wartość kapitału w chwili t
 czas pod wodą = długość okresu od szczytu do powrotu na ten szczyt
@@ -38,28 +38,28 @@ Trzy liczby opisują obsunięcie. Głębokość, czyli jak daleko jest od szczyt
 Kluczowa własność obsunięcia jest czysto arytmetyczna i nie podlega dyskusji: strata i zysk potrzebny do jej odrobienia nie są symetryczne. Jeśli tracisz frakcję d kapitału, zostaje Ci (1 − d). Żeby wrócić na szczyt, musisz tę resztę pomnożyć przez odwrotność tego, co zostało.
 
 ```
-zostaje po stracie:   1 − d
-mnożnik do szczytu:   1 / (1 − d)
-wymagany zysk:        g(d) = 1 / (1 − d) − 1 = d / (1 − d)
+zostaje po stracie: 1 − d
+mnożnik do szczytu: 1 / (1 − d)
+wymagany zysk: g(d) = 1 / (1 − d) − 1 = d / (1 − d)
 
-d = głębokość obsunięcia  (np. 0,50 to utrata połowy kapitału)
+d = głębokość obsunięcia (np. 0,50 to utrata połowy kapitału)
 g = zysk potrzebny, żeby wrócić na szczyt
 ```
 
 Sama strata i wymagany zysk rozjeżdżają się coraz bardziej, im głębiej schodzisz.
 
 ```
-strata (d)        wymagany zysk  g(d) = d/(1−d)
-    5%                   5,3%
-   10%                  11,1%
-   20%                  25,0%
-   25%                  33,3%
-   33,3%                50,0%
-   50%                 100,0%
-   60%                 150,0%
-   70%                 233,3%
-   80%                 400,0%
-   90%                 900,0%
+strata (d) wymagany zysk g(d) = d/(1−d)
+ 5% 5,3%
+ 10% 11,1%
+ 20% 25,0%
+ 25% 33,3%
+ 33,3% 50,0%
+ 50% 100,0%
+ 60% 150,0%
+ 70% 233,3%
+ 80% 400,0%
+ 90% 900,0%
 ```
 
 Przeczytaj tę tabelę powoli. Strata 10% wymaga skromnych 11% zysku, więc różnica jest prawie niewidoczna. Ale strata 50% wymaga już zysku 100%, czyli podwojenia tego, co zostało. A strata 90% wymaga zysku 900%, czyli dziesięciokrotności ocalałego kapitału. Te same procenty straty kupują radykalnie różny rachunek do zapłaty.
@@ -74,10 +74,10 @@ Przeczytaj tę tabelę powoli. Strata 10% wymaga skromnych 11% zysku, więc ró�
 Ta asymetria nie rośnie liniowo, tylko przyspiesza. Wymagany zysk jest funkcją wypukłą: każdy kolejny punkt procentowy obsunięcia kosztuje więcej niż poprzedni. Tempo tego wzrostu opisuje pochodna, która sama rośnie bez ograniczeń, gdy zbliżasz się do utraty całości.
 
 ```
-tempo wzrostu wymaganego zysku:  g'(d) = 1 / (1 − d)²     (dąży do nieskończoności, gdy d → 1)
+tempo wzrostu wymaganego zysku: g'(d) = 1 / (1 − d)² (dąży do nieskończoności, gdy d → 1)
 
-z 10% na 20% obsunięcia:  wymagany zysk rośnie z 11,1% do 25,0%    (+13,9 pkt proc.)
-z 70% na 80% obsunięcia:  wymagany zysk rośnie z 233,3% do 400,0%  (+166,7 pkt proc.)
+z 10% na 20% obsunięcia: wymagany zysk rośnie z 11,1% do 25,0% (+13,9 pkt proc.)
+z 70% na 80% obsunięcia: wymagany zysk rośnie z 233,3% do 400,0% (+166,7 pkt proc.)
 ```
 
 Porównaj oba odcinki. W obu przypadkach obsunięcie pogłębia się o dokładnie te same 10 punktów procentowych, a jednak drugi z nich kosztuje ponad dziesięć razy więcej dodatkowego zysku. To jest sedno, dlaczego głębokie obsunięcie jest groźne w sposób, którego liniowa intuicja nie łapie. Pierwsze punkty obsunięcia są tanie w odrobieniu i mieszczą się w normalnym koszcie prowadzenia strategii. Ostatnie punkty są rujnujące, bo wymagany zysk eksploduje do nieskończoności, gdy kapitał zbliża się do zera.
@@ -95,12 +95,12 @@ Różnicę widać najlepiej na prostym eksperymencie myślowym. Weź dwie strate
 Samo maksymalne obsunięcie ma słabość: to jedna liczba, najgorszy pojedynczy punkt na całej ścieżce. Jest przez to wrażliwe na przypadek i niewygodne w optymalizacji. Odpowiedzią jest miara, która patrzy nie na jeden punkt, tylko na cały ogon najgorszych obsunięć. To Conditional Drawdown at Risk (CDaR), zaproponowana przez Chekhlova, Uryaseva i Zabarankina. Jest zbudowana wobec procesu obsunięć tak samo, jak Conditional Value at Risk (CVaR) jest zbudowana wobec rozkładu strat.
 
 ```
-proces obsunięcia:  DD(t) = ( M(t) − V(t) ) / M(t)
-DaR_α  (kwantyl):   próg, który obsunięcie przekracza tylko w (1 − α) najgorszych przypadkach
-CDaR_α:             średnia z tych (1 − α) najgłębszych obsunięć  (średnia ogona)
+proces obsunięcia: DD(t) = ( M(t) − V(t) ) / M(t)
+DaR_α (kwantyl): próg, który obsunięcie przekracza tylko w (1 − α) najgorszych przypadkach
+CDaR_α: średnia z tych (1 − α) najgłębszych obsunięć (średnia ogona)
 
-α → 1:   CDaR dąży do maksymalnego obsunięcia (MDD)
-α = 0:   CDaR równa się średniemu obsunięciu (AvDD)
+α → 1: CDaR dąży do maksymalnego obsunięcia (MDD)
+α = 0: CDaR równa się średniemu obsunięciu (AvDD)
 ```
 
 Piękno tej konstrukcji polega na tym, że jednym parametrem α reguluje się, jak dużą część ogona bierze się pod uwagę. Przy α blisko jedynki CDaR zbliża się do maksymalnego obsunięcia, czyli do najczarniejszego scenariusza. Przy α równym zero staje się po prostu średnim obsunięciem. Cała rodzina miar między średnim a maksymalnym zjazdem mieści się na jednej pokrętce. Co równie ważne, CDaR jest funkcją wypukłą i porządną miarą ryzyka, więc daje się wstawić jako ograniczenie do optymalizacji portfela metodami programowania liniowego, w przeciwieństwie do surowego maksymalnego obsunięcia, które jest w rachunku niewygodne.
@@ -115,20 +115,20 @@ Tu obsunięcie spina się z wielkością pozycji, bo drawdown to nie tylko miara
 idealizacja ciągła, gra ułamkiem λ pełnego Kelly'ego:
 P(kapitał kiedykolwiek spadnie do frakcji c swojej wartości) = c^(2/λ − 1)
 
-λ = ułamek pełnego Kelly'ego  (λ = 1 to pełny Kelly)
-c = docelowy poziom           (c = 0,5 to utrata połowy)
+λ = ułamek pełnego Kelly'ego (λ = 1 to pełny Kelly)
+c = docelowy poziom (c = 0,5 to utrata połowy)
 
-pełny Kelly (λ = 1):    P(spadek o połowę) = 0,5^1 = 50%
-pół Kelly   (λ = 0,5):  P(spadek o połowę) = 0,5^3 = 12,5%
+pełny Kelly (λ = 1): P(spadek o połowę) = 0,5^1 = 50%
+pół Kelly (λ = 0,5): P(spadek o połowę) = 0,5^3 = 12,5%
 ```
 
 Formalizuje to Kelly z limitem obsunięcia w ujęciu Bussetiego i Boyda. Zamiast maksymalizować samo tempo wzrostu, szuka się największej frakcji spełniającej twardy warunek na prawdopodobieństwo głębokiego zjazdu.
 
 ```
-maksymalizuj   E[ log(1 + f · r) ]
-przy warunku   P( obsunięcie > próg ) ≤ α
+maksymalizuj E[ log(1 + f · r) ]
+przy warunku P( obsunięcie > próg ) ≤ α
 
-przykład:  próg = 30% kapitału,   α = 10%
+przykład: próg = 30% kapitału, α = 10%
 ```
 
 To zamyka klamrę. Arytmetyka odrabiania mówi, że głębokie obsunięcie jest nieliniowo drogie. CDaR mówi, że tym, co warto mierzyć, jest cały ogon obsunięć, a nie jeden punkt. Kelly z limitem obsunięcia mówi, jak ograniczyć prawdopodobieństwo, że ten ogon się zrealizuje, i wprost zamienia zadany limit obsunięcia na dopuszczalną frakcję kapitału, czyli na wielkość pozycji. Trzy warstwy, jedna zmienna: obsunięcie.

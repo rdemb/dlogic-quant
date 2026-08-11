@@ -29,15 +29,15 @@ REGUŁA ILOCZYNU
 k niezależnych wyborów: n1, n2, ..., nk możliwości
 liczba wariantów = n1 · n2 · ... · nk
 
-PERMUTACJE   ustawienia n różnych elementów w kolejności
+PERMUTACJE ustawienia n różnych elementów w kolejności
 P(n) = n! = n · (n−1) · ... · 2 · 1
 wariacje k z n (kolejność ważna) = n! / (n−k)!
 
-KOMBINACJE   wybór k z n, kolejność nieważna = symbol Newtona
-C(n,k) = n! / ( k! · (n−k)! )        czytane „n po k"
+KOMBINACJE wybór k z n, kolejność nieważna = symbol Newtona
+C(n,k) = n! / ( k! · (n−k)! ) czytane „n po k"
 
-3! = 6      5! = 120      10! = 3 628 800
-C(10,3) = 120        C(50,5) = 2 118 760
+3! = 6 5! = 120 10! = 3 628 800
+C(10,3) = 120 C(50,5) = 2 118 760
 ```
 
 ## Jak przestrzeń strategii puchnie
@@ -52,18 +52,18 @@ Budowa strategii to właśnie łańcuch takich wyborów: który wskaźnik, jaki 
 Wzrost jest wykładniczy, a intuicja liniowa. Nikt nie planuje testować stu tysięcy strategii; ta liczba powstaje sama, jako iloczyn kilku list, z których każda z osobna wydaje się krótka.
 
 ```
-b progów na parametr, d łączonych parametrów  →  b^d konfiguracji
+b progów na parametr, d łączonych parametrów → b^d konfiguracji
 
 b = 4:
-  d = 1  →       4
-  d = 2  →      16
-  d = 3  →      64
-  d = 4  →     256
-  d = 5  →   1 024
-  d = 6  →   4 096
-  d = 7  →  16 384
+ d = 1 → 4
+ d = 2 → 16
+ d = 3 → 64
+ d = 4 → 256
+ d = 5 → 1 024
+ d = 6 → 4 096
+ d = 7 → 16 384
 
-dorzuć 2 kierunki i 3 interwały:  16 384 · 2 · 3 ≈ 98 000
+dorzuć 2 kierunki i 3 interwały: 16 384 · 2 · 3 ≈ 98 000
 ```
 
 ## Im większa przestrzeń, tym pewniejsze fałszywe odkrycie
@@ -75,10 +75,10 @@ oczekiwane fałszywe odkrycia, gdy żaden wariant nie działa:
 E[fałszywe] = α · N
 
 α = 5%:
-  N =    100   →     5
-  N =  1 024   →   ~51
-  N = 16 384   →  ~819
-  N = 98 000   → ~4 900
+ N = 100 → 5
+ N = 1 024 → ~51
+ N = 16 384 → ~819
+ N = 98 000 → ~4 900
 
 pojedynczy test bez korekty: raz na 20 prób „istotny"
 ```
@@ -92,14 +92,14 @@ Dlaczego przeszukiwanie tak łatwo produkuje zbieżności, dobrze tłumaczy klas
 ```
 PARADOKS URODZIN
 P(brak wspólnej daty wśród g osób) =
-    365/365 · 364/365 · ... · (365 − g + 1)/365
+ 365/365 · 364/365 · ... · (365 − g + 1)/365
 P(co najmniej jedna wspólna data) = 1 − powyższe
 
-g = 23   →  ~50,7 %      (wystarczą 23 osoby)
-g = 41   →  ~90,3 %
-g = 57   →  ~99,0 %
+g = 23 → ~50,7 % (wystarczą 23 osoby)
+g = 41 → ~90,3 %
+g = 57 → ~99,0 %
 
-liczba par:  C(g,2) = g · (g − 1) / 2
+liczba par: C(g,2) = g · (g − 1) / 2
 C(23,2) = 253 pary możliwych zbieżności
 ```
 
@@ -114,14 +114,14 @@ Bonferroni zakłada przy tym, że testy są niezależne, a w praktyce rzadko są
 Druga rodzina korekt odpuszcza perfekcję. Kontrola FDR, zaproponowana przez Benjaminiego i Hochberga (1995), nie obiecuje zera pomyłek, tylko trzyma oczekiwany odsetek fałszywych wśród ogłoszonych odkryć poniżej ustalonego progu. Przy skanowaniu tysięcy kandydatów zachowuje moc: nadal cokolwiek znajduje, ale z jawną etykietą jakości zamiast iluzji pewności.
 
 ```
-BONFERRONI   (kontrola FWER)
+BONFERRONI (kontrola FWER)
 każdy z N testów na poziomie α / N
-N = 1 000, α = 5%  →  próg jednego testu = 0,005 %
+N = 1 000, α = 5% → próg jednego testu = 0,005 %
 
 PRÓBY EFEKTYWNE
-testy skorelowane liczą się prawie jak jeden:  N_eff < N
+testy skorelowane liczą się prawie jak jeden: N_eff < N
 
-FDR   (Benjamini i Hochberg, 1995)
+FDR (Benjamini i Hochberg, 1995)
 kontroluj odsetek fałszywych wśród ogłoszonych odkryć ≤ q
 posortuj p rosnąco; przyjmij do największego k: p(k) ≤ (k/N) · q
 ```

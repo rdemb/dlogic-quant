@@ -1,7 +1,7 @@
 ---
 layout: labpost
 title: "Bogowie z brązu. Co naprawdę łączy Talosa z mechanizmem z Antykithiry?"
-description: "Esej o sztucznych istotach Hefajstosa, Talosie, Pandorze i technologii hellenistycznej — bez zamieniania mitu w pseudohistorię."
+description: "Esej o sztucznych istotach Hefajstosa, Talosie, Pandorze i technologii hellenistycznej - bez zamieniania mitu w pseudohistorię."
 dek: "Grecy nie zbudowali Talosa. Potrafili jednak wyobrazić sobie tę właściwość autonomicznego systemu, której ich rzeczywiste automaty jeszcze nie posiadały: nadawanie sytuacji znaczenia."
 date: 2026-08-07 20:00:00 +0200
 category: luzne
@@ -103,26 +103,26 @@ Poniższy model nie jest klasyfikacją używaną przez starożytnych ani ustalon
 
 <figure>
 <svg viewBox="0 0 1060 410" role="img" aria-labelledby="agency-title agency-desc" xmlns="http://www.w3.org/2000/svg">
-  <title id="agency-title">Pięć etapów delegowania sprawczości</title>
-  <desc id="agency-desc">Od autonomicznego ruchu przez regulację, procedurę i model do znaczenia, które w starożytności pozostaje w świecie mitu.</desc>
-  <defs><marker id="agency-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--acc)"/></marker></defs>
-  <path d="M108 196 H948" stroke="var(--line)" stroke-width="8" stroke-linecap="round"/>
-  <path d="M108 196 H778" stroke="var(--acc)" stroke-width="8" stroke-linecap="round"/>
-  <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
-    <circle cx="108" cy="196" r="42" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/><text x="108" y="202" text-anchor="middle" font-size="22" fill="var(--ink)">1</text>
-    <text x="108" y="274" text-anchor="middle" font-size="17" fill="var(--ink)">RUCH</text><text x="108" y="300" text-anchor="middle" font-size="13" fill="var(--mut)">trójnogi Hefajstosa</text>
-    <circle cx="318" cy="196" r="42" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/><text x="318" y="202" text-anchor="middle" font-size="22" fill="var(--ink)">2</text>
-    <text x="318" y="274" text-anchor="middle" font-size="17" fill="var(--ink)">REGULACJA</text><text x="318" y="300" text-anchor="middle" font-size="13" fill="var(--mut)">Ktesibios</text>
-    <circle cx="528" cy="196" r="42" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/><text x="528" y="202" text-anchor="middle" font-size="22" fill="var(--ink)">3</text>
-    <text x="528" y="274" text-anchor="middle" font-size="17" fill="var(--ink)">PROCEDURA</text><text x="528" y="300" text-anchor="middle" font-size="13" fill="var(--mut)">automaty Herona</text>
-    <circle cx="738" cy="196" r="42" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/><text x="738" y="202" text-anchor="middle" font-size="22" fill="var(--ink)">4</text>
-    <text x="738" y="274" text-anchor="middle" font-size="17" fill="var(--ink)">MODEL</text><text x="738" y="300" text-anchor="middle" font-size="13" fill="var(--mut)">Antykithira</text>
-    <circle cx="948" cy="196" r="50" fill="var(--soft)" stroke="var(--dn)" stroke-width="4"/><text x="948" y="202" text-anchor="middle" font-size="22" fill="var(--ink)">5</text>
-    <text x="948" y="274" text-anchor="middle" font-size="17" fill="var(--dn)">ZNACZENIE</text><text x="948" y="300" text-anchor="middle" font-size="13" fill="var(--mut)">Talos · świat mitu</text>
-    <text x="528" y="78" text-anchor="middle" font-size="20" fill="var(--ink)">Pierwsze cztery funkcje mają rzeczywiste analogie techniczne</text>
-    <path d="M798 112 H910" stroke="var(--dn)" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#agency-arrow)"/>
-    <text x="854" y="98" text-anchor="middle" font-size="13" fill="var(--dn)">próg znaczenia</text>
-  </g>
+ <title id="agency-title">Pięć etapów delegowania sprawczości</title>
+ <desc id="agency-desc">Od autonomicznego ruchu przez regulację, procedurę i model do znaczenia, które w starożytności pozostaje w świecie mitu.</desc>
+ <defs><marker id="agency-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="var(--acc)"/></marker></defs>
+ <path d="M108 196 H948" stroke="var(--line)" stroke-width="8" stroke-linecap="round"/>
+ <path d="M108 196 H778" stroke="var(--acc)" stroke-width="8" stroke-linecap="round"/>
+ <g font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+ <circle cx="108" cy="196" r="42" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/><text x="108" y="202" text-anchor="middle" font-size="22" fill="var(--ink)">1</text>
+ <text x="108" y="274" text-anchor="middle" font-size="17" fill="var(--ink)">RUCH</text><text x="108" y="300" text-anchor="middle" font-size="13" fill="var(--mut)">trójnogi Hefajstosa</text>
+ <circle cx="318" cy="196" r="42" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/><text x="318" y="202" text-anchor="middle" font-size="22" fill="var(--ink)">2</text>
+ <text x="318" y="274" text-anchor="middle" font-size="17" fill="var(--ink)">REGULACJA</text><text x="318" y="300" text-anchor="middle" font-size="13" fill="var(--mut)">Ktesibios</text>
+ <circle cx="528" cy="196" r="42" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/><text x="528" y="202" text-anchor="middle" font-size="22" fill="var(--ink)">3</text>
+ <text x="528" y="274" text-anchor="middle" font-size="17" fill="var(--ink)">PROCEDURA</text><text x="528" y="300" text-anchor="middle" font-size="13" fill="var(--mut)">automaty Herona</text>
+ <circle cx="738" cy="196" r="42" fill="var(--soft)" stroke="var(--acc)" stroke-width="3"/><text x="738" y="202" text-anchor="middle" font-size="22" fill="var(--ink)">4</text>
+ <text x="738" y="274" text-anchor="middle" font-size="17" fill="var(--ink)">MODEL</text><text x="738" y="300" text-anchor="middle" font-size="13" fill="var(--mut)">Antykithira</text>
+ <circle cx="948" cy="196" r="50" fill="var(--soft)" stroke="var(--dn)" stroke-width="4"/><text x="948" y="202" text-anchor="middle" font-size="22" fill="var(--ink)">5</text>
+ <text x="948" y="274" text-anchor="middle" font-size="17" fill="var(--dn)">ZNACZENIE</text><text x="948" y="300" text-anchor="middle" font-size="13" fill="var(--mut)">Talos · świat mitu</text>
+ <text x="528" y="78" text-anchor="middle" font-size="20" fill="var(--ink)">Pierwsze cztery funkcje mają rzeczywiste analogie techniczne</text>
+ <path d="M798 112 H910" stroke="var(--dn)" stroke-width="3" stroke-dasharray="7 7" marker-end="url(#agency-arrow)"/>
+ <text x="854" y="98" text-anchor="middle" font-size="13" fill="var(--dn)">próg znaczenia</text>
+ </g>
 </svg>
 <figcaption>Autorski model interpretacyjny. Nie opisuje liniowego „wynalezienia AI”, lecz rosnącą zdolność delegowania wybranych funkcji materii.</figcaption>
 </figure>
@@ -163,11 +163,11 @@ Być może właśnie dlatego nadal wydaje się tak współczesny. Nie dlatego, �
 
 ## Materiały wizualne i źródła
 
-- [Krater Malarza Talosa — Beazley Archive, University of Oxford](https://www.carc.ox.ac.uk/record/4A8E2FED-DC0D-4268-9142-0A6F55D1850F)
+- [Krater Malarza Talosa - Beazley Archive, University of Oxford](https://www.carc.ox.ac.uk/record/4A8E2FED-DC0D-4268-9142-0A6F55D1850F)
 - [Museo Nazionale Jatta w Ruvo di Puglia](https://museipuglia.cultura.gov.it/musei-puglia/jatta/)
-- [Homer, *Iliada*, księga XVIII — Perseus Digital Library](https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Il.+18&fromdoc=Perseus%3Atext%3A1999.01.0134)
-- [Hezjod, *Prace i dnie* — Center for Hellenic Studies, Harvard](https://chs.harvard.edu/primary-source/hesiod-works-and-days-sb/)
-- [Arystoteles, *Polityka*, I, 1253b — Perseus Digital Library](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0058%3Abook%3D1%3Asection%3D1253b)
+- [Homer, *Iliada*, księga XVIII - Perseus Digital Library](https://www.perseus.tufts.edu/hopper/text?doc=Hom.+Il.+18&fromdoc=Perseus%3Atext%3A1999.01.0134)
+- [Hezjod, *Prace i dnie* - Center for Hellenic Studies, Harvard](https://chs.harvard.edu/primary-source/hesiod-works-and-days-sb/)
+- [Arystoteles, *Polityka*, I, 1253b - Perseus Digital Library](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0058%3Abook%3D1%3Asection%3D1253b)
 - [Apollonios z Rodos, *Argonautyka*, księga IV](https://www.theoi.com/Text/ApolloniusRhodius4.html)
 - [Courtney Roby, *Strange Loops: Experiment and Programme in Hero’s Automata*, Oxford University Press](https://academic.oup.com/book/58665)
 - [Tony Freeth i in., *Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism*, Nature](https://www.nature.com/articles/nature05357)

@@ -23,17 +23,17 @@ category: edukacja
 Pojedynczy zwrot to jedna liczba. Portfel wielu instrumentów opisuje wektor zwrotów: uporządkowana lista zmian, po jednej współrzędnej na aktywo. Ryzyko takiego wektora nie sprowadza się do sumy ryzyk pojedynczych pozycji, bo instrumenty poruszają się razem. Całą tę wspólną strukturę zbiera macierz kowariancji.
 
 ```
-r = (r₁, r₂, ..., rₙ)          wektor zwrotów n aktywów
+r = (r₁, r₂, ..., rₙ) wektor zwrotów n aktywów
 
 macierz kowariancji (n × n), symetryczna:
 
-        r₁      r₂      r₃
-r₁   [ σ₁²    σ₁₂    σ₁₃ ]
-r₂   [ σ₂₁    σ₂²    σ₂₃ ]
-r₃   [ σ₃₁    σ₃₂    σ₃² ]
+ r₁ r₂ r₃
+r₁ [ σ₁² σ₁₂ σ₁₃ ]
+r₂ [ σ₂₁ σ₂² σ₂₃ ]
+r₃ [ σ₃₁ σ₃₂ σ₃² ]
 
-przekątna   σᵢ²  = wariancja aktywa i     (jego własna zmienność)
-poza nią    σᵢⱼ  = kowariancja i oraz j    (σᵢⱼ = σⱼᵢ)
+przekątna σᵢ² = wariancja aktywa i (jego własna zmienność)
+poza nią σᵢⱼ = kowariancja i oraz j (σᵢⱼ = σⱼᵢ)
 ```
 
 Przekątna mówi, jak bardzo każde aktywo waha się samo z siebie. Wartości poza przekątną mówią, jak pary aktywów wahają się wspólnie: dodatnia kowariancja oznacza, że nadwyżki nad średnią pojawiają się zwykle razem, ujemna, że jedno rośnie, gdy drugie spada. Macierz jest symetryczna, bo kowariancja pary nie zależy od kolejności. Z tej jednej tablicy oblicza się wariancję dowolnego portfela złożonego z tych aktywów: wystarczą wagi pozycji i wartości z macierzy. Dlatego kowariancja jest punktem wyjścia u Markowitza i w każdym modelu, który liczy ryzyko portfela, a nie ryzyko pojedynczej pozycji.
@@ -43,12 +43,12 @@ Przekątna mówi, jak bardzo każde aktywo waha się samo z siebie. Wartości po
 Kowariancja ma niewygodną cechę: jej wielkość zależy od skali. Dwa bardzo zmienne aktywa dadzą dużą kowariancję nawet przy słabym współruchu, tylko dlatego że same mocno się wahają. Korelacja usuwa ten problem, dzieląc kowariancję przez iloczyn odchyleń standardowych.
 
 ```
-ρᵢⱼ = σᵢⱼ / (σᵢ · σⱼ)           korelacja Pearsona
+ρᵢⱼ = σᵢⱼ / (σᵢ · σⱼ) korelacja Pearsona
 
 ρᵢⱼ ∈ [−1, 1]
-ρ = 1     ruch idealnie zgodny
-ρ = 0     brak liniowego związku
-ρ = −1    ruch idealnie przeciwny
+ρ = 1 ruch idealnie zgodny
+ρ = 0 brak liniowego związku
+ρ = −1 ruch idealnie przeciwny
 ```
 
 Po normalizacji liczba mieści się zawsze między minus jeden a jeden i nie zależy od jednostek, więc współruch pary walut można wprost porównać ze współruchem pary obligacji. Warto pamiętać, co ta miara chwyta, a czego nie: mierzy tylko związek liniowy i jest wrażliwa na obserwacje skrajne, więc niska korelacja nie oznacza niezależności, a wysoka nie przesądza o związku przyczynowym. Macierz korelacji i macierz kowariancji niosą tę samą informację o strukturze współruchu, jedna przeskalowana do wspólnej miary, druga w jednostkach naturalnych.
@@ -60,12 +60,12 @@ Macierz kowariancji można czytać jako opis kształtu chmury zwrotów. Ta chmur
 ```
 (macierz kowariancji) · v = λ · v
 
-v = wektor własny    kierunek, który macierz jedynie wydłuża lub skraca
-λ = wartość własna   ile wariancji leży wzdłuż kierunku v
+v = wektor własny kierunek, który macierz jedynie wydłuża lub skraca
+λ = wartość własna ile wariancji leży wzdłuż kierunku v
 
 macierz symetryczna i dodatnio półokreślona:
-  wektory własne wzajemnie prostopadłe
-  wartości własne rzeczywiste, λ₁ ≥ λ₂ ≥ ... ≥ λₙ ≥ 0
+ wektory własne wzajemnie prostopadłe
+ wartości własne rzeczywiste, λ₁ ≥ λ₂ ≥ ... ≥ λₙ ≥ 0
 ```
 
 Wektor własny to kierunek, którego macierz nie obraca, a jedynie rozciąga albo ściska, a odpowiadająca mu wartość własna mówi, o ile. Dla macierzy kowariancji ma to bezpośredni sens: wartość własna to ilość wariancji leżąca wzdłuż danego kierunku. Twierdzenie spektralne dla macierzy symetrycznych (Strang, Introduction to Linear Algebra) gwarantuje, że taka macierz ma komplet rzeczywistych wartości własnych i prostopadłych wektorów własnych, więc chmurę zawsze da się opisać zestawem wzajemnie niezależnych osi. Największa wartość własna wskazuje kierunek, wzdłuż którego dane zmieniają się najsilniej, najmniejsza kierunek najbardziej płaski.
@@ -75,9 +75,9 @@ Wektor własny to kierunek, którego macierz nie obraca, a jedynie rozciąga alb
 Analiza głównych składowych (PCA) to zapisanie danych w układzie wektorów własnych kowariancji. Zamiast opisywać zwroty w oryginalnych współrzędnych, czyli po jednym silnie skorelowanym aktywie na oś, opisuje się je w nowych osiach, uporządkowanych według malejącej wartości własnej.
 
 ```
-PC₁ = kierunek największej wariancji                    (największe λ₁)
-PC₂ = największa wariancja wśród kierunków prostopadłych do PC₁   (λ₂)
-...   każda kolejna prostopadła do wszystkich wcześniejszych
+PC₁ = kierunek największej wariancji (największe λ₁)
+PC₂ = największa wariancja wśród kierunków prostopadłych do PC₁ (λ₂)
+... każda kolejna prostopadła do wszystkich wcześniejszych
 
 udział składowej k = λₖ / (λ₁ + λ₂ + ... + λₙ)
 ```
@@ -97,9 +97,9 @@ Najbardziej znane zastosowanie PCA w finansach dotyczy stóp procentowych. Rento
 Litterman i Scheinkman (1991), krzywa dochodowości obligacji USA
 (udziały przybliżone, po zaokrągleniu):
 
-PC₁  poziom       ~ 90%    równoległe przesunięcie całej krzywej
-PC₂  nachylenie   ~  8%    krótki koniec kontra długi
-PC₃  krzywizna    ~  2%    środek kontra oba końce
+PC₁ poziom ~ 90% równoległe przesunięcie całej krzywej
+PC₂ nachylenie ~ 8% krótki koniec kontra długi
+PC₃ krzywizna ~ 2% środek kontra oba końce
 ```
 
 Pierwsza składowa to poziom: jej wektor własny ma zbliżone współrzędne dla wszystkich terminów, więc odpowiada równoległemu ruchowi całej krzywej w górę lub w dół i sama tłumaczy około dziewięćdziesięciu procent zmienności. Druga to nachylenie: dodatnia na jednym końcu, ujemna na drugim, czyli stromienie i wypłaszczanie. Trzecia to krzywizna: odmienny ruch środka względem obu końców. Ten sam schemat, jedna dominująca składowa wspólna plus kilka o mniejszym udziale, pojawia się na innych rynkach o silnym współruchu, na przykład w koszykach walut, gdzie pierwsza składowa bywa czytana jako wspólny czynnik ryzyka, zbliżony do ogólnej siły dolara. Interpretacja składowych nie jest jednak z góry dana przez matematykę, tylko odczytana z kształtu wektorów własnych po fakcie, i akurat na krzywej dochodowości wychodzi wyjątkowo czysto.

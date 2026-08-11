@@ -34,24 +34,24 @@ Kluczowa rzecz na start: funkcja OrderSend zwraca wartość logiczną, ale, jak 
 Odpowiedź serwera koduje liczba retcode. Zestaw wartości pochodzi z dokumentacji MQL5, dział kody powrotu handlu, i nie należy ich zgadywać. Pełnym sukcesem jest jeden kod, TRADE_RETCODE_DONE. Reszta to informacja, dlaczego się nie udało.
 
 ```
-10009  TRADE_RETCODE_DONE               zlecenie wykonane (pelny sukces)
-10008  TRADE_RETCODE_PLACED             zlecenie oczekujace zlozone
-10010  TRADE_RETCODE_DONE_PARTIAL       wykonano tylko czesc wolumenu
-10004  TRADE_RETCODE_REQUOTE            rekwotowanie, cena sie zmienila
-10020  TRADE_RETCODE_PRICE_CHANGED      ceny zmienione
-10021  TRADE_RETCODE_PRICE_OFF          brak kwotowan do przetworzenia
-10019  TRADE_RETCODE_NO_MONEY           za malo srodkow na operacje
-10016  TRADE_RETCODE_INVALID_STOPS      bledne poziomy SL/TP
-10015  TRADE_RETCODE_INVALID_PRICE      bledna cena w zleceniu
-10014  TRADE_RETCODE_INVALID_VOLUME     bledny wolumen
-10030  TRADE_RETCODE_INVALID_FILL       bledny tryb wypelnienia
-10017  TRADE_RETCODE_TRADE_DISABLED     handel wylaczony
-10018  TRADE_RETCODE_MARKET_CLOSED      rynek zamkniety
-10031  TRADE_RETCODE_CONNECTION         brak polaczenia z serwerem
-10012  TRADE_RETCODE_TIMEOUT            zlecenie anulowane przez timeout
-10024  TRADE_RETCODE_TOO_MANY_REQUESTS  zbyt czeste zadania
-10027  TRADE_RETCODE_CLIENT_DISABLES_AT autotrading wylaczony w terminalu
-10026  TRADE_RETCODE_SERVER_DISABLES_AT autotrading wylaczony przez serwer
+10009 TRADE_RETCODE_DONE zlecenie wykonane (pelny sukces)
+10008 TRADE_RETCODE_PLACED zlecenie oczekujace zlozone
+10010 TRADE_RETCODE_DONE_PARTIAL wykonano tylko czesc wolumenu
+10004 TRADE_RETCODE_REQUOTE rekwotowanie, cena sie zmienila
+10020 TRADE_RETCODE_PRICE_CHANGED ceny zmienione
+10021 TRADE_RETCODE_PRICE_OFF brak kwotowan do przetworzenia
+10019 TRADE_RETCODE_NO_MONEY za malo srodkow na operacje
+10016 TRADE_RETCODE_INVALID_STOPS bledne poziomy SL/TP
+10015 TRADE_RETCODE_INVALID_PRICE bledna cena w zleceniu
+10014 TRADE_RETCODE_INVALID_VOLUME bledny wolumen
+10030 TRADE_RETCODE_INVALID_FILL bledny tryb wypelnienia
+10017 TRADE_RETCODE_TRADE_DISABLED handel wylaczony
+10018 TRADE_RETCODE_MARKET_CLOSED rynek zamkniety
+10031 TRADE_RETCODE_CONNECTION brak polaczenia z serwerem
+10012 TRADE_RETCODE_TIMEOUT zlecenie anulowane przez timeout
+10024 TRADE_RETCODE_TOO_MANY_REQUESTS zbyt czeste zadania
+10027 TRADE_RETCODE_CLIENT_DISABLES_AT autotrading wylaczony w terminalu
+10026 TRADE_RETCODE_SERVER_DISABLES_AT autotrading wylaczony przez serwer
 ```
 
 Warto pogrupować te kody według właściwej reakcji, nie według numeru. Pierwsza grupa to stany przejściowe, które mija czas i nowa cena: REQUOTE, PRICE_CHANGED, PRICE_OFF, czasem TIMEOUT. Tu ponowienie po odświeżeniu ceny bywa uzasadnione, ale z limitem. Druga grupa to błędy wejścia: INVALID_STOPS, INVALID_PRICE, INVALID_VOLUME, INVALID_FILL. Ich ponawianie w tej samej formie nic nie da, bo problem tkwi w treści zlecenia, trzeba poprawić parametry albo odpuścić. Trzecia grupa to twarde blokady: NO_MONEY, TRADE_DISABLED, MARKET_CLOSED, CLIENT_DISABLES_AT, SERVER_DISABLES_AT. Tu ponawianie jest bezcelowe, właściwą reakcją jest zapis w logu i zatrzymanie prób.
@@ -93,82 +93,82 @@ Poniższy fragment składa te zasady w jeden minimalny wzorzec: wypełnienie Mql
 ```mql5
 //+------------------------------------------------------------------+
 //| Wzorzec egzekucji: OrderSend z obsluga retcode i retry z limitem.|
-//| Higiena wykonania, NIE strategia zarobkowa.                      |
+//| Higiena wykonania, NIE strategia zarobkowa. |
 //+------------------------------------------------------------------+
-input long   InpMagic     = 20260712; // magic: izolacja wlasnych zlecen
-input ulong  InpDeviation = 20;       // dopuszczalny poslizg w punktach
-input int    InpMaxRetry  = 3;        // twardy limit ponowien
+input long InpMagic = 20260712; // magic: izolacja wlasnych zlecen
+input ulong InpDeviation = 20; // dopuszczalny poslizg w punktach
+input int InpMaxRetry = 3; // twardy limit ponowien
 
 //+------------------------------------------------------------------+
 //| Zwraca true, gdy kod powrotu to stan przejsciowy (mozna ponowic).|
 //+------------------------------------------------------------------+
 bool IsRetryable(uint code)
-  {
-   return(code == TRADE_RETCODE_REQUOTE       ||  // 10004
-          code == TRADE_RETCODE_PRICE_CHANGED ||  // 10020
-          code == TRADE_RETCODE_PRICE_OFF     ||  // 10021
-          code == TRADE_RETCODE_TIMEOUT);         // 10012
-  }
+ {
+ return(code == TRADE_RETCODE_REQUOTE || // 10004
+ code == TRADE_RETCODE_PRICE_CHANGED || // 10020
+ code == TRADE_RETCODE_PRICE_OFF || // 10021
+ code == TRADE_RETCODE_TIMEOUT); // 10012
+ }
 //+------------------------------------------------------------------+
 //| Wysyla zlecenie rynkowe BUY z SL/TP. Zwraca true tylko przy DONE.|
 //+------------------------------------------------------------------+
 bool SendMarketBuy(double lots, double sl, double tp)
-  {
-   for(int attempt = 1; attempt <= InpMaxRetry; attempt++)
-     {
-      // 1) Swieza cena przed KAZDA proba (poprzednia mogla sie zdezaktualizowac).
-      double ask = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
+ {
+ for(int attempt = 1; attempt <= InpMaxRetry; attempt++)
+ {
+ // 1) Swieza cena przed KAZDA proba (poprzednia mogla sie zdezaktualizowac).
+ double ask = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
 
-      MqlTradeRequest req; ZeroMemory(req);
-      MqlTradeResult  res; ZeroMemory(res);
+ MqlTradeRequest req; ZeroMemory(req);
+ MqlTradeResult res; ZeroMemory(res);
 
-      req.action       = TRADE_ACTION_DEAL;    // natychmiastowa egzekucja
-      req.symbol       = _Symbol;
-      req.volume       = lots;
-      req.type         = ORDER_TYPE_BUY;
-      req.price        = ask;
-      req.sl           = sl;
-      req.tp           = tp;
-      req.deviation    = InpDeviation;         // maks. poslizg w punktach
-      req.magic        = InpMagic;
-      req.type_filling = ORDER_FILLING_IOC;    // reszta anulowana, nie zawisa
+ req.action = TRADE_ACTION_DEAL; // natychmiastowa egzekucja
+ req.symbol = _Symbol;
+ req.volume = lots;
+ req.type = ORDER_TYPE_BUY;
+ req.price = ask;
+ req.sl = sl;
+ req.tp = tp;
+ req.deviation = InpDeviation; // maks. poslizg w punktach
+ req.magic = InpMagic;
+ req.type_filling = ORDER_FILLING_IOC; // reszta anulowana, nie zawisa
 
-      // 2) Sito wstepne: srodki i poprawnosc struktury, bez wysylki na serwer.
-      MqlTradeCheckResult chk; ZeroMemory(chk);
-      if(!OrderCheck(req, chk))
-        {
-         PrintFormat("OrderCheck odrzucil: retcode=%u %s",
-                     chk.retcode, chk.comment);
-         return(false);                        // np. NO_MONEY: nie ma po co strzelac
-        }
+ // 2) Sito wstepne: srodki i poprawnosc struktury, bez wysylki na serwer.
+ MqlTradeCheckResult chk; ZeroMemory(chk);
+ if(!OrderCheck(req, chk))
+ {
+ PrintFormat("OrderCheck odrzucil: retcode=%u %s",
+ chk.retcode, chk.comment);
+ return(false); // np. NO_MONEY: nie ma po co strzelac
+ }
 
-      // 3) Wlasciwa wysylka. Zwrot bool NIE wystarcza, liczy sie res.retcode.
-      OrderSend(req, res);
+ // 3) Wlasciwa wysylka. Zwrot bool NIE wystarcza, liczy sie res.retcode.
+ OrderSend(req, res);
 
-      if(res.retcode == TRADE_RETCODE_DONE)    // 10009: jedyny pelny sukces
-        {
-         PrintFormat("Wykonane: deal=%I64u po cenie %.5f",
-                     res.deal, res.price);
-         return(true);
-        }
+ if(res.retcode == TRADE_RETCODE_DONE) // 10009: jedyny pelny sukces
+ {
+ PrintFormat("Wykonane: deal=%I64u po cenie %.5f",
+ res.deal, res.price);
+ return(true);
+ }
 
-      if(IsRetryable(res.retcode))             // stan przejsciowy: ponow z limitem
-        {
-         PrintFormat("Proba %d/%d, retcode=%u %s, ponawiam po nowej cenie",
-                     attempt, InpMaxRetry, res.retcode, res.comment);
-         Sleep(200);                           // krotka przerwa, nie zalewamy serwera
-         continue;
-        }
+ if(IsRetryable(res.retcode)) // stan przejsciowy: ponow z limitem
+ {
+ PrintFormat("Proba %d/%d, retcode=%u %s, ponawiam po nowej cenie",
+ attempt, InpMaxRetry, res.retcode, res.comment);
+ Sleep(200); // krotka przerwa, nie zalewamy serwera
+ continue;
+ }
 
-      // 4) Inny kod (INVALID_STOPS, TRADE_DISABLED, NO_MONEY...) NIE do retry.
-      PrintFormat("Blad nieponawialny: retcode=%u %s, przerywam",
-                  res.retcode, res.comment);
-      return(false);
-     }
+ // 4) Inny kod (INVALID_STOPS, TRADE_DISABLED, NO_MONEY...) NIE do retry.
+ PrintFormat("Blad nieponawialny: retcode=%u %s, przerywam",
+ res.retcode, res.comment);
+ return(false);
+ }
 
-   Print("Wyczerpano limit ponowien, zlecenie NIE weszlo");
-   return(false);
-  }
+ Print("Wyczerpano limit ponowien, zlecenie NIE weszlo");
+ return(false);
+ }
 //+------------------------------------------------------------------+
 ```
 

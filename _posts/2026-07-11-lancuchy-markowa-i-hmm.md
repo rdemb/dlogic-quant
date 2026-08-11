@@ -36,11 +36,11 @@ To jest założenie modelujące, nie prawo natury. Bywa fałszywe, gdy proces ma
 Gdy stanów jest skończenie wiele, dynamikę łańcucha zapisuje jedna tabela: macierz przejść. Jej element w wierszu i oraz kolumnie j to prawdopodobieństwo, że stan zmieni się z i na j w jednym kroku. Każdy wiersz sumuje się do jedności, bo z danego stanu trzeba gdzieś przejść. Prosty przykład z dwoma stanami, spokojnym i burzliwym, wystarcza do całej intuicji.
 
 ```
-macierz przejść A   (wiersz = stan dziś, kolumna = stan jutro)
+macierz przejść A (wiersz = stan dziś, kolumna = stan jutro)
 
-            spokój   burza
-spokój       0.90    0.10
-burza        0.20    0.80
+ spokój burza
+spokój 0.90 0.10
+burza 0.20 0.80
 
 każdy wiersz sumuje się do 1
 ```
@@ -50,14 +50,14 @@ Wysokie wartości na przekątnej oznaczają lepkość: rynek najczęściej zosta
 Osobne pytanie brzmi, jaka część czasu przypada na każdy stan w długim biegu, niezależnie od tego, gdzie łańcuch wystartował. Odpowiada na nie rozkład stacjonarny: taki rozkład prawdopodobieństwa po stanach, który po przemnożeniu przez macierz przejść nie zmienia się. To klimat łańcucha, a nie jego pogoda z danego dnia.
 
 ```
-rozkład stacjonarny π:  π = π · A,   suma π = 1
+rozkład stacjonarny π: π = π · A, suma π = 1
 
 π(spokój) = 2/3 ≈ 0.667
-π(burza)  = 1/3 ≈ 0.333
+π(burza) = 1/3 ≈ 0.333
 
 średni czas w stanie = 1 / (prawdopodobieństwo wyjścia)
 spokój: 1 / 0.10 = 10 kroków
-burza:  1 / 0.20 = 5 kroków
+burza: 1 / 0.20 = 5 kroków
 ```
 
 W tym przykładzie stan spokojny dominuje w proporcji dwa do jednego i trwa dwa razy dłużej. To jest formalny odpowiednik zdania, że reżimy są lepkie, które w [tekście o rozpoznawaniu reżimu rynku](/dlogic-quant/2026/07/09/jak-rozpoznac-rezim-rynku/) pojawiło się jako warunek użyteczności całej metody. Gdyby przekątna macierzy przejść była niska, stany migotałyby z kroku na krok i ich wykrywanie nie miałoby sensu, bo zanim dałoby się je rozpoznać, już by ich nie było.
@@ -91,20 +91,20 @@ W tym przykładzie stan spokojny dominuje w proporcji dwa do jednego i trwa dwa 
 Łańcuch z poprzedniego przykładu zakłada, że stan jest widoczny. Na rynku tak nie jest. Nikt nie wypisuje na taśmie etykiety spokój ani burza, widać tylko zwroty i zmienność zrealizowaną. Ukryty model Markowa (HMM) bierze to na wprost: stan `s_t` jest ukryty i zmienia się jak łańcuch Markowa według macierzy przejść, a każdy stan emituje obserwacje losowane z własnego rozkładu.
 
 ```
-ukryty model Markowa   λ = (A, B, π₀)
+ukryty model Markowa λ = (A, B, π₀)
 
-stan ukryty:  s_t ∈ {spokój, burza}      nie jest obserwowany
-przejścia:    A[i,j] = P(s_t=j | s_{t-1}=i)     macierz przejść
-emisje:       B[i,k] = P(o_t=k | s_t=i)         macierz emisji
-start:        π₀ = rozkład stanu na początku
+stan ukryty: s_t ∈ {spokój, burza} nie jest obserwowany
+przejścia: A[i,j] = P(s_t=j | s_{t-1}=i) macierz przejść
+emisje: B[i,k] = P(o_t=k | s_t=i) macierz emisji
+start: π₀ = rozkład stanu na początku
 ```
 
 Nowym elementem jest macierz emisji: dla każdego stanu rozkład tego, co widać. Jeśli obserwacją jest zgrubny podział ruchu na mały i duży, macierz emisji może wyglądać tak.
 
 ```
-macierz emisji B     mały ruch   duży ruch
-spokój                0.85        0.15
-burza                 0.40        0.60
+macierz emisji B mały ruch duży ruch
+spokój 0.85 0.15
+burza 0.40 0.60
 
 wiersze sumują się do 1
 ```
@@ -116,15 +116,15 @@ Sedno jest w tym, że jeden duży ruch nie dowodzi burzy. Jest w burzy bardziej 
 Rabiner (1989) w klasycznym wykładzie HMM, pierwotnie dla rozpoznawania mowy, uporządkował całą maszynerię w trzy problemy. Każdy odpowiada na inne pytanie i ma własny algorytm.
 
 ```
-1. Ocena        P(obserwacje | λ)               algorytm forward
-2. Dekodowanie  najlepsza ścieżka stanów        Viterbi
-3. Uczenie      estymacja A, B, π₀ z danych      Baum-Welch (EM)
+1. Ocena P(obserwacje | λ) algorytm forward
+2. Dekodowanie najlepsza ścieżka stanów Viterbi
+3. Uczenie estymacja A, B, π₀ z danych Baum-Welch (EM)
 ```
 
 Ocena pyta, jak prawdopodobny jest zaobserwowany ciąg przy danym modelu. Liczenie tego wprost wymagałoby zsumowania prawdopodobieństwa po wszystkich możliwych ścieżkach stanów, a tych dla T kroków i K stanów jest K do potęgi T, czyli astronomicznie wiele. Algorytm forward zwija tę sumę do tabeli metodą programowania dynamicznego: przenosi z kroku na krok prawdopodobieństwo obserwacji dotychczasowych wraz z bieżącym stanem i aktualizuje je jedną rekurencją.
 
 ```
-forward:  α_t(i) = P(o_1..o_t, s_t=i | λ)
+forward: α_t(i) = P(o_1..o_t, s_t=i | λ)
 α_t(j) = [ Σ_i α_{t-1}(i)·A[i,j] ] · B[j, o_t]
 P(obserwacje | λ) = Σ_i α_T(i)
 

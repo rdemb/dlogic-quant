@@ -1,6 +1,6 @@
 title: D-LOGIC Quant Research Lab
 description: >-
-  Publiczna kronika budowy adaptacyjnego systemu quant, program badawczy i polska baza wiedzy o rynkach. Hipotezy, audyty, falsyfikacje, koszty, mikrostruktura i ryzyko. Bez sygnałów i bez obietnic.
+ Publiczna kronika budowy adaptacyjnego systemu quant, program badawczy i polska baza wiedzy o rynkach. Hipotezy, audyty, falsyfikacje, koszty, mikrostruktura i ryzyko. Bez sygnałów i bez obietnic.
 author: D-LOGIC Quant
 lang: pl
 url: "https://rdemb.github.io"
@@ -8,18 +8,18 @@ baseurl: "/dlogic-quant"
 permalink: /:year/:month/:day/:title/
 future: true
 twitter:
-  username: takitamrafal
-  card: summary_large_image
+ username: takitamrafal
+ card: summary_large_image
 social:
-  name: D-LOGIC Quant Research Lab
-  links:
-    - https://x.com/takitamrafal
+ name: D-LOGIC Quant Research Lab
+ links:
+ - https://x.com/takitamrafal
 logo: /assets/og.png
 plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
+ - jekyll-seo-tag
+ - jekyll-sitemap
+ - jekyll-feed
 defaults:
-  - scope: { path: "", type: posts }
-    values: { layout: post, author: D-LOGIC Quant, image: /assets/og.png, category: analizy }
+ - scope: { path: "", type: posts }
+ values: { layout: post, author: D-LOGIC Quant, image: /assets/og.png, category: analizy }
 exclude: [STYLE_SEO.md, deploy.bat, README.md, Gemfile, Gemfile.lock]

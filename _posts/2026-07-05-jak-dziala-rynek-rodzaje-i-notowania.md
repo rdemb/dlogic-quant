@@ -66,16 +66,16 @@ NOWACJA W IZBIE ROZLICZENIOWEJ (CCP)
 
 przed nowacją:
 
-  KUPUJĄCY <------------------------------> SPRZEDAJĄCY
-             jedna umowa dwustronna: każda strona ponosi
-             ryzyko, że druga nie wykona zobowiązania
+ KUPUJĄCY <------------------------------> SPRZEDAJĄCY
+ jedna umowa dwustronna: każda strona ponosi
+ ryzyko, że druga nie wykona zobowiązania
 
 po nowacji:
 
-  KUPUJĄCY <-------> CCP <-------> SPRZEDAJĄCY
+ KUPUJĄCY <-------> CCP <-------> SPRZEDAJĄCY
 
-  dwie umowy w miejsce jednej: izba jest sprzedającym
-  dla kupującego i kupującym dla sprzedającego
+ dwie umowy w miejsce jednej: izba jest sprzedającym
+ dla kupującego i kupującym dla sprzedającego
 ```
 
 Konsekwencje są trzy. Po pierwsze, anonimowość przestaje być problemem: nie trzeba oceniać wypłacalności przypadkowego kontrahenta z księgi, bo prawnie kontrahentem jest zawsze izba. Po drugie, pozycje się kompensują (netting): kupno i sprzedaż tego samego instrumentu znoszą się w rozliczeniu do pozycji netto, co radykalnie zmniejsza liczbę i wartość przepływów. Po trzecie, izba nie jest naiwna: własne ryzyko obudowuje depozytami zabezpieczającymi pobieranymi od uczestników przy otwarciu pozycji i uzupełnianymi w miarę ruchu cen oraz wspólnym funduszem gwarancyjnym na wypadek upadłości uczestnika. Hasbrouck opisuje ten łańcuch, od zawarcia do rozrachunku, jako cichą infrastrukturę rynku: widać ją dopiero wtedy, gdy coś w niej pęka.

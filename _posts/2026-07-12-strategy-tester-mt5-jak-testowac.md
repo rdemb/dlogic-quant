@@ -28,11 +28,11 @@ Strategy Tester to moduł MetaTrader 5, który przewija zapisaną historię symb
 Sercem wiarygodności jest sposób, w jaki tester odtwarza ruch ceny wewnątrz świecy. MetaTrader 5 udostępnia cztery tryby, uszeregowane od najszybszego i najzgrubszego do najdokładniejszego.
 
 ```
-Tryb                             Zrodlo cen               Co pomija / uwaga
-Open prices only                 otwarcia barow interwalu ruch wewnatrz bara
-1 minute OHLC                    OHLC barow M1            kolejnosc ruchow w minucie
-Every tick                       ticki generowane z M1    realny spread, mikrostruktura
-Every tick based on real ticks   realne ticki brokera     najdokladniej; latencje ustaw w Delay
+Tryb Zrodlo cen Co pomija / uwaga
+Open prices only otwarcia barow interwalu ruch wewnatrz bara
+1 minute OHLC OHLC barow M1 kolejnosc ruchow w minucie
+Every tick ticki generowane z M1 realny spread, mikrostruktura
+Every tick based on real ticks realne ticki brokera najdokladniej; latencje ustaw w Delay
 ```
 
 W trybie Open prices only tester liczy strategię na cenach otwarcia świec wybranego interwału. Zdarzenie OnTick pada raz na świecę, na jej otwarciu. Według dokumentacji MQL5 tester poprawnie sprawdza w tym trybie aktywację zleceń oczekujących oraz poziomów Stop Loss i Take Profit, bo bada je po cenach OHLC bara, ale sama decyzja EA zapada tylko na otwarciu. To wystarcza wyłącznie dla strategii, które i tak działają na zamkniętym barze. Tryb 1 minute OHLC schodzi na minutę i z każdego bara M1 generuje ograniczoną liczbę ticków opartych o cztery ceny kontrolne, więc widzi więcej niż otwarcia, ale wciąż nie zna kolejności ruchów wewnątrz minuty. Every tick generuje ticki algorytmem opartym o historię minutową, co daje gęstą, lecz sztuczną ścieżkę. Every tick based on real ticks używa realnych ticków zebranych z serwera brokera i jest, według dokumentacji, najdokładniejszym trybem, bo odtwarza faktyczne zmiany ceny razem z historycznym, zmiennym spreadem.
@@ -46,12 +46,12 @@ Dwa pierwsze tryby są dobre do szybkiego szkicu, ale każda strategia wrażliwa
 Najczęstszy sposób na oszukanie samego siebie to test bez pełnych kosztów. Tester ma osobne pola, które trzeba świadomie ustawić.
 
 ```
-Model:      Every tick based on real ticks    // realne ticki, nie generowane
-Spread:     Current albo realny historyczny    // nie wpisuj 1, nie zanizaj
-Commission: z tabeli brokera (specyfikacja)    // domyslnie bywa zero
-Swap:       z kontraktu, long i short          // rollover kosztuje
-Delay:      realne albo losowe opoznienie      // nie zostawiaj idealnej egzekucji
-Deposit:    realny depozyt i waluta konta      // sizing ma sens tylko tu
+Model: Every tick based on real ticks // realne ticki, nie generowane
+Spread: Current albo realny historyczny // nie wpisuj 1, nie zanizaj
+Commission: z tabeli brokera (specyfikacja) // domyslnie bywa zero
+Swap: z kontraktu, long i short // rollover kosztuje
+Delay: realne albo losowe opoznienie // nie zostawiaj idealnej egzekucji
+Deposit: realny depozyt i waluta konta // sizing ma sens tylko tu
 ```
 
 Pole Spread przyjmuje wartość Current, czyli bieżący spread zamrożony na czas testu, albo stałą liczbę punktów. W trybie realnych ticków spread płynie tak, jak płynął w historii, i to jest wersja najbliższa prawdzie. Wpisanie sztywnej, niskiej wartości, na przykład jednego punktu tam, gdzie realnie bywa trzy, to prosta droga do wyniku, którego rynek nigdy nie odda. Prowizja i swap pochodzą ze specyfikacji kontraktu wczytanej do testera. Jeśli broker liczy prowizję od wolumenu, a w specyfikacji jej nie ma, test zaniża koszt każdej transakcji. Swap punktowy naliczany przy rolowaniu pozycji przez noc też trzeba mieć włączony, inaczej strategie trzymające pozycje dłużej wyglądają lepiej, niż są. Ile te koszty faktycznie ważą, rozkłada osobny materiał o [rzeczywistym koszcie transakcji](/dlogic-quant/2026/07/09/ile-naprawde-kosztuje-twoj-trade-tca/).
@@ -80,25 +80,25 @@ Te progi można wpisać wprost do kodu jako własne kryterium optymalizacji. Fun
 ```mql5
 //+------------------------------------------------------------------+
 //| Wlasne kryterium optymalizacji, wywolane raz po kazdym przebiegu.|
-//| Karze mala probe i glebokie obsuniecie, nagradza zysk na trade.  |
-//| To DEMONSTRACJA kodowania preferencji, nie wzor na przewage.     |
+//| Karze mala probe i glebokie obsuniecie, nagradza zysk na trade. |
+//| To DEMONSTRACJA kodowania preferencji, nie wzor na przewage. |
 //+------------------------------------------------------------------+
 double OnTester()
-  {
-   double trades = TesterStatistics(STAT_TRADES);          // liczba transakcji
-   if(trades < 100)                                         // za mala proba
-      return(0.0);                                          // odrzuc przebieg
+ {
+ double trades = TesterStatistics(STAT_TRADES); // liczba transakcji
+ if(trades < 100) // za mala proba
+ return(0.0); // odrzuc przebieg
 
-   double payoff = TesterStatistics(STAT_EXPECTED_PAYOFF);  // sredni wynik/trade
-   double pf     = TesterStatistics(STAT_PROFIT_FACTOR);    // profit factor
-   double ddpct  = TesterStatistics(STAT_EQUITYDD_PERCENT); // maks. obsuniecie %
+ double payoff = TesterStatistics(STAT_EXPECTED_PAYOFF); // sredni wynik/trade
+ double pf = TesterStatistics(STAT_PROFIT_FACTOR); // profit factor
+ double ddpct = TesterStatistics(STAT_EQUITYDD_PERCENT); // maks. obsuniecie %
 
-   if(payoff <= 0.0 || pf <= 1.0) return(0.0);             // brak sensu ekonomicznego
-   if(ddpct  <= 0.0) ddpct = 0.01;                         // ochrona przed dzieleniem
+ if(payoff <= 0.0 || pf <= 1.0) return(0.0); // brak sensu ekonomicznego
+ if(ddpct <= 0.0) ddpct = 0.01; // ochrona przed dzieleniem
 
-   // wieksze payoff i PF podnosza wynik, glebszy DD go obniza
-   return(payoff * pf / ddpct);
-  }
+ // wieksze payoff i PF podnosza wynik, glebszy DD go obniza
+ return(payoff * pf / ddpct);
+ }
 ```
 
 Taki zapis wymusza minimalną próbę stu transakcji i odrzuca przebiegi, które biorą zysk kosztem obsunięcia. To nie jest formuła na przewagę, tylko sposób, żeby optymalizator nie wybrał piku wiszącego na trzech szczęśliwych transakcjach.

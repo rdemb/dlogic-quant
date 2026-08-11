@@ -27,15 +27,15 @@ Po stronie aktywów dominują kredyty: hipoteki, kredyty dla firm, kredyty konsu
 ```
 BILANS BANKU (schemat ilustracyjny, liczby przykladowe):
 
-  AKTYWA                           PASYWA
-  kredyty                65        depozyty klientow         70
-  obligacje              20        finansowanie hurtowe      20
-  rezerwy i gotowka      10        kapital wlasny            10
-  inne                    5
-  ───────────────────────────      ───────────────────────────
-  razem                 100        razem                    100
+ AKTYWA PASYWA
+ kredyty 65 depozyty klientow 70
+ obligacje 20 finansowanie hurtowe 20
+ rezerwy i gotowka 10 kapital wlasny 10
+ inne 5
+ ─────────────────────────── ───────────────────────────
+ razem 100 razem 100
 
-  kapital wlasny = aktywa minus zobowiazania (bufor na straty)
+ kapital wlasny = aktywa minus zobowiazania (bufor na straty)
 ```
 
 Jedno sprostowanie na starcie, za Bank of England (2014, „Money creation in the modern economy"): depozyty po prawej stronie w większości nie są oszczędnościami przyniesionymi do okienka. Powstają, gdy banki udzielają kredytów, bo kredyt tworzy depozyt. Mechanika kreacji pieniądza to osobna historia; tutaj wystarczy zapamiętać, że obie strony bilansu żyją. Aktywa rodzą dochód i ryzyko, pasywa rodzą koszt i mogą odpłynąć.
@@ -86,12 +86,12 @@ Model biznesowy banku mieści się w jednej różnicy. Aktywa są oprocentowane 
 ```
 ZYSK BANKU (schemat):
 
-  odsetki otrzymywane z aktywow (kredyty, obligacje)
-  minus odsetki placone za pasywa (depozyty, finansowanie hurtowe)
-  ────────────────────────────────────────────────
-  = wynik odsetkowy netto
-  + prowizje i oplaty (konta, karty, wymiana walut)
-  = z tego bank pokrywa koszty dzialania i straty kredytowe
+ odsetki otrzymywane z aktywow (kredyty, obligacje)
+ minus odsetki placone za pasywa (depozyty, finansowanie hurtowe)
+ ────────────────────────────────────────────────
+ = wynik odsetkowy netto
+ + prowizje i oplaty (konta, karty, wymiana walut)
+ = z tego bank pokrywa koszty dzialania i straty kredytowe
 ```
 
 Ta marża nie jest darmowa. Wynagradza trzy rzeczy naraz: ryzyko kredytowe (część kredytów nie wróci), ryzyko płynności (aktywa są zamrożone, pasywa płatne od ręki) i koszty prowadzenia całej maszynerii. Drugim silnikiem są prowizje i opłaty, mniej wrażliwe na poziom stóp. Ale rdzeń jest odsetkowy i ma jedną konsekwencję, wokół której kręci się reszta tego tekstu: żeby zarabiać na różnicy między długim a krótkim, trzeba być długim po stronie aktywów i krótkim po stronie pasywów. Czyli trzeba wziąć na siebie niedopasowanie terminów.
@@ -117,13 +117,13 @@ Druga wbudowana słabość to proporcje. Kapitał własny finansuje tylko mały 
 ```
 DZWIGNIA (przyklad ilustracyjny, nie realne wymogi kapitalowe):
 
-  aktywa 100 = zobowiazania 92 + kapital wlasny 8
+ aktywa 100 = zobowiazania 92 + kapital wlasny 8
 
-  strata 2% aktywow  → kapital z 8 do 6   (znika 1/4 kapitalu)
-  strata 4% aktywow  → kapital z 8 do 4   (znika polowa)
-  strata 8% aktywow  → kapital z 8 do 0   (niewyplacalnosc)
+ strata 2% aktywow → kapital z 8 do 6 (znika 1/4 kapitalu)
+ strata 4% aktywow → kapital z 8 do 4 (znika polowa)
+ strata 8% aktywow → kapital z 8 do 0 (niewyplacalnosc)
 
-  mala procentowo strata na duzym bilansie zjada maly kapital
+ mala procentowo strata na duzym bilansie zjada maly kapital
 ```
 
 Arytmetyka jest prosta i bezlitosna. Wystarczy, że niewielki procent aktywów straci na wartości, a z kapitału ubywa wielokrotnie większy procent, bo cała strata uderza w cienką warstwę bufora. Dlatego regulacje bankowe kręcą się wokół kapitału, czyli tego, ile go ma być i jak ważyć ryzyko aktywów, a nie wokół zapasu gotówki w skarbcu. I dlatego rynek tak nerwowo reaguje na wieści o stratach banków: przy dźwigni droga od przejściowych strat do braku kapitału jest krótka. Dźwignia sprzęga się też z poprzednim punktem. Im cieńszy bufor, tym szybciej wyprzedaż pożarowa przerabia problem płynnościowy na niewypłacalność.
@@ -137,13 +137,13 @@ W modelu deponenci nie wiedzą z góry, kiedy będą potrzebować pieniędzy, a 
 ```
 DWIE ROWNOWAGI (Diamond i Dybvig 1983):
 
-  SPOKOJ:  wyplacaja tylko ci, ktorzy musza → plynnosci starcza
-                                            → bank stoi
-  PANIKA:  wyplacaja wszyscy na zapas       → likwidacja dlugich
-                                              aktywow ze strata
-                                            → bank pada
+ SPOKOJ: wyplacaja tylko ci, ktorzy musza → plynnosci starcza
+ → bank stoi
+ PANIKA: wyplacaja wszyscy na zapas → likwidacja dlugich
+ aktywow ze strata
+ → bank pada
 
-  te same aktywa, ci sami klienci; wynik wybiera oczekiwanie tlumu
+ te same aktywa, ci sami klienci; wynik wybiera oczekiwanie tlumu
 ```
 
 Jeśli każdy wierzy, że inni nie pobiegną, nikt nie biegnie i wszystko działa. Jeśli każdy uwierzy, że inni pobiegną, jedyną racjonalną odpowiedzią jest stanąć w kolejce pierwszym, zanim skończy się gotówka. Wtedy biegną wszyscy, także ci, którzy pieniędzy nie potrzebują i uważają bank za zdrowy. Run jest samospełniający się: nie potrzebuje złych aktywów ani oszustwa, wystarczy plotka albo zła wiadomość, cokolwiek, co skoordynuje oczekiwania na panikę. Upaść może bank całkowicie zdrowy, a run z definicji wymusza straty, bo zmusza do przedwczesnej likwidacji tego, co miało pracować latami. Współczesna wersja różni się tylko techniką: kolejkę przed oddziałem zastąpiła aplikacja, więc depozyty potrafią odpływać w tempie, o jakim dawne paniki mogły tylko śnić.

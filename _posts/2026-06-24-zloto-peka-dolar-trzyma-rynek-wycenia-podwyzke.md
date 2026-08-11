@@ -11,7 +11,7 @@ image: /assets/og/2026-06-24-zloto-peka-dolar-trzyma-rynek-wycenia-podwyzke.png
 > **W skrócie**
 >
 > - Złoto w korekcie, nie w panice: dziś ~**4095** (−0.33%), ale **−3.8%** w tydzień, **−9.2%** w miesiąc i około **−27%** od tegorocznego szczytu przy 5597. Mimo to wciąż **+23%** rok do roku. Zjazd jest spójny z rosnącymi realnymi stopami.
-> - Rynek wycenia **~68%** szans na wrześniową podwyżkę Fedu, a 10-latka przy **4.50%** jest najwyżej od dwóch tygodni. Carry Fed–EBC trzyma **+137.5 bp** po stronie dolara.
+> - Rynek wycenia **~68%** szans na wrześniową podwyżkę Fedu, a 10-latka przy **4.50%** jest najwyżej od dwóch tygodni. Carry Fed-EBC trzyma **+137.5 bp** po stronie dolara.
 > - Struktura bez zmian: czynnik dolara tłumaczy **69%** wariancji par USD, a EUR/USD jest w **83%** jego pochodną. **EUR/USD 1.1470.**
 > - Bezpieczniki spokojne: krzywa **2s10s +29 bp** bez inwersji, VIX **17.3**. Mocny dolar w trybie spoczynku, nie paniki.
 
@@ -99,7 +99,7 @@ Dziś żaden warunek nie jest spełniony. Krzywa ma +29 bp i się nie odwraca, V
 | US 2Y / 10Y | 4.21% / 4.50% | 10Y najwyżej od 2 tyg. |
 | Krzywa 2s10s | +29 bp | brak inwersji |
 | Realna 10Y | +0.3% | magnes na kapitał |
-| Carry Fed–EBC | +137.5 bp | na korzyść USD |
+| Carry Fed-EBC | +137.5 bp | na korzyść USD |
 | VIX | 17.3 | reżim spokoju |
 | Złoto (XAU/USD) | ~4095 | −0.3% dzień, −3.8% tydzień, −9.2% miesiąc |
 | Szansa podwyżki (IX) | ~68% | jastrzębi przechył |
@@ -116,22 +116,22 @@ Cztery moduły, wszystkie z publicznych danych.
 ```
 # 1. Sila walut (z-score, suma zerowa)
 for ccy in G8:
-    r[ccy] = mean(ret(ccy / other) for other in G8 if other != ccy)
-z = (r - mean(r)) / std(r)                        # Suma z = 0
+ r[ccy] = mean(ret(ccy / other) for other in G8 if other != ccy)
+z = (r - mean(r)) / std(r) # Suma z = 0
 
 # 2. Czynnik dolara (PCA na parach USD)
-pc1_var   = eig(cov(returns_usd_pairs))[0] / total_var    # = 0.69
-r2_eurusd = corr(eurusd, pc1) ** 2                         # = 0.83
+pc1_var = eig(cov(returns_usd_pairs))[0] / total_var # = 0.69
+r2_eurusd = corr(eurusd, pc1) ** 2 # = 0.83
 
 # 3. Rezim zmiennosci
-atr_pctile     = percentile_rank(ATR14, lookback=252)      # = 52
-variance_ratio = range_5d / (ATR14 * sqrt(5))              # = 1.54
+atr_pctile = percentile_rank(ATR14, lookback=252) # = 52
+variance_ratio = range_5d / (ATR14 * sqrt(5)) # = 1.54
 
 # 4. Rezim makro (reguly, nie predykcja)
-real_10y = us_10y - cpi_proxy        # +0.3
-slope    = us_10y - us_2y            # +29 bp
-carry    = fed_mid - ecb_rate        # +137.5 bp
-gold_5d  = mom(XAUUSD, 5d)           # web: 1T -3.8%, 1M -9.2%
+real_10y = us_10y - cpi_proxy # +0.3
+slope = us_10y - us_2y # +29 bp
+carry = fed_mid - ecb_rate # +137.5 bp
+gold_5d = mom(XAUUSD, 5d) # web: 1T -3.8%, 1M -9.2%
 usd_bias = "strong" if (real_10y > 0 and slope > 0 and carry > 0) else "mixed"
 ```
 

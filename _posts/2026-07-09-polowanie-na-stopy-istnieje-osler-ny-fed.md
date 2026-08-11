@@ -31,13 +31,13 @@ Najważniejsze rozróżnienie na starcie: Osler nie udowodniła, że ktoś "polu
 Cała praca sprowadza się do jednej geometrii wokół ceny kończącej się na 00. Zanim przejdziemy do trzech tez, oto ta geometria w jednym obrazku.
 
 ```
-   cena rośnie ↑
-   1.1003   strefa buy-stopów     przebicie w górę → fala KUPNA (kaskada)
-   1.1001
-   1.1000   POZIOM 00 (xx00)      gęsto: take-profity → efekt odbicia
-   1.0999
-   1.0997   strefa sell-stopów    przebicie w dół → fala SPRZEDAŻY (kaskada)
-   cena spada ↓
+ cena rośnie ↑
+ 1.1003 strefa buy-stopów przebicie w górę → fala KUPNA (kaskada)
+ 1.1001
+ 1.1000 POZIOM 00 (xx00) gęsto: take-profity → efekt odbicia
+ 1.0999
+ 1.0997 strefa sell-stopów przebicie w dół → fala SPRZEDAŻY (kaskada)
+ cena spada ↓
 ```
 
 ### Teza 1: take-profity siadają NA okrągłym poziomie

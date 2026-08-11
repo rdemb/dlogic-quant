@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Odkrywanie niewidzialnego"
-description: "Seria esejów o grawitacji, atomach, pomiarze, nieoznaczoności i statystycznej naturze świata — tam, gdzie dobra metafora musi ustąpić fizyce."
+description: "Seria esejów o grawitacji, atomach, pomiarze, nieoznaczoności i statystycznej naturze świata - tam, gdzie dobra metafora musi ustąpić fizyce."
 permalink: /odkrywanie-niewidzialnego/
 ---
 {% assign loose = site.posts | where: "category", "luzne" %}
@@ -13,52 +13,52 @@ permalink: /odkrywanie-niewidzialnego/
 <div class="lab-note"><strong>Metoda serii:</strong> metafora otwiera drzwi, ale nie otrzymuje ostatniego słowa. Rozdzielamy obraz popularyzatorski, model fizyczny, wynik pomiaru oraz interpretację filozoficzną.</div>
 
 <div class="lab-grid">
-  <div class="lab-card">
-    <span class="num">01 / GRAWITACJA</span>
-    <h2>Siła czy geometria?</h2>
-    <p>Dlaczego swobodnie spadający człowiek nie czuje grawitacji, a stojący na ziemi tak — oraz dlaczego nie usuwa to pływów, krzywizny i przyczynowości.</p>
-  </div>
-  <div class="lab-card">
-    <span class="num">02 / MATERIA</span>
-    <h2>Czy atom jest pusty?</h2>
-    <p>Co naprawdę zajmuje przestrzeń atomu i dlaczego materia nie przenika sama przez siebie ani nie zapada się do jądra.</p>
-  </div>
-  <div class="lab-card">
-    <span class="num">03 / POMIAR</span>
-    <h2>Czy widzimy atomy?</h2>
-    <p>Od dyfrakcji rentgenowskiej przez STM i AFM po fluorescencję pojedynczych atomów: każdy obraz jest wynikiem określonej interakcji.</p>
-  </div>
-  <div class="lab-card">
-    <span class="num">04 / KWANTY</span>
-    <h2>Co ogranicza Heisenberg?</h2>
-    <p>Nie niedoskonały mikroskop, lecz struktura stanów kwantowych — i ważne rozróżnienie między nieoznaczonością przygotowania a zaburzeniem pomiarowym.</p>
-  </div>
-  <div class="lab-card">
-    <span class="num">05 / STATYSTYKA</span>
-    <h2>Czy oddychasz Cezarem?</h2>
-    <p>Rachunek daje oczekiwaną liczbę cząsteczek, nie certyfikat ich obecności. Doskonały przykład różnicy między średnią a zdarzeniem.</p>
-  </div>
-  <a class="lab-card" href="https://youtu.be/qoS5NDf3Xfk?is=zpju57p_iIk2Vtz8" rel="noopener">
-    <span class="num">PUNKT WYJŚCIA</span>
-    <h2>Podcast, od którego zaczęło się śledztwo</h2>
-    <p>Rozmowa była inspiracją i źródłem pytań. Twierdzenia w artykułach zostały następnie sprawdzone w publikacjach pierwotnych oraz oficjalnych materiałach instytucji naukowych.</p>
-    <span class="go">Otwórz materiał →</span>
-  </a>
+ <div class="lab-card">
+ <span class="num">01 / GRAWITACJA</span>
+ <h2>Siła czy geometria?</h2>
+ <p>Dlaczego swobodnie spadający człowiek nie czuje grawitacji, a stojący na ziemi tak - oraz dlaczego nie usuwa to pływów, krzywizny i przyczynowości.</p>
+ </div>
+ <div class="lab-card">
+ <span class="num">02 / MATERIA</span>
+ <h2>Czy atom jest pusty?</h2>
+ <p>Co naprawdę zajmuje przestrzeń atomu i dlaczego materia nie przenika sama przez siebie ani nie zapada się do jądra.</p>
+ </div>
+ <div class="lab-card">
+ <span class="num">03 / POMIAR</span>
+ <h2>Czy widzimy atomy?</h2>
+ <p>Od dyfrakcji rentgenowskiej przez STM i AFM po fluorescencję pojedynczych atomów: każdy obraz jest wynikiem określonej interakcji.</p>
+ </div>
+ <div class="lab-card">
+ <span class="num">04 / KWANTY</span>
+ <h2>Co ogranicza Heisenberg?</h2>
+ <p>Nie niedoskonały mikroskop, lecz struktura stanów kwantowych - i ważne rozróżnienie między nieoznaczonością przygotowania a zaburzeniem pomiarowym.</p>
+ </div>
+ <div class="lab-card">
+ <span class="num">05 / STATYSTYKA</span>
+ <h2>Czy oddychasz Cezarem?</h2>
+ <p>Rachunek daje oczekiwaną liczbę cząsteczek, nie certyfikat ich obecności. Doskonały przykład różnicy między średnią a zdarzeniem.</p>
+ </div>
+ <a class="lab-card" href="https://youtu.be/qoS5NDf3Xfk?is=zpju57p_iIk2Vtz8" rel="noopener">
+ <span class="num">PUNKT WYJŚCIA</span>
+ <h2>Podcast, od którego zaczęło się śledztwo</h2>
+ <p>Rozmowa była inspiracją i źródłem pytań. Twierdzenia w artykułach zostały następnie sprawdzone w publikacjach pierwotnych oraz oficjalnych materiałach instytucji naukowych.</p>
+ <span class="go">Otwórz materiał →</span>
+ </a>
 </div>
 
 <div class="section-head"><h2>Artykuły w serii</h2><a href="{{ '/luzne-tematy/' | relative_url }}">Wszystkie luźne tematy →</a></div>
 <ul class="posts">
 {% assign count = 0 %}
 {% for post in loose %}
-  {% if post.tags contains 'odkrywanie-niewidzialnego' %}
-    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
-    {% assign count = count | plus: 1 %}
-  {% endif %}
+ {% if post.tags contains 'odkrywanie-niewidzialnego' %}
+ <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+ {% assign count = count | plus: 1 %}
+ {% endif %}
 {% endfor %}
 {% if count == 0 %}<li><span class="ds">Pierwsze artykuły są przygotowywane.</span></li>{% endif %}
 </ul>
 
 <section class="ip-boundary">
-  <h2>Granica pewności</h2>
-  <p>W tej serii nie traktujemy popularnych skrótów jako dosłownych opisów rzeczywistości. „Grawitacja nie jest siłą”, „atom jest pusty”, „widzimy atom” i „oddychamy Cezarem” są użytecznymi wejściami do problemu, ale każde wymaga warunków, definicji oraz informacji o tym, co naprawdę zostało zmierzone.</p>
+ <h2>Granica pewności</h2>
+ <p>W tej serii nie traktujemy popularnych skrótów jako dosłownych opisów rzeczywistości. „Grawitacja nie jest siłą”, „atom jest pusty”, „widzimy atom” i „oddychamy Cezarem” są użytecznymi wejściami do problemu, ale każde wymaga warunków, definicji oraz informacji o tym, co naprawdę zostało zmierzone.</p>
 </section>

@@ -23,27 +23,27 @@ tags: ["Kelly", "sizing", "zarządzanie ryzykiem", "drawdown", "dźwignia", "mon
 Kryterium sformułował John Kelly w 1956 roku, a dla rynków i gier spopularyzował je Edward Thorp. Wzór nie liczy zysku na jednej transakcji, tylko frakcję kapitału, która maksymalizuje tempo wzrostu w długim biegu, gdy zyski reinwestujesz.
 
 ```
-f* = μ / σ²                              (przybliżenie Gaussowskie)
-f* : maksymalizuje  E[ log(1 + f · r) ]  (pełny rozkład, po wszystkich f)
+f* = μ / σ² (przybliżenie Gaussowskie)
+f* : maksymalizuje E[ log(1 + f · r) ] (pełny rozkład, po wszystkich f)
 
-μ   = średni zwrot na trade
-σ²  = wariancja zwrotów
-r   = zwrot pojedynczej pozycji (zmienna losowa)
-f   = frakcja kapitału wystawiona na jeden trade
+μ = średni zwrot na trade
+σ² = wariancja zwrotów
+r = zwrot pojedynczej pozycji (zmienna losowa)
+f = frakcja kapitału wystawiona na jeden trade
 ```
 
 Konkret na klasycznym przykładzie Thorpa. Weź monetę z przewagą, wypłata jeden do jednego: wygrywasz z prawdopodobieństwem 0,60, przegrywasz z 0,40. Ile stawiać?
 
 ```
-p = 0,60   (szansa wygranej),   q = 0,40   (szansa przegranej),   kurs 1:1
-f* = p − q = 0,60 − 0,40 = 0,20        → pełny Kelly stawia 20% kapitału
-pół Kelly                              → 10% kapitału
+p = 0,60 (szansa wygranej), q = 0,40 (szansa przegranej), kurs 1:1
+f* = p − q = 0,60 − 0,40 = 0,20 → pełny Kelly stawia 20% kapitału
+pół Kelly → 10% kapitału
 ```
 
 Kluczowe jest to, co siedzi pod logarytmem. Kelly maksymalizuje wartość oczekiwaną z log(kapitału), czyli średnie tempo geometryczne, a nie średni zysk arytmetyczny. Logarytm karze straty niesymetrycznie. Gdy wystawiona frakcja razy zwrot dąży do minus jeden, czyli tracisz cały postawiony kapitał, log leci do minus nieskończoności.
 
 ```
-gdy  f · r → −1   (tracisz cały wystawiony kapitał),   log(1 + f · r) → −∞
+gdy f · r → −1 (tracisz cały wystawiony kapitał), log(1 + f · r) → −∞
 ```
 
 To jeden akapit, ale zawiera całą intuicję sizingu. Pojedynczy gruby lewy ogon, jedna wyjątkowo brzydka strata, ściąga optymalne f w dół dużo mocniej, niż taki sam co do wielkości zysk je podnosi. Dlatego w przybliżeniu Gaussowskim f* to po prostu stosunek średniej do wariancji: im grubszy rozkład, tym mniejsza frakcja. Ten wzór nie nagradza za odwagę, on wycenia zmienność.
@@ -55,14 +55,14 @@ Pełny Kelly optymalizuje wzrost, ale nie mówi ani słowa o komforcie drogi. A 
 Ten wynik da się zapisać wzorem. W idealizacji ciągłej, gdy grasz ułamkiem λ pełnego Kelly'ego, prawdopodobieństwo, że kapitał kiedykolwiek spadnie do frakcji α swojej wartości, wynosi:
 
 ```
-P(kapitał kiedykolwiek spadnie do frakcji α)  =  α^(2/λ − 1)      (idealizacja ciągła)
+P(kapitał kiedykolwiek spadnie do frakcji α) = α^(2/λ − 1) (idealizacja ciągła)
 
-λ = ułamek pełnego Kelly'ego, którym grasz  (λ = 1 to pełny Kelly)
-α = docelowy poziom obsunięcia  (α = 0,5 oznacza utratę połowy kapitału)
+λ = ułamek pełnego Kelly'ego, którym grasz (λ = 1 to pełny Kelly)
+α = docelowy poziom obsunięcia (α = 0,5 oznacza utratę połowy kapitału)
 
-pełny Kelly  (λ = 1):     P(spadek do połowy) = 0,5^1 = 50%
-pół Kelly    (λ = 0,5):   P(spadek do połowy) = 0,5^3 = 12,5%
-ćwierć Kelly (λ = 0,25):  P(spadek do połowy) = 0,5^7 ≈ 0,8%
+pełny Kelly (λ = 1): P(spadek do połowy) = 0,5^1 = 50%
+pół Kelly (λ = 0,5): P(spadek do połowy) = 0,5^3 = 12,5%
+ćwierć Kelly (λ = 0,25): P(spadek do połowy) = 0,5^7 ≈ 0,8%
 ```
 
 Zwróć uwagę, jak ostro spada ryzyko przy schodzeniu z frakcji. Zejście z pełnego do połowy Kelly'ego tnie szansę głębokiego obsunięcia z 50% do około 12%, a do ćwierci Kelly'ego już poniżej jednego procenta. Człowiek, który gra pełnym Kelly, statystycznie prędzej złamie się psychicznie i zejdzie z pozycji na dnie, niż doczeka obiecanego tempa wzrostu.
@@ -114,10 +114,10 @@ Kontrargument narzuca się sam: skoro pełny Kelly ma najwyższe tempo wzrostu, 
 Sam Kelly nie zna słowa „obsunięcie". Lukę tę domykają Busseti i Boyd w pracy o risk-constrained Kelly (2016). Pomysł jest prosty i praktyczny: nie maksymalizuj samego wzrostu, tylko znajdź największą frakcję, która nie przekracza zadanego ryzyka głębokiego zjazdu.
 
 ```
-maksymalizuj   E[ log(1 + f · r) ]
-przy warunku   P( obsunięcie > próg )  ≤  α
+maksymalizuj E[ log(1 + f · r) ]
+przy warunku P( obsunięcie > próg ) ≤ α
 
-przykład:  próg = 30% kapitału,   α = 10%
+przykład: próg = 30% kapitału, α = 10%
 ```
 
 Zamiast pytać „ile da się wycisnąć", pytasz „ile wolno, żeby prawdopodobieństwo obsunięcia ponad 30% nie przekroczyło 10%". Odpowiedzią jest bezpieczna frakcja f, zwykle dużo mniejsza od surowego Kelly'ego, a im grubszy lewy ogon, tym większa ta przepaść.
@@ -125,9 +125,9 @@ Zamiast pytać „ile da się wycisnąć", pytasz „ile wolno, żeby prawdopodo
 Warto zobaczyć to na kierunku, bo tu jest cała lekcja. Tę samą strategię można policzyć na trzy sposoby, coraz uczciwsze wobec ogona:
 
 ```
-Kelly Gaussowski     największa frakcja   (udaje rozkład symetryczny)
-Kelly empiryczny     mniejsza frakcja     (skośny, realny rozkład już go ścina)
-Kelly z limitem DD   najmniejsza frakcja  (dokłada twardy warunek na obsunięcie)
+Kelly Gaussowski największa frakcja (udaje rozkład symetryczny)
+Kelly empiryczny mniejsza frakcja (skośny, realny rozkład już go ścina)
+Kelly z limitem DD najmniejsza frakcja (dokłada twardy warunek na obsunięcie)
 ```
 
 Gaussowski wzór udaje, że rozkład jest ładny i symetryczny, więc mówi najwięcej. Ten sam wzór policzony na prawdziwym, skośnym rozkładzie spada, bo ogon już go trochę ściął. A gdy dołożysz twardy warunek na obsunięcie, bezpieczna frakcja leci najniżej ze wszystkich. Trzy odpowiedzi na to samo pytanie, a jedyne, co się zmienia, to ile uczciwości wobec lewego ogona wpuszczasz do rachunku. Dobrze policzona bezpieczna frakcja potrafi wyjść poniżej tego, czym gracz już intuicyjnie gra.
@@ -145,10 +145,10 @@ Uczciwie trzeba też dodać, że symulacje ryzyka obsunięcia bywają optymistyc
 Skoro to lewy ogon rządzi bezpieczną frakcją, to najsilniejszą dźwignią nie jest większy lot, tylko krótszy ogon. Weź strategię, której najgorszy pojedynczy trade to minus 20 jednostek na tle rozkładu skupionego wokół małych wartości. Dołóż twardy stop loss, który ucina tę stratę do minus 8:
 
 ```
-najgorszy trade:   −20   →   −8      (twardy SL)
-skośność rozkładu:  spada
-PSR:                rośnie
-efekt:              wyższa bezpieczna frakcja Kelly'ego
+najgorszy trade: −20 → −8 (twardy SL)
+skośność rozkładu: spada
+PSR: rośnie
+efekt: wyższa bezpieczna frakcja Kelly'ego
 ```
 
 To jest kontrintuicyjne i dlatego warte podkreślenia. Ucięcie jednej brzydkiej straty nie tylko ratuje kapitał na tym konkretnym tradzie. Ono podnosi jakość całego edge'u: rozkład robi się mniej skośny, PSR rośnie, a to z kolei pozwala bezpiecznie grać większą frakcją niż wcześniej. Kolejność jest sztywna: najpierw utnij ogon, dopiero potem masz prawo myśleć o większym locie. Odwrotnie to hazard.

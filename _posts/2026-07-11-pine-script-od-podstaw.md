@@ -32,10 +32,10 @@ Podstawową strukturą danych w Pine jest seria czasowa (series): ciąg wartośc
 Sięga się po nią operatorem historii, czyli nawiasem kwadratowym z indeksem. Indeks 0 to bar bieżący, a liczby dodatnie cofają w przeszłość.
 
 ```
-close       // zamkniecie bara biezacego (to samo co close[0])
-close[1]    // zamkniecie poprzedniego bara
-close[10]   // zamkniecie sprzed dziesieciu barow
-high[1] - low[1]   // zasieg poprzedniej swiecy
+close // zamkniecie bara biezacego (to samo co close[0])
+close[1] // zamkniecie poprzedniego bara
+close[10] // zamkniecie sprzed dziesieciu barow
+high[1] - low[1] // zasieg poprzedniej swiecy
 ```
 
 Ten sam operator działa na dowolnej serii, także na wyniku własnych obliczeń. Dzięki temu skrypt może porównywać stan bieżący ze stanem sprzed jednego bara, co jest fundamentem wykrywania przecięć, do którego wrócimy przy funkcji ta.crossover.
@@ -69,8 +69,8 @@ Zgodnie z dokumentacją Pine Script (TradingView) ta.crossover(a, b) jest prawdz
 
 ```
 sredniaSzybka = ta.sma(close, 20)
-sredniaWolna  = ta.ema(close, 50)
-wGore = ta.crossover(sredniaSzybka, sredniaWolna)   // prawda na barze przeciecia
+sredniaWolna = ta.ema(close, 50)
+wGore = ta.crossover(sredniaSzybka, sredniaWolna) // prawda na barze przeciecia
 ```
 
 Parametry oddaje się użytkownikowi przez funkcje z przestrzeni input. input.int() tworzy pole liczby całkowitej w oknie ustawień wskaźnika.
@@ -94,7 +94,7 @@ plotshape() nakłada znaczniki, na przykład trójkąty albo kółka, w miejscac
 
 ```
 plotshape(wGore, title = "Sygnal", style = shape.triangleup,
-     location = location.belowbar, color = color.green)
+ location = location.belowbar, color = color.green)
 ```
 
 Kolory podaje się przez wbudowane stałe z przestrzeni color, jak color.green czy color.red, albo buduje funkcją color.new(kolor, przezroczystosc). Jedna zasada z dokumentacji bywa zaskoczeniem: funkcje plot() i plotshape() wywołuje się w głównym zasięgu skryptu, a nie wewnątrz bloków warunkowych if. Widocznością znacznika steruje się wartością serii, na przykład podając na tam, gdzie nic nie ma się pojawić.
@@ -135,27 +135,27 @@ indicator(title = "Dwie srednie i znacznik przeciecia", shorttitle = "2 SMA edu"
 
 // Parametry wejsciowe (uzytkownik zmienia je w oknie ustawien).
 okresSzybki = input.int(defval = 20, title = "Okres sredniej szybkiej", minval = 1)
-okresWolny  = input.int(defval = 50, title = "Okres sredniej wolnej",  minval = 1)
+okresWolny = input.int(defval = 50, title = "Okres sredniej wolnej", minval = 1)
 
 // Obliczenia. Kazda z tych zmiennych to seria: jedna wartosc na bar.
 sredniaSzybka = ta.sma(close, okresSzybki)
-sredniaWolna  = ta.sma(close, okresWolny)
+sredniaWolna = ta.sma(close, okresWolny)
 
 // Wykrycie przeciecia. crossover korzysta wewnetrznie z operatora [1],
 // porownujac stan biezacy ze stanem poprzedniego bara.
 wGore = ta.crossover(sredniaSzybka, sredniaWolna)
-wDol  = ta.crossunder(sredniaSzybka, sredniaWolna)
+wDol = ta.crossunder(sredniaSzybka, sredniaWolna)
 
 // Rysowanie obu srednich na wykresie ceny (overlay = true).
-plot(sredniaSzybka, title = "SMA szybka", color = color.aqua,   linewidth = 2)
-plot(sredniaWolna,  title = "SMA wolna",  color = color.orange, linewidth = 2)
+plot(sredniaSzybka, title = "SMA szybka", color = color.aqua, linewidth = 2)
+plot(sredniaWolna, title = "SMA wolna", color = color.orange, linewidth = 2)
 
 // Znaczniki w miejscach przeciec. Ilustracja rysowania,
 // nie rekomendacja wejscia ani wyjscia z rynku.
 plotshape(wGore, title = "Przeciecie w gore", style = shape.triangleup,
-     location = location.belowbar, color = color.green, size = size.small)
+ location = location.belowbar, color = color.green, size = size.small)
 plotshape(wDol, title = "Przeciecie w dol", style = shape.triangledown,
-     location = location.abovebar, color = color.red, size = size.small)
+ location = location.abovebar, color = color.red, size = size.small)
 ```
 
 Warto prześledzić, jak przez ten skrypt przechodzi wszystko z wcześniejszych sekcji. input.int oddaje okresy użytkownikowi. ta.sma zwraca dwie serie, po jednej wartości na bar. ta.crossover i ta.crossunder porównują stan bieżący z poprzednim, więc pod spodem żyje operator [1]. plot kreśli linie na wykresie ceny, bo overlay jest ustawione na true, a plotshape stawia trójkąty tam, gdzie warunek jest prawdziwy. Żadna z tych funkcji nie ocenia rynku, one tylko liczą i rysują to, co wynika z danych.
