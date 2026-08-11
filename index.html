@@ -1,46 +1,91 @@
 ---
 layout: default
+title: "D-LOGIC Quant Research Lab"
+description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, audyty, falsyfikacje, wyniki negatywne i kolejne etapy rozwoju."
 ---
 {% assign edu = site.posts | where: "category", "edukacja" %}
-{% assign ana = site.posts | where: "category", "analizy" %}
-{% assign roz = site.posts | where: "category", "rozkminy" %}
-{% assign alg = site.posts | where: "category", "algo" %}
+{% assign chron = site.posts | where: "category", "algo" %}
 
-<section class="intro">
-  <p>Kompendium wiedzy o rynkach liczonych, nie zgadywanych. Jak naprawdę działają narzędzia quanta: walidacja strategii, zarządzanie ryzykiem, koszty egzekucji, mikrostruktura, reżimy i zmienność, a także matematyka i programowanie. Do tego bieżące analizy makro oraz rozkminy o tym, co na rynkach się powtarza. Prosto, na źródłach, bez obietnic.</p>
-  <p class="start">Od czego zacząć: <a href="{{ '/2026/07/09/dlaczego-twoj-sharpe-klamie-deflated-sharpe/' | relative_url }}">czemu Sharpe kłamie</a>, potem <a href="{{ '/2026/07/09/ile-powinienes-grac-kelly-i-sizing/' | relative_url }}">ile w ogóle grać</a>, a na koniec <a href="{{ '/2026/07/09/jak-rozpoznac-rezim-rynku/' | relative_url }}">jak rozpoznać reżim rynku</a>.</p>
+<section class="lab-hero">
+  <p class="lab-kicker">Independent Quant Research Lab</p>
+  <h1>Buduję system, który ma prawo powiedzieć: „nie wiem”.</h1>
+  <p class="lab-lead">D-LOGIC to publiczna kronika budowy adaptacyjnego systemu quant: od hipotezy, przez audyt i falsyfikację, do dowodu. Bez sygnałów, bez obietnic i bez przedstawiania architektury jako alfy.</p>
+  <div class="lab-actions">
+    <a class="lab-button" href="{{ '/chronicle/' | relative_url }}">Czytaj D-LOGIC Chronicle</a>
+    <a class="lab-button secondary" href="{{ '/status/' | relative_url }}">Sprawdź aktualny stan</a>
+  </div>
 </section>
 
-<div class="hero-stats">
-  <span><b>{{ edu | size }}</b> działów edukacji</span>
-  <span><b>12</b> ścieżek nauki</span>
-  <span><b>32</b> pojęcia w słowniku</span>
-  <span><b>na źródłach</b> bez obietnic</span>
+<div class="lab-status" aria-label="Publiczny status projektu">
+  <div class="status-card"><small>Program badawczy</small><b class="ok">ACTIVE</b></div>
+  <div class="status-card"><small>Fundament danych</small><b class="warn">IN DEVELOPMENT</b></div>
+  <div class="status-card"><small>Model edge</small><b class="lock">UNPROVEN</b></div>
+  <div class="status-card"><small>LIVE</small><b class="lock">NOT AUTHORIZED</b></div>
 </div>
 
-<div class="entries">
-  <a class="entry" href="{{ '/edukacja/' | relative_url }}">
-    <span class="entry-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5c3-1 6-1 9 0v14c-3-1-6-1-9 0z"/><path d="M21 5c-3-1-6-1-9 0v14c3-1 6-1 9 0z"/></svg></span>
-    <span class="entry-b"><b>Edukacja</b><span>Dwanaście ścieżek nauki, od mechaniki rynku po programowanie. {{ edu | size }} działów z diagramami.</span></span>
+<div class="lab-grid">
+  <a class="lab-card" href="{{ '/chronicle/' | relative_url }}">
+    <span class="num">01 / CHRONICLE</span>
+    <h2>Budowa bez mitu założycielskiego</h2>
+    <p>Decyzje, błędy, pivoty, audyty i milestone’y. Zapis tego, co powstało, co zostało odrzucone i czego nadal nie wiadomo.</p>
+    <span class="go">Otwórz kronikę →</span>
   </a>
-  <a class="entry" href="{{ '/narzedzia/' | relative_url }}">
-    <span class="entry-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 7h6"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 15h.01M12 15h.01M15.5 15h.01"/></svg></span>
-    <span class="entry-b"><b>Narzędzia</b><span>Interaktywne kalkulatory: procent składany, Kelly, Sharpe i inne. Liczą w przeglądarce.</span></span>
+  <a class="lab-card" href="{{ '/research/' | relative_url }}">
+    <span class="num">02 / RESEARCH</span>
+    <h2>Hipotezy przed wynikami</h2>
+    <p>Leakage-safe research, koszty, baseline’y, holdout governance, mikrostruktura i pytania, które mają prawo zakończyć się wynikiem FAIL.</p>
+    <span class="go">Zobacz program badawczy →</span>
   </a>
-  <a class="entry" href="{{ '/slownik/' | relative_url }}">
-    <span class="entry-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
-    <span class="entry-b"><b>Słownik</b><span>32 pojęcia z krótkimi definicjami i linkami do pełnych działów.</span></span>
+  <a class="lab-card" href="{{ '/edukacja/' | relative_url }}">
+    <span class="num">03 / KNOWLEDGE BASE</span>
+    <h2>Wiedza stojąca za systemem</h2>
+    <p>{{ edu | size }} materiałów o statystyce, mikrostrukturze, ryzyku, makro, matematyce i programowaniu — po polsku i na źródłach.</p>
+    <span class="go">Wejdź do bazy wiedzy →</span>
   </a>
-  <a class="entry" href="{{ '/analizy/' | relative_url }}">
-    <span class="entry-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16"/><path d="M7 15l4-5 3 3 5-7"/></svg></span>
-    <span class="entry-b"><b>Analizy</b><span>Bieżący rynek liczbowo. Siła walut, reżim makro, zmienność. {{ ana | size }} wpisów.</span></span>
+  <a class="lab-card" href="{{ '/status/' | relative_url }}">
+    <span class="num">04 / TRUTH MAP</span>
+    <h2>Co jest faktem, a co nadal ambicją</h2>
+    <p>Publiczna granica twierdzeń: komponenty istniejące, etapy niepotwierdzone, aktualny blocker oraz następny gate.</p>
+    <span class="go">Przejdź do statusu →</span>
   </a>
-  <a class="entry" href="{{ '/rozkminy/' | relative_url }}">
-    <span class="entry-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg></span>
-    <span class="entry-b"><b>Rozkminy</b><span>Eseje na danych. Psychologia, cykle długu, wzorce, które wracają. {{ roz | size }} wpisów.</span></span>
-  </a>
-  <a class="entry" href="{{ '/moje-algo/' | relative_url }}">
-    <span class="entry-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M13 15h4"/></svg></span>
-    <span class="entry-b"><b>Moje Algo</b><span>Jawny dziennik własnych botów. Dowodem jest forward, nie ładny backtest.</span></span>
-  </a>
+</div>
+
+<div class="lab-note"><strong>Aktualny frontier:</strong> zdefiniowanie wiarygodnego zbioru danych, informacji dostępnej dokładnie w chwili decyzji oraz targetów, które mają znaczenie po kosztach. Złożoność modelu przychodzi później.</div>
+
+<div class="section-head">
+  <h2>Najnowsze w Chronicle</h2>
+  <a href="{{ '/chronicle/' | relative_url }}">Wszystkie wpisy →</a>
+</div>
+<ul class="posts">
+{% for post in chron limit:4 %}
+  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+{% endfor %}
+{% if chron.size == 0 %}
+  <li><span class="ds">Pierwszy artykuł Chronicle jest przygotowywany do publikacji w tej wersji strony.</span></li>
+{% endif %}
+</ul>
+
+<div class="section-head">
+  <h2>Zasady laboratorium</h2>
+  <a href="{{ '/public-claims/' | relative_url }}">Pełna polityka →</a>
+</div>
+<div class="truth-grid">
+  <section class="truth-panel confirmed">
+    <h2>Publikuję</h2>
+    <ul>
+      <li>problemy badawcze i mechanizmy,</li>
+      <li>kryteria falsyfikacji,</li>
+      <li>wyniki negatywne i zmiany zdania,</li>
+      <li>status gate’ów oraz ograniczenia.</li>
+    </ul>
+  </section>
+  <section class="truth-panel unproven">
+    <h2>Nie publikuję</h2>
+    <ul>
+      <li>danych rachunku i kapitału,</li>
+      <li>pełnych feature sets i targetów,</li>
+      <li>progów, wag oraz reguł egzekucji,</li>
+      <li>szczegółów umożliwiających skopiowanie systemu.</li>
+    </ul>
+  </section>
 </div>

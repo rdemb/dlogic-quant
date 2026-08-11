@@ -1,6 +1,6 @@
-title: D-LOGIC Quant
+title: D-LOGIC Quant Research Lab
 description: >-
-  Kompendium wiedzy quant po polsku. Jak naprawde dzialaja rynki: walidacja strategii, ryzyko, mikrostruktura, koszty, makro, strategie, matematyka i programowanie. Na zrodlach, bez obietnic. Observe-only.
+  Publiczna kronika budowy adaptacyjnego systemu quant, program badawczy i polska baza wiedzy o rynkach. Hipotezy, audyty, falsyfikacje, koszty, mikrostruktura i ryzyko. Bez sygnałów i bez obietnic.
 author: D-LOGIC Quant
 lang: pl
 url: "https://rdemb.github.io"
@@ -11,7 +11,7 @@ twitter:
   username: takitamrafal
   card: summary_large_image
 social:
-  name: D-LOGIC Quant
+  name: D-LOGIC Quant Research Lab
   links:
     - https://x.com/takitamrafal
 logo: /assets/og.png

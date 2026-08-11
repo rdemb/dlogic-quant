@@ -1,16 +1,18 @@
 ---
 layout: default
-title: "Moje Algo"
+title: "Moje Algo — D-LOGIC Chronicle"
+description: "Archiwalny adres publicznego dziennika budowy systemu. Aktualna seria działa jako D-LOGIC Chronicle."
 permalink: /moje-algo/
 ---
-<section class="cat">
-  <h2 class="cat-h">Moje Algo</h2>
-  <p class="cat-desc">Jawny dziennik budowy własnych systemów algorytmicznych. Proces, decyzje i błędy, nie sygnały. Bez obietnic wyniku, bez parametrów do skopiowania.</p>
-  <ul class="posts">
-  {% assign alg = site.posts | where: "category", "algo" %}
-  {% for post in alg %}
-    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
-  {% endfor %}
-  </ul>
-</section>
+{% assign alg = site.posts | where: "category", "algo" %}
+<p class="lab-kicker">Legacy route</p>
+<h1>Moje Algo stało się D-LOGIC Chronicle</h1>
+<p class="dek">Zakres pozostał ten sam — proces, decyzje, błędy i dowody zamiast sygnałów — ale seria otrzymała własną strukturę, standard twierdzeń i publiczny status projektu.</p>
+<p><a class="lab-button" href="{{ '/chronicle/' | relative_url }}">Przejdź do Chronicle</a></p>
+
+<h2>Wpisy</h2>
+<ul class="posts">
+{% for post in alg %}
+  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+{% endfor %}
+</ul>

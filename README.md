@@ -1,15 +1,26 @@
-# D-LOGIC Quant
+# D-LOGIC Quant Research Lab
 
-Codzienny, liczbowy obraz rynku FX i makro. Bez opinii: siła walut (z-score), reżim makroekonomiczny, zmienność. Każdy raport liczony z publicznych danych.
+Publiczna kronika budowy adaptacyjnego systemu quant, program badawczy i polska baza wiedzy o rynkach.
 
 Strona: https://rdemb.github.io/dlogic-quant/
 
-## Zasady
-- Analiza, nie porada inwestycyjna.
-- OBSERVE_ONLY — bez sygnałów wejścia, bez kont, bez egzekucji.
-- Dane publiczne i własne metryki ilościowe.
+## Główne obszary
 
-## Jak to działa
-Statyczny blog (Jekyll na GitHub Pages). Każdy wpis to plik `_posts/RRRR-MM-DD-tytul.md`; po wgraniu strona przebudowuje się sama — SEO, sitemap i RSS generują się automatycznie.
+- **D-LOGIC Chronicle** — decyzje, audyty, pivoty, wyniki negatywne i milestone’y.
+- **Research** — jakość danych, leakage, koszty, baseline’y, holdout governance i falsyfikacja.
+- **Knowledge Base** — statystyka, mikrostruktura, ryzyko, makro, matematyka i programowanie.
+- **Public Truth Map** — co jest potwierdzone, co pozostaje hipotezą i jaki jest następny gate.
+
+## Zasady
+
+- Analiza i research, nie porada inwestycyjna.
+- Brak sygnałów i gwarantowanych wyników.
+- Architektura nie jest przedstawiana jako dowód alfy.
+- LIVE pozostaje nieautoryzowane bez pełnej ścieżki dowodowej.
+- Publikowane są problemy, metodologia, wyniki i ograniczenia — nie pełna prywatna implementacja.
+
+## Technologia strony
+
+Statyczna witryna Jekyll na GitHub Pages. Wpisy znajdują się w `_posts/`; SEO, sitemap i RSS generują się automatycznie.
 
 — [@takitamrafal](https://x.com/takitamrafal)
