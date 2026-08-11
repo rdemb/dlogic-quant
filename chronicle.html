@@ -1,0 +1,36 @@
+---
+layout: default
+title: "D-LOGIC Chronicle"
+description: "Publiczna kronika budowy adaptacyjnego systemu quant: decyzje, audyty, falsyfikacje, wyniki negatywne i kolejne etapy rozwoju."
+permalink: /chronicle/
+---
+{% assign chron = site.posts | where: "category", "algo" %}
+
+<p class="lab-kicker">D-LOGIC Chronicle</p>
+<h1>Budowa systemu bez przepisywania historii po fakcie</h1>
+<p class="dek">Kronika dokumentuje to, co rzeczywiście powstało, jakie założenia zostały odrzucone, gdzie audyt zatrzymał projekt oraz czego nadal nie wolno nazywać przewagą.</p>
+
+<div class="lab-note"><strong>Zasada serii:</strong> architektura nie jest alfą, test offline nie jest runtime’em, OOS nie jest forwardem, a piękny backtest nie jest dowodem, dopóki nie przetrwa kosztów, leakage, multiple testing i niezależnej walidacji.</div>
+
+<div class="article-status">
+  <span class="primary">BUILD IN PUBLIC</span>
+  <span>NO SIGNALS</span>
+  <span>NO GUARANTEES</span>
+  <span>IP BOUNDARY</span>
+</div>
+
+<ul class="posts">
+{% for post in chron %}
+  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+{% endfor %}
+{% if chron.size == 0 %}
+  <li><span class="ds">Pierwsze wpisy Chronicle pojawią się po wdrożeniu odświeżonej wersji strony.</span></li>
+{% endif %}
+</ul>
+
+<section class="ip-boundary">
+  <h2>Granica ujawnienia</h2>
+  <p>Publikuję problemy, metodologię, kryteria dowodowe, wyniki i ograniczenia. Nie publikuję pełnych feature sets, targetów, parametrów, wag, progów, danych rachunku, prywatnej topologii infrastruktury ani reguł egzekucji pozwalających bezpośrednio odtworzyć system.</p>
+</section>
+
+<p class="start">Starszy adres <a href="{{ '/moje-algo/' | relative_url }}">Moje Algo</a> pozostaje dostępny dla kompatybilności i prowadzi do tego samego publicznego dziennika.</p>
