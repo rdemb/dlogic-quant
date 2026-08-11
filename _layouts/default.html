@@ -18,7 +18,8 @@
   <span class="tag">Research Lab · evidence before claims</span>
   <nav class="nav" id="site-nav">
     <a href="{{ '/chronicle/' | relative_url }}"{% if page.url == '/chronicle/' or page.category == 'algo' %} class="on"{% endif %}>Chronicle</a>
-    <a href="{{ '/research/' | relative_url }}"{% if page.url == '/research/' %} class="on"{% endif %}>Research</a>
+    <a href="{{ '/research/' | relative_url }}"{% if page.url == '/research/' or page.category == 'research' %} class="on"{% endif %}>Research</a>
+    <a href="{{ '/luzne-tematy/' | relative_url }}"{% if page.url == '/luzne-tematy/' or page.category == 'luzne' %} class="on"{% endif %}>Luźne</a>
     <a href="{{ '/edukacja/' | relative_url }}"{% if page.url == '/edukacja/' %} class="on"{% endif %}>Wiedza</a>
     <a href="{{ '/narzedzia/' | relative_url }}"{% if page.url == '/narzedzia/' %} class="on"{% endif %}>Narzędzia</a>
     <a href="{{ '/status/' | relative_url }}"{% if page.url == '/status/' %} class="on"{% endif %}>Stan projektu</a>
@@ -46,7 +47,7 @@
 </script>
 <footer class="site">
   <p>D-LOGIC Quant Research Lab. Publiczna kronika budowy systemu quant, baza wiedzy i wyniki badań. Analiza, nie porada inwestycyjna.</p>
-  <p><a href="{{ '/chronicle/' | relative_url }}">Chronicle</a> · <a href="{{ '/research/' | relative_url }}">Research</a> · <a href="{{ '/status/' | relative_url }}">Stan projektu</a> · <a href="{{ '/public-claims/' | relative_url }}">Zasady twierdzeń</a> · <a href="{{ '/edukacja/' | relative_url }}">Baza wiedzy</a> · <a href="https://github.com/rdemb/dlogic-quant" rel="noopener">GitHub</a> · <a href="https://x.com/takitamrafal" rel="me">@takitamrafal</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+  <p><a href="{{ '/chronicle/' | relative_url }}">Chronicle</a> · <a href="{{ '/research/' | relative_url }}">Research</a> · <a href="{{ '/luzne-tematy/' | relative_url }}">Luźne tematy</a> · <a href="{{ '/status/' | relative_url }}">Stan projektu</a> · <a href="{{ '/public-claims/' | relative_url }}">Zasady twierdzeń</a> · <a href="{{ '/edukacja/' | relative_url }}">Baza wiedzy</a> · <a href="https://github.com/rdemb/dlogic-quant" rel="noopener">GitHub</a> · <a href="https://x.com/takitamrafal" rel="me">@takitamrafal</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
   <p class="foot-upd">Ostatnia aktualizacja: {{ site.time | date: "%-d.%m.%Y" }}</p>
 </footer>
 </body>
