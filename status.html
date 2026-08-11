@@ -10,8 +10,8 @@ permalink: /status/
 
 <div class="lab-status">
   <div class="status-card"><small>Research program</small><b class="ok">ACTIVE</b></div>
-  <div class="status-card"><small>Data foundation</small><b class="warn">IN DEVELOPMENT</b></div>
-  <div class="status-card"><small>Independent model edge</small><b class="lock">UNPROVEN</b></div>
+  <div class="status-card"><small>Probe lifecycle</small><b class="warn">COMPILED</b></div>
+  <div class="status-card"><small>Loadability</small><b class="warn">UNKNOWN</b></div>
   <div class="status-card"><small>LIVE trading</small><b class="lock">NOT AUTHORIZED</b></div>
 </div>
 
@@ -21,28 +21,45 @@ permalink: /status/
     <ul>
       <li>istnieje wieloetapowa kronika rozwoju systemu,</li>
       <li>projekt posiada audyty, testy, receipts i rejestr wyników negatywnych,</li>
+      <li>Probe v2 osiągnął stan COMPILED,</li>
+      <li>nieudany eksperyment poprawnie zatrzymał się przed Wine i kontaktem z rachunkiem,</li>
       <li>warstwy badawcza, stanu rynku oraz wykonawcza są rozdzielane,</li>
-      <li>kolejne komponenty przechodzą przez jawnie nazwane gate’y,</li>
       <li>system dopuszcza ABSTAIN, UNKNOWN, FAIL i INCONCLUSIVE.</li>
     </ul>
   </section>
   <section class="truth-panel unproven">
     <h2>Niepotwierdzone</h2>
     <ul>
+      <li>loadability przypiętego artefaktu w docelowym runtime,</li>
+      <li>walidacja świeżych danych brokerskich,</li>
       <li>cost-adjusted independent OOS edge,</li>
       <li>wystarczający forward edge,</li>
       <li>gotowość pełnego łańcucha wykonawczego,</li>
-      <li>stabilność przewagi między reżimami,</li>
       <li>prawo do uruchomienia LIVE.</li>
     </ul>
   </section>
 </div>
 
-<h2>Aktualny frontier</h2>
-<p>Najbliższy etap koncentruje się na zamrożeniu wiarygodnego podłoża badawczego: dokładnego pochodzenia danych, semantyki timestampów, informacji dostępnej przed decyzją, kosztów wykonania, prostych baseline’ów oraz budżetu liczby hipotez.</p>
+<h2>Dwa równoległe fronty</h2>
+<div class="lab-grid">
+  <div class="lab-card">
+    <span class="num">EVIDENCE PLANE</span>
+    <h2>Od kompilacji do obserwowalnego runtime’u</h2>
+    <p>Obecny artefakt jest skompilowany, ale loadability nadal pozostaje nieznana. Statyczne pakiety i kontrakty są utwardzane bez instalacji, autoryzacji działania, kontaktu z terminalem ani brokerem.</p>
+  </div>
+  <div class="lab-card">
+    <span class="num">ALPHA RESEARCH PLANE</span>
+    <h2>Od danych do pierwszej prerejestracji</h2>
+    <p>Projektowany pakiet A01 ma zamrozić pochodzenie i jakość danych, informację dostępną przed decyzją, cost-aware target, baseline’y, podział próby i budżet testów. Status: design / untested.</p>
+  </div>
+</div>
+
+<h2>Aktualna granica twierdzeń</h2>
+<p>Infrastruktura może przejść tysiące testów i nadal nie stanowić dowodu alfy. Z drugiej strony, wynik modelowy nie będzie miał znaczenia, jeżeli jego dane, czas, target albo koszt wykonania pozostaną nierozstrzygnięte. Obie ścieżki rozwijają się niezależnie i żadna nie może zastąpić drugiej.</p>
 
 <h2>Co musi wydarzyć się dalej</h2>
 <ol class="stage-list">
+  <li><b>Runtime loadability evidence</b><span>Dokładny artefakt musi zostać zaobserwowany w dokładnie zdefiniowanym, izolowanym środowisku, zanim otrzyma status LOADABLE.</span></li>
   <li><b>Data and timestamp trust</b><span>Dokładny podzbiór danych musi przejść krytyczne gate’y jakości i dostępności w czasie.</span></li>
   <li><b>Preregistration</b><span>Hipoteza, target, koszty, baseline’y i warunki falsyfikacji zostają zamrożone przed wynikiem.</span></li>
   <li><b>Independent validation</b><span>Model musi wykazać wartość względem prostych alternatyw poza procesem dopasowania.</span></li>
@@ -50,4 +67,4 @@ permalink: /status/
   <li><b>Execution and risk gates</b><span>Przewaga predykcyjna musi przetrwać koszty, ograniczenia brokera, recovery i kontrolę ryzyka.</span></li>
 </ol>
 
-<div class="lab-archive">Status jest aktualizowany wyłącznie po zweryfikowanych milestone’ach. Brak aktualizacji nie oznacza automatycznie braku prac; oznacza brak nowego publicznego twierdzenia, które przeszło claim check.</div>
+<div class="lab-archive">Status jest aktualizowany wyłącznie po zweryfikowanych milestone’ach. Projekty kolejnych pakietów są opisywane jako DESIGN albo UNTESTED i nie są automatycznie uznawane za ukończone funkcje systemu.</div>
