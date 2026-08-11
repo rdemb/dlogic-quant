@@ -12,7 +12,7 @@ section_url: /luzne-tematy/
 section_label: Luźne tematy
 cover_brand: "MITOLOGIA · TECHNOLOGIA · ARCHEOLOGIA"
 cover_title: "BOGOWIE Z BRĄZU"
-cover_subtitle: "MIT -> AUTOMAT -> MODEL -> ZNACZENIE"
+cover_subtitle: "MIT / AUTOMAT / MODEL / ZNACZENIE"
 cover_kind: loose
 ---
 <div class="article-status"><span class="primary">ESEJ ŹRÓDŁOWY</span><span>MITOLOGIA</span><span>HISTORIA TECHNIKI</span><span>HIPOTEZA: PRÓG ZNACZENIA</span></div>
