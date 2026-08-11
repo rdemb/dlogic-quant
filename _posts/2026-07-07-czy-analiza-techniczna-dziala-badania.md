@@ -90,6 +90,6 @@ Dla tradera detalicznego jest jeszcze jedna warstwa, zwykle pomijana: detal pła
 
 Uczciwość wymaga dopisania także drugiej strony. Literatura testuje reguły proste, mechaniczne i publicznie znane, bo tylko takie da się testować masowo, więc nie rozstrzyga o każdym możliwym użyciu wykresu. Przegląd Menkhoffa i Taylora pokazuje zresztą, że zawodowcy traktują AT jako uzupełnienie i język opisu rynku na krótkich horyzontach, nie jako samodzielną maszynkę do sygnałów. Między „AT jako kontekst" a „AT jako system, który sam zarabia" biegnie granica, którą literatura rysuje konsekwentnie od trzydziestu lat. Po pierwszej stronie jest narzędzie, którego używają prawie wszyscy. Po drugiej jest obietnica, której w danych po kosztach prawie nie widać.
 
-To nie jest porada inwestycyjna. To przegląd recenzowanej literatury z liczbami z prac źródłowych, po to, żeby ocena dowolnej reguły technicznej zaczynała się od pytań o koszty i o liczbę prób, a nie od koloru świeczek na cudzym zrzucie ekranu.
+Nie jest to porada inwestycyjna. To przegląd recenzowanej literatury z liczbami z prac źródłowych, po to, żeby ocena dowolnej reguły technicznej zaczynała się od pytań o koszty i o liczbę prób, a nie od koloru świeczek na cudzym zrzucie ekranu.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

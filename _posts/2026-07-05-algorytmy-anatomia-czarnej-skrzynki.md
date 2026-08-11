@@ -108,6 +108,6 @@ Mapa klas pokazuje jednak, gdzie przewaga detalisty w ogóle może istnieć, je�
 
 Trzeźwa rama na koniec: automatyzacja nie tworzy przewagi, tylko ją egzekwuje. Reguła bez źródła zarobku po zautomatyzowaniu jest tą samą regułą bez źródła zarobku, wykonywaną szybciej, taniej i bardziej konsekwentnie, również w traceniu. Dlatego pytanie "jaki program do algotradingu" jest zawsze wtórne wobec pytania "skąd ta reguła bierze pieniądze i dlaczego nikt ich jeszcze nie zabrał".
 
-To nie jest porada inwestycyjna. To mapa mechanizmów: co siedzi w czarnej skrzynce, z czego żyją poszczególne klasy strategii, dlaczego szybkość stała się osobnym przemysłem i co się dzieje, gdy elektroniczna płynność znika, żeby słowo algorytm przestało być zaklęciem, a stało się listą sprawdzalnych pytań.
+Nie jest to porada inwestycyjna. To mapa mechanizmów: co siedzi w czarnej skrzynce, z czego żyją poszczególne klasy strategii, dlaczego szybkość stała się osobnym przemysłem i co się dzieje, gdy elektroniczna płynność znika, żeby słowo algorytm przestało być zaklęciem, a stało się listą sprawdzalnych pytań.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

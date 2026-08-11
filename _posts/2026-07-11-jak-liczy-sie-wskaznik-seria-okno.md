@@ -91,7 +91,7 @@ indeksacja jako seria (MQL5 z ArraySetAsSeries):
   poprzedni bar wzgledem i:  indeks i+1  (wyzszy)
 ```
 
-To nie jest kosmetyka. Rekurencja EMA napisana jako ema[i] = alfa*cena[i] + (1-alfa)*ema[i-1] jest poprawna w indeksacji chronologicznej, ale w indeksacji jako seria sięga po ema[i-1], czyli po bar nowszy, a więc po przyszłość. To jest look-ahead wprowadzony przez sam kierunek indeksu. Przy takiej tablicy poprawny odnośnik do przeszłości to i+1. Przenoszenie wzoru między platformami bez sprawdzenia kierunku czasu to jeden z częstszych cichych błędów.
+Nie jest to kosmetyka. Rekurencja EMA napisana jako ema[i] = alfa*cena[i] + (1-alfa)*ema[i-1] jest poprawna w indeksacji chronologicznej, ale w indeksacji jako seria sięga po ema[i-1], czyli po bar nowszy, a więc po przyszłość. To jest look-ahead wprowadzony przez sam kierunek indeksu. Przy takiej tablicy poprawny odnośnik do przeszłości to i+1. Przenoszenie wzoru między platformami bez sprawdzenia kierunku czasu to jeden z częstszych cichych błędów.
 
 ## Wektorowo kontra iteracyjnie
 

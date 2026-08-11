@@ -34,13 +34,13 @@ Przykład ilustracyjny (stopy roczne, umowne):
     F = 1.1000 · 1.05 / 1.03 = 1.1214
 
 Dwie drogi na rok, ten sam wynik dla 1 jedn. krajowej:
-    A) lokata krajowa:                      1 → 1.0500
+    A) lokata krajowa:                      1 -> 1.0500
     B) wymiana na zagr. + lokata + forward:
        1 / 1.1000        = 0.9091 zagr.
        0.9091 · 1.03     = 0.9364 zagr.
        0.9364 · 1.1214   = 1.0500 krajowej
 
-Wyższa stopa krajowa (5 > 3) → waluta krajowa na
+Wyższa stopa krajowa (5 > 3) -> waluta krajowa na
 terminowym DYSKONCIE, które kasuje przewagę odsetkową.
 ```
 
@@ -61,7 +61,7 @@ Forma logarytmiczna (przybliżenie dla małych stóp):
     E[Δs] ≈ i_kraj − i_zagr
     oczekiwana zmiana kursu ≈ różnica stóp
 
-CIP + UIP razem  →  F = E[S_{t+1}]
+CIP + UIP razem  ->  F = E[S_{t+1}]
 forward jako nieobciążony prognostyk przyszłego spotu
 ```
 
@@ -80,7 +80,7 @@ Test UIP, regresja Famy (1984)
     UIP przewiduje:                  β = 1
     Fama (1984) i późniejsze prace:  β < 1,  często β < 0
 
-β < 0  →  waluta o wyższej stopie przeciętnie się UMACNIAŁA,
+β < 0  ->  waluta o wyższej stopie przeciętnie się UMACNIAŁA,
           zamiast osłabiać zgodnie z hipotezą.
 ```
 
@@ -92,9 +92,9 @@ Ta sama liczba, ujemne nachylenie, jest ekonomicznym fundamentem carry trade. Sk
 
 Dodatni średni wynik nie oznacza, że rynek zostawia pieniądze na stole. Dominujące wyjaśnienie głosi, że to zapłata za ryzyko, którego nie widać w spokojnych czasach. Lustig i Verdelhan w pracy z 2007 roku posortowali waluty w portfele według stopy i pokazali, że zwroty portfeli wysokodochodowych są powiązane z ryzykiem wzrostu konsumpcji w Stanach Zjednoczonych: te waluty tracą właśnie wtedy, gdy gospodarka zwalnia, a konsumpcja się kurczy, czyli w najgorszym możliwym momencie. Premia carry jest w tym ujęciu wynagrodzeniem za to, że aktywo wypłaca marnie w złych stanach świata.
 
-Kształt rozkładu dopowiada resztę. Brunnermeier, Nagel i Pedersen w pracy z 2008 roku pokazali, że zwroty z carry są silnie lewoskośne. Strategia zbiera drobne, regularne zyski przez długie okresy spokoju, a potem gwałtownie je oddaje w krachu, gdy zanik płynności finansującej wymusza jednoczesne zamykanie pozycji i waluty wysokodochodowe zapadają się skokowo. W obrazowym skrócie z tej literatury carry wchodzi po schodach, a spada windą. Dodatnia średnia jest więc ceną za ogon rozkładu: rzadki, lecz dotkliwy.
+Kształt rozkładu dopowiada resztę. Brunnermeier, Nagel i Pedersen w pracy z 2008 roku pokazali, że zwroty z carry są silnie lewoskośne. Strategia zbiera drobne, regularne zyski przez długie okresy spokoju, a potem gwałtownie je oddaje w krachu, gdy zanik płynności finansującej wymusza jednoczesne zamykanie pozycji i waluty wysokodochodowe zapadają się skokowo. W obrazowym skrócie z tej literatury carry wchodzi po schodach, a spada windą. Dodatnia średnia jest więc ceną za ogon rozkładu: rzadki, ale dotkliwy.
 
-Stąd twarda granica tego tekstu. Opis anomalii to opis mechanizmu, nie zachęta do jego wykorzystania. Zagadka forward premium tłumaczy, dlaczego carry w ogóle istnieje, lecz nie zdejmuje z niego ryzyka krachu, które jest jego drugą stroną. Wielkość pozycji, moment wejścia i zarządzanie ryzykiem ogona to osobny temat, a sama znajomość anomalii niczego nie gwarantuje.
+Stąd twarda granica tego tekstu. Opis anomalii to opis mechanizmu, nie zachęta do jego wykorzystania. Zagadka forward premium tłumaczy, dlaczego carry w ogóle istnieje, ale nie zdejmuje z niego ryzyka krachu, które jest jego drugą stroną. Wielkość pozycji, moment wejścia i zarządzanie ryzykiem ogona to osobny temat, a sama znajomość anomalii niczego nie gwarantuje.
 
 ## Po 2008: pęka nawet pokryty parytet
 

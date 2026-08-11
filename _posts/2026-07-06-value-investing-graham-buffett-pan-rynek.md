@@ -73,6 +73,6 @@ Kolejność lektur układa się sama. Najpierw Inteligentny inwestor w wydaniu z
 
 Praktyczna nauka z całej tej tradycji mieści się w jednym rozróżnieniu: cena to liczba wołana przez kogoś w konkretnym nastroju, wartość to liczba, którą trzeba oszacować samodzielnie, z góry zakładając własną omylność. Value investing jest ramą myślenia o tej różnicy i o własnych błędach, nie mechanicznym przepisem na zysk.
 
-To nie jest porada inwestycyjna. To edukacyjne omówienie klasycznej filozofii inwestycyjnej na podstawie książek Grahama i Dodda oraz listów Buffetta, z uczciwym opisem jej ograniczeń.
+Nie jest to porada inwestycyjna. To edukacyjne omówienie klasycznej filozofii inwestycyjnej na podstawie książek Grahama i Dodda oraz listów Buffetta, z uczciwym opisem jej ograniczeń.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

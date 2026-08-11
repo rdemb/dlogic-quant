@@ -52,16 +52,16 @@ Budowa strategii to właśnie łańcuch takich wyborów: który wskaźnik, jaki 
 Wzrost jest wykładniczy, a intuicja liniowa. Nikt nie planuje testować stu tysięcy strategii; ta liczba powstaje sama, jako iloczyn kilku list, z których każda z osobna wydaje się krótka.
 
 ```
-b progów na parametr, d łączonych parametrów  →  b^d konfiguracji
+b progów na parametr, d łączonych parametrów  ->  b^d konfiguracji
 
 b = 4:
-  d = 1  →       4
-  d = 2  →      16
-  d = 3  →      64
-  d = 4  →     256
-  d = 5  →   1 024
-  d = 6  →   4 096
-  d = 7  →  16 384
+  d = 1  ->       4
+  d = 2  ->      16
+  d = 3  ->      64
+  d = 4  ->     256
+  d = 5  ->   1 024
+  d = 6  ->   4 096
+  d = 7  ->  16 384
 
 dorzuć 2 kierunki i 3 interwały:  16 384 · 2 · 3 ≈ 98 000
 ```
@@ -75,10 +75,10 @@ oczekiwane fałszywe odkrycia, gdy żaden wariant nie działa:
 E[fałszywe] = α · N
 
 α = 5%:
-  N =    100   →     5
-  N =  1 024   →   ~51
-  N = 16 384   →  ~819
-  N = 98 000   → ~4 900
+  N =    100   ->     5
+  N =  1 024   ->   ~51
+  N = 16 384   ->  ~819
+  N = 98 000   -> ~4 900
 
 pojedynczy test bez korekty: raz na 20 prób „istotny"
 ```
@@ -95,9 +95,9 @@ P(brak wspólnej daty wśród g osób) =
     365/365 · 364/365 · ... · (365 − g + 1)/365
 P(co najmniej jedna wspólna data) = 1 − powyższe
 
-g = 23   →  ~50,7 %      (wystarczą 23 osoby)
-g = 41   →  ~90,3 %
-g = 57   →  ~99,0 %
+g = 23   ->  ~50,7 %      (wystarczą 23 osoby)
+g = 41   ->  ~90,3 %
+g = 57   ->  ~99,0 %
 
 liczba par:  C(g,2) = g · (g − 1) / 2
 C(23,2) = 253 pary możliwych zbieżności
@@ -116,7 +116,7 @@ Druga rodzina korekt odpuszcza perfekcję. Kontrola FDR, zaproponowana przez Ben
 ```
 BONFERRONI   (kontrola FWER)
 każdy z N testów na poziomie α / N
-N = 1 000, α = 5%  →  próg jednego testu = 0,005 %
+N = 1 000, α = 5%  ->  próg jednego testu = 0,005 %
 
 PRÓBY EFEKTYWNE
 testy skorelowane liczą się prawie jak jeden:  N_eff < N
@@ -126,7 +126,7 @@ kontroluj odsetek fałszywych wśród ogłoszonych odkryć ≤ q
 posortuj p rosnąco; przyjmij do największego k: p(k) ≤ (k/N) · q
 ```
 
-Że to nie jest problem czysto teoretyczny, pokazuje literatura o faktorach giełdowych. Harvey, Liu i Zhu (2016) zauważyli, że przez dekady setki badaczy przeszukiwały w dużej mierze te same dane, więc klasyczny próg t około 2, odpowiednik istotności 5% dla jednego testu, jest za niski. Po uwzględnieniu skali zbiorowego przeszukiwania nowy faktor powinien przekraczać t równe 3, a około połowy faktorów ogłoszonych w literaturze jest prawdopodobnie fałszywa. To rachunek na poziomie całej profesji, nie zarzut wobec pojedynczych autorów.
+Że nie jest to problem czysto teoretyczny, pokazuje literatura o faktorach giełdowych. Harvey, Liu i Zhu (2016) zauważyli, że przez dekady setki badaczy przeszukiwały w dużej mierze te same dane, więc klasyczny próg t około 2, odpowiednik istotności 5% dla jednego testu, jest za niski. Po uwzględnieniu skali zbiorowego przeszukiwania nowy faktor powinien przekraczać t równe 3, a około połowy faktorów ogłoszonych w literaturze jest prawdopodobnie fałszywa. To rachunek na poziomie całej profesji, nie zarzut wobec pojedynczych autorów.
 
 ## Mianownik, bez którego wynik nic nie znaczy
 

@@ -21,10 +21,10 @@ category: edukacja
 
 ## Zmienna losowa, rozkład, gęstość
 
-Cała matematyka rynku zaczyna się od jednego pojęcia: zmiennej losowej. To reguła, która wynikowi losowego zdarzenia przypisuje liczbę, na przykład jutrzejszej sesji wartość procentowej zmiany kursu. Rozkład tej zmiennej to pełen opis tego, jak prawdopodobne są poszczególne wartości. Dla wielkości skokowej wystarczy lista prawdopodobieństw, dla wielkości ciągłej, a taką jest zwrot, potrzebna jest gęstość. Gęstość nie podaje prawdopodobieństwa pojedynczej wartości (ono jest zerowe), lecz gęstość szansy wokół niej. Praktyczny sens ma dopiero pole pod krzywą: prawdopodobieństwo, że zwrot wpadnie w dany przedział, to pole pod gęstością nad tym przedziałem, a pole pod całą krzywą z definicji wynosi 1. Ten słownik, zmienna losowa, dystrybuanta, gęstość, jest punktem wyjścia każdego podręcznika rachunku prawdopodobieństwa, w tym klasycznego Rossa "A First Course in Probability".
+Cała matematyka rynku zaczyna się od jednego pojęcia: zmiennej losowej. To reguła, która wynikowi losowego zdarzenia przypisuje liczbę, na przykład jutrzejszej sesji wartość procentowej zmiany kursu. Rozkład tej zmiennej to pełen opis tego, jak prawdopodobne są poszczególne wartości. Dla wielkości skokowej wystarczy lista prawdopodobieństw, dla wielkości ciągłej, a taką jest zwrot, potrzebna jest gęstość. Gęstość nie podaje prawdopodobieństwa pojedynczej wartości (ono jest zerowe), ale gęstość szansy wokół niej. Praktyczny sens ma dopiero pole pod krzywą: prawdopodobieństwo, że zwrot wpadnie w dany przedział, to pole pod gęstością nad tym przedziałem, a pole pod całą krzywą z definicji wynosi 1. Ten słownik, zmienna losowa, dystrybuanta, gęstość, jest punktem wyjścia każdego podręcznika rachunku prawdopodobieństwa, w tym klasycznego Rossa "A First Course in Probability".
 
 ```
-Zmienna losowa X              reguła: wynik losowy → liczba
+Zmienna losowa X              reguła: wynik losowy -> liczba
 Dystrybuanta  F(x) = P(X ≤ x)  rośnie od 0 do 1
 Gęstość       f(x) = F'(x)     P(a ≤ X ≤ b) = pole pod f na [a, b]
 Normalizacja  ∫ f(x) dx = 1    pole pod całą krzywą równe 1
@@ -52,7 +52,7 @@ Gęstość normalna
 
 Centralne twierdzenie graniczne (CTG)
   suma wielu niezależnych składników o skończonej wariancji
-  → rozkład normalny, niezależnie od kształtu składników
+  -> rozkład normalny, niezależnie od kształtu składników
 ```
 
 ## Gdzie Gauss zawodzi: grube ogony i prawa potęgowe
@@ -64,22 +64,22 @@ Ogon normalny opada wykładniczo:  P(X > x) ~ exp(−x² / 2σ²)   bardzo szybk
 Ogon potęgowy opada wolniej:      P(|X| > x) ~ x^(−α)
 
 α ≤ 2  ⇒  wariancja nieskończona   (Mandelbrot, 1963: ceny bawełny)
-α > 2  ⇒  wariancja istnieje, lecz ogon i tak grubszy niż normalny   (Cont, 2001)
+α > 2  ⇒  wariancja istnieje, ale ogon i tak grubszy niż normalny   (Cont, 2001)
 ```
 
 ## Rozkład t Studenta: grubość ogona na jednej gałce
 
-Do opisania grubego ogona bez natychmiastowego wpadania w nieskończoną wariancję dobrze nadaje się rozkład t Studenta. Ma jeden parametr kształtu, liczbę stopni swobody, oznaczaną ν, która działa jak pokrętło grubości ogona. Przy dużym ν rozkład t jest praktycznie nieodróżnialny od normalnego. W miarę zmniejszania ν ogony pęcznieją, a rozkład coraz wyraźniej odstaje od Gaussa. Wygodne jest to, że skrajne własności pojawiają się stopniowo i w policzalnych progach. Wariancja jest skończona dopiero dla ν większego od 2, a kurtoza dopiero dla ν większego od 4. Rozkład t o trzech stopniach swobody ma więc skończoną wariancję, ale nieskończoną kurtozę: średni rozrzut jest dobrze określony, lecz masa ogona formalnie wymyka się opisowi czwartym momentem. To wraca do zastrzeżenia z sekcji o momentach, że moment istnieje tylko wtedy, gdy jego całka jest skończona. Dlatego t Studenta jest w praktyce wygodnym modelem zwrotów i standardowym budulcem miar ryzyka odpornych na grube ogony. Poniższy schemat zestawia obie krzywe przy tej samej wariancji.
+Do opisania grubego ogona bez natychmiastowego wpadania w nieskończoną wariancję dobrze nadaje się rozkład t Studenta. Ma jeden parametr kształtu, liczbę stopni swobody, oznaczaną ν, która działa jak pokrętło grubości ogona. Przy dużym ν rozkład t jest praktycznie nieodróżnialny od normalnego. W miarę zmniejszania ν ogony pęcznieją, a rozkład coraz wyraźniej odstaje od Gaussa. Wygodne jest to, że skrajne własności pojawiają się stopniowo i w policzalnych progach. Wariancja jest skończona dopiero dla ν większego od 2, a kurtoza dopiero dla ν większego od 4. Rozkład t o trzech stopniach swobody ma więc skończoną wariancję, ale nieskończoną kurtozę: średni rozrzut jest dobrze określony, ale masa ogona formalnie wymyka się opisowi czwartym momentem. To wraca do zastrzeżenia z sekcji o momentach, że moment istnieje tylko wtedy, gdy jego całka jest skończona. Dlatego t Studenta jest w praktyce wygodnym modelem zwrotów i standardowym budulcem miar ryzyka odpornych na grube ogony. Poniższy schemat zestawia obie krzywe przy tej samej wariancji.
 
 ```
 Rozkład t Studenta, parametr ν (liczba stopni swobody)
 
-ν → ∞    zbiega do rozkładu normalnego (ogon cienki)
+ν -> ∞    zbiega do rozkładu normalnego (ogon cienki)
 ν małe   ogon gruby, potęgowy: P(|X| > x) ~ x^(−ν)
 
 wariancja skończona tylko dla ν > 2
 kurtoza  skończona tylko dla ν > 4
-przykład: t o ν = 3 ma skończoną wariancję, lecz nieskończoną kurtozę
+przykład: t o ν = 3 ma skończoną wariancję, ale nieskończoną kurtozę
 ```
 
 <figure>
@@ -89,7 +89,7 @@ przykład: t o ν = 3 ma skończoną wariancję, lecz nieskończoną kurtozę
 
 ## Prawdopodobieństwo warunkowe i Bayes w skrócie
 
-Do tej pory mowa była o rozkładzie bezwarunkowym. Rynek dostarcza jednak informacji, a te zmieniają szanse. Prawdopodobieństwo warunkowe to szansa zdarzenia A przy założeniu, że zaszło zdarzenie B, i liczy się je jako iloraz prawdopodobieństwa obu zdarzeń naraz przez prawdopodobieństwo warunku. Twierdzenie Bayesa odwraca ten rachunek i pokazuje, jak zaktualizować przekonanie po nowej obserwacji: przekonanie sprzed informacji (a priori) mnoży się przez to, jak dobrze informacja pasuje do hipotezy, i normuje przez prawdopodobieństwo samej obserwacji. Jedna pułapka wraca tu regularnie, także przy interpretacji sygnałów rynkowych: wynik zależy nie tylko od trafności samego sygnału, lecz również od tego, jak częste było zdarzenie, zanim sygnał się pojawił (częstość bazowa). Pominięcie częstości bazowej to jeden z najczęściej opisywanych błędów rozumowania probabilistycznego, obecny zarówno w podręcznikach (Ross), jak i w literaturze o osądzie pod niepewnością.
+Do tej pory mowa była o rozkładzie bezwarunkowym. Rynek dostarcza jednak informacji, a te zmieniają szanse. Prawdopodobieństwo warunkowe to szansa zdarzenia A przy założeniu, że zaszło zdarzenie B, i liczy się je jako iloraz prawdopodobieństwa obu zdarzeń naraz przez prawdopodobieństwo warunku. Twierdzenie Bayesa odwraca ten rachunek i pokazuje, jak zaktualizować przekonanie po nowej obserwacji: przekonanie sprzed informacji (a priori) mnoży się przez to, jak dobrze informacja pasuje do hipotezy, i normuje przez prawdopodobieństwo samej obserwacji. Jedna pułapka wraca tu regularnie, także przy interpretacji sygnałów rynkowych: wynik zależy nie tylko od trafności samego sygnału, ale również od tego, jak częste było zdarzenie, zanim sygnał się pojawił (częstość bazowa). Pominięcie częstości bazowej to jeden z najczęściej opisywanych błędów rozumowania probabilistycznego, obecny zarówno w podręcznikach (Ross), jak i w literaturze o osądzie pod niepewnością.
 
 ```
 Prawdopodobieństwo warunkowe   P(A | B) = P(A ∩ B) / P(B)
@@ -101,18 +101,18 @@ P(A | B)  przekonanie po informacji B (a posteriori)
 
 ## Prawdopodobieństwo a szanse
 
-Na koniec rozróżnienie, które w mowie potocznej zlewa się w jedno, a w rachunku znaczy co innego: prawdopodobieństwo kontra szanse. Prawdopodobieństwo to liczba z przedziału od 0 do 1 (albo procent). Szanse (angielskie odds) to stosunek prawdopodobieństwa zdarzenia do prawdopodobieństwa jego braku, więc opisują to samo, lecz w innej skali. Prawdopodobieństwo 0,5 to szanse 1 do 1, prawdopodobieństwo 0,8 to szanse 4 do 1, a 0,9 to 9 do 1. Przejście w obie strony jest jednoznaczne, co pokazuje ostatni blok. Rozróżnienie nie jest pedanterią: kursy bukmacherskie i wiele intuicji o ryzyku podaje się w szansach, a mylenie ich z prawdopodobieństwem zniekształca ocenę. Szanse rosną nieliniowo: różnica między prawdopodobieństwem 0,90 a 0,99 to skok z 9 do 1 na 99 do 1, choć samo prawdopodobieństwo urosło tylko o dziewięć setnych.
+Na koniec rozróżnienie, które w mowie potocznej zlewa się w jedno, a w rachunku znaczy co innego: prawdopodobieństwo kontra szanse. Prawdopodobieństwo to liczba z przedziału od 0 do 1 (albo procent). Szanse (angielskie odds) to stosunek prawdopodobieństwa zdarzenia do prawdopodobieństwa jego braku, więc opisują to samo, ale w innej skali. Prawdopodobieństwo 0,5 to szanse 1 do 1, prawdopodobieństwo 0,8 to szanse 4 do 1, a 0,9 to 9 do 1. Przejście w obie strony jest jednoznaczne, co pokazuje ostatni blok. Rozróżnienie nie jest pedanterią: kursy bukmacherskie i wiele intuicji o ryzyku podaje się w szansach, a mylenie ich z prawdopodobieństwem zniekształca ocenę. Szanse rosną nieliniowo: różnica między prawdopodobieństwem 0,90 a 0,99 to skok z 9 do 1 na 99 do 1, choć samo prawdopodobieństwo urosło tylko o dziewięć setnych.
 
 ```
 Prawdopodobieństwo   p ∈ [0, 1]
 Szanse (odds)        o = p / (1 − p)
 Powrót do p          p = o / (1 + o)
 
-p = 0,50  →  szanse 1 do 1
-p = 0,80  →  szanse 4 do 1
-p = 0,90  →  szanse 9 do 1
+p = 0,50  ->  szanse 1 do 1
+p = 0,80  ->  szanse 4 do 1
+p = 0,90  ->  szanse 9 do 1
 ```
 
-Materiał czysto edukacyjny, nie porada inwestycyjna. Powyższe pojęcia opisują język, w którym da się mówić o niepewności precyzyjnie, i nie zawierają żadnej obietnicy przewagi. Pewne jest tu wyłącznie to, co wynika z definicji i twierdzeń rachunku prawdopodobieństwa: rozkład opisuje kształt niepewności, momenty go streszczają, a rozkład normalny jest jednym z wielu rozkładów, wygodnym, lecz na rynku systematycznie zaniżającym wagę zdarzeń skrajnych.
+Materiał czysto edukacyjny, nie porada inwestycyjna. Powyższe pojęcia opisują język, w którym da się mówić o niepewności precyzyjnie, i nie zawierają żadnej obietnicy przewagi. Pewne jest tu wyłącznie to, co wynika z definicji i twierdzeń rachunku prawdopodobieństwa: rozkład opisuje kształt niepewności, momenty go streszczają, a rozkład normalny jest jednym z wielu rozkładów, wygodnym, ale na rynku systematycznie zaniżającym wagę zdarzeń skrajnych.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

@@ -35,7 +35,7 @@ Every tick                       ticki generowane z M1    realny spread, mikrost
 Every tick based on real ticks   realne ticki brokera     najdokladniej; latencje ustaw w Delay
 ```
 
-W trybie Open prices only tester liczy strategię na cenach otwarcia świec wybranego interwału. Zdarzenie OnTick pada raz na świecę, na jej otwarciu. Według dokumentacji MQL5 tester poprawnie sprawdza w tym trybie aktywację zleceń oczekujących oraz poziomów Stop Loss i Take Profit, bo bada je po cenach OHLC bara, ale sama decyzja EA zapada tylko na otwarciu. To wystarcza wyłącznie dla strategii, które i tak działają na zamkniętym barze. Tryb 1 minute OHLC schodzi na minutę i z każdego bara M1 generuje ograniczoną liczbę ticków opartych o cztery ceny kontrolne, więc widzi więcej niż otwarcia, ale wciąż nie zna kolejności ruchów wewnątrz minuty. Every tick generuje ticki algorytmem opartym o historię minutową, co daje gęstą, lecz sztuczną ścieżkę. Every tick based on real ticks używa realnych ticków zebranych z serwera brokera i jest, według dokumentacji, najdokładniejszym trybem, bo odtwarza faktyczne zmiany ceny razem z historycznym, zmiennym spreadem.
+W trybie Open prices only tester liczy strategię na cenach otwarcia świec wybranego interwału. Zdarzenie OnTick pada raz na świecę, na jej otwarciu. Według dokumentacji MQL5 tester poprawnie sprawdza w tym trybie aktywację zleceń oczekujących oraz poziomów Stop Loss i Take Profit, bo bada je po cenach OHLC bara, ale sama decyzja EA zapada tylko na otwarciu. To wystarcza wyłącznie dla strategii, które i tak działają na zamkniętym barze. Tryb 1 minute OHLC schodzi na minutę i z każdego bara M1 generuje ograniczoną liczbę ticków opartych o cztery ceny kontrolne, więc widzi więcej niż otwarcia, ale wciąż nie zna kolejności ruchów wewnątrz minuty. Every tick generuje ticki algorytmem opartym o historię minutową, co daje gęstą, ale sztuczną ścieżkę. Every tick based on real ticks używa realnych ticków zebranych z serwera brokera i jest, według dokumentacji, najdokładniejszym trybem, bo odtwarza faktyczne zmiany ceny razem z historycznym, zmiennym spreadem.
 
 ## Jakość modelowania i realne ticki
 
@@ -101,7 +101,7 @@ double OnTester()
   }
 ```
 
-Taki zapis wymusza minimalną próbę stu transakcji i odrzuca przebiegi, które biorą zysk kosztem obsunięcia. To nie jest formuła na przewagę, tylko sposób, żeby optymalizator nie wybrał piku wiszącego na trzech szczęśliwych transakcjach.
+Taki zapis wymusza minimalną próbę stu transakcji i odrzuca przebiegi, które biorą zysk kosztem obsunięcia. Nie jest to formuła na przewagę, tylko sposób, żeby optymalizator nie wybrał piku wiszącego na trzech szczęśliwych transakcjach.
 
 ## Warunek konieczny, nie wystarczający
 

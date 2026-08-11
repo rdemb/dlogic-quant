@@ -28,7 +28,7 @@ Zakres usług sprowadza się do kilku filarów. Po pierwsze, finansowanie: broke
 FUNDUSZ handluje z wieloma bankami, rozlicza w JEDNYM miejscu
 
   egzekucja:   bank A ┐
-               bank B ┼──→  FUNDUSZ
+               bank B ┼──->  FUNDUSZ
                bank C ┘        │
                                │  wszystko splywa do
                                ▼
@@ -48,7 +48,7 @@ DZWIGNIA = kredyt prime brokera, nie kapital funduszu
 
   pozycja                            100
   ├─ margin (kapital funduszu)        10
-  └─ finansowanie prime brokera       90   ← kredyt
+  └─ finansowanie prime brokera       90   <- kredyt
 
   dzwignia = pozycja / kapital = 100 / 10 = 10x
 ```
@@ -60,7 +60,7 @@ Do tego dochodzi mechanizm mniej znany, a bardzo istotny: rehypotekacja. Zabezpi
 ```
 REHYPOTEKACJA: to samo zabezpieczenie pracuje dalej
 
-  fundusz ──zastaw──→ PRIME BROKER ──ponowny zastaw──→ finansowanie brokera
+  fundusz ──zastaw──-> PRIME BROKER ──ponowny zastaw──-> finansowanie brokera
 
   jeden aktyw stoi za lancuchem zobowiazan;
   w stresie lancuch sie zacina i aktyw trudno odzyskac
@@ -83,7 +83,7 @@ LANCUCH DOSTEPU DO RYNKU FX (od dolu do gory)
   broker detaliczny / prime of prime
         │
         ▼
-  PRIME BROKER (duzy bank)   ← uzycza kredytu i nazwy
+  PRIME BROKER (duzy bank)   <- uzycza kredytu i nazwy
         │
         ▼
   banki dealerskie (rdzen plynnosci, handel miedzy soba)
@@ -101,12 +101,12 @@ Mechanizm jest prosty. Broker pożyczył pod zabezpieczenie. Jeśli pozycja klie
 GDY SKONCENTROWANY KLIENT NIE DOMKNIE DEPOZYTU
 
   spadek pozycji
-     → margin call (wezwanie do uzupelnienia depozytu)
-     → klient nie doplaca
-     → broker wymusza sprzedaz zabezpieczenia
-     → pozycja tak duza, ze sprzedaz sama zbija cene (fire sale)
-     → zabezpieczenie nie pokrywa dziury
-     → STRATE bierze prime broker
+     -> margin call (wezwanie do uzupelnienia depozytu)
+     -> klient nie doplaca
+     -> broker wymusza sprzedaz zabezpieczenia
+     -> pozycja tak duza, ze sprzedaz sama zbija cene (fire sale)
+     -> zabezpieczenie nie pokrywa dziury
+     -> STRATE bierze prime broker
 ```
 
 Historia dała dwa podręcznikowe przykłady. Pierwszy to Long-Term Capital Management w 1998 roku. Był to ogromny, skrajnie lewarowany fundusz, którego pozycje splatały go z wieloma dużymi bankami naraz. Gdy zaczął tonąć, groźba jego niekontrolowanej likwidacji zagroziła jego własnym kontrahentom, więc Rezerwa Federalna zorganizowała prywatną akcję ratunkową konsorcjum banków. René Stulz w pracy "Hedge Funds: Past, Present, and Future" używa LTCM właśnie jako dowodu, że pojedynczy fundusz, przez sieć relacji z prime brokerami i kredytodawcami, potrafi stać się problemem systemowym, mimo że sam jest tylko prywatnym podmiotem.
@@ -137,6 +137,6 @@ To zmienia sposób patrzenia na płynność i stres. Ta sama instalacja, która 
 
 Kto to rozumie, ten czyta rynek również przez warstwę kredytu, a nie tylko przez cenę. Gdy słychać, że prime brokerzy się cofają albo podnoszą wymagania, wycofywana jest cała warstwa dźwigni, a to zwykle zapowiada gwałtowniejsze ruchy, nie spokój.
 
-To nie jest porada inwestycyjna. To wykład o instytucjonalnej hydraulice rynku, oparty na przeglądach BIS i pracy Stulza, po to, żebyś rozumiał, kto naprawdę finansuje i lewaruje handel, zanim zaczniesz doszukiwać się wpływu tej struktury na ceny.
+Nie jest to porada inwestycyjna. To wykład o instytucjonalnej hydraulice rynku, oparty na przeglądach BIS i pracy Stulza, po to, żebyś rozumiał, kto naprawdę finansuje i lewaruje handel, zanim zaczniesz doszukiwać się wpływu tej struktury na ceny.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

@@ -32,8 +32,8 @@ Rentowność i cena obligacji są związane odwrotnie, i nie jest to obserwacja 
 ```
 cena = Σ  przepływ_t / (1 + y)^t
 
-y w górę  →  mianowniki większe  →  cena spada
-y w dół   →  mianowniki mniejsze  →  cena rośnie
+y w górę  ->  mianowniki większe  ->  cena spada
+y w dół   ->  mianowniki mniejsze  ->  cena rośnie
 ```
 
 Duracja mierzy siłę tej reakcji. W przybliżeniu to średni ważony czas do otrzymania przepływów, a zarazem procentowa zmiana ceny przypadająca na jednostkową zmianę rentowności. Papier o duracji 8 traci w przybliżeniu 8% ceny, gdy rentowność rośnie o 1 punkt procentowy. Stąd praktyczny wniosek: długi koniec krzywej jest znacznie wrażliwszy na ruch stóp niż koniec krótki, i o tym warto pamiętać przy każdej rozmowie o kształcie krzywej.
@@ -41,8 +41,8 @@ Duracja mierzy siłę tej reakcji. W przybliżeniu to średni ważony czas do ot
 ```
 przybliżenie:   ΔCena / Cena  ≈  −duracja · Δy
 
-duracja 2:  Δy = +1 p.p.  →  cena ≈ −2%
-duracja 8:  Δy = +1 p.p.  →  cena ≈ −8%
+duracja 2:  Δy = +1 p.p.  ->  cena ≈ −2%
+duracja 8:  Δy = +1 p.p.  ->  cena ≈ −8%
 ```
 
 ## Skąd biorą się długie stopy: oczekiwania plus premia
@@ -127,7 +127,7 @@ Krzywa normalna, rosnąca, jest stanem typowym: dłuższe terminy dają wyższą
 
 ## Inwersja jako predyktor recesji
 
-To nie jest wyłącznie teoria. Estrella i Mishkin (1998) przebadali wiele zmiennych finansowych jako wyprzedzające wskaźniki recesji w USA i wykazali, że spread między rentownością obligacji 10-letniej a bonu 3-miesięcznego bije inne pojedyncze zmienne na horyzoncie od kilku kwartałów do około roku. Na tej pracy opiera się model Banku Rezerwy Federalnej w Nowym Jorku, który co miesiąc publikuje prawdopodobieństwo recesji w perspektywie dwunastu miesięcy, liczone właśnie ze spreadu 10y minus 3m.
+Nie jest to wyłącznie teoria. Estrella i Mishkin (1998) przebadali wiele zmiennych finansowych jako wyprzedzające wskaźniki recesji w USA i wykazali, że spread między rentownością obligacji 10-letniej a bonu 3-miesięcznego bije inne pojedyncze zmienne na horyzoncie od kilku kwartałów do około roku. Na tej pracy opiera się model Banku Rezerwy Federalnej w Nowym Jorku, który co miesiąc publikuje prawdopodobieństwo recesji w perspektywie dwunastu miesięcy, liczone właśnie ze spreadu 10y minus 3m.
 
 ```
 popularne miary nachylenia:
@@ -148,9 +148,9 @@ Po pierwsze, wyprzedzenie jest ruchome. Od inwersji do początku recesji mijało
 
 Po drugie, mała próba. Recesji w USA w erze powojennej było kilkanaście, więc cała statystyka opiera się na kilkunastu zdarzeniach. Wnioskowanie z tak małej liczby przypadków jest z natury kruche, o czym przypominają sami autorzy modeli.
 
-Po trzecie, premia terminowa. Skoro krzywa to oczekiwania plus premia, to inwersja może wynikać nie z oczekiwanych obniżek, lecz ze ściśniętej premii. Skup aktywów przez banki centralne, czyli QE, obniża premię na długim końcu, więc krzywa może się spłaszczyć lub odwrócić z powodu, który z recesją ma niewiele wspólnego. Szacunki premii w duchu Kima i Wrighta pokazują, że w ostatnich dwóch dekadach bywała ona niska, a okresami ujemna, co osłabia czytelność sygnału.
+Po trzecie, premia terminowa. Skoro krzywa to oczekiwania plus premia, to inwersja może wynikać nie z oczekiwanych obniżek, ale ze ściśniętej premii. Skup aktywów przez banki centralne, czyli QE, obniża premię na długim końcu, więc krzywa może się spłaszczyć lub odwrócić z powodu, który z recesją ma niewiele wspólnego. Szacunki premii w duchu Kima i Wrighta pokazują, że w ostatnich dwóch dekadach bywała ona niska, a okresami ujemna, co osłabia czytelność sygnału.
 
-Po czwarte, mechanizm kontra korelacja. Odwrócenie z 2019 roku poprzedziło recesję z 2020, lecz jej bezpośrednim wyzwalaczem była pandemia, czyli szok spoza modelu. To dobra ilustracja, że krzywa niczego nie wywołuje, a jedynie odbija zbiorowe oczekiwania, które bywają trafne, a bywają mylne.
+Po czwarte, mechanizm kontra korelacja. Odwrócenie z 2019 roku poprzedziło recesję z 2020, ale jej bezpośrednim wyzwalaczem była pandemia, czyli szok spoza modelu. To dobra ilustracja, że krzywa niczego nie wywołuje, a jedynie odbija zbiorowe oczekiwania, które bywają trafne, a bywają mylne.
 
 ## Krzywe a kursy walut
 

@@ -93,7 +93,7 @@ Na jednym końcu jest λ równe zero, czyli obojętność na ryzyko. Wtedy liczy
 
 Na drugim końcu jest λ bardzo duże, czyli silna awersja. Wtedy najważniejsze jest jak najszybsze pozbycie się ekspozycji, więc ładujesz realizację z przodu, płacąc wysoki impact w zamian za krótkie okno wystawienia na zmienność.
 
-Żaden z tych punktów nie jest obiektywnie najlepszy. To nie jest wybór między dobrą a złą strategią, tylko między dwoma rodzajami kosztu. Wybór λ to deklaracja, ile impactu godzisz się zapłacić, żeby skrócić ryzyko czasu. Model nie mówi, gdzie stanąć na tej granicy. Mówi tylko, że każdy sensowny harmonogram leży właśnie na niej, a nie w środku, gdzie płaci się i za jedno, i za drugie naraz.
+Żaden z tych punktów nie jest obiektywnie najlepszy. Nie jest to wybór między dobrą a złą strategią, tylko między dwoma rodzajami kosztu. Wybór λ to deklaracja, ile impactu godzisz się zapłacić, żeby skrócić ryzyko czasu. Model nie mówi, gdzie stanąć na tej granicy. Mówi tylko, że każdy sensowny harmonogram leży właśnie na niej, a nie w środku, gdzie płaci się i za jedno, i za drugie naraz.
 
 ## TWAP i VWAP: dwa proste harmonogramy
 
@@ -125,6 +125,6 @@ Lekcja druga: nie wchodź całością w cienki rynek. Jeśli twoje zlecenie jest
 
 Lekcja trzecia jest najgłębsza i wykracza poza samą egzekucję: pośpiech i cierpliwość mają ceny, które ciągną w przeciwne strony, a świadomy trader wybiera punkt między nimi zamiast udawać, że wybór nie istnieje. Wejście po rynku natychmiast płaci impactem i spreadem, wejście zleceniem z limitem oszczędza na tym, ale ryzykuje, że cena ucieknie bez ciebie. To dokładnie ten sam kompromis co u Almgrena i Chrissa, tylko na jedno kliknięcie.
 
-To nie jest porada inwestycyjna. To wykład mechanizmu egzekucji: dwóch kosztów, które ciągną w przeciwne strony, oraz formalnego sposobu ich ważenia, żeby było jasne, dlaczego rozmiar zlecenia względem płynności jest osobną decyzją, obok kierunku i momentu wejścia.
+Nie jest to porada inwestycyjna. To wykład mechanizmu egzekucji: dwóch kosztów, które ciągną w przeciwne strony, oraz formalnego sposobu ich ważenia, żeby było jasne, dlaczego rozmiar zlecenia względem płynności jest osobną decyzją, obok kierunku i momentu wejścia.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

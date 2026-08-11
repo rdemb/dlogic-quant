@@ -20,7 +20,7 @@ category: edukacja
 
 ## Czym są stylizowane fakty
 
-Termin „stylizowane fakty" pochodzi z ekonomii, gdzie oznacza obserwacje na tyle stabilne i powtarzalne, że każdy porządny model powinien je odtwarzać, ale na tyle ogólne, że nie wskazują jednego konkretnego modelu. Dla zwrotów z aktywów kanoniczny katalog takich własności zebrał Rama Cont w pracy „Empirical Properties of Asset Returns: Stylized Facts and Statistical Issues" z 2001 roku. Ich siła bierze się z uniwersalności: te same wzorce widać w akcjach, indeksach, kursach walut i cenach towarów, na danych z różnych dekad i różnych stref czasowych. To nie są ciekawostki jednego rynku, tylko regularności, które trzymają się danych niezależnie od instrumentu.
+Termin „stylizowane fakty" pochodzi z ekonomii, gdzie oznacza obserwacje na tyle stabilne i powtarzalne, że każdy porządny model powinien je odtwarzać, ale na tyle ogólne, że nie wskazują jednego konkretnego modelu. Dla zwrotów z aktywów kanoniczny katalog takich własności zebrał Rama Cont w pracy „Empirical Properties of Asset Returns: Stylized Facts and Statistical Issues" z 2001 roku. Ich siła bierze się z uniwersalności: te same wzorce widać w akcjach, indeksach, kursach walut i cenach towarów, na danych z różnych dekad i różnych stref czasowych. Nie są to ciekawostki jednego rynku, tylko regularności, które trzymają się danych niezależnie od instrumentu.
 
 Punktem wyjścia jest zwrot, najczęściej logarytmiczny, bo dobrze sumuje się w czasie i jest zbliżony do zwrotu prostego przy małych zmianach.
 
@@ -55,7 +55,7 @@ Ogon potęgowy opada wolniej niż wykładniczy ogon rozkładu normalnego, dlateg
 
 ## Klasterowanie zmienności: burza rodzi burzę
 
-Druga własność dotyczy nie pojedynczego zwrotu, lecz układu zwrotów w czasie. Duże ruchy nie są rozsiane równomiernie, tylko skupiają się w seriach. Mandelbrot ujął to zdaniem, które stało się mottem całej dziedziny: duże zmiany bywają następowane przez duże zmiany dowolnego znaku, a małe przez małe. Po spokojnej sesji bardziej prawdopodobna jest kolejna spokojna, po gwałtownej kolejna gwałtowna. To zjawisko nazywa się klasterowaniem zmienności.
+Druga własność dotyczy nie pojedynczego zwrotu, ale układu zwrotów w czasie. Duże ruchy nie są rozsiane równomiernie, tylko skupiają się w seriach. Mandelbrot ujął to zdaniem, które stało się mottem całej dziedziny: duże zmiany bywają następowane przez duże zmiany dowolnego znaku, a małe przez małe. Po spokojnej sesji bardziej prawdopodobna jest kolejna spokojna, po gwałtownej kolejna gwałtowna. To zjawisko nazywa się klasterowaniem zmienności.
 
 Kluczowe jest tu słowo „dowolnego znaku". Klasteruje się wielkość ruchu, a nie jego kierunek. Wysoka zmienność mówi, że jutro świeca może być duża, ale nie mówi, czy w górę, czy w dół. To rozróżnienie wraca w następnej własności i jest jednym z najbardziej praktycznych wniosków całej listy: przewidywalna bywa energia rynku, nie jego kierunek.
 
@@ -110,6 +110,6 @@ Stąd biorą się poprawki, które weszły do standardu zarządzania ryzykiem: l
 
 Praktyczna lekcja domyka się bez żadnej porady inwestycyjnej. Rozkład zwrotów ma grube ogony, więc duże ruchy są normalniejsze, niż podpowiada nazwa krzywej Gaussa. Pamięć rynku jest w zmienności, nie w kierunku, więc przewidywalna bywa energia, a nie znak następnej świecy. Reakcja bywa asymetryczna, więc spadki i wzrosty nie znaczą tego samego dla przyszłej zmienności. Kto liczy ryzyko tak, jakby świat był gaussowski, ten nie tyle myli się w szczegółach, ile zaniża dokładnie tę wielkość, która najbardziej boli: prawdopodobieństwo i głębokość dużej straty.
 
-To nie jest porada inwestycyjna. To opis empirycznych własności rozkładu zwrotów, znanych z literatury od Mandelbrota po Conta, po to, by odróżnić realny kształt ryzyka od jego wygodnej, gaussowskiej karykatury.
+Nie jest to porada inwestycyjna. To opis empirycznych własności rozkładu zwrotów, znanych z literatury od Mandelbrota po Conta, po to, by odróżnić realny kształt ryzyka od jego wygodnej, gaussowskiej karykatury.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

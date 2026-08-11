@@ -38,7 +38,7 @@ Drogi rynek to jedno, ale jest druga warstwa, którą widać dopiero pod maską:
 
 ## Byk kontra niedźwiedź
 
-Po stronie byka liczby są mocne. Goldman Sachs podniósł prognozę zysków do 340 na akcję, co oznacza 24% wzrostu rok do roku, a beneficjenci infrastruktury AI mają odpowiadać za mniej więcej połowę tego wzrostu. Capex hiperskalerów ma sięgnąć 754 miliardów, o 83% więcej niż w 2025. To nie jest hossa zbudowana wyłącznie na nadziei, pod spodem płyną realne pieniądze.
+Po stronie byka liczby są mocne. Goldman Sachs podniósł prognozę zysków do 340 na akcję, co oznacza 24% wzrostu rok do roku, a beneficjenci infrastruktury AI mają odpowiadać za mniej więcej połowę tego wzrostu. Capex hiperskalerów ma sięgnąć 754 miliardów, o 83% więcej niż w 2025. Nie jest to hossa zbudowana wyłącznie na nadziei, pod spodem płyną realne pieniądze.
 
 Niedźwiedź nie kwestionuje zysków, kwestionuje ich trwałość. Capital Economics wskazuje trzy rysy: wątpliwości, czy tempo wzrostu zysków się utrzyma, rekordowo wysokie wydatki technologiczne względem PKB oraz bliski rekordu stosunek wartości giełdy do majątku netto firm. Każda z nich osobno jest do przełknięcia. Razem oznaczają, że jeśli oczekiwania wzrostu choć drgną, wycena nie ma poduszki.
 

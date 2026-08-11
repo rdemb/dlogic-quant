@@ -31,7 +31,7 @@ Brzmi:
 
 ## Rutherford nie zobaczył pustki. Wywnioskował koncentrację
 
-W eksperymentach Geigera i Marsdena większość cząstek alfa przechodziła przez cienką folię metalową z niewielkim odchyleniem, lecz niewielka część odbijała się pod dużymi kątami. Rutherford pokazał w 1911 roku, że wynik można wyjaśnić, jeśli dodatni ładunek i niemal cała masa atomu są skoncentrowane w bardzo małym jądrze.
+W eksperymentach Geigera i Marsdena większość cząstek alfa przechodziła przez cienką folię metalową z niewielkim odchyleniem, ale niewielka część odbijała się pod dużymi kątami. Rutherford pokazał w 1911 roku, że wynik można wyjaśnić, jeśli dodatni ładunek i niemal cała masa atomu są skoncentrowane w bardzo małym jądrze.
 
 To był wniosek z rozpraszania, nie fotografia wnętrza atomu. Cząstki alfa pełniły funkcję sondy, a rozkład ich kątów po przejściu przez materię zdradzał strukturę niewidzialnego obiektu. Już tutaj pojawia się zasada, która będzie powracała w całej fizyce mikroświata: nauka nie musi zobaczyć obiektu bezpośrednio, aby bardzo precyzyjnie ograniczyć jego możliwą budowę.
 
@@ -64,9 +64,9 @@ Porównanie skali pozostaje oszałamiające. Typowy promień atomowy jest rzędu
 
 Dla piłki można wskazać powierzchnię oddzielającą materiał od otoczenia. W przypadku izolowanego atomu nie istnieje równie ostra krawędź. Rozkład elektronowy zanika stopniowo, a różne zastosowania wymagają różnych definicji promienia: kowalencyjnego, van der Waalsa, jonowego albo opartego na określonym progu gęstości.
 
-To nie jest brak precyzji fizyki, lecz cecha obiektu. Pytanie „jak duży jest atom?” staje się niepełne bez dopowiedzenia, jaki proces lub relację chcemy opisać. Odległość, przy której dwa atomy tworzą wiązanie, nie musi odpowiadać odległości, przy której zaczynają silnie odpychać się w innej konfiguracji.
+Nie jest to brak precyzji fizyki, ale cecha obiektu. Pytanie „jak duży jest atom?” staje się niepełne bez dopowiedzenia, jaki proces lub relację chcemy opisać. Odległość, przy której dwa atomy tworzą wiązanie, nie musi odpowiadać odległości, przy której zaczynają silnie odpychać się w innej konfiguracji.
 
-Elektron w stanie atomowym nie zajmuje jednego, ukrytego punktu, którego po prostu nie znamy. Funkcja falowa określa rozkład amplitudy, z którego można obliczać prawdopodobieństwa wyników pomiaru i wartości obserwowalnych. W podstawowym opisie kwantowym chmura elektronowa nie jest rozmazaną fotografią szybko poruszającej się kulki, lecz reprezentacją samego stanu.
+Elektron w stanie atomowym nie zajmuje jednego, ukrytego punktu, którego po prostu nie znamy. Funkcja falowa określa rozkład amplitudy, z którego można obliczać prawdopodobieństwa wyników pomiaru i wartości obserwowalnych. W podstawowym opisie kwantowym chmura elektronowa nie jest rozmazaną fotografią szybko poruszającej się kulki, ale reprezentacją samego stanu.
 
 Dlatego „pustka” atomu nie przypomina pustej sali, w której od czasu do czasu przelatuje elektron. Jest obszarem, w którym nie znajduje się klasyczna, równomiernie rozłożona masa, ale zachowują się tam kwantowe stopnie swobody odpowiadające za to, jak atom reaguje na światło, inne atomy i pole elektryczne.
 
@@ -74,7 +74,7 @@ Dlatego „pustka” atomu nie przypomina pustej sali, w której od czasu do cza
 
 W klasycznym modelu ujemnie naładowany elektron powinien zostać przyciągnięty do dodatniego jądra. Gdyby dodatkowo krążył po orbicie jak planeta, przyspieszony ładunek emitowałby promieniowanie, tracił energię i spiralnie wpadał do środka. Klasyczna mechanika wraz z klasyczną elektrodynamiką nie potrafiły zapewnić stabilności takiemu atomowi.
 
-Mechanika kwantowa zmienia problem. Silne skupienie elektronu w bardzo małym obszarze wymaga stanu o dużej zmienności pędu, a więc wysokiej energii kinetycznej. Przyciąganie Coulomba obniża energię, lecz koszt lokalizacji rośnie, kiedy próbujemy ścisnąć stan coraz bardziej. Dla atomu wodoru najniższa energia pojawia się przy skończonym rozmiarze, a nie w punkcie znajdującym się w jądrze.
+Mechanika kwantowa zmienia problem. Silne skupienie elektronu w bardzo małym obszarze wymaga stanu o dużej zmienności pędu, a więc wysokiej energii kinetycznej. Przyciąganie Coulomba obniża energię, ale koszt lokalizacji rośnie, kiedy próbujemy ścisnąć stan coraz bardziej. Dla atomu wodoru najniższa energia pojawia się przy skończonym rozmiarze, a nie w punkcie znajdującym się w jądrze.
 
 Można potraktować to jako konkurencję dwóch tendencji:
 
@@ -85,7 +85,7 @@ Atom nie jest stabilny mimo mechaniki kwantowej. Jest stabilny **dzięki niej**.
 
 ## Dlaczego stół nie przepuszcza dłoni?
 
-Nawet jeśli jądra są bardzo małe, atomy dwóch przedmiotów nie mogą po prostu minąć się jak odległe planety. Gdy chmury elektronowe zaczynają się nakładać, rośnie energia układu. Ładunki oddziałują elektromagnetycznie, a elektrony — jako identyczne fermiony — podlegają zasadzie Pauliego, która nie pozwala im wszystkim zająć tego samego stanu kwantowego.
+Nawet jeśli jądra są bardzo małe, atomy dwóch przedmiotów nie mogą po prostu minąć się jak odległe planety. Gdy chmury elektronowe zaczynają się nakładać, rośnie energia układu. Ładunki oddziałują elektromagnetycznie, a elektrony - jako identyczne fermiony - podlegają zasadzie Pauliego, która nie pozwala im wszystkim zająć tego samego stanu kwantowego.
 
 Określenie „odpychanie Pauliego” jest użytecznym skrótem, ale nie oznacza istnienia piątej fundamentalnej siły. To efektywny opór wynikający z antysymetrii wieloelektronowej funkcji falowej i rosnącego kosztu energii, kiedy próbujemy wcisnąć elektrony w coraz ciaśniejszy zestaw dozwolonych stanów.
 
@@ -107,7 +107,7 @@ Dla pojedynczego atomu kwantowa energia kinetyczna zapobiega prostemu zapadnięc
     <text x="510" y="350" text-anchor="middle" font-size="14" fill="var(--mut)">utrzymuje stabilność i objętość dużych układów fermionów</text>
   </g>
 </svg>
-<figcaption>Solidność zwykłej materii nie wynika z kontaktu twardych jąder, lecz z kwantowej odpowiedzi elektronów i oddziaływań elektromagnetycznych.</figcaption>
+<figcaption>Solidność zwykłej materii nie wynika z kontaktu twardych jąder, ale z kwantowej odpowiedzi elektronów i oddziaływań elektromagnetycznych.</figcaption>
 </figure>
 
 Kiedy naciskasz dłonią na stół, jądra palców i blatu nie zderzają się ze sobą jak kule bilardowe. Elektronowe stany obu układów reagują, a siła przekazywana przez wiązania i pola zatrzymuje dalsze zbliżenie na długo przed kontaktem jąder.
@@ -116,7 +116,7 @@ Pustka, o której mówi popularna metafora, jest więc zdolna stawiać opór wys
 
 ## Czy całą ludzkość można zmieścić w łyżeczce?
 
-To porównanie wynika z ogromnej różnicy między gęstością zwykłej materii i gęstością materii jądrowej. Gdyby przyjąć łączną masę ludzi rzędu setek miliardów kilogramów i podzielić ją przez charakterystyczną gęstość wnętrza jądra atomowego, otrzymalibyśmy objętość rzędu kilku mililitrów — podobną do łyżeczki.
+To porównanie wynika z ogromnej różnicy między gęstością zwykłej materii i gęstością materii jądrowej. Gdyby przyjąć łączną masę ludzi rzędu setek miliardów kilogramów i podzielić ją przez charakterystyczną gęstość wnętrza jądra atomowego, otrzymalibyśmy objętość rzędu kilku mililitrów - podobną do łyżeczki.
 
 Rachunek skali jest sensowny. Interpretacja „wystarczy usunąć pustą przestrzeń” nie jest.
 
@@ -126,7 +126,7 @@ Metafora dobrze pokazuje skalę koncentracji masy w jądrach. Nie opisuje techno
 
 ## „Prawie puste” nie znaczy „prawie nieistniejące”
 
-W języku klasycznym obiekt istnieje tam, gdzie znajduje się jego materiał, a pustka zaczyna się poza powierzchnią. Atom wymusza inny sposób myślenia. Nie ma ostrej skorupy, lecz ma rozmiar. Nie jest wypełniony klasyczną substancją, lecz posiada stan przestrzenny. Jego masa jest niemal cała w jądrze, lecz jego chemiczna tożsamość i kontakt z innymi obiektami zależą głównie od elektronów rozciągniętych na znacznie większym obszarze.
+W języku klasycznym obiekt istnieje tam, gdzie znajduje się jego materiał, a pustka zaczyna się poza powierzchnią. Atom wymusza inny sposób myślenia. Nie ma ostrej skorupy, ale ma rozmiar. Nie jest wypełniony klasyczną substancją, ale posiada stan przestrzenny. Jego masa jest niemal cała w jądrze, ale jego chemiczna tożsamość i kontakt z innymi obiektami zależą głównie od elektronów rozciągniętych na znacznie większym obszarze.
 
 To, co najmniejsze i najcięższe, nie decyduje samo o tym, gdzie kończy się przedmiot.
 
@@ -140,7 +140,7 @@ Najgłębszą lekcją atomowej skali nie jest to, że materia jest iluzją. Jest
 
 Atom nie jest pustą kulą z ziarnkiem materii w środku.
 
-Jest stabilnym wzorem oddziaływań — i właśnie ten wzór nazywamy materią.
+Jest stabilnym wzorem oddziaływań - i właśnie ten wzór nazywamy materią.
 
 ## Źródła i materiały
 

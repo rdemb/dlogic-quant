@@ -44,8 +44,8 @@ Dwie konsekwencje są bezpośrednie. Kierunek przeciwny do gradientu to kierunek
 ```
 ∇f(x) = [ ∂f/∂x₁ , ∂f/∂x₂ , ... , ∂f/∂xₙ ]
 
-kierunek  ∇f    → najszybszy wzrost f
-kierunek −∇f    → najszybszy spadek f
+kierunek  ∇f    -> najszybszy wzrost f
+kierunek −∇f    -> najszybszy spadek f
 w minimum:  ∇f(x*) = 0        (warunek pierwszego rzędu)
 ```
 
@@ -59,11 +59,11 @@ Dobór długości kroku bywa jednak delikatny. Zbyt duży krok przeskakuje minim
 xₖ₊₁ = xₖ − α · ∇f(xₖ)
 
 α  = długość kroku (współczynnik uczenia)
-α za duże  → przeskakiwanie minimum, rozbieżność
-α za małe  → zbieżność, ale wolna
+α za duże  -> przeskakiwanie minimum, rozbieżność
+α za małe  -> zbieżność, ale wolna
 
 przykład f(x) = x²,  ∇f = 2x,  α = 0.25:
-x₀ = 4 → 2 → 1 → 0.5 → 0.25 → ...    (kroki maleją same)
+x₀ = 4 -> 2 -> 1 -> 0.5 -> 0.25 -> ...    (kroki maleją same)
 ```
 
 <figure>
@@ -77,7 +77,7 @@ Spadek gradientowy zawsze coś znajdzie: punkt, w którym gradient znika i schod
 
 Funkcja jest wypukła, jeśli odcinek łączący dowolne dwa punkty jej wykresu leży w całości nad wykresem. Intuicyjnie to jedna gładka dolina, bez wgłębień i garbów. Dla funkcji dwukrotnie różniczkowalnej warunek sprowadza się do nieujemnej drugiej pochodnej, a w wielu wymiarach do dodatniej półokreśloności hesjanu.
 
-Znaczenie tej własności trudno przecenić i formułuje je klasyczny podręcznik Boyda i Vandenberghe (2004): w funkcji wypukłej każde minimum lokalne jest automatycznie minimum globalnym. Konsekwencja praktyczna jest mocna. Gdy problem jest wypukły, procedura schodząca po gradiencie nie może utknąć w gorszym z wielu dołków, bo dołek jest tylko jeden. Znaleziony punkt to rozwiązanie, kropka. Ta gwarancja jest powodem, dla którego w teorii optymalizacji przebiega najważniejsza granica: nie między liniowym a nieliniowym, lecz między wypukłym a niewypukłym.
+Znaczenie tej własności trudno przecenić i formułuje je klasyczny podręcznik Boyda i Vandenberghe (2004): w funkcji wypukłej każde minimum lokalne jest automatycznie minimum globalnym. Konsekwencja praktyczna jest mocna. Gdy problem jest wypukły, procedura schodząca po gradiencie nie może utknąć w gorszym z wielu dołków, bo dołek jest tylko jeden. Znaleziony punkt to rozwiązanie, kropka. Ta gwarancja jest powodem, dla którego w teorii optymalizacji przebiega najważniejsza granica: nie między liniowym a nieliniowym, ale między wypukłym a niewypukłym.
 
 ```
 f wypukła  ⇔  odcinek łączący dwa punkty wykresu
@@ -96,7 +96,7 @@ każde minimum lokalne JEST minimum globalnym
 
 Najbardziej znany finansowy przykład problemu wypukłego to optymalizacja portfela z pracy Markowitza (1952). Zadanie brzmi: dobrać wagi aktywów tak, by przy zadanym oczekiwanym zwrocie wariancja portfela była najmniejsza. Funkcją celu jest wariancja, wyrażona formą kwadratową z macierzą kowariancji, a ograniczenia są liniowe: wagi mają dać zadany zwrot i zsumować się do jedności. Ponieważ macierz kowariancji jest z definicji dodatnio półokreślona, funkcja celu jest wypukła, a całość to wypukły problem kwadratowy.
 
-Taki problem ma rozwiązanie w postaci zamkniętej, a narzędziem są mnożniki Lagrange'a: każdemu ograniczeniu przypisuje się mnożnik, dokłada je do funkcji celu i szuka punktu, w którym gradient całości znika. Wychodzi układ równań liniowych, którego rozwiązanie zakreśla granicę efektywną. Kluczowe jest to, co daje tu wypukłość: znaleziony punkt nie jest jednym z wielu kandydatów, lecz globalnym minimum wariancji przy danym zwrocie. Granica efektywna staje się więc obiektem policzalnym i jednoznacznym, opisanym szerzej w materiale o [teorii portfela Markowitza](/dlogic-quant/2026/07/07/teoria-portfela-markowitza-dywersyfikacja/).
+Taki problem ma rozwiązanie w postaci zamkniętej, a narzędziem są mnożniki Lagrange'a: każdemu ograniczeniu przypisuje się mnożnik, dokłada je do funkcji celu i szuka punktu, w którym gradient całości znika. Wychodzi układ równań liniowych, którego rozwiązanie zakreśla granicę efektywną. Kluczowe jest to, co daje tu wypukłość: znaleziony punkt nie jest jednym z wielu kandydatów, ale globalnym minimum wariancji przy danym zwrocie. Granica efektywna staje się więc obiektem policzalnym i jednoznacznym, opisanym szerzej w materiale o [teorii portfela Markowitza](/dlogic-quant/2026/07/07/teoria-portfela-markowitza-dywersyfikacja/).
 
 ```
 min  ½ · wᵀ Σ w             wariancja portfela (wypukła, bo Σ ⪰ 0)
@@ -107,7 +107,7 @@ przy: wᵀ μ = R              zadany oczekiwany zwrot
 Lagranżjan:
 L(w, λ₁, λ₂) = ½·wᵀΣw − λ₁·(wᵀμ − R) − λ₂·(wᵀ1 − 1)
 
-∂L/∂w = 0  →  Σw = λ₁·μ + λ₂·1     (układ liniowy, rozwiązanie zamknięte)
+∂L/∂w = 0  ->  Σw = λ₁·μ + λ₂·1     (układ liniowy, rozwiązanie zamknięte)
 ```
 
 To pewność matematyczna, nie inwestycyjna. Wypukłość gwarantuje, że wagi są dokładnie optymalne dla podanej macierzy kowariancji i podanych zwrotów. Nie gwarantuje, że te wejścia są prawdziwe, i właśnie z tej luki bierze się kruchość optymalizacji portfelowej, omówiona w tamtym tekście osobno.
@@ -120,13 +120,13 @@ Standardową odpowiedzią jest regularyzacja: do funkcji celu dokłada się kar�
 
 ```
 bez kary:   min  błąd_na_próbce(x)
-             x        → przy nadmiarze parametrów dopasowuje szum
+             x        -> przy nadmiarze parametrów dopasowuje szum
 
 z karą:     min  błąd_na_próbce(x) + λ · kara(x)
              x
 
-kara(x) = ‖x‖²   → grzbietowa (ridge): tłumi wszystkie współczynniki
-kara(x) = ‖x‖₁   → lasso: dodatkowo zeruje część współczynników
+kara(x) = ‖x‖²   -> grzbietowa (ridge): tłumi wszystkie współczynniki
+kara(x) = ‖x‖₁   -> lasso: dodatkowo zeruje część współczynników
 λ  = siła regularyzacji (cena złożoności); λ = 0 znosi karę
 ```
 
@@ -139,8 +139,8 @@ Cała pewność wypukłego świata znika, gdy funkcja celu ma wiele dolin. W pro
 Najgłośniejszym przykładem jest trening sieci neuronowych: funkcja straty jest tam głęboko niewypukła, o ogromnej liczbie parametrów i mnóstwie minimów lokalnych. Praktyka radzi sobie sztuczkami, wielokrotnymi startami i wariantami spadku gradientowego, ale twarda gwarancja globalnego minimum, oczywista w świecie wypukłym, po prostu nie obowiązuje. Dlatego Boyd i Vandenberghe (2004) stawiają wypukłość w centrum: to ona oddziela problemy, które umie się rozwiązać pewnie, od tych, w których trzeba się zadowolić rozwiązaniem dobrym, bez dowodu, że najlepszym.
 
 ```
-wypukła:      jedna dolina   → −∇f zawsze prowadzi do globalnego minimum
-niewypukła:   wiele dolin    → wynik zależy od punktu startowego i ścieżki
+wypukła:      jedna dolina   -> −∇f zawsze prowadzi do globalnego minimum
+niewypukła:   wiele dolin    -> wynik zależy od punktu startowego i ścieżki
                                (minima lokalne i siodła; np. strata sieci)
 ```
 

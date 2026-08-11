@@ -82,6 +82,6 @@ Uczciwa mapa jest prosta. Deep learning to potężny aproksymator funkcji, któr
 
 Zanim postawisz na dowolnej sieci pieniądze, warto zadać cztery pytania: czy pobiła naiwną persystencję i model liniowy, czy walidacja respektowała przyczynowość (bez shuffle, z purging i embargo), ile konfiguracji i ziaren przeszukano, zanim ta wygrała, i czy wynik przeżywa realne koszty oraz deflację o liczbę prób. Po transformer sięga się wtedy, gdy problem ma dane i strukturę, które to uzasadniają, a nie dlatego, że nazwa dobrze się sprzedaje.
 
-To nie jest porada inwestycyjna. To uczciwa ocena narzędzia: dlaczego szeregi finansowe są dla sieci głębokich wyjątkowo trudne, kiedy transformery naprawdę dokładają wartość, a kiedy to przerost formy nad treścią, i jaką dyscypliną odróżnić jedno od drugiego, zanim zaufasz liczbie na wykresie.
+Nie jest to porada inwestycyjna. To uczciwa ocena narzędzia: dlaczego szeregi finansowe są dla sieci głębokich wyjątkowo trudne, kiedy transformery naprawdę dokładają wartość, a kiedy to przerost formy nad treścią, i jaką dyscypliną odróżnić jedno od drugiego, zanim zaufasz liczbie na wykresie.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

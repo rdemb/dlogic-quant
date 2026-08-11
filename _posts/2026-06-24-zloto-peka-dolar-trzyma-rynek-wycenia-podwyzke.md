@@ -11,7 +11,7 @@ image: /assets/og/2026-06-24-zloto-peka-dolar-trzyma-rynek-wycenia-podwyzke.png
 > **W skrócie**
 >
 > - Złoto w korekcie, nie w panice: dziś ~**4095** (−0.33%), ale **−3.8%** w tydzień, **−9.2%** w miesiąc i około **−27%** od tegorocznego szczytu przy 5597. Mimo to wciąż **+23%** rok do roku. Zjazd jest spójny z rosnącymi realnymi stopami.
-> - Rynek wycenia **~68%** szans na wrześniową podwyżkę Fedu, a 10-latka przy **4.50%** jest najwyżej od dwóch tygodni. Carry Fed–EBC trzyma **+137.5 bp** po stronie dolara.
+> - Rynek wycenia **~68%** szans na wrześniową podwyżkę Fedu, a 10-latka przy **4.50%** jest najwyżej od dwóch tygodni. Carry Fed - EBC trzyma **+137.5 bp** po stronie dolara.
 > - Struktura bez zmian: czynnik dolara tłumaczy **69%** wariancji par USD, a EUR/USD jest w **83%** jego pochodną. **EUR/USD 1.1470.**
 > - Bezpieczniki spokojne: krzywa **2s10s +29 bp** bez inwersji, VIX **17.3**. Mocny dolar w trybie spoczynku, nie paniki.
 
@@ -19,7 +19,7 @@ image: /assets/og/2026-06-24-zloto-peka-dolar-trzyma-rynek-wycenia-podwyzke.png
 
 ## Dlaczego dolar rządzi
 
-Zacznijmy od złota, bo tam widać presję najlepiej. Kruszec handluje przy ~4095 USD za uncję i dziś jest ledwie −0.33%, więc to nie jest jednodniowy krach. Zjazd widać dopiero w szerszym oknie: −3.8% w tydzień, −9.2% w miesiąc, a od tegorocznego szczytu przy 5597 kruszec jest niżej o około 27%. Mimo to rok do roku wciąż trzyma +23%, więc mówimy o korekcie w trendzie, nie o załamaniu. Złoto nie płaci kuponu, więc jego cena jest funkcją kosztu alternatywnego. Kiedy realna rentowność dziesięciolatki rośnie, trzymanie metalu kosztuje więcej i kapitał odpływa. Realna 10-latka jest na +0.3%. To jeden łańcuch przyczynowy, nie zbieg okoliczności.
+Zacznijmy od złota, bo tam widać presję najlepiej. Kruszec handluje przy ~4095 USD za uncję i dziś jest ledwie −0.33%, więc nie jest to jednodniowy krach. Zjazd widać dopiero w szerszym oknie: −3.8% w tydzień, −9.2% w miesiąc, a od tegorocznego szczytu przy 5597 kruszec jest niżej o około 27%. Mimo to rok do roku wciąż trzyma +23%, więc mówimy o korekcie w trendzie, nie o załamaniu. Złoto nie płaci kuponu, więc jego cena jest funkcją kosztu alternatywnego. Kiedy realna rentowność dziesięciolatki rośnie, trzymanie metalu kosztuje więcej i kapitał odpływa. Realna 10-latka jest na +0.3%. To jeden łańcuch przyczynowy, nie zbieg okoliczności.
 
 Drugie ogniwo to stopy. Rentowność dziesięciolatki podbiła do 4.50%, najwyżej od dwóch tygodni, po jastrzębim tonie Fedu. Dwulatka stoi na 4.21%. Rynek wycenia już około 68% prawdopodobieństwa podwyżki we wrześniu, więc nie zakłada cięć, tylko dokłada do scenariusza zacieśniania. Inflacja w USA siedzi na 4.2% i jest lepka, co odbiera Fedowi miejsce na gołębi zwrot. Stopa nominalna ponad inflacją plus dysparytet wobec EBC (Fed 3.625% przy EBC 2.25%, czyli +137.5 bp carry) działają jak magnes na kapitał. Stąd DXY ponad 100 i EUR/USD spychany w dół.
 
@@ -99,7 +99,7 @@ Dziś żaden warunek nie jest spełniony. Krzywa ma +29 bp i się nie odwraca, V
 | US 2Y / 10Y | 4.21% / 4.50% | 10Y najwyżej od 2 tyg. |
 | Krzywa 2s10s | +29 bp | brak inwersji |
 | Realna 10Y | +0.3% | magnes na kapitał |
-| Carry Fed–EBC | +137.5 bp | na korzyść USD |
+| Carry Fed - EBC | +137.5 bp | na korzyść USD |
 | VIX | 17.3 | reżim spokoju |
 | Złoto (XAU/USD) | ~4095 | −0.3% dzień, −3.8% tydzień, −9.2% miesiąc |
 | Szansa podwyżki (IX) | ~68% | jastrzębi przechył |
@@ -135,7 +135,7 @@ gold_5d  = mom(XAUUSD, 5d)           # web: 1T -3.8%, 1M -9.2%
 usd_bias = "strong" if (real_10y > 0 and slope > 0 and carry > 0) else "mixed"
 ```
 
-Dane: pary FX z własnego eksportu M5→D1, stan rynku 2026-06-19 (piątkowe domknięcie, wciąż obowiązujący przekrój struktury). Makro z publicznych źródeł (TradingEconomics, FRED, Investing), stan 2026-06-24. Liczby przeliczam przy każdym raporcie.
+Dane: pary FX z własnego eksportu M5->D1, stan rynku 2026-06-19 (piątkowe domknięcie, wciąż obowiązujący przekrój struktury). Makro z publicznych źródeł (TradingEconomics, FRED, Investing), stan 2026-06-24. Liczby przeliczam przy każdym raporcie.
 
 To kontekst i prawdopodobieństwa, nie sygnał wejścia. Pokazuję, co prowadzi rynek i co musiałoby się stać, żeby teza przestała działać. Decyzję podejmujesz sam. To nie porada inwestycyjna.
 

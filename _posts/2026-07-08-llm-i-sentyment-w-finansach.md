@@ -35,7 +35,7 @@ Zadanie z górnego wiersza jest dla modelu językowego naturalne. Istnieje popra
 
 Analiza sentymentu to klasyfikacja tonu tekstu wobec aktywa: pozytywny, negatywny albo neutralny. Materiałem są newsy, komunikaty spółek, transkrypcje calli wynikowych, raporty analityków i media społecznościowe. Kluczowe jest to, że jest to problem nadzorowany z etykietami. Istnieje zbiór zdań oznaczonych ręcznie przez ludzi, model uczy się je odtwarzać, a jakość mierzy się na trzymanym z boku zbiorze testowym. Klasycznym benchmarkiem jest Financial PhraseBank (Malo i wsp., 2014): zdania z newsów finansowych oznaczone wydźwiękiem przez anotatorów z wykształceniem finansowym.
 
-To rozróżnienie decyduje o wszystkim. Sentyment jest dobrze postawiony właśnie dlatego, że istnieje prawda podstawowa (ground truth), z którą można się porównać. Wynik takiej klasyfikacji to cecha kontekstowa: przybliżony „nastrój" wokół instrumentu w danym momencie. To nie jest cel cenowy ani sygnał wejścia. To liczba opisująca ton tekstu, którą dopiero trzeba uczciwie sprawdzić jako ewentualny predyktor, i która, jak zobaczymy niżej, okazuje się predyktorem słabym.
+To rozróżnienie decyduje o wszystkim. Sentyment jest dobrze postawiony właśnie dlatego, że istnieje prawda podstawowa (ground truth), z którą można się porównać. Wynik takiej klasyfikacji to cecha kontekstowa: przybliżony „nastrój" wokół instrumentu w danym momencie. Nie jest to cel cenowy ani sygnał wejścia. To liczba opisująca ton tekstu, którą dopiero trzeba uczciwie sprawdzić jako ewentualny predyktor, i która, jak zobaczymy niżej, okazuje się predyktorem słabym.
 
 ## Dlaczego modele finansowe biją ogólne
 
@@ -82,6 +82,6 @@ Uczciwa mapa jest wąska i spójna. LLM to narzędzie do tekstu: streszczą rapo
 
 Zanim liczba sentymentu wpłynie na decyzję, warto zadać pięć pytań. Czy to jest klasyfikacja tekstu (dobrze postawiona) czy przebrane za nią przewidywanie ceny. Czy model jest dostrojony do dziedziny, czy ogólny. Czy w oknie testowym nie ma look-ahead wynikającego z daty treningu użytego LLM. Czy efekt przeżywa koszty i wychodzi poza małe, niepłynne spółki. I czy sentyment jest jedną cechą pod uczciwą walidacją, czy całą strategią. Sygnał, który przechodzi ten filtr, jest skromniejszy, niż obiecuje hype, ale za to jest prawdziwym kontekstem, a nie wróżbą.
 
-To nie jest porada inwestycyjna. To uczciwa ocena narzędzia: gdzie LLM i analiza sentymentu w finansach realnie pomagają (czytanie i porządkowanie tekstu), gdzie zaczyna się hype (przewidywanie ceny) i jaką dyscypliną odróżnić jedno od drugiego, zanim zaufasz liczbie na wykresie.
+Nie jest to porada inwestycyjna. To uczciwa ocena narzędzia: gdzie LLM i analiza sentymentu w finansach realnie pomagają (czytanie i porządkowanie tekstu), gdzie zaczyna się hype (przewidywanie ceny) i jaką dyscypliną odróżnić jedno od drugiego, zanim zaufasz liczbie na wykresie.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

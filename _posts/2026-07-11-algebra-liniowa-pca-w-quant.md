@@ -122,6 +122,6 @@ Trzecie to estymacja przy krótkiej próbie. Gdy liczba obserwacji nie jest znac
 
 Algebra liniowa daje kowariancji zwięzły język: przekątna to własne ryzyko, reszta to współruch, a rozkład na wartości i wektory własne zamienia splątaną chmurę w garść nieskorelowanych kierunków. PCA porządkuje te kierunki według wagi i pozwala opisać wiele instrumentów kilkoma liczbami, co na krzywej dochodowości daje czytelne poziom, nachylenie i krzywiznę (Litterman i Scheinkman 1991), a w modelach czynnikowych i CAPM stanowi matematyczne zaplecze. Cena tej zwięzłości to zależność od próby: obrót jest tak wiarygodny, jak kowariancja, z której powstał.
 
-To nie jest porada inwestycyjna. To edukacyjne omówienie algebry liniowej w analizie rynków: definicje kowariancji, korelacji, wartości i wektorów własnych oraz analizy głównych składowych są zreferowane za podręcznikami (Strang; Jolliffe), a przykład krzywej dochodowości za pracą Littermana i Scheinkmana (1991).
+Nie jest to porada inwestycyjna. To edukacyjne omówienie algebry liniowej w analizie rynków: definicje kowariancji, korelacji, wartości i wektorów własnych oraz analizy głównych składowych są zreferowane za podręcznikami (Strang; Jolliffe), a przykład krzywej dochodowości za pracą Littermana i Scheinkmana (1991).
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

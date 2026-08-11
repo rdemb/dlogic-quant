@@ -12,7 +12,7 @@ category: edukacja
 > **W skrócie**
 >
 > - Banki reguluje się inaczej niż piekarnie, bo upadek jednego banku zaraża kolejne (efekt domina przez wzajemne ekspozycje i przez panikę), a kiedy pada bank systemowy, koszt ratunku spada na podatnika. Reguły ostrożnościowe mają obniżyć i prawdopodobieństwo upadku, i jego cenę dla reszty gospodarki.
-> - Osią regulacji jest kapitał własny, czyli poduszka pochłaniająca straty, zanim stracą deponenci i wierzyciele. To nie jest zapas gotówki leżący w skarbcu, tylko struktura finansowania: bank z grubszym kapitałem finansuje ten sam majątek mniejszym długiem, a większym udziałem właścicieli, więc wchłania większą stratę, zanim padnie.
+> - Osią regulacji jest kapitał własny, czyli poduszka pochłaniająca straty, zanim stracą deponenci i wierzyciele. Nie jest to zapas gotówki leżący w skarbcu, tylko struktura finansowania: bank z grubszym kapitałem finansuje ten sam majątek mniejszym długiem, a większym udziałem właścicieli, więc wchłania większą stratę, zanim padnie.
 > - Ile kapitału ma być, liczy się od aktywów ważonych ryzykiem (RWA), a nie od surowej sumy bilansu. To sedno umów bazylejskich (Basel I z 1988, Basel II, Basel III po 2008), a zarazem źródło słabości: obligacje skarbowe z wagą zero oraz modele wewnętrzne dały pole do zaniżania mierzonego ryzyka. Dlatego dołożono prosty wskaźnik dźwigni (kapitał do sumy aktywów bez wag) i normy płynności (LCR, NSFR).
 > - Regulacja bywa procykliczna (w hossie mierzone ryzyko spada i wymogi luzują, w bessie zaciskają), a domniemana gwarancja państwa dla największych (too big to fail) zachęca je do ryzyka. Admati i Hellwig dowodzą, że banki mają wciąż za mało kapitału, a popularne argumenty przeciw wyższym wymogom są mylące.
 
@@ -42,7 +42,7 @@ KAPITAL TO STRUKTURA FINANSOWANIA, NIE ZAPAS GOTOWKI:
   kapital wlasny      5            kapital wlasny     15
   ──────────────────────────       ──────────────────────────
   strata 5 na aktywach:
-  kapital 5 → 0                    kapital 15 → 10
+  kapital 5 -> 0                    kapital 15 -> 10
   bank na krawedzi                 bank spokojnie stoi
 
   wiecej kapitalu = wieksza strata wchlonieta przed upadkiem
@@ -122,6 +122,6 @@ Regulacja bankowa nie jest nudnym dodatkiem do finansów, tylko instrukcją obs�
 
 Głębsza lekcja 2008 jest jednak inna i warto ją zapamiętać ponad szczegółami. System, który wygląda bezpiecznie według własnych mierników, potrafi hodować ukryte ryzyko właśnie dlatego, że te mierniki dają się podrasować, a bodźce są przekrzywione. Wskaźnik oparty na RWA da się wymodelować w dół, waga zero potrafi zachęcić do koncentracji, procykliczność każe luzować dokładnie wtedy, gdy narasta bańka, a domniemana gwarancja nagradza rozrost i dźwignię. Kto rozumie tę mechanikę, ten czyta doniesienia o bankach z właściwymi pytaniami: jak cienki jest realny kapitał, ile deklarowanego bezpieczeństwa pochodzi z modelu, jak płochliwe jest finansowanie i czy poduszka pod spodem naprawdę udźwignie stratę, zanim zapłaci ją ktoś inny.
 
-To nie jest porada inwestycyjna. To wykład mechaniki regulacji bankowej, oparty na jawnych dokumentach Komitetu Bazylejskiego przy BIS (Basel I z 1988, Basel II, Basel III) oraz na książce Anat Admati i Martina Hellwiga „The Bankers' New Clothes" (Princeton University Press, 2013), z nawiązaniem do modelu runu Diamonda i Dybviga (1983) i do [tekstu o tym, jak działa bank](/dlogic-quant/2026/07/07/jak-dziala-bank-bilans-i-kruchosc/). Konkretnych progów kapitałowych świadomie tu nie podano, bo się zmieniają; trwała jest mechanika, nie liczba.
+Nie jest to porada inwestycyjna. To wykład mechaniki regulacji bankowej, oparty na jawnych dokumentach Komitetu Bazylejskiego przy BIS (Basel I z 1988, Basel II, Basel III) oraz na książce Anat Admati i Martina Hellwiga „The Bankers' New Clothes" (Princeton University Press, 2013), z nawiązaniem do modelu runu Diamonda i Dybviga (1983) i do [tekstu o tym, jak działa bank](/dlogic-quant/2026/07/07/jak-dziala-bank-bilans-i-kruchosc/). Konkretnych progów kapitałowych świadomie tu nie podano, bo się zmieniają; trwała jest mechanika, nie liczba.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

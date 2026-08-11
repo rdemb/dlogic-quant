@@ -40,7 +40,7 @@ Pierwsza wada jest wbudowana w definicję. VaR to próg, a nie średnia za progi
 
 Wyobraź sobie dwie strategie o identycznym dziennym VaR 99%. W pierwszej te najgorsze 1% dni to straty tylko odrobinę większe od progu. W drugiej te same 1% dni to katastrofy wielokrotnie głębsze, bo rozkład ma gruby lewy ogon. VaR obu strategii jest taki sam, a ich realne ryzyko ruiny jest przepaścią. VaR z definicji nie zagląda za próg, więc nie widzi tej różnicy. Mówi, kiedy zaczyna się zły dzień, ale nie mówi, jak zły on będzie.
 
-To nie jest subtelność akademicka. Miara, która jest ślepa na głębokość ogona, zachęca wprost do sprzedawania ryzyka ogonowego: strategie typu „zbieraj drobne, raz na jakiś czas oberwij dużym ciosem" potrafią mieć bardzo ładny VaR aż do dnia, w którym ogon się realizuje. VaR nie ostrzeże, bo katastrofa mieści się w tym 1%, którego on nie opisuje.
+Nie jest to subtelność akademicka. Miara, która jest ślepa na głębokość ogona, zachęca wprost do sprzedawania ryzyka ogonowego: strategie typu „zbieraj drobne, raz na jakiś czas oberwij dużym ciosem" potrafią mieć bardzo ładny VaR aż do dnia, w którym ogon się realizuje. VaR nie ostrzeże, bo katastrofa mieści się w tym 1%, którego on nie opisuje.
 
 ## Druga wada: VaR potrafi karać dywersyfikację
 
@@ -53,7 +53,7 @@ Subaddytywność wymaga:   VaR(A + B) ≤ VaR(A) + VaR(B)
 
 Kontrprzykład (dwie rzadkie porażki):
    VaR(A) = 0,  VaR(B) = 0,  ale  VaR(A + B) > 0
-   czyli  VaR(A + B) > VaR(A) + VaR(B)   ← złamana subaddytywność
+   czyli  VaR(A + B) > VaR(A) + VaR(B)   <- złamana subaddytywność
 ```
 
 Wniosek jest paradoksalny: według VaR rozłożenie ryzyka na dwie niezależne pozycje wygląda groźniej niż trzymanie każdej osobno. Miara, która ma pilnować ryzyka, karze tu dokładnie to, co ryzyko realnie zmniejsza. Dla portfela złożonego z wielu pozycji oznacza to, że sumowanie VaR-ów po biurkach czy instrumentach może dawać wynik oderwany od prawdy, w którą stronę, zależy od kształtu rozkładów.
@@ -139,6 +139,6 @@ Praktyczny wniosek jest prosty. VaR to dobry pierwszy komunikat, „gdzie stoi p
 
 Dwie rzeczy warto zapamiętać poza wzorami. Po pierwsze, przy sumowaniu ryzyka po wielu pozycjach VaR potrafi wprowadzić w błąd co do korzyści z dywersyfikacji, bo nie jest subaddytywny; ES tego błędu nie popełnia. Po drugie, im dalej rynek od rozkładu normalnego, tym większa różnica między tymi miarami, i tym bardziej sam VaR usypia czujność, im grubszy jest ogon, który pomija. Dla operatora, który świadomie handluje strategiami zbierającymi drobne z ryzykiem rzadkiego dużego ciosu, ta różnica nie jest akademicka, to jest różnica między liczbą, która widzi katastrofę, a liczbą, która jej nie widzi.
 
-To nie jest porada inwestycyjna. To rozłożone na czynniki definicje dwóch miar ryzyka wraz z ich własnościami i źródłami, żebyś umiał odróżnić „gdzie zaczyna się strata" od „jak głęboka ona jest", zanim postawisz na tej różnicy pieniądze.
+Nie jest to porada inwestycyjna. To rozłożone na czynniki definicje dwóch miar ryzyka wraz z ich własnościami i źródłami, żebyś umiał odróżnić „gdzie zaczyna się strata" od „jak głęboka ona jest", zanim postawisz na tej różnicy pieniądze.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

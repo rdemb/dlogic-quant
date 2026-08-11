@@ -32,9 +32,9 @@ TRZY SPRAWOZDANIA I ICH POWIAZANIA:
   PRZEPLYWY PIENIEZNE (okres)   ile GOTOWKI weszlo i wyszlo
 
   jak sie spinaja:
-    zysk netto z rachunku wynikow → powieksza kapital wlasny w bilansie
-    saldo przeplywow pienieznych  → zmienia pozycje "gotowka" w bilansie
-    bilans otwarcia + caly okres  → bilans zamkniecia
+    zysk netto z rachunku wynikow -> powieksza kapital wlasny w bilansie
+    saldo przeplywow pienieznych  -> zmienia pozycje "gotowka" w bilansie
+    bilans otwarcia + caly okres  -> bilans zamkniecia
 ```
 
 Te trzy dokumenty są ze sobą zszyte. Zysk netto z rachunku wyników zasila kapitał własny w bilansie. Saldo przepływów zmienia stan gotówki w bilansie. Bilans na koniec okresu jest bilansem otwarcia następnego. Kto czyta tylko jedno sprawozdanie, ogląda jedną ścianę budynku i wyciąga wnioski o całej konstrukcji. Graham i Dodd w „Security Analysis" (1934, siódme wydanie 2023) ustawili ten nawyk jako fundament zawodu: analiza zaczyna się od sprawozdań, ale nie polega na ich przepisaniu, tylko na odtworzeniu z liczb rzeczywistego biznesu.
@@ -131,9 +131,9 @@ DCF W PIGULCE (idea; liczby ilustracyjne):
     wartosc = CF / (r - g)
 
   Wrazliwosc przy CF = 100 rocznie:
-    r = 8%, g = 2%   →  100 / 0.06 = 1667
-    r = 9%, g = 2%   →  100 / 0.07 = 1429    (-14%)
-    r = 8%, g = 3%   →  100 / 0.05 = 2000    (+20%)
+    r = 8%, g = 2%   ->  100 / 0.06 = 1667
+    r = 9%, g = 2%   ->  100 / 0.07 = 1429    (-14%)
+    r = 8%, g = 3%   ->  100 / 0.05 = 2000    (+20%)
 
   jeden punkt procentowy w zalozeniach przesuwa wycene
   o kilkanascie do kilkudziesieciu procent
@@ -153,6 +153,6 @@ Uczciwy wykład musi domknąć trzy ograniczenia. Pierwsze: księgowość to nie
 
 Co zostaje po tych zastrzeżeniach? Rama, która porządkuje myślenie. Trzy sprawozdania mówią, czym spółka jest; wskaźniki pozwalają szybko porównać cenę i jakość, o ile pamięta się o ich pułapkach; DCF zmusza do jawnych założeń o przyszłości; margines bezpieczeństwa zamienia niepewność wyceny na dyscyplinę cenową. Analiza fundamentalna nie jest maszynką do sygnałów i nie obiecuje, że rynek szybko przyzna ci rację. Obiecuje coś skromniejszego i cenniejszego: że wiesz, co kupujesz, ile to może być warte i ile błędu jesteś w stanie przeżyć.
 
-To nie jest porada inwestycyjna. To wykład podstaw analizy fundamentalnej według klasyki gatunku: Graham i Dodd („Security Analysis", 1934; siódme wydanie 2023), Benjamin Graham („The Intelligent Investor", 1949), darmowe materiały i dane o wycenie Aswatha Damodarana (NYU Stern, pages.stern.nyu.edu/~adamodar) oraz podręcznik McKinsey „Valuation". Wszystkie liczby w przykładach są ilustracyjne i służą wyłącznie pokazaniu mechaniki.
+Nie jest to porada inwestycyjna. To wykład podstaw analizy fundamentalnej według klasyki gatunku: Graham i Dodd („Security Analysis", 1934; siódme wydanie 2023), Benjamin Graham („The Intelligent Investor", 1949), darmowe materiały i dane o wycenie Aswatha Damodarana (NYU Stern, pages.stern.nyu.edu/~adamodar) oraz podręcznik McKinsey „Valuation". Wszystkie liczby w przykładach są ilustracyjne i służą wyłącznie pokazaniu mechaniki.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

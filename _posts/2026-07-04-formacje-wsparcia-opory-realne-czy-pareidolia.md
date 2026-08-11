@@ -57,7 +57,7 @@ W drugim ujęciu, mechanicznym, wzór niczego nie przewiduje. Wzór jest zapisem
 
 Zacznijmy od najprostszego pojęcia technika: poziomu wsparcia i oporu. Dlaczego cena tak często zatrzymuje się w tych samych miejscach? Odpowiedź mistyczna mówi o „pamięci rynku". Odpowiedź mechaniczna jest mniej efektowna i znacznie lepiej udokumentowana: bo w tych miejscach wielu uczestników jednocześnie umieściło zlecenia. Take-profity, którymi zamykają zysk. Stop-lossy, którymi tną stratę. Zlecenia ustawione z pamięci poprzednich reakcji, bo skoro poziom raz odbił, to następnym razem ktoś postawi tam zlecenie na wszelki wypadek. Gęstość zleceń w jednym punkcie robi z niego barierę.
 
-To nie jest spekulacja, tylko rzecz policzona przez bank centralny na rzeczywistych danych, co rozkłada osobny tekst o [polowaniu na stopy u Osler](/dlogic-quant/2026/07/09/polowanie-na-stopy-istnieje-osler-ny-fed/). Carol Osler w raporcie NY Fed z 2002 roku przebadała około 9700 rzeczywistych zleceń dużego dealera FX i pokazała, że take-profity gromadzą się na okrągłych cenach, stąd odbicia, a stop-lossy leżą tuż za nimi, stąd wystrzały i kaskady po przebiciu. Poziom działa więc nie magią liczby, tylko geometrią zleceń wokół niej. To jest cała tajemnica wsparcia i oporu: nie prorokują, tylko pokazują, gdzie tłum coś położył.
+Nie jest to spekulacja, tylko rzecz policzona przez bank centralny na rzeczywistych danych, co rozkłada osobny tekst o [polowaniu na stopy u Osler](/dlogic-quant/2026/07/09/polowanie-na-stopy-istnieje-osler-ny-fed/). Carol Osler w raporcie NY Fed z 2002 roku przebadała około 9700 rzeczywistych zleceń dużego dealera FX i pokazała, że take-profity gromadzą się na okrągłych cenach, stąd odbicia, a stop-lossy leżą tuż za nimi, stąd wystrzały i kaskady po przebiciu. Poziom działa więc nie magią liczby, tylko geometrią zleceń wokół niej. To jest cała tajemnica wsparcia i oporu: nie prorokują, tylko pokazują, gdzie tłum coś położył.
 
 ## Samospełniająca się przepowiednia i jej granice
 
@@ -69,7 +69,7 @@ I tu jest granica, o której mistyczna wersja milczy. Koordynacja oczekiwań dzi
 
 Z pojedynczym poziomem jest jeszcze w miarę prosto. Problem robi się poważny przy formacjach: głowie z ramionami, trójkątach, flagach, klinach. Tu wchodzi cecha ludzkiego mózgu, która na wykresie działa przeciwko nam. Mózg jest maszyną do wykrywania wzorów i wykrywa je wszędzie, także tam, gdzie ich nie ma. To pareidolia, ten sam mechanizm, który każe nam widzieć twarze w chmurach albo króliki w plamach na ścianie. Na wykresie cen, który w dużej części jest szumem, pareidolia gwarantuje, że zawsze znajdziemy jakąś formację, jeśli tylko dostatecznie mocno się wpatrzymy.
 
-Stąd bierze się najważniejsze rozróżnienie całego tematu. Formacja rozpoznana z prawej strony wykresu, po fakcie, kiedy ruch już się wydarzył, to nie jest to samo co reguła testowalna z góry. Ex post łatwo pokazać idealną głowę z ramionami tuż przed spadkiem, bo wybieramy ją spośród setek układów, wiedząc już, który zadziałał. To jest wybieranie zwycięzcy po wyścigu. Reguła testowalna jest odwrotna: definiujesz kształt precyzyjnie z góry, potem sprawdzasz go na danych, których nie widziałeś, licząc wszystkie przypadki, także te, w których formacja zawiodła. Dopiero wtedy narracja zamienia się w hipotezę, którą da się potwierdzić albo obalić. Dopóki opowiadasz historię do gotowego wykresu, opowiadasz historię.
+Stąd bierze się najważniejsze rozróżnienie całego tematu. Formacja rozpoznana z prawej strony wykresu, po fakcie, kiedy ruch już się wydarzył, nie jest to to samo co reguła testowalna z góry. Ex post łatwo pokazać idealną głowę z ramionami tuż przed spadkiem, bo wybieramy ją spośród setek układów, wiedząc już, który zadziałał. To jest wybieranie zwycięzcy po wyścigu. Reguła testowalna jest odwrotna: definiujesz kształt precyzyjnie z góry, potem sprawdzasz go na danych, których nie widziałeś, licząc wszystkie przypadki, także te, w których formacja zawiodła. Dopiero wtedy narracja zamienia się w hipotezę, którą da się potwierdzić albo obalić. Dopóki opowiadasz historię do gotowego wykresu, opowiadasz historię.
 
 ## Co pokazały rzetelne badania: informacja tak, obietnica nie
 
@@ -91,6 +91,6 @@ Po trzecie, i to najbardziej konkretne, nie kładź stop-lossa tuż za oczywisty
 
 Wspólny mianownik tych zasad jest jeden. Formacje, wsparcia i opory są realne dokładnie w tym stopniu, w jakim są zapisem zachowania zleceń, i przestają być realne dokładnie w tym momencie, w którym zamieniasz je we wróżbę z kształtu. Cała technika mieści się między tymi dwoma zdaniami.
 
-To nie jest porada inwestycyjna. To wykład o tym, czym są formacje i poziomy w świetle mikrostruktury oraz recenzowanych badań, żeby oddzielić realną mechanikę zleceń od widzenia twarzy w chmurach, zanim oprzesz na wykresie decyzję.
+Nie jest to porada inwestycyjna. To wykład o tym, czym są formacje i poziomy w świetle mikrostruktury oraz recenzowanych badań, żeby oddzielić realną mechanikę zleceń od widzenia twarzy w chmurach, zanim oprzesz na wykresie decyzję.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

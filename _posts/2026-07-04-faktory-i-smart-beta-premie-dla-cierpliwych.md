@@ -32,7 +32,7 @@ jakość           rentowne i mało zadłużone biją słabe i lewarowane
 niska zmienność  spokojne aktywa dają lepszy zwrot do ryzyka, niż liczy CAPM
 ```
 
-Że to nie jest wyłącznie kaprys amerykańskiej giełdy, pokazała praca AQR "Value and Momentum Everywhere" (Asness, Moskowitz, Pedersen, Journal of Finance 2013): wartość i momentum pojawiają się spójnie w akcjach różnych krajów, a także w obligacjach, walutach i towarach, a do tego są ujemnie skorelowane, więc złożone razem wygładzają sobie nawzajem gorsze okresy. AQR udostępnia zresztą swoje szeregi faktorowe za darmo w bibliotece badań, co samo w sobie mówi wiele o tym, jak bardzo te premie przeszły z kategorii tajemnicy do kategorii towaru.
+Że nie jest to wyłącznie kaprys amerykańskiej giełdy, pokazała praca AQR "Value and Momentum Everywhere" (Asness, Moskowitz, Pedersen, Journal of Finance 2013): wartość i momentum pojawiają się spójnie w akcjach różnych krajów, a także w obligacjach, walutach i towarach, a do tego są ujemnie skorelowane, więc złożone razem wygładzają sobie nawzajem gorsze okresy. AQR udostępnia zresztą swoje szeregi faktorowe za darmo w bibliotece badań, co samo w sobie mówi wiele o tym, jak bardzo te premie przeszły z kategorii tajemnicy do kategorii towaru.
 
 ## Dwie dusze premii: ryzyko czy błąd
 
@@ -95,6 +95,6 @@ Po latach selekcji z całego zoo zostaje krótka lista premii o najmocniejszej r
 
 Smart beta jest w tym obrazie czymś rozsądnym: uczciwym pomostem między tanim pasywnym indeksem a drogim aktywnym zarządzaniem, sposobem na kupienie sprawdzonej ekspozycji tanio i regułowo. Ale nie jest darmowym obiadem. Premia faktora jest realna tylko dla kogoś, kto potrafi ją odpracować, to znaczy wytrzymać lata, gdy faktor nie działa, nie sprzedać wartości na dnie posuchy, gdy wszyscy ogłaszają jej śmierć, i nie gonić momentum dokładnie na szczycie. To premia dla cierpliwych, a cierpliwość jest tu dosłownie tym, za co się płaci.
 
-To nie jest porada inwestycyjna. To edukacyjne omówienie inwestowania faktorowego i smart beta: definicje, interpretacje i wyniki badań są zreferowane wiernie, a najważniejsza liczba mówi, że po publikacji z przeciętnej premii predyktora zostaje mniej niż połowa (McLean i Pontiff 2016).
+Nie jest to porada inwestycyjna. To edukacyjne omówienie inwestowania faktorowego i smart beta: definicje, interpretacje i wyniki badań są zreferowane wiernie, a najważniejsza liczba mówi, że po publikacji z przeciętnej premii predyktora zostaje mniej niż połowa (McLean i Pontiff 2016).
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING
