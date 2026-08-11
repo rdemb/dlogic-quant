@@ -76,17 +76,11 @@ Po tym eksperymencie rozdzielenie stało się jawne:
 
 Przejście pomiędzy tymi stanami nie jest formalnością. Kompilator i runtime mogą różnić się wersją, zależnościami, zachowaniem loadera albo środowiskiem systemowym. Program może się uruchomić, ale zapisać niepełny plik. Plik może być kompletny składniowo, ale pochodzić z niewłaściwego przebiegu. Każdy z tych problemów wymaga osobnego dowodu.
 
-Skrót:
+<div class="lab-note"><strong>Niedozwolony skrót:</strong> COMPILED ⇒ DZIAŁA</div>
 
-\[
-\text{COMPILED} \Rightarrow \text{DZIAŁA}
-\]
+Jest wygodny, lecz naukowo pusty. Poprawny łańcuch wygląda raczej tak:
 
-jest wygodny, lecz naukowo pusty. Poprawny łańcuch wygląda raczej tak:
-
-\[
-\text{COMPILED} \rightarrow \text{LOADABLE} \rightarrow \text{CANARY TESTED} \rightarrow \text{DATA VALIDATED}
-\]
+<div class="lab-note"><strong>Poprawny łańcuch:</strong> COMPILED → LOADABLE → CANARY TESTED → DATA VALIDATED</div>
 
 Dopiero później zaczyna się właściwe pytanie o model, przewagę i wykonanie.
 
