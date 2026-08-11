@@ -4,11 +4,25 @@ title: "Research"
 description: "Program badawczy D-LOGIC: hipotezy, falsyfikacja, jakość danych, koszty, baseline’y, holdout governance i wyniki negatywne."
 permalink: /research/
 ---
+{% assign res = site.posts | where: "category", "research" %}
 <p class="lab-kicker">Research program</p>
 <h1>Najpierw informacja, później model</h1>
 <p class="dek">D-LOGIC nie zaczyna kolejnego eksperymentu od wyboru algorytmu. Najpierw ustala, co było rzeczywiście dostępne w chwili decyzji, jaki wynik ma sens ekonomiczny po kosztach i jaki prosty baseline trzeba pokonać.</p>
 
 <div class="lab-note"><strong>Aktualne pytanie:</strong> które dostępne zbiory są wystarczająco wiarygodne, aby zbudować prerejestrowany, cost-aware pilot bez otwierania końcowego holdoutu i bez dopasowywania historii po wyniku?</div>
+
+<div class="section-head">
+  <h2>Najnowsze Research Notes</h2>
+  <span></span>
+</div>
+<ul class="posts">
+{% for post in res %}
+  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+{% endfor %}
+{% if res.size == 0 %}
+  <li><span class="ds">Pierwsze research notes są przygotowywane do publikacji.</span></li>
+{% endif %}
+</ul>
 
 <div class="lab-grid">
   <div class="lab-card">

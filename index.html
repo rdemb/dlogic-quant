@@ -5,6 +5,8 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
 ---
 {% assign edu = site.posts | where: "category", "edukacja" %}
 {% assign chron = site.posts | where: "category", "algo" %}
+{% assign res = site.posts | where: "category", "research" %}
+{% assign loose = site.posts | where: "category", "luzne" %}
 
 <section class="lab-hero">
   <p class="lab-kicker">Independent Quant Research Lab</p>
@@ -18,7 +20,7 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
 
 <div class="lab-status" aria-label="Publiczny status projektu">
   <div class="status-card"><small>Program badawczy</small><b class="ok">ACTIVE</b></div>
-  <div class="status-card"><small>Fundament danych</small><b class="warn">IN DEVELOPMENT</b></div>
+  <div class="status-card"><small>Probe lifecycle</small><b class="warn">COMPILED</b></div>
   <div class="status-card"><small>Model edge</small><b class="lock">UNPROVEN</b></div>
   <div class="status-card"><small>LIVE</small><b class="lock">NOT AUTHORIZED</b></div>
 </div>
@@ -48,9 +50,15 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
     <p>Publiczna granica twierdzeń: komponenty istniejące, etapy niepotwierdzone, aktualny blocker oraz następny gate.</p>
     <span class="go">Przejdź do statusu →</span>
   </a>
+  <a class="lab-card" href="{{ '/luzne-tematy/' | relative_url }}">
+    <span class="num">05 / OUTSIDE THE CHART</span>
+    <h2>Luźne tematy, poważna ciekawość</h2>
+    <p>Historia, nauka, technologia, geopolityka, książki i zajawki, które wychodzą poza trading, ale nadal zasługują na źródła i logiczne śledztwo.</p>
+    <span class="go">Otwórz luźne tematy →</span>
+  </a>
 </div>
 
-<div class="lab-note"><strong>Aktualny frontier:</strong> zdefiniowanie wiarygodnego zbioru danych, informacji dostępnej dokładnie w chwili decyzji oraz targetów, które mają znaczenie po kosztach. Złożoność modelu przychodzi później.</div>
+<div class="lab-note"><strong>Dwa równoległe fronty:</strong> Evidence Plane pozostaje na etapie COMPILED, z loadability nadal niepotwierdzoną. Alpha Research Plane zamraża obecnie pochodzenie danych, informację dostępną w chwili decyzji, cost-aware targety, baseline’y, podział próby i budżet hipotez — bez treningu promowanego modelu.</div>
 
 <div class="section-head">
   <h2>Najnowsze w Chronicle</h2>
@@ -60,9 +68,16 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
 {% for post in chron limit:4 %}
   <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
 {% endfor %}
-{% if chron.size == 0 %}
-  <li><span class="ds">Pierwszy artykuł Chronicle jest przygotowywany do publikacji w tej wersji strony.</span></li>
-{% endif %}
+</ul>
+
+<div class="section-head">
+  <h2>Najnowsze w Research</h2>
+  <a href="{{ '/research/' | relative_url }}">Wszystkie notatki →</a>
+</div>
+<ul class="posts">
+{% for post in res limit:4 %}
+  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+{% endfor %}
 </ul>
 
 <div class="section-head">

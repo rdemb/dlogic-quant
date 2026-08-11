@@ -1,0 +1,54 @@
+---
+layout: default
+title: "Luźne tematy"
+description: "Poza tradingiem: historia idei, technologia, nauka, mitologia, geopolityka, książki i pytania, które warto zbadać głębiej."
+permalink: /luzne-tematy/
+---
+{% assign loose = site.posts | where: "category", "luzne" %}
+
+<p class="lab-kicker">Poza wykresem</p>
+<h1>Luźne tematy, które nie są przypadkowymi tematami</h1>
+<p class="dek">Miejsce na rzeczy, które naprawdę mnie interesują: historię, technologię, naukę, mitologię, geopolitykę, książki i pytania, które zaczynają się od zwykłej ciekawości, ale zasługują na rzetelne źródła oraz głębsze śledztwo.</p>
+
+<div class="lab-note"><strong>Zasada działu:</strong> swobodniejszy wybór tematów nie oznacza luźniejszego standardu dowodowego. Fakty pozostają oddzielone od interpretacji, hipotez i spekulacji.</div>
+
+<div class="lab-grid">
+  <div class="lab-card">
+    <span class="num">HISTORIA I CYWILIZACJE</span>
+    <h2>Co przetrwało w tekstach, obrazach i ruinach?</h2>
+    <p>Eseje o dawnych systemach, przełomach, upadkach, pamięci kulturowej i technologiach, których poziom łatwo dziś zaniżyć albo wyolbrzymić.</p>
+  </div>
+  <div class="lab-card">
+    <span class="num">NAUKA I TECHNOLOGIA</span>
+    <h2>Pomysły zmieniające granice możliwego</h2>
+    <p>Badania, spory naukowe, infrastruktura, AI, biologia, kosmos i techniczne pytania, które prowadzą dalej niż bieżący news.</p>
+  </div>
+  <div class="lab-card">
+    <span class="num">GEOPOLITYKA I SYSTEMY</span>
+    <h2>Jak niewidzialne zależności sterują światem?</h2>
+    <p>Surowce, energia, pieniądz, łańcuchy dostaw, państwa i mechanizmy, które stają się widoczne dopiero podczas kryzysu.</p>
+  </div>
+  <div class="lab-card">
+    <span class="num">ZAJAWKI</span>
+    <h2>To, co mnie po prostu jara</h2>
+    <p>Książki, filmy, idee i osobiste tropy, które uruchamiają większe pytanie. Bez udawania, że każda fascynacja jest od razu odkryciem.</p>
+  </div>
+</div>
+
+<div class="section-head">
+  <h2>Publikacje</h2>
+  <span></span>
+</div>
+<ul class="posts">
+{% for post in loose %}
+  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+{% endfor %}
+{% if loose.size == 0 %}
+  <li><span class="ds">Dział jest gotowy. Pierwszy tekst pojawi się wtedy, gdy temat będzie wart pełnego researchu, a nie tylko po to, aby wypełnić nową zakładkę.</span></li>
+{% endif %}
+</ul>
+
+<section class="ip-boundary">
+  <h2>Inny temat, ten sam rygor</h2>
+  <p>W tym dziale mogą pojawić się również odważniejsze interpretacje i pytania otwarte, lecz każda publikacja powinna jasno wskazywać, gdzie kończy się źródło, gdzie zaczyna wniosek, a gdzie pozostaje jedynie spekulacja.</p>
+</section>
