@@ -11,6 +11,7 @@ import argparse
 import pathlib
 import re
 from collections import Counter, defaultdict
+from collections.abc import Callable
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -25,23 +26,32 @@ EXCLUDED_PARTS = {
 }
 
 LITERAL_REPLACEMENTS = {
-    "\u2014": "-",      # em dash
-    "\u2013": "-",      # en dash
-    "\u2026": "...",    # ellipsis
-    "\u00a0": " ",      # non-breaking space
-    " \u2192 ": " / ",  # decorative right arrow
-    "\u2190 ": "",      # decorative back arrow
-    " \u2713": "",      # decorative check mark
+    "\u2014": "-",     # em dash
+    "\u2013": "-",     # en dash
+    "\u2026": "...",   # ellipsis
+    "\u00a0": " ",     # non-breaking space
+    "\u2192": "->",    # decorative right arrow
+    "\u2190": "<-",    # decorative left arrow
+    "\u2713": "",      # decorative check mark
 }
 
-REGEX_REPLACEMENTS: tuple[tuple[re.Pattern[str], str], ...] = (
-    (re.compile(r"\bTo nie jest\b"), "Nie jest to"),
-    (re.compile(r"\bTo nie są\b"), "Nie są to"),
-    (re.compile(r"\bTo nie był\b"), "Nie był to"),
-    (re.compile(r"\bTo nie była\b"), "Nie była to"),
-    (re.compile(r"\bTo nie było\b"), "Nie było to"),
-    (re.compile(r"\bTo prowadzi do\b"), "Wynika z tego"),
-    (re.compile(r"\blecz\b", re.I), lambda match: "Ale" if match.group(0)[0].isupper() else "ale"),
+Replacement = str | Callable[[re.Match[str]], str]
+
+
+def sentence_case_replacement(lowercase: str, uppercase: str) -> Callable[[re.Match[str]], str]:
+    def replace(match: re.Match[str]) -> str:
+        return uppercase if match.group(0)[0].isupper() else lowercase
+    return replace
+
+
+REGEX_REPLACEMENTS: tuple[tuple[re.Pattern[str], Replacement], ...] = (
+    (re.compile(r"\bto nie jest\b", re.I), sentence_case_replacement("nie jest to", "Nie jest to")),
+    (re.compile(r"\bto nie są\b", re.I), sentence_case_replacement("nie są to", "Nie są to")),
+    (re.compile(r"\bto nie był\b", re.I), sentence_case_replacement("nie był to", "Nie był to")),
+    (re.compile(r"\bto nie była\b", re.I), sentence_case_replacement("nie była to", "Nie była to")),
+    (re.compile(r"\bto nie było\b", re.I), sentence_case_replacement("nie było to", "Nie było to")),
+    (re.compile(r"\bto prowadzi do\b", re.I), sentence_case_replacement("wynika z tego", "Wynika z tego")),
+    (re.compile(r"\blecz\b", re.I), sentence_case_replacement("ale", "Ale")),
 )
 
 AUDIT_PATTERNS = {
@@ -50,9 +60,9 @@ AUDIT_PATTERNS = {
     "ellipsis": re.compile("\u2026"),
     "decorative_arrow": re.compile("[\u2190\u2192]"),
     "decorative_check": re.compile("\u2713"),
-    "formulaic_to_nie": re.compile(r"\bTo nie (?:jest|był|była|było|są)\b", re.I),
+    "formulaic_to_nie": re.compile(r"\bto nie (?:jest|był|była|było|są)\b", re.I),
     "formal_lecz": re.compile(r"\blecz\b", re.I),
-    "formulaic_transition": re.compile(r"\bTo prowadzi do\b", re.I),
+    "formulaic_transition": re.compile(r"\bto prowadzi do\b", re.I),
     "formulaic_key": re.compile(r"\b(?:Najważniejsz\w+|Kluczow\w+)\b", re.I),
 }
 
