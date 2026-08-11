@@ -83,7 +83,7 @@ Krzywizny nie da się usunąć jednym wyborem układu współrzędnych na całym
 
 ## Materac pomaga - i jednocześnie oszukuje
 
-Popularny obraz ciężkiej kuli odkształcającej elastyczny materac ma jedną ważną zaletę: pozwala zobaczyć, że tor ruchu może wynikać z geometrii, a nie z niewidzialnej liny łączącej dwa ciała. Jest jednak modelem, który wyjaśnia grawitację za pomocą... ziemskiej grawitacji. Mała kulka krąży w zagłębieniu dlatego, że planeta ciągnie ją w dół po nachylonej powierzchni.
+Popularny obraz ciężkiej kuli odkształcającej elastyczny materac ma jedną ważną zaletę: pozwala zobaczyć, że tor ruchu może wynikać z geometrii, a nie z niewidzialnej liny łączącej dwa ciała. Jest jednak modelem, który wyjaśnia grawitację za pomocą ziemskiej grawitacji. Mała kulka krąży w zagłębieniu dlatego, że planeta ciągnie ją w dół po nachylonej powierzchni.
 
 Analogia pokazuje ponadto zakrzywienie dwóch wymiarów przestrzennych w trzecim wymiarze, podczas gdy ogólna teoria względności dotyczy wewnętrznej geometrii czterowymiarowej czasoprzestrzeni. W słabym polu ogromna część efektu orbitalnego wiąże się z geometrią czasu, czego materac praktycznie nie pokazuje. Tarcie sprawia też, że moneta w lejku spiraluje ku środkowi, choć idealna planeta może krążyć bardzo długo bez utraty energii.
 

@@ -82,7 +82,7 @@ Ten spór nie jest rozstrzygnięty i obie historie potrafią wyjaśnić te same 
 
 Model trójczynnikowy otworzył złotą żyłę. Skoro rynek nie jest jedynym wycenianym czynnikiem, każda zmienna, która w regresji przekrojowej "działa", może zostać ogłoszona nowym faktorem. Literatura dostarczyła setki takich kandydatów i w pewnym momencie przestało to być przyrostem wiedzy, a stało się problemem, który doczekał się własnej nazwy: zoo faktorów.
 
-Harvey, Liu i Zhu w "... and the Cross-Section of Expected Returns" (2016) skatalogowali czynniki ogłoszone w literaturze i policzyli, co z tej skali wynika dla statystyki. Sedno jest proste: klasyczny próg istotności t powyżej 2, odpowiadający około 5% szans na fałszywy alarm, jest skalibrowany na jeden test. Gdy testów są setki, fałszywe odkrycia przestają być ryzykiem, a stają się arytmetyczną pewnością.
+Harvey, Liu i Zhu w artykule z 2016 roku o przekroju oczekiwanych stóp zwrotu skatalogowali czynniki ogłoszone w literaturze i policzyli, co z tej skali wynika dla statystyki. Sedno jest proste: klasyczny próg istotności t powyżej 2, odpowiadający około 5% szans na fałszywy alarm, jest skalibrowany na jeden test. Gdy testów są setki, fałszywe odkrycia przestają być ryzykiem, a stają się arytmetyczną pewnością.
 
 ```
 pojedynczy test, próg t > 2:
