@@ -40,9 +40,9 @@ Tryb:  Tight 60 · Normal 80 · Loose 100 · FOMC 120 · Net 140
 Teraz definicja reżimu. Oznaczmy stan jako T.
 
 ```
-close > Trend + ATR_L&L   →   T = +1   (reżim długi)
-close < Trend − ATR_L&L   →   T = −1   (reżim krótki)
-w innym wypadku           →   T = T(t−1)   (bez zmiany)
+close > Trend + ATR_L&L   ->   T = +1   (reżim długi)
+close < Trend − ATR_L&L   ->   T = −1   (reżim krótki)
+w innym wypadku           ->   T = T(t−1)   (bez zmiany)
 
 linia rysowana po przeciwnej stronie ceny:
 stop = Trend − ATR_L&L   gdy T = +1
@@ -133,6 +133,6 @@ Zbudowałem z tego panel na MT5: reżim L&L, stan QQE, siła trendu z ADX i mome
 
 Bo tak trzeba to ustawić w głowie. Żaden wskaźnik nie jest wyrocznią i żaden nie zwalnia z zarządzania ryzykiem. To jest obraz rynku policzony w konkretny sposób, który ma pomóc podejmować spokojniejsze decyzje i rzadziej wchodzić w bałagan. Wielkość pozycji, moment wyjścia i cierpliwość dalej są po Twojej stronie. Wartość dobrego wskaźnika nie polega na tym, że coś obieca, tylko na tym, że uporządkuje to, co i tak masz na wykresie.
 
-To nie jest porada inwestycyjna. Pokazuję mechanikę i matematykę narzędzi, których sam używam, żebyś rozumiał, co dokładnie liczy każda linia, zanim oprzesz na niej decyzję.
+Nie jest to porada inwestycyjna. Pokazuję mechanikę i matematykę narzędzi, których sam używam, żebyś rozumiał, co dokładnie liczy każda linia, zanim oprzesz na niej decyzję.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

@@ -17,13 +17,13 @@ cover_kind: loose
 ---
 <div class="article-status"><span class="primary">ESEJ ŹRÓDŁOWY</span><span>PÓŹNA EPOKA BRĄZU</span><span>AWARIA KASKADOWA</span><span>COLLAPSE ≠ ZNIKNIĘCIE LUDZI</span></div>
 
-Jeszcze kilka pokoleń wcześniej skrybowie Ugarit zapisywali na glinianych tabliczkach opowieść o Baalu, władcy burzy i deszczu, który walczył z Morzem, śmiercią i chaosem, aby przywrócić światu porządek. Pod koniec istnienia miasta skrybowie nadal pisali na glinie, lecz ich dokumenty nie opowiadały już wyłącznie o bogach.
+Jeszcze kilka pokoleń wcześniej skrybowie Ugarit zapisywali na glinianych tabliczkach opowieść o Baalu, władcy burzy i deszczu, który walczył z Morzem, śmiercią i chaosem, aby przywrócić światu porządek. Pod koniec istnienia miasta skrybowie nadal pisali na glinie, ale ich dokumenty nie opowiadały już wyłącznie o bogach.
 
 W królewskiej korespondencji pojawiają się wrogie okręty, spalone miejscowości, wojska przebywające poza krajem i flota skierowana do odległego regionu. Król Ammurapi informuje, że jego państwo zostało odsłonięte właśnie wtedy, gdy zagrożenie dotarło do wybrzeża. Jedna z wiadomości wspomina o siedmiu wrogich statkach, które wyrządziły poważne szkody.
 
-Nie wiemy, czy którykolwiek z tych dokumentów był dosłownie ostatnim listem Ugarit. Popularna historia o tabliczce znalezionej w piecu, zatrzymanej przez nadejście napastników, jest bardziej filmowa niż pozwala na to archeologiczny kontekst. Mimo to archiwa zachowały moment niezwykły: państwo nadal formalnie działało, król pisał, urzędnicy naliczali świadczenia, żołnierze wykonywali rozkazy, a statki pływały — lecz niemal każdy element systemu znajdował się nie tam, gdzie był najbardziej potrzebny.
+Nie wiemy, czy którykolwiek z tych dokumentów był dosłownie ostatnim listem Ugarit. Popularna historia o tabliczce znalezionej w piecu, zatrzymanej przez nadejście napastników, jest bardziej filmowa niż pozwala na to archeologiczny kontekst. Mimo to archiwa zachowały moment niezwykły: państwo nadal formalnie działało, król pisał, urzędnicy naliczali świadczenia, żołnierze wykonywali rozkazy, a statki pływały - ale niemal każdy element systemu znajdował się nie tam, gdzie był najbardziej potrzebny.
 
-To prowadzi do pytania znacznie ważniejszego niż zagadka tożsamości Ludów Morza:
+Wynika z tego pytania znacznie ważniejszego niż zagadka tożsamości Ludów Morza:
 
 > **Jak kilka okrętów mogło zagrozić jednemu z najważniejszych portów wschodniej części Morza Śródziemnego?**
 
@@ -51,11 +51,11 @@ Najważniejsza korekta brzmi więc:
 
 > **Nie było jednego dnia końca świata. Istniało przesuwające się pole kryzysu, w którym poszczególne regiony przekraczały własne punkty krytyczne w różnym czasie.**
 
-Każda teoria wymagająca jednego zsynchronizowanego sprawcy — jednego najazdu, jednego trzęsienia ziemi, jednej suszy albo jednej rewolucji technologicznej — zaczyna z poważnym problemem chronologicznym.
+Każda teoria wymagająca jednego zsynchronizowanego sprawcy - jednego najazdu, jednego trzęsienia ziemi, jednej suszy albo jednej rewolucji technologicznej - zaczyna z poważnym problemem chronologicznym.
 
 ## Trzy lata, które mogły złamać Hatti
 
-Najbardziej precyzyjny dowód klimatyczny pochodzi z centralnej Anatolii. Badanie słojów jałowców oraz izotopów węgla wskazało na wyjątkowo silny, ciągły okres suszy około lat 1198–1196 p.n.e., z niewielkim marginesem chronologicznym. Wydarzenie pokrywa się z końcową fazą istnienia państwa hetyckiego, choć autorzy nie przedstawili klimatu jako jedynej przyczyny jego rozpadu.
+Najbardziej precyzyjny dowód klimatyczny pochodzi z centralnej Anatolii. Badanie słojów jałowców oraz izotopów węgla wskazało na wyjątkowo silny, ciągły okres suszy około lat 1198 - 1196 p.n.e., z niewielkim marginesem chronologicznym. Wydarzenie pokrywa się z końcową fazą istnienia państwa hetyckiego, choć autorzy nie przedstawili klimatu jako jedynej przyczyny jego rozpadu.
 
 Jednoroczny nieurodzaj nie musiał niszczyć rozwiniętego państwa. Magazyny, daniny i redystrybucja istniały między innymi po to, aby przenosić żywność z obszarów posiadających nadwyżkę do regionów dotkniętych niedoborem.
 
@@ -96,7 +96,7 @@ W stabilnym okresie centrum pobiera zasoby od peryferii, a w zamian utrzymuje be
     <circle cx="520" cy="279" r="76" fill="var(--acc)" opacity=".1"/><text x="520" y="267" text-anchor="middle" font-size="20" fill="var(--ink)">AWARIA</text><text x="520" y="294" text-anchor="middle" font-size="20" fill="var(--ink)">KASKADOWA</text>
   </g>
 </svg>
-<figcaption>Autorska synteza jakościowa. Strzałki nie przypisują jednej przyczyny każdej destrukcji, lecz pokazują możliwe dodatnie sprzężenia zwrotne pomiędzy udokumentowanymi rodzajami presji.</figcaption>
+<figcaption>Autorska synteza jakościowa. Strzałki nie przypisują jednej przyczyny każdej destrukcji, ale pokazują możliwe dodatnie sprzężenia zwrotne pomiędzy udokumentowanymi rodzajami presji.</figcaption>
 </figure>
 
 Państwo próbuje ocalić porządek za pomocą metod, które wcześniej zapewniały jego działanie. W zmienionych warunkach te same metody przyspieszają katastrofę.
@@ -111,17 +111,17 @@ Magazyn, który wcześniej rozpraszał lokalne ryzyko, zamienia się w wąskie g
 
 Można nazwać to **paradoksem wspólnego bufora**:
 
-> System może być wyjątkowo odporny na pojedynczy szok lokalny, lecz bardzo podatny na kilka skorelowanych szoków, ponieważ wszystkie jego części próbują korzystać z tych samych zapasów i tej samej zdolności koordynacji.
+> System może być wyjątkowo odporny na pojedynczy szok lokalny, ale bardzo podatny na kilka skorelowanych szoków, ponieważ wszystkie jego części próbują korzystać z tych samych zapasów i tej samej zdolności koordynacji.
 
 Nie oznacza to, że centralizacja zawsze była błędem. Oznacza, że mechanizm zoptymalizowany do obsługi typowego kryzysu mógł nie posiadać pojemności wobec kryzysu obejmującego jednocześnie żywność, handel, obronę i zaufanie do władzy.
 
 ## Kim byli Ludy Morza?
 
-„Ludy Morza” to współczesna nazwa zbiorcza dla grup wymienianych w egipskich inskrypcjach, między innymi Peleset, Tjeker, Shekelesh, Denyen i Weshesh. Źródła Ramzesa III w Medinet Habu przedstawiają zwycięstwo faraona w walce lądowej oraz morskiej, lecz nie są neutralnym raportem wojskowym. Ich celem było ukazanie monarchy jako obrońcy porządku pokonującego chaos.
+„Ludy Morza” to współczesna nazwa zbiorcza dla grup wymienianych w egipskich inskrypcjach, między innymi Peleset, Tjeker, Shekelesh, Denyen i Weshesh. Źródła Ramzesa III w Medinet Habu przedstawiają zwycięstwo faraona w walce lądowej oraz morskiej, ale nie są neutralnym raportem wojskowym. Ich celem było ukazanie monarchy jako obrońcy porządku pokonującego chaos.
 
 Nie wiemy, czy wszystkie wymienione grupy tworzyły jeden trwały sojusz, posiadały wspólne pochodzenie albo realizowały jeden plan. Część mogła składać się z migrantów, część z najemników, marynarzy, osadników lub rajderów, którzy wcześniej funkcjonowali wewnątrz tego samego świata handlowego.
 
-Archeogenetyka potwierdza realne przemieszczanie ludzi. Genomy z wczesnożelaznego Aszkelonu wykazały domieszkę związaną z populacjami europejskimi, której nie obserwowano u wcześniejszych mieszkańców, lecz sygnał szybko uległ rozcieńczeniu wskutek mieszania z miejscową ludnością Lewantu. Nie dowodzi to jednej „rasy najeźdźców”. Pokazuje mobilność, osadnictwo i integrację.
+Archeogenetyka potwierdza realne przemieszczanie ludzi. Genomy z wczesnożelaznego Aszkelonu wykazały domieszkę związaną z populacjami europejskimi, której nie obserwowano u wcześniejszych mieszkańców, ale sygnał szybko uległ rozcieńczeniu wskutek mieszania z miejscową ludnością Lewantu. Nie dowodzi to jednej „rasy najeźdźców”. Pokazuje mobilność, osadnictwo i integrację.
 
 Najbardziej użyteczna interpretacja traktuje Ludy Morza jednocześnie jako część przyczyn i część skutków szerszego kryzysu. Ludzie tracący ziemię, żołd, miejsce w armii albo ochronę państwa mogli stawać się migrantami, najemnikami, piratami lub uczestnikami nowych koalicji. Ich ruch pogłębiał presję na kolejne regiony, a kolejne upadki zwiększały liczbę ludzi zmuszonych do ruchu.
 
@@ -146,7 +146,7 @@ Taki dowód przypomina, że kryzys był procesem. Nie wszystkie instytucje końc
 
 Słowo „cywilizacja” sugeruje, że pałace, ludzie, umiejętności i gospodarka zniknęły jednocześnie. W wielu regionach przestał jednak działać przede wszystkim określony sposób organizowania społeczeństwa.
 
-W Grecji zniknęły pałace i administracyjne pismo linearne B, ściśle związane z potrzebami dworu. Nie zniknęli rolnicy, ceramicy ani żeglarze. W Anatolii zakończyło się imperium i centralna administracja Hattusy, lecz społeczności nadal żyły, a późniejsze państwa przetwarzały część hetyckiego dziedzictwa. Egipt utracił część wpływów, ale zachował monarchię, administrację oraz pismo. Cypr doświadczył zmian i destrukcji, lecz utrzymał metalurgię, żeglugę oraz elementy własnych tradycji.
+W Grecji zniknęły pałace i administracyjne pismo linearne B, ściśle związane z potrzebami dworu. Nie zniknęli rolnicy, ceramicy ani żeglarze. W Anatolii zakończyło się imperium i centralna administracja Hattusy, ale społeczności nadal żyły, a późniejsze państwa przetwarzały część hetyckiego dziedzictwa. Egipt utracił część wpływów, ale zachował monarchię, administrację oraz pismo. Cypr doświadczył zmian i destrukcji, ale utrzymał metalurgię, żeglugę oraz elementy własnych tradycji.
 
 <figure>
 <svg viewBox="0 0 980 430" role="img" aria-labelledby="collapse-title collapse-desc" xmlns="http://www.w3.org/2000/svg">
@@ -166,11 +166,11 @@ W Grecji zniknęły pałace i administracyjne pismo linearne B, ściśle związa
 <figcaption>„Collapse” często opisuje utratę skali, hierarchii i administracji, a nie biologiczne zniknięcie populacji ani całkowite wymazanie wiedzy.</figcaption>
 </figure>
 
-To prowadzi do hipotezy, że jednym z najważniejszych elementów kryzysu był **upadek interfejsów koordynacji**. Lokalna produkcja mogła trwać, lecz pałac przestawał skutecznie wiedzieć, ile posiada zboża, kto jest mu winien świadczenie, gdzie znajduje się wojsko i czy port nadal pozostaje bezpieczny.
+Wynika z tego hipotezy, że jednym z najważniejszych elementów kryzysu był **upadek interfejsów koordynacji**. Lokalna produkcja mogła trwać, ale pałac przestawał skutecznie wiedzieć, ile posiada zboża, kto jest mu winien świadczenie, gdzie znajduje się wojsko i czy port nadal pozostaje bezpieczny.
 
 Centrum traciło czytelność własnego terytorium.
 
-## Świat pałaców upadł, lecz morze pozostało
+## Świat pałaców upadł, ale morze pozostało
 
 Każda teoria katastrofy musi wyjaśniać również tych, którzy przetrwali albo skorzystali na zmianie.
 
@@ -197,7 +197,7 @@ Każda decyzja mogła być racjonalna z perspektywy pojedynczego uczestnika. Kr�
 
 Dopiero suma tych reakcji tworzyła katastrofę systemową.
 
-> **Późna epoka brązu mogła upaść nie dlatego, że nikt nie próbował jej ratować, lecz dlatego, że poszczególni uczestnicy ratowali własny fragment porządku w sposób pogarszający sytuację pozostałych.**
+> **Późna epoka brązu mogła upaść nie dlatego, że nikt nie próbował jej ratować, ale dlatego, że poszczególni uczestnicy ratowali własny fragment porządku w sposób pogarszający sytuację pozostałych.**
 
 To pozostaje interpretacją, nie odczytanym ze starożytnej tabliczki równaniem. Jej siłą jest jednak zdolność połączenia danych klimatycznych, korespondencji wojskowej, obowiązków daninowych, archeologii handlu, mobilności ludności i regionalnych kontrprzykładów bez sprowadzania wszystkiego do jednego cudownego wyjaśnienia.
 
@@ -213,9 +213,9 @@ Zaczęli pływać po nim inni ludzie.
 
 ## Materiały wizualne i źródła
 
-- [Manning i in., *Severe multi-year drought coincident with Hittite collapse around 1198–1196 bc*, Nature](https://www.nature.com/articles/s41586-022-05693-y)
+- [Manning i in., *Severe multi-year drought coincident with Hittite collapse around 1198 - 1196 bc*, Nature](https://www.nature.com/articles/s41586-022-05693-y)
 - [A. Bernard Knapp i Sturt W. Manning, *Crisis in Context: The End of the Late Bronze Age in the Eastern Mediterranean*, American Journal of Archaeology](https://ajaonline.org/book-review/2547/)
-- [Institute of Nautical Archaeology — Uluburun Late Bronze Age Shipwreck](https://nauticalarch.org/projects/uluburun-late-bronze-age-shipwreck-excavation/)
+- [Institute of Nautical Archaeology - Uluburun Late Bronze Age Shipwreck](https://nauticalarch.org/projects/uluburun-late-bronze-age-shipwreck-excavation/)
 - [Feldman i in., *Ancient DNA sheds light on the genetic origins of early Iron Age Philistines*, Science Advances](https://www.science.org/doi/10.1126/sciadv.aax0061)
 - Eric H. Cline, *1177 B.C.: The Year Civilization Collapsed*, wydanie zrewidowane, Princeton University Press, 2021.
 - A. Bernard Knapp, *Migration Myths and the End of the Bronze Age in the Eastern Mediterranean*, Cambridge University Press, 2021.

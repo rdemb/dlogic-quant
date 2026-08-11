@@ -2,7 +2,7 @@
 layout: labpost
 title: "Czy oddychasz Cezarem? Matematyka mówi: prawdopodobnie, nie na pewno"
 description: "Słynny rachunek ostatniego oddechu Cezara daje wartość oczekiwaną, a nie gwarancję. O liczbie Avogadra, mieszaniu atmosfery, rozkładzie Poissona i granicach pięknej metafory."
-dek: "Dla dwóch półlitrowych oddechów idealny model daje średnio około 1,4 cząsteczki wspólnego pochodzenia, lecz prawdopodobieństwo znalezienia przynajmniej jednej wynosi około 76%, nie 100%."
+dek: "Dla dwóch półlitrowych oddechów idealny model daje średnio około 1,4 cząsteczki wspólnego pochodzenia, ale prawdopodobieństwo znalezienia przynajmniej jednej wynosi około 76%, nie 100%."
 date: 2026-08-11 16:50:00 +0200
 category: luzne
 tags: [odkrywanie-niewidzialnego, fizyka, statystyka, atmosfera, prawdopodobienstwo]
@@ -17,7 +17,7 @@ cover_kind: loose
 ---
 <div class="article-status"><span class="primary">ESEJ ŹRÓDŁOWY</span><span>FIZYKA STATYSTYCZNA</span><span>RACHUNEK RZĘDU WIELKOŚCI</span><span>MODEL IDEALIZOWANY</span></div>
 
-Właśnie bierzesz oddech. W pół litrze powietrza znajduje się około dziesięciu tryliardów cząsteczek — liczba tak ogromna, że pojedynczy wydech może po rozproszeniu w atmosferze pozostawić ślad w oddechach ludzi żyjących tysiące lat później.
+Właśnie bierzesz oddech. W pół litrze powietrza znajduje się około dziesięciu tryliardów cząsteczek - liczba tak ogromna, że pojedynczy wydech może po rozproszeniu w atmosferze pozostawić ślad w oddechach ludzi żyjących tysiące lat później.
 
 Stąd bierze się jedna z najbardziej sugestywnych opowieści fizyki statystycznej: w każdym wdechu znajduje się przynajmniej jedna cząsteczka z ostatniego oddechu Juliusza Cezara.
 
@@ -25,7 +25,7 @@ Historia brzmi jak materialna forma nieśmiertelności. Cezar umiera w idy marco
 
 Dla rozsądnego zestawu założeń wynik wynosi około **1,4**. Nie oznacza to, że w każdym oddechu musi znaleźć się jedna cząsteczka i dodatkowe cztery dziesiąte. Jest to wartość oczekiwana rozkładu liczby trafień. Jeżeli cząsteczki są rozmieszczone losowo i niezależnie, część oddechów nie zawiera żadnej, część jedną, część dwie albo więcej.
 
-> **Średnia równa 1,4 daje w idealizowanym modelu około 76% szans na przynajmniej jedno trafienie — dużo, lecz nie pewność.**
+> **Średnia równa 1,4 daje w idealizowanym modelu około 76% szans na przynajmniej jedno trafienie - dużo, ale nie pewność.**
 
 Jeszcze ważniejsze jest to, że nie posiadamy próbki ostatniego wydechu Cezara, nie znamy jego objętości ani dalszych losów poszczególnych cząsteczek. Rachunek jest eksperymentem myślowym pokazującym skalę liczby Avogadra i potęgę mieszania, nie testem genealogicznym powietrza w twoich płucach.
 
@@ -90,7 +90,7 @@ W nowym półlitrowym wdechu znajduje się ponownie około \(1{,}23\times10^{22}
     <text x="423" y="151" text-anchor="middle" font-size="16" fill="var(--ink)">ATMOSFERA</text><text x="423" y="191" text-anchor="middle" font-size="24" fill="var(--acc)">1,07×10⁴⁴</text><text x="423" y="220" text-anchor="middle" font-size="13" fill="var(--mut)">cząsteczek</text>
     <text x="693" y="151" text-anchor="middle" font-size="16" fill="var(--ink)">UDZIAŁ f</text><text x="693" y="191" text-anchor="middle" font-size="22" fill="var(--acc)">1,15×10⁻²²</text><text x="693" y="220" text-anchor="middle" font-size="13" fill="var(--mut)">przy idealnym mieszaniu</text>
     <text x="950" y="140" text-anchor="middle" font-size="16" fill="var(--ink)">NOWY WDECH 0,5 L</text><text x="950" y="191" text-anchor="middle" font-size="38" fill="var(--acc)">λ ≈ 1,42</text><text x="950" y="226" text-anchor="middle" font-size="13" fill="var(--mut)">wartość oczekiwana</text>
-    <text x="540" y="324" text-anchor="middle" font-size="19" fill="var(--ink)">Duże liczby upraszczają rachunek — ale nie zamieniają średniej w gwarancję.</text>
+    <text x="540" y="324" text-anchor="middle" font-size="19" fill="var(--ink)">Duże liczby upraszczają rachunek - ale nie zamieniają średniej w gwarancję.</text>
   </g>
 </svg>
 <figcaption>Wynik zależy liniowo od objętości wydechu źródłowego i objętości badanego wdechu, a odwrotnie od liczby cząsteczek w atmosferze.</figcaption>
@@ -168,7 +168,7 @@ Nazwa „ostatni oddech Cezara” jest więc narracyjną etykietą dla dowolnej 
 
 Matematyka nie identyfikuje konkretnej osoby. Pokazuje, że przy astronomicznej liczbie cząsteczek mała historyczna próbka może po dostatecznym mieszaniu pozostawić niezerową oczekiwaną reprezentację w małej próbce współczesnej.
 
-## Najciekawsza lekcja dotyczy nie Cezara, lecz prawdopodobieństwa
+## Najciekawsza lekcja dotyczy nie Cezara, ale prawdopodobieństwa
 
 Opowieść jest cenna właśnie dlatego, że łatwo popełnić w niej subtelny błąd.
 
@@ -182,7 +182,7 @@ Dlatego poprawna puenta brzmi mniej magicznie, ale jest intelektualnie ciekawsza
 
 > **W idealnym modelu istnieje duża szansa, że twój oddech zawiera cząsteczkę z określonego dawnego oddechu. Jeżeli jej nie zawiera, model nie został obalony.**
 
-Ziarnistość materii łączy nas z przeszłością, lecz nie wydaje certyfikatów pochodzenia dla każdego wdechu.
+Ziarnistość materii łączy nas z przeszłością, ale nie wydaje certyfikatów pochodzenia dla każdego wdechu.
 
 Być może oddychasz Cezarem.
 

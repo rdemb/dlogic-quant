@@ -33,7 +33,7 @@ Stopa 7% rocznie jest ilustracyjna (służy arytmetyce, nie prognozie).
 liniowy szacunek: 1000 + 40 · 70 = 3 800
 zysk w 1. roku:   70
 zysk w 40. roku:  ~980 (14 razy więcej, przy tej samej stopie)
-ostatnie 10 lat:  7 612 → 14 974, czyli połowa końcowej kwoty
+ostatnie 10 lat:  7 612 -> 14 974, czyli połowa końcowej kwoty
 ```
 
 Stąd najbardziej niedoceniana własność składania: efekt kumuluje się na końcu. Morgan Housel w „The Psychology of Money" (2020) podaje skrajny przykład: z 84,5 mld USD majątku Warrena Buffetta (w chwili pisania książki) 81,5 mld przyszło po jego 65. urodzinach. Nie dlatego, że stopa wzrosła na starość, tylko dlatego, że składanie działało nieprzerwanie od czasów, gdy Buffett był dzieckiem. Sekret nie tkwi w wyjątkowej stopie, tylko w wyjątkowo długim, nieprzerwanym horyzoncie.
@@ -99,10 +99,10 @@ Zamiast potęgować, wystarczy zapamiętać jedną liczbę. Czas podwojenia kapi
 ```
 czas podwojenia ≈ 72 / stopa (w % rocznie)
 
- 2%  → 36 lat     (dokładnie 35,0)
- 4%  → 18 lat     (17,7)
- 7%  → 10,3 roku  (10,2)
-10%  → 7,2 roku   (7,3)
+ 2%  -> 36 lat     (dokładnie 35,0)
+ 4%  -> 18 lat     (17,7)
+ 7%  -> 10,3 roku  (10,2)
+10%  -> 7,2 roku   (7,3)
 ```
 
 Reguła zamienia stopy na podwojenia i nagle widać skalę. 40 lat przy 7% to niemal cztery podwojenia, a 2^4 = 16, stąd piętnastokrotność z poprzedniego bloku. Przy 2% ten sam horyzont to nieco ponad jedno podwojenie (1.02^40 ≈ 2.21). Różnica „5 punktów procentowych" brzmi niegroźnie, a na 40 latach oznacza różnicę między piętnastokrotnością a okolicą 2,2 raza.
@@ -142,8 +142,8 @@ Dziesięć wczesnych lat wpłat pobija trzydzieści późniejszych. To nie magia
 Opłaty wyglądają niewinnie, bo są podawane w skali roku, a działają w skali dekad. Mechanizm jest lustrzany wobec zysków: koszty też się składają, tylko przeciwko rachunkowi. Ten rachunek nie wymaga żadnej prognozy, wystarczy potęgowanie:
 
 ```
-7,0% rocznie:  1.07^30  ≈ 7.61    (100 000 → ok. 761 000)
-5,5% rocznie:  1.055^30 ≈ 4.98    (100 000 → ok. 498 000)
+7,0% rocznie:  1.07^30  ≈ 7.61    (100 000 -> ok. 761 000)
+5,5% rocznie:  1.055^30 ≈ 4.98    (100 000 -> ok. 498 000)
 
 różnica to tylko 1,5 p.p. rocznych opłat,
 ubytek kapitału końcowego: 1 − 4.98/7.61 ≈ 34,5%, około jedna trzecia
@@ -158,13 +158,13 @@ Im dłuższy horyzont, tym większy udział opłat w wyniku, dokładnie z tego s
 Ostatnia dźwignia jest najmniej intuicyjna: sama zmienność obniża tempo składania, nawet przy tej samej „średniej". Klasyczny przykład: plus 50%, potem minus 50%. Średnia arytmetyczna wynosi zero, a kapitał stopniał o jedną czwartą.
 
 ```
-+50%, potem −50%:   1.5 · 0.5 = 0.75  →  −25%, nie 0%
++50%, potem −50%:   1.5 · 0.5 = 0.75  ->  −25%, nie 0%
 średnia arytmetyczna: (+50% − 50%) / 2 = 0%
 średnia geometryczna: √0.75 − 1 ≈ −13,4% na okres
 
 dwa aktywa o tej samej średniej arytmetycznej 7%:
-stabilne:   +7% co roku            → 1.07^30 ≈ 7.61
-huśtawka:   +27%, −13%, na zmianę  → (1.27 · 0.87)^15 ≈ 4.47
+stabilne:   +7% co roku            -> 1.07^30 ≈ 7.61
+huśtawka:   +27%, −13%, na zmianę  -> (1.27 · 0.87)^15 ≈ 4.47
 
 przybliżenie: tempo geometryczne ≈ arytmetyczne − σ²/2
 tutaj: 7% − (20%)²/2 = 7% − 2 p.p. ≈ 5% rocznie

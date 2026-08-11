@@ -24,7 +24,7 @@ category: edukacja
 Wektorowy znaczy tu tyle, że nie ma pętli po kolejnych świecach. Zamiast iterować bar po barze, operuje się na całych kolumnach naraz, a biblioteka liczy je hurtem. Przepływ danych ma pięć etapów i każdy z nich to jedna operacja na serii:
 
 ```
-ceny  →  sygnał (−1/0/1)  →  pozycja = sygnał.shift(1)  →  zwrot pozycji  →  krzywa kapitału
+ceny  ->  sygnał (−1/0/1)  ->  pozycja = sygnał.shift(1)  ->  zwrot pozycji  ->  krzywa kapitału
 ```
 
 Ceny to zwykle kolumna zamknięć. Sygnał to reguła, która każdej świecy przypisuje kierunek: wartość dodatnią dla pozycji długiej, zero dla braku pozycji, wartość ujemną dla krótkiej. Pozycja to sygnał przesunięty o jeden bar do przodu, o czym za chwilę. Zwrot pozycji to iloczyn pozycji i zwrotu rynku na danym barze. Krzywa kapitału to skumulowany iloczyn tych zwrotów. Cała mechanika opiera się na trzech funkcjach pandas, opisanych w jej dokumentacji: `rolling` liczy średnie kroczące, `shift` przesuwa serię o zadaną liczbę barów, a `cumprod` daje skumulowany iloczyn potrzebny do krzywej kapitału.

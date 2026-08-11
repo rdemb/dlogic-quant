@@ -177,6 +177,6 @@ Najczęstsze nieporozumienie początkującego wygląda tak: opcja głęboko poza
 
 Skąd dokładnie bierze się wartość czasowa, jak przeliczyć zmienność na cenę opcji i dlaczego opcja przy pieniądzu traci na czasie najszybciej, to już temat modelu Blacka-Scholesa i tak zwanych greckich: delty, gammy, thety i vegi, czyli miar wrażliwości ceny opcji na ruch instrumentu, upływ czasu i zmiany zmienności. To materiał na osobny artykuł. Ten kończy się na fundamencie, bez którego tamten nie ma sensu: opcja to prawo, nie obowiązek, kupujący ryzykuje premię, a wystawca przyjmuje obowiązek, cena opcji to wartość wewnętrzna plus czasowa, a spójności całego układu pilnuje parytet put-call.
 
-To nie jest porada inwestycyjna. To materiał edukacyjny porządkujący podstawy opcji według podręczników Hulla i Natenberga oraz materiałów edukacyjnych OIC; wszystkie przykłady liczbowe są ilustracyjne i umowne.
+Nie jest to porada inwestycyjna. To materiał edukacyjny porządkujący podstawy opcji według podręczników Hulla i Natenberga oraz materiałów edukacyjnych OIC; wszystkie przykłady liczbowe są ilustracyjne i umowne.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

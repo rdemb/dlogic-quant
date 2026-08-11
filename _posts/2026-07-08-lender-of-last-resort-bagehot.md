@@ -26,7 +26,7 @@ Bank żyje z niedopasowania terminów. Po jednej stronie bilansu ma zobowiązani
 TRANSFORMACJA TERMINOW (zrodlo kruchosci):
 
   PASYWA (krotkie)          AKTYWA (dlugie)
-  depozyty na zadanie   →   kredyty na lata, obligacje, aktywa
+  depozyty na zadanie   ->   kredyty na lata, obligacje, aktywa
   platne OD REKI            zamrozone, trudne do szybkiej sprzedazy
 
   problem: wszyscy moga zazadac naraz tego, co jest zamrozone na lata
@@ -71,10 +71,10 @@ Wymóg dobrego zastawu koduje najważniejsze rozróżnienie całej doktryny, czy
 ```
 DWA ROZNE PROBLEMY (zastaw je rozdziela):
 
-  NIEPLYNNY bank      aktywa dobre, ale zamrozone      → RATOWAC
+  NIEPLYNNY bank      aktywa dobre, ale zamrozone      -> RATOWAC
                       ma dobry zastaw do zastawienia      (Bagehot)
   ─────────────────────────────────────────────────
-  NIEWYPLACALNY bank  aktywa naprawde warte mniej       → UPADEK / resolucja
+  NIEWYPLACALNY bank  aktywa naprawde warte mniej       -> UPADEK / resolucja
                       niz dlugi, brak dobrego zastawu      (nie ratowac)
 
   klopot: w srodku paniki, przy cenach pozarowych,
@@ -95,7 +95,7 @@ To jest dokładnie idea elastycznego pieniądza. Nieprzypadkowo ustawa powołuj�
 
 Najlepszym dowodem, że reguła jest żywa, są jej powroty. W 1907 roku Stany Zjednoczone nie miały jeszcze banku centralnego. Panikę bankową zatrzymał wtedy J.P. Morgan, człowiek, który osobistym autorytetem zebrał prywatnych bankierów, żeby złożyli się na wspólną pulę gotówki i podparli instytucje na skraju upadku. Był to zaimprowizowany, prywatny pożyczkodawca ostatniej instancji. To, że system trzeba było ratować autorytetem jednego finansisty, obnażyło jego kruchość i stało się jednym z głównych impulsów do powołania Rezerwy Federalnej w 1913 roku, z wpisanym w cel elastycznym pieniądzem i oficjalną funkcją ostatniej instancji.
 
-W 2008 roku ta sama zasada wróciła, ale w skali całego systemu. Kryzys uderzył nie tylko w banki depozytowe, lecz w bankowość równoległą: fundusze rynku pieniężnego, rynek repo, dealerów, papiery komercyjne. Banki centralne rozciągnęły więc płynność w stylu Bagehota daleko poza klasyczne okienko dyskontowe. Pojawiły się aukcje kredytu terminowego, pożyczki dla dealerów, wsparcie rynku papierów komercyjnych oraz linie swapowe dostarczające dolary za granicę (narzędzia znane pod skrótami w rodzaju TAF, PDCF czy CPFF). Bagehot rozciągnięty na system, o jakim nie mógł marzyć.
+W 2008 roku ta sama zasada wróciła, ale w skali całego systemu. Kryzys uderzył nie tylko w banki depozytowe, ale w bankowość równoległą: fundusze rynku pieniężnego, rynek repo, dealerów, papiery komercyjne. Banki centralne rozciągnęły więc płynność w stylu Bagehota daleko poza klasyczne okienko dyskontowe. Pojawiły się aukcje kredytu terminowego, pożyczki dla dealerów, wsparcie rynku papierów komercyjnych oraz linie swapowe dostarczające dolary za granicę (narzędzia znane pod skrótami w rodzaju TAF, PDCF czy CPFF). Bagehot rozciągnięty na system, o jakim nie mógł marzyć.
 
 Rzeczywistość zeszła jednak w kilku punktach z czystej reguły. Standardy zastawu bywały luzowane, stopy nie zawsze były karne, a w niektórych przypadkach wsparcie płynnościowe zlewało się ze wsparciem wypłacalności, czyli z ratowaniem instytucji, które według twardego Bagehota powinny upaść. To właśnie te odstępstwa rozpaliły na nowo spór o pokusę nadużycia.
 
@@ -123,6 +123,6 @@ Drugi wniosek jest praktyczny: pożyczkodawca ostatniej instancji to instytucjon
 
 Kto to rozumie, ten czyta kryzys płynnościowy i reakcję banku centralnego jako spójną, starą logikę, a nie doraźną improwizację. To także domyka obraz kreacji pieniądza: bank centralny podpiera system, bo tylko on potrafi elastycznie rozszerzyć bazę monetarną, gdy prywatna płynność znika.
 
-To nie jest porada inwestycyjna. To wykład mechaniki płynności i roli banku centralnego, oparty na klasyce (Bagehot, w tle Fisher i Minsky), żebyś rozumiał, dlaczego panika potrafi przewrócić zdrowy bank i po co istnieje pożyczkodawca ostatniej instancji, zanim zaczniesz doszukiwać się wpływu takich epizodów na rynki.
+Nie jest to porada inwestycyjna. To wykład mechaniki płynności i roli banku centralnego, oparty na klasyce (Bagehot, w tle Fisher i Minsky), żebyś rozumiał, dlaczego panika potrafi przewrócić zdrowy bank i po co istnieje pożyczkodawca ostatniej instancji, zanim zaczniesz doszukiwać się wpływu takich epizodów na rynki.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

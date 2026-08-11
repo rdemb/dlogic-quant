@@ -49,14 +49,14 @@ Z tej perspektywy pieniądz nie rodzi się jako towar ułatwiający handel, tylk
 DWIE OPOWIESCI O POCZATKACH PIENIADZA:
 
   MIT (podrecznik)   barter jest niewygodny (podwojna zbieznosc potrzeb)
-                     → ludzie wymyslaja pieniadz jako smar wymiany
+                     -> ludzie wymyslaja pieniadz jako smar wymiany
 
   ZAPIS (Graeber)    najpierw dlug i zobowiazanie ("jestes mi winien")
-                     → pieniadz jako jednostka liczenia dlugu
+                     -> pieniadz jako jednostka liczenia dlugu
                      brak dowodow na gospodarke czysto barterowa
 ```
 
-Ta zmiana perspektywy jest praktyczna, nie tylko akademicka. Jeśli pieniądz jest z natury zapisem długu, to przestaje dziwić, że współczesny pieniądz nie ma pokrycia w kruszcu i że większość go istnieje wyłącznie jako zapis w bankach. To nie jest zdrada prawdziwego pieniądza, tylko powrót do tego, czym pieniądz w gruncie rzeczy był od początku.
+Ta zmiana perspektywy jest praktyczna, nie tylko akademicka. Jeśli pieniądz jest z natury zapisem długu, to przestaje dziwić, że współczesny pieniądz nie ma pokrycia w kruszcu i że większość go istnieje wyłącznie jako zapis w bankach. Nie jest to zdrada prawdziwego pieniądza, tylko powrót do tego, czym pieniądz w gruncie rzeczy był od początku.
 
 <figure>
 <svg viewBox="0 0 640 300" font-family="-apple-system,Segoe UI,Roboto,sans-serif" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ev" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-opacity="0.6" stroke-width="1.5"/></marker></defs><text x="20" y="26" font-size="13.5" fill="currentColor">Pieniądz jako zmieniająca się instytucja, nie stała rzecz</text><text x="20" y="44" font-size="10.5" fill="currentColor" fill-opacity="0.6">Kolejne formy pieniądza. Pod każdą z nich leży ta sama warstwa długu i zaufania.</text><rect x="20" y="80" width="100" height="70" rx="8" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-opacity="0.35"/><text x="70" y="102" font-size="11" fill="currentColor" text-anchor="middle" font-weight="600">TOWAR</text><text x="70" y="120" font-size="8.5" fill="currentColor" fill-opacity="0.65" text-anchor="middle">bydło, zboże,</text><text x="70" y="132" font-size="8.5" fill="currentColor" fill-opacity="0.65" text-anchor="middle">sól, muszle</text><rect x="145" y="80" width="100" height="70" rx="8" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-opacity="0.35"/><text x="195" y="102" font-size="11" fill="currentColor" text-anchor="middle" font-weight="600">KRUSZEC</text><text x="195" y="120" font-size="8.5" fill="currentColor" fill-opacity="0.65" text-anchor="middle">złoto, srebro,</text><text x="195" y="132" font-size="8.5" fill="currentColor" fill-opacity="0.65" text-anchor="middle">monety</text><rect x="270" y="80" width="100" height="70" rx="8" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-opacity="0.35"/><text x="320" y="102" font-size="11" fill="currentColor" text-anchor="middle" font-weight="600">BANKNOT</text><text x="320" y="120" font-size="8.5" fill="currentColor" fill-opacity="0.65" text-anchor="middle">kwit na</text><text x="320" y="132" font-size="8.5" fill="currentColor" fill-opacity="0.65" text-anchor="middle">złoto</text><rect x="395" y="80" width="100" height="70" rx="8" fill="#0b66c3" fill-opacity="0.16" stroke="#0b66c3" stroke-opacity="0.55"/><text x="445" y="102" font-size="11" fill="currentColor" text-anchor="middle" font-weight="600">FIAT</text><text x="445" y="120" font-size="8.5" fill="currentColor" fill-opacity="0.7" text-anchor="middle">z mocy</text><text x="445" y="132" font-size="8.5" fill="currentColor" fill-opacity="0.7" text-anchor="middle">prawa</text><rect x="520" y="80" width="100" height="70" rx="8" fill="#1a9e6a" fill-opacity="0.14" stroke="#1a9e6a" stroke-opacity="0.5"/><text x="570" y="102" font-size="11" fill="currentColor" text-anchor="middle" font-weight="600">CYFROWY</text><text x="570" y="120" font-size="8.5" fill="currentColor" fill-opacity="0.7" text-anchor="middle">zapis, CBDC,</text><text x="570" y="132" font-size="8.5" fill="currentColor" fill-opacity="0.7" text-anchor="middle">krypto</text><line x1="122" y1="115" x2="143" y2="115" stroke="currentColor" stroke-opacity="0.55" stroke-width="1.4" marker-end="url(#ev)"/><line x1="247" y1="115" x2="268" y2="115" stroke="currentColor" stroke-opacity="0.55" stroke-width="1.4" marker-end="url(#ev)"/><line x1="372" y1="115" x2="393" y2="115" stroke="currentColor" stroke-opacity="0.55" stroke-width="1.4" marker-end="url(#ev)"/><line x1="497" y1="115" x2="518" y2="115" stroke="currentColor" stroke-opacity="0.55" stroke-width="1.4" marker-end="url(#ev)"/><line x1="320" y1="152" x2="320" y2="178" stroke="currentColor" stroke-opacity="0.3"/><circle cx="320" cy="182" r="2.6" fill="currentColor" fill-opacity="0.55"/><text x="320" y="199" font-size="11" fill="currentColor" text-anchor="middle" font-family="monospace">1944</text><text x="320" y="211" font-size="8.5" fill="currentColor" fill-opacity="0.6" text-anchor="middle">Bretton Woods</text><line x1="445" y1="152" x2="445" y2="178" stroke="currentColor" stroke-opacity="0.3"/><circle cx="445" cy="182" r="2.6" fill="currentColor" fill-opacity="0.55"/><text x="445" y="199" font-size="11" fill="currentColor" text-anchor="middle" font-family="monospace">1971</text><text x="445" y="211" font-size="8.5" fill="currentColor" fill-opacity="0.6" text-anchor="middle">koniec wymienialności</text><text x="20" y="244" font-size="12" fill="currentColor" font-weight="600">Forma się zmienia, natura nie: każdy pieniądz to czyjeś zobowiązanie i wspólne zaufanie.</text><text x="20" y="266" font-size="10.5" fill="currentColor" fill-opacity="0.6">Daty pewne: 1944 (Bretton Woods) i 1971 (Nixon). Wcześniejsze etapy bez precyzyjnych dat.</text></svg>
@@ -79,7 +79,7 @@ PSUCIE MONETY (najstarsza inflacja):
   uczciwa moneta     1 moneta = X gramow srebra
   wladca psuje       dolewa taniego metalu, nazwa i nominal te same
   skutek             wiecej monet, kazda kryje mniej kruszcu
-                     → na te same dobra trzeba ich wiecej, ceny rosna
+                     -> na te same dobra trzeba ich wiecej, ceny rosna
 ```
 
 ## Od kwitu na złoto do banknotu
@@ -108,7 +108,7 @@ BRETTON WOODS (1944) I JEGO KONIEC (1971):
   INNE WALUTY
 
   1971: Nixon zawiesza wymiane dolara na zloto
-        → swiat w pelni w pieniadzu fiat (z mocy prawa)
+        -> swiat w pelni w pieniadzu fiat (z mocy prawa)
 ```
 
 ## Pieniądz fiat i zaufanie
@@ -135,6 +135,6 @@ Kto rozumie tę historię, mniej ulega dwóm popularnym mitom. Pierwszy to mit p
 
 Praktyczna korzyść jest taka, że mając w głowie tę mapę, czyta się dzisiejsze spory o pieniądz, inflację, CBDC czy kryptowaluty spokojniej i trzeźwiej. Widać wtedy, że to kolejne rozdziały bardzo starej opowieści o tym, jak ludzie umawiają się co do tego, czym jest wartość i komu ufają, że jej dotrzyma.
 
-To nie jest porada inwestycyjna. To wykład o historii i naturze pieniądza, oparty na pracach historyków i antropologów oraz na raportach banków, żebyś rozumiał, czym pieniądz był i w co się zmienia, zanim zaczniesz doszukiwać się jego wpływu na rynki.
+Nie jest to porada inwestycyjna. To wykład o historii i naturze pieniądza, oparty na pracach historyków i antropologów oraz na raportach banków, żebyś rozumiał, czym pieniądz był i w co się zmienia, zanim zaczniesz doszukiwać się jego wpływu na rynki.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

@@ -70,6 +70,6 @@ Praktyczny wniosek jest taki, że odrzucenie albo rekwotowanie nie jest automaty
 
 Co z tym zrobić w praktyce. Poznaj politykę egzekucji swojego brokera i pytaj o konkrety: czy stosuje last look, czy sprawdzenie jest symetryczne, jaki jest typowy czas przetrzymania, jak wyglądają statystyki odrzuceń, czy broker jest sygnatariuszem FX Global Code. Czytaj dokumenty o realizacji zleceń i o najlepszym wykonaniu. Odróżniaj powtarzalny wzorzec odrzuceń akurat wtedy, gdy rynek idzie na twoją korzyść (to sygnał wart uwagi i pytań), od pojedynczych rekwotów w gorącym rynku (to zwykle mechanika, nie spisek). Wiedza o tym, że kwota bywa zaproszeniem, a nie gwarancją, sama w sobie zmienia sposób, w jaki interpretujesz to, co widać na platformie.
 
-To nie jest porada inwestycyjna. To wyjaśnienie mechaniki egzekucji na rynku FX i zasad, które ją regulują, po to, żeby odróżniać normalne działanie rynku od realnego problemu, zanim wyciągniesz wniosek o swojej platformie albo brokerze.
+Nie jest to porada inwestycyjna. To wyjaśnienie mechaniki egzekucji na rynku FX i zasad, które ją regulują, po to, żeby odróżniać normalne działanie rynku od realnego problemu, zanim wyciągniesz wniosek o swojej platformie albo brokerze.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

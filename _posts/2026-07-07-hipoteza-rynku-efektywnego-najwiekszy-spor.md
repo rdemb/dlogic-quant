@@ -26,7 +26,7 @@ Stawka jest praktyczna, nie akademicka. Jeżeli rynek jest efektywny, płacenie 
 
 ## Trzy formy efektywności i co każda oznacza w praktyce
 
-Fama podzielił hipotezę na trzy formy, różniące się tym, jaką informację cena ma już zawierać. To nie jest podział kosmetyczny: każda forma unieważnia inną klasę strategii, więc każdą testuje się osobno.
+Fama podzielił hipotezę na trzy formy, różniące się tym, jaką informację cena ma już zawierać. Nie jest to podział kosmetyczny: każda forma unieważnia inną klasę strategii, więc każdą testuje się osobno.
 
 Forma słaba mówi, że cena zawiera całą informację z historycznych notowań. Jeśli jest prawdziwa, analiza techniczna oparta wyłącznie na przeszłym wykresie nie może systematycznie zarabiać: formacje, średnie i wsparcia to opisy przeszłości, które nie niosą przewagi co do przyszłości.
 
@@ -48,10 +48,10 @@ Najelegantszy cios w EMH nie przyszedł z danych, tylko z czystej logiki. Sanfor
 
 ```
 ceny w pełni odzwierciedlają informację
-→ zbieranie informacji przestaje się opłacać
-→ nikt jej nie zbiera
-→ ceny nie mają skąd odzwierciedlać informacji
-→ sprzeczność
+-> zbieranie informacji przestaje się opłacać
+-> nikt jej nie zbiera
+-> ceny nie mają skąd odzwierciedlać informacji
+-> sprzeczność
 ```
 
 W pełni efektywny rynek jest więc logicznie niemożliwy, bo sam podcina gałąź, na której siedzi. Równowaga wymaga tego, co autorzy nazwali „równowagowym stopniem nierównowagi": ceny odzwierciedlają informację tylko częściowo, a pozostały margines nieefektywności jest dokładnie na tyle duży, żeby zwrócić poinformowanym koszt zbierania informacji. Rynek musi płacić swoim analitykom, inaczej przestaje działać.
@@ -107,6 +107,6 @@ Szeroki indeks to nie kapitulacja, tylko punkt odniesienia. Każda aktywność (
 
 I rzecz ostatnia, najważniejsza: EMH nie zabrania szukać. Zabrania wierzyć bez dowodu. Paradoks Grossmana i Stiglitza gwarantuje, że jakieś nieefektywności zawsze będą istnieć, inaczej rynek by się zawalił. Tylko że znajdowanie ich to praca z kosztami, konkurencją i terminem przydatności, a nie sekret, który wystarczy poznać.
 
-To nie jest porada inwestycyjna. To mapa ponad pięćdziesięcioletniego sporu o to, czy rynek da się pobić, z liczbami z oryginalnych prac, żeby każdą obietnicę przewagi dało się przyłożyć do właściwej poprzeczki, zanim postawi się na niej pieniądze.
+Nie jest to porada inwestycyjna. To mapa ponad pięćdziesięcioletniego sporu o to, czy rynek da się pobić, z liczbami z oryginalnych prac, żeby każdą obietnicę przewagi dało się przyłożyć do właściwej poprzeczki, zanim postawi się na niej pieniądze.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

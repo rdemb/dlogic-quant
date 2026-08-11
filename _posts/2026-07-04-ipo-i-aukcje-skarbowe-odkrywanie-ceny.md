@@ -62,6 +62,6 @@ Underpricing znaczy, że gorące IPO są racjonowane. Skoro debiuty średnio ros
 
 Wreszcie, kupno na debiucie to inna gra niż udział w ofercie. Kto zapisuje się w ofercie, kupuje po cenie ustalonej przed rynkiem i mierzy się z racjonowaniem oraz negatywną selekcją przydziału. Kto kupuje pierwszego dnia notowań, płaci już cenę rynkową, po debiutanckim skoku, od inwestorów, którzy realizują zysk z underpricingu. To dwie różne pozycje, o różnym ryzyku i różnym rozkładzie wyników, choć dotyczą tej samej spółki.
 
-To nie jest porada inwestycyjna. To mapa mechaniki rynku pierwotnego, z datami i liczbami z oryginalnych prac, po to, żeby rozpoznawać, jaką grę się rozgrywa, zanim się do niej stanie: czy ustala się cenę przez księgę popytu czy przez aukcję, czy płaci się własną ofertę czy cenę wspólną i po której stronie debiutanckiego skoku się kupuje.
+Nie jest to porada inwestycyjna. To mapa mechaniki rynku pierwotnego, z datami i liczbami z oryginalnych prac, po to, żeby rozpoznawać, jaką grę się rozgrywa, zanim się do niej stanie: czy ustala się cenę przez księgę popytu czy przez aukcję, czy płaci się własną ofertę czy cenę wspólną i po której stronie debiutanckiego skoku się kupuje.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

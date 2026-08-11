@@ -1,8 +1,8 @@
 ---
 layout: labpost
 title: "Nieoznaczoność nie jest błędem mikroskopu"
-description: "Zasada Heisenberga nie mówi jedynie, że pomiar potrąca elektron. Opisuje strukturę stanów kwantowych — i nie jest tym samym co twierdzenie Bella ani zakaz wszystkich zmiennych ukrytych."
-dek: "Możemy zbudować lepszy instrument, lecz nie przygotujemy stanu, w którym położenie i pęd mają jednocześnie dowolnie wąskie rozkłady. To ograniczenie teorii, nie jakość soczewki."
+description: "Zasada Heisenberga nie mówi jedynie, że pomiar potrąca elektron. Opisuje strukturę stanów kwantowych - i nie jest tym samym co twierdzenie Bella ani zakaz wszystkich zmiennych ukrytych."
+dek: "Możemy zbudować lepszy instrument, ale nie przygotujemy stanu, w którym położenie i pęd mają jednocześnie dowolnie wąskie rozkłady. To ograniczenie teorii, nie jakość soczewki."
 date: 2026-08-11 17:00:00 +0200
 category: luzne
 tags: [odkrywanie-niewidzialnego, fizyka, Heisenberg, mechanika-kwantowa, pomiar]
@@ -21,13 +21,13 @@ Najbardziej znane wyjaśnienie zasady nieoznaczoności przedstawia mikroskop pr�
 
 Ten obraz pochodzi z tradycji samego Heisenberga i nadal ma wartość pedagogiczną. Nie jest jednak pełnym znaczeniem zasady nieoznaczoności.
 
-Gdyby problem polegał wyłącznie na potrącaniu elektronu przez niedoskonałą sondę, moglibyśmy marzyć o instrumencie delikatniejszym, szybszym albo inteligentniej zaprojektowanym. Mechanika kwantowa stawia ograniczenie wcześniej — już na etapie **przygotowania stanu**.
+Gdyby problem polegał wyłącznie na potrącaniu elektronu przez niedoskonałą sondę, moglibyśmy marzyć o instrumencie delikatniejszym, szybszym albo inteligentniej zaprojektowanym. Mechanika kwantowa stawia ograniczenie wcześniej - już na etapie **przygotowania stanu**.
 
 Możemy stworzyć stan, w którym wyniki pomiaru położenia są skupione bardzo wąsko. W tym samym stanie rozkład możliwych wyników pomiaru pędu musi być szeroki. Możemy przygotować niemal określony pęd, ale wtedy stan rozciąga się przestrzennie. Nie jest to opowieść o tym, że elektron zna obie wartości, a niezdarny obserwator nie potrafi ich odczytać bez szkody.
 
 > **Nieoznaczoność opisuje wzajemną geometrię możliwych rozkładów wyników dla jednego stanu kwantowego.**
 
-Pomiar dodaje kolejny problem — wpływ aparatury na układ — lecz nie jest źródłem całego ograniczenia.
+Pomiar dodaje kolejny problem - wpływ aparatury na układ - ale nie jest źródłem całego ograniczenia.
 
 ## Rozkład, nie pojedyncza pomyłka
 
@@ -82,7 +82,7 @@ Heurystyczny mikroskop próbuje opisać relację między błędem pomiaru poło�
 \varepsilon(x)\,\eta(p) \gtrsim \frac{\hbar}{2},
 \]
 
-gdzie ε oznacza błąd pomiaru, a η — zaburzenie drugiej wielkości.
+gdzie ε oznacza błąd pomiaru, a η - zaburzenie drugiej wielkości.
 
 Problem polega na tym, że prosta iloczynowa postać nie jest uniwersalnie prawdziwa dla wszystkich możliwych pomiarów kwantowych. Masanao Ozawa wyprowadził ogólniejszą relację, w której oprócz błędu i zaburzenia pojawiają się także początkowe nieoznaczoności stanu:
 
@@ -93,8 +93,8 @@ Problem polega na tym, że prosta iloczynowa postać nie jest uniwersalnie prawd
 
 Nie oznacza to obalenia zasady Heisenberga. Oznacza doprecyzowanie, że trzeba rozdzielić dwie klasy twierdzeń:
 
-1. **relacje przygotowania** — ograniczające rozrzuty obserwabli w stanie,
-2. **relacje błędu i zaburzenia** — opisujące konkretną procedurę pomiarową.
+1. **relacje przygotowania** - ograniczające rozrzuty obserwabli w stanie,
+2. **relacje błędu i zaburzenia** - opisujące konkretną procedurę pomiarową.
 
 Eksperyment może zostać zaprojektowany tak, aby zaburzenie mierzone według określonej definicji było mniejsze, niż sugerował prosty obraz mikroskopu. Nadal nie pozwala to przygotować stanu z dowolnie małymi Δx i Δp.
 
@@ -111,7 +111,7 @@ Eksperyment może zostać zaprojektowany tak, aby zaburzenie mierzone według ok
     <text x="520" y="292" text-anchor="middle" font-size="20" fill="var(--dn)">INTERPRETACJA ONTOLOGICZNA</text><text x="520" y="320" text-anchor="middle" font-size="14" fill="var(--mut)">co istnieje przed pomiarem? różne interpretacje</text>
   </g>
 </svg>
-<figcaption>Wynik matematyczny, zachowanie aparatury i filozofia teorii są powiązane, lecz nie są tym samym twierdzeniem.</figcaption>
+<figcaption>Wynik matematyczny, zachowanie aparatury i filozofia teorii są powiązane, ale nie są tym samym twierdzeniem.</figcaption>
 </figure>
 
 ## Pomiar nie wymaga świadomego człowieka
@@ -126,7 +126,7 @@ Interpretacje mechaniki kwantowej różnią się w odpowiedzi na pytanie, co dok
 
 Kolejne popularne uproszczenie brzmi: skoro położenie i pęd są nieoznaczone, w przyrodzie nie mogą istnieć żadne głębsze zmienne określające wyniki. Takie zdanie wykracza poza samą nierówność Heisenberga.
 
-Relacja nieoznaczoności ogranicza statystyki obserwabli reprezentowanych przez niekomutujące operatory. Sama nie dowodzi, że niemożliwa jest każda teoria zmiennych ukrytych. Mechanika Bohma jest przykładem teorii posiadającej dodatkowe zmienne, lecz jest jawnie nielokalna.
+Relacja nieoznaczoności ogranicza statystyki obserwabli reprezentowanych przez niekomutujące operatory. Sama nie dowodzi, że niemożliwa jest każda teoria zmiennych ukrytych. Mechanika Bohma jest przykładem teorii posiadającej dodatkowe zmienne, ale jest jawnie nielokalna.
 
 Innego rodzaju ograniczenie wprowadza twierdzenie Bella. Pokazuje ono, że żadna teoria spełniająca określone założenia lokalności i niezależności ustawień nie może odtworzyć wszystkich korelacji przewidywanych przez mechanikę kwantową. Eksperymenty naruszające nierówności Bella, w tym testy zamykające główne luki doświadczalne, wspierają kwantowe przewidywania i wykluczają szeroką klasę **lokalnych** modeli zmiennych ukrytych.
 
@@ -150,7 +150,7 @@ Innego rodzaju ograniczenie wprowadza twierdzenie Bella. Pokazuje ono, że żadn
 
 Nieoznaczoność i nielokalność kwantowa należą do tej samej teorii, ale odpowiadają na różne pytania.
 
-## Granica wiedzy — lecz nie kapitulacja poznawcza
+## Granica wiedzy - ale nie kapitulacja poznawcza
 
 Zasada Heisenberga bywa przedstawiana jako ostateczny dowód, że świata nie można poznać. W rzeczywistości jest jednym z najbardziej precyzyjnych przykładów tego, jak nauka zamienia ogólne słowo „niemożliwe” w matematyczną, testowalną granicę.
 
@@ -158,9 +158,9 @@ Nie mówi: niczego nie wiemy.
 
 Mówi: dla danego stanu rozrzuty wyników dwóch wielkości są związane określoną nierównością. Możemy obliczyć minimalny iloczyn, przygotować stany zbliżające się do granicy, badać relacje błędu i zaburzenia oraz testować przewidywania na fotonach, neutronach, atomach i układach makroskopowych.
 
-To nie jest porażka pomiaru. Jest to odkrycie struktury, której klasyczna intuicja nie przewidywała.
+Nie jest to porażka pomiaru. Jest to odkrycie struktury, której klasyczna intuicja nie przewidywała.
 
-Największym błędem byłoby sprowadzenie tej struktury do zdania: „kiedy patrzymy, przeszkadzamy”. Każdy pomiar jest interakcją, lecz nie każda nieoznaczoność powstaje podczas pomiaru.
+Największym błędem byłoby sprowadzenie tej struktury do zdania: „kiedy patrzymy, przeszkadzamy”. Każdy pomiar jest interakcją, ale nie każda nieoznaczoność powstaje podczas pomiaru.
 
 Instrument może być doskonały.
 

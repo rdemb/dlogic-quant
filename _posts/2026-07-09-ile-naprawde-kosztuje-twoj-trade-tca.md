@@ -166,6 +166,6 @@ Metoda nie jest niczyją prywatną sztuczką, tylko standardem rynku. Dwa źród
 - **FX Global Code**, kodeks dobrych praktyk rynku walutowego. Tłumaczy, czym jest uczciwa cena odniesienia i jak myśleć o kosztach wykonania, zamiast wierzyć w jedną liczbę z platformy.
 - **LMAX FX TCA**, materiały o transaction cost analysis na FX. Pokazują, jak rozbić koszt na spread, poślizg i timing i dlaczego cena odniesienia z chwili decyzji jest właściwym punktem porównania.
 
-To nie jest porada inwestycyjna. Tekst pokazuje metodę pomiaru realnego kosztu egzekucji, żebyś umiał policzyć własny implementation shortfall zamiast ufać spreadowi z cennika. Nie ma tu obietnicy zysku, jest tylko narzędzie do tego, żeby przestać mylić się co do tego, gdzie naprawdę uciekają pieniądze.
+Nie jest to porada inwestycyjna. Tekst pokazuje metodę pomiaru realnego kosztu egzekucji, żebyś umiał policzyć własny implementation shortfall zamiast ufać spreadowi z cennika. Nie ma tu obietnicy zysku, jest tylko narzędzie do tego, żeby przestać mylić się co do tego, gdzie naprawdę uciekają pieniądze.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

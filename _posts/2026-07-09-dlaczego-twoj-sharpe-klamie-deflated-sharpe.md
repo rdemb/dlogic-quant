@@ -30,7 +30,7 @@ Są dwie dziury, które ta formuła przemilcza. Pierwsza: jeśli przetestowałe�
 
 ## Pierwszy powód: im więcej prób, tym wyższy Sharpe z przypadku
 
-Intuicja jest prosta i nieprzyjemna. Rzuć monetą wystarczająco wiele razy, a znajdziesz serię, która wygląda jak system. Jeśli przepuścisz przez grid 88 konfiguracji wskaźnika, to nawet gdyby żadna nie miała realnego edge'u, najlepsza z nich wyjdzie z dodatnim Sharpe'em tylko dlatego, że wybierasz maksimum z 88 losowych wyników. To nie jest edge, to jest statystyka porządkowa.
+Intuicja jest prosta i nieprzyjemna. Rzuć monetą wystarczająco wiele razy, a znajdziesz serię, która wygląda jak system. Jeśli przepuścisz przez grid 88 konfiguracji wskaźnika, to nawet gdyby żadna nie miała realnego edge'u, najlepsza z nich wyjdzie z dodatnim Sharpe'em tylko dlatego, że wybierasz maksimum z 88 losowych wyników. Nie jest to edge, to jest statystyka porządkowa.
 
 López de Prado formalizuje tę poprzeczkę wzorem na oczekiwaną wartość maksymalnego Sharpe'a pod hipotezą zerową, czyli przy założeniu, że żadna próba nie ma prawdziwego edge'u.
 
@@ -107,6 +107,6 @@ Praktyczny wniosek jest niewygodny, ale prosty. Jeśli chwalisz się Sharpe'em b
 
 Zamienia to też sposób mówienia o wynikach. Zamiast „mam działającą strategię" uczciwsza forma brzmi „PSR wynosi tyle a tyle, przy tylu próbach i takim skosie". To nie musi być werdykt sukcesu albo porażki. Najczęściej jest to po prostu uczciwy stan wiedzy: poszlaka mocna, dowodu brak, a warunek, który go domknie, da się podać liczbą (tyle a tyle obserwacji albo ucięty ogon). Taki komunikat da się później rozliczyć, podkolorowanej krzywej kapitału rozliczyć się nie da.
 
-To nie jest porada inwestycyjna. To metoda walidacji, pokazana z wzorami i przykładem z literatury, żebyś umiał odróżnić realny edge od artefaktu przeszukiwania, zanim postawisz na nim pieniądze.
+Nie jest to porada inwestycyjna. To metoda walidacji, pokazana z wzorami i przykładem z literatury, żebyś umiał odróżnić realny edge od artefaktu przeszukiwania, zanim postawisz na nim pieniądze.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

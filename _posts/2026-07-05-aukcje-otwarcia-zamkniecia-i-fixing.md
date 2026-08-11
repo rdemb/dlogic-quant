@@ -93,6 +93,6 @@ Druga twarz dotyczy danych. Na giełdach akcji ceny otwarcia i zamknięcia świe
 
 I trzecia twarz, ta od skandalu: tam, gdzie skupia się przewidywalny przepływ, skupia się też pokusa. O tym, ile kosztuje przesunięcie ceny referencyjnej, decyduje konstrukcja mechanizmu. Aukcja z jedną ceną agreguje cały zebrany popyt i podaż, a pomiar krótkiego okna w handlu ciągłym agreguje tylko to, co ktoś zdążył w tym oknie zrobić. Historia kar za fixing to w gruncie rzeczy lekcja z projektowania rynków, wyceniona na ponad 5,7 mld dolarów.
 
-To nie jest porada inwestycyjna. To opis mechanizmów rynkowych, podany z definicjami i udokumentowanymi liczbami, żeby było wiadomo, jak powstają najważniejsze ceny dnia i dlaczego wokół nich obowiązują inne reguły niż przez resztę sesji.
+Nie jest to porada inwestycyjna. To opis mechanizmów rynkowych, podany z definicjami i udokumentowanymi liczbami, żeby było wiadomo, jak powstają najważniejsze ceny dnia i dlaczego wokół nich obowiązują inne reguły niż przez resztę sesji.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

@@ -115,6 +115,6 @@ Z zoo po latach selekcji zostaje krótka lista premii o najmocniejszej reputacji
 
 Najszersza lekcja wykracza poza akcje i faktory. Dane torturowane dostatecznie długo wyznają wszystko, więc każde przeszukanie setek kandydatów wyprodukuje odkrycia, które wyglądają jak przewaga, a są szumem. Różnica między wynikiem a artefaktem sprowadza się do progu dowodu: t powyżej 3 zamiast 2, obowiązkowy test poza próbą i założenie, że po nagłośnieniu będzie gorzej. Premie, które przeżyją takie traktowanie, można traktować poważnie. Reszta zostaje w zoo.
 
-To nie jest porada inwestycyjna. To edukacyjne omówienie CAPM, modeli czynnikowych i literatury o wielokrotnym testowaniu: wzory i wyniki badań są zreferowane wiernie, a najważniejsza liczba mówi, że po publikacji z przeciętnej premii zostaje mniej niż połowa.
+Nie jest to porada inwestycyjna. To edukacyjne omówienie CAPM, modeli czynnikowych i literatury o wielokrotnym testowaniu: wzory i wyniki badań są zreferowane wiernie, a najważniejsza liczba mówi, że po publikacji z przeciętnej premii zostaje mniej niż połowa.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

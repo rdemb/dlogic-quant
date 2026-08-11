@@ -30,9 +30,9 @@ Lekarstwem jest stara zasada inżynierii, separacja odpowiedzialności: każdy f
 ```
 warstwa      odpowiedzialność                          efekt uboczny
 dane         pobierz i uporządkuj wejście              odczyt (wejście)
-sygnał       dane → decyzja: kup / sprzedaj / nic      żaden (czysta funkcja)
-ryzyko       decyzja + stan → zezwól albo odrzuć       żaden (czysta bramka)
-egzekucja    zlecenie → fill u brokera                 zapis: zlecenia, sieć
+sygnał       dane -> decyzja: kup / sprzedaj / nic      żaden (czysta funkcja)
+ryzyko       decyzja + stan -> zezwól albo odrzuć       żaden (czysta bramka)
+egzekucja    zlecenie -> fill u brokera                 zapis: zlecenia, sieć
 log          zapisz każdą decyzję i zlecenie           zapis: dysk / baza
 ```
 
@@ -89,7 +89,7 @@ Bot działa tygodniami, więc prędzej czy później padnie: restart procesu, ze
 stan = broker.pobierz_stan()             # pozycje, zlecenia, saldo od brokera
 
 # Każde zlecenie ma powtarzalny identyfikator (idempotency key)
-klucz = klucz_zlecenia(sygnal, czas_bara)   # ten sam sygnał → ten sam klucz
+klucz = klucz_zlecenia(sygnal, czas_bara)   # ten sam sygnał -> ten sam klucz
 if not broker.zlecenie_istnieje(klucz):     # sprawdź u brokera, zanim wyślesz
     broker.zloz(zlecenie, klucz)            # po restarcie nie zdubluje pozycji
 ```
@@ -126,6 +126,6 @@ Pokusa idzie w dwie strony i obie są kosztowne. Pierwsza to przeinżynierowanie
 
 Druga pokusa jest groźniejsza: autonomia bez nadzoru. Automat, który sam składa zlecenia bez człowieka w pętli, jest bezpieczny tylko na tyle, na ile bezpieczne są jego bramki ryzyka, a te nigdy nie przewidzą wszystkiego: dziury w płynności, błędu feedu, rozjazdu między testem a produkcją. Dlatego kill-switch, dzienny limit i twardy pułap ekspozycji nie są opcją, tylko warunkiem wpuszczenia bota na żywo, a rozsądny start prowadzi przez tryb wyłącznie obserwacyjny i mikroskopijne wielkości, zanim cokolwiek urośnie. Nadzór człowieka nie jest oznaką słabości architektury, tylko ostatnią bramką, której żaden kod nie zastąpi.
 
-To nie jest porada inwestycyjna ani gotowy system. To szkielet inżynierski: pokazuje, jak rozłożyć automat na warstwy, które da się testować osobno, i gdzie postawić bramki, żeby jeden błąd nie zabrał konta. Architektura nie tworzy przewagi. Reguła bez źródła zarobku, nawet idealnie oprogramowana, zostaje regułą bez źródła zarobku, tylko wykonywaną szybciej i bardziej konsekwentnie, również w traceniu. Bezpieczna struktura jest warunkiem koniecznym, nie wystarczającym: chroni przed katastrofą i pozwala uczciwie sprawdzić, czy edge w ogóle istnieje.
+Nie jest to porada inwestycyjna ani gotowy system. To szkielet inżynierski: pokazuje, jak rozłożyć automat na warstwy, które da się testować osobno, i gdzie postawić bramki, żeby jeden błąd nie zabrał konta. Architektura nie tworzy przewagi. Reguła bez źródła zarobku, nawet idealnie oprogramowana, zostaje regułą bez źródła zarobku, tylko wykonywaną szybciej i bardziej konsekwentnie, również w traceniu. Bezpieczna struktura jest warunkiem koniecznym, nie wystarczającym: chroni przed katastrofą i pozwala uczciwie sprawdzić, czy edge w ogóle istnieje.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

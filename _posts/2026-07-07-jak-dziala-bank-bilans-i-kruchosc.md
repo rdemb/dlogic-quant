@@ -22,7 +22,7 @@ category: edukacja
 
 Potoczny obraz banku to skarbiec: wpłacasz pieniądze, one gdzieś leżą, czasem bank pożycza je dalej. Rzeczywisty bank to bilans, czyli kartka z dwiema stronami, które zawsze się równają. Po lewej aktywa: to, co bank ma i co przynosi mu dochód. Po prawej pasywa: to, skąd wziął środki i co jest winien innym.
 
-Po stronie aktywów dominują kredyty: hipoteki, kredyty dla firm, kredyty konsumpcyjne. To pozycje rozpisane na lata, trudne do szybkiej sprzedaży bez straty. Obok nich obligacje, zwykle łatwiejsze do upłynnienia, oraz rezerwy w banku centralnym i gotówka, czyli to, czym bank rozlicza płatności i obsługuje wypłaty. Po stronie pasywów największą pozycją są depozyty klientów, w dużej części płatne na żądanie. Dalej finansowanie hurtowe: krótkoterminowe pożyczki od innych banków i instytucji, nieobjęte żadną gwarancją. Na końcu kapitał własny. To nie jest worek z pieniędzmi, tylko różnica między aktywami a zobowiązaniami: część bilansu należąca do właścicieli, która jako pierwsza pochłania straty.
+Po stronie aktywów dominują kredyty: hipoteki, kredyty dla firm, kredyty konsumpcyjne. To pozycje rozpisane na lata, trudne do szybkiej sprzedaży bez straty. Obok nich obligacje, zwykle łatwiejsze do upłynnienia, oraz rezerwy w banku centralnym i gotówka, czyli to, czym bank rozlicza płatności i obsługuje wypłaty. Po stronie pasywów największą pozycją są depozyty klientów, w dużej części płatne na żądanie. Dalej finansowanie hurtowe: krótkoterminowe pożyczki od innych banków i instytucji, nieobjęte żadną gwarancją. Na końcu kapitał własny. Nie jest to worek z pieniędzmi, tylko różnica między aktywami a zobowiązaniami: część bilansu należąca do właścicieli, która jako pierwsza pochłania straty.
 
 ```
 BILANS BANKU (schemat ilustracyjny, liczby przykladowe):
@@ -73,7 +73,7 @@ Jedno sprostowanie na starcie, za Bank of England (2014, „Money creation in th
 <path d="M377 366 L370 362.5 L370 369.5 Z" fill="#1a9e6a" fill-opacity="0.95"/>
 <line x1="60" y1="404" x2="580" y2="404" stroke="currentColor" stroke-opacity="0.2"/>
 <text x="320" y="426" text-anchor="middle" font-size="11.5" fill="currentColor" opacity="0.72">Dźwignia: kapitał to około 10% bilansu, a strata 5% aktywów zjada połowę bufora.</text>
-<text x="320" y="447" text-anchor="middle" font-size="11.5" fill="currentColor" opacity="0.72">Krótkie pasywa finansują długie, niepłynne aktywa → stąd wbudowana kruchość.</text>
+<text x="320" y="447" text-anchor="middle" font-size="11.5" fill="currentColor" opacity="0.72">Krótkie pasywa finansują długie, niepłynne aktywa -> stąd wbudowana kruchość.</text>
 </g>
 </svg>
 <figcaption>Uproszczony bilans banku: obie kolumny mają równą wysokość, depozyty dominują po stronie finansowania, a kapitał własny to tylko cienka zielona warstwa na dole, która jako pierwsza pochłania straty. Przy takiej dźwigni już kilkuprocentowa strata na aktywach zjada dużą część tego cienkiego bufora.</figcaption>
@@ -119,9 +119,9 @@ DZWIGNIA (przyklad ilustracyjny, nie realne wymogi kapitalowe):
 
   aktywa 100 = zobowiazania 92 + kapital wlasny 8
 
-  strata 2% aktywow  → kapital z 8 do 6   (znika 1/4 kapitalu)
-  strata 4% aktywow  → kapital z 8 do 4   (znika polowa)
-  strata 8% aktywow  → kapital z 8 do 0   (niewyplacalnosc)
+  strata 2% aktywow  -> kapital z 8 do 6   (znika 1/4 kapitalu)
+  strata 4% aktywow  -> kapital z 8 do 4   (znika polowa)
+  strata 8% aktywow  -> kapital z 8 do 0   (niewyplacalnosc)
 
   mala procentowo strata na duzym bilansie zjada maly kapital
 ```
@@ -137,11 +137,11 @@ W modelu deponenci nie wiedzą z góry, kiedy będą potrzebować pieniędzy, a 
 ```
 DWIE ROWNOWAGI (Diamond i Dybvig 1983):
 
-  SPOKOJ:  wyplacaja tylko ci, ktorzy musza → plynnosci starcza
-                                            → bank stoi
-  PANIKA:  wyplacaja wszyscy na zapas       → likwidacja dlugich
+  SPOKOJ:  wyplacaja tylko ci, ktorzy musza -> plynnosci starcza
+                                            -> bank stoi
+  PANIKA:  wyplacaja wszyscy na zapas       -> likwidacja dlugich
                                               aktywow ze strata
-                                            → bank pada
+                                            -> bank pada
 
   te same aktywa, ci sami klienci; wynik wybiera oczekiwanie tlumu
 ```
@@ -160,6 +160,6 @@ Najważniejsza zmiana w patrzeniu jest taka: kruchość banku nie jest anomalią
 
 Druga zmiana dotyczy czytania kryzysów. Pytanie, czy bank ma dobre aktywa, to pytanie o wypłacalność. Pytanie, czy dotrwa do piątku, to pytanie o płynność. Przy dźwigni odpowiedzi potrafią zamienić się miejscami w tydzień. Kto rozumie bilans, marżę i dwie równowagi Diamonda i Dybviga, ten w nagłówkach o kłopotach banków szuka trzech rzeczy: jak krótkie są pasywa, jak niepłynne aktywa i ile kapitału stoi pomiędzy. Reszta jest komentarzem.
 
-To nie jest porada inwestycyjna. To wykład mechaniki bankowości, oparty na klasycznym artykule Diamonda i Dybviga (1983), materiałach Bank of England (2014), kursie Perry'ego Mehrlinga „Economics of Money and Banking" oraz podręczniku Freixasa i Rocheta „Microeconomics of Banking", żebyś rozumiał, na czym stoi bank, zanim zaczniesz oceniać, czy stoi pewnie.
+Nie jest to porada inwestycyjna. To wykład mechaniki bankowości, oparty na klasycznym artykule Diamonda i Dybviga (1983), materiałach Bank of England (2014), kursie Perry'ego Mehrlinga „Economics of Money and Banking" oraz podręczniku Freixasa i Rocheta „Microeconomics of Banking", żebyś rozumiał, na czym stoi bank, zanim zaczniesz oceniać, czy stoi pewnie.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

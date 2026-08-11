@@ -34,11 +34,11 @@ Zależność jest jednokierunkowa: ze strumienia ticków da się złożyć świe
 
 ```
 Okno 15:00:00 do 15:14:59  (cena mid)
-  15:00:03   1.08210   pierwszy tick   →  open
-  15:04:11   1.08255   najwyzszy       →  high
-  15:09:40   1.08190   najnizszy       →  low
-  15:14:52   1.08230   ostatni tick    →  close
-  liczba tickow: 1240                  →  volume (tickowy)
+  15:00:03   1.08210   pierwszy tick   ->  open
+  15:04:11   1.08255   najwyzszy       ->  high
+  15:09:40   1.08190   najnizszy       ->  low
+  15:14:52   1.08230   ostatni tick    ->  close
+  liczba tickow: 1240                  ->  volume (tickowy)
 ```
 
 Ta sama operacja działa na każdym interwale. Świeca pięciominutowa i godzinna różnią się tylko szerokością okna, mechanika jest identyczna.
@@ -47,7 +47,7 @@ Ta sama operacja działa na każdym interwale. Świeca pięciominutowa i godzinn
 
 Świeca z poprzedniej sekcji to bar czasowy: okno wyznacza zegar. To najpopularniejszy sposób próbkowania i zarazem najbardziej arbitralny, bo rynek nie działa równomiernie w czasie. Godzina europejskiego popołudnia potrafi zmieścić tyle samo obrotu, co cała azjatycka noc, a mimo to obie dostają tyle samo barów.
 
-Stąd bary zdarzeniowe, które próbkują nie po zegarze, lecz po aktywności. Trzy typowe warianty:
+Stąd bary zdarzeniowe, które próbkują nie po zegarze, ale po aktywności. Trzy typowe warianty:
 
 - tick bars: nowa świeca co ustaloną liczbę ticków, na przykład co 500,
 - volume bars: nowa świeca co ustalony wolumen,
