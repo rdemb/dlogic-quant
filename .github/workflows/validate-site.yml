@@ -20,6 +20,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Validate editorial style
+        run: |
+          python3 -m py_compile tools/editorial_cleanup.py
+          python3 tools/editorial_cleanup.py
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
