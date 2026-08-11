@@ -12,12 +12,12 @@ category: edukacja
 > **W skrócie**
 >
 > - Test istotności odpowiada na jedno pytanie: czy wynik da się odróżnić od tła, jakie wyprodukowałby czysty przypadek. Bez tła pojedyncza liczba, choćby imponująca, nie mówi nic.
-> - Wartość p to prawdopodobieństwo uzyskania statystyki co najmniej tak skrajnej jak zaobserwowana, gdy prawdziwa jest hipoteza zerowa. To NIE jest prawdopodobieństwo, że hipoteza zerowa jest prawdziwa, ani że wynik jest dziełem przypadku, ani odsetek szansy na powtórzenie. Te błędy zebrała American Statistical Association w oświadczeniu Wassersteina i Lazar (2016).
+> - Wartość p to prawdopodobieństwo uzyskania statystyki co najmniej tak skrajnej jak zaobserwowana, gdy prawdziwa jest hipoteza zerowa. Nie jest to prawdopodobieństwo, że hipoteza zerowa jest prawdziwa, ani że wynik jest dziełem przypadku, ani odsetek szansy na powtórzenie. Te błędy zebrała American Statistical Association w oświadczeniu Wassersteina i Lazar (2016).
 > - Klasyczne testy zakładają rozkłady, których zwroty finansowe nie spełniają: grube ogony i autokorelację. Bootstrap Efrona (1979) omija te założenia, szacując rozkład statystyki wprost z resamplingu próby. Dla danych zależnych w czasie służą block bootstrap i stationary bootstrap Politisa i Romano (1994).
 > - Test permutacyjny i randomizacja znaku zwrotu budują rozkład przy hipotezie zerowej braku przewagi bez żadnego wzoru na rozkład.
 > - Przy wielu testach naraz poprzeczkę urealniają Reality Check White'a (2000) i mocniejszy test SPA Hansena (2005). Systemowe tło daje Ioannidis (2005): im więcej zespołów przeszukuje te same dane, tym mniejsza szansa, że ogłoszone odkrycie jest prawdziwe.
 
-**Teza w jednym zdaniu:** Test istotności nie pyta „czy wynik jest dobry", tylko „czy jest lepszy, niż wypadłoby tło z samego przypadku"; gdy dane mają grube ogony i pamięć, tłem nie jest wzór z podręcznika, lecz rozkład zbudowany z samej próby przez resampling.
+**Teza w jednym zdaniu:** Test istotności nie pyta „czy wynik jest dobry", tylko „czy jest lepszy, niż wypadłoby tło z samego przypadku"; gdy dane mają grube ogony i pamięć, tłem nie jest wzór z podręcznika, ale rozkład zbudowany z samej próby przez resampling.
 
 ## Po co test istotności: sygnał kontra tło
 
@@ -33,8 +33,8 @@ Narzędziem, które podsumowuje odległość obserwacji od tła, jest wartość 
 wartość p = P(statystyka co najmniej tak skrajna jak zaobserwowana | H0 prawdziwa)
 
 H0 = hipoteza zerowa, np. „strategia nie ma przewagi, prawdziwa średnia = 0"
-małe p → dane słabo pasują do świata bez efektu
-duże p → dane spokojnie mieszczą się w świecie bez efektu
+małe p -> dane słabo pasują do świata bez efektu
+duże p -> dane spokojnie mieszczą się w świecie bez efektu
 ```
 
 Wartość p mierzy zgodność danych z hipotezą zerową, i tylko to. Wokół tej definicji narosły cztery uporczywe błędy, wszystkie wypunktowane w oświadczeniu American Statistical Association autorstwa Wassersteina i Lazar (2016):
@@ -62,8 +62,8 @@ Tę lukę wypełnia bootstrap, zaproponowany przez Efrona (1979). Pomysł jest p
 ```
 bootstrap (Efron 1979), próba x1..xn, statystyka S (np. średnia, Sharpe):
 powtórz B razy (np. B = 10 000):
- wylosuj n obserwacji ZE ZWRACANIEM z {x1..xn} → pseudopróba
- policz S na pseudopróbie → S*_b
+ wylosuj n obserwacji ZE ZWRACANIEM z {x1..xn} -> pseudopróba
+ policz S na pseudopróbie -> S*_b
 rozkład {S*_1..S*_B} przybliża rozkład S
 błąd standardowy ≈ odchylenie std z {S*_b}
 przedział ufności ≈ kwantyle z {S*_b}
@@ -81,7 +81,7 @@ stationary bootstrap długość każdego bloku losowa (rozkład geometryczny),
 (Politis i Romano 1994): średnia długość = 1/p; pseudoseria stacjonarna
 
 dobór L (lub 1/p) rośnie z siłą autokorelacji:
-za krótki blok → gubi pamięć, za długi → mało niezależnych bloków
+za krótki blok -> gubi pamięć, za długi -> mało niezależnych bloków
 ```
 
 Dla danych finansowych to zwykle właściwy wariant bootstrapu: zachowuje tę część struktury, która jest realna (pamięć zmienności), i nie udaje, że obserwacje są niezależne.
@@ -105,9 +105,9 @@ Zaletą jest przejrzystość założeń: hipoteza zerowa jest dokładnie tym, co
 
 ## Wiele hipotez naraz: Reality Check i SPA
 
-Wszystkie powyższe testy oceniają jedną strategię. Praktyka wygląda inaczej: testuje się dziesiątki albo tysiące wariantów i pokazuje najlepszy. Wtedy właściwą hipotezą zerową nie jest „ta strategia nie ma przewagi", lecz „najlepsza z całego przeszukiwanego zbioru nie ma przewagi nad benchmarkiem". White (2000) sformalizował to jako Reality Check: statystyką jest maksimum po wszystkich modelach, a jej rozkład przy hipotezie zerowej buduje się bootstrapem bloków (dokładnie stationary bootstrap Politisa i Romano), tak by uwzględnić zależność w czasie i całe uniwersum prób naraz. Zwycięzca jest porównywany nie z zerem, lecz z rozkładem zwycięzców, jakich tło produkuje z samego przeszukiwania. To samo narzędzie stoi za testem 7846 reguł technicznych, opisanym osobno w tekście o [data snoopingu](/dlogic-quant/2026/07/05/data-snooping-jak-finanse-sie-oszukuja/).
+Wszystkie powyższe testy oceniają jedną strategię. Praktyka wygląda inaczej: testuje się dziesiątki albo tysiące wariantów i pokazuje najlepszy. Wtedy właściwą hipotezą zerową nie jest „ta strategia nie ma przewagi", ale „najlepsza z całego przeszukiwanego zbioru nie ma przewagi nad benchmarkiem". White (2000) sformalizował to jako Reality Check: statystyką jest maksimum po wszystkich modelach, a jej rozkład przy hipotezie zerowej buduje się bootstrapem bloków (dokładnie stationary bootstrap Politisa i Romano), tak by uwzględnić zależność w czasie i całe uniwersum prób naraz. Zwycięzca jest porównywany nie z zerem, ale z rozkładem zwycięzców, jakich tło produkuje z samego przeszukiwania. To samo narzędzie stoi za testem 7846 reguł technicznych, opisanym osobno w tekście o [data snoopingu](/dlogic-quant/2026/07/05/data-snooping-jak-finanse-sie-oszukuja/).
 
-Hansen (2005) wskazał słabość Reality Check i ją naprawił. Test White'a traci moc, gdy do uniwersum trafia wiele beznadziejnych modeli: zawyżają one rozkład tła i chowają prawdziwego zwycięzcę. Test SPA (superior predictive ability) Hansena używa statystyki studentyzowanej oraz rozkładu zerowego zależnego od danych, przez co jest mocniejszy i mniej podatny na zaśmiecenie uniwersum słabymi kandydatami. W obu wypadkach idea jest ta sama: poprzeczką nie jest zero, lecz najlepszy wynik, jakiego należy oczekiwać od tła przy tej liczbie prób.
+Hansen (2005) wskazał słabość Reality Check i ją naprawił. Test White'a traci moc, gdy do uniwersum trafia wiele beznadziejnych modeli: zawyżają one rozkład tła i chowają prawdziwego zwycięzcę. Test SPA (superior predictive ability) Hansena używa statystyki studentyzowanej oraz rozkładu zerowego zależnego od danych, przez co jest mocniejszy i mniej podatny na zaśmiecenie uniwersum słabymi kandydatami. W obu wypadkach idea jest ta sama: poprzeczką nie jest zero, ale najlepszy wynik, jakiego należy oczekiwać od tła przy tej liczbie prób.
 
 ## Wniosek: liczba bez tła nie znaczy nic
 

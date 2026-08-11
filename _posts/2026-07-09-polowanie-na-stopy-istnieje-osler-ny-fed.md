@@ -22,7 +22,7 @@ tags: ["order flow", "stop loss", "kaskady", "okrągłe poziomy", "mikrostruktur
 
 Fraza "stop hunt" żyje na forach jako półzarzut, półteoria spiskowa: broker albo "smart money" celowo dociska cenę do miejsca, gdzie wisi twój stop, zbiera go i zawraca. Reakcja większości traderów jest słuszna: pokaż dane, bo bez danych to opowieść.
 
-I tu jest cała soczystość tej historii. Dane pokazał nie youtuber, tylko ekonomistka Rezerwy Federalnej. Carol Osler w Staff Report numer 150 z 2002 roku dostała dostęp do prawdziwej książki zleceń dużego dealera FX i przeanalizowała około 9700 rzeczywistych zleceń stop-loss oraz take-profit z lat 1999-2000. To nie jest wykres z domalowanymi strzałkami. To zlecenia, które ktoś naprawdę złożył, z ceną i kierunkiem.
+I tu jest cała soczystość tej historii. Dane pokazał nie youtuber, tylko ekonomistka Rezerwy Federalnej. Carol Osler w Staff Report numer 150 z 2002 roku dostała dostęp do prawdziwej książki zleceń dużego dealera FX i przeanalizowała około 9700 rzeczywistych zleceń stop-loss oraz take-profit z lat 1999-2000. Nie jest to wykres z domalowanymi strzałkami. To zlecenia, które ktoś naprawdę złożył, z ceną i kierunkiem.
 
 Najważniejsze rozróżnienie na starcie: Osler nie udowodniła, że ktoś "poluje" na ciebie z premedytacją. Udowodniła coś mocniejszego i mniej spiskowego: zlecenia całego rynku układają się wokół okrągłych poziomów tak regularnie, że sam ich układ produkuje odbicia i kaskady. Nie trzeba złego brokera. Wystarczy tłum, który wiesza zlecenia w tych samych miejscach.
 
@@ -32,11 +32,11 @@ Cała praca sprowadza się do jednej geometrii wokół ceny kończącej się na 
 
 ```
  cena rośnie ↑
- 1.1003 strefa buy-stopów przebicie w górę → fala KUPNA (kaskada)
+ 1.1003 strefa buy-stopów przebicie w górę -> fala KUPNA (kaskada)
  1.1001
- 1.1000 POZIOM 00 (xx00) gęsto: take-profity → efekt odbicia
+ 1.1000 POZIOM 00 (xx00) gęsto: take-profity -> efekt odbicia
  1.0999
- 1.0997 strefa sell-stopów przebicie w dół → fala SPRZEDAŻY (kaskada)
+ 1.0997 strefa sell-stopów przebicie w dół -> fala SPRZEDAŻY (kaskada)
  cena spada ↓
 ```
 
@@ -88,7 +88,7 @@ Bierz z tego jedno zdanie i jedną dyscyplinę. Zdanie: okrągły poziom to nie 
 
 Cała reszta to kontekst do twoich własnych, ręcznych decyzji, a nie automat. Nawet dowód z banku centralnego nie zwalnia z ostrożności: mechanika mówi, gdzie leżą zlecenia, ale nie obiecuje, że da się na tym zarobić po kosztach. Ta pokora jest częścią metody, nie słabością. Wielkość pozycji, moment wejścia i wyjścia oraz cierpliwość dalej są po twojej stronie.
 
-To nie jest porada inwestycyjna. To wykład mechaniki mikrostruktury z publicznego raportu Rezerwy Federalnej, żebyś rozumiał, co jest udokumentowane w danych, a co pozostaje otwartym pytaniem, zanim oprzesz na tym decyzję.
+Nie jest to porada inwestycyjna. To wykład mechaniki mikrostruktury z publicznego raportu Rezerwy Federalnej, żebyś rozumiał, co jest udokumentowane w danych, a co pozostaje otwartym pytaniem, zanim oprzesz na tym decyzję.
 
 Źródło: Carol Osler, "Stop-Loss Orders and Price Cascades in Currency Markets", Federal Reserve Bank of New York Staff Report No. 150, 2002.
 

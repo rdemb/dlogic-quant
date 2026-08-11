@@ -3,7 +3,7 @@ title: "Szeregi czasowe: AR, MA, ARIMA i GARCH"
 description: "Szereg czasowy to obserwacje uporządkowane w czasie, a autokorelacja mierzy, na ile dzisiejsza wartość zależy od przeszłych. Model AR wiąże dzisiaj z wczoraj, model MA z wczorajszym szokiem, ARIMA łączy oba i dokłada różnicowanie, które sprowadza szereg do stacjonarności. Zwroty cen są prawie nieautoskorelowane, ale ich kwadraty już nie: to grupowanie zmienności, opisane przez modele ARCH (Engle 1982) i GARCH (Bollerslev 1986). Całość służy prognozie zmienności, czyli amplitudy ruchu, a nie jego kierunku. Koncepcje ze wzorami, jako kontekst ryzyka."
 date: 2026-07-11 19:00:00 +0200
 eyebrow: "Edukacja · matematyka"
-dek: "Autokorelacja mówi, na ile przeszłość szeregu tłumaczy jego teraźniejszość. AR i MA to dwa sposoby zapisania tej pamięci, ARIMA je łączy i dokłada różnicowanie. Zwroty są prawie nieautoskorelowane, lecz ich kwadraty już nie, i właśnie to grupowanie zmienności modeluje GARCH. Narzędzie do prognozy zmienności, nie kierunku."
+dek: "Autokorelacja mówi, na ile przeszłość szeregu tłumaczy jego teraźniejszość. AR i MA to dwa sposoby zapisania tej pamięci, ARIMA je łączy i dokłada różnicowanie. Zwroty są prawie nieautoskorelowane, ale ich kwadraty już nie, i właśnie to grupowanie zmienności modeluje GARCH. Narzędzie do prognozy zmienności, nie kierunku."
 readingTime: 9
 tags: [matematyka, "szeregi czasowe", ARIMA, GARCH, ARCH, zmienność, autokorelacja, stacjonarność, "Engle Bollerslev", "Box Jenkins", "Tsay", edukacja]
 category: edukacja
@@ -27,8 +27,8 @@ Autokorelacja rzędu k odpowiada na pytanie, na ile wartość sprzed k okresów 
 ```
 ρ_k = Cov(x_t, x_{t−k}) / Var(x_t) # autokorelacja rzędu k
 
-ρ_k ≈ 0 dla każdego k → brak liniowej pamięci
-ρ_k ≠ 0 → przeszłość niesie informację o teraźniejszości
+ρ_k ≈ 0 dla każdego k -> brak liniowej pamięci
+ρ_k ≠ 0 -> przeszłość niesie informację o teraźniejszości
 ```
 
 Jeśli wszystkie współczynniki są bliskie zeru, szereg nie ma liniowej pamięci i jego przeszłe wartości nie pomagają liniowo przewidzieć przyszłych. Jeśli któreś odstają od zera, istnieje struktura, którą model może próbować opisać.
@@ -37,7 +37,7 @@ Jeśli wszystkie współczynniki są bliskie zeru, szereg nie ma liniowej pamię
 
 Zanim jakikolwiek model autoregresyjny ma sens, szereg musi być stacjonarny. W wersji słabej oznacza to, że średnia i wariancja są stałe w czasie, a autokowariancja zależy tylko od odstępu między obserwacjami, nie od momentu pomiaru. Intuicja jest prosta: jeżeli reguły gry zmieniają się w czasie, to parametr oszacowany na przeszłości nie opisuje przyszłości.
 
-Poziom kursu zwykle nie jest stacjonarny: ma trend, błądzi, nie wraca do stałej średniej. Dlatego modeluje się nie poziom, lecz jego zmiany. Operacja różnicowania, czyli przejście od ceny do zmiany ceny (a po logarytmie do zwrotu), zwykle usuwa trend i sprowadza szereg do postaci stacjonarnej.
+Poziom kursu zwykle nie jest stacjonarny: ma trend, błądzi, nie wraca do stałej średniej. Dlatego modeluje się nie poziom, ale jego zmiany. Operacja różnicowania, czyli przejście od ceny do zmiany ceny (a po logarytmie do zwrotu), zwykle usuwa trend i sprowadza szereg do postaci stacjonarnej.
 
 ```
 Δx_t = x_t − x_{t−1} # różnicowanie pierwszego rzędu
@@ -48,14 +48,14 @@ Z tym wiąże się kointegracja. Dwa szeregi mogą być z osobna niestacjonarne,
 
 ## AR i MA: dwie postaci pamięci
 
-Na stacjonarnym szeregu klasyczna analiza oferuje dwa elementarne mechanizmy pamięci. Model autoregresyjny AR zakłada, że dzisiejsza wartość jest ważoną sumą wartości poprzednich plus nowy losowy składnik. Krótko: dzisiaj zależy od wczoraj. Model średniej ruchomej MA zakłada co innego: dzisiejsza wartość zależy nie od poprzednich wartości, lecz od poprzednich losowych szoków, czyli od niespodzianek, które już się pojawiły. Krótko: dzisiaj zależy od wczorajszego zaskoczenia.
+Na stacjonarnym szeregu klasyczna analiza oferuje dwa elementarne mechanizmy pamięci. Model autoregresyjny AR zakłada, że dzisiejsza wartość jest ważoną sumą wartości poprzednich plus nowy losowy składnik. Krótko: dzisiaj zależy od wczoraj. Model średniej ruchomej MA zakłada co innego: dzisiejsza wartość zależy nie od poprzednich wartości, ale od poprzednich losowych szoków, czyli od niespodzianek, które już się pojawiły. Krótko: dzisiaj zależy od wczorajszego zaskoczenia.
 
 ```
 AR(1): x_t = φ·x_{t−1} + ε_t # dzisiaj zależy od wczorajszej wartości
 MA(1): x_t = ε_t + θ·ε_{t−1} # dzisiaj zależy od wczorajszego szoku
 
 ε_t = biały szum (niezależne losowe zakłócenia o średniej 0)
-|φ| < 1 → warunek stacjonarności AR(1)
+|φ| < 1 -> warunek stacjonarności AR(1)
 ```
 
 Oba mechanizmy można połączyć w model ARMA, który jednocześnie pamięta poprzednie wartości i poprzednie szoki. Dobór rzędów, czyli ile opóźnień wziąć po każdej stronie, opiera się na kształcie funkcji autokorelacji i jej częściowego odpowiednika, co szczegółowo opisuje Tsay w Analysis of Financial Time Series.
@@ -72,8 +72,8 @@ ARIMA(p, d, q):
  d = liczba różnicowań (droga do stacjonarności)
  q = człony MA (pamięć szoków)
 
-d = 0 → szereg już stacjonarny (czyste ARMA)
-d = 1 → różnicowanie raz: zmiany zamiast poziomu (typowe dla cen)
+d = 0 -> szereg już stacjonarny (czyste ARMA)
+d = 1 -> różnicowanie raz: zmiany zamiast poziomu (typowe dla cen)
 ```
 
 ## Zwroty prawie nieautoskorelowane, kwadraty już nie

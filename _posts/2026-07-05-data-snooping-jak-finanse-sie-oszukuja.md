@@ -41,7 +41,7 @@ oczekiwane fałszywe odkrycia ≈ N · α (gdy żaden testowany efekt nie istnie
  1000 testów · 5% ≈ 50
 ```
 
-Kto przepuszcza przez dane grid stu kombinacji parametrów, przy zerowym edge'u znajdzie średnio pięć „istotnych" wariantów. Kto testuje tysiąc reguł, znajdzie około pięćdziesięciu. To nie jest pech, spisek ani błąd w kodzie, tylko arytmetyka. Problem zaczyna się wtedy, gdy raport pokazuje wyłącznie zwycięzcę, a licznik prób zostaje za kadrem. Odbiorca widzi „istotny wynik" i nie widzi dziewiętnastu prób, które nie wyszły.
+Kto przepuszcza przez dane grid stu kombinacji parametrów, przy zerowym edge'u znajdzie średnio pięć „istotnych" wariantów. Kto testuje tysiąc reguł, znajdzie około pięćdziesięciu. Nie jest to pech, spisek ani błąd w kodzie, tylko arytmetyka. Problem zaczyna się wtedy, gdy raport pokazuje wyłącznie zwycięzcę, a licznik prób zostaje za kadrem. Odbiorca widzi „istotny wynik" i nie widzi dziewiętnastu prób, które nie wyszły.
 
 ## Dwie szkoły korekty: FWER i FDR
 
@@ -66,7 +66,7 @@ Po ludzku: FWER to kontroler, który woli zatrzymać stu uczciwych, byle nie prz
 
 Harvey, Liu i Zhu w pracy „...and the Cross-Section of Expected Returns" (Review of Financial Studies, 2016) przyłożyli tę logikę do literatury o faktorach wyjaśniających zwroty akcji. Punkt wyjścia: przez dziesięciolecia setki badaczy przeszukiwały w dużej mierze te same dane, publikując kolejne zmienne, które rzekomo tłumaczą przekrój oczekiwanych zwrotów. Klasyczny próg t około 2, odpowiednik istotności 5%, jest ustawiony tak, jakby test był jeden. Tymczasem testów były tysiące, tylko rozproszone po latach, zespołach i czasopismach.
 
-Wniosek pracy jest ilościowy: po uwzględnieniu skali historycznego przeszukiwania nowe „odkrycie" powinno przekraczać t równe 3, a połowa ogłoszonych w literaturze faktorów jest prawdopodobnie fałszywa. To nie jest zarzut nieuczciwości wobec konkretnych autorów. To rachunek na poziomie systemu: przy takiej liczbie prób w obiegu taka część zwycięzców musi być szumem, nawet jeśli każdy z osobna testował starannie.
+Wniosek pracy jest ilościowy: po uwzględnieniu skali historycznego przeszukiwania nowe „odkrycie" powinno przekraczać t równe 3, a połowa ogłoszonych w literaturze faktorów jest prawdopodobnie fałszywa. Nie jest to zarzut nieuczciwości wobec konkretnych autorów. To rachunek na poziomie systemu: przy takiej liczbie prób w obiegu taka część zwycięzców musi być szumem, nawet jeśli każdy z osobna testował starannie.
 
 ## Szuflady pełne wyników nieistotnych
 
@@ -92,6 +92,6 @@ Przy cudzych wynikach oznacza to nieufność wobec pojedynczej metryki z nieznan
 
 Przy własnej pracy oznacza to liczenie samego siebie. Każda kombinacja parametrów, każdy filtr, każda zmiana rynku albo okresu, nawet „szybki rzut oka" na wykres z nową hipotezą, to kolejna próba, która podnosi poprzeczkę dla wszystkiego, co znajdziesz później. Kto loguje liczbę prób, rejestruje hipotezy przed testem i trzyma dane out-of-sample do jednorazowego użycia, ten może korzystać z FDR czy deflacji uczciwie i od czasu do czasu naprawdę coś znaleźć. Kto prób nie liczy, ten nie testuje strategii, tylko losuje z prawego ogona i nazywa to badaniem.
 
-To nie jest porada inwestycyjna. To przegląd literatury o wielokrotnym testowaniu, pokazany po to, żeby przed uwierzeniem w jakikolwiek wynik, cudzy albo własny, zadać jedno pytanie: ile prób za nim stoi.
+Nie jest to porada inwestycyjna. To przegląd literatury o wielokrotnym testowaniu, pokazany po to, żeby przed uwierzeniem w jakikolwiek wynik, cudzy albo własny, zadać jedno pytanie: ile prób za nim stoi.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

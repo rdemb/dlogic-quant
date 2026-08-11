@@ -147,7 +147,7 @@ Grupowanie się zmienności wynika z tej struktury samo. Stan o wysokiej warianc
 
 Ta sama matematyka, która czyni HMM eleganckim, wyznacza jego granice. Cztery są istotne i żadna nie znika przez staranniejsze dopasowanie.
 
-Liczba stanów jest wyborem, nie odkryciem. K ustala człowiek. Za mało stanów gubi strukturę, za dużo tnie szum na pseudoreżimy bez odpowiednika w rzeczywistości. W praktyce zostaje zwykle od dwóch do czterech, a kryteria informacyjne pomagają wybrać, lecz nie usuwają arbitralności.
+Liczba stanów jest wyborem, nie odkryciem. K ustala człowiek. Za mało stanów gubi strukturę, za dużo tnie szum na pseudoreżimy bez odpowiednika w rzeczywistości. W praktyce zostaje zwykle od dwóch do czterech, a kryteria informacyjne pomagają wybrać, ale nie usuwają arbitralności.
 
 Ryzyko dopasowania i podglądanie przyszłości. Dopasowanie modelu na całej próbie, a potem etykietowanie historii estymatą wygładzoną, używa danych z przyszłości do orzekania o przeszłości. Powstaje piękna mapa in-sample, która na żywo się nie powtarza. Do czegokolwiek, co dotyka decyzji, parametry muszą być ustalone na przeszłości, a stan musi być prawdopodobieństwem filtrowanym, liczonym przyczynowo.
 

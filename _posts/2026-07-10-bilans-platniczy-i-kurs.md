@@ -32,10 +32,10 @@ każda transakcja ma dwa zapisy, więc całość sumuje się do zera.
  (z dokładnością do pozycji błędów i opuszczeń;
  znaki zależą od przyjętej konwencji)
 
- deficyt bieżący → napływ kapitału netto
+ deficyt bieżący -> napływ kapitału netto
  (import > eksport) (pożyczka od zagranicy lub sprzedaż aktywów)
 
- nadwyżka bieżąca → odpływ kapitału netto
+ nadwyżka bieżąca -> odpływ kapitału netto
  (eksport > import) (gromadzenie należności wobec zagranicy)
 ```
 
@@ -50,7 +50,7 @@ Dzienny obrót na rynku walutowym (BIS, kwiecień 2022):
  ≈ 7,5 biliona USD dziennie
 
 Roczny światowy eksport towarów: rzędu 25 bilionów USD
- → wartość odpowiadająca obrotowi z około 3 do 4 dni handlu walutami
+ -> wartość odpowiadająca obrotowi z około 3 do 4 dni handlu walutami
 
 Wniosek: przepływy handlowe to ułamek obrotu.
 Resztę stanowią decyzje o alokacji kapitału.
@@ -101,8 +101,8 @@ Zagadka PPP (Rogoff, 1996):
  fakt 2: odchylenia od PPP znikają wyjątkowo wolno
 
  konsensus: połowiczny czas życia odchyleń ≈ 3 do 5 lat
- → połowa odchylenia zanika dopiero po 3 do 5 latach
- → rocznie zamyka się tylko kilkanaście procent luki
+ -> połowa odchylenia zanika dopiero po 3 do 5 latach
+ -> rocznie zamyka się tylko kilkanaście procent luki
 ```
 
 Połowiczny czas życia 3 do 5 lat oznacza, że gdy kurs realny odchyli się od parytetu, po trzech, pięciu latach wciąż połowa tego odchylenia pozostaje. Na powrót w pobliże parytetu potrzeba dekady lub dłużej. Zagadka polega na napięciu: tak wysoka zmienność sugeruje szoki monetarne i finansowe, które powinny zanikać szybko, a tak wolny powrót sugeruje szoki realne, trudne do pogodzenia z tą zmiennością w jednym prostym modelu. Dla praktyki płynie stąd twardy wniosek: PPP jest kotwicą, ale kotwicą na bardzo długiej linie. Na horyzoncie miesięcy potrafi być myląca.
@@ -116,17 +116,17 @@ Model przestrzelenia Dornbuscha (1976),
 reakcja na ekspansję monetarną:
 
  krok 1: podaż pieniądza rośnie, ceny jeszcze stoją
- realna podaż pieniądza rośnie → stopa krajowa spada
+ realna podaż pieniądza rośnie -> stopa krajowa spada
  krok 2: niższa stopa wymaga oczekiwanego umocnienia waluty
  (parytet stóp niepokryty, UIP)
  krok 3: w długim okresie waluta jest słabsza (neutralność
  pieniądza + PPP); żeby rynek oczekiwał jej umocnienia
  w stronę tego słabszego poziomu, kurs musi najpierw
- osłabić się PONAD niego → przestrzelenie
+ osłabić się PONAD niego -> przestrzelenie
  krok 4: w miarę dostosowywania cen kurs wraca do równowagi
 ```
 
-Wniosek Dornbuscha jest głęboki: kurs jest bardziej ruchliwy niż fundamenty, które go napędzają, nie dlatego, że rynek jest irracjonalny, lecz dlatego, że lepkość cen zmusza całe dostosowanie do przejścia przez jeden ruchliwy rynek walutowy. Przestrzelenie tłumaczy, dlaczego kursy reagują na decyzje banków centralnych mocniej, niż wynikałoby to z samej zmiany poziomu cen. To także dopełnia zagadkę PPP: krótkoterminowe wychylenia bywają duże właśnie dlatego, że kurs bierze na siebie dostosowanie, które ceny odkładają na lata.
+Wniosek Dornbuscha jest głęboki: kurs jest bardziej ruchliwy niż fundamenty, które go napędzają, nie dlatego, że rynek jest irracjonalny, ale dlatego, że lepkość cen zmusza całe dostosowanie do przejścia przez jeden ruchliwy rynek walutowy. Przestrzelenie tłumaczy, dlaczego kursy reagują na decyzje banków centralnych mocniej, niż wynikałoby to z samej zmiany poziomu cen. To także dopełnia zagadkę PPP: krótkoterminowe wychylenia bywają duże właśnie dlatego, że kurs bierze na siebie dostosowanie, które ceny odkładają na lata.
 
 ## Terms of trade i waluty surowcowe
 
@@ -135,15 +135,15 @@ Kotwica długookresowa sama się przesuwa, gdy zmienia się realna wartość teg
 ```
 Terms of trade = ceny eksportu / ceny importu
 
- eksport drożeje względem importu → presja na umocnienie
- eksport tanieje względem importu → presja na osłabienie
+ eksport drożeje względem importu -> presja na umocnienie
+ eksport tanieje względem importu -> presja na osłabienie
 ```
 
-Najczystszym przypadkiem są waluty surowcowe, jak dolar australijski, dolar kanadyjski, korona norweska czy dolar nowozelandzki. Chen i Rogoff (2003) udokumentowali, że ceny surowców realnie przesuwają kursy takich gospodarek. To ważne dopełnienie obrazu: długookresowa kotwica kursu nie jest stała, lecz przesuwa się wraz z realnymi warunkami wymiany, a dla eksporterów surowców głównym motorem tego przesunięcia są ceny towarów.
+Najczystszym przypadkiem są waluty surowcowe, jak dolar australijski, dolar kanadyjski, korona norweska czy dolar nowozelandzki. Chen i Rogoff (2003) udokumentowali, że ceny surowców realnie przesuwają kursy takich gospodarek. To ważne dopełnienie obrazu: długookresowa kotwica kursu nie jest stała, ale przesuwa się wraz z realnymi warunkami wymiany, a dla eksporterów surowców głównym motorem tego przesunięcia są ceny towarów.
 
 ## Co z tego wynika dla horyzontu
 
-Cztery klasyczne ustalenia układają się w jedną warstwową całość. Bilans płatniczy mówi, że salda muszą się domknąć i że deficyt jednego jest kredytem drugiego, ale nie mówi, kiedy kurs zareaguje. PPP wyznacza długookresowy cel, lecz z połowicznym czasem życia 3 do 5 lat (Rogoff, 1996) jest kotwicą powolną. Dornbusch (1976) tłumaczy, dlaczego po drodze kurs przestrzeliwuje. Meese i Rogoff (1983) przypominają, że na krótkim horyzoncie fundamenty nie biją błądzenia losowego. Wnioskiem nie jest przepis na prognozę, lecz właściwe rozłożenie horyzontów: fundamenty kotwiczą kurs w skali lat, a nie dni.
+Cztery klasyczne ustalenia układają się w jedną warstwową całość. Bilans płatniczy mówi, że salda muszą się domknąć i że deficyt jednego jest kredytem drugiego, ale nie mówi, kiedy kurs zareaguje. PPP wyznacza długookresowy cel, ale z połowicznym czasem życia 3 do 5 lat (Rogoff, 1996) jest kotwicą powolną. Dornbusch (1976) tłumaczy, dlaczego po drodze kurs przestrzeliwuje. Meese i Rogoff (1983) przypominają, że na krótkim horyzoncie fundamenty nie biją błądzenia losowego. Wnioskiem nie jest przepis na prognozę, ale właściwe rozłożenie horyzontów: fundamenty kotwiczą kurs w skali lat, a nie dni.
 
 Materiał czysto edukacyjny, nie porada inwestycyjna ani prognoza kursu. Opisane modele wyjaśniają, dlaczego długookresowa kotwica i krótkookresowy szum to dwie różne warstwy, a nie dostarczają przewagi w przewidywaniu kierunku kursu; brak takiej przewagi na krótkim horyzoncie jest wręcz głównym wynikiem pracy Meese i Rogoffa (1983). Pewne są tu wyłącznie tożsamość księgowa bilansu płatniczego oraz algebra parytetu i kursu realnego; wielkości empiryczne, jak połowiczny czas życia PPP, to oszacowania z literatury, obarczone niepewnością.
 

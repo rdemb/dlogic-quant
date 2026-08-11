@@ -2,7 +2,7 @@
 layout: labpost
 title: "143 testy przeszły. Poprawny wynik nadal brzmiał: INCONCLUSIVE"
 description: "Dlaczego zielony test suite nie dowodzi właściwości, której eksperyment nigdy nie zdołał zaobserwować."
-dek: "Eksperyment zatrzymał się przed Wine, terminalem i danymi brokera. To nie był dowód awarii bota, lecz dowód granicy własnej obserwacji."
+dek: "Eksperyment zatrzymał się przed Wine, terminalem i danymi brokera. Nie był to dowód awarii bota, ale dowód granicy własnej obserwacji."
 date: 2026-08-11 13:00:00 +0200
 category: algo
 eyebrow: "D-LOGIC Chronicle #02"
@@ -78,19 +78,19 @@ Przejście pomiędzy tymi stanami nie jest formalnością. Kompilator i runtime 
 
 <div class="lab-note"><strong>Niedozwolony skrót:</strong> COMPILED ⇒ DZIAŁA</div>
 
-Jest wygodny, lecz naukowo pusty. Poprawny łańcuch wygląda raczej tak:
+Jest wygodny, ale naukowo pusty. Poprawny łańcuch wygląda raczej tak:
 
-<div class="lab-note"><strong>Poprawny łańcuch:</strong> COMPILED → LOADABLE → CANARY TESTED → DATA VALIDATED</div>
+<div class="lab-note"><strong>Poprawny łańcuch:</strong> COMPILED -> LOADABLE -> CANARY TESTED -> DATA VALIDATED</div>
 
 Dopiero później zaczyna się właściwe pytanie o model, przewagę i wykonanie.
 
 ## PASS, FAIL i INCONCLUSIVE to trzy różne wyniki
 
-Najważniejsza lekcja tego etapu nie polega na dodaniu kolejnej etykiety do dashboardu, lecz na odróżnieniu trzech logicznie różnych sytuacji.
+Najważniejsza lekcja tego etapu nie polega na dodaniu kolejnej etykiety do dashboardu, ale na odróżnieniu trzech logicznie różnych sytuacji.
 
 **PASS** oznacza, że eksperyment dotarł do badanej własności, zaobserwował ją i spełniła wcześniej ustalone kryterium.
 
-**FAIL** oznacza, że eksperyment również dotarł do badanej własności, lecz obserwacja zaprzeczyła wymaganiu.
+**FAIL** oznacza, że eksperyment również dotarł do badanej własności, ale obserwacja zaprzeczyła wymaganiu.
 
 **INCONCLUSIVE** oznacza, że ścieżka obserwacyjna nie dotarła do miejsca, w którym własność mogła zostać rozstrzygnięta.
 
@@ -121,9 +121,9 @@ Im większa odpowiedź, tym słabsze prawo do mocnego czasownika: „działa”,
 
 ## Ten sam błąd występuje w researchu alfy
 
-Przypadek infrastruktury ma bezpośredni odpowiednik w badaniach rynkowych. Model może przejść testy jednostkowe, a mimo to używać danych dostępnych dopiero po decyzji. Backtest może działać deterministycznie, lecz pomijać realny spread. Walidacja może być poprawna matematycznie, ale przeprowadzona na zbiorze, który wielokrotnie służył do wyboru hipotezy. Prognoza może trafnie przewidywać zmianę ceny mid, której nie da się kupić ani sprzedać.
+Przypadek infrastruktury ma bezpośredni odpowiednik w badaniach rynkowych. Model może przejść testy jednostkowe, a mimo to używać danych dostępnych dopiero po decyzji. Backtest może działać deterministycznie, ale pomijać realny spread. Walidacja może być poprawna matematycznie, ale przeprowadzona na zbiorze, który wielokrotnie służył do wyboru hipotezy. Prognoza może trafnie przewidywać zmianę ceny mid, której nie da się kupić ani sprzedać.
 
-W każdym przypadku testy są prawdziwe wewnątrz własnego kontraktu, lecz publiczna interpretacja wykracza poza to, co zaobserwowano.
+W każdym przypadku testy są prawdziwe wewnątrz własnego kontraktu, ale publiczna interpretacja wykracza poza to, co zaobserwowano.
 
 Dlatego D-LOGIC rozdziela dziś coraz więcej stanów, nawet jeśli z zewnątrz może to wyglądać jak nadmierna ostrożność. Każde dodatkowe przejście w cyklu życia ogranicza możliwość, że sukces jednej warstwy zostanie użyty jako zastępczy dowód dla kolejnej.
 
@@ -135,7 +135,7 @@ Z perspektywy programu badawczego był to jednak poprawny rezultat. Granica bezp
 
 Następny eksperyment powinien więc odpowiedzieć wyłącznie na kolejny nierozstrzygnięty problem: najpierw stworzyć działające, odizolowane środowisko wyświetlania, potem uruchomić minimalny smoke test Wine, a dopiero później dopuścić loader do próby załadowania przypiętego artefaktu. Nadal bez handlu i bez przeskakiwania do weryfikacji danych.
 
-To wolniejszy sposób budowania systemu, ale tylko pozornie. Najwięcej czasu w projektach quant traci się nie na ostrożne testy, lecz na miesiące rozwijania komponentu, któremu zbyt wcześnie przypisano właściwości, których nigdy nie udowodniono.
+To wolniejszy sposób budowania systemu, ale tylko pozornie. Najwięcej czasu w projektach quant traci się nie na ostrożne testy, ale na miesiące rozwijania komponentu, któremu zbyt wcześnie przypisano właściwości, których nigdy nie udowodniono.
 
 143 testy przeszły.
 
@@ -143,7 +143,7 @@ Poprawny wynik pozostał jednak prosty:
 
 > **Nie wiadomo jeszcze, czy artefakt jest loadable, ponieważ eksperyment nigdy nie dotarł do loadera.**
 
-To nie jest porażka systemu dowodowego.
+Nie jest to porażka systemu dowodowego.
 
 To właśnie moment, w którym system dowodowy zadziałał.
 

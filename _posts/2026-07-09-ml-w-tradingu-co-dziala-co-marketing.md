@@ -11,7 +11,7 @@ tags: ["uczenie maszynowe", "machine learning", "meta-labeling", "López de Prad
 
 > **W skrócie**
 >
-> - **Naiwne ML na surowej cenie zwykle zawodzi**, i to z trzech niezależnych powodów: niski stosunek sygnału do szumu (przewidywalna część zwrotów to ułamek wariancji), niestacjonarność (proces generujący dane zmienia się pod modelem) oraz overfitting (model o dużej pojemności zapamiętuje szum jako strukturę). To nie jest problem doboru sieci, tylko własność rynku.
+> - **Naiwne ML na surowej cenie zwykle zawodzi**, i to z trzech niezależnych powodów: niski stosunek sygnału do szumu (przewidywalna część zwrotów to ułamek wariancji), niestacjonarność (proces generujący dane zmienia się pod modelem) oraz overfitting (model o dużej pojemności zapamiętuje szum jako strukturę). Nie jest to problem doboru sieci, tylko własność rynku.
 > - **Meta-labeling to zdrowe zastosowanie ML.** Model nie generuje sygnału. Reguła podstawowa decyduje o stronie (long albo short), a model ML decyduje tylko, czy w ogóle grać i ile ryzykować. ML odpowiada na pytanie „z jaką pewnością", nie „w którą stronę" (López de Prado, 2018).
 > - **Prosty model to nie gorszy model.** Jednowarstwowy model liniowy DLinear dorównał złożonym transformerom, a często je przewyższył, na standardowych benchmarkach prognozowania szeregów czasowych (Zeng i wsp., 2023). Jeśli wielka sieć nie bije naiwnej persystencji ani modelu liniowego, nie wnosi nic poza ryzykiem przeuczenia.
 > - **Walidacja waży więcej niż architektura.** Typowa porażka to nie zła sieć, tylko przeciekający albo przeszukany backtest. Purged cross-validation, walk-forward oraz Deflated Sharpe i PBO rozstrzygają więcej niż liczba warstw.
@@ -34,7 +34,7 @@ Trzeci powód to overfitting spleciony z przeciekiem danych. Duża pojemność m
 
 ## Prosty model to nie gorszy model
 
-W 2023 roku Zeng i współautorzy zadali w tytule pracy złośliwe pytanie: czy transformery są w ogóle skuteczne w prognozowaniu szeregów czasowych. Odpowiedzią był DLinear, model tak prosty, że mieści się w jednej warstwie liniowej. Na standardowych, publicznych benchmarkach prognozowania długiego horyzontu dorównał on rozbudowanym architekturom transformerowym, a na wielu zbiorach je przewyższył. To nie jest anegdota o jednym datasecie, to systematyczny sygnał ostrzegawczy: złożoność architektury sama w sobie nie kupuje jakości prognozy.
+W 2023 roku Zeng i współautorzy zadali w tytule pracy złośliwe pytanie: czy transformery są w ogóle skuteczne w prognozowaniu szeregów czasowych. Odpowiedzią był DLinear, model tak prosty, że mieści się w jednej warstwie liniowej. Na standardowych, publicznych benchmarkach prognozowania długiego horyzontu dorównał on rozbudowanym architekturom transformerowym, a na wielu zbiorach je przewyższył. Nie jest to anegdota o jednym datasecie, to systematyczny sygnał ostrzegawczy: złożoność architektury sama w sobie nie kupuje jakości prognozy.
 
 Powód jest statystyczny, nie ideologiczny. Przy niskim stosunku sygnału do szumu wariancja estymatora dominuje nad jego obciążeniem. Prosty model ma niższą wariancję i mniej sposobów, żeby dopasować się do szumu, więc w takim reżimie wygrywa nie dlatego, że jest mądrzejszy, tylko dlatego, że jest skromniejszy. Stąd praktyczna dyscyplina benchmarku:
 
@@ -76,7 +76,7 @@ Osobny, ważny przypadek to przekrój rynku. Gu, Kelly i Xiu (2020) oraz przegl�
 
 Reinforcement learning kusi najmocniej, bo obiecuje ominąć problem prognozy: zamiast przewidywać cenę, ucz agenta polityki działania wprost, a on sam nauczy się kupować, sprzedawać i wychodzić. Przeglądy tej literatury (na przykład Hambly, Xu i Yang, 2023) studzą entuzjazm. RL jest ekstremalnie głodny próbek, a historia rynku to w praktyce jedna albo kilka ścieżek, więc agent łatwo przeucza się do tej konkretnej przeszłości. Projektowanie funkcji nagrody jest kruche (mała zmiana nagrody, inne zachowanie), niestacjonarność podkopuje wyuczoną politykę, a większość opublikowanych sukcesów nie przeżywa realistycznych kosztów transakcyjnych i uczciwego out-of-sample.
 
-Realne zwycięstwa RL są wąskie i konkretne: optymalna egzekucja i harmonogramowanie zleceń, gdzie istnieje dobry symulator i jasno zdefiniowany koszt do minimalizacji. To cenne, ale to nie jest skrót omijający problem sygnału. RL nie wyczaruje przewagi tam, gdzie jej nie ma, przesuwa tylko trudność z prognozy na projekt środowiska i nagrody.
+Realne zwycięstwa RL są wąskie i konkretne: optymalna egzekucja i harmonogramowanie zleceń, gdzie istnieje dobry symulator i jasno zdefiniowany koszt do minimalizacji. To cenne, ale nie jest to skrót omijający problem sygnału. RL nie wyczaruje przewagi tam, gdzie jej nie ma, przesuwa tylko trudność z prognozy na projekt środowiska i nagrody.
 
 ## Co z tego wynika przy stole
 
@@ -84,6 +84,6 @@ Uczciwa mapa jest prosta. Uczenie maszynowe to skrzynka narzędzi do dobrze post
 
 Wiążącym ograniczeniem prawie nigdy nie jest rozmiar modelu, tylko dyscyplina sprawdzania. Zanim postawisz na dowolnym modelu pieniądze, warto zadać cztery pytania: czy pobił naiwną persystencję i model liniowy, czy walidacja respektowała przyczynowość (bez shuffle, z purging i embargo), ile konfiguracji przeszukano, zanim ta wygrała, i czy wynik przeżywa deflację o tę liczbę prób. Model, który przechodzi ten filtr, jest skromniejszy, niż obiecuje marketing, ale za to prawdziwy.
 
-To nie jest porada inwestycyjna. To uczciwa ocena narzędzia: gdzie ML w tradingu realnie pomaga, gdzie jest tylko hype, i jaką dyscypliną odróżnić jedno od drugiego, zanim zaufasz liczbie na wykresie.
+Nie jest to porada inwestycyjna. To uczciwa ocena narzędzia: gdzie ML w tradingu realnie pomaga, gdzie jest tylko hype, i jaką dyscypliną odróżnić jedno od drugiego, zanim zaufasz liczbie na wykresie.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

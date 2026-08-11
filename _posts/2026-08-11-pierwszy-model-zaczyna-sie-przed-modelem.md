@@ -24,13 +24,13 @@ Każdy obejrzany rezultat wpływa na następną decyzję. Jeżeli po słabym wyn
 
 Dlatego pierwszy poważny pakiet researchu alfy w obecnym D-LOGIC został zaprojektowany tak, aby **nie zaczynał się od treningu modelu**. Jego zadaniem jest zamrożenie podłoża, na którym późniejszy eksperyment będzie mógł zostać przeprowadzony bez cichego dopisywania reguł po zobaczeniu wyniku.
 
-To nie jest jeszcze informacja, że taki model działa. Jest to opis metodologii, która ma dopiero stworzyć prawo do wykonania pierwszego prerejestrowanego eksperymentu.
+Nie jest to jeszcze informacja, że taki model działa. Jest to opis metodologii, która ma dopiero stworzyć prawo do wykonania pierwszego prerejestrowanego eksperymentu.
 
 ## Najpierw trzeba udowodnić, co system mógł wiedzieć
 
 W backteście wszystkie obserwacje leżą w jednym pliku. Dla komputera kolumna z dzisiejszego poranka i kolumna z jutrzejszego zamknięcia są równie łatwo dostępne, dlatego sama obecność timestampu nie chroni przed wykorzystaniem przyszłości.
 
-Istotne jest nie tylko to, kiedy coś wydarzyło się na rynku, lecz również kiedy informacja stała się dostępna dla konkretnego procesu decyzyjnego.
+Istotne jest nie tylko to, kiedy coś wydarzyło się na rynku, ale również kiedy informacja stała się dostępna dla konkretnego procesu decyzyjnego.
 
 Notowanie może mieć czas giełdowy, czas odebrania przez dostawcę, czas zapisania na dysku i czas zakończenia transformacji. Wartość makro może zostać opublikowana o określonej godzinie, a później zrewidowana. Skład indeksu widoczny dzisiaj nie musi odpowiadać składowi z badanego dnia. Świeca posiada ostateczne high i low dopiero po zamknięciu, chociaż kod potrafi wczytać te wartości dla całej historii jednym poleceniem.
 
@@ -108,7 +108,7 @@ D-LOGIC zakłada również pełnoprawny baseline `ABSTAIN / NO TRADE`. Model nie
 
 Zewnętrzny holdout przypomina zapieczętowaną kopertę. Jego wartość wynika z tego, że nie wpływał na wybór hipotezy, danych, cech ani parametrów. Po otwarciu wynik staje się częścią wiedzy badacza i będzie oddziaływał na kolejne decyzje, nawet jeśli nikt nie skopiuje liczby bezpośrednio do kodu.
 
-Dlatego końcowy holdout w projektowanym pakiecie ma pozostać zamknięty, a sam brak dostępu powinien otrzymać własny receipt. To nie przesada: system dowodowy musi potrafić wykazać nie tylko, co przeczytał, lecz czasem również czego **nie przeczytał**.
+Dlatego końcowy holdout w projektowanym pakiecie ma pozostać zamknięty, a sam brak dostępu powinien otrzymać własny receipt. To nie przesada: system dowodowy musi potrafić wykazać nie tylko, co przeczytał, ale czasem również czego **nie przeczytał**.
 
 Warto myśleć o tym jako o kapitale statystycznym. Każda niezależna próba zużywa część zdolności do formułowania nowych twierdzeń. Jeżeli otwieramy wiele wariantów, horyzontów i modeli, rośnie prawdopodobieństwo, że najbardziej atrakcyjny wynik będzie przypadkiem.
 

@@ -112,6 +112,6 @@ Na akcjach zlecenie żyje w świecie zleceniowo-giełdowym: trafia do jawnej ksi
 
 Trzy pytania porządkują każdy rynek, na którym przychodzi handlować: kto jest kontrahentem transakcji, skąd pochodzi kwotowanie i kto gwarantuje rozliczenie. Odpowiedzi nie dają przewagi, ale mówią, które ryzyka są strukturalne, a które negocjowalne, i za co dokładnie płaci się w spreadzie.
 
-To nie jest porada inwestycyjna. To opis architektury rynków, podany z definicjami i źródłami, żeby dało się rozumieć, z kim naprawdę zawiera się transakcję, skąd bierze się cena na ekranie i kto gwarantuje rozliczenie, zanim postawi się na tym pieniądze.
+Nie jest to porada inwestycyjna. To opis architektury rynków, podany z definicjami i źródłami, żeby dało się rozumieć, z kim naprawdę zawiera się transakcję, skąd bierze się cena na ekranie i kto gwarantuje rozliczenie, zanim postawi się na tym pieniądze.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

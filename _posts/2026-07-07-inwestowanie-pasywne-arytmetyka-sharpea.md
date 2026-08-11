@@ -85,6 +85,6 @@ Po trzecie, drobna uczciwość techniczna: SPIVA porównuje fundusze z indeksem,
 
 Najkrótsza sensowna ścieżka wygląda tak. Na początek Bernstein, If You Can (2014): 16 stron, darmowy PDF na efficientfrontier.com, w środku cała mechanika oszczędzania przez indeks plus pięć przeszkód, głównie behawioralnych, które trzeba po drodze pokonać. Potem oryginalny Sharpe (1991), bo warto raz zobaczyć cały argument u źródła. Na dłuższe wieczory dwie książki: Bogle, The Little Book of Common Sense Investing (2007), czyli arytmetyka kosztów rozpisana na przykładach, oraz Malkiel, A Random Walk Down Wall Street (1973, regularnie wznawiany), czyli szersze tło, dlaczego wybieranie spółek i timing rynku są takie trudne.
 
-To nie jest porada inwestycyjna. To edukacyjne omówienie jednej tożsamości arytmetycznej i czterech dekad danych o funduszach, żeby oczekiwania wobec aktywnego i pasywnego inwestowania ustawiać na liczbach, a nie na marketingu.
+Nie jest to porada inwestycyjna. To edukacyjne omówienie jednej tożsamości arytmetycznej i czterech dekad danych o funduszach, żeby oczekiwania wobec aktywnego i pasywnego inwestowania ustawiać na liczbach, a nie na marketingu.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

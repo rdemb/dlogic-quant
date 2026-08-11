@@ -126,6 +126,6 @@ COT odpowiada na inne pytanie, niż zwykle mu się zadaje. Nie mówi „w któr�
 
 Uczciwe użycie polega na traktowaniu go jak jednej warstwy kontekstu, nakładanej na inne przesłanki, a nie jak samodzielnego wyzwalacza. Ekstremum w percentylach to ostrzeżenie o zatłoczeniu i o ryzyku gwałtownego cofnięcia, a nie zaproszenie do natychmiastowej kontry pod trend. Wiedza, że leveraged funds są blisko rekordowego net long, zmienia sposób ważenia ryzyka pozycji, ale nie zastępuje przesłanki, dla której miałbyś w ogóle w tę pozycję wchodzić. Pozycjonowanie to tło obrazu, nie jego temat.
 
-To nie jest porada inwestycyjna. To wyjaśnienie, jak czytać publiczny raport pozycjonowania i gdzie leżą jego granice, żebyś umiał odróżnić kontekst rynkowy od sygnału, zanim jeden pomylisz z drugim.
+Nie jest to porada inwestycyjna. To wyjaśnienie, jak czytać publiczny raport pozycjonowania i gdzie leżą jego granice, żebyś umiał odróżnić kontekst rynkowy od sygnału, zanim jeden pomylisz z drugim.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

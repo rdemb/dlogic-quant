@@ -33,12 +33,12 @@ Błądzenie losowe (I(1)): y_t = y_{t-1} + e_t
  brak stałej średniej, wariancja rośnie z czasem,
  szok e_t zostaje w poziomie na zawsze (brak powrotu do średniej).
 
-Pierwsza różnica: y_t − y_{t-1} = e_t → stacjonarna (I(0))
+Pierwsza różnica: y_t − y_{t-1} = e_t -> stacjonarna (I(0))
 ```
 
 ## Ceny błądzą, zwroty są bliższe stacjonarności
 
-Ceny instrumentów finansowych, kursy walut i indeksy zachowują się w praktyce jak szeregi niestacjonarne, bardzo blisko błądzenia losowego. To nie jest przypadek, tylko odbicie prostego faktu: gdyby poziom ceny miał przewidywalną, stałą średnią, do której wraca, przewidzenie kierunku byłoby trywialne, a rynek szybko by tę własność usunął. Dlatego surowe ceny zwykle traktuje się jako I(1). Ich logarytmiczne zwroty, czyli różnice logarytmów cen, są znacznie bliższe stacjonarnym, choć nie idealnie: zmienność skupia się w klastry, a ogony są grube. Bliższe stacjonarnym nie znaczy więc idealnie stacjonarne, znaczy tyle, że mają w miarę stałą średnią i wracają do niej, w odróżnieniu od poziomów.
+Ceny instrumentów finansowych, kursy walut i indeksy zachowują się w praktyce jak szeregi niestacjonarne, bardzo blisko błądzenia losowego. Nie jest to przypadek, tylko odbicie prostego faktu: gdyby poziom ceny miał przewidywalną, stałą średnią, do której wraca, przewidzenie kierunku byłoby trywialne, a rynek szybko by tę własność usunął. Dlatego surowe ceny zwykle traktuje się jako I(1). Ich logarytmiczne zwroty, czyli różnice logarytmów cen, są znacznie bliższe stacjonarnym, choć nie idealnie: zmienność skupia się w klastry, a ogony są grube. Bliższe stacjonarnym nie znaczy więc idealnie stacjonarne, znaczy tyle, że mają w miarę stałą średnią i wracają do niej, w odróżnieniu od poziomów.
 
 Ten podział ma konkretne konsekwencje dla modelowania. Regresja i większość klasycznej statystyki zakłada stacjonarność zmiennych. Podane na wejściu dwa niestacjonarne poziomy potrafią złamać te założenia w spektakularny sposób, co prowadzi wprost do najstarszej pułapki w ekonometrii szeregów czasowych.
 
@@ -53,18 +53,18 @@ Dwa NIEZALEŻNE błądzenia losowe x_t, y_t (brak wspólnego czynnika):
  regresja y_t = a + b·x_t + u_t
 
 Granger, Newbold (1974), symulacje Monte Carlo:
- wysokie R², pozornie istotne t → fałszywe "odkrycia"
+ wysokie R², pozornie istotne t -> fałszywe "odkrycia"
  znacznie częściej niż nominalne 5%
- reszty u_t silnie autoskorelowane → niski Durbin-Watson
+ reszty u_t silnie autoskorelowane -> niski Durbin-Watson
 
-Reguła ostrzegawcza: R² > Durbin-Watson → podejrzenie regresji pozornej
+Reguła ostrzegawcza: R² > Durbin-Watson -> podejrzenie regresji pozornej
 ```
 
 Wniosek jest niewygodny dla każdego, kto koreluje ceny: wysoka korelacja dwóch trendujących poziomów nie jest dowodem żadnego związku. Może być czystym artefaktem tego, że oba szeregi są niestacjonarne.
 
 ## Kointegracja: kiedy dwa błądzenia dzielą jeden spread
 
-I tu wchodzi pojęcie, za które Clive Granger otrzymał później Nagrodę Nobla. Engle i Granger (1987) sformalizowali kointegrację: sytuację, w której dwa szeregi są niestacjonarne każdy z osobna, ale istnieje ich kombinacja liniowa, która jest stacjonarna. Innymi słowy oba poziomy błądzą, lecz błądzą razem, powiązane wspólnym trendem stochastycznym, tak że pewna ważona różnica między nimi ma stałą średnią i do niej wraca.
+I tu wchodzi pojęcie, za które Clive Granger otrzymał później Nagrodę Nobla. Engle i Granger (1987) sformalizowali kointegrację: sytuację, w której dwa szeregi są niestacjonarne każdy z osobna, ale istnieje ich kombinacja liniowa, która jest stacjonarna. Innymi słowy oba poziomy błądzą, ale błądzą razem, powiązane wspólnym trendem stochastycznym, tak że pewna ważona różnica między nimi ma stałą średnią i do niej wraca.
 
 Ta ważona różnica to spread, a wagę nazywa się wektorem kointegrującym. Kluczowa różnica względem zwykłej korelacji jest taka: korelacja mówi o krótkoterminowym współruchu, zwykle zwrotów, i bywa pozorna. Kointegracja mówi o długoterminowym powiązaniu poziomów, które trzyma spread na uwięzi. To właśnie stacjonarność spreadu, a nie korelacja cen, jest teoretyczną podstawą powrotu do średniej.
 
@@ -74,7 +74,7 @@ Dwa szeregi I(1): X_t, Y_t (każdy z osobna niestacjonarny)
 Kointegracja: istnieje β takie, że
  spread_t = Y_t − β·X_t jest stacjonarny (I(0))
 
-→ spread ma stałą średnią i wraca do niej (mean reversion)
+-> spread ma stałą średnią i wraca do niej (mean reversion)
 β = wektor kointegrujący; korelacja ≠ kointegracja
 ```
 
@@ -94,11 +94,11 @@ Odpowiedzią jest test Johansena (1991), oparty na modelu wektorowej autoregresj
 ```
 Test ADF (Dickey, Fuller 1979 i wersja rozszerzona):
  H0: pierwiastek jednostkowy (szereg niestacjonarny)
- odrzucenie H0 → przesłanka za stacjonarnością
+ odrzucenie H0 -> przesłanka za stacjonarnością
 
 Engle-Granger (1987), dwa kroki:
- 1. regresja Y_t na X_t → reszty = estymata spreadu
- 2. ADF na resztach → stacjonarne reszty = kointegracja
+ 1. regresja Y_t na X_t -> reszty = estymata spreadu
+ 2. ADF na resztach -> stacjonarne reszty = kointegracja
 
 Johansen (1991): model VAR, wiele wektorów kointegrujących naraz,
  statystyki śladu i maks. wartości własnej; symetryczny wobec zmiennych
@@ -112,11 +112,11 @@ Schemat jest mechaniczny. Po oknie formowania następuje okno handlu. Pozycję o
 
 ```
 Pairs trading (schemat dystansowy, Gatev i in. 2006):
- okno formowania → dobór par: min. suma kwadratów
+ okno formowania -> dobór par: min. suma kwadratów
  odchyleń znormalizowanych cen
  okno handlu:
- spread odchyla się o 2σ od średniej → otwarcie (zakład na powrót)
- spread wraca do średniej → zamknięcie
+ spread odchyla się o 2σ od średniej -> otwarcie (zakład na powrót)
+ spread wraca do średniej -> zamknięcie
 
 Uwaga: to metoda dystansowa, nie test kointegracji;
 wariant kointegracyjny (spread z β) = osobna rodzina.

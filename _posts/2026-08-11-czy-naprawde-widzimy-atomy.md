@@ -39,7 +39,7 @@ Z tego często wyciąga się zbyt szeroki wniosek, że światłem widzialnym nie
 
 To samo dzieje się nocą z odległą gwiazdą. Jej tarcza może być znacznie mniejsza od zdolności rozdzielczej oka, a mimo to widzimy światło, ponieważ detekcja źródła nie wymaga rozdzielenia jego powierzchni.
 
-Mikroskopy gazów kwantowych potrafią wykrywać pojedyncze atomy w miejscach sieci optycznej z bardzo wysoką wiernością. Obraz mówi, które stanowisko jest zajęte, pozwala śledzić korelacje i dynamikę wielu ciał, lecz nie jest portretem wewnętrznej budowy atomu.
+Mikroskopy gazów kwantowych potrafią wykrywać pojedyncze atomy w miejscach sieci optycznej z bardzo wysoką wiernością. Obraz mówi, które stanowisko jest zajęte, pozwala śledzić korelacje i dynamikę wielu ciał, ale nie jest portretem wewnętrznej budowy atomu.
 
 <figure>
 <svg viewBox="0 0 1040 410" role="img" aria-labelledby="detect-title detect-desc" xmlns="http://www.w3.org/2000/svg">
@@ -76,11 +76,11 @@ Im słabsze dane, większy nieporządek, ruch termiczny albo niejednorodność p
 
 Skaningowy mikroskop tunelowy wykorzystuje ostrą, przewodzącą końcówkę umieszczoną bardzo blisko powierzchni. Po przyłożeniu napięcia elektrony mogą tunelować przez barierę próżniową, tworząc prąd niezwykle czuły na odległość końcówki od próbki.
 
-Układ sprzężenia zwrotnego może przesuwać końcówkę tak, aby prąd pozostał stały, a zapis ruchu tworzy mapę powierzchni. Łatwo nazwać ją topografią atomową, lecz teoria STM pokazuje, że prąd zależy także od lokalnej gęstości stanów elektronowych, napięcia, struktury końcówki i właściwości próbki.
+Układ sprzężenia zwrotnego może przesuwać końcówkę tak, aby prąd pozostał stały, a zapis ruchu tworzy mapę powierzchni. Łatwo nazwać ją topografią atomową, ale teoria STM pokazuje, że prąd zależy także od lokalnej gęstości stanów elektronowych, napięcia, struktury końcówki i właściwości próbki.
 
-Dwa obrazy tej samej powierzchni wykonane przy różnych napięciach mogą wyglądać inaczej nie dlatego, że atomy zmieniły położenie, lecz dlatego, że instrument stał się czuły na inne stany elektronowe. Jasny punkt nie zawsze oznacza fizycznie najwyższy atom; może oznaczać region zwiększonej dostępności stanów dla tunelujących elektronów.
+Dwa obrazy tej samej powierzchni wykonane przy różnych napięciach mogą wyglądać inaczej nie dlatego, że atomy zmieniły położenie, ale dlatego, że instrument stał się czuły na inne stany elektronowe. Jasny punkt nie zawsze oznacza fizycznie najwyższy atom; może oznaczać region zwiększonej dostępności stanów dla tunelujących elektronów.
 
-To nie jest wada STM. Właśnie dzięki tej zależności mikroskop pozwala badać strukturę elektronową z rozdzielczością atomową. Problem pojawia się dopiero wtedy, gdy wynik nazwiemy zwykłą fotografią powierzchni i zgubimy informację o tym, co naprawdę steruje kontrastem.
+Nie jest to wada STM. Właśnie dzięki tej zależności mikroskop pozwala badać strukturę elektronową z rozdzielczością atomową. Problem pojawia się dopiero wtedy, gdy wynik nazwiemy zwykłą fotografią powierzchni i zgubimy informację o tym, co naprawdę steruje kontrastem.
 
 ## AFM zmienia prąd na siłę
 

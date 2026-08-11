@@ -36,21 +36,21 @@ Konkret na klasycznym przykładzie Thorpa. Weź monetę z przewagą, wypłata je
 
 ```
 p = 0,60 (szansa wygranej), q = 0,40 (szansa przegranej), kurs 1:1
-f* = p − q = 0,60 − 0,40 = 0,20 → pełny Kelly stawia 20% kapitału
-pół Kelly → 10% kapitału
+f* = p − q = 0,60 − 0,40 = 0,20 -> pełny Kelly stawia 20% kapitału
+pół Kelly -> 10% kapitału
 ```
 
 Kluczowe jest to, co siedzi pod logarytmem. Kelly maksymalizuje wartość oczekiwaną z log(kapitału), czyli średnie tempo geometryczne, a nie średni zysk arytmetyczny. Logarytm karze straty niesymetrycznie. Gdy wystawiona frakcja razy zwrot dąży do minus jeden, czyli tracisz cały postawiony kapitał, log leci do minus nieskończoności.
 
 ```
-gdy f · r → −1 (tracisz cały wystawiony kapitał), log(1 + f · r) → −∞
+gdy f · r -> −1 (tracisz cały wystawiony kapitał), log(1 + f · r) -> −∞
 ```
 
 To jeden akapit, ale zawiera całą intuicję sizingu. Pojedynczy gruby lewy ogon, jedna wyjątkowo brzydka strata, ściąga optymalne f w dół dużo mocniej, niż taki sam co do wielkości zysk je podnosi. Dlatego w przybliżeniu Gaussowskim f* to po prostu stosunek średniej do wariancji: im grubszy rozkład, tym mniejsza frakcja. Ten wzór nie nagradza za odwagę, on wycenia zmienność.
 
 ## Dlaczego pełny Kelly to za dużo
 
-Pełny Kelly optymalizuje wzrost, ale nie mówi ani słowa o komforcie drogi. A ta droga jest brutalna: pełny Kelly ma około 50% szans, że w którymś momencie ścieżka kapitału obsunie się o połowę od swojego szczytu. To nie jest odległy ogon, to rzut monetą o głęboki zjazd.
+Pełny Kelly optymalizuje wzrost, ale nie mówi ani słowa o komforcie drogi. A ta droga jest brutalna: pełny Kelly ma około 50% szans, że w którymś momencie ścieżka kapitału obsunie się o połowę od swojego szczytu. Nie jest to odległy ogon, to rzut monetą o głęboki zjazd.
 
 Ten wynik da się zapisać wzorem. W idealizacji ciągłej, gdy grasz ułamkiem λ pełnego Kelly'ego, prawdopodobieństwo, że kapitał kiedykolwiek spadnie do frakcji α swojej wartości, wynosi:
 
@@ -96,14 +96,14 @@ Kontrargument narzuca się sam: skoro pełny Kelly ma najwyższe tempo wzrostu, 
 <text x="314" y="70" text-anchor="middle" fill="currentColor" opacity="0.8" font-size="12.5" font-weight="600">maks. tempo wzrostu</text>
 <text x="619" y="120" text-anchor="middle" fill="#e5484d" opacity="0.9" font-size="12.5" font-weight="600">nadmierna</text>
 <text x="619" y="137" text-anchor="middle" fill="#e5484d" opacity="0.9" font-size="12.5" font-weight="600">dźwignia</text>
-<text x="619" y="155" text-anchor="middle" fill="#e5484d" opacity="0.72" font-size="11">→ ruina</text>
+<text x="619" y="155" text-anchor="middle" fill="#e5484d" opacity="0.72" font-size="11">-> ruina</text>
 <text x="62" y="224" text-anchor="end" fill="currentColor" opacity="0.6" font-size="11">0</text>
 <text x="70" y="416" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="11">0</text>
 <text x="192" y="416" text-anchor="middle" fill="#1a9e6a" opacity="0.9" font-size="12" font-weight="600">pół Kelly</text>
 <text x="314" y="416" text-anchor="middle" fill="#1a9e6a" opacity="0.9" font-size="12" font-weight="600">Kelly (f*)</text>
 <text x="558" y="416" text-anchor="middle" fill="currentColor" opacity="0.6" font-size="11">2×f* (tempo 0)</text>
-<text x="375" y="437" text-anchor="middle" fill="currentColor" opacity="0.7" font-size="12.5">frakcja kapitału na pozycję →</text>
-<text x="22" y="220" text-anchor="middle" fill="currentColor" opacity="0.7" font-size="12.5" transform="rotate(-90 22 220)">tempo wzrostu kapitału →</text>
+<text x="375" y="437" text-anchor="middle" fill="currentColor" opacity="0.7" font-size="12.5">frakcja kapitału na pozycję -></text>
+<text x="22" y="220" text-anchor="middle" fill="currentColor" opacity="0.7" font-size="12.5" transform="rotate(-90 22 220)">tempo wzrostu kapitału -></text>
 </g>
 </svg>
 <figcaption>Tempo długoterminowego wzrostu kapitału w funkcji frakcji stawki. Krzywa rośnie do maksimum przy pełnym Kelly (f*), a połowa f* oddaje około trzech czwartych tempa przy znacznie niższym ryzyku obsunięcia; po prawej stronie, za progiem podwójnego Kelly, tempo schodzi poniżej zera i kapitał eroduje mimo dodatniej przewagi.</figcaption>
@@ -145,7 +145,7 @@ Uczciwie trzeba też dodać, że symulacje ryzyka obsunięcia bywają optymistyc
 Skoro to lewy ogon rządzi bezpieczną frakcją, to najsilniejszą dźwignią nie jest większy lot, tylko krótszy ogon. Weź strategię, której najgorszy pojedynczy trade to minus 20 jednostek na tle rozkładu skupionego wokół małych wartości. Dołóż twardy stop loss, który ucina tę stratę do minus 8:
 
 ```
-najgorszy trade: −20 → −8 (twardy SL)
+najgorszy trade: −20 -> −8 (twardy SL)
 skośność rozkładu: spada
 PSR: rośnie
 efekt: wyższa bezpieczna frakcja Kelly'ego
@@ -165,6 +165,6 @@ Z całej tej matematyki wychodzi jedna prosta zasada operacyjna: wielkość pozy
 
 Bo tak trzeba to ustawić w głowie. Edge nie jest licencją na większy lot. Wysoka skuteczność nie jest licencją na większy lot, bo o obsunięciu decyduje wielkość rzadkiej straty, a nie częstość wygranych. Jedyne, co ustala dopuszczalną wielkość pozycji, to jak głęboko potrafi Cię ściąć rzadka strata, a na to najlepszą odpowiedzią jest krótszy ogon i frakcja Kelly'ego, nie cały Kelly. Ogon jest ważniejszy niż wielkość. Kto to odwróci, ten prędzej czy później odda konto normalnej zmienności, nie żadnemu spektakularnemu błędowi.
 
-To nie jest porada inwestycyjna. To wykład matematyki sizingu i tego, dlaczego racjonalna wielkość pozycji jest niższa, niż podpowiada apetyt, zanim ustawisz swój lot. Źródła: Kelly (1956), Thorp (kryterium Kelly'ego w blackjacku i na rynkach), Busseti i Boyd (risk-constrained Kelly, 2016).
+Nie jest to porada inwestycyjna. To wykład matematyki sizingu i tego, dlaczego racjonalna wielkość pozycji jest niższa, niż podpowiada apetyt, zanim ustawisz swój lot. Źródła: Kelly (1956), Thorp (kryterium Kelly'ego w blackjacku i na rynkach), Busseti i Boyd (risk-constrained Kelly, 2016).
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

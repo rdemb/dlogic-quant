@@ -2,7 +2,7 @@
 layout: labpost
 title: "Czy oddychasz Cezarem? Matematyka mówi: prawdopodobnie, nie na pewno"
 description: "Słynny rachunek ostatniego oddechu Cezara daje wartość oczekiwaną, a nie gwarancję. O liczbie Avogadra, mieszaniu atmosfery, rozkładzie Poissona i granicach pięknej metafory."
-dek: "Dla dwóch półlitrowych oddechów idealny model daje średnio około 1,4 cząsteczki wspólnego pochodzenia, lecz prawdopodobieństwo znalezienia przynajmniej jednej wynosi około 76%, nie 100%."
+dek: "Dla dwóch półlitrowych oddechów idealny model daje średnio około 1,4 cząsteczki wspólnego pochodzenia, ale prawdopodobieństwo znalezienia przynajmniej jednej wynosi około 76%, nie 100%."
 date: 2026-08-11 16:50:00 +0200
 category: luzne
 tags: [odkrywanie-niewidzialnego, fizyka, statystyka, atmosfera, prawdopodobienstwo]
@@ -25,7 +25,7 @@ Historia brzmi jak materialna forma nieśmiertelności. Cezar umiera w idy marco
 
 Dla rozsądnego zestawu założeń wynik wynosi około **1,4**. Nie oznacza to, że w każdym oddechu musi znaleźć się jedna cząsteczka i dodatkowe cztery dziesiąte. Jest to wartość oczekiwana rozkładu liczby trafień. Jeżeli cząsteczki są rozmieszczone losowo i niezależnie, część oddechów nie zawiera żadnej, część jedną, część dwie albo więcej.
 
-> **Średnia równa 1,4 daje w idealizowanym modelu około 76% szans na przynajmniej jedno trafienie - dużo, lecz nie pewność.**
+> **Średnia równa 1,4 daje w idealizowanym modelu około 76% szans na przynajmniej jedno trafienie - dużo, ale nie pewność.**
 
 Jeszcze ważniejsze jest to, że nie posiadamy próbki ostatniego wydechu Cezara, nie znamy jego objętości ani dalszych losów poszczególnych cząsteczek. Rachunek jest eksperymentem myślowym pokazującym skalę liczby Avogadra i potęgę mieszania, nie testem genealogicznym powietrza w twoich płucach.
 
@@ -168,7 +168,7 @@ Nazwa „ostatni oddech Cezara” jest więc narracyjną etykietą dla dowolnej 
 
 Matematyka nie identyfikuje konkretnej osoby. Pokazuje, że przy astronomicznej liczbie cząsteczek mała historyczna próbka może po dostatecznym mieszaniu pozostawić niezerową oczekiwaną reprezentację w małej próbce współczesnej.
 
-## Najciekawsza lekcja dotyczy nie Cezara, lecz prawdopodobieństwa
+## Najciekawsza lekcja dotyczy nie Cezara, ale prawdopodobieństwa
 
 Opowieść jest cenna właśnie dlatego, że łatwo popełnić w niej subtelny błąd.
 
@@ -182,7 +182,7 @@ Dlatego poprawna puenta brzmi mniej magicznie, ale jest intelektualnie ciekawsza
 
 > **W idealnym modelu istnieje duża szansa, że twój oddech zawiera cząsteczkę z określonego dawnego oddechu. Jeżeli jej nie zawiera, model nie został obalony.**
 
-Ziarnistość materii łączy nas z przeszłością, lecz nie wydaje certyfikatów pochodzenia dla każdego wdechu.
+Ziarnistość materii łączy nas z przeszłością, ale nie wydaje certyfikatów pochodzenia dla każdego wdechu.
 
 Być może oddychasz Cezarem.
 

@@ -16,11 +16,11 @@ category: edukacja
 > - Dokładnie to, co daje przewagę, produkuje jej ogon. Momentum ma rzadkie, brutalne krachy (momentum crash), carry ma ujemny skos i gwałtowne odwroty (carry unwind), a trend, choć dodatnio skośny, płaci długim krwawieniem w rynku bez kierunku (whipsaw).
 > - Realność efektu brutto nie przesądza opłacalności netto. Wysoki obrót topi zwroty w kosztach, a wybór najlepszej parametryzacji z siatki to problem wielokrotnego testowania, ten sam, który koryguje Deflated Sharpe. Katalog w rodzaju 151 strategii to słownik mechanizmów, nie lista zakupów.
 
-**Teza w jednym zdaniu:** Momentum, carry i trend to trzy najlepiej udokumentowane źródła przewagi w tradingu systematycznym, ale żaden nie jest darmowym obiadem, bo każdy płaci się ogonem ryzyka albo znika po kosztach, dlatego liczy się nie samo istnienie efektu, lecz to, czy przetrwa walidację i tarcie.
+**Teza w jednym zdaniu:** Momentum, carry i trend to trzy najlepiej udokumentowane źródła przewagi w tradingu systematycznym, ale żaden nie jest darmowym obiadem, bo każdy płaci się ogonem ryzyka albo znika po kosztach, dlatego liczy się nie samo istnienie efektu, ale to, czy przetrwa walidację i tarcie.
 
 ## Kręgosłup systematycznego tradingu
 
-Trzy nazwy wracają w niemal każdym poważnym katalogu strategii ilościowych: momentum, carry i trend. To nie są chwyty marketingowe ani wskaźniki z pojedynczego backtestu, tylko efekty udokumentowane w recenzowanej literaturze, na wielu rynkach i przez wiele dekad. Zbudowano na nich znaczną część branży zarządzania systematycznego, od funduszy CTA po strategie faktorowe dużych domów badawczych takich jak AQR. Każdy z tych trzech efektów opiera się na innym mechanizmie i każdy ma inny kształt rozkładu zysków. Łączy je jedno: żaden nie jest darmowym obiadem, a cena zwykle bywa ukryta w ogonie rozkładu albo w kosztach transakcyjnych.
+Trzy nazwy wracają w niemal każdym poważnym katalogu strategii ilościowych: momentum, carry i trend. Nie są to chwyty marketingowe ani wskaźniki z pojedynczego backtestu, tylko efekty udokumentowane w recenzowanej literaturze, na wielu rynkach i przez wiele dekad. Zbudowano na nich znaczną część branży zarządzania systematycznego, od funduszy CTA po strategie faktorowe dużych domów badawczych takich jak AQR. Każdy z tych trzech efektów opiera się na innym mechanizmie i każdy ma inny kształt rozkładu zysków. Łączy je jedno: żaden nie jest darmowym obiadem, a cena zwykle bywa ukryta w ogonie rozkładu albo w kosztach transakcyjnych.
 
 <figure>
 <svg viewBox="0 0 720 310" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,sans-serif" role="img" aria-label="Trzy klasyczne źródła przewagi: momentum, carry i trend jako trzy panele pojęciowe">
@@ -103,7 +103,7 @@ Momentum crash. Momentum kupuje ostatnich zwycięzców i shortuje ostatnich maru
 
 Carry unwind. Carry ma ten sam ujemny skos, tylko z innego powodu. Waluty wysokoprocentowe to zwykle waluty ryzykowne. Kiedy nastaje risk-off, wszyscy zamykają te same pozycje w tym samym momencie, płynność wysycha i uruchamia się spirala, którą opisali Brunnermeier, Nagel i Pedersen w "Carry Trades and Currency Crashes" (2008). Stąd popularne, bezlitosne porównanie: carry to zbieranie drobniaków przed nadjeżdżającym walcem. Rośnie schodami, spada windą.
 
-Whipsaw trendu. Trend following ma skos dodatni, więc jego ogon nie jest pojedynczym wybuchem, lecz przewlekłym krwawieniem. W rynku bez kierunku, piłującym w wąskim zakresie i szarpanym newsami, strategia wchodzi za późno, wychodzi za późno i zbiera serię drobnych strat, jedna po drugiej. Ceną nie jest tu jeden dramatyczny dzień, tylko długie, męczące obsunięcia, które testują dyscyplinę, zanim pojawi się trend spłacający rachunek. Innymi słowy: carry i momentum sprzedają spokój i płacą katastrofą, trend kupuje katastrofę i płaci nudą.
+Whipsaw trendu. Trend following ma skos dodatni, więc jego ogon nie jest pojedynczym wybuchem, ale przewlekłym krwawieniem. W rynku bez kierunku, piłującym w wąskim zakresie i szarpanym newsami, strategia wchodzi za późno, wychodzi za późno i zbiera serię drobnych strat, jedna po drugiej. Ceną nie jest tu jeden dramatyczny dzień, tylko długie, męczące obsunięcia, które testują dyscyplinę, zanim pojawi się trend spłacający rachunek. Innymi słowy: carry i momentum sprzedają spokój i płacą katastrofą, trend kupuje katastrofę i płaci nudą.
 
 ## Koszty, tarcie i dyscyplina walidacji
 
@@ -115,8 +115,8 @@ Na koniec katalogi. Praca "151 Trading Strategies" Kakushadzego i Serura (2018) 
 
 ## Co z tego wynika przy stole
 
-Momentum, carry i trend są kręgosłupem tradingu systematycznego nie dlatego, że są darmowe, lecz dlatego, że mają nazwany mechanizm oraz są wszechobecne i trwałe. Uczciwa forma myślenia o każdej przewadze brzmi tak: da się podać jej źródło (dlaczego w ogóle płaci, premia za ryzyko czy błąd poznawczy), jej ogon (kiedy i jak boli) oraz jej koszt (ile zabiera tarcie). Jeśli tych trzech rubryk nie da się wypełnić, to nie jest przewaga, tylko krzywa dopasowana do przeszłości.
+Momentum, carry i trend są kręgosłupem tradingu systematycznego nie dlatego, że są darmowe, ale dlatego, że mają nazwany mechanizm oraz są wszechobecne i trwałe. Uczciwa forma myślenia o każdej przewadze brzmi tak: da się podać jej źródło (dlaczego w ogóle płaci, premia za ryzyko czy błąd poznawczy), jej ogon (kiedy i jak boli) oraz jej koszt (ile zabiera tarcie). Jeśli tych trzech rubryk nie da się wypełnić, nie jest to przewaga, tylko krzywa dopasowana do przeszłości.
 
-To nie jest porada inwestycyjna. To szkic mechanizmów, pokazany po to, żeby odróżnić udokumentowane źródło przewagi od ładnie wyglądającego backtestu, i żeby pamiętać, że nawet realny efekt ma swój ogon i swój rachunek za tarcie.
+Nie jest to porada inwestycyjna. To szkic mechanizmów, pokazany po to, żeby odróżnić udokumentowane źródło przewagi od ładnie wyglądającego backtestu, i żeby pamiętać, że nawet realny efekt ma swój ogon i swój rachunek za tarcie.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

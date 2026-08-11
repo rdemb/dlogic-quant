@@ -75,6 +75,6 @@ Dla rynku walutowego wątek jest jeszcze bliższy. Warunki finansowania w dolarz
 
 Praktyczny wniosek jest skromny i właśnie dlatego użyteczny. To mapa pogody, a nie zegar. Mówi, w jakim reżimie się stoi i dlaczego jakiś ruch może mieć paliwo albo je tracić, a nie kiedy nacisnąć przycisk. Do tego się nadaje: do ważenia przekonania i rozumienia tła, nie do wyznaczania momentu wejścia.
 
-To nie jest porada inwestycyjna. To opis mechaniki systemu monetarnego, pokazany po to, żeby rozumieć tło reżimu ryzyka, a nie po to, żeby na nim ustawiać wejścia.
+Nie jest to porada inwestycyjna. To opis mechaniki systemu monetarnego, pokazany po to, żeby rozumieć tło reżimu ryzyka, a nie po to, żeby na nim ustawiać wejścia.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

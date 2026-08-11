@@ -11,7 +11,7 @@ category: edukacja
 
 > **W skrócie**
 >
-> - Przełom Blacka, Scholesa i Mertona z 1973 roku nie polegał na lepszym prognozowaniu rynku, lecz na zmianie pytania. Zamiast zgadywać, ile opcja będzie warta, policzyli, ile kosztuje jej odtworzenie: dealer może dynamicznie równoważyć opcję akcjami i gotówką, więc cena wynika z braku arbitrażu, a nie z czyjejś prognozy kierunku.
+> - Przełom Blacka, Scholesa i Mertona z 1973 roku nie polegał na lepszym prognozowaniu rynku, ale na zmianie pytania. Zamiast zgadywać, ile opcja będzie warta, policzyli, ile kosztuje jej odtworzenie: dealer może dynamicznie równoważyć opcję akcjami i gotówką, więc cena wynika z braku arbitrażu, a nie z czyjejś prognozy kierunku.
 > - Najbardziej zaskakująca konsekwencja: we wzorze nie ma oczekiwanego zwrotu akcji. Zabezpieczony dealer nie zarabia i nie traci na kierunku, więc kierunek nie może wpływać na cenę. Zostaje zmienność, jedyna wielkość we wzorze, której nie widać na ekranie.
 > - Greckie to język ryzyka opcji. Delta mierzy wrażliwość na ruch ceny i z grubsza przybliża szansę wygaśnięcia w pieniądzu, gamma tempo zmiany delty, vega wrażliwość na zmienność, theta upływ czasu. Posiadacz opcji płaci thetę za dodatnią gammę, wystawca inkasuje thetę i nosi ryzyko gwałtownego ruchu.
 > - Zmienność implikowana to cena, nie prognoza: wynika z rynkowej ceny opcji odwróconej przez wzór, a uśmiech zmienności mówi, za które scenariusze rynek płaci więcej. Za ten aparat Scholes i Merton odebrali w 1997 roku Nagrodę Nobla; Black nie dożył.
@@ -68,7 +68,7 @@ Gamma mówi, jak szybko delta się zmienia, gdy rynek się rusza. To miara wypuk
 
 Vega mówi, o ile zmieni się cena opcji, gdy zmienność implikowana wzrośnie o punkt procentowy. Kupiona opcja to pozycja długa w zmienności: drożeje, gdy rynek zaczyna płacić więcej za niepewność, nawet jeśli kurs stoi w miejscu. Vega jest największa przy pieniądzu i przy dłuższych terminach.
 
-Theta mówi, ile wartości opcji wyparowuje z każdym dniem przy pozostałych parametrach bez zmian. Posiadacz opcji płaci thetę, wystawca ją inkasuje. To nie jest wada konstrukcyjna, tylko druga strona gammy: kto ma prawo do wypukłości, płaci za nie czynsz; kto wypukłość sprzedał, pobiera czynsz i nosi ryzyko.
+Theta mówi, ile wartości opcji wyparowuje z każdym dniem przy pozostałych parametrach bez zmian. Posiadacz opcji płaci thetę, wystawca ją inkasuje. Nie jest to wada konstrukcyjna, tylko druga strona gammy: kto ma prawo do wypukłości, płaci za nie czynsz; kto wypukłość sprzedał, pobiera czynsz i nosi ryzyko.
 
 ```
 # cztery podstawowe greckie: kto co ma i kto komu płaci
@@ -100,6 +100,6 @@ W 1997 roku Scholes i Merton otrzymali Nagrodę Nobla w dziedzinie ekonomii za n
 
 Z tego aparatu płyną trzy przenośne lekcje, użyteczne także poza rynkiem opcji. Po pierwsze, rozdzielenie kierunku od skali: Black-Scholes pokazuje, że można rzetelnie wycenić niepewność, nie mając żadnego zdania o kierunku, bo to są dwie osobne osie analizy. Po drugie, IV jako barometr: rynkowa cena ubezpieczenia mówi, ile niepokoju jest w cenie przed wydarzeniem, co stanowi kontekst ryzyka również dla tradera działającego na rynku kasowym. Po trzecie, rachunek thety i gammy uczy, że każda ochrona ma swój czynsz, a każdy pozornie darmowy dochód z wystawiania ma ogon ryzyka po drugiej stronie. Wszystko to jest kontekst, nie sygnał: wiedza o tym, jak rynek wycenia niepewność, nie mówi, w którą stronę pójdzie kurs.
 
-To nie jest porada inwestycyjna. To materiał edukacyjny, który tłumaczy logikę wyceny opcji przez replikację i język greckich na podstawie prac Blacka, Scholesa i Mertona oraz podręczników Hulla i Natenberga, żeby czytać rynek opcji jako rynek zmienności i kontekst ryzyka, a nie maszynę do przewidywania kierunku.
+Nie jest to porada inwestycyjna. To materiał edukacyjny, który tłumaczy logikę wyceny opcji przez replikację i język greckich na podstawie prac Blacka, Scholesa i Mertona oraz podręczników Hulla i Natenberga, żeby czytać rynek opcji jako rynek zmienności i kontekst ryzyka, a nie maszynę do przewidywania kierunku.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

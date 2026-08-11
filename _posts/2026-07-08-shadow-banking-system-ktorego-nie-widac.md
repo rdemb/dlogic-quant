@@ -22,7 +22,7 @@ category: edukacja
 
 Zwykły bank robi rzecz pozornie prostą. Przyjmuje depozyty, czyli krótki i bezpieczny pieniądz, który możesz wypłacić w każdej chwili, i za te pieniądze udziela długoterminowych kredytów, na przykład hipotek na trzydzieści lat. Bierze na siebie różnicę między jednym a drugim. To cała jego ekonomiczna funkcja, a jednocześnie jego strukturalna słabość.
 
-Shadow banking robi dokładnie to samo, tylko nie pod jednym dachem regulowanego banku, lecz w łańcuchu wyspecjalizowanych podmiotów i instrumentów rynkowych. Zoltan Pozsar ze współpracownikami opisał to w raporcie nowojorskiego Fed (Staff Report 458, "Shadow Banking"), a kilka lat później ujął jednym celnym zdaniem w pracy dla OFR ("Shadow Banking: The Money View"): shadow banking to finansowanie kredytu z rynku kapitałowego pieniądzem z rynku pieniężnego. Innymi słowy ktoś krótkoterminowo pożycza gotówkę, a na drugim końcu łańcucha powstaje z niej długoterminowy kredyt.
+Shadow banking robi dokładnie to samo, tylko nie pod jednym dachem regulowanego banku, ale w łańcuchu wyspecjalizowanych podmiotów i instrumentów rynkowych. Zoltan Pozsar ze współpracownikami opisał to w raporcie nowojorskiego Fed (Staff Report 458, "Shadow Banking"), a kilka lat później ujął jednym celnym zdaniem w pracy dla OFR ("Shadow Banking: The Money View"): shadow banking to finansowanie kredytu z rynku kapitałowego pieniądzem z rynku pieniężnego. Innymi słowy ktoś krótkoterminowo pożycza gotówkę, a na drugim końcu łańcucha powstaje z niej długoterminowy kredyt.
 
 Na tę bankowość równoległą składa się kilka klocków, które warto od razu nazwać. Fundusze rynku pieniężnego, w których wielcy inwestorzy trzymają gotówkę zamiast na depozycie. Sekurytyzacja, czyli pakowanie kredytów w papiery wartościowe (ABS). Transakcje repo, czyli pożyczki pod zastaw takich papierów. Wreszcie papiery komercyjne zabezpieczone aktywami (ABCP), którymi wyspecjalizowane spółki finansują trzymane przez siebie kredyty. Żaden z tych klocków z osobna nie wygląda jak bank. Zestawione w łańcuch odtwarzają jednak całą bankową mechanikę.
 
@@ -32,7 +32,7 @@ Na tę bankowość równoległą składa się kilka klocków, które warto od ra
 
 Pierwsza to transformacja terminów. Bank finansuje długie aktywo (kredyt na lata) krótkim pasywem (depozytem na żądanie). Zawsze jest winien pieniądze wcześniej, niż sam je odzyska. Druga to transformacja płynności. Bank zamienia płynne pasywo, które klient traktuje jak gotówkę, w aktywo niepłynne, którego nie da się szybko sprzedać bez straty. Trzecia to transformacja ryzyka. Bank z puli pojedynczo ryzykownych kredytów, dzięki dywersyfikacji i strukturze, buduje pasywa, które ich posiadacz uważa za bezpieczne.
 
-Shadow banking wykonuje wszystkie trzy, tylko rozłożone na ogniwa łańcucha. Krótki pieniądz z funduszy rynku pieniężnego i z repo finansuje długie kredyty hipoteczne (termin). Instrumenty traktowane jak gotówka finansują papiery, których w panice nikt nie chce kupić (płynność). A sekurytyzacja z tysięcy ryzykownych kredytów kroi transze, z których najstarsza dostaje najwyższy rating i uchodzi za bezpieczną (ryzyko). To nie jest inny mechanizm niż bankowy. To ten sam mechanizm w innej obudowie.
+Shadow banking wykonuje wszystkie trzy, tylko rozłożone na ogniwa łańcucha. Krótki pieniądz z funduszy rynku pieniężnego i z repo finansuje długie kredyty hipoteczne (termin). Instrumenty traktowane jak gotówka finansują papiery, których w panice nikt nie chce kupić (płynność). A sekurytyzacja z tysięcy ryzykownych kredytów kroi transze, z których najstarsza dostaje najwyższy rating i uchodzi za bezpieczną (ryzyko). Nie jest to inny mechanizm niż bankowy. To ten sam mechanizm w innej obudowie.
 
 ```
 TA SAMA ROBOTA, INNA OBUDOWA:
@@ -52,13 +52,13 @@ TA SAMA ROBOTA, INNA OBUDOWA:
 
 Skąd w ogóle bierze się popyt na taką konstrukcję? Pozsar w osobnej pracy o instytucjonalnych pulach gotówki (institutional cash pools) wskazuje na prosty, niedoceniany fakt. Wielkie korporacje, zarządzający aktywami i pośrednicy w pożyczaniu papierów trzymają gigantyczne salda gotówki, wielokrotnie przekraczające limit gwarancji depozytów. Dla nich zwykły ubezpieczony depozyt się nie skaluje, bo gwarancja obejmuje tylko drobny ułamek kwoty, a reszta byłaby niezabezpieczonym kredytem udzielonym bankowi. Potrzebują miejsca, gdzie zaparkują ogromną gotówkę bezpiecznie, krótkoterminowo i z jakimś oprocentowaniem.
 
-Odpowiedzią shadow bankingu jest repo. To pożyczka, w której posiadacz gotówki oddaje ją na krótko, najczęściej na jedną noc, a w zamian bierze w zastaw papier wartościowy wart nieco więcej niż pożyczona kwota. Ta nadwyżka to haircut, czyli bufor bezpieczeństwa. Jeśli pożyczkobiorca nie odda pieniędzy, wierzyciel zostaje z zabezpieczeniem i może je sprzedać. W bankowości to gwarancja depozytów sprawia, że deponent śpi spokojnie. W repo tę samą rolę pełni collateral. Bezpieczeństwo pieniądza opiera się nie na obietnicy państwa, lecz na wartości zastawionego papieru.
+Odpowiedzią shadow bankingu jest repo. To pożyczka, w której posiadacz gotówki oddaje ją na krótko, najczęściej na jedną noc, a w zamian bierze w zastaw papier wartościowy wart nieco więcej niż pożyczona kwota. Ta nadwyżka to haircut, czyli bufor bezpieczeństwa. Jeśli pożyczkobiorca nie odda pieniędzy, wierzyciel zostaje z zabezpieczeniem i może je sprzedać. W bankowości to gwarancja depozytów sprawia, że deponent śpi spokojnie. W repo tę samą rolę pełni collateral. Bezpieczeństwo pieniądza opiera się nie na obietnicy państwa, ale na wartości zastawionego papieru.
 
 ```
 REPO = depozyt shadow banku (pozyczka pod zastaw):
 
- posiadacz gotowki → daje 98 gotowki
- pozyczkobiorca → daje w zastaw papier warty 100
+ posiadacz gotowki -> daje 98 gotowki
+ pozyczkobiorca -> daje w zastaw papier warty 100
 
  haircut = 100 − 98 = 2 (nadwyzka zastawu, bufor bezpieczenstwa)
 
@@ -77,18 +77,18 @@ Zaczyna się od podmiotu, który udziela kredytów (origination). Ten oddaje je 
 ```
 LANCUCH POSREDNICTWA (uproszczony, od pieniadza do kredytu):
 
- pule gotowki (firmy, fundusze) → fundusz rynku pieniezniego (MMF)
+ pule gotowki (firmy, fundusze) -> fundusz rynku pieniezniego (MMF)
  kupuja instrumenty jak-gotowka: repo, ABCP, papier komercyjny
 
- MMF finansuje → posrednikow shadow bankingu:
- origination → udziela kredytow (np. hipotek)
- warehousing → magazynuje je na ABCP do czasu pakowania
- sekurytyzacja → pakuje w papiery ABS, tnie na transze
- repo / SIV → trzyma pakiety, finansuje je krotkim repo
+ MMF finansuje -> posrednikow shadow bankingu:
+ origination -> udziela kredytow (np. hipotek)
+ warehousing -> magazynuje je na ABCP do czasu pakowania
+ sekurytyzacja -> pakuje w papiery ABS, tnie na transze
+ repo / SIV -> trzyma pakiety, finansuje je krotkim repo
 
- na koncu lancucha → dlugi, ryzykowny kredyt hipoteczny
+ na koncu lancucha -> dlugi, ryzykowny kredyt hipoteczny
 
- KIERUNEK PRZEMIANY: krotki i bezpieczny → dlugi i ryzykowny
+ KIERUNEK PRZEMIANY: krotki i bezpieczny -> dlugi i ryzykowny
 ```
 
 Każde ogniwo z osobna wygląda niewinnie. Dopiero zsumowane odtwarzają pełną transformację terminów, płynności i ryzyka, tyle że rozproszoną między wiele bilansów. A skoro transformacja jest rozproszona, to i słabość jest rozproszona, ukryta w połączeniach, których z zewnątrz trudno dostrzec.
@@ -109,11 +109,11 @@ Kiedy pojawiła się wątpliwość co do wartości papierów opartych na kredyta
 RUN NA REPO (spirala haircutow):
 
  watpliwosc co do wartosci zabezpieczenia
- → wierzyciele zadaja wyzszego haircutu
- → mniej gotowki na jednostke zastawu
- → przymusowa wyprzedaz aktywow, by domknac finansowanie
- → spadek cen aktywow
- → jeszcze wieksza watpliwosc → jeszcze wyzszy haircut
+ -> wierzyciele zadaja wyzszego haircutu
+ -> mniej gotowki na jednostke zastawu
+ -> przymusowa wyprzedaz aktywow, by domknac finansowanie
+ -> spadek cen aktywow
+ -> jeszcze wieksza watpliwosc -> jeszcze wyzszy haircut
 
  petla sprzezenia zwrotnego = cichy run, bez kolejki przy okienku
 ```
@@ -134,6 +134,6 @@ Najważniejszy wniosek jest odbrązawiający. Shadow banking to nie tajny spisek
 
 Dla czytelnika rynków płynie z tego praktyczna mapa uwagi. Warto obserwować hydraulikę, a nie tylko cenę: zabezpieczenia i ich haircuty, rynek repo, kondycję funduszy rynku pieniężnego oraz koszt pozyskania dolara. To w tych rurach stres płynnościowy ujawnia się jako pierwszy, zanim przełoży się na to, co widać w notowaniach. Kto rozumie, że wielka część pieniądza i jego substytutów powstaje na prywatnych bilansach poza publiczną gwarancją, ten czyta cykle płynności jako proces napędzany zaufaniem do zabezpieczeń, a nie jako coś, co dzieje się samo.
 
-To nie jest porada inwestycyjna. To wykład mechaniki bankowości równoległej, oparty na dokumentach nowojorskiego Fed i pracach Zoltana Pozsara, z tłem prac BIS o eurodolarze, żebyś rozumiał, czym jest shadow banking i dlaczego bywa kruchy, zanim zaczniesz doszukiwać się jego wpływu na rynki.
+Nie jest to porada inwestycyjna. To wykład mechaniki bankowości równoległej, oparty na dokumentach nowojorskiego Fed i pracach Zoltana Pozsara, z tłem prac BIS o eurodolarze, żebyś rozumiał, czym jest shadow banking i dlaczego bywa kruchy, zanim zaczniesz doszukiwać się jego wpływu na rynki.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

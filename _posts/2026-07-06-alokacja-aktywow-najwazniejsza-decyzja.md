@@ -94,6 +94,6 @@ Alokacja aktywów to największa pojedyncza decyzja portfela i zapada, zanim zos
 
 Gdy następnym razem ktoś powie, że badania dowodzą, iż 90% wyniku to alokacja, można odpowiedzieć uprzejmie i precyzyjnie: zależy, o które z trzech pytań chodzi, bo odpowiedzi brzmią 90, 40 i 100, a każda mówi co innego.
 
-To nie jest porada inwestycyjna. To edukacyjne omówienie badań o alokacji aktywów: liczby pochodzą z cytowanych prac, dotyczą przeszłości i konkretnych prób badawczych, a historyczne premie nie są obietnicą przyszłych.
+Nie jest to porada inwestycyjna. To edukacyjne omówienie badań o alokacji aktywów: liczby pochodzą z cytowanych prac, dotyczą przeszłości i konkretnych prób badawczych, a historyczne premie nie są obietnicą przyszłych.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

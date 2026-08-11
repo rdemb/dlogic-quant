@@ -103,7 +103,7 @@ Etykieta i format są początkiem audytu, nie jego końcem.
 
 ## Zamknięta checklista może być perfekcyjnie niekompletna
 
-Najbardziej niebezpieczne listy kontrolne nie są oczywiście błędne. Są precyzyjne, konsekwentne i dobrze testowane, lecz nie reprezentują wszystkich istotnych zależności.
+Najbardziej niebezpieczne listy kontrolne nie są oczywiście błędne. Są precyzyjne, konsekwentne i dobrze testowane, ale nie reprezentują wszystkich istotnych zależności.
 
 Można to przedstawić jako dwa różne rodzaje zamknięcia:
 
@@ -134,7 +134,7 @@ Można to przedstawić jako dwa różne rodzaje zamknięcia:
 
 Systemy badawcze potrafią być wewnętrznie poprawne i jednocześnie niekompletne wobec mechanizmu rynku.
 
-Model czynnikowy może wykazać residual alpha, ponieważ istotna wspólna ekspozycja nie znalazła się w jego słowniku. Portfel siedmiuset instrumentów może wyglądać na zdywersyfikowany, jeżeli mierzymy liczbę symboli, ale nie reprezentujemy jednego czynnika płynnościowego łączącego większość pozycji. Backtest może przejść wszystkie zakodowane zasady, chociaż koszty wykonania zostały całkowicie pominięte. Target może być obliczony prawidłowo, lecz korzystać z informacji, która stała się znana dopiero po decyzji.
+Model czynnikowy może wykazać residual alpha, ponieważ istotna wspólna ekspozycja nie znalazła się w jego słowniku. Portfel siedmiuset instrumentów może wyglądać na zdywersyfikowany, jeżeli mierzymy liczbę symboli, ale nie reprezentujemy jednego czynnika płynnościowego łączącego większość pozycji. Backtest może przejść wszystkie zakodowane zasady, chociaż koszty wykonania zostały całkowicie pominięte. Target może być obliczony prawidłowo, ale korzystać z informacji, która stała się znana dopiero po decyzji.
 
 W każdym przypadku system może uczciwie raportować:
 
@@ -148,7 +148,7 @@ To pytanie jest niewygodne, ponieważ nie ma skończonej odpowiedzi. Nie da się
 
 ## Evidence-carrying action
 
-Jednym z kierunków, które wynikły z tego etapu, jest traktowanie bezpiecznej czynności nie jako samego polecenia, lecz jako obiektu niosącego własne warunki oraz wymagany dowód.
+Jednym z kierunków, które wynikły z tego etapu, jest traktowanie bezpiecznej czynności nie jako samego polecenia, ale jako obiektu niosącego własne warunki oraz wymagany dowód.
 
 Na poziomie publicznym można opisać tę ideę następująco:
 
@@ -161,7 +161,7 @@ Na poziomie publicznym można opisać tę ideę następująco:
 
 Nie publikuję dokładnego protokołu, grafu stanów, sposobu przekazywania poświadczeń ani prywatnej topologii wykonawczej. Wartością publiczną jest zasada: **autoryzacja powinna obejmować nie tylko to, co wolno zrobić, ale również to, jak później udowodnimy, że wykonano dokładnie tę czynność i nic więcej**.
 
-## Dlaczego to nie jest przesadna biurokracja
+## Dlaczego nie jest to przesadna biurokracja
 
 Na małej skali łatwiej zaufać logowi, plikowi i własnej pamięci. W systemie rozwijanym przez wiele agentów, narzędzi i iteracji pojawia się jednak problem kompozycji. Każda warstwa może być lokalnie poprawna, a mimo to cała ścieżka pozostaje przerwana albo niejednoznaczna.
 
@@ -183,7 +183,7 @@ Im mniej swobody ma system w opowiadaniu własnego sukcesu, tym większa szansa,
 
 Poprawny JSON może opowiadać niemożliwą historię.
 
-Dobry system dowodowy musi więc sprawdzać nie tylko, czy dokument daje się odczytać, lecz także czy opisany świat mógł istnieć, czy wskazane artefakty istnieją naprawdę oraz czy model obejmuje pełną drogę od intencji do skutku.
+Dobry system dowodowy musi więc sprawdzać nie tylko, czy dokument daje się odczytać, ale także czy opisany świat mógł istnieć, czy wskazane artefakty istnieją naprawdę oraz czy model obejmuje pełną drogę od intencji do skutku.
 
 Dopiero wtedy format zaczyna nieść znaczenie.
 

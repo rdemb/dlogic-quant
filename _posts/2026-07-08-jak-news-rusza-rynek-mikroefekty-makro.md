@@ -93,6 +93,6 @@ Zapłata za ten wywód nie jest sygnałem, tylko modelem mentalnym i lekcją o k
 
 Wartość edukacyjna jest więc dwojaka. Po pierwsze, czytaj odczyt zawsze przez pryzmat konsensusu, bo bez punktu odniesienia liczba nic nie mówi, a dobra dana bywa złą daną. Po drugie, traktuj samo okno publikacji jako strefę podwyższonego kosztu i ryzyka, a nie okazję do impulsywnego wejścia. To jest kontekst do rozumienia, dlaczego rynek zrobił to, co zrobił, a nie spust do klikania w sekundę po odczycie.
 
-To nie jest porada inwestycyjna. To wyłożenie mechanizmu z literatury: mikroefektów ogłoszeń makro u Andersena, Bollersleva, Diebolda i Vegi, oraz obrazu mikrostruktury i flash events z badań BIS, żebyś rozumiał, dlaczego cena reaguje na zaskoczenie, a nie na samą liczbę, dlaczego okno publikacji jest cienkie i drogie, i dlaczego kliknięcie marketem sekundę po odczycie płaci najgorszą cenę.
+Nie jest to porada inwestycyjna. To wyłożenie mechanizmu z literatury: mikroefektów ogłoszeń makro u Andersena, Bollersleva, Diebolda i Vegi, oraz obrazu mikrostruktury i flash events z badań BIS, żebyś rozumiał, dlaczego cena reaguje na zaskoczenie, a nie na samą liczbę, dlaczego okno publikacji jest cienkie i drogie, i dlaczego kliknięcie marketem sekundę po odczycie płaci najgorszą cenę.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

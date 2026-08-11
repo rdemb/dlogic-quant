@@ -50,7 +50,7 @@ cena_rynkowa_opcji = GK(S, K, T, r_d, r_f, σ) # model Garmana-Kohlhagena (FX)
 σ_impl = ta wartość σ, przy której model odtwarza rynkową cenę opcji
 ```
 
-Kluczowe jest to, że zmienność implikowana jest wielkością patrzącą w przód. Nie mówi, co się wydarzyło, lecz ile niepewności rynek wycenia na okres do wygaśnięcia opcji. Dlatego rośnie przed zaplanowanymi wydarzeniami wysokiego ryzyka (decyzje banków centralnych, publikacje danych) i opada, gdy niepewność się rozładowuje.
+Kluczowe jest to, że zmienność implikowana jest wielkością patrzącą w przód. Nie mówi, co się wydarzyło, ale ile niepewności rynek wycenia na okres do wygaśnięcia opcji. Dlatego rośnie przed zaplanowanymi wydarzeniami wysokiego ryzyka (decyzje banków centralnych, publikacje danych) i opada, gdy niepewność się rozładowuje.
 
 ## Premia za ryzyko zmienności: dlaczego implikowana zwykle przewyższa zrealizowaną
 
@@ -60,10 +60,10 @@ Gdyby rynek wyceniał zmienność bezstronnie, implikowana byłaby średnio rów
 VRP = IV − RV # w jednostkach zmienności
 VRP = IV² − RV² # częściej liczona w jednostkach wariancji
 
-przeciętnie: IV > RV → VRP > 0
+przeciętnie: IV > RV -> VRP > 0
 ```
 
-Najprostsza intuicja to ubezpieczenie. Kto kupuje opcję, kupuje ochronę przed gwałtownym ruchem i jest skłonny zapłacić za nią trochę więcej, niż wynosi statystycznie uczciwa cena, tak samo jak za polisę płaci się więcej, niż wynosi oczekiwana szkoda. Kto opcję wystawia, przejmuje ryzyko rzadkiego, dużego ruchu i za to przejęcie inkasuje premię. Carr i Wu w pracy poświęconej premiom za ryzyko wariancji pokazali, jak tę premię wyodrębnić i zmierzyć za pomocą syntetycznych kontraktów na wariancję, i udokumentowali, że przeciętnie jest ona dodatnia. Dla inwestora płynie stąd prosty morał: dodatnia VRP nie jest darmowym obiadem, lecz zapłatą za bycie po stronie, która obrywa, gdy przychodzi szok. Jest to premia za przyjęcie ryzyka, nie nagroda za spryt.
+Najprostsza intuicja to ubezpieczenie. Kto kupuje opcję, kupuje ochronę przed gwałtownym ruchem i jest skłonny zapłacić za nią trochę więcej, niż wynosi statystycznie uczciwa cena, tak samo jak za polisę płaci się więcej, niż wynosi oczekiwana szkoda. Kto opcję wystawia, przejmuje ryzyko rzadkiego, dużego ruchu i za to przejęcie inkasuje premię. Carr i Wu w pracy poświęconej premiom za ryzyko wariancji pokazali, jak tę premię wyodrębnić i zmierzyć za pomocą syntetycznych kontraktów na wariancję, i udokumentowali, że przeciętnie jest ona dodatnia. Dla inwestora płynie stąd prosty morał: dodatnia VRP nie jest darmowym obiadem, ale zapłatą za bycie po stronie, która obrywa, gdy przychodzi szok. Jest to premia za przyjęcie ryzyka, nie nagroda za spryt.
 
 <figure>
 <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system,Segoe UI,Roboto,sans-serif" aria-label="Zmienność implikowana leżąca konsekwentnie powyżej zrealizowanej; obszar między liniami to premia za ryzyko zmienności VRP.">
@@ -89,7 +89,7 @@ Najprostsza intuicja to ubezpieczenie. Kto kupuje opcję, kupuje ochronę przed 
  <polyline points="64,240 121,248 178,224 234,202 291,212 348,236 404,252 461,234 518,210 574,190 631,214 688,228" fill="none" stroke="currentColor" stroke-opacity="0.75" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
  <polyline points="64,190 121,198 178,172 234,150 291,158 348,180 404,196 461,180 518,158 574,138 631,158 688,174" fill="none" stroke="#0b66c3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
  <text x="404" y="228" text-anchor="middle" font-size="13" font-weight="600" fill="#0b66c3">VRP</text>
- <text x="376" y="332" text-anchor="middle" font-size="12" fill="currentColor" fill-opacity="0.7">Czas →</text>
+ <text x="376" y="332" text-anchor="middle" font-size="12" fill="currentColor" fill-opacity="0.7">Czas -></text>
  <text transform="translate(24,180) rotate(-90)" text-anchor="middle" font-size="12" fill="currentColor" fill-opacity="0.7">Zmienność</text>
 </svg>
 <figcaption>Zmienność implikowana, wyceniona w opcjach, leży konsekwentnie powyżej zmienności zrealizowanej. Zacieniowany obszar między liniami to premia za ryzyko zmienności (VRP), składka, którą kupujący opcję płaci za ochronę przed gwałtownym ruchem.</figcaption>
@@ -113,7 +113,7 @@ Na dalszym horyzoncie badawczym klasyczny obraz zmienności stochastycznej dodat
 
 ## Uśmiech i risk reversal: asymetria strachu na FX
 
-Jedna liczba zmienności implikowanej nie wystarcza, bo opcje o różnych kursach wykonania mają różne implikowane zmienności. Wykres zmienności implikowanej w funkcji kursu wykonania (albo delty) układa się zwykle w kształt uśmiechu: opcje głęboko poza pieniądzem po obu stronach mają wyższą implikowaną zmienność niż opcje przy pieniądzu. Ten uśmiech to zapis tego, że rynek wycenia grubsze ogony, niż przewiduje rozkład normalny. Na rynku walutowym uśmiech opisuje się nie punkt po punkcie, lecz trzema liczbami na daną deltę: zmiennością ATM (przy pieniądzu), risk reversal i butterfly.
+Jedna liczba zmienności implikowanej nie wystarcza, bo opcje o różnych kursach wykonania mają różne implikowane zmienności. Wykres zmienności implikowanej w funkcji kursu wykonania (albo delty) układa się zwykle w kształt uśmiechu: opcje głęboko poza pieniądzem po obu stronach mają wyższą implikowaną zmienność niż opcje przy pieniądzu. Ten uśmiech to zapis tego, że rynek wycenia grubsze ogony, niż przewiduje rozkład normalny. Na rynku walutowym uśmiech opisuje się nie punkt po punkcie, ale trzema liczbami na daną deltę: zmiennością ATM (przy pieniądzu), risk reversal i butterfly.
 
 ```
 RR25 = σ_impl(25Δ call) − σ_impl(25Δ put) # skos: asymetria
@@ -128,6 +128,6 @@ Dla manualnego day-tradera te pojęcia nie są sygnałem wejścia i nie zastępu
 
 Wszystkie te wielkości łączy to samo ograniczenie: opisują rozkład możliwych ruchów, a nie przesądzają, który się zdarzy. Zmienność mówi, jak szeroko, nie mówi, dokąd. Dlatego uczciwe użycie tej wiedzy polega na wpisaniu jej w kontekst decyzji (ile ryzyka jest w cenie, czego rynek się boi, jak burzliwe będzie tło), a nie na traktowaniu jej jako mechanicznego sygnału kupna czy sprzedaży.
 
-To nie jest porada inwestycyjna. To materiał edukacyjny, który porządkuje pojęcia zmienności, ze wzorami i odniesieniami do literatury, żeby odróżnić pomiar przeszłości od wyceny przyszłości i czytać rynek opcji jako kontekst ryzyka.
+Nie jest to porada inwestycyjna. To materiał edukacyjny, który porządkuje pojęcia zmienności, ze wzorami i odniesieniami do literatury, żeby odróżnić pomiar przeszłości od wyceny przyszłości i czytać rynek opcji jako kontekst ryzyka.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

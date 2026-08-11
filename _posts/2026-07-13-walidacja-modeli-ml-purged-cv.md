@@ -80,6 +80,6 @@ Cała ta maszyneria nie tworzy przewagi. Purging, embargo i CPCV nie sprawią, �
 
 Stąd jedno pytanie, które warto zadać wobec każdego wyniku modelu, cudzego i własnego: jak wyglądała procedura walidacji. Czy etykiety miały okna, a jeśli tak, czy trening był z tych okien oczyszczony. Czy był embargo. Czy wynik to jedna ścieżka, czy rozkład. Ile konfiguracji wypróbowano, zanim padła ta jedna. Bez tych odpowiedzi Sharpe z walidacji krzyżowej jest liczbą bez mianownika, dokładnie jak pojedynczy backtest bez licznika prób. Ta sama myśl wraca w materiale o [data snoopingu](/dlogic-quant/2026/07/05/data-snooping-jak-finanse-sie-oszukuja/): nie liczy się sam wynik, tylko wynik w kontekście tego, ile i jak go szukano.
 
-To nie jest porada inwestycyjna ani zachęta do jakiejkolwiek strategii. To materiał o metodyce: dlaczego standardowa walidacja krzyżowa zawodzi na danych finansowych i jak purging, embargo oraz kombinatoryczna purged cross-validation przywracają jej sens. Normalnym produktem uczciwej walidacji jest częściej odrzucenie modelu niż jego potwierdzenie.
+Nie jest to porada inwestycyjna ani zachęta do jakiejkolwiek strategii. To materiał o metodyce: dlaczego standardowa walidacja krzyżowa zawodzi na danych finansowych i jak purging, embargo oraz kombinatoryczna purged cross-validation przywracają jej sens. Normalnym produktem uczciwej walidacji jest częściej odrzucenie modelu niż jego potwierdzenie.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

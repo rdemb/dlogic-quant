@@ -22,7 +22,7 @@ cover: macro
 
 Przez pierwsze miesiące 2026 rynek żył jednym założeniem: Fed zacznie ciąć. To założenie pękło 5 czerwca. Majowy raport z rynku pracy pokazał +172 tys. etatów, ponad dwa razy powyżej prognoz. W połączeniu z inflacją, która wróciła do 4.2%, najwyżej od dwóch lat, zniknął argument za cięciem. Reakcja była natychmiastowa: złoto spadło tego dnia o 3.27%, bo rynek nagle zaczął bać się Fedu bardziej niż nagłówków.
 
-Liczby z samego FOMC mówią to samo. Dziewięciu członków widzi w tym roku co najmniej jedną podwyżkę, sześciu co najmniej dwie. To nie jest komitet, który szykuje się do luzowania. Owszem, część analityków, jak J.P. Morgan, wciąż obstawia hold do końca roku, ale środek rozkładu wyraźnie przesunął się w górę.
+Liczby z samego FOMC mówią to samo. Dziewięciu członków widzi w tym roku co najmniej jedną podwyżkę, sześciu co najmniej dwie. Nie jest to komitet, który szykuje się do luzowania. Owszem, część analityków, jak J.P. Morgan, wciąż obstawia hold do końca roku, ale środek rozkładu wyraźnie przesunął się w górę.
 
 <figure>
 <svg viewBox="0 0 640 130" font-family="-apple-system,Segoe UI,Roboto,sans-serif" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#0b66c3" stroke-width="1.5"/></marker></defs><text x="40" y="22" font-size="13" fill="currentColor">Szansa na wrześniową podwyżkę Fedu (wycena rynkowa)</text><rect x="40" y="40" width="560" height="16" rx="8" fill="#ececec"/><rect x="40" y="40" width="381" height="16" rx="8" fill="#0b66c3"/><line x1="202" y1="34" x2="202" y2="62" stroke="#9b9b9b" stroke-width="2" stroke-dasharray="3 3"/><text x="202" y="80" font-size="11" fill="#9b9b9b" text-anchor="middle">29% tydzień temu</text><line x1="421" y1="34" x2="421" y2="62" stroke="currentColor" stroke-width="2"/><text x="421" y="80" font-size="12" fill="#0b66c3" text-anchor="middle" font-family="monospace">68% teraz</text><path d="M208 104 L415 104" stroke="#0b66c3" stroke-width="2" marker-end="url(#ar)"/><text x="40" y="120" font-size="10" fill="#9b9b9b">0%</text><text x="600" y="120" font-size="10" fill="#9b9b9b" text-anchor="end">100%</text></svg>
@@ -33,7 +33,7 @@ Liczby z samego FOMC mówią to samo. Dziewięciu członków widzi w tym roku co
 
 Najlepszym świadkiem nie są komentarze, tylko obligacje. Dwulatka, najczulsza na politykę Fedu, stoi przy 4.21% i nie chce zejść, bo rynek wycenia jastrzębia. Dziesięciolatka zeszła z 4.50% do 4.41%, ale z innego powodu: odprężenie w relacjach USA i Iranu wypuściło premię za ryzyko geopolityczne, ropa staniała, długi koniec krzywej się rozluźnił.
 
-Efekt to spłaszczenie. Spread 2s10s skurczył się z około 30 do 20 punktów bazowych. Krzywa wciąż nie jest odwrócona, więc to nie jest jeszcze sygnał recesyjny, ale kierunek jest jednoznaczny: krótki koniec trzymany przez Fed, długi schodzący na geopolityce. Realna rentowność dziesięciolatki to +0.21%, dodatnia, co dalej pracuje na korzyść dolara.
+Efekt to spłaszczenie. Spread 2s10s skurczył się z około 30 do 20 punktów bazowych. Krzywa wciąż nie jest odwrócona, więc nie jest to jeszcze sygnał recesyjny, ale kierunek jest jednoznaczny: krótki koniec trzymany przez Fed, długi schodzący na geopolityce. Realna rentowność dziesięciolatki to +0.21%, dodatnia, co dalej pracuje na korzyść dolara.
 
 <figure>
 <svg viewBox="0 0 640 172" font-family="-apple-system,Segoe UI,Roboto,sans-serif" xmlns="http://www.w3.org/2000/svg"><text x="40" y="22" font-size="13" fill="currentColor">Krzywa się spłaszcza: krótki koniec zakotwiczony</text><line x1="120" y1="137" x2="540" y2="137" stroke="#e6e6e6"/><line x1="180" y1="100" x2="470" y2="42" stroke="#9b9b9b" stroke-width="1.5" stroke-dasharray="4 4"/><text x="480" y="42" font-size="10" fill="#9b9b9b">było 4.50</text><line x1="180" y1="100" x2="470" y2="60" stroke="#0b66c3" stroke-width="2.5"/><circle cx="180" cy="100" r="5" fill="#0b66c3"/><circle cx="470" cy="60" r="5" fill="#0b66c3"/><text x="180" y="88" font-size="12" fill="currentColor" text-anchor="middle" font-family="monospace">2Y 4.21</text><text x="470" y="48" font-size="12" fill="currentColor" text-anchor="middle" font-family="monospace">10Y 4.41</text><text x="320" y="160" font-size="12" fill="#6b6b6b" text-anchor="middle">spread 2s10s: +20 bp (spłaszczenie z ~30 bp)</text></svg>
@@ -55,7 +55,7 @@ Dolar jest na rocznym maksimum, DXY powyżej 100, bo wyższe realne stopy to mag
 |---|---|---|
 | CPI USA | 4.2% | lepka, ogranicza Fed |
 | Payrolls (maj) | +172 tys. | ponad 2x prognoza |
-| Szansa podwyżki IX | 29% → 68% | repricing w tydzień |
+| Szansa podwyżki IX | 29% -> 68% | repricing w tydzień |
 | Fed | 3.50-3.75% | hold jastrzębi |
 | 2Y / 10Y | 4.21% / 4.41% | krótki kotwiczony |
 | 2s10s | +20 bp | spłaszczenie z ~30 |

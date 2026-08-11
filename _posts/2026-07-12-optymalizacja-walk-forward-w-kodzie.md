@@ -106,8 +106,8 @@ Pętla nie zawiera kosztów transakcyjnych ani poślizgu, a te potrafią zamieni
 
 Optymalizacja nie tworzy przewagi. W najlepszym razie ją rozpoznaje: wydobywa z danych strukturę, która istniała niezależnie od tego, że ktoś jej szukał. W najgorszym ją udaje: lepi z szumu kształt, który rozpada się przy pierwszym zetknięciu ze świeżymi danymi. Cała technika z tego tekstu, podział na in-sample i out-of-sample, walk-forward, purging, embargo, deflacja Sharpe'a, służy jednemu: odróżnieniu tych dwóch przypadków, zanim zaryzykuje się kapitał.
 
-I trzeba być gotowym na najczęstszy wynik uczciwej walidacji, którym jest brak. Większość parametrów, które świeciły in-sample, gaśnie out-of-sample, a to, co przetrwa, często dobija koszt transakcyjny. To nie jest porażka metody, tylko jej działanie: uczciwa optymalizacja odsiewa złudzenia, a jej normalnym produktem jest odrzucenie, nie zielona krzywa kapitału.
+I trzeba być gotowym na najczęstszy wynik uczciwej walidacji, którym jest brak. Większość parametrów, które świeciły in-sample, gaśnie out-of-sample, a to, co przetrwa, często dobija koszt transakcyjny. Nie jest to porażka metody, tylko jej działanie: uczciwa optymalizacja odsiewa złudzenia, a jej normalnym produktem jest odrzucenie, nie zielona krzywa kapitału.
 
-To nie jest porada inwestycyjna ani zachęta do jakiejkolwiek strategii. To materiał o metodyce walidacji: jak stroić parametry, nie oszukując samego siebie, i dlaczego większość wyników nie przeżywa zderzenia z danymi out-of-sample i z kosztami.
+Nie jest to porada inwestycyjna ani zachęta do jakiejkolwiek strategii. To materiał o metodyce walidacji: jak stroić parametry, nie oszukując samego siebie, i dlaczego większość wyników nie przeżywa zderzenia z danymi out-of-sample i z kosztami.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

@@ -117,7 +117,7 @@ Do tego dochodzi zarządzanie zapasem. Dealer, który nazbierał niechcianych eu
  <text x="396" y="279" font-size="11.5" fill="#0b66c3" text-anchor="middle">cena spada ↓</text>
  <text x="594" y="261" font-size="12.5" font-weight="600" fill="#1a9e6a" text-anchor="middle">kupno netto</text>
  <text x="594" y="279" font-size="11.5" fill="#0b66c3" text-anchor="middle">cena rośnie ↑</text>
- <text x="374" y="446" font-size="11" fill="currentColor" opacity="0.55" text-anchor="middle">czas (kolejne chwile handlu) →</text>
+ <text x="374" y="446" font-size="11" fill="currentColor" opacity="0.55" text-anchor="middle">czas (kolejne chwile handlu) -></text>
 </svg>
 <figcaption>Dolne słupki pokazują nadwyżkę przepływu w kolejnych chwilach: przewaga kupna nad osią zero, przewaga sprzedaży pod nią. Górna linia ceny rośnie tam, gdzie dominuje kupno, i spada tam, gdzie dominuje sprzedaż, więc kurs prowadzi niezrównoważony przepływ, a nie sam news.</figcaption>
 </figure>
@@ -134,6 +134,6 @@ Część niewygodna: detal nie widzi prawdziwego order flow rynku walutowego. Ry
 
 Praktyczna wartość nie jest więc gotowym sygnałem do klikania, tylko modelem mentalnym. Świadomość, że bezpośrednim motorem jest przepływ, a nie nagłówek, robi trzy rzeczy. Oducza przypisywania każdej świecy do jakiejś wiadomości. Każe traktować ruch bez newsa jako prawdziwy, bo ktoś robi wielkość, której nie widzisz. I nastraja na to, że pozycjonowanie oraz zabezpieczenia potrafią przez długie odcinki dominować nad fundamentalną historią. To jest kontekst do czytania rynku, a nie spust do wejścia.
 
-To nie jest porada inwestycyjna. To wyłożenie mechanizmu z literatury mikrostruktury, od zagadki rozłączenia u Meese i Rogoffa, przez model portfolio shifts Evansa i Lyonsa, po obraz rynku z badań BIS, żebyś rozumiał, dlaczego cena rusza się, gdy w kalendarzu pusto, i nie mylił flow z wolumenem.
+Nie jest to porada inwestycyjna. To wyłożenie mechanizmu z literatury mikrostruktury, od zagadki rozłączenia u Meese i Rogoffa, przez model portfolio shifts Evansa i Lyonsa, po obraz rynku z badań BIS, żebyś rozumiał, dlaczego cena rusza się, gdy w kalendarzu pusto, i nie mylił flow z wolumenem.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

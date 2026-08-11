@@ -182,6 +182,6 @@ Mniej stanów uczciwie oszacowanych bije wiele stanów precyzyjnie dostrojonych.
 
 Warstwy się składają. Cechy typu GARCH opisują intensywność, GMM i HMM opisują tożsamość, a changepoint opisuje pęknięcie. Razem odpowiadają na trzy pytania: jak dziko, w jaką grę gramy i czy właśnie się to zmieniło. To jest praktycznie cała treść świadomości reżimu.
 
-To nie jest porada inwestycyjna. To przegląd mechanizmów rozpoznawania reżimu rynku, pokazany z intuicją i wzorami, żeby odróżnić opis środowiska (w jaką grę grasz) od prognozy kierunku (w którą stronę pójdzie cena), zanim któremukolwiek z tych narzędzi powierzy się decyzję.
+Nie jest to porada inwestycyjna. To przegląd mechanizmów rozpoznawania reżimu rynku, pokazany z intuicją i wzorami, żeby odróżnić opis środowiska (w jaką grę grasz) od prognozy kierunku (w którą stronę pójdzie cena), zanim któremukolwiek z tych narzędzi powierzy się decyzję.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

@@ -3,7 +3,7 @@ title: "Kontrakty terminowe. Contango, backwardation, roll yield"
 description: "Kontrakt terminowy to zobowiązanie obu stron, nie prawo jak w opcji: kupujący musi kupić, sprzedający sprzedać instrument po ustalonej cenie w ustalonym terminie. Instrument jest wystandaryzowany, zabezpieczony depozytem i codziennie rozliczany do rynku (marking to market), a jego cena wynika z kosztu utrzymania: cena spot skorygowana o finansowanie i magazynowanie, pomniejszone o premię za posiadanie fizyczne. Gdy ten koszt netto jest dodatni, futures są droższe od spot (contango), gdy ujemny, tańsze (backwardation). Rolowanie wygasających kontraktów daje roll yield, ujemny w contango, przez co długie trzymanie ETF-ów surowcowych traci na rolowaniu. Do tego normalna backwardation Keynesa i Hicksa oraz ostrzeżenie: dźwignia futures działa w obie strony i grozi wezwaniem do uzupełnienia depozytu. Podstawy według Hulla, kontekst empiryczny z Gortona i Rouwenhorsta."
 date: 2026-07-10 15:00:00 +0200
 eyebrow: "Edukacja · instrumenty"
-dek: "Future to lustrzane odbicie opcji: nie prawo, lecz zobowiązanie obu stron, bez premii, za to z depozytem i codziennym rozliczeniem, które lewarują pozycję w obie strony. Do tego wycena kosztem utrzymania, dwa kształty krzywej terminowej (contango i backwardation), roll yield przy rolowaniu kontraktów oraz klasyczna hipoteza normalnej backwardation Keynesa i Hicksa. Na koniec ostrzeżenie o dźwigni i wezwaniu do uzupełnienia depozytu."
+dek: "Future to lustrzane odbicie opcji: nie prawo, ale zobowiązanie obu stron, bez premii, za to z depozytem i codziennym rozliczeniem, które lewarują pozycję w obie strony. Do tego wycena kosztem utrzymania, dwa kształty krzywej terminowej (contango i backwardation), roll yield przy rolowaniu kontraktów oraz klasyczna hipoteza normalnej backwardation Keynesa i Hicksa. Na koniec ostrzeżenie o dźwigni i wezwaniu do uzupełnienia depozytu."
 readingTime: 8
 tags: ["kontrakty terminowe", futures, instrumenty, contango, backwardation, "roll yield", "cost of carry", "koszt utrzymania", "depozyt zabezpieczający", "marking to market", dźwignia, "normalna backwardation", Keynes, Hicks, Hull, "Gorton Rouwenhorst", surowce, edukacja, quant]
 category: edukacja
@@ -50,9 +50,9 @@ PRZYKŁAD ILUSTRACYJNY (liczby umowne)
 wartość nominalna kontraktu: 100 000
 depozyt wstępny (5%): 5 000
 
-ruch instrumentu +2% → +2 000 → +40% depozytu
-ruch instrumentu −2% → −2 000 → −40% depozytu
-ruch instrumentu −10% → −10 000 → strata dwukrotności depozytu
+ruch instrumentu +2% -> +2 000 -> +40% depozytu
+ruch instrumentu −2% -> −2 000 -> −40% depozytu
+ruch instrumentu −10% -> −10 000 -> strata dwukrotności depozytu
 ```
 
 Ostatni wiersz pokazuje, dlaczego dźwignia futures bywa niebezpieczna: ruch większy niż depozyt oznacza stratę przekraczającą wpłaconą kaucję, a codzienne rozliczenie wymusi jej pokrycie, zanim kontrakt dojdzie do terminu.
@@ -84,8 +84,8 @@ Jedna własność jest pewna niezależnie od parametrów: w miarę zbliżania si
 Znak wyrażenia w wykładniku decyduje o kształcie krzywej terminowej i o dwóch nazwach, które ten kształt opisują.
 
 ```
-r + u − y > 0 → F > S → CONTANGO (futures drożej niż spot)
-r + u − y < 0 → F < S → BACKWARDATION (futures taniej niż spot)
+r + u − y > 0 -> F > S -> CONTANGO (futures drożej niż spot)
+r + u − y < 0 -> F < S -> BACKWARDATION (futures taniej niż spot)
 ```
 
 Contango to sytuacja, w której kontrakty terminowe są droższe od ceny spot, a im dalszy termin, tym drożej; krzywa rośnie. Dominuje tam, gdzie koszt finansowania i magazynowania przeważa, a więc dla wielu surowców w spokojnych warunkach podaży. Backwardation to odwrotność: futures tańsze od spot, krzywa opada. Pojawia się, gdy premia za posiadanie fizyczne jest wysoka, typowo przy napięciu podażowym, gdy rynek płaci za natychmiastowy dostęp do towaru.
@@ -101,20 +101,20 @@ CONTANGO: krzywa rosnąca (przykład ilustracyjny, spot = 100 niezmienny)
 kontrakt bliski (wygasa): 100
 kontrakt daleki (następny): 104
 rolowanie: sprzedaj bliski po 100, kup daleki po 104
-przy stałym spot daleki dąży 104 → 100, roll yield UJEMNY (ok. −4)
+przy stałym spot daleki dąży 104 -> 100, roll yield UJEMNY (ok. −4)
 
 BACKWARDATION: krzywa opadająca (spot = 100 niezmienny)
 kontrakt bliski (wygasa): 100
 kontrakt daleki (następny): 96
 rolowanie: sprzedaj bliski po 100, kup daleki po 96
-przy stałym spot daleki dąży 96 → 100, roll yield DODATNI (ok. +4)
+przy stałym spot daleki dąży 96 -> 100, roll yield DODATNI (ok. +4)
 ```
 
 W contango rolowanie oznacza z zasady sprzedaż taniej i kupno drożej, więc każde przejście na kolejny kontrakt odejmuje od wyniku, nawet jeśli cena spot ani drgnie. To wyjaśnia zjawisko mylące inwestorów detalicznych: fundusze ETF na surowce, które nie trzymają fizycznego towaru, tylko rolują kontrakty futures, potrafią systematycznie tracić względem ceny spot surowca, gdy rynek długo tkwi w contango. Notowana cena surowca może przez rok wrócić w to samo miejsce, a taki ETF i tak zanotować stratę zjedzoną przez kolejne ujemne roll yield. W backwardation mechanizm działa na korzyść posiadacza kontraktu, bo rolowanie kupuje taniej, niż sprzedaje.
 
 ## Normalna backwardation: hipoteza Keynesa i Hicksa
 
-Słowo backwardation ma drugie, węższe znaczenie, starsze od dzisiejszego żargonu rynkowego. John Maynard Keynes w „A Treatise on Money" (1930) postawił hipotezę nazwaną normalną backwardation. Dotyczy ona nie relacji między futures a dzisiejszym spot, lecz między futures a oczekiwaną przyszłą ceną spot.
+Słowo backwardation ma drugie, węższe znaczenie, starsze od dzisiejszego żargonu rynkowego. John Maynard Keynes w „A Treatise on Money" (1930) postawił hipotezę nazwaną normalną backwardation. Dotyczy ona nie relacji między futures a dzisiejszym spot, ale między futures a oczekiwaną przyszłą ceną spot.
 
 Rozumowanie opiera się na tym, kto naturalnie potrzebuje zabezpieczenia. Producent surowca, rolnik, kopalnia czy wytwórca, jest z natury długi w fizycznym towarze i chce zamknąć cenę sprzedaży z wyprzedzeniem, więc sprzedaje futures. Zabezpieczający się są zatem po stronie krótkiej i jest ich w nadmiarze. Żeby ktoś przejął drugą, długą stronę i wziął na siebie ryzyko ceny, musi mieć w tym oczekiwany zysk. Tym kimś jest spekulant, a jego wynagrodzeniem jest cena futures ustawiona poniżej oczekiwanej przyszłej ceny spot: w miarę zbliżania się terminu cena kontraktu ma tendencję do wzrostu ku spotowi, co daje długiemu spekulantowi dodatni oczekiwany zwrot. John Hicks w „Value and Capital" (1939) rozwinął ten argument, wiążąc go z przewagą liczebną zabezpieczających nad spekulantami.
 

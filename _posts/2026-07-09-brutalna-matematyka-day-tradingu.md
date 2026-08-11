@@ -26,7 +26,7 @@ Są dwie liczby, które w tej branży powinny wisieć na ścianie każdego, kto 
 
 ## Efekt dyspozycji: nazwa błędu, który popełnia większość
 
-Efekt dyspozycji to termin, który Odean opisał w 1998 roku, i mieści się w jednym zdaniu: inwestorzy trzymają stratne pozycje za długo, a zyskowne realizują za wcześnie. Sprzedajemy to, co rośnie, żeby „zaksięgować wygraną" i poczuć, że mieliśmy rację. Zostajemy z tym, co spada, bo zamknięcie ze stratą boli, więc czekamy, aż „wróci". To nie jest głupota, to jest odruch, który mózg podsuwa niemal każdemu.
+Efekt dyspozycji to termin, który Odean opisał w 1998 roku, i mieści się w jednym zdaniu: inwestorzy trzymają stratne pozycje za długo, a zyskowne realizują za wcześnie. Sprzedajemy to, co rośnie, żeby „zaksięgować wygraną" i poczuć, że mieliśmy rację. Zostajemy z tym, co spada, bo zamknięcie ze stratą boli, więc czekamy, aż „wróci". Nie jest to głupota, to jest odruch, który mózg podsuwa niemal każdemu.
 
 Ten odruch ma konkretną cenę i widać ją dopiero w danych. W typowym rozkładzie czasu trzymania stratne pozycje siedzą otwarte znacznie dłużej niż zyskowne, często w proporcji rzędu dwa do jednego, i to dokładnie w złą stronę: zyski są cięte szybko, a straty domykane z opóźnieniem. Żaden plan nie zawiera reguły „trzymaj przegrane dłużej", nikt takiej zasady nie zapisuje. A jednak zachowanie układa się w ten wzorzec konsekwentnie na całej próbie. To jest sedno efektu dyspozycji: nie widać go w pojedynczym tradzie, gdzie zawsze jest „dobry powód", żeby jeszcze poczekać. Widać go dopiero w medianie z wielu wejść, gdzie powody się uśredniają, a zostaje czysty wzorzec zachowania.
 
@@ -40,7 +40,7 @@ Najbrutalniejszy dowód jest zawsze w kilku najgorszych tradach. To zwykle nie s
 
 Druga warstwa jest emocjonalna i też da się ją zmierzyć, żeby nie została przy „chyba czasem się nakręcam". Skuteczność po przegranym tradzie potrafi wyraźnie spaść względem skuteczności po wygranym, a średni wynik na tradzie idzie w tę samą stronę. To jest tilt w czystej postaci. Po stracie pojawia się chęć natychmiastowego odrobienia, wejście przychodzi szybciej i gorzej, a pętla się zaciska: gorsze wejście podnosi szansę na kolejną stratę, kolejna strata podkręca chęć odrobienia.
 
-Sizing potwierdza to samo z trzeciej strony. Kiedy wielkość pozycji skacze mocno, zamiast siedzieć na jednym poziomie, część tych skoków to zdrowe dopasowanie do sytuacji, ale część to ten sam odruch odgrywania: po bolesnej stracie ręka sama dokłada, bo „tym razem odbiję z większym". Trzy różne pomiary, efekt dyspozycji, tilt i niespójny lot, wskazują na jedno miejsce. To nie są trzy osobne problemy, tylko trzy widoki tego samego.
+Sizing potwierdza to samo z trzeciej strony. Kiedy wielkość pozycji skacze mocno, zamiast siedzieć na jednym poziomie, część tych skoków to zdrowe dopasowanie do sytuacji, ale część to ten sam odruch odgrywania: po bolesnej stracie ręka sama dokłada, bo „tym razem odbiję z większym". Trzy różne pomiary, efekt dyspozycji, tilt i niespójny lot, wskazują na jedno miejsce. Nie są to trzy osobne problemy, tylko trzy widoki tego samego.
 
 ## Czego te liczby NIE dowodzą
 
@@ -58,7 +58,7 @@ Stąd trzy reguły, które nie są mądrością z motywacyjnego coacha, tylko od
 2. Po stracie przerwa, cool-down, zamiast natychmiastowego odgrywania. To atakuje podatek, który tilt pobiera na kolejnym wejściu, czyli różnicę w skuteczności po stracie i po wygranej.
 3. Stały, mały lot, nie większy niż zaplanowany. To atakuje skoki wielkości pozycji i odruch dokładania po bolesnej stracie.
 
-Że to nie jest miękka rada, pokazuje matematyka ryzyka. Samo ucięcie ogona najcięższych strat potrafi podnieść jakość krzywej kapitału o kilka do kilkunastu punktów procentowych w miarach typu PSR, bo te miary karzą właśnie za grube, rzadkie zjazdy. To jest policzalna cena dyspozycji, nie wyczuta. Dlatego najwięcej daje trzymanie tych wskaźników na widoku, na który patrzy się tuż przed wejściem: żeby błąd miał twarz i liczbę, zanim znów padnie kliknięcie.
+Że nie jest to miękka rada, pokazuje matematyka ryzyka. Samo ucięcie ogona najcięższych strat potrafi podnieść jakość krzywej kapitału o kilka do kilkunastu punktów procentowych w miarach typu PSR, bo te miary karzą właśnie za grube, rzadkie zjazdy. To jest policzalna cena dyspozycji, nie wyczuta. Dlatego najwięcej daje trzymanie tych wskaźników na widoku, na który patrzy się tuż przed wejściem: żeby błąd miał twarz i liczbę, zanim znów padnie kliknięcie.
 
 ## Nudna część jest tą, która działa
 
@@ -66,7 +66,7 @@ Brutalna matematyka day tradingu nie polega na tym, że rynek jest zbyt sprytny 
 
 Dobra wiadomość jest więc taka, że wróg jest znany z imienia i ma numer. Zła jest taka, że rozwiązanie jest nudne i trzeba je wykonać dziś, przy najbliższym tradzie, a nie „od poniedziałku". Twardy stop kosztuje jedną chwilę dyskomfortu przy wejściu i oszczędza wiele godzin trzymania trupa. To zła cena tylko dla tej części tradera, która nadal chce mieć rację, zamiast mieć wynik.
 
-To nie jest porada inwestycyjna. Tekst pokazuje mechanizm i publiczne dane po to, żeby było jasne, na czym realnie traci się pieniądze na tym rynku. Wielkość pozycji, moment wyjścia i cierpliwość zawsze są po stronie osoby, która klika, i to ona ponosi za nie odpowiedzialność.
+Nie jest to porada inwestycyjna. Tekst pokazuje mechanizm i publiczne dane po to, żeby było jasne, na czym realnie traci się pieniądze na tym rynku. Wielkość pozycji, moment wyjścia i cierpliwość zawsze są po stronie osoby, która klika, i to ona ponosi za nie odpowiedzialność.
 
 Źródła: Brad M. Barber, Terrance Odean, „Do Day Traders Rationally Learn"; KNF, „Zysk a ryzyko na rynku Forex"; Terrance Odean (1998), efekt dyspozycji.
 

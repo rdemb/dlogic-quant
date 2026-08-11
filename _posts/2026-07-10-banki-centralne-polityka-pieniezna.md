@@ -17,7 +17,7 @@ category: edukacja
 > - Decyzja dociera do gospodarki kilkoma kanałami naraz: stopy rynkowej, kredytu (Bernanke i Gertler 1995), kursu walutowego, cen aktywów i oczekiwań (porządek w ujęciu Mishkina). Po 2008 roku doszły narzędzia niekonwencjonalne: skup aktywów (QE), forward guidance i stopy ujemne (EBC obniżył stopę depozytową poniżej zera w 2014 roku).
 > - Rynek wycenia ścieżkę stóp z wyprzedzeniem, więc reaguje na niespodziankę względem oczekiwań, nie na sam poziom. Kuttner (2001) pokazał na kontraktach na stopę Fed, że stopy rynkowe silnie reagują na nieoczekiwaną część ruchu, a słabo na tę już wycenioną. Stąd waga komunikacji.
 
-**Teza w jednym zdaniu:** Polityka pieniężna działa nie przez sam poziom jednej stopy, lecz przez oczekiwaną ścieżkę tej stopy i kilka równoległych kanałów transmisji, dlatego rynek porusza się na różnicy między decyzją a tym, co już wycenił.
+**Teza w jednym zdaniu:** Polityka pieniężna działa nie przez sam poziom jednej stopy, ale przez oczekiwaną ścieżkę tej stopy i kilka równoległych kanałów transmisji, dlatego rynek porusza się na różnicy między decyzją a tym, co już wycenił.
 
 ## Po co istnieje bank centralny: mandat
 
@@ -55,14 +55,14 @@ Zmiana stopy nie działa jednym przewodem. Podręcznikowa taksonomia, którą up
 ```
 Kanały transmisji (porządek w ujęciu Mishkina):
 
-stopa rynkowa → koszt kredytu i premia za oszczędzanie
-kredyt → podaż kredytu bankowego, bilanse firm i gospodarstw
-kurs walutowy → ceny eksportu i importu, konkurencyjność
-ceny aktywów → majątek, wartość zabezpieczeń, skłonność do wydatków
-oczekiwania → decyzje cenowe, płacowe i inwestycyjne
+stopa rynkowa -> koszt kredytu i premia za oszczędzanie
+kredyt -> podaż kredytu bankowego, bilanse firm i gospodarstw
+kurs walutowy -> ceny eksportu i importu, konkurencyjność
+ceny aktywów -> majątek, wartość zabezpieczeń, skłonność do wydatków
+oczekiwania -> decyzje cenowe, płacowe i inwestycyjne
 ```
 
-Kanał kredytowy zasługuje na osobne zdanie. Bernanke i Gertler (1995) opisali go jako czarną skrzynkę, w której polityka pieniężna działa nie tylko przez cenę pieniądza, lecz przez zdolność kredytową: wyższe stopy psują bilanse i obniżają wartość zabezpieczeń, przez co banki pożyczają ostrożniej, a słabsze firmy tracą dostęp do finansowania. Ten mechanizm, nazwany finansowym akceleratorem, tłumaczy, dlaczego skutki decyzji bywają większe i bardziej nierówne, niż sugerowałby sam ruch stopy. Kanały działają z opóźnieniem liczonym w kwartałach, co jest jedną z trudności polityki: bank reaguje dziś na inflację, którą realnie schłodzi dopiero za kilka kwartałów.
+Kanał kredytowy zasługuje na osobne zdanie. Bernanke i Gertler (1995) opisali go jako czarną skrzynkę, w której polityka pieniężna działa nie tylko przez cenę pieniądza, ale przez zdolność kredytową: wyższe stopy psują bilanse i obniżają wartość zabezpieczeń, przez co banki pożyczają ostrożniej, a słabsze firmy tracą dostęp do finansowania. Ten mechanizm, nazwany finansowym akceleratorem, tłumaczy, dlaczego skutki decyzji bywają większe i bardziej nierówne, niż sugerowałby sam ruch stopy. Kanały działają z opóźnieniem liczonym w kwartałach, co jest jedną z trudności polityki: bank reaguje dziś na inflację, którą realnie schłodzi dopiero za kilka kwartałów.
 
 <figure>
 <svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schemat kanałów transmisji polityki pieniężnej: stopa referencyjna w centrum i pięć równoległych kanałów transmisji" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
@@ -127,15 +127,15 @@ Dekompozycja ruchu stopy (za Kuttnerem 2001):
 zmiana stopy = część oczekiwana + niespodzianka
 
 reakcja stóp rynkowych:
- na część oczekiwaną → słaba (już wyceniona)
- na niespodziankę → silna
+ na część oczekiwaną -> słaba (już wyceniona)
+ na niespodziankę -> silna
 ```
 
 Gürkaynak, Sack i Swanson (2005) rozszerzyli ten obraz, pokazując, że komunikat banku niesie dwie osobne niespodzianki: o bieżącej stopie oraz o przyszłej ścieżce, i że ta druga, czyli forward guidance, potrafi ruszać rynkiem mocniej niż sama decyzja o poziomie. Stąd waga słów. Blinder i współautorzy (2008) w przeglądzie badań nad komunikacją banków centralnych argumentują, że komunikacja stała się pełnoprawnym narzędziem polityki, bo kształtuje oczekiwania, a przez oczekiwania biegnie duża część transmisji. Wniosek jest czysto opisowy: skoro kalendarz posiedzeń jest znany, a konsensus co do samej decyzji zwykle też, to elementem, który przesuwa wycenę, bywa zaskoczenie i ton komunikatu, nie sam fakt zmiany.
 
 ## Powiązanie z FX: różnice ścieżek napędzają kurs
 
-Na rynku walutowym spotykają się dwie polityki pieniężne naraz, więc liczy się nie stopa jednego banku, lecz różnica ścieżek między dwoma. Punktem wyjścia jest parytet stóp procentowych: waluta kraju o wyższych stopach powinna być na termin notowana z dyskontem, tak że oczekiwany zwrot z obu walut się wyrównuje. Dornbusch (1976) dołożył do tego lepkość cen i wyprowadził efekt przestrzelenia: ponieważ ceny dóbr dostosowują się wolno, a rynek walutowy natychmiast, kurs po zmianie polityki najpierw przestrzeliwuje swój długoterminowy poziom, a potem do niego wraca. Praktyczny sens obu modeli jest ten sam: gdy jeden bank sygnalizuje wyższą ścieżkę stóp, a drugi niższą, rozjazd oczekiwań przekłada się na różnicę stóp i na kurs, zwykle w momencie, gdy rynek przesuwa wycenę ścieżki, a nie dopiero przy samej decyzji. To domyka łańcuch z początku tekstu: od mandatu, przez jedną stopę i kanały transmisji, po kurs, który jest ceną relatywną dwóch polityk.
+Na rynku walutowym spotykają się dwie polityki pieniężne naraz, więc liczy się nie stopa jednego banku, ale różnica ścieżek między dwoma. Punktem wyjścia jest parytet stóp procentowych: waluta kraju o wyższych stopach powinna być na termin notowana z dyskontem, tak że oczekiwany zwrot z obu walut się wyrównuje. Dornbusch (1976) dołożył do tego lepkość cen i wyprowadził efekt przestrzelenia: ponieważ ceny dóbr dostosowują się wolno, a rynek walutowy natychmiast, kurs po zmianie polityki najpierw przestrzeliwuje swój długoterminowy poziom, a potem do niego wraca. Praktyczny sens obu modeli jest ten sam: gdy jeden bank sygnalizuje wyższą ścieżkę stóp, a drugi niższą, rozjazd oczekiwań przekłada się na różnicę stóp i na kurs, zwykle w momencie, gdy rynek przesuwa wycenę ścieżki, a nie dopiero przy samej decyzji. To domyka łańcuch z początku tekstu: od mandatu, przez jedną stopę i kanały transmisji, po kurs, który jest ceną relatywną dwóch polityk.
 
 Materiał czysto edukacyjny, nie porada inwestycyjna ani prognoza decyzji jakiegokolwiek banku centralnego. Tekst opisuje mechanizmy i przywołuje ustalenia z literatury (Taylor 1993, Mishkin, Bernanke i Gertler 1995, Kuttner 2001, Gürkaynak, Sack i Swanson 2005, Dornbusch 1976, Blinder i współautorzy 2008) oraz dokumentację EBC i Fed. Wartości liczbowe, takie jak przyjęte przez Taylora 2%, pochodzą z cytowanych prac i mają charakter ilustracyjny, nie stanowią przewidywania.
 

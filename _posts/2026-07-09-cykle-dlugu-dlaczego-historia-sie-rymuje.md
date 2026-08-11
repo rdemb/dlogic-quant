@@ -36,7 +36,7 @@ Następnie przychodzi euforia. Do gry wchodzą nowi uczestnicy, którzy nie chc�
 
 I wtedy pojawia się moment kruchości. Wystarczy niewielki szok, podwyżka stóp, jedno głośne bankructwo, jedna instytucja, która nie reguluje zobowiązań, żeby uruchomić rewizję założeń. Ta sama dźwignia, która wzmacniała zyski, teraz wzmacnia straty. Wezwania do uzupełnienia depozytów wymuszają sprzedaż, sprzedaż obniża ceny, niższe ceny wymuszają kolejną sprzedaż.
 
-Na końcu jest panika i delewarowanie. Wszyscy naraz chcą tego samego, płynności, i naraz chcą wyjść. Długi trzeba spłacić albo spisać na straty, kredyt się kurczy, a rynek, który przez lata rósł na dźwigni, zjeżdża na jej odwróceniu. To nie jest osobne zjawisko od boomu. To jego druga połowa, wpisana w tę samą logikę.
+Na końcu jest panika i delewarowanie. Wszyscy naraz chcą tego samego, płynności, i naraz chcą wyjść. Długi trzeba spłacić albo spisać na straty, kredyt się kurczy, a rynek, który przez lata rósł na dźwigni, zjeżdża na jej odwróceniu. Nie jest to osobne zjawisko od boomu. To jego druga połowa, wpisana w tę samą logikę.
 
 ## Minsky: stabilność rodzi niestabilność
 
@@ -58,7 +58,7 @@ To jest sedno tego, dlaczego zjazd potrafi napędzać się sam. Zachowanie racjo
 
 Współcześnie ten sam mechanizm skodyfikował Ray Dalio w „Principles for Navigating Big Debt Crises". Po przejrzeniu wielu kryzysów zadłużenia opisał je jako powtarzalny szablon, napędzany naturą ludzką i mechaniką kredytu, a nie unikalnymi cechami każdej epoki.
 
-Najważniejszy wniosek Dalio dotyczy fazy schodzenia. Delewarowanie nie musi wyglądać tak samo. Może przybrać formę brzydką, deflacyjną, dokładnie tę, którą opisał Fisher, gdy realny ciężar długu nakręca się razem ze spadkiem cen. Może też przybrać formę łagodniejszą, gdy ciężar rozkłada się w miarę równo między oszczędzanie, restrukturyzację i umorzenia długu, transfery majątku oraz dodruk pieniądza, tak że dług spada względem dochodu bez deflacyjnego załamania. Szkielet zdarzeń jest ten sam, ale wynik dolnej połowy cyklu zależy od tego, jak się nią zarządzi. To ważne dopowiedzenie do reszty: cykl jest mechaniczny i powtarzalny, lecz jego finał nie jest z góry przesądzony.
+Najważniejszy wniosek Dalio dotyczy fazy schodzenia. Delewarowanie nie musi wyglądać tak samo. Może przybrać formę brzydką, deflacyjną, dokładnie tę, którą opisał Fisher, gdy realny ciężar długu nakręca się razem ze spadkiem cen. Może też przybrać formę łagodniejszą, gdy ciężar rozkłada się w miarę równo między oszczędzanie, restrukturyzację i umorzenia długu, transfery majątku oraz dodruk pieniądza, tak że dług spada względem dochodu bez deflacyjnego załamania. Szkielet zdarzeń jest ten sam, ale wynik dolnej połowy cyklu zależy od tego, jak się nią zarządzi. To ważne dopowiedzenie do reszty: cykl jest mechaniczny i powtarzalny, ale jego finał nie jest z góry przesądzony.
 
 ## Trzy warianty tego samego szkieletu: 1907, 1929, 2008
 
@@ -72,7 +72,7 @@ Rok 2008 znów przebrał ten sam szkielet w nowe stroje. Tani kredyt i boom na r
 
 Nić przewodnia jest wspólna. W każdym przypadku był tani kredyt, dźwignia skupiona w tej części systemu, która akurat wydawała się bezpieczna, opowieść o nowej erze, drobny szok, który obnażył kruchość, panika będąca w gruncie rzeczy wyścigiem po płynność, i bolesne delewarowanie. Inne instrumenty, ta sama gramatyka.
 
-## Czego ta rama NIE daje: to nie jest zegar
+## Czego ta rama NIE daje: nie jest to zegar
 
 Teraz uczciwie o granicach, bo bez tego byłby to fatalizm, a nie analiza. Rama cyklu długu mówi, gdzie narasta kruchość, a nie kiedy pęknie. To zasadnicza różnica. Manie potrafią trwać znacznie dłużej, niż wydaje się to możliwe, a bycie „za wcześnie" w rachunku wyników wygląda dokładnie tak samo jak bycie w błędzie.
 
@@ -84,11 +84,11 @@ Stąd najważniejsze zastrzeżenie. Ta mapa jest z założenia zgrubna i służy
 
 ## Po co więc znać ten rym
 
-Wartość tej wiedzy nie leży w przepowiadaniu, tylko w przygotowaniu. Znajomość wzorca zmienia pytania, które się zadaje. Gdzie w systemie chowa się dźwignia. Czy obecny spokój nie obniża właśnie wszystkim marginesu bezpieczeństwa. Czy dominująca opowieść to nie jest kolejna wersja „tym razem jest inaczej". Czy płynność, której teraz jest w nadmiarze, będzie dostępna wtedy, gdy naprawdę okaże się potrzebna.
+Wartość tej wiedzy nie leży w przepowiadaniu, tylko w przygotowaniu. Znajomość wzorca zmienia pytania, które się zadaje. Gdzie w systemie chowa się dźwignia. Czy obecny spokój nie obniża właśnie wszystkim marginesu bezpieczeństwa. Czy dominująca opowieść nie jest to kolejna wersja „tym razem jest inaczej". Czy płynność, której teraz jest w nadmiarze, będzie dostępna wtedy, gdy naprawdę okaże się potrzebna.
 
 To jest soczewka do ryzyka systemowego i przypomnienie o kilku trwałych prawdach: że ziarno kłopotów sieje się w dobrych czasach, że dźwignia działa symetrycznie w obie strony, i że płynność znika dokładnie w chwili, gdy jest najbardziej pożądana. Ta rama nie mówi, co kupić ani sprzedać, ani kiedy. Mówi, żeby szanować dźwignię i trzymać margines bezpieczeństwa, bo jedyną cechą wspólną wszystkich wariantów jest to, że ludzie w środku manii nie potrafili zobaczyć jej jako manii. To lekcja pokory, nie sygnał czasowy.
 
-To nie jest porada inwestycyjna. Tekst pokazuje powtarzalny mechanizm i klasyczne opracowania po to, żeby dać ramę do myślenia o ryzyku systemowym, a nie wskazówkę, co i kiedy zrobić na rynku. Każda decyzja o pozycji, wielkości i momencie należy do osoby, która ją podejmuje, i to ona ponosi za nią odpowiedzialność.
+Nie jest to porada inwestycyjna. Tekst pokazuje powtarzalny mechanizm i klasyczne opracowania po to, żeby dać ramę do myślenia o ryzyku systemowym, a nie wskazówkę, co i kiedy zrobić na rynku. Każda decyzja o pozycji, wielkości i momencie należy do osoby, która ją podejmuje, i to ona ponosi za nią odpowiedzialność.
 
 Źródła: Hyman P. Minsky, hipoteza niestabilności finansowej; Irving Fisher (1933), „The Debt-Deflation Theory of Great Depressions"; Ray Dalio, „Principles for Navigating Big Debt Crises"; Carmen M. Reinhart, Kenneth S. Rogoff, „This Time Is Different: Eight Centuries of Financial Folly"; Charles P. Kindleberger, „Manias, Panics, and Crashes"; Charles Mackay, „Extraordinary Popular Delusions and the Madness of Crowds".
 

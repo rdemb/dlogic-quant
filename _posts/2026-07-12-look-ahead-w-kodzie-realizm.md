@@ -52,7 +52,7 @@ signal * ret -> krzywa rosnie gladko, Sharpe nierealnie wysoki
 signal.shift(1) * ret -> po realistycznych kosztach zwykle plasko lub pod kreska
 ```
 
-Dlatego pierwsza wersja rysuje równą, niemal bezobsunięciową krzywą kapitału, a druga, poprawna, zwykle ogląda przewagę znikającą po odjęciu spreadu i prowizji. To nie jest subtelność kosmetyczna, tylko różnica między pomiarem strategii a pomiarem własnego błędu.
+Dlatego pierwsza wersja rysuje równą, niemal bezobsunięciową krzywą kapitału, a druga, poprawna, zwykle ogląda przewagę znikającą po odjęciu spreadu i prowizji. Nie jest to subtelność kosmetyczna, tylko różnica między pomiarem strategii a pomiarem własnego błędu.
 
 ## Cała rodzina przecieków
 

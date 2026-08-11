@@ -32,8 +32,8 @@ Na pierwszy rzut oka to cztery różne gry. Naprawdę są dwie pary bliźniaków
 
 ```
 format otwarty bliźniak w zamkniętej kopercie
-holenderska (cena spada) → pierwsza cena
-angielska (cena rośnie) → druga cena (Vickreya)
+holenderska (cena spada) -> pierwsza cena
+angielska (cena rośnie) -> druga cena (Vickreya)
 ```
 
 Holenderska i pierwsza cena to strategicznie ta sama gra: w obu wybierasz jedną liczbę, niczego nie dowiadując się po drodze o rywalach, i jeśli twoja liczba okaże się najodważniejsza, płacisz właśnie ją. Angielska i Vickreya schodzą się przy wycenach prywatnych: w aukcji angielskiej opłaca się stać przy stole dokładnie dopóty, dopóki cena nie przebije twojej wyceny, więc zwycięzca płaci poziom wyjścia drugiego w kolejności, czyli drugą najwyższą wycenę. Podział na cztery formaty ma jednak sens, bo pary rozjeżdżają się z powrotem, gdy w grę wchodzi wspólna wartość i informacja płynąca z cudzych zachowań. O tym za chwilę.
@@ -44,7 +44,7 @@ Dla licytującego różnica między rodzinami jest fundamentalna. W rodzinie pie
 
 Sztuczka polega na rozdzieleniu dwóch ról oferty. W aukcji pierwszej ceny twoja koperta decyduje jednocześnie o tym, czy wygrasz, i o tym, ile zapłacisz, więc masz motyw, żeby kłamać w dół. U Vickreya koperta decyduje wyłącznie o tym, czy wygrasz; wysokość rachunku ustala druga najwyższa oferta, na którą nie masz wpływu. Sprawdź, co daje odejście od prawdy. Zawyżysz ofertę ponad własną wycenę: dokładasz sobie wyłącznie te wygrane, w których rachunek przekracza wartość przedmiotu, czyli dopłacasz do interesu. Zaniżysz: rachunku i tak nie obniżysz, za to wypadasz z licytacji, które były dla ciebie zyskowne. Licytowanie dokładnie własnej wyceny jest więc strategią dominującą: najlepszą niezależnie od tego, co zrobi reszta stołu. Prawdomówność przestaje być cnotą, a staje się chłodną kalkulacją.
 
-To nie jest ciekawostka z tablicy. Licytacja przez pełnomocnika w serwisie eBay działa na pokrewnej zasadzie: podajesz swoje maksimum, system licytuje za ciebie, a zwycięzca płaci drugą najwyższą ofertę powiększoną o minimalne postąpienie. Skrót VCG, opisujący mechanizmy używane w aukcjach reklamy internetowej, rozwija się w Vickrey, Clarke, Groves: pomysł z 1961 roku dorobił się uogólnień na sprzedaż wielu przedmiotów naraz.
+Nie jest to ciekawostka z tablicy. Licytacja przez pełnomocnika w serwisie eBay działa na pokrewnej zasadzie: podajesz swoje maksimum, system licytuje za ciebie, a zwycięzca płaci drugą najwyższą ofertę powiększoną o minimalne postąpienie. Skrót VCG, opisujący mechanizmy używane w aukcjach reklamy internetowej, rozwija się w Vickrey, Clarke, Groves: pomysł z 1961 roku dorobił się uogólnień na sprzedaż wielu przedmiotów naraz.
 
 ## Równoważność przychodów: różne reguły, średnio ten sam utarg
 
@@ -68,10 +68,10 @@ Mechanizm, który za tym stoi, jest czysto statystyczny i dlatego nieubłagany:
 
 ```
 każda firma szacuje wartość działki bez systematycznego błędu
-→ oferty podążają za oszacowaniami
-→ wygrywa najwyższa oferta, czyli najwyższe oszacowanie
-→ zwycięzca to z konstrukcji największy optymista
-→ średnio: zwycięzca przepłaca, choć nikt nie mylił się „średnio"
+-> oferty podążają za oszacowaniami
+-> wygrywa najwyższa oferta, czyli najwyższe oszacowanie
+-> zwycięzca to z konstrukcji największy optymista
+-> średnio: zwycięzca przepłaca, choć nikt nie mylił się „średnio"
 ```
 
 Pojedyncze oszacowanie może być nieobciążone, ale aukcja nie wybiera losowego oszacowania, tylko maksimum z wielu. A maksimum z nieobciążonych oszacowań jest obciążone w górę, tym mocniej, im więcej firm szacuje i im większa niepewność. Stąd rada Capena, Clappa i Campbella, która do dziś brzmi jak herezja: licytuj poniżej własnego oszacowania, i to tym niżej, im więcej masz konkurentów. Zdrowy rozsądek podpowiada, że duża konkurencja wymusza agresję; rachunek mówi odwrotnie, bo wygrana przeciw pięćdziesięciu rywalom znaczy, że twoje oszacowanie było najbardziej optymistyczne z pięćdziesięciu jeden, a to jest zła wiadomość o oszacowaniu, nie dobra o działce. Autorzy ujęli to obrazowo: kto wygrywa z dwoma czy trzema rywalami, może się cieszyć; kto wygrał z pięćdziesięcioma, powinien się martwić. I dopisali puentę: kto uparcie licytuje tyle, ile jego zdaniem działka jest warta, w długim okresie zostanie oskubany.
@@ -156,6 +156,6 @@ Wygrana jest informacją. Kto dostał pełny przydział gorącego IPO, kupił sp
 
 A kto sam sprzedaje, od mieszkania po firmę, powinien pamiętać o drugiej stronie lustra: cena minimalna (Myerson), jawność i tempo licytacji (Milgrom), wejście nowych graczy i odporność na zmowę (Klemperer) to parametry warte realne pieniądze. Trzydziestokrotna różnica między brytyjską a szwajcarską aukcją 3G nie wzięła się z jakości pasma.
 
-To nie jest porada inwestycyjna. To mapa klasycznej teorii aukcji, z datami i liczbami z oryginalnych prac, po to, żeby format licytacji rozpoznawać, zanim się w nim zagra, a po każdej wygranej wycenie przeciw tłumowi zadawać sobie pytanie z 1971 roku: co wiedzieli ci, którzy licytowali niżej.
+Nie jest to porada inwestycyjna. To mapa klasycznej teorii aukcji, z datami i liczbami z oryginalnych prac, po to, żeby format licytacji rozpoznawać, zanim się w nim zagra, a po każdej wygranej wycenie przeciw tłumowi zadawać sobie pytanie z 1971 roku: co wiedzieli ci, którzy licytowali niżej.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

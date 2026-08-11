@@ -44,7 +44,7 @@ MetaTrader 5 daje w zamian szereg kryteriów: obok Balance max są między innym
 
 ## Krajobraz wyników: pik kontra plateau
 
-Optymalizacja nie zwraca jednej liczby, lecz całą powierzchnię: każdej kombinacji parametrów odpowiada jakiś wynik. W testerze widać to na zakładce wyników optymalizacji, dostępnej jako tabela oraz jako wykres. Gdy na osie mapy trafią dwa parametry, a wynik zostanie zakodowany kolorem, całość czyta się jak mapę terenu. Intuicja jest trójwymiarowa: parametry leżą na dwóch osiach, a wynik jest wysokością nad nimi.
+Optymalizacja nie zwraca jednej liczby, ale całą powierzchnię: każdej kombinacji parametrów odpowiada jakiś wynik. W testerze widać to na zakładce wyników optymalizacji, dostępnej jako tabela oraz jako wykres. Gdy na osie mapy trafią dwa parametry, a wynik zostanie zakodowany kolorem, całość czyta się jak mapę terenu. Intuicja jest trójwymiarowa: parametry leżą na dwóch osiach, a wynik jest wysokością nad nimi.
 
 Ten kształt mówi więcej niż samo maksimum. Pojedynczy, wysoki pik otoczony ustawieniami, które wypadają słabo, jest podejrzany: całość wisi na jednej wartości parametru, a krok w bok psuje wszystko. Taki szczyt to zwykle dopasowanie do przypadkowego układu w danych. Odwrotnie wygląda szerokie plateau, obszar sąsiadujących ustawień dających podobnie przyzwoite wyniki. Wtedy rezultat nie zależy od zgadnięcia jednej magicznej liczby i znosi drobne zmiany parametrów bez rozpadu. Pardo w "The Evaluation and Optimization of Trading Strategies" (2008) formułuje tę zasadę wprost: parametry bierze się ze środka stabilnego regionu, nie z izolowanego szczytu. Plateau nie dowodzi przewagi, ale jest warunkiem koniecznym wiarygodności: mechanizm działający tylko przy jednym ustawieniu na tysiąc prawie na pewno nie działa wcale.
 
@@ -58,7 +58,7 @@ Mechanika jest prosta. Tester optymalizuje parametry wyłącznie na pierwszej cz
 
 Pojedynczy forward to jedno okno out-of-sample. Walk-forward analysis rozwija ten pomysł w procedurę ruchomą: stroisz parametry na oknie, testujesz je na kolejnym, przylegającym oknie, przesuwasz oba w przód i powtarzasz, a sklejone odcinki out-of-sample tworzą jedną krzywą, bliższą temu, jak strategia działałaby na żywo. Wbudowany forward w MT5 odpowiada jednemu krokowi takiej analizy; pełną wersję kroczącą składa się zwykle z serii przebiegów testera po przesuwanych zakresach dat. Szkielet samej pętli, w oderwaniu od konkretnej platformy, rozłożony jest w materiale o [walk-forward w kodzie](/dlogic-quant/2026/07/12/optymalizacja-walk-forward-w-kodzie/).
 
-Pardo (2008) wprowadza tu miarę o nazwie walk-forward efficiency: stosunek jakości osiągniętej na forward do jakości na oknie in-sample. Wartość bliska jedności albo wyższa sugeruje, że parametry przenoszą się poza okno strojenia, a wyraźny spadek jest sygnałem, że wynik in-sample był w dużej części dopasowaniem do szumu. To nie jest test istotności, tylko szybki wskaźnik, o ile realistyczny handel odbiega od wypolerowanej krzywej optymalizacji.
+Pardo (2008) wprowadza tu miarę o nazwie walk-forward efficiency: stosunek jakości osiągniętej na forward do jakości na oknie in-sample. Wartość bliska jedności albo wyższa sugeruje, że parametry przenoszą się poza okno strojenia, a wyraźny spadek jest sygnałem, że wynik in-sample był w dużej części dopasowaniem do szumu. Nie jest to test istotności, tylko szybki wskaźnik, o ile realistyczny handel odbiega od wypolerowanej krzywej optymalizacji.
 
 ## Własne kryterium: OnTester zamiast profitu
 
@@ -94,7 +94,7 @@ Warto powtórzyć to jasno: optymalizacja niczego nie tworzy, tylko dopasowuje. 
 
 Pierwsze to overfitting przez liczbę prób. Każde powtórzenie całej procedury, każda zmiana siatki czy kryterium to kolejna próba, a im więcej prób, tym wyżej trzeba postawić poprzeczkę, żeby wynik znaczył więcej niż przypadek. Forward sprawdza jedno okno, ale wielokrotne przestrajanie strategii pod jego rezultat zamienia i tę część w kolejny zbiór strojenia. Drugie ryzyko to koszty. Wynik z testera bywa liczony blisko brutto, a spread, prowizja i poślizg potrafią zamienić dodatni rezultat netto w ujemny. Uczciwa ocena wymaga realistycznych kosztów wpisanych w test, nie ich pominięcia.
 
-Wspólny wniosek literatury jest trzeźwiący. López de Prado w "Advances in Financial Machine Learning" (2018) pokazuje, że po korekcie na liczbę prób i poza oknem, w którym dokonano wyboru, większość pozornych przewag znika. To nie jest wada metody, lecz jej działanie: normalnym produktem uczciwej optymalizacji jest odrzucenie, a nie kolejna zielona krzywa kapitału.
+Wspólny wniosek literatury jest trzeźwiący. López de Prado w "Advances in Financial Machine Learning" (2018) pokazuje, że po korekcie na liczbę prób i poza oknem, w którym dokonano wyboru, większość pozornych przewag znika. Nie jest to wada metody, ale jej działanie: normalnym produktem uczciwej optymalizacji jest odrzucenie, a nie kolejna zielona krzywa kapitału.
 
 Materiał czysto edukacyjny o metodyce optymalizacji w testerze, nie porada inwestycyjna ani gotowa strategia. Opisane ustawienia i funkcje służą walidacji, nie obiecują wyniku; każdy zestaw parametrów wymaga oceny na danych out-of-sample i po realnych kosztach, zanim w ogóle rozważy się realny kapitał, a odpowiedzialność za ryzyko zostaje po stronie człowieka. Fakty o API opisano zgodnie z dokumentacją MQL5 i pomocą MetaTrader 5.
 

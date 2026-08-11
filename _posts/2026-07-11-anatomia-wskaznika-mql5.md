@@ -81,12 +81,12 @@ Zostaje pytanie, który koniec tablicy jest który. Domyślnie tablice w `OnCalc
 
 ```
 // Domyslnie (indeksacja jak w zwyklej tablicy):
-// price[0] → najstarszy bar w historii
-// price[rates_total-1] → najnowszy, biezacy bar
+// price[0] -> najstarszy bar w historii
+// price[rates_total-1] -> najnowszy, biezacy bar
 
 // Po wywolaniu ArraySetAsSeries(price, true):
-// price[0] → najnowszy, biezacy bar
-// price[rates_total-1] → najstarszy bar
+// price[0] -> najnowszy, biezacy bar
+// price[rates_total-1] -> najstarszy bar
 ```
 
 Funkcja `ArraySetAsSeries` odwraca ten kierunek na taki, jaki znają użytkownicy funkcji dostępu do szeregów czasowych, gdzie indeks `0` to bieżąca świeca. I tu leży klasyczna pułapka. Pętla `for(i = prev_calculated; i < rates_total; i++)` zakłada indeksację zwykłą, od najstarszego bara. Jeśli w tym samym kodzie któraś tablica zostanie przełączona przez `ArraySetAsSeries` na tryb serii, ta sama pętla zacznie czytać dane od złego końca, a wartości wyjdą odbite w czasie. Zasada praktyczna jest prosta: ustawić kierunek indeksacji świadomie i dopasować do niego pętlę, zamiast zakładać którykolwiek w ciemno.

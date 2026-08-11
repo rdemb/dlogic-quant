@@ -87,6 +87,6 @@ Kilka reguł, które wynikają wprost z opisanych badań:
 
 Do dalszego czytania: „Thinking, Fast and Slow" Kahnemana (2011) jako mapa całej psychologii ocen i decyzji oraz „Misbehaving" Thalera (2015) jako opowiedziana od środka historia tego, jak te obserwacje przebiły się do ekonomii. Przegląd Barberisa i Thalera (2003) pozostaje najlepszym mostem między psychologią a wycenami.
 
-To nie jest porada inwestycyjna. To przegląd klasycznych badań o tym, jak mózg systematycznie myli się przy pieniądzach i dlaczego rynek nie musi tych pomyłek prostować, pokazany po to, żeby własne reguły i proces projektować z poprawką na własne oprogramowanie.
+Nie jest to porada inwestycyjna. To przegląd klasycznych badań o tym, jak mózg systematycznie myli się przy pieniądzach i dlaczego rynek nie musi tych pomyłek prostować, pokazany po to, żeby własne reguły i proces projektować z poprawką na własne oprogramowanie.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

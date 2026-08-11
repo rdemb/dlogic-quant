@@ -45,12 +45,12 @@ Dynamiczna tablica w MQL5 domyślnie indeksowana jest jak zwykła tablica progra
 
 ```
 // Domyslnie (tablica dynamiczna, nie-seria):
-// arr[0] → element najstarszy
-// arr[N-1] → element najnowszy
+// arr[0] -> element najstarszy
+// arr[N-1] -> element najnowszy
 
 // Po ArraySetAsSeries(arr, true):
-// arr[0] → najnowszy bar
-// arr[N-1] → najstarszy bar
+// arr[0] -> najnowszy bar
+// arr[N-1] -> najstarszy bar
 ```
 
 Pułapka jest zawsze ta sama i bierze się z pomieszania obu konwencji w jednym kodzie. Pętla napisana od najstarszego bara ku najnowszemu zakłada indeksację zwykłą. Jeśli tablica jest w trybie serii, odwołanie do poprzedniego bara to indeks o jeden wyższy, nie niższy. Wartość policzona przy złym założeniu wychodzi odbita w czasie, a w najgorszym wariancie sięga po bar jeszcze nieistniejący, co jest look-ahead. Zasada praktyczna: ustawić kierunek świadomie, jawnym `ArraySetAsSeries` dla każdej tablicy roboczej, i dopasować do niego pętlę.

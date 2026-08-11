@@ -107,6 +107,6 @@ Jeśli 1-3 nie są spełnione, RL najczęściej maskuje przeuczenie.
 
 Zanim uwierzy się w dowolną politykę RL, warto zadać trzy pytania. Czy istnieje realistyczny symulator środowiska, czy tylko odtwarzanie jednej ścieżki historii. Czy koszt (spread, poślizg, prowizja) jest w nagrodzie w pełnej wysokości. Czy wynik przeżywa uczciwy out-of-sample z zachowaniem kierunku czasu. Polityka, która przechodzi ten filtr, dotyczy zwykle egzekucji albo sterowania ryzykiem, a nie magicznego kierunku, i to jest jej uczciwe, wąskie miejsce.
 
-To nie jest porada inwestycyjna. To edukacyjna mapa jednego narzędzia: gdzie reinforcement learning w tradingu realnie pomaga (egzekucja, sterowanie kosztem), gdzie jest głównie obietnicą (kierunek z zaszumionej ceny), i jaką dyscypliną (symulator, koszty, uczciwy out-of-sample) odróżnić jedno od drugiego, zanim zaufasz liczbie na wykresie.
+Nie jest to porada inwestycyjna. To edukacyjna mapa jednego narzędzia: gdzie reinforcement learning w tradingu realnie pomaga (egzekucja, sterowanie kosztem), gdzie jest głównie obietnicą (kierunek z zaszumionej ceny), i jaką dyscypliną (symulator, koszty, uczciwy out-of-sample) odróżnić jedno od drugiego, zanim zaufasz liczbie na wykresie.
 
 OBSERVE_ONLY · MANUAL_DECISION_ONLY · NO_AUTO_TRADING

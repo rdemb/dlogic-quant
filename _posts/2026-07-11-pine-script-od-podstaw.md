@@ -105,7 +105,7 @@ Skrypt może sięgnąć po dane z innego symbolu lub innego interwału funkcją 
 
 I tu pojawia się najczęstsze źródło błędu, czyli repaint. Dokumentacja Pine Script (TradingView) definiuje repaint jako sytuację, w której skrypt zachowuje się inaczej na barach historycznych niż na barach czasu rzeczywistego, albo w której wartości historyczne zmieniają się po fakcie. Dane z wyższego interwału są klasycznym źródłem tego zjawiska, bo bar dzienny w trakcie dnia nie jest jeszcze zamknięty, a jego wartość dopiero się kształtuje.
 
-Za sposób łączenia danych odpowiada parametr lookahead. Domyślnie ma wartość barmerge.lookahead_off. Ustawienie barmerge.lookahead_on sprawia, że funkcja pobiera wartość okresu z jego początku. Na barach historycznych oznacza to sięganie po liczbę, która w rzeczywistości jest znana dopiero na zamknięciu tego okresu, czyli zaglądanie w przyszłość. Test na danych historycznych wygląda wtedy lepiej, niż wypadłby na żywo, bo skrypt korzysta z informacji, której w danym momencie jeszcze by nie było. To nie jest przewaga, to artefakt.
+Za sposób łączenia danych odpowiada parametr lookahead. Domyślnie ma wartość barmerge.lookahead_off. Ustawienie barmerge.lookahead_on sprawia, że funkcja pobiera wartość okresu z jego początku. Na barach historycznych oznacza to sięganie po liczbę, która w rzeczywistości jest znana dopiero na zamknięciu tego okresu, czyli zaglądanie w przyszłość. Test na danych historycznych wygląda wtedy lepiej, niż wypadłby na żywo, bo skrypt korzysta z informacji, której w danym momencie jeszcze by nie było. Nie jest to przewaga, to artefakt.
 
 Dokumentacja podaje bezpieczny wzorzec pobierania potwierdzonych wartości z wyższego interwału. Łączy on przesunięcie serii o jeden bar z włączonym lookahead:
 

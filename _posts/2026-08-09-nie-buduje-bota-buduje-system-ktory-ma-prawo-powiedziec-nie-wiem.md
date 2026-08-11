@@ -45,7 +45,7 @@ Rynek w czasie rzeczywistym nie daje jednak dostępu do zakończonej historii. W
 
 Wystarczy subtelne przesunięcie informacji w czasie, aby model zaczął korzystać z wiedzy, której w rzeczywistości nie mógł posiadać. Leakage może powstać w targecie, cesze, sposobie normalizacji albo selekcji najlepszego wariantu spośród tak dużej liczby prób, że któryś niemal na pewno wygląda wyjątkowo przez przypadek.
 
-Inny problem pojawia się wtedy, gdy strategia osiąga dodatni wynik nie dlatego, że przewiduje rynek, lecz dlatego, że instrument w badanym okresie posiadał określony dryf. Model może wyglądać na skuteczny, chociaż wykonuje jedynie bardziej skomplikowaną wersję ekspozycji kierunkowej.
+Inny problem pojawia się wtedy, gdy strategia osiąga dodatni wynik nie dlatego, że przewiduje rynek, ale dlatego, że instrument w badanym okresie posiadał określony dryf. Model może wyglądać na skuteczny, chociaż wykonuje jedynie bardziej skomplikowaną wersję ekspozycji kierunkowej.
 
 Dlatego D-LOGIC ma zadawać sygnałowi serię niewygodnych pytań:
 
@@ -67,11 +67,11 @@ Wiele prostych botów projektuje się tak, aby zawsze posiadały opinię. Jeżel
 
 Rynek nie ma jednak obowiązku codziennie oferować przewidywalnej okazji, która po kosztach pasuje do konkretnego środowiska i sposobu wykonania. Dlatego abstencja nie jest w D-LOGIC awarią ani brakiem zdecydowania. Jest pełnoprawną decyzją systemową.
 
-Model może rozpoznać interesującą strukturę, lecz jednocześnie ocenić, że jego wiarygodność jest zbyt niska. Prognoza może być statystycznie atrakcyjna, ale niewykonalna przy bieżącym spreadzie. Kierunek może być poprawny, natomiast relacja potencjalnej korzyści do minimalnego ryzyka może pozostać nieakceptowalna.
+Model może rozpoznać interesującą strukturę, ale jednocześnie ocenić, że jego wiarygodność jest zbyt niska. Prognoza może być statystycznie atrakcyjna, ale niewykonalna przy bieżącym spreadzie. Kierunek może być poprawny, natomiast relacja potencjalnej korzyści do minimalnego ryzyka może pozostać nieakceptowalna.
 
 System ma więc nie tylko przewidywać. Musi również wiedzieć, kiedy nie powinien ufać własnej prognozie.
 
-Jednym z rozwijanych kierunków jest odrębna warstwa oceniająca wiarygodność modeli. Jej zadaniem nie jest przewidywanie ceny w identyczny sposób jak model podstawowy, lecz ocena, czy bieżące warunki nadal przypominają środowisko, w którym model był testowany.
+Jednym z rozwijanych kierunków jest odrębna warstwa oceniająca wiarygodność modeli. Jej zadaniem nie jest przewidywanie ceny w identyczny sposób jak model podstawowy, ale ocena, czy bieżące warunki nadal przypominają środowisko, w którym model był testowany.
 
 Pełna definicja tej warstwy, zestaw cech, funkcja celu i sposób agregacji pozostają prywatne. Publiczna jest zasada: **system powinien równocześnie prognozować rynek i szacować, czy posiada podstawy, aby własnej prognozie zaufać**.
 
@@ -103,7 +103,7 @@ Publicznie będę opisywał pytania badawcze stojące za tym podejściem, ale ni
 
 Model może być wyrafinowany matematycznie, a mimo to uczyć się na niekompletnym, nadpisanym albo źle zsynchronizowanym zbiorze. W takim przypadku kolejne warstwy inteligencji zwiększają jedynie precyzję, z jaką system analizuje fałszywą rzeczywistość.
 
-Dlatego część aktualnej pracy nie polega na trenowaniu kolejnego modelu, lecz na utwardzaniu narzędzi, które mają zbierać i publikować dowody. Niepełny snapshot, duplikaty, mieszanie przebiegów, nadpisanie artefaktu czy niezgodność deklarowanej i faktycznej zawartości powinny kończyć się twardym odrzuceniem.
+Dlatego część aktualnej pracy nie polega na trenowaniu kolejnego modelu, ale na utwardzaniu narzędzi, które mają zbierać i publikować dowody. Niepełny snapshot, duplikaty, mieszanie przebiegów, nadpisanie artefaktu czy niezgodność deklarowanej i faktycznej zawartości powinny kończyć się twardym odrzuceniem.
 
 Najważniejszym osiągnięciem takiego etapu nie jest dodanie inteligencji. Jest nim ograniczenie liczby sposobów, na jakie system może przekonać badacza, że posiada prawidłowe dane, chociaż w rzeczywistości ich nie posiada.
 
@@ -127,7 +127,7 @@ Transparentność dotyczy sposobu dowodzenia, nie rezygnacji z własności intel
 
 D-LOGIC nie jest obecnie gotowym systemem live i nie będę przedstawiał go jako maszyny posiadającej udowodnioną przewagę. Nie ma jeszcze podstaw, aby publicznie twierdzić, że istnieje potwierdzony model edge, wystarczający forward albo gotowy pełny łańcuch wykonawczy.
 
-To nie jest zastrzeżenie dodane drobnym drukiem. To aktualny wynik procesu badawczego.
+Nie jest to zastrzeżenie dodane drobnym drukiem. To aktualny wynik procesu badawczego.
 
 Kolejne przejścia mają własne kryteria. Test offline nie będzie przedstawiany jako działanie w runtime. Dobry zbiór danych nie będzie dowodem alfy. OOS nie stanie się automatycznie forwardem, a forward nie będzie oznaczał gotowości live bez osobnej walidacji wykonania i ryzyka.
 
