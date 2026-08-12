@@ -22,20 +22,23 @@ permalink: /status/
       <li>istnieje wieloetapowa kronika rozwoju systemu,</li>
       <li>projekt posiada audyty, testy, receipts i rejestr wyników negatywnych,</li>
       <li>Probe v2 osiągnął stan COMPILED,</li>
-      <li>nieudany eksperyment poprawnie zatrzymał się przed Wine i kontaktem z rachunkiem,</li>
-      <li>warstwy badawcza, stanu rynku oraz wykonawcza są rozdzielane,</li>
+      <li>WP11 zastąpił globalny filtr nazw polityką zaufania zależną od roli korzenia,</li>
+      <li>pakiet WP11 przeszedł kontrolę integralności, replay po deklarowanej materializacji i 42 przypadki adwersarialne,</li>
+      <li>nie wykonano pomiaru hosta, uruchomienia terminala ani kontaktu z brokerem,</li>
       <li>system dopuszcza ABSTAIN, UNKNOWN, FAIL i INCONCLUSIVE.</li>
     </ul>
   </section>
   <section class="truth-panel unproven">
     <h2>Niepotwierdzone</h2>
     <ul>
+      <li>kompletność obowiązkowych węzłów eksperymentu,</li>
+      <li>prawidłowe związanie każdego artefaktu z jego znaczeniem semantycznym,</li>
+      <li>reprezentacja pełnego, realistycznego runtime'u MT5 i Wine,</li>
       <li>loadability przypiętego artefaktu w docelowym runtime,</li>
       <li>walidacja świeżych danych brokerskich,</li>
       <li>cost-adjusted independent OOS edge,</li>
       <li>wystarczający forward edge,</li>
-      <li>gotowość pełnego łańcucha wykonawczego,</li>
-      <li>prawo do uruchomienia LIVE.</li>
+      <li>gotowość pełnego łańcucha wykonawczego oraz prawo do LIVE.</li>
     </ul>
   </section>
 </div>
@@ -44,27 +47,28 @@ permalink: /status/
 <div class="lab-grid">
   <div class="lab-card">
     <span class="num">EVIDENCE PLANE</span>
-    <h2>Od kompilacji do obserwowalnego runtime’u</h2>
-    <p>Obecny artefakt jest skompilowany, ale loadability nadal pozostaje nieznana. Statyczne pakiety i kontrakty są utwardzane bez instalacji, autoryzacji działania, kontaktu z terminalem ani brokerem.</p>
+    <h2>Od bezpiecznej roli do kompletnego runtime'u</h2>
+    <p>WP11 poprawił model zaufania i udowodnił przenośne mechanizmy klasyfikacji oraz traversal. Audyt wykazał jednak, że bezpieczny pomiar może nadal pominąć obowiązkowe węzły, źle opisać znaczenie dowodu albo zaakceptować poddrzewo jako reprezentację całego runtime'u.</p>
   </div>
   <div class="lab-card">
     <span class="num">ALPHA RESEARCH PLANE</span>
     <h2>Od danych do pierwszej prerejestracji</h2>
-    <p>Projektowany pakiet A01 ma zamrozić pochodzenie i jakość danych, informację dostępną przed decyzją, cost-aware target, baseline’y, podział próby i budżet testów. Status: design / untested.</p>
+    <p>Pakiet A01 ma zamrozić pochodzenie i jakość danych, informację dostępną przed decyzją, cost-aware target, baseline'y, podział próby i budżet testów. WP11 nie promował żadnego artefaktu alpha. Status pozostaje design / untested.</p>
   </div>
 </div>
 
 <h2>Aktualna granica twierdzeń</h2>
-<p>Infrastruktura może przejść tysiące testów i nadal nie stanowić dowodu alfy. Z drugiej strony, wynik modelowy nie będzie miał znaczenia, jeżeli jego dane, czas, target albo koszt wykonania pozostaną nierozstrzygnięte. Obie ścieżki rozwijają się niezależnie i żadna nie może zastąpić drugiej.</p>
+<p>Role-scoped trust odpowiada na pytanie, czy daną klasę środowiska wolno obserwować. Nie dowodzi, że pomiar objął cały runtime ani że każdy plik został związany z właściwą tezą. Infrastruktura może przejść rozbudowany audyt i nadal nie stanowić dowodu alfy. Wynik modelowy również nie będzie miał znaczenia, jeżeli jego dane, czas, target albo koszt wykonania pozostaną nierozstrzygnięte.</p>
 
 <h2>Co musi wydarzyć się dalej</h2>
 <ol class="stage-list">
+  <li><b>WP12 runtime manifest closure</b><span>Pełny przyszły runtime musi zostać opisany zamkniętym manifestem, bez możliwości zastąpienia korzenia przez poddrzewo albo przemianowaną kopię.</span></li>
+  <li><b>Semantic node binding</b><span>Każdy obowiązkowy węzeł eksperymentu musi być obecny i związany z artefaktem, który rzeczywiście dowodzi przypisanego znaczenia.</span></li>
+  <li><b>Direct archive replay</b><span>Surowe archiwum powinno odtwarzać kontrolę w nowym prywatnym katalogu jednym zamrożonym procesem materializacji i weryfikacji.</span></li>
   <li><b>Runtime loadability evidence</b><span>Dokładny artefakt musi zostać zaobserwowany w dokładnie zdefiniowanym, izolowanym środowisku, zanim otrzyma status LOADABLE.</span></li>
-  <li><b>Data and timestamp trust</b><span>Dokładny podzbiór danych musi przejść krytyczne gate’y jakości i dostępności w czasie.</span></li>
-  <li><b>Preregistration</b><span>Hipoteza, target, koszty, baseline’y i warunki falsyfikacji zostają zamrożone przed wynikiem.</span></li>
-  <li><b>Independent validation</b><span>Model musi wykazać wartość względem prostych alternatyw poza procesem dopasowania.</span></li>
-  <li><b>Forward evidence</b><span>Wystarczająca liczba nowych, niezależnych decyzji musi dojrzeć w czasie rzeczywistym.</span></li>
-  <li><b>Execution and risk gates</b><span>Przewaga predykcyjna musi przetrwać koszty, ograniczenia brokera, recovery i kontrolę ryzyka.</span></li>
+  <li><b>Data and timestamp trust</b><span>Dokładny podzbiór danych musi przejść krytyczne gate'y jakości i dostępności w czasie.</span></li>
+  <li><b>Preregistration and independent validation</b><span>Hipoteza, target, koszty, baseline'y i warunki falsyfikacji zostają zamrożone przed wynikiem, a model musi pokonać proste alternatywy poza procesem dopasowania.</span></li>
+  <li><b>Forward, execution and risk gates</b><span>Nowe decyzje muszą dojrzeć w czasie rzeczywistym, a przewaga predykcyjna przetrwać koszty, ograniczenia brokera, recovery i kontrolę ryzyka.</span></li>
 </ol>
 
-<div class="lab-archive">Status jest aktualizowany wyłącznie po zweryfikowanych milestone’ach. Projekty kolejnych pakietów są opisywane jako DESIGN albo UNTESTED i nie są automatycznie uznawane za ukończone funkcje systemu.</div>
+<div class="lab-archive">Status zaktualizowano po niezależnym Audit Reconciliation 11. WP11 jest wartościowym, zamrożonym milestone'em polityki V5. Nie został uznany za gotowość pomiarową, instalacyjną ani wykonawczą.</div>
