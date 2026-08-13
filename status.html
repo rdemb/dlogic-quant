@@ -21,54 +21,61 @@ permalink: /status/
     <ul>
       <li>istnieje wieloetapowa kronika rozwoju systemu,</li>
       <li>projekt posiada audyty, testy, receipts i rejestr wyników negatywnych,</li>
-      <li>Probe v2 osiągnął stan COMPILED,</li>
-      <li>WP11 zastąpił globalny filtr nazw polityką zaufania zależną od roli korzenia,</li>
-      <li>pakiet WP11 przeszedł kontrolę integralności, replay po deklarowanej materializacji i 42 przypadki adwersarialne,</li>
-      <li>nie wykonano pomiaru hosta, uruchomienia terminala ani kontaktu z brokerem,</li>
-      <li>system dopuszcza ABSTAIN, UNKNOWN, FAIL i INCONCLUSIVE.</li>
+      <li>Probe v2 pozostaje w stanie COMPILED,</li>
+      <li>WP12 posiada kanoniczne archiwum, zewnętrzny verifier i przenośny replay bez importowania repozytorium,</li>
+      <li>pakiet WP12 odtworzył 30 z 30 dostarczonych kontroli syntetycznych,</li>
+      <li>algebra obejmuje 34 obowiązkowe klasy węzłów oraz pełniejsze manifesty syntetycznego Wine, MT5 i MQL5,</li>
+      <li>reguły full-root, no-proxy i typed link graph przeszły kontrolę na dostarczonej powierzchni,</li>
+      <li>granica non-execution została zachowana,</li>
+      <li>projekt formalnie rozdziela Evidence Plane, Product Plane i Alpha Research Plane.</li>
     </ul>
   </section>
   <section class="truth-panel unproven">
     <h2>Niepotwierdzone</h2>
     <ul>
-      <li>kompletność obowiązkowych węzłów eksperymentu,</li>
-      <li>prawidłowe związanie każdego artefaktu z jego znaczeniem semantycznym,</li>
-      <li>reprezentacja pełnego, realistycznego runtime'u MT5 i Wine,</li>
+      <li>rozwiązanie każdego obowiązkowego identyfikatora do rzeczywistego obiektu dowodowego,</li>
+      <li>pełny pozytywny replay resolvera z dokładnego specu zawartego w archiwum,</li>
+      <li>rzeczywiste statyczne dependency closure dla całego runtime'u,</li>
+      <li>pełna provenance końcowego receipt dostawy,</li>
+      <li>pomiar realnego, jednorazowego środowiska hosta,</li>
       <li>loadability przypiętego artefaktu w docelowym runtime,</li>
       <li>walidacja świeżych danych brokerskich,</li>
-      <li>cost-adjusted independent OOS edge,</li>
-      <li>wystarczający forward edge,</li>
-      <li>gotowość pełnego łańcucha wykonawczego oraz prawo do LIVE.</li>
+      <li>cost-adjusted independent OOS edge i wystarczający forward edge,</li>
+      <li>gotowość Risk Governora, wykonania, recovery oraz prawo do LIVE.</li>
     </ul>
   </section>
 </div>
 
-<h2>Dwa równoległe fronty</h2>
+<h2>Trzy niezależne tory</h2>
 <div class="lab-grid">
   <div class="lab-card">
     <span class="num">EVIDENCE PLANE</span>
-    <h2>Od bezpiecznej roli do kompletnego runtime'u</h2>
-    <p>WP11 poprawił model zaufania i udowodnił przenośne mechanizmy klasyfikacji oraz traversal. Audyt wykazał jednak, że bezpieczny pomiar może nadal pominąć obowiązkowe węzły, źle opisać znaczenie dowodu albo zaakceptować poddrzewo jako reprezentację całego runtime'u.</p>
+    <h2>WP13: Evidence Object Closure</h2>
+    <p>WP12 zamknął mocny syntetyczny kontrakt i portable replay. Red-team wykazał jednak, że poprawnie wyglądający hash może zostać zaakceptowany bez rozwiązania go do rzeczywistych bajtów lub typowanego receipt. WP13 ma odtworzyć pełny resolver bez uruchamiania hosta.</p>
+  </div>
+  <div class="lab-card">
+    <span class="num">PRODUCT PLANE</span>
+    <h2>S01: Semi-Algo Desk V2</h2>
+    <p>Autoryzowano audyt i odzyskanie historycznego CMD Desku oraz zamrożenie produktu L0-L2. Zakres obejmuje obserwację, analizę, ranking i przygotowany ticket do ręcznej decyzji. Powierzchnia zleceń pozostaje wyłączona.</p>
   </div>
   <div class="lab-card">
     <span class="num">ALPHA RESEARCH PLANE</span>
-    <h2>Od danych do pierwszej prerejestracji</h2>
-    <p>Pakiet A01 ma zamrozić pochodzenie i jakość danych, informację dostępną przed decyzją, cost-aware target, baseline'y, podział próby i budżet testów. WP11 nie promował żadnego artefaktu alpha. Status pozostaje design / untested.</p>
+    <h2>A01: prawda alfy</h2>
+    <p>A01 pozostaje oddzielnym programem. Fix Wave 02 jest autoryzowana, ale nie otwarto outer holdoutu, nie rozpoczęto promocji modelu i nie przedstawiono nowego dowodu przewagi.</p>
   </div>
 </div>
 
 <h2>Aktualna granica twierdzeń</h2>
-<p>Role-scoped trust odpowiada na pytanie, czy daną klasę środowiska wolno obserwować. Nie dowodzi, że pomiar objął cały runtime ani że każdy plik został związany z właściwą tezą. Infrastruktura może przejść rozbudowany audyt i nadal nie stanowić dowodu alfy. Wynik modelowy również nie będzie miał znaczenia, jeżeli jego dane, czas, target albo koszt wykonania pozostaną nierozstrzygnięte.</p>
+<p>WP12 potwierdza przenośny, syntetyczny kontrakt pełniejszego runtime'u. Nie potwierdza realnego pomiaru hosta. Metadane dowodu mogą być poprawne, a identyfikator nadal nie prowadzić do istniejącego obiektu. Równolegle S01 może tworzyć użyteczny produkt semi-algo bez otwierania drogi do zleceń, a A01 może badać przewidywalność bez wykorzystywania sukcesu infrastruktury jako zastępczego dowodu alfy.</p>
 
 <h2>Co musi wydarzyć się dalej</h2>
 <ol class="stage-list">
-  <li><b>WP12 runtime manifest closure</b><span>Pełny przyszły runtime musi zostać opisany zamkniętym manifestem, bez możliwości zastąpienia korzenia przez poddrzewo albo przemianowaną kopię.</span></li>
-  <li><b>Semantic node binding</b><span>Każdy obowiązkowy węzeł eksperymentu musi być obecny i związany z artefaktem, który rzeczywiście dowodzi przypisanego znaczenia.</span></li>
-  <li><b>Direct archive replay</b><span>Surowe archiwum powinno odtwarzać kontrolę w nowym prywatnym katalogu jednym zamrożonym procesem materializacji i weryfikacji.</span></li>
-  <li><b>Runtime loadability evidence</b><span>Dokładny artefakt musi zostać zaobserwowany w dokładnie zdefiniowanym, izolowanym środowisku, zanim otrzyma status LOADABLE.</span></li>
-  <li><b>Data and timestamp trust</b><span>Dokładny podzbiór danych musi przejść krytyczne gate'y jakości i dostępności w czasie.</span></li>
-  <li><b>Preregistration and independent validation</b><span>Hipoteza, target, koszty, baseline'y i warunki falsyfikacji zostają zamrożone przed wynikiem, a model musi pokonać proste alternatywy poza procesem dopasowania.</span></li>
-  <li><b>Forward, execution and risk gates</b><span>Nowe decyzje muszą dojrzeć w czasie rzeczywistym, a przewaga predykcyjna przetrwać koszty, ograniczenia brokera, recovery i kontrolę ryzyka.</span></li>
+  <li><b>WP13 Evidence Object Closure</b><span>Każdy obowiązkowy identyfikator musi zostać rozwiązany do zamrożonych bajtów, obiektu Git, manifestu, kontraktu albo typowanego receipt.</span></li>
+  <li><b>Full resolver archive replay</b><span>Archiwum ma zbudować kompletny spec, uruchomić pełny resolver, ponownie obliczyć receipt oraz przeprowadzić pozytywny przypadek i mutacje tą samą ścieżką.</span></li>
+  <li><b>S01 desk audit and product freeze</b><span>Historyczne komponenty i pola interfejsu otrzymają status REUSE, REFACTOR, REWRITE, REJECT albo UNKNOWN. Pierwszy prototyp pozostanie syntetyczny i read-only.</span></li>
+  <li><b>A01 preregistration and independent validation</b><span>Dane, informacja dostępna przed decyzją, target, koszty, baseline'y i warunki falsyfikacji muszą zostać zamrożone przed wynikiem.</span></li>
+  <li><b>Runtime loadability and data trust</b><span>Dopiero osobny, izolowany pomiar może zmienić status LOADABLE, a świeże dane muszą przejść niezależne gate'y semantyczne.</span></li>
+  <li><b>OOS, forward, execution and risk</b><span>Przewaga musi pokonać proste alternatywy, przeżyć nowe decyzje, koszty, ograniczenia brokera, reconciliation i recovery.</span></li>
 </ol>
 
-<div class="lab-archive">Status zaktualizowano po niezależnym Audit Reconciliation 11. WP11 jest wartościowym, zamrożonym milestone'em polityki V5. Nie został uznany za gotowość pomiarową, instalacyjną ani wykonawczą.</div>
+<div class="lab-archive">Status zaktualizowano po niezależnym audycie WP12. Pakiet pozostaje zamrożonym milestone'em syntetycznego V6. SAFE_TO_SIGN, SAFE_TO_INSTALL, SAFE_TO_EXECUTE oraz LIVE_TRADING_APPROVED pozostają false.</div>
