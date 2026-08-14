@@ -1,26 +1,74 @@
 # D-LOGIC Quant Research Lab
 
-Publiczna kronika budowy adaptacyjnego systemu quant, program badawczy i polska baza wiedzy o rynkach.
+[![Validate Jekyll site](https://github.com/rdemb/dlogic-quant/actions/workflows/validate-site.yml/badge.svg)](https://github.com/rdemb/dlogic-quant/actions/workflows/validate-site.yml)
 
-Strona: https://rdemb.github.io/dlogic-quant/
+Publiczne laboratorium badawcze i polskojęzyczna baza wiedzy o rynkach, statystyce, mikrostrukturze, ryzyku oraz budowie systemów quant.
+
+**Strona:** [rdemb.github.io/dlogic-quant](https://rdemb.github.io/dlogic-quant/)  
+**Stan projektu:** [Public Truth Map](https://rdemb.github.io/dlogic-quant/status/)  
+**Kronika:** [D-LOGIC Chronicle](https://rdemb.github.io/dlogic-quant/chronicle/)  
+**Kanał RSS:** [feed.xml](https://rdemb.github.io/dlogic-quant/feed.xml)
+
+## Czym jest D-LOGIC
+
+D-LOGIC dokumentuje drogę od hipotezy do dowodu. Publikowane są decyzje architektoniczne, audyty, falsyfikacje, wyniki negatywne, ograniczenia oraz materiały edukacyjne. Zielony test, działający interfejs albo dobry backtest nie są przedstawiane jako dowód przewagi rynkowej.
+
+Repozytorium zawiera źródła publicznej witryny. Nie zawiera kompletnej prywatnej implementacji systemu transakcyjnego ani danych pozwalających odtworzyć jego logikę wykonawczą.
 
 ## Główne obszary
 
-- **D-LOGIC Chronicle** - decyzje, audyty, pivoty, wyniki negatywne i milestone’y.
-- **Research** - jakość danych, leakage, koszty, baseline’y, holdout governance i falsyfikacja.
-- **Knowledge Base** - statystyka, mikrostruktura, ryzyko, makro, matematyka i programowanie.
-- **Public Truth Map** - co jest potwierdzone, co pozostaje hipotezą i jaki jest następny gate.
+- **D-LOGIC Chronicle** - decyzje, audyty, pivoty i kolejne etapy budowy systemu.
+- **Research** - jakość danych, leakage, koszty, baseline, holdout governance i falsyfikacja.
+- **Baza wiedzy** - statystyka, matematyka, mikrostruktura, makro, ryzyko i programowanie.
+- **Public Truth Map** - rozdzielenie faktów, hipotez, ambicji, blokad i następnych gate'ów.
+- **Narzędzia** - proste kalkulatory edukacyjne działające lokalnie w przeglądarce.
 
-## Zasady
+## Standard publikacji
 
-- Analiza i research, nie porada inwestycyjna.
-- Brak sygnałów i gwarantowanych wyników.
-- Architektura nie jest przedstawiana jako dowód alfy.
-- LIVE pozostaje nieautoryzowane bez pełnej ścieżki dowodowej.
-- Publikowane są problemy, metodologia, wyniki i ograniczenia - nie pełna prywatna implementacja.
+Każda publiczna zmiana przechodzi przez pull request i automatyczną walidację:
 
-## Technologia strony
+1. kontrolę źródeł i niedozwolonej typografii,
+2. build Jekylla zgodny z GitHub Pages,
+3. kontrolę artefaktu publikacyjnego,
+4. sprawdzenie lokalnych odnośników, zasobów i identyfikatorów HTML,
+5. kontrolę, czy pliki utrzymaniowe nie wyciekły do witryny.
 
-Statyczna witryna Jekyll na GitHub Pages. Wpisy znajdują się w `_posts/`; SEO, sitemap i RSS generują się automatycznie.
+Status techniczny nie zastępuje statusu naukowego. Aktualne granice twierdzeń są utrzymywane na stronie [Stan projektu](https://rdemb.github.io/dlogic-quant/status/).
 
- - [@takitamrafal](https://x.com/takitamrafal)
+## Granica publikacji
+
+Publiczne są:
+
+- problem badawczy i metodologia,
+- kryteria falsyfikacji,
+- wyniki oraz ich ograniczenia,
+- status artefaktów i decyzji.
+
+Prywatne pozostają między innymi pełne definicje cech i targetów, parametry, wagi, progi, dane rachunku, konfiguracja bezpieczeństwa, topologia infrastruktury oraz reguły egzekucji.
+
+## Struktura repozytorium
+
+| Ścieżka | Rola |
+|---|---|
+| `_posts/` | artykuły, Chronicle i notatki badawcze |
+| `_layouts/` | szablony stron i wpisów |
+| `assets/` | style, obrazy i skrypty używane przez witrynę |
+| strony `*.html` | sekcje, mapy treści i narzędzia |
+| `.github/workflows/` | automatyczna walidacja pull requestów |
+| `.github/scripts/` | narzędzia kontroli jakości, wykluczone z publikacji |
+
+## Uruchamianie kontroli źródeł
+
+```bash
+python3 .github/scripts/validate_editorial.py
+```
+
+Pełny build i kontrola wyrenderowanej witryny są wykonywane w GitHub Actions przy każdym pull requeście oraz po zmianie `main`.
+
+## Zastrzeżenie
+
+Materiały mają charakter badawczy i edukacyjny. Nie są poradą inwestycyjną, sygnałem transakcyjnym ani obietnicą wyniku. Każda zmiana statusu wykonawczego wymaga odrębnej, audytowalnej ścieżki dowodowej i jest publikowana w Public Truth Map.
+
+## Kontakt
+
+Krótsze publikacje i informacje o nowych materiałach: [@takitamrafal](https://x.com/takitamrafal).

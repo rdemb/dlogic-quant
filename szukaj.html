@@ -1,7 +1,9 @@
 ---
 layout: default
 title: "Szukaj"
+description: "Wyszukiwarka artykułów, notatek badawczych i materiałów edukacyjnych D-LOGIC Quant."
 permalink: /szukaj/
+sitemap: false
 ---
 <section class="intro">
   <p>Szukaj w całym kompendium. Wpisz słowo z tytułu, tagu albo opisu, na przykład Sharpe, Kelly, mikrostruktura, MQL5, opcje.</p>
@@ -14,7 +16,7 @@ permalink: /szukaj/
 <script>
 (function(){
   var idx=[], q=document.getElementById('q'), res=document.getElementById('q-res'), cnt=document.getElementById('q-count');
-  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function esc(s){ return String(s).replace(/[&<>\"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c];}); }
   function run(){
     var s=q.value.trim().toLowerCase();
     if(s.length<2){ res.innerHTML=''; cnt.textContent=''; return; }

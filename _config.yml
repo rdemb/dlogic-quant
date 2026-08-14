@@ -6,7 +6,8 @@ lang: pl
 url: "https://rdemb.github.io"
 baseurl: "/dlogic-quant"
 permalink: /:year/:month/:day/:title/
-future: true
+future: false
+strict_front_matter: true
 twitter:
   username: takitamrafal
   card: summary_large_image
@@ -22,4 +23,10 @@ plugins:
 defaults:
   - scope: { path: "", type: posts }
     values: { layout: post, author: D-LOGIC Quant, image: /assets/og.png, category: analizy }
-exclude: [STYLE_SEO.md, deploy.bat, README.md, Gemfile, Gemfile.lock]
+exclude:
+  - .github
+  - .gitignore
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

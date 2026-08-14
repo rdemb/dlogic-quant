@@ -1,6 +1,7 @@
 ---
 layout: null
 permalink: /search.json
+sitemap: false
 ---
 [
 {% for p in site.posts %}{"title": {{ p.title | jsonify }}, "url": {{ p.url | relative_url | jsonify }}, "cat": {{ p.category | default: "analizy" | jsonify }}, "desc": {{ p.description | default: p.dek | strip_html | truncate: 160 | jsonify }}, "tags": {{ p.tags | join: " " | jsonify }}, "date": {{ p.date | date: "%Y-%m-%d" | jsonify }}}{% unless forloop.last %},{% endunless %}

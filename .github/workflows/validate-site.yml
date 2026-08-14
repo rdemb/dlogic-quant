@@ -2,6 +2,9 @@ name: Validate Jekyll site
 
 on:
   pull_request:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -16,14 +19,17 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate editorial style
+      - name: Validate public source content
         run: |
-          python3 -m py_compile tools/editorial_cleanup.py tools/rendered_html_audit.py
-          python3 tools/editorial_cleanup.py
+          python3 -m py_compile \
+            .github/scripts/validate_editorial.py \
+            .github/scripts/validate_rendered_site.py
+          python3 .github/scripts/validate_editorial.py
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -34,5 +40,8 @@ jobs:
           source: ./
           destination: ./_site
 
-      - name: Validate rendered HTML
-        run: python3 tools/rendered_html_audit.py _site
+      - name: Validate published artifact
+        run: |
+          python3 .github/scripts/validate_rendered_site.py \
+            _site \
+            --baseurl /dlogic-quant
