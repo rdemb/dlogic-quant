@@ -20,8 +20,8 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
 
 <div class="lab-status" aria-label="Publiczny status projektu">
   <div class="status-card"><small>Program badawczy</small><b class="ok">ACTIVE</b></div>
-  <div class="status-card"><small>WP13 artifact</small><b class="ok">ACCEPTED</b></div>
-  <div class="status-card"><small>Product path</small><b class="warn">SHADOW ONLY</b></div>
+  <div class="status-card"><small>Audit 19</small><b class="ok">REVIEWED</b></div>
+  <div class="status-card"><small>Execution surface</small><b class="warn">LOCKDOWN</b></div>
   <div class="status-card"><small>LIVE</small><b class="lock">NOT AUTHORIZED</b></div>
 </div>
 
@@ -53,12 +53,12 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
   <a class="lab-card" href="{{ '/luzne-tematy/' | relative_url }}">
     <span class="num">05 / OUTSIDE THE CHART</span>
     <h2>Luźne tematy, poważna ciekawość</h2>
-    <p>Historia, nauka, technologia, geopolityka, książki i zajawki, które wychodzą poza trading, ale nadal zasługują na źródła i logiczne śledztwo.</p>
+    <p>Historia, nauka, technologia, AI, cyberbezpieczeństwo, geopolityka i zajawki, które wychodzą poza trading, ale nadal zasługują na źródła i logiczne śledztwo.</p>
     <span class="go">Otwórz luźne tematy</span>
   </a>
 </div>
 
-<div class="lab-note"><strong>Aktualny etap:</strong> WP13 został zamrożony jako zaakceptowany syntetyczny artefakt Evidence Object Closure. Równolegle A01R zamyka stan naukowy przed pierwszym prerejestrowanym eksperymentem, a S02 buduje wspólny, shadow-only rdzeń decyzji dla operatora i przyszłej automatyzacji. Model fitting, broker, wykonanie i LIVE pozostają wyłączone.</div>
+<div class="lab-note"><strong>Aktualny etap:</strong> Audit 19 zaakceptował dokładne artefakty A01HR, A01DM i S02G, ale utrzymał trzy osobne blokady. Prospective policy istnieje przed aktywacją, lecz custody nie jest gotowa. Preflight brokera nie wykonał pomiaru. Lockdown odtworzył odmowy, lecz zewnętrzny autorytet RED wymaga domknięcia. A01C, A02, S03, broker measurement, wykonanie i LIVE pozostają wyłączone.</div>
 
 <div class="section-head">
   <h2>Najnowsze w Chronicle</h2>
@@ -76,6 +76,16 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
 </div>
 <ul class="posts">
 {% for post in res limit:4 %}
+  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+{% endfor %}
+</ul>
+
+<div class="section-head">
+  <h2>Najnowsze poza wykresem</h2>
+  <a href="{{ '/luzne-tematy/' | relative_url }}">Wszystkie publikacje</a>
+</div>
+<ul class="posts">
+{% for post in loose limit:3 %}
   <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
 {% endfor %}
 </ul>

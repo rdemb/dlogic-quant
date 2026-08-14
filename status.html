@@ -1,17 +1,17 @@
 ---
 layout: default
 title: "Stan projektu"
-description: "Publiczny stan D-LOGIC po akceptacji WP13, A01 Fix Wave 02 i S01H: co zostało potwierdzone, co pozostaje zablokowane i jakie są następne tory."
+description: "Publiczny stan D-LOGIC po Audit Reconciliation 19: co zostało potwierdzone w A01HR, A01DM i S02G, co nadal pozostaje zablokowane oraz jakie są następne autoryzowane gate'y."
 permalink: /status/
 ---
 <p class="lab-kicker">Public truth map</p>
 <h1>Stan projektu bez marketingowego skrótu</h1>
-<p class="dek">Ta strona pokazuje granicę pomiędzy zaakceptowanym artefaktem, użytecznym produktem, prawem do eksperymentu i prawem do wykonania. Sukces jednej warstwy nie awansuje automatycznie pozostałych.</p>
+<p class="dek">Ta strona pokazuje granicę pomiędzy zaakceptowanym artefaktem, wiarygodnym dowodem operacyjnym, prawem do eksperymentu i prawem do wykonania. Sukces jednej warstwy nie awansuje automatycznie pozostałych.</p>
 
 <div class="lab-status">
   <div class="status-card"><small>Research program</small><b class="ok">ACTIVE</b></div>
-  <div class="status-card"><small>WP13 artifact</small><b class="ok">ACCEPTED</b></div>
-  <div class="status-card"><small>Product path</small><b class="warn">SHADOW ONLY</b></div>
+  <div class="status-card"><small>Audit 19</small><b class="ok">REVIEWED</b></div>
+  <div class="status-card"><small>Execution surface</small><b class="warn">LOCKDOWN</b></div>
   <div class="status-card"><small>LIVE trading</small><b class="lock">NOT AUTHORIZED</b></div>
 </div>
 
@@ -19,67 +19,71 @@ permalink: /status/
   <section class="truth-panel confirmed">
     <h2>Potwierdzone publicznie</h2>
     <ul>
-      <li>WP13 przeszedł niezależny raw-archive replay bez importowania repozytorium i bez wykonania runtime'u,</li>
-      <li>34 obowiązkowe węzły posiadają 34 uwierzytelnione obiekty dowodowe albo typowane receipts w kontrolowanym pakiecie syntetycznym,</li>
-      <li>pełny resolver przeszedł 340 z 340 mutacji, 2 kontrole komponentowe i 3 predykaty statyczne,</li>
-      <li>WP13 zamyka blocker Evidence Object Closure odkryty w WP12 na poziomie artefaktu syntetycznego,</li>
-      <li>A01 Fix Wave 02 została zaakceptowana jako dokładny artefakt poprawiający trzy autoryzowane problemy implementacyjne,</li>
-      <li>S01H został zaakceptowany jako niezmienny handoff dokładnych źródeł i kontraktu produktu,</li>
-      <li>S01H obejmuje 39 plików źródłowych, 11 dokumentów schematów, 18 testów S01 i 526 odzyskanych testów CMD,</li>
-      <li>żaden zaakceptowany pakiet nie posiada zdolności wykonawczej ani dostępu do brokera.</li>
+      <li>WP13 pozostaje zaakceptowanym syntetycznym artefaktem Evidence Object Closure,</li>
+      <li>S01H pozostaje zaakceptowanym handoffem dokładnych źródeł i kontraktu odzyskanego produktu,</li>
+      <li>A01 Fix Wave 02 pozostaje zaakceptowanym artefaktem trzech konkretnych poprawek implementacyjnych,</li>
+      <li>A01HR zamroził dokładną prospective policy przed pierwszym oknem holdoutu, a zewnętrzny znacznik czasu potwierdza wcześniejsze istnienie tych bajtów,</li>
+      <li>A01DM poprawnie zakończył się na capability preflight bez wykonania pomiaru brokera,</li>
+      <li>S02G świeżo odtworzył odmowy procesu, egzekucji i sieci w trybie LOCKDOWN,</li>
+      <li>niezależny replacement RED odtworzył naruszenie absolutnej ścieżki, którego nie potrafił zamknąć wcześniejszy verifier,</li>
+      <li>żaden zaakceptowany pakiet nie posiada zdolności wysłania zlecenia ani prawa do LIVE.</li>
     </ul>
   </section>
   <section class="truth-panel unproven">
     <h2>Niepotwierdzone lub nadal zablokowane</h2>
     <ul>
-      <li>reprezentacja i pomiar prawdziwego runtime'u Wine, MT5 i MQL5,</li>
-      <li>loadability przypiętego EX5 oraz zachowanie terminala,</li>
-      <li>walidacja danych brokerskich i ich znaczenia w czasie decyzji,</li>
-      <li>globalna władza nad outer holdoutem i pełne pojednanie stanu badawczego A01,</li>
-      <li>historyczny producent screenshotów CMD Desku oraz 24 grupy widocznych pól,</li>
-      <li>autorytet dawnych wartości HIT%, EVbp, bias, regime, strength, COT, rankingów i poziomów,</li>
-      <li>cost-adjusted independent OOS edge oraz forward edge,</li>
-      <li>Risk Governor readiness, wykonanie, recovery i prawo do LIVE.</li>
+      <li>operacyjna custody prospective holdoutu, osobny podmiot bezpieczeństwa, write-only ingestion, append-only access history i wymuszony brak odczytu,</li>
+      <li>uniwersalny dowód trusted commitment time niezależny od czasu zadeklarowanego w samym artefakcie,</li>
+      <li>autoryzowana ścieżka pierwszego read-only pomiaru brokera i tożsamość skanowanego, importowanego oraz wykonywanego workera,</li>
+      <li>snapshot brokera, spread, margin, PnL, jakość danych, koszty i wykonalność kapitałowa,</li>
+      <li>zamknięcie zewnętrznego autorytetu RED w S02G2 oraz prawo do rozpoczęcia S03,</li>
+      <li>loadability przypiętego EX5 i zachowanie prawdziwego runtime'u Wine oraz MT5,</li>
+      <li>cost-adjusted independent OOS edge, forward edge i Risk Governor readiness,</li>
+      <li>instalacja, wykonanie, broker write i LIVE.</li>
     </ul>
   </section>
 </div>
 
-<h2>Trzy tory po akceptacji WP13, A01 Wave 02 i S01H</h2>
+<h2>Trzy tory po Audit Reconciliation 19</h2>
 <div class="lab-grid">
   <div class="lab-card">
-    <span class="num">EVIDENCE PLANE</span>
-    <h2>WP13 zamrożony jako milestone</h2>
-    <p>Evidence Object Closure zostało zaakceptowane na poziomie pakietu syntetycznego. Szeroki WP14 nie został autoryzowany. Dalsza praca dowodowa ma wracać wyłącznie wtedy, gdy bezpośrednio blokuje zatwierdzony gate danych, produktu albo wykonania.</p>
+    <span class="num">HOLDOUT AUTHORITY</span>
+    <h2>A01HC prospective custody</h2>
+    <p>A01HR potwierdził, że dokładna polityka istniała przed aktywacją. A01HC ma udowodnić, że przyszłe wyniki są technicznie odseparowane, zapisywane bez prawa odczytu i chronione przez rozdzielone role oraz historię dostępu.</p>
   </div>
   <div class="lab-card">
-    <span class="num">PRODUCT AND AUTOMATION</span>
-    <h2>S02 shared decision core</h2>
-    <p>Na zaakceptowanym źródle S01H ma powstać jeden deterministyczny rdzeń dla operatora i shadow autonomy: typed state, reliability, opportunity routing, DecisionEnvelope, RiskTicket, journal oraz dwa adaptery bez brokera i order API.</p>
+    <span class="num">BROKER PREFLIGHT</span>
+    <h2>A01DMP fixed read-only request</h2>
+    <p>Następny artefakt ma związać jeden content-addressed worker, jeden zamrożony graf akcji i jedną autoryzację operatora. Nadal nie jest to pozwolenie na pomiar, tylko kandydat do niezależnej akceptacji.</p>
   </div>
   <div class="lab-card">
-    <span class="num">ALPHA RESEARCH</span>
-    <h2>A01R research-state closure</h2>
-    <p>A01R ma zamknąć kanoniczny stan badań, globalną władzę nad holdoutem, jakość danych, timestampy, koszty, wykonalność kapitałową i gotowość jednego pilota. Model fitting i A02 pozostają zabronione.</p>
+    <span class="num">CAPABILITY FIREWALL</span>
+    <h2>S02G2 external RED closure</h2>
+    <p>Nowy zewnętrzny obiekt RED ma zostać przypięty jako autorytet bez osłabienia testów call-target provenance, argumentów, ścieżek, powierzchni wykonywalnej oraz świeżego runtime denial. S03 pozostaje wyłączony.</p>
   </div>
 </div>
 
 <h2>Aktualna granica twierdzeń</h2>
-<p>WP13 dowodzi, że w kontrolowanym archiwum każdy obowiązkowy identyfikator prowadzi do uwierzytelnionego obiektu, a fałszywe podstawienia blokują pełny resolver. Nie dowodzi zachowania prawdziwego hosta. A01 Wave 02 dowodzi jakości trzech poprawek, ale nie daje prawa do eksperymentu modelowego. S01H dowodzi dokładnych bajtów odzyskanego produktu, ale nie przywraca autorytetu historycznych metryk.</p>
+<p>A01HR dowodzi, że dokładna prospective policy została zapisana przed pierwszym oknem i nie zawierała wyników ani odczytów. Nie dowodzi operacyjnej custody. A01DM dowodzi, że system potrafił zatrzymać pomiar przy braku autoryzowanej capability path. Nie dostarcza żadnych danych brokerskich. S02G dowodzi świeżego lockdown replayu oraz rozpoznania klasy naruszenia ścieżki. Nie zamyka jeszcze zewnętrznego autorytetu bezpieczeństwa.</p>
 
-<p>Program rozwija automatyzację w trybie shadow. System może obserwować, klasyfikować, abstainować, przygotowywać deterministyczny ticket i zapisywać hipotetyczne decyzje. Nie może wysłać zlecenia, aktywować write-capable MT5 ani przejść do poziomów L3-L5.</p>
+<p>Program może nadal tworzyć artefakty research i shadow, klasyfikować, abstainować, przygotowywać deterministyczne bilety oraz rejestrować hipotetyczne decyzje. Nie może kontaktować się z brokerem w celu pomiaru bez osobnej autoryzacji, instalować komponentów wykonawczych, wysłać zlecenia ani awansować do LIVE.</p>
 
 <h2>Co musi wydarzyć się dalej</h2>
 <ol class="stage-list">
-  <li><b>A01R state reconciliation</b><span>Pełny stan badań, tożsamości danych, rejestr wyników negatywnych i wszystkie sprzeczności muszą zostać związane z konkretnymi artefaktami.</span></li>
-  <li><b>Global holdout authority</b><span>Należy udowodnić tożsamość, członkostwo, politykę i historię dostępu bez czytania wyników outer holdoutu. Lokalny brak callbacków nie wystarcza.</span></li>
-  <li><b>Data, timestamp, cost and capital gates</b><span>Krytyczne UNKNOWN albo FAIL nie mogą agregować do PASS. Pilot powstanie tylko wtedy, gdy wszystkie obowiązkowe warunki są rozstrzygnięte.</span></li>
-  <li><b>S02 shared core</b><span>Manual review i shadow policy mają korzystać z tych samych typowanych danych, niezawodności, ograniczeń i dziennika. Każda próba wejścia w tryb wykonawczy musi zostać zablokowana.</span></li>
-  <li><b>Independent review of A01R and S02</b><span>Każdy tor wymaga osobnego, niezmiennego handoffu, archive-only replayu i kontroli negatywnych przypadków.</span></li>
-  <li><b>Only later: model experiment, runtime measurement and execution gates</b><span>A02, prawdziwy runtime, broker, forward oraz wykonanie wymagają odrębnych autoryzacji i nie wynikają automatycznie z obecnych sukcesów.</span></li>
+  <li><b>A01HC custody candidate</b><span>Zewnętrzny czas, tożsamość obiektu, rozdzielenie ról, historia dostępu i brak zdolności odczytu muszą zostać związane w jednym sprawdzalnym artefakcie.</span></li>
+  <li><b>A01DMP preflight candidate</b><span>Dokładnie ten sam worker musi zostać przeskanowany, zaimportowany i wywołany, a operator ma autoryzować zamrożony request hash.</span></li>
+  <li><b>S02G2 authority closure</b><span>Replacement RED musi wejść do autorytetu verifiera, a wszystkie wcześniejsze blokady capability, argumentów, ścieżek i runtime'u muszą pozostać aktywne.</span></li>
+  <li><b>Independent raw-archive review</b><span>Każdy tor kończy się osobnym, niezmiennym handoffem. Plan następnego pakietu nie jest wynikiem.</span></li>
+  <li><b>Only later: measurement and model gates</b><span>A01C, A02, broker measurement, runtime, forward i execution wymagają odrębnych decyzji po spełnieniu własnych warunków.</span></li>
 </ol>
 
 <h2>Kanoniczne statusy</h2>
-<pre><code>SAFE_TO_SIGN = false
+<pre><code>A01C_AUTHORIZED = false
+A02_AUTHORIZED = false
+S03_AUTHORIZED = false
+BROKER_MEASUREMENT_AUTHORIZED = false
+BROKER_WRITE_AUTHORIZED = false
+SAFE_TO_SIGN = false
 SAFE_TO_INSTALL = false
 SAFE_TO_EXECUTE = false
 LIFECYCLE = COMPILED
@@ -90,4 +94,4 @@ FORWARD_EDGE_PROVEN = false
 RISK_GOVERNOR_READY = false
 LIVE_TRADING_APPROVED = false</code></pre>
 
-<div class="lab-archive">Status zaktualizowano po niezależnych Audit Reconciliation 13 i 14. WP13, A01 Wave 02 oraz S01H są zaakceptowanymi artefaktami w ściśle ograniczonych zakresach. Żaden z nich nie promuje modelu, danych, wykonania ani LIVE.</div>
+<div class="lab-archive">Status zaktualizowano po niezależnym Audit Reconciliation 19 z 14 sierpnia 2026. A01HR, A01DM i S02G są zaakceptowanymi artefaktami w ograniczonych zakresach. Każdy z nich zachowuje blokadę kolejnego działania.</div>
