@@ -20,8 +20,8 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
 
 <div class="lab-status" aria-label="Publiczny status projektu">
   <div class="status-card"><small>Program badawczy</small><b class="ok">ACTIVE</b></div>
-  <div class="status-card"><small>Probe lifecycle</small><b class="warn">COMPILED</b></div>
-  <div class="status-card"><small>Model edge</small><b class="lock">UNPROVEN</b></div>
+  <div class="status-card"><small>WP13 artifact</small><b class="ok">ACCEPTED</b></div>
+  <div class="status-card"><small>Product path</small><b class="warn">SHADOW ONLY</b></div>
   <div class="status-card"><small>LIVE</small><b class="lock">NOT AUTHORIZED</b></div>
 </div>
 
@@ -29,13 +29,13 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
   <a class="lab-card" href="{{ '/chronicle/' | relative_url }}">
     <span class="num">01 / CHRONICLE</span>
     <h2>Budowa bez mitu założycielskiego</h2>
-    <p>Decyzje, błędy, pivoty, audyty i milestone’y. Zapis tego, co powstało, co zostało odrzucone i czego nadal nie wiadomo.</p>
+    <p>Decyzje, błędy, pivoty, audyty i milestone'y. Zapis tego, co powstało, co zostało odrzucone i czego nadal nie wiadomo.</p>
     <span class="go">Otwórz kronikę</span>
   </a>
   <a class="lab-card" href="{{ '/research/' | relative_url }}">
     <span class="num">02 / RESEARCH</span>
     <h2>Hipotezy przed wynikami</h2>
-    <p>Leakage-safe research, koszty, baseline’y, holdout governance, mikrostruktura i pytania, które mają prawo zakończyć się wynikiem FAIL.</p>
+    <p>Leakage-safe research, koszty, baseline'y, holdout governance, mikrostruktura i pytania, które mają prawo zakończyć się wynikiem FAIL.</p>
     <span class="go">Zobacz program badawczy</span>
   </a>
   <a class="lab-card" href="{{ '/edukacja/' | relative_url }}">
@@ -47,7 +47,7 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
   <a class="lab-card" href="{{ '/status/' | relative_url }}">
     <span class="num">04 / TRUTH MAP</span>
     <h2>Co jest faktem, a co nadal ambicją</h2>
-    <p>Publiczna granica twierdzeń: komponenty istniejące, etapy niepotwierdzone, aktualny blocker oraz następny gate.</p>
+    <p>Publiczna granica twierdzeń: zaakceptowane artefakty, status produktu, blokery naukowe i kolejne autoryzowane gate'y.</p>
     <span class="go">Przejdź do statusu</span>
   </a>
   <a class="lab-card" href="{{ '/luzne-tematy/' | relative_url }}">
@@ -58,14 +58,14 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
   </a>
 </div>
 
-<div class="lab-note"><strong>Dwa równoległe fronty:</strong> Evidence Plane pozostaje na etapie COMPILED, z loadability nadal niepotwierdzoną. Alpha Research Plane zamraża obecnie pochodzenie danych, informację dostępną w chwili decyzji, cost-aware targety, baseline’y, podział próby i budżet hipotez - bez treningu promowanego modelu.</div>
+<div class="lab-note"><strong>Aktualny etap:</strong> WP13 został zamrożony jako zaakceptowany syntetyczny artefakt Evidence Object Closure. Równolegle A01R zamyka stan naukowy przed pierwszym prerejestrowanym eksperymentem, a S02 buduje wspólny, shadow-only rdzeń decyzji dla operatora i przyszłej automatyzacji. Model fitting, broker, wykonanie i LIVE pozostają wyłączone.</div>
 
 <div class="section-head">
   <h2>Najnowsze w Chronicle</h2>
   <a href="{{ '/chronicle/' | relative_url }}">Wszystkie wpisy</a>
 </div>
 <ul class="posts">
-{% for post in chron limit:4 %}
+{% for post in chron limit:5 %}
   <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>{% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
 {% endfor %}
 </ul>
@@ -91,7 +91,7 @@ description: "Publiczna kronika budowy adaptacyjnego systemu quant: hipotezy, au
       <li>problemy badawcze i mechanizmy,</li>
       <li>kryteria falsyfikacji,</li>
       <li>wyniki negatywne i zmiany zdania,</li>
-      <li>status gate’ów oraz ograniczenia.</li>
+      <li>status gate'ów oraz ograniczenia.</li>
     </ul>
   </section>
   <section class="truth-panel unproven">
