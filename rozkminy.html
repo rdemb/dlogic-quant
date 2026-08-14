@@ -1,16 +1,22 @@
 ---
 layout: default
-title: "Rozkminy"
+title: "Rozkminy - archiwum"
+description: "Archiwalny adres wcześniejszej sekcji esejów. Nowe publikacje pozarynkowe znajdują się w dziale Luźne tematy."
 permalink: /rozkminy/
+sitemap: false
 ---
-<section class="cat">
-  <h2 class="cat-h">Rozkminy</h2>
-  <p class="cat-desc">Przemyślenia i eseje na danych. Psychologia i przetrwanie, historia rynków i cykle długu, wzorce, które wracają.</p>
-  <ul class="posts">
-  {% assign roz = site.posts | where: "category", "rozkminy" %}
-  {% for post in roz %}
-    <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
-  {% endfor %}
-  </ul>
-</section>
+{% assign legacy = site.posts | where: "category", "rozkminy" %}
+<p class="lab-kicker">Legacy route</p>
+<h1>Rozkminy są teraz częścią Luźnych tematów</h1>
+<p class="dek">Nowsza sekcja porządkuje eseje o nauce, technologii, historii, geopolityce i ideach poza wykresem. Ten adres pozostaje dostępny dla starszych odnośników.</p>
+<p><a class="lab-button" href="{{ '/luzne-tematy/' | relative_url }}">Przejdź do Luźnych tematów</a></p>
+
+{% if legacy.size > 0 %}
+<h2>Archiwalne wpisy</h2>
+<ul class="posts">
+{% for post in legacy %}
+  <li><span class="d">{{ post.date | date: "%Y-%m-%d" }}</span><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  {% if post.description %}<span class="ds">{{ post.description }}</span>{% endif %}</li>
+{% endfor %}
+</ul>
+{% endif %}

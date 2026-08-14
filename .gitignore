@@ -1,7 +1,17 @@
 _site/
 .jekyll-cache/
 .sass-cache/
+.bundle/
+vendor/
 Gemfile.lock
+
+.env
+.env.*
+!.env.example
+
 .DS_Store
 Thumbs.db
+*.bak
+*.swp
+*.tmp
 deploy.bat
